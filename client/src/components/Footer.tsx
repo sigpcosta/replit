@@ -7,6 +7,7 @@ export default function Footer() {
     { label: "Eventos", href: "#eventos" },
     { label: "Tatuagem & Piercings", href: "#tatuagem" },
     { label: "Gestão Imobiliária", href: "#imobiliaria" },
+    { label: "Loja", href: "#loja" },
   ];
 
   return (

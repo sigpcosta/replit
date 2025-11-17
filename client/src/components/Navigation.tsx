@@ -11,6 +11,7 @@ export default function Navigation() {
     { label: "Eventos", href: "#eventos" },
     { label: "Tatuagem", href: "#tatuagem" },
     { label: "Imobiliária", href: "#imobiliaria" },
+    { label: "Loja", href: "#loja" },
   ];
 
   return (

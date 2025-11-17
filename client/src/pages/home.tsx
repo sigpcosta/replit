@@ -5,13 +5,14 @@ import FeaturedActivity from "@/components/FeaturedActivity";
 import WhyChoose from "@/components/WhyChoose";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { Home as HomeIcon, Zap, PartyPopper, Scissors, Building2 } from "lucide-react";
+import { Home as HomeIcon, Zap, PartyPopper, Scissors, Building2, Store } from "lucide-react";
 
 import apartmentImage from "@assets/generated_images/Modern_Horta_apartment_interior_ec6f658d.png";
 import lasertagImage from "@assets/generated_images/Laser_tag_action_shot_63a174d9.png";
 import eventsImage from "@assets/generated_images/Event_tent_celebration_fca04953.png";
 import tattooImage from "@assets/generated_images/Tattoo_studio_workspace_bfc3187a.png";
 import propertyImage from "@assets/generated_images/Azorean_property_exterior_4bd4f6fb.png";
+import shopImage from "@assets/generated_images/Azores4fun_retail_shop_8204420f.png";
 import supImage from "@assets/generated_images/SUP_paddleboarding_Azores_ocean_960e2ee9.png";
 import vanImage from "@assets/generated_images/Electric_van_island_tour_9d32feea.png";
 import teambuildingImage from "@assets/generated_images/Teambuilding_outdoor_activity_99e77711.png";
@@ -54,6 +55,13 @@ export default function Home() {
       icon: Building2,
       href: "#imobiliaria",
     },
+    {
+      title: "Loja",
+      description: "Loja aberta para receção de clientes, venda de bens e serviços de turismo local, produtos regionais e merchandising.",
+      image: shopImage,
+      icon: Store,
+      href: "#loja",
+    },
   ];
 
   return (
@@ -74,13 +82,7 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.slice(0, 3).map((service, index) => (
-              <ServiceCard key={index} {...service} />
-            ))}
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 mt-8 max-w-4xl mx-auto">
-            {services.slice(3).map((service, index) => (
+            {services.map((service, index) => (
               <ServiceCard key={index} {...service} />
             ))}
           </div>

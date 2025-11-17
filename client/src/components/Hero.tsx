@@ -22,7 +22,7 @@ export default function Hero() {
           A Sua Aventura Completa nos Açores
         </p>
         <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-          Alojamento · Animação Turística · Eventos · Tatuagem · Gestão Imobiliária
+          Alojamento · Animação Turística · Eventos · Tatuagem · Gestão Imobiliária · Loja
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button
