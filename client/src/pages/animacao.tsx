@@ -2,9 +2,52 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQItem from "@/components/FAQItem";
 import { Card } from "@/components/ui/card";
-import { Zap } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Zap, Target, Waves, Car, Camera, Tent, Check } from "lucide-react";
+import lasertagImage from "@assets/generated_images/Laser_tag_action_shot_63a174d9.png";
+import supImage from "@assets/generated_images/SUP_paddleboarding_Azores_ocean_960e2ee9.png";
+import paintballImage from "@assets/generated_images/Paintball_action_gameplay_8c01711a.png";
+import vanImage from "@assets/generated_images/Electric_van_island_tour_9d32feea.png";
 
 export default function AnimacaoPage() {
+  const activities = [
+    {
+      icon: Target,
+      title: "Lasertag & Paintball",
+      description: "Jogos de estratégia emocionantes no nosso campo próprio",
+      features: ["Campo dedicado", "Equipamento profissional", "Gelblaster e Nerfs disponíveis", "Ideal para grupos"]
+    },
+    {
+      icon: Waves,
+      title: "Desportos Aquáticos",
+      description: "Explore as águas cristalinas dos Açores",
+      features: ["Aluguer de SUPs e Kayaks", "Material de snorkeling", "Equipamento de qualidade", "Todos os níveis"]
+    },
+    {
+      icon: Car,
+      title: "Tours Personalizados",
+      description: "Descubra o Faial na nossa carrinha elétrica",
+      features: ["Carrinha elétrica 9 lugares", "Itinerários flexíveis", "Guias experientes", "Transferências incluídas"]
+    },
+    {
+      icon: Camera,
+      title: "Pacotes Multi-atividades",
+      description: "Combine várias experiências numa só reserva",
+      features: ["Descontos em pacotes", "Planeamento personalizado", "Tendas de campismo", "Experiências únicas"]
+    }
+  ];
+
+  const highlights = [
+    "Campo próprio para jogos de estratégia",
+    "Equipamento moderno e bem mantido",
+    "Instrutores certificados e experientes",
+    "Seguros de atividades incluídos",
+    "Carrinha elétrica ecológica",
+    "Material de qualidade premium",
+    "Flexibilidade de horários",
+    "Pacotes para grupos"
+  ];
+
   const faqs = [
     {
       question: "Que atividades de animação turística oferecem?",
@@ -61,7 +104,110 @@ export default function AnimacaoPage() {
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16 md:mb-24">
+            <div className="order-2 md:order-1">
+              <h2 className="font-heading text-3xl font-bold mb-6">
+                Aventura e Emoção nos Açores
+              </h2>
+              <p className="text-muted-foreground text-lg mb-6">
+                A Azores4fun oferece uma ampla variedade de atividades de animação turística para tornar a sua visita aos Açores verdadeiramente inesquecível. Desde jogos de estratégia emocionantes até experiências aquáticas relaxantes.
+              </p>
+              <p className="text-muted-foreground text-lg mb-8">
+                Com equipamento de qualidade, instrutores experientes e um compromisso com a segurança, garantimos que cada atividade seja uma experiência memorável.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" data-testid="button-book-activity">
+                  Reservar Atividade
+                </Button>
+                <Button size="lg" variant="outline" data-testid="button-view-packages">
+                  Ver Pacotes
+                </Button>
+              </div>
+            </div>
+            <div className="order-1 md:order-2 grid grid-cols-2 gap-4">
+              <img
+                src={lasertagImage}
+                alt="Lasertag em ação"
+                className="rounded-lg w-full h-48 object-cover"
+              />
+              <img
+                src={paintballImage}
+                alt="Paintball"
+                className="rounded-lg w-full h-48 object-cover"
+              />
+              <img
+                src={supImage}
+                alt="SUP paddleboarding"
+                className="rounded-lg w-full h-48 object-cover col-span-2"
+              />
+            </div>
+          </div>
+
+          <div className="mb-16 md:mb-24">
+            <h2 className="font-heading text-3xl font-bold mb-12 text-center">
+              As Nossas Atividades
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {activities.map((activity, index) => (
+                <Card key={index} className="p-6 hover-elevate transition-all">
+                  <activity.icon className="h-12 w-12 text-primary mb-4" />
+                  <h3 className="font-heading text-xl font-bold mb-2">
+                    {activity.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-6">
+                    {activity.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {activity.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center gap-2 text-sm">
+                        <Check className="h-4 w-4 text-primary flex-shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-muted/30 rounded-lg p-8 md:p-12 mb-16 md:mb-24">
+            <h2 className="font-heading text-3xl font-bold mb-8 text-center">
+              Porque Escolher as Nossas Atividades
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {highlights.map((highlight, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">{highlight}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <Card className="p-8 md:p-12 mb-16 md:mb-24 bg-primary text-primary-foreground">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h2 className="font-heading text-3xl font-bold mb-4">
+                  Tours Personalizados
+                </h2>
+                <p className="text-primary-foreground/90 mb-6">
+                  Explore a ilha do Faial ao seu próprio ritmo na nossa carrinha elétrica ecológica. Criamos itinerários personalizados baseados nos seus interesses.
+                </p>
+                <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20">
+                  Planear o Meu Tour
+                </Button>
+              </div>
+              <img
+                src={vanImage}
+                alt="Tour em carrinha elétrica"
+                className="rounded-lg w-full h-64 object-cover"
+              />
+            </div>
+          </Card>
+        </div>
+
+        <div className="max-w-4xl mx-auto px-4 md:px-8 pb-16 md:pb-24">
           <h2 className="font-heading text-2xl md:text-3xl font-bold mb-8" data-testid="text-faq-section-title">
             Perguntas Frequentes - Animação Turística
           </h2>

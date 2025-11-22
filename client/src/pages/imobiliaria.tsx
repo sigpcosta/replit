@@ -2,9 +2,49 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQItem from "@/components/FAQItem";
 import { Card } from "@/components/ui/card";
-import { Building2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Building2, Home as HomeIcon, Wrench, Hammer, Key, Check } from "lucide-react";
+import propertyImage from "@assets/generated_images/Azorean_property_exterior_4bd4f6fb.png";
 
 export default function ImobiliariaPage() {
+  const services = [
+    {
+      icon: Key,
+      title: "Arrendamento Longa Duração",
+      description: "Gestão completa de propriedades para arrendamento",
+      features: ["Seleção de inquilinos", "Contratos profissionais", "Gestão de pagamentos", "Suporte jurídico"]
+    },
+    {
+      icon: HomeIcon,
+      title: "Gestão de Alojamento Turístico",
+      description: "Maximize o retorno do seu investimento",
+      features: ["Gestão de reservas", "Limpeza profissional", "Manutenção regular", "Marketing digital"]
+    },
+    {
+      icon: Wrench,
+      title: "Manutenção e Reparações",
+      description: "Mantenha a sua propriedade em perfeito estado",
+      features: ["Manutenção preventiva", "Reparações rápidas", "Equipas especializadas", "Materiais de qualidade"]
+    },
+    {
+      icon: Hammer,
+      title: "Construção e Renovação",
+      description: "Transforme e valorize o seu imóvel",
+      features: ["Projetos completos", "Renovações parciais", "Design e execução", "Licenciamentos incluídos"]
+    }
+  ];
+
+  const highlights = [
+    "Experiência no mercado dos Açores",
+    "Equipas de manutenção próprias",
+    "Orçamentos transparentes e detalhados",
+    "Materiais de qualidade certificada",
+    "Licenças e seguros em dia",
+    "Resposta rápida a emergências",
+    "Gestão profissional de propriedades",
+    "Conhecimento local profundo"
+  ];
+
   const faqs = [
     {
       question: "Que serviços de gestão imobiliária oferecem?",
@@ -61,7 +101,109 @@ export default function ImobiliariaPage() {
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16 md:mb-24">
+            <div>
+              <h2 className="font-heading text-3xl font-bold mb-6">
+                Cuide da Sua Propriedade com Profissionais
+              </h2>
+              <p className="text-muted-foreground text-lg mb-6">
+                A Azores4fun oferece serviços completos de gestão imobiliária, desde arrendamento de longa duração até construção e renovação. Cuidamos da sua propriedade como se fosse nossa.
+              </p>
+              <p className="text-muted-foreground text-lg mb-8">
+                Com equipas especializadas, conhecimento profundo do mercado local e compromisso com a qualidade, garantimos que o seu investimento está em boas mãos.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" data-testid="button-request-quote">
+                  Pedir Orçamento
+                </Button>
+                <Button size="lg" variant="outline" data-testid="button-schedule-visit">
+                  Agendar Visita
+                </Button>
+              </div>
+            </div>
+            <div>
+              <img
+                src={propertyImage}
+                alt="Propriedade nos Açores"
+                className="rounded-lg w-full h-96 object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="mb-16 md:mb-24">
+            <h2 className="font-heading text-3xl font-bold mb-12 text-center">
+              Os Nossos Serviços
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {services.map((service, index) => (
+                <Card key={index} className="p-6 hover-elevate transition-all">
+                  <service.icon className="h-12 w-12 text-primary mb-4" />
+                  <h3 className="font-heading text-xl font-bold mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-6">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center gap-2 text-sm">
+                        <Check className="h-4 w-4 text-primary flex-shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-muted/30 rounded-lg p-8 md:p-12 mb-16 md:mb-24">
+            <h2 className="font-heading text-3xl font-bold mb-8 text-center">
+              Porque Nos Escolher
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {highlights.map((highlight, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">{highlight}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16 md:mb-24">
+            <Card className="p-6 text-center">
+              <Building2 className="h-12 w-12 text-primary mx-auto mb-4" />
+              <h3 className="font-heading text-xl font-bold mb-2">
+                Gestão Completa
+              </h3>
+              <p className="text-muted-foreground">
+                Desde a seleção de inquilinos até à manutenção regular
+              </p>
+            </Card>
+            <Card className="p-6 text-center">
+              <Wrench className="h-12 w-12 text-primary mx-auto mb-4" />
+              <h3 className="font-heading text-xl font-bold mb-2">
+                Manutenção Rápida
+              </h3>
+              <p className="text-muted-foreground">
+                Equipas próprias para resposta imediata a problemas
+              </p>
+            </Card>
+            <Card className="p-6 text-center">
+              <Hammer className="h-12 w-12 text-primary mx-auto mb-4" />
+              <h3 className="font-heading text-xl font-bold mb-2">
+                Renovações
+              </h3>
+              <p className="text-muted-foreground">
+                Valorizamos o seu imóvel com obras de qualidade
+              </p>
+            </Card>
+          </div>
+        </div>
+
+        <div className="max-w-4xl mx-auto px-4 md:px-8 pb-16 md:pb-24">
           <h2 className="font-heading text-2xl md:text-3xl font-bold mb-8" data-testid="text-faq-section-title">
             Perguntas Frequentes - Gestão Imobiliária
           </h2>
