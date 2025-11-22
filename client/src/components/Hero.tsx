@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ContactDialog from "@/components/ContactDialog";
 import heroImage from "@assets/generated_images/Azores_coastline_hero_image_28cfac0a.png";
 
 export default function Hero() {
+  const [contactOpen, setContactOpen] = useState(false);
+
   const scrollToServices = () => {
     const servicesSection = document.getElementById('services');
     if (servicesSection) {
@@ -46,11 +50,14 @@ export default function Hero() {
             variant="outline"
             className="px-8 py-6 text-lg rounded-full bg-white/10 backdrop-blur-md border-white/30 text-white hover:bg-white/20"
             data-testid="button-hero-contact"
+            onClick={() => setContactOpen(true)}
           >
             Contactar
           </Button>
         </div>
       </div>
+
+      <ContactDialog open={contactOpen} onOpenChange={setContactOpen} />
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
         <a href="#services" className="text-white/80 hover:text-white transition-colors" data-testid="link-scroll-down">

@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, Facebook, Instagram } from "lucide-react";
+import ContactDialog from "@/components/ContactDialog";
 
 export default function CTASection() {
+  const [contactOpen, setContactOpen] = useState(false);
+
   return (
     <section className="py-16 md:py-24 bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
@@ -18,18 +22,24 @@ export default function CTASection() {
             variant="outline"
             className="bg-white text-primary hover:bg-white/90 px-8 py-6 text-lg rounded-full border-0"
             data-testid="button-cta-book"
+            asChild
           >
-            Reservar Agora
+            <a href="https://book.azores4fun.com" target="_blank" rel="noopener noreferrer">
+              Reservar Agora
+            </a>
           </Button>
           <Button
             size="lg"
             variant="outline"
             className="px-8 py-6 text-lg rounded-full bg-primary-foreground/10 backdrop-blur-md border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20"
             data-testid="button-cta-contact"
+            onClick={() => setContactOpen(true)}
           >
             Contactar
           </Button>
         </div>
+
+        <ContactDialog open={contactOpen} onOpenChange={setContactOpen} />
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mb-8">
           <a

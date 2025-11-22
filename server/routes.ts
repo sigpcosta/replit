@@ -11,6 +11,13 @@ const bookingSchema = z.object({
   description: z.string().min(1, "Descrição é obrigatória"),
 });
 
+const contactSchema = z.object({
+  name: z.string().min(1, "Nome é obrigatório"),
+  email: z.string().email("Email inválido"),
+  phone: z.string().optional(),
+  message: z.string().min(1, "Mensagem é obrigatória"),
+});
+
 export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/booking", async (req, res) => {
     try {
@@ -74,6 +81,70 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error("Erro ao processar agendamento:", error);
       res.status(500).json({ 
         error: "Erro ao processar solicitação. Por favor, tente novamente." 
+      });
+    }
+  });
+
+  app.post("/api/contact", async (req, res) => {
+    try {
+      const data = contactSchema.parse(req.body);
+      
+      const resendApiKey = process.env.RESEND_API_KEY;
+      
+      if (!resendApiKey) {
+        console.error("RESEND_API_KEY não configurada");
+        return res.status(500).json({ 
+          error: "Configuração de email não encontrada. Por favor, contacte o administrador." 
+        });
+      }
+
+      const emailContent = `
+        Nova Mensagem de Contacto - Azores4fun
+        
+        Nome: ${data.name}
+        Email: ${data.email}
+        Telefone: ${data.phone || "Não fornecido"}
+        
+        Mensagem:
+        ${data.message}
+      `;
+
+      const response = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${resendApiKey}`,
+        },
+        body: JSON.stringify({
+          from: "Azores4fun <onboarding@resend.dev>",
+          to: ["geral@azores4fun.com"],
+          subject: `Nova Mensagem de Contacto - ${data.name}`,
+          text: emailContent,
+        }),
+      });
+
+      if (!response.ok) {
+        const error = await response.text();
+        console.error("Erro ao enviar email:", error);
+        return res.status(500).json({ 
+          error: "Erro ao enviar mensagem. Por favor, tente novamente." 
+        });
+      }
+
+      res.json({ 
+        success: true, 
+        message: "Mensagem enviada com sucesso! Entraremos em contacto em breve." 
+      });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ 
+          error: "Dados inválidos", 
+          details: error.errors 
+        });
+      }
+      console.error("Erro ao processar mensagem:", error);
+      res.status(500).json({ 
+        error: "Erro ao processar mensagem. Por favor, tente novamente." 
       });
     }
   });
