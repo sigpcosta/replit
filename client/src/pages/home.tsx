@@ -6,7 +6,7 @@ import WhyChoose from "@/components/WhyChoose";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { Home as HomeIcon, Zap, PartyPopper, Scissors, Building2, Store } from "lucide-react";
+import { Home as HomeIcon, Activity, PartyPopper, Scissors, Building2, Store } from "lucide-react";
 
 import apartmentImage from "@assets/generated_images/Modern_Horta_apartment_interior_ec6f658d.png";
 import lasertagImage from "@assets/generated_images/Laser_tag_action_shot_63a174d9.png";
@@ -32,7 +32,7 @@ export default function Home() {
       title: "Animação Turística",
       description: "Lasertag, Paintball, Gelblaster, Nerfs, aluguer de SUPs e Kayaks, tours personalizados pela ilha e muito mais.",
       image: lasertagImage,
-      icon: Zap,
+      icon: Activity,
       href: "/animacao",
     },
     {
@@ -178,7 +178,7 @@ export default function Home() {
           },
           {
             title: "Animação Turística",
-            icon: Zap,
+            icon: Activity,
             href: "/animacao",
             faqs: [
               {
