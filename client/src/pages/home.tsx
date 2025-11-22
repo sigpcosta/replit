@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import FeaturedActivity from "@/components/FeaturedActivity";
 import WhyChoose from "@/components/WhyChoose";
+import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { Home as HomeIcon, Zap, PartyPopper, Scissors, Building2, Store } from "lucide-react";
@@ -157,6 +158,101 @@ export default function Home() {
       </section>
 
       <WhyChoose />
+
+      <FAQSection
+        categories={[
+          {
+            title: "Alojamento Local",
+            icon: HomeIcon,
+            href: "/alojamento",
+            faqs: [
+              {
+                question: "Onde ficam localizados os apartamentos?",
+                answer: "Os nossos 3 apartamentos estão localizados no centro da cidade da Horta, Faial, com fácil acesso a todas as comodidades."
+              },
+              {
+                question: "Os apartamentos estão equipados?",
+                answer: "Sim, todos os apartamentos estão totalmente equipados com cozinha, Wi-Fi, roupa de cama e tudo o que precisa para uma estadia confortável."
+              }
+            ]
+          },
+          {
+            title: "Animação Turística",
+            icon: Zap,
+            href: "/animacao",
+            faqs: [
+              {
+                question: "Que atividades oferecem?",
+                answer: "Lasertag, Paintball, Gelblaster, Nerfs, aluguer de SUPs e Kayaks, tours personalizados e muito mais."
+              },
+              {
+                question: "É necessário fazer reserva prévia?",
+                answer: "Sim, recomendamos reserva prévia para garantir disponibilidade, especialmente para grupos."
+              }
+            ]
+          },
+          {
+            title: "Eventos",
+            icon: PartyPopper,
+            href: "/eventos",
+            faqs: [
+              {
+                question: "Que tipos de eventos organizam?",
+                answer: "Festas de aniversário, teambuilding, jogos de estratégia, eventos corporativos e celebrações personalizadas."
+              },
+              {
+                question: "Disponibilizam tendas para eventos?",
+                answer: "Sim, temos três tendas disponíveis, incluindo uma de grandes dimensões, perfeitas para eventos ao ar livre."
+              }
+            ]
+          },
+          {
+            title: "Tatuagem & Piercings",
+            icon: Scissors,
+            href: "/tatuagem",
+            faqs: [
+              {
+                question: "Onde fica localizado o estúdio?",
+                answer: "O estúdio está localizado dentro da loja Azores4fun, no centro da Horta."
+              },
+              {
+                question: "É necessário marcar consulta?",
+                answer: "Sim, trabalhamos exclusivamente por marcação para garantir atenção personalizada."
+              }
+            ]
+          },
+          {
+            title: "Gestão Imobiliária",
+            icon: Building2,
+            href: "/imobiliaria",
+            faqs: [
+              {
+                question: "Que serviços oferecem?",
+                answer: "Arrendamento de longa duração, gestão de propriedades, manutenção, construção e renovações."
+              },
+              {
+                question: "Fazem gestão para alojamento turístico?",
+                answer: "Sim, gerimos propriedades turísticas incluindo manutenção, limpeza e gestão de reservas."
+              }
+            ]
+          },
+          {
+            title: "Loja",
+            icon: Store,
+            href: "/loja",
+            faqs: [
+              {
+                question: "Onde fica localizada a loja?",
+                answer: "A loja está no centro da Horta, Faial, sendo o ponto central para todos os nossos serviços."
+              },
+              {
+                question: "Que produtos vendem?",
+                answer: "Produtos regionais, merchandising Azores4fun, equipamento outdoor e artigos de turismo local."
+              }
+            ]
+          }
+        ]}
+      />
 
       <CTASection />
 
