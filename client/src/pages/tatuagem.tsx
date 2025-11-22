@@ -66,7 +66,7 @@ export default function TatuagemPage() {
     }
   ];
 
-  const processSteps = [
+  const tattooProcessSteps = [
     "Consulta inicial e discussão da ideia",
     "Desenvolvimento do design personalizado",
     "Aprovação do desenho e orçamento",
@@ -75,7 +75,16 @@ export default function TatuagemPage() {
     "Instruções de cuidados pós-tatuagem"
   ];
 
-  const highlights = [
+  const piercingProcessSteps = [
+    "Consulta e escolha do local e joia",
+    "Verificação de anatomia e viabilidade",
+    "Seleção do material hipoalergénico",
+    "Marcação e preparação da área",
+    "Realização do piercing com técnica profissional",
+    "Instruções detalhadas de cuidados e limpeza"
+  ];
+
+  const tattooHighlights = [
     "Trabalhamos apenas com materiais descartáveis e esterilizados",
     "Todas as tintas são de alta qualidade e seguras",
     "Ambiente climatizado e confortável",
@@ -84,6 +93,17 @@ export default function TatuagemPage() {
     "Estúdio licenciado e inspecionado",
     "Consultas de design gratuitas",
     "Localização central na Horta"
+  ];
+
+  const piercingHighlights = [
+    "Joias de titânio ASTM F136 e aço cirúrgico 316L",
+    "Técnicas modernas de perfuração com agulhas",
+    "Material esterilizado em autoclave",
+    "Ambiente higiénico e controlado",
+    "Profissionais certificados e experientes",
+    "Variedade de estilos e materiais premium",
+    "Aftercare detalhado e acompanhamento",
+    "Troca de joias disponível"
   ];
 
   const aftercareSteps = [
@@ -203,7 +223,7 @@ export default function TatuagemPage() {
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
               Cada tatuagem é única. Confira alguns dos nossos trabalhos recentes.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 gap-4 max-w-4xl mx-auto">
               <div className="aspect-square rounded-lg overflow-hidden hover-elevate transition-all cursor-pointer">
                 <img
                   src={tattooImage}
@@ -274,82 +294,125 @@ export default function TatuagemPage() {
               </TabsList>
               
               <TabsContent value="tatuagens">
-                <h3 className="font-heading text-2xl font-bold mb-8 text-center">
-                  Estilos de Tatuagem
-                </h3>
-                <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  Trabalhamos com diversos estilos para transformar a sua ideia em arte
-                </p>
-                <div className="grid md:grid-cols-3 gap-6">
-                  {tattooStyles.map((style, index) => (
-                    <Card key={index} className="p-6 hover-elevate transition-all">
-                      <h4 className="font-heading text-xl font-bold mb-3">
-                        {style.title}
-                      </h4>
-                      <p className="text-muted-foreground">
-                        {style.description}
-                      </p>
-                    </Card>
-                  ))}
+                <div className="space-y-16">
+                  <div>
+                    <h3 className="font-heading text-2xl font-bold mb-8 text-center">
+                      Estilos de Tatuagem
+                    </h3>
+                    <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+                      Trabalhamos com diversos estilos para transformar a sua ideia em arte
+                    </p>
+                    <div className="grid md:grid-cols-3 gap-6">
+                      {tattooStyles.map((style, index) => (
+                        <Card key={index} className="p-6 hover-elevate transition-all">
+                          <h4 className="font-heading text-xl font-bold mb-3">
+                            {style.title}
+                          </h4>
+                          <p className="text-muted-foreground">
+                            {style.description}
+                          </p>
+                        </Card>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="font-heading text-2xl font-bold mb-8 text-center">
+                      Processo de Tatuagem
+                    </h3>
+                    <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+                      Como funciona do primeiro contacto até à tatuagem finalizada
+                    </p>
+                    <div className="max-w-3xl mx-auto space-y-4">
+                      {tattooProcessSteps.map((step, index) => (
+                        <Card key={index} className="p-6 hover-elevate transition-all">
+                          <div className="flex items-start gap-4">
+                            <div className="bg-primary text-primary-foreground rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">
+                              {index + 1}
+                            </div>
+                            <p className="text-foreground pt-2 text-lg">{step}</p>
+                          </div>
+                        </Card>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="bg-muted/30 rounded-lg p-8 md:p-12">
+                    <h3 className="font-heading text-2xl font-bold mb-8 text-center">
+                      Informações Importantes
+                    </h3>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      {tattooHighlights.map((highlight, index) => (
+                        <div key={index} className="flex items-start gap-3">
+                          <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-foreground">{highlight}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </TabsContent>
               
               <TabsContent value="piercings">
-                <h3 className="font-heading text-2xl font-bold mb-8 text-center">
-                  Tipos de Piercings
-                </h3>
-                <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  Todos os tipos de piercings com material de alta qualidade
-                </p>
-                <div className="grid md:grid-cols-3 gap-6">
-                  {piercingTypes.map((type, index) => (
-                    <Card key={index} className="p-6 hover-elevate transition-all">
-                      <h4 className="font-heading text-xl font-bold mb-3">
-                        {type.title}
-                      </h4>
-                      <p className="text-muted-foreground">
-                        {type.description}
-                      </p>
-                    </Card>
-                  ))}
+                <div className="space-y-16">
+                  <div>
+                    <h3 className="font-heading text-2xl font-bold mb-8 text-center">
+                      Tipos de Piercings
+                    </h3>
+                    <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+                      Todos os tipos de piercings com material de alta qualidade
+                    </p>
+                    <div className="grid md:grid-cols-3 gap-6">
+                      {piercingTypes.map((type, index) => (
+                        <Card key={index} className="p-6 hover-elevate transition-all">
+                          <h4 className="font-heading text-xl font-bold mb-3">
+                            {type.title}
+                          </h4>
+                          <p className="text-muted-foreground">
+                            {type.description}
+                          </p>
+                        </Card>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="font-heading text-2xl font-bold mb-8 text-center">
+                      Processo de Piercing
+                    </h3>
+                    <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+                      Como funciona do primeiro contacto até ao piercing finalizado
+                    </p>
+                    <div className="max-w-3xl mx-auto space-y-4">
+                      {piercingProcessSteps.map((step, index) => (
+                        <Card key={index} className="p-6 hover-elevate transition-all">
+                          <div className="flex items-start gap-4">
+                            <div className="bg-primary text-primary-foreground rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">
+                              {index + 1}
+                            </div>
+                            <p className="text-foreground pt-2 text-lg">{step}</p>
+                          </div>
+                        </Card>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="bg-muted/30 rounded-lg p-8 md:p-12">
+                    <h3 className="font-heading text-2xl font-bold mb-8 text-center">
+                      Informações Importantes
+                    </h3>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      {piercingHighlights.map((highlight, index) => (
+                        <div key={index} className="flex items-start gap-3">
+                          <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-foreground">{highlight}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </TabsContent>
             </Tabs>
-          </div>
-
-          <div className="mb-16 md:mb-24">
-            <h2 className="font-heading text-3xl font-bold mb-4 text-center">
-              Processo de Tatuagem
-            </h2>
-            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Como funciona do primeiro contacto até à tatuagem finalizada
-            </p>
-            <div className="max-w-3xl mx-auto space-y-4">
-              {processSteps.map((step, index) => (
-                <Card key={index} className="p-6 hover-elevate transition-all">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-primary text-primary-foreground rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <p className="text-foreground pt-2 text-lg">{step}</p>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-muted/30 rounded-lg p-8 md:p-12 mb-16 md:mb-24">
-            <h2 className="font-heading text-3xl font-bold mb-8 text-center">
-              Informações Importantes
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {highlights.map((highlight, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground">{highlight}</span>
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="mb-16 md:mb-24">
