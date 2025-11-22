@@ -86,13 +86,9 @@ export default function TatuagemPage() {
 
   const tattooHighlights = [
     "Trabalhamos apenas com materiais descartáveis e esterilizados",
-    "Todas as tintas são de alta qualidade e seguras",
+    "Todas as tintas são veganas e de alta qualidade",
     "Ambiente climatizado e confortável",
-    "Sessões de retoque gratuito após cicatrização (se necessário)",
-    "Artistas certificados e experientes",
-    "Estúdio licenciado e inspecionado",
-    "Consultas de design gratuitas",
-    "Localização central na Horta"
+    "Sessões de retoque gratuito após cicatrização (se necessário)"
   ];
 
   const piercingHighlights = [
@@ -150,36 +146,28 @@ export default function TatuagemPage() {
 
   const faqs = [
     {
-      question: "Onde fica localizado o estúdio?",
-      answer: "O nosso estúdio de tatuagem e piercings está localizado dentro da loja Azores4fun, no centro da Horta, Faial, com fácil acesso e estacionamento próximo."
+      question: "Dói muito fazer uma tatuagem?",
+      answer: "A dor varia conforme a região do corpo e a sensibilidade individual. Geralmente é descrita como um desconforto tolerável. Áreas com mais gordura ou músculo são menos sensíveis do que áreas ósseas."
     },
     {
-      question: "É necessário marcar consulta?",
-      answer: "Sim, trabalhamos exclusivamente por marcação para garantir que cada cliente recebe a atenção e tempo necessários. Pode marcar por telefone, email ou pessoalmente na loja."
-    },
-    {
-      question: "Fazem desenhos personalizados?",
-      answer: "Absolutamente! Os nossos artistas trabalham consigo para criar desenhos únicos e personalizados. Pode trazer as suas ideias ou trabalhar do zero com os nossos artistas."
-    },
-    {
-      question: "Qual é a idade mínima para fazer tatuagens?",
-      answer: "A idade mínima é 18 anos. Para menores de 18 anos, é necessária autorização dos pais/tutores legais por escrito e presença física dos mesmos durante o procedimento."
-    },
-    {
-      question: "O estúdio é higiénico e seguro?",
-      answer: "Sim, seguimos rigorosamente todos os protocolos de higiene e segurança. Utilizamos material esterilizado descartável, agulhas de uso único e mantemos o estúdio impecavelmente limpo."
-    },
-    {
-      question: "Que tipos de piercings fazem?",
-      answer: "Fazemos todos os tipos de piercings: orelha, nariz, sobrancelha, lábio, língua, umbigo e outros. Todos realizados com material de alta qualidade e técnicas profissionais."
-    },
-    {
-      question: "Fornecem instruções de cuidados pós-tatuagem?",
-      answer: "Sim, fornecemos instruções detalhadas por escrito e verbalmente sobre como cuidar da sua tatuagem. Também estamos disponíveis para esclarecer dúvidas durante o processo de cicatrização."
-    },
-    {
-      question: "Quanto tempo demora uma tatuagem?",
+      question: "Quanto tempo demora uma sessão?",
       answer: "Depende do tamanho e complexidade do desenho. Tatuagens pequenas podem demorar 30-60 minutos, enquanto peças maiores podem requerer várias sessões de 3-4 horas cada."
+    },
+    {
+      question: "Posso doar sangue depois de fazer uma tatuagem?",
+      answer: "Em Portugal, é necessário aguardar 4 meses após fazer uma tatuagem para poder doar sangue. Este período de segurança serve para garantir a saúde do doador e do receptor."
+    },
+    {
+      question: "Qual o valor de uma tatuagem?",
+      answer: "O valor varia conforme o tamanho, complexidade, tempo de execução e estilo. Oferecemos orçamentos gratuitos e personalizados. Entre em contacto connosco com a sua ideia para recebermos um orçamento."
+    },
+    {
+      question: "Preciso levar o desenho pronto?",
+      answer: "Não é necessário! Pode trazer referências, ideias ou simplesmente descrever o que pretende. Os nossos artistas trabalham consigo para criar um design personalizado que represente a sua visão."
+    },
+    {
+      question: "Como cuidar do piercing?",
+      answer: "Limpe 2x ao dia com solução salina, não toque com as mãos sujas, evite piscinas e mar nas primeiras semanas, não remova a joia durante a cicatrização. Fornecemos instruções detalhadas após o procedimento."
     }
   ];
 
@@ -341,7 +329,7 @@ export default function TatuagemPage() {
                     <h3 className="font-heading text-2xl font-bold mb-8 text-center">
                       Informações Importantes
                     </h3>
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-4 max-w-2xl mx-auto">
                       {tattooHighlights.map((highlight, index) => (
                         <div key={index} className="flex items-start gap-3">
                           <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
