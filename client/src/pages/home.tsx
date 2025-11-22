@@ -6,7 +6,7 @@ import WhyChoose from "@/components/WhyChoose";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { Home as HomeIcon, Activity, PartyPopper, Scissors, Building2, Store } from "lucide-react";
+import { Home as HomeIcon, Activity, PartyPopper, Palette, Building2, Store } from "lucide-react";
 
 import apartmentImage from "@assets/generated_images/Modern_Horta_apartment_interior_ec6f658d.png";
 import lasertagImage from "@assets/generated_images/Laser_tag_action_shot_63a174d9.png";
@@ -46,7 +46,7 @@ export default function Home() {
       title: "Tatuagem & Piercings",
       description: "Estúdio profissional com artistas experientes, ambiente higiénico e seguro para dar vida às suas ideias.",
       image: tattooImage,
-      icon: Scissors,
+      icon: Palette,
       href: "/tatuagem",
     },
     {
@@ -208,7 +208,7 @@ export default function Home() {
           },
           {
             title: "Tatuagem & Piercings",
-            icon: Scissors,
+            icon: Palette,
             href: "/tatuagem",
             faqs: [
               {
