@@ -33,12 +33,11 @@ export default function ServiceCard({ title, description, image, icon: Icon, hre
           </div>
         </div>
         <div className="p-6">
-          <p className="text-muted-foreground mb-4 line-clamp-3" data-testid={`text-service-desc-${href.slice(1)}`}>
+          <p className="text-muted-foreground mb-4" data-testid={`text-service-desc-${href.slice(1)}`}>
             {description}
           </p>
-          <Button variant="ghost" className="group/btn p-0 h-auto font-semibold" data-testid={`button-explore-${href.slice(1)}`}>
-            Explorar
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+          <Button variant="default" size="sm" data-testid={`button-explore-${href.slice(1)}`}>
+            +Info
           </Button>
         </div>
       </a>

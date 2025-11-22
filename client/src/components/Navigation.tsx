@@ -6,12 +6,12 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Alojamento", href: "#alojamento" },
-    { label: "Animação Turística", href: "#animacao" },
-    { label: "Eventos", href: "#eventos" },
-    { label: "Tatuagem", href: "#tatuagem" },
-    { label: "Imobiliária", href: "#imobiliaria" },
-    { label: "Loja", href: "#loja" },
+    { label: "Paintball", href: "#paintball" },
+    { label: "Tours", href: "#tours" },
+    { label: "SUPs & Caiaques", href: "#sups" },
+    { label: "Snorkeling", href: "#snorkeling" },
+    { label: "Percursos", href: "#percursos" },
+    { label: "Apartamentos", href: "#apartamentos" },
   ];
 
   return (
