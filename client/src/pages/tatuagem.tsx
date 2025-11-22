@@ -193,7 +193,7 @@ export default function TatuagemPage() {
               Transforme as suas ideias em arte permanente. Tatuagens e piercings profissionais em ambiente seguro.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" data-testid="button-book-appointment">
+              <Button size="lg" className="bg-[#F59E0B] hover:bg-[#D97706] text-white" data-testid="button-book-appointment">
                 Agendar Sessão
               </Button>
               <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20" data-testid="button-view-portfolio">
@@ -311,14 +311,14 @@ export default function TatuagemPage() {
                     <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
                       Como funciona do primeiro contacto até à tatuagem finalizada
                     </p>
-                    <div className="max-w-3xl mx-auto space-y-4">
+                    <div className="max-w-3xl mx-auto space-y-3">
                       {tattooProcessSteps.map((step, index) => (
-                        <Card key={index} className="p-6 hover-elevate transition-all">
-                          <div className="flex items-start gap-4">
-                            <div className="bg-primary text-primary-foreground rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">
+                        <Card key={index} className="p-4 hover-elevate transition-all">
+                          <div className="flex items-start gap-3">
+                            <div className="bg-[#F59E0B] text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0 text-sm">
                               {index + 1}
                             </div>
-                            <p className="text-foreground pt-2 text-lg">{step}</p>
+                            <p className="text-foreground pt-1 text-sm">{step}</p>
                           </div>
                         </Card>
                       ))}
@@ -332,7 +332,7 @@ export default function TatuagemPage() {
                     <div className="space-y-4 max-w-2xl mx-auto">
                       {tattooHighlights.map((highlight, index) => (
                         <div key={index} className="flex items-start gap-3">
-                          <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <Check className="h-5 w-5 text-[#F59E0B] flex-shrink-0 mt-0.5" />
                           <span className="text-foreground">{highlight}</span>
                         </div>
                       ))}
@@ -371,14 +371,14 @@ export default function TatuagemPage() {
                     <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
                       Como funciona do primeiro contacto até ao piercing finalizado
                     </p>
-                    <div className="max-w-3xl mx-auto space-y-4">
+                    <div className="max-w-3xl mx-auto space-y-3">
                       {piercingProcessSteps.map((step, index) => (
-                        <Card key={index} className="p-6 hover-elevate transition-all">
-                          <div className="flex items-start gap-4">
-                            <div className="bg-primary text-primary-foreground rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">
+                        <Card key={index} className="p-4 hover-elevate transition-all">
+                          <div className="flex items-start gap-3">
+                            <div className="bg-[#F59E0B] text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0 text-sm">
                               {index + 1}
                             </div>
-                            <p className="text-foreground pt-2 text-lg">{step}</p>
+                            <p className="text-foreground pt-1 text-sm">{step}</p>
                           </div>
                         </Card>
                       ))}
@@ -392,7 +392,7 @@ export default function TatuagemPage() {
                     <div className="grid md:grid-cols-2 gap-6">
                       {piercingHighlights.map((highlight, index) => (
                         <div key={index} className="flex items-start gap-3">
-                          <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <Check className="h-5 w-5 text-[#F59E0B] flex-shrink-0 mt-0.5" />
                           <span className="text-foreground">{highlight}</span>
                         </div>
                       ))}
