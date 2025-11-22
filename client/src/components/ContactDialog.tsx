@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/i18n/LanguageContext";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { Mail, Phone, MapPin } from "lucide-react";
@@ -20,6 +21,7 @@ export default function ContactDialog({ open, onOpenChange }: ContactDialogProps
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const { toast } = useToast();
+  const { t } = useLanguage();
 
   const sendContactMutation = useMutation({
     mutationFn: async (data: { name: string; email: string; phone: string; message: string }) => {
@@ -33,8 +35,8 @@ export default function ContactDialog({ open, onOpenChange }: ContactDialogProps
     },
     onSuccess: () => {
       toast({
-        title: "Mensagem enviada!",
-        description: "Obrigado pelo seu contacto. Responderemos em breve.",
+        title: t.contactDialog.success,
+        description: t.contactDialog.successMessage,
       });
       setName("");
       setEmail("");
@@ -44,8 +46,8 @@ export default function ContactDialog({ open, onOpenChange }: ContactDialogProps
     },
     onError: () => {
       toast({
-        title: "Erro ao enviar",
-        description: "Por favor, tente novamente ou contacte-nos diretamente.",
+        title: t.contactDialog.error,
+        description: t.contactDialog.errorMessage,
         variant: "destructive",
       });
     },
@@ -60,27 +62,27 @@ export default function ContactDialog({ open, onOpenChange }: ContactDialogProps
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-heading">Contacte-nos</DialogTitle>
+          <DialogTitle className="text-2xl font-heading">{t.contactDialog.title}</DialogTitle>
           <DialogDescription>
-            Preencha o formulário abaixo e entraremos em contacto consigo brevemente.
+            {t.contactDialog.description}
           </DialogDescription>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-4 mt-4">
           <div className="space-y-2">
-            <Label htmlFor="contact-name">Nome *</Label>
+            <Label htmlFor="contact-name">{t.contactDialog.name} *</Label>
             <Input
               id="contact-name"
               data-testid="input-contact-name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              placeholder="O seu nome"
+              placeholder={t.contactDialog.namePlaceholder}
             />
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="contact-email">Email *</Label>
+            <Label htmlFor="contact-email">{t.contactDialog.email} *</Label>
             <Input
               id="contact-email"
               data-testid="input-contact-email"
@@ -88,31 +90,31 @@ export default function ContactDialog({ open, onOpenChange }: ContactDialogProps
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              placeholder="seu@email.com"
+              placeholder={t.contactDialog.emailPlaceholder}
             />
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="contact-phone">Telefone</Label>
+            <Label htmlFor="contact-phone">{t.contactDialog.phone}</Label>
             <Input
               id="contact-phone"
               data-testid="input-contact-phone"
               type="tel"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              placeholder="+351 123 456 789"
+              placeholder={t.contactDialog.phonePlaceholder}
             />
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="contact-message">Mensagem *</Label>
+            <Label htmlFor="contact-message">{t.contactDialog.message} *</Label>
             <Textarea
               id="contact-message"
               data-testid="input-contact-message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
-              placeholder="Como podemos ajudar?"
+              placeholder={t.contactDialog.messagePlaceholder}
               rows={4}
             />
           </div>
@@ -124,7 +126,7 @@ export default function ContactDialog({ open, onOpenChange }: ContactDialogProps
               disabled={sendContactMutation.isPending}
               data-testid="button-contact-submit"
             >
-              {sendContactMutation.isPending ? "A enviar..." : "Enviar Mensagem"}
+              {sendContactMutation.isPending ? t.contactDialog.sending : t.contactDialog.submit}
             </Button>
 
             <div className="space-y-2 text-sm text-muted-foreground">

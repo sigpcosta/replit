@@ -1,17 +1,20 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/i18n/LanguageContext";
+import LanguageSelector from "@/components/LanguageSelector";
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const navItems = [
-    { label: "Alojamento", href: "#alojamento" },
-    { label: "Animação Turística", href: "#animacao" },
-    { label: "Eventos", href: "#eventos" },
-    { label: "Tatuagem", href: "#tatuagem" },
-    { label: "Imobiliária", href: "#imobiliaria" },
-    { label: "Loja", href: "#loja" },
+    { label: t.nav.accommodation, href: "/alojamento" },
+    { label: t.nav.activities, href: "/animacao" },
+    { label: t.nav.events, href: "/eventos" },
+    { label: t.nav.tattoo, href: "/tatuagem" },
+    { label: t.nav.property, href: "/imobiliaria" },
+    { label: t.nav.shop, href: "/loja" },
   ];
 
   return (
@@ -38,11 +41,12 @@ export default function Navigation() {
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
+            <LanguageSelector />
             <Button variant="outline" size="default" data-testid="button-contact">
-              Contactar
+              {t.nav.contact}
             </Button>
             <Button size="default" data-testid="button-book">
-              Reservar
+              {t.nav.book}
             </Button>
           </div>
 
@@ -76,11 +80,14 @@ export default function Navigation() {
               </a>
             ))}
             <div className="pt-4 space-y-3">
+              <div className="flex justify-center mb-3">
+                <LanguageSelector />
+              </div>
               <Button variant="outline" className="w-full" data-testid="button-mobile-contact">
-                Contactar
+                {t.nav.contact}
               </Button>
               <Button className="w-full" data-testid="button-mobile-book">
-                Reservar
+                {t.nav.book}
               </Button>
             </div>
           </div>

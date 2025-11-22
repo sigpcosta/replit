@@ -1,19 +1,21 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, Facebook, Instagram } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 import ContactDialog from "@/components/ContactDialog";
 
 export default function CTASection() {
   const [contactOpen, setContactOpen] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <section className="py-16 md:py-24 bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
         <h2 className="font-heading text-3xl md:text-5xl font-bold mb-6 uppercase tracking-wide" data-testid="text-cta-heading">
-          Pronto para a Aventura?
+          {t.cta.title}
         </h2>
         <p className="text-lg md:text-xl text-primary-foreground/90 mb-12 max-w-2xl mx-auto">
-          Entre em contacto connosco e comece a planear a sua experiência perfeita nos Açores
+          {t.cta.subtitle}
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -25,7 +27,7 @@ export default function CTASection() {
             asChild
           >
             <a href="https://book.azores4fun.com" target="_blank" rel="noopener noreferrer">
-              Reservar Agora
+              {t.cta.bookNow}
             </a>
           </Button>
           <Button
@@ -35,7 +37,7 @@ export default function CTASection() {
             data-testid="button-cta-contact"
             onClick={() => setContactOpen(true)}
           >
-            Contactar
+            {t.cta.contact}
           </Button>
         </div>
 

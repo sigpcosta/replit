@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/i18n/LanguageContext";
 import ContactDialog from "@/components/ContactDialog";
 import heroImage from "@assets/generated_images/Azores_coastline_hero_image_28cfac0a.png";
 
 export default function Hero() {
   const [contactOpen, setContactOpen] = useState(false);
+  const { t } = useLanguage();
 
   const scrollToServices = () => {
     const servicesSection = document.getElementById('services');
@@ -27,13 +29,13 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 py-24 text-center">
         <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 uppercase tracking-wide" data-testid="text-hero-title">
-          Azores4fun
+          {t.hero.title}
         </h1>
         <p className="font-heading text-xl md:text-2xl lg:text-3xl text-white/95 mb-8 max-w-3xl mx-auto">
-          A Sua Aventura Completa nos Açores
+          {t.hero.subtitle}
         </p>
         <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-          Alojamento · Animação Turística · Eventos · Tatuagem · Gestão Imobiliária · Loja
+          {t.hero.services}
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button
@@ -42,7 +44,7 @@ export default function Hero() {
             data-testid="button-hero-explore"
             onClick={scrollToServices}
           >
-            Explorar Serviços
+            {t.hero.explore}
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
           <Button
@@ -52,7 +54,7 @@ export default function Hero() {
             data-testid="button-hero-contact"
             onClick={() => setContactOpen(true)}
           >
-            Contactar
+            {t.hero.contact}
           </Button>
         </div>
       </div>
@@ -62,7 +64,7 @@ export default function Hero() {
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
         <a href="#services" className="text-white/80 hover:text-white transition-colors" data-testid="link-scroll-down">
           <div className="flex flex-col items-center gap-2">
-            <span className="text-sm font-medium">Descubra Mais</span>
+            <span className="text-sm font-medium">{t.hero.discover}</span>
             <svg className="w-6 h-6 animate-bounce" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
               <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
             </svg>

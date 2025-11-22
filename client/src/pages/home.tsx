@@ -6,6 +6,7 @@ import WhyChoose from "@/components/WhyChoose";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/i18n/LanguageContext";
 import { Home as HomeIcon, Activity, PartyPopper, Pencil, Building2, Store } from "lucide-react";
 
 import apartmentImage from "@assets/generated_images/Modern_Horta_apartment_interior_ec6f658d.png";
@@ -20,45 +21,47 @@ import teambuildingImage from "@assets/generated_images/Teambuilding_outdoor_act
 import paintballImage from "@assets/generated_images/Paintball_action_gameplay_8c01711a.png";
 
 export default function Home() {
+  const { t } = useLanguage();
+  
   const services = [
     {
-      title: "Alojamento Local",
-      description: "3 apartamentos modernos no centro da cidade da Horta, totalmente equipados para uma estadia confortável e memorável.",
+      title: t.services.accommodation.title,
+      description: t.services.accommodation.description,
       image: apartmentImage,
       icon: HomeIcon,
       href: "/alojamento",
     },
     {
-      title: "Animação Turística",
-      description: "Lasertag, Paintball, Gelblaster, Nerfs, aluguer de SUPs e Kayaks, tours personalizados pela ilha e muito mais.",
+      title: t.services.activities.title,
+      description: t.services.activities.description,
       image: lasertagImage,
       icon: Activity,
       href: "/animacao",
     },
     {
-      title: "Eventos",
-      description: "Tendas para eventos, insufláveis, festas de aniversário, teambuilding e jogos de estratégia personalizados.",
+      title: t.services.events.title,
+      description: t.services.events.description,
       image: eventsImage,
       icon: PartyPopper,
       href: "/eventos",
     },
     {
-      title: "Tatuagem & Piercings",
-      description: "Estúdio profissional com artistas experientes, ambiente higiénico e seguro para dar vida às suas ideias.",
+      title: t.services.tattoo.title,
+      description: t.services.tattoo.description,
       image: tattooImage,
       icon: Pencil,
       href: "/tatuagem",
     },
     {
-      title: "Gestão Imobiliária",
-      description: "Serviços de arrendamento de longa duração, manutenção e construção para empreendimentos turísticos e particulares.",
+      title: t.services.property.title,
+      description: t.services.property.description,
       image: propertyImage,
       icon: Building2,
       href: "/imobiliaria",
     },
     {
-      title: "Loja",
-      description: "Loja aberta para receção de clientes, venda de bens e serviços de turismo local, produtos regionais e merchandising.",
+      title: t.services.shop.title,
+      description: t.services.shop.description,
       image: shopImage,
       icon: Store,
       href: "/loja",
@@ -75,10 +78,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4" data-testid="text-services-heading">
-              Os Nossos Serviços
+              {t.services.title}
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Descubra tudo o que a Azores4fun tem para oferecer
+              {t.services.subtitle}
             </p>
           </div>
 
@@ -94,64 +97,44 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4" data-testid="text-activities-heading">
-              Atividades em Destaque
+              {t.featured.title}
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Experiências únicas que tornam a sua visita inesquecível
+              {t.featured.subtitle}
             </p>
           </div>
 
           <div className="space-y-16 md:space-y-24">
             <FeaturedActivity
-              title="Lasertag & Paintball"
-              description="Viva momentos emocionantes com os nossos jogos de estratégia em campo próprio. Equipamento de qualidade e cenários desafiantes para grupos de amigos, famílias ou eventos corporativos."
+              title={t.featured.lasertag.title}
+              description={t.featured.lasertag.description}
               image={paintballImage}
               imagePosition="left"
-              highlights={[
-                "Campo próprio em localização privilegiada",
-                "Equipamento moderno e seguro",
-                "Ideal para grupos e festas de aniversário",
-                "Gelblaster e Nerfs também disponíveis"
-              ]}
+              highlights={t.featured.lasertag.highlights}
             />
 
             <FeaturedActivity
-              title="Desportos Aquáticos"
-              description="Explore a beleza natural dos Açores com os nossos SUPs e Kayaks. Descubra praias escondidas, grutas marinhas e a vida marinha vibrante das águas cristalinas do Faial."
+              title={t.featured.watersports.title}
+              description={t.featured.watersports.description}
               image={supImage}
               imagePosition="right"
-              highlights={[
-                "Aluguer de SUPs e Kayaks de qualidade",
-                "Material de snorkeling incluído",
-                "Águas cristalinas e seguras",
-                "Perfeito para todos os níveis de experiência"
-              ]}
+              highlights={t.featured.watersports.highlights}
             />
 
             <FeaturedActivity
-              title="Tours Personalizados"
-              description="Descubra a ilha do Faial de forma única e confortável na nossa carrinha elétrica de 9 lugares. Tours personalizados adaptados aos seus interesses e ritmo."
+              title={t.featured.tours.title}
+              description={t.featured.tours.description}
               image={vanImage}
               imagePosition="left"
-              highlights={[
-                "Carrinha elétrica ecológica e confortável",
-                "Itinerários personalizados",
-                "Guias locais experientes",
-                "Transferências para clientes do alojamento"
-              ]}
+              highlights={t.featured.tours.highlights}
             />
 
             <FeaturedActivity
-              title="Eventos Corporativos"
-              description="Organize o seu próximo evento de teambuilding num ambiente único. Tendas espaçosas, atividades diversificadas e cenários naturais inspiradores para fortalecer a sua equipa."
+              title={t.featured.corporate.title}
+              description={t.featured.corporate.description}
               image={teambuildingImage}
               imagePosition="right"
-              highlights={[
-                "Tendas de grandes dimensões",
-                "Atividades de teambuilding personalizadas",
-                "Jogos de estratégia e cooperação",
-                "Infraestrutura completa para eventos"
-              ]}
+              highlights={t.featured.corporate.highlights}
             />
           </div>
         </div>

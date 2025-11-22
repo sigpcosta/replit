@@ -1,13 +1,16 @@
+import { useLanguage } from "@/i18n/LanguageContext";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
   const services = [
-    { label: "Alojamento Local", href: "/alojamento" },
-    { label: "Animação Turística", href: "/animacao" },
-    { label: "Eventos", href: "/eventos" },
-    { label: "Tatuagem & Piercings", href: "/tatuagem" },
-    { label: "Gestão Imobiliária", href: "/imobiliaria" },
-    { label: "Loja", href: "/loja" },
+    { label: t.services.accommodation.title, href: "/alojamento" },
+    { label: t.services.activities.title, href: "/animacao" },
+    { label: t.services.events.title, href: "/eventos" },
+    { label: t.services.tattoo.title, href: "/tatuagem" },
+    { label: t.services.property.title, href: "/imobiliaria" },
+    { label: t.services.shop.title, href: "/loja" },
   ];
 
   return (
@@ -19,12 +22,12 @@ export default function Footer() {
               Azores<span className="text-foreground">4fun</span>
             </div>
             <p className="text-muted-foreground text-sm">
-              A sua aventura completa nos Açores. Experiências únicas na Horta, Faial.
+              {t.footer.tagline}
             </p>
           </div>
 
           <div>
-            <h3 className="font-heading font-semibold mb-4">Serviços</h3>
+            <h3 className="font-heading font-semibold mb-4">{t.footer.servicesTitle}</h3>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.href}>
@@ -41,7 +44,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading font-semibold mb-4">Contacto</h3>
+            <h3 className="font-heading font-semibold mb-4">{t.footer.contactTitle}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>Rua da Horta, 123</li>
               <li>9900-000 Horta, Faial</li>
@@ -59,17 +62,17 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading font-semibold mb-4">Horário</h3>
+            <h3 className="font-heading font-semibold mb-4">{t.footer.scheduleTitle}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Segunda - Sexta: 9h - 19h</li>
-              <li>Sábado: 10h - 18h</li>
-              <li>Domingo: 10h - 14h</li>
+              <li>{t.footer.schedule.weekdays}</li>
+              <li>{t.footer.schedule.saturday}</li>
+              <li>{t.footer.schedule.sunday}</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t mt-12 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {currentYear} Azores4fun. Todos os direitos reservados.</p>
+          <p>&copy; {currentYear} Azores4fun. {t.footer.rights}</p>
         </div>
       </div>
     </footer>
