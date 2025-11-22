@@ -1,13 +1,13 @@
 # Azores4fun Design Guidelines
 
 ## Design Approach
-**Simpler & Direct**: Based on the current azores4fun.com design - clean, straightforward presentation focused on activities and services. Less corporate, more authentic and approachable. Natural colors reflecting the Azores environment with emphasis on clarity and ease of use.
+**Reference-Based**: Drawing inspiration from Airbnb (accommodation sections), booking platforms, and adventure tourism sites. The design balances professionalism with the adventurous spirit of the Azores, creating a vibrant multi-service portal that clearly segments 5 distinct business areas while maintaining cohesive branding.
 
 ## Core Design Principles
-- **Simple & Authentic**: Clean, straightforward design that feels local and approachable
-- **Activity-Focused**: Emphasis on outdoor activities and experiences rather than corporate services
-- **Natural Colors**: Ocean blues, greens, earth tones reflecting the Azores landscape
-- **Easy Navigation**: Direct access to activities with clear call-to-actions
+- **Adventure Meets Professionalism**: Energetic and inviting while maintaining credibility across diverse services
+- **Clear Service Segmentation**: Each of the 5 business areas has distinct visual identity within unified system
+- **Island Authenticity**: Reflects Azores' natural beauty and adventure tourism appeal
+- **Conversion-Focused**: Every section guides users toward booking or inquiry
 
 ## Typography
 - **Primary Font**: Montserrat (Google Fonts) - modern, clean, excellent for headings

@@ -21,46 +21,46 @@ import paintballImage from "@assets/generated_images/Paintball_action_gameplay_8
 export default function Home() {
   const services = [
     {
-      title: "Lasertag, Paintball, Gelblaster e NERFs",
-      description: "Atividades de estratégia ao ar livre, num campo construído de raiz para o efeito, como se estivessem \"ao vivo e a cores\" em pleno \"Call of Duty\". Desafia-te! (Faial & Pico)",
-      image: lasertagImage,
-      icon: Zap,
-      href: "#paintball",
-    },
-    {
-      title: "Tours de Carrinha",
-      description: "Vem descobrir a ilha, e todos os seus fantásticos recantos, na nossa confortável carrinha. Programas pré-definidos ou feitos à tua medida, com ou sem almoço incluído.",
-      image: vanImage,
-      icon: HomeIcon,
-      href: "#tours",
-    },
-    {
-      title: "SUPs e Caiaques",
-      description: "Com os nossos SUPs e caiaques insufláveis podes aventurar-te por portos e praias ao longo de toda a ilha do Faial e ter o privilégio de a conhecer noutra perspectiva.",
-      image: supImage,
-      icon: Zap,
-      href: "#sups",
-    },
-    {
-      title: "Snorkeling",
-      description: "Máscara, tubo e barbatanas é tudo quanto é preciso para se explorar e desfrutar do maravilhoso mundo subaquático superficial das nossas ilhas.",
-      image: supImage,
-      icon: Zap,
-      href: "#snorkeling",
-    },
-    {
-      title: "Percursos Pedestres e Camping",
-      description: "Calce as botas, coloque a mochila às costas e venha connosco descobrir incríveis trilhos! Quer apenas os transferes ou dormir na natureza e não trouxe a tenda!? Fale connosco!",
-      image: teambuildingImage,
-      icon: PartyPopper,
-      href: "#percursos",
-    },
-    {
-      title: "Apartamentos Casa da Travessa",
-      description: "No centro da cidade da Horta disponibilizamos três apartamentos independentes, em regime de Alojamento Local, tipologias T0, T2 e T3.",
+      title: "Alojamento Local",
+      description: "3 apartamentos modernos no centro da cidade da Horta, totalmente equipados para uma estadia confortável e memorável.",
       image: apartmentImage,
       icon: HomeIcon,
-      href: "#apartamentos",
+      href: "#alojamento",
+    },
+    {
+      title: "Animação Turística",
+      description: "Lasertag, Paintball, Gelblaster, Nerfs, aluguer de SUPs e Kayaks, tours personalizados pela ilha e muito mais.",
+      image: lasertagImage,
+      icon: Zap,
+      href: "#animacao",
+    },
+    {
+      title: "Eventos",
+      description: "Tendas para eventos, insufláveis, festas de aniversário, teambuilding e jogos de estratégia personalizados.",
+      image: eventsImage,
+      icon: PartyPopper,
+      href: "#eventos",
+    },
+    {
+      title: "Tatuagem & Piercings",
+      description: "Estúdio profissional com artistas experientes, ambiente higiénico e seguro para dar vida às suas ideias.",
+      image: tattooImage,
+      icon: Scissors,
+      href: "#tatuagem",
+    },
+    {
+      title: "Gestão Imobiliária",
+      description: "Serviços de arrendamento de longa duração, manutenção e construção para empreendimentos turísticos e particulares.",
+      image: propertyImage,
+      icon: Building2,
+      href: "#imobiliaria",
+    },
+    {
+      title: "Loja",
+      description: "Loja aberta para receção de clientes, venda de bens e serviços de turismo local, produtos regionais e merchandising.",
+      image: shopImage,
+      icon: Store,
+      href: "#loja",
     },
   ];
 
@@ -72,6 +72,14 @@ export default function Home() {
 
       <section id="services" className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4" data-testid="text-services-heading">
+              Os Nossos Serviços
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Descubra tudo o que a Azores4fun tem para oferecer
+            </p>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -81,6 +89,74 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-16 md:py-24 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4" data-testid="text-activities-heading">
+              Atividades em Destaque
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Experiências únicas que tornam a sua visita inesquecível
+            </p>
+          </div>
+
+          <div className="space-y-16 md:space-y-24">
+            <FeaturedActivity
+              title="Lasertag & Paintball"
+              description="Viva momentos emocionantes com os nossos jogos de estratégia em campo próprio. Equipamento de qualidade e cenários desafiantes para grupos de amigos, famílias ou eventos corporativos."
+              image={paintballImage}
+              imagePosition="left"
+              highlights={[
+                "Campo próprio em localização privilegiada",
+                "Equipamento moderno e seguro",
+                "Ideal para grupos e festas de aniversário",
+                "Gelblaster e Nerfs também disponíveis"
+              ]}
+            />
+
+            <FeaturedActivity
+              title="Desportos Aquáticos"
+              description="Explore a beleza natural dos Açores com os nossos SUPs e Kayaks. Descubra praias escondidas, grutas marinhas e a vida marinha vibrante das águas cristalinas do Faial."
+              image={supImage}
+              imagePosition="right"
+              highlights={[
+                "Aluguer de SUPs e Kayaks de qualidade",
+                "Material de snorkeling incluído",
+                "Águas cristalinas e seguras",
+                "Perfeito para todos os níveis de experiência"
+              ]}
+            />
+
+            <FeaturedActivity
+              title="Tours Personalizados"
+              description="Descubra a ilha do Faial de forma única e confortável na nossa carrinha elétrica de 9 lugares. Tours personalizados adaptados aos seus interesses e ritmo."
+              image={vanImage}
+              imagePosition="left"
+              highlights={[
+                "Carrinha elétrica ecológica e confortável",
+                "Itinerários personalizados",
+                "Guias locais experientes",
+                "Transferências para clientes do alojamento"
+              ]}
+            />
+
+            <FeaturedActivity
+              title="Eventos Corporativos"
+              description="Organize o seu próximo evento de teambuilding num ambiente único. Tendas espaçosas, atividades diversificadas e cenários naturais inspiradores para fortalecer a sua equipa."
+              image={teambuildingImage}
+              imagePosition="right"
+              highlights={[
+                "Tendas de grandes dimensões",
+                "Atividades de teambuilding personalizadas",
+                "Jogos de estratégia e cooperação",
+                "Infraestrutura completa para eventos"
+              ]}
+            />
+          </div>
+        </div>
+      </section>
+
+      <WhyChoose />
 
       <CTASection />
 

@@ -15,11 +15,14 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 py-24 text-center">
-        <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4" data-testid="text-hero-title">
-          Alojamento e Animação Turística
+        <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 uppercase tracking-wide" data-testid="text-hero-title">
+          Azores4fun
         </h1>
+        <p className="font-heading text-xl md:text-2xl lg:text-3xl text-white/95 mb-8 max-w-3xl mx-auto">
+          A Sua Aventura Completa nos Açores
+        </p>
         <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-          Aluguer material desportos náuticos
+          Alojamento · Animação Turística · Eventos · Tatuagem · Gestão Imobiliária · Loja
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button

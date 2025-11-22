@@ -2,12 +2,12 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { label: "Paintball & Lasertag", href: "#paintball" },
-    { label: "Tours de Carrinha", href: "#tours" },
-    { label: "SUPs e Caiaques", href: "#sups" },
-    { label: "Snorkeling", href: "#snorkeling" },
-    { label: "Percursos Pedestres", href: "#percursos" },
-    { label: "Apartamentos", href: "#apartamentos" },
+    { label: "Alojamento Local", href: "#alojamento" },
+    { label: "Animação Turística", href: "#animacao" },
+    { label: "Eventos", href: "#eventos" },
+    { label: "Tatuagem & Piercings", href: "#tatuagem" },
+    { label: "Gestão Imobiliária", href: "#imobiliaria" },
+    { label: "Loja", href: "#loja" },
   ];
 
   return (
