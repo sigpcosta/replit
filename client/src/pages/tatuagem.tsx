@@ -354,7 +354,7 @@ export default function TatuagemPage() {
                     </p>
                     <div className="grid md:grid-cols-3 gap-6">
                       {tattooStyles.map((style, index) => (
-                        <Card key={index} className="p-6 hover-elevate transition-all">
+                        <Card key={index} className="p-6 hover-elevate transition-all border-l-4 border-l-[#F59E0B]">
                           <h4 className="font-heading text-xl font-bold mb-3">
                             {style.title}
                           </h4>
@@ -414,7 +414,7 @@ export default function TatuagemPage() {
                     </p>
                     <div className="grid md:grid-cols-3 gap-6">
                       {piercingTypes.map((type, index) => (
-                        <Card key={index} className="p-6 hover-elevate transition-all">
+                        <Card key={index} className="p-6 hover-elevate transition-all border-l-4 border-l-[#F59E0B]">
                           <h4 className="font-heading text-xl font-bold mb-3">
                             {type.title}
                           </h4>
