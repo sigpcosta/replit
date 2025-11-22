@@ -95,26 +95,32 @@ export default function TatuagemPage() {
   const piercingTypes = [
     {
       title: "Orelha",
+      healing: "Cicatrização: 6-12 semanas",
       description: "Lóbulo, hélix, tragus, conch, daith, rook e industrial. Variedade de joias disponíveis."
     },
     {
       title: "Nariz",
+      healing: "Cicatrização: 2-4 meses",
       description: "Nostril e septum com joias delicadas ou statement pieces."
     },
     {
       title: "Facial",
+      healing: "Cicatrização: 6-8 semanas",
       description: "Sobrancelha, labret, monroe, medusa e bridge com técnicas modernas."
     },
     {
       title: "Oral",
+      healing: "Cicatrização: 4-6 semanas",
       description: "Língua, smiley e frenulum com materiais hipoalergénicos."
     },
     {
       title: "Corpo",
+      healing: "Cicatrização: 6-9 meses",
       description: "Umbigo, mamilo e superfícies com joias de qualidade premium."
     },
     {
       title: "Microdermal",
+      healing: "Cicatrização: 3-6 meses",
       description: "Implantes dérmicos para áreas únicas do corpo."
     }
   ];
@@ -415,9 +421,12 @@ export default function TatuagemPage() {
                     <div className="grid md:grid-cols-3 gap-6">
                       {piercingTypes.map((type, index) => (
                         <Card key={index} className="p-6 hover-elevate transition-all border-l-4 border-l-[#F59E0B]">
-                          <h4 className="font-heading text-xl font-bold mb-3">
+                          <h4 className="font-heading text-xl font-bold mb-2">
                             {type.title}
                           </h4>
+                          <p className="text-[#F59E0B] text-sm font-medium mb-3">
+                            {type.healing}
+                          </p>
                           <p className="text-muted-foreground">
                             {type.description}
                           </p>
