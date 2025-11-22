@@ -3,9 +3,11 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LanguageSelector from "@/components/LanguageSelector";
+import ContactDialog from "@/components/ContactDialog";
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
   const { t } = useLanguage();
 
   const navItems = [
@@ -42,11 +44,22 @@ export default function Navigation() {
 
           <div className="hidden lg:flex items-center gap-4">
             <LanguageSelector />
-            <Button variant="outline" size="default" data-testid="button-contact">
+            <Button 
+              variant="outline" 
+              size="default" 
+              data-testid="button-contact"
+              onClick={() => setContactOpen(true)}
+            >
               {t.nav.contact}
             </Button>
-            <Button size="default" data-testid="button-book">
-              {t.nav.book}
+            <Button 
+              size="default" 
+              data-testid="button-book"
+              asChild
+            >
+              <a href="https://book.azores4fun.com" target="_blank" rel="noopener noreferrer">
+                {t.nav.book}
+              </a>
             </Button>
           </div>
 
@@ -83,16 +96,32 @@ export default function Navigation() {
               <div className="flex justify-center mb-3">
                 <LanguageSelector />
               </div>
-              <Button variant="outline" className="w-full" data-testid="button-mobile-contact">
+              <Button 
+                variant="outline" 
+                className="w-full" 
+                data-testid="button-mobile-contact"
+                onClick={() => {
+                  setContactOpen(true);
+                  setMobileMenuOpen(false);
+                }}
+              >
                 {t.nav.contact}
               </Button>
-              <Button className="w-full" data-testid="button-mobile-book">
-                {t.nav.book}
+              <Button 
+                className="w-full" 
+                data-testid="button-mobile-book"
+                asChild
+              >
+                <a href="https://book.azores4fun.com" target="_blank" rel="noopener noreferrer">
+                  {t.nav.book}
+                </a>
               </Button>
             </div>
           </div>
         </div>
       )}
+
+      <ContactDialog open={contactOpen} onOpenChange={setContactOpen} />
     </nav>
   );
 }
