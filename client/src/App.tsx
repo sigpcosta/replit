@@ -10,6 +10,7 @@ import EventosPage from "@/pages/eventos";
 import TatuagemPage from "@/pages/tatuagem";
 import ImobiliariaPage from "@/pages/imobiliaria";
 import LojaPage from "@/pages/loja";
+import PortfolioPage from "@/pages/portfolio";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -22,6 +23,7 @@ function Router() {
       <Route path="/tatuagem" component={TatuagemPage} />
       <Route path="/imobiliaria" component={ImobiliariaPage} />
       <Route path="/loja" component={LojaPage} />
+      <Route path="/portfolio" component={PortfolioPage} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Scissors, Sparkles, Shield, Palette, Check, Star, Droplet, Sun, Clock } from "lucide-react";
+import { Link } from "wouter";
 import tattooImage from "@assets/generated_images/Tattoo_studio_workspace_bfc3187a.png";
 
 export default function TatuagemPage() {
@@ -196,9 +197,11 @@ export default function TatuagemPage() {
               <Button size="lg" className="bg-[#F59E0B] hover:bg-[#D97706] text-white" data-testid="button-book-appointment">
                 Agendar Sessão
               </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20" data-testid="button-view-portfolio">
-                Ver Portfolio
-              </Button>
+              <Link href="/portfolio">
+                <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20" data-testid="button-view-portfolio">
+                  Ver Portfolio
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
