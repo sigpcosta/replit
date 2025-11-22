@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Scissors, Sparkles, Shield, Palette, Check, Star, Droplet, Sun, Clock } from "lucide-react";
 import tattooImage from "@assets/generated_images/Tattoo_studio_workspace_bfc3187a.png";
 
@@ -35,6 +36,33 @@ export default function TatuagemPage() {
     {
       title: "Tradicional",
       description: "Estilo clássico com linhas marcadas e cores sólidas."
+    }
+  ];
+
+  const piercingTypes = [
+    {
+      title: "Orelha",
+      description: "Lóbulo, hélix, tragus, conch, daith, rook e industrial. Variedade de joias disponíveis."
+    },
+    {
+      title: "Nariz",
+      description: "Nostril e septum com joias delicadas ou statement pieces."
+    },
+    {
+      title: "Facial",
+      description: "Sobrancelha, labret, monroe, medusa e bridge com técnicas modernas."
+    },
+    {
+      title: "Oral",
+      description: "Língua, smiley e frenulum com materiais hipoalergénicos."
+    },
+    {
+      title: "Corpo",
+      description: "Umbigo, mamilo e superfícies com joias de qualidade premium."
+    },
+    {
+      title: "Microdermal",
+      description: "Implantes dérmicos para áreas únicas do corpo."
     }
   ];
 
@@ -229,23 +257,64 @@ export default function TatuagemPage() {
 
           <div className="mb-16 md:mb-24">
             <h2 className="font-heading text-3xl font-bold mb-4 text-center">
-              Estilos de Tatuagem
+              Nossos Serviços
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Trabalhamos com diversos estilos para transformar a sua ideia em arte
+              Conheça em detalhe os serviços que oferecemos
             </p>
-            <div className="grid md:grid-cols-3 gap-6">
-              {tattooStyles.map((style, index) => (
-                <Card key={index} className="p-6 hover-elevate transition-all">
-                  <h3 className="font-heading text-xl font-bold mb-3">
-                    {style.title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {style.description}
-                  </p>
-                </Card>
-              ))}
-            </div>
+            
+            <Tabs defaultValue="tatuagens" className="w-full">
+              <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12" data-testid="tabs-services">
+                <TabsTrigger value="tatuagens" data-testid="tab-tatuagens">
+                  Tatuagens
+                </TabsTrigger>
+                <TabsTrigger value="piercings" data-testid="tab-piercings">
+                  Piercings
+                </TabsTrigger>
+              </TabsList>
+              
+              <TabsContent value="tatuagens">
+                <h3 className="font-heading text-2xl font-bold mb-8 text-center">
+                  Estilos de Tatuagem
+                </h3>
+                <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+                  Trabalhamos com diversos estilos para transformar a sua ideia em arte
+                </p>
+                <div className="grid md:grid-cols-3 gap-6">
+                  {tattooStyles.map((style, index) => (
+                    <Card key={index} className="p-6 hover-elevate transition-all">
+                      <h4 className="font-heading text-xl font-bold mb-3">
+                        {style.title}
+                      </h4>
+                      <p className="text-muted-foreground">
+                        {style.description}
+                      </p>
+                    </Card>
+                  ))}
+                </div>
+              </TabsContent>
+              
+              <TabsContent value="piercings">
+                <h3 className="font-heading text-2xl font-bold mb-8 text-center">
+                  Tipos de Piercings
+                </h3>
+                <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+                  Todos os tipos de piercings com material de alta qualidade
+                </p>
+                <div className="grid md:grid-cols-3 gap-6">
+                  {piercingTypes.map((type, index) => (
+                    <Card key={index} className="p-6 hover-elevate transition-all">
+                      <h4 className="font-heading text-xl font-bold mb-3">
+                        {type.title}
+                      </h4>
+                      <p className="text-muted-foreground">
+                        {type.description}
+                      </p>
+                    </Card>
+                  ))}
+                </div>
+              </TabsContent>
+            </Tabs>
           </div>
 
           <div className="mb-16 md:mb-24">
