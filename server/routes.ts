@@ -117,7 +117,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         },
         body: JSON.stringify({
           from: "Azores4fun <onboarding@resend.dev>",
-          to: ["geral@azores4fun.com"],
+          to: ["info@azores4fun.com"],
           subject: `Nova Mensagem de Contacto - ${data.name}`,
           text: emailContent,
         }),

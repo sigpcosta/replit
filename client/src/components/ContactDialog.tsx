@@ -130,8 +130,8 @@ export default function ContactDialog({ open, onOpenChange }: ContactDialogProps
             <div className="space-y-2 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <a href="mailto:geral@azores4fun.com" className="hover:text-foreground transition-colors">
-                  geral@azores4fun.com
+                <a href="mailto:info@azores4fun.com" className="hover:text-foreground transition-colors">
+                  info@azores4fun.com
                 </a>
               </div>
               <div className="flex items-center gap-2">
