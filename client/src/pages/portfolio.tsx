@@ -1,5 +1,8 @@
 import Navigation from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+import { Link } from "wouter";
 import tattooImage from "@assets/generated_images/Tattoo_studio_workspace_bfc3187a.png";
 
 export default function PortfolioPage() {
@@ -25,6 +28,14 @@ export default function PortfolioPage() {
       <div className="pt-20 md:pt-24">
         <div className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground py-12 md:py-16">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
+            <div className="mb-6">
+              <Link href="/tatuagem">
+                <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10" data-testid="button-back">
+                  <ArrowLeft className="mr-2 h-4 w-4" />
+                  Voltar para Tatuagens
+                </Button>
+              </Link>
+            </div>
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-center" data-testid="text-page-title">
               Portfolio Completo
             </h1>

@@ -10,9 +10,61 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Scissors, Sparkles, Shield, Palette, Check, Star, Droplet, Sun, Clock } from "lucide-react";
 import { Link } from "wouter";
+import { useToast } from "@/hooks/use-toast";
+import { apiRequest } from "@/lib/queryClient";
+import { useMutation } from "@tanstack/react-query";
+import { useState } from "react";
 import tattooImage from "@assets/generated_images/Tattoo_studio_workspace_bfc3187a.png";
 
 export default function TatuagemPage() {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    description: "",
+  });
+
+  const bookingMutation = useMutation({
+    mutationFn: async (data: typeof formData) => {
+      const res = await apiRequest("POST", "/api/booking", data);
+      return await res.json();
+    },
+    onSuccess: () => {
+      toast({
+        title: "Sucesso!",
+        description: "A sua solicitação foi enviada. Entraremos em contacto em breve.",
+      });
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+        description: "",
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        title: "Erro",
+        description: error.message || "Erro ao enviar solicitação. Por favor, tente novamente.",
+        variant: "destructive",
+      });
+    },
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.phone || !formData.service || !formData.description) {
+      toast({
+        title: "Campos obrigatórios",
+        description: "Por favor, preencha todos os campos.",
+        variant: "destructive",
+      });
+      return;
+    }
+    bookingMutation.mutate(formData);
+  };
   const tattooStyles = [
     {
       title: "Fineline",
@@ -421,30 +473,53 @@ export default function TatuagemPage() {
               Preencha o formulário e entraremos em contacto para orçamento e agendamento
             </p>
             <Card className="p-8 max-w-2xl mx-auto">
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="space-y-2">
                   <Label htmlFor="name">Nome</Label>
-                  <Input id="name" placeholder="O seu nome" data-testid="input-name" />
+                  <Input 
+                    id="name" 
+                    placeholder="O seu nome" 
+                    data-testid="input-name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="seu@email.com" data-testid="input-email" />
+                  <Input 
+                    id="email" 
+                    type="email" 
+                    placeholder="seu@email.com" 
+                    data-testid="input-email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="phone">Telefone</Label>
-                  <Input id="phone" type="tel" placeholder="+351 123 456 789" data-testid="input-phone" />
+                  <Input 
+                    id="phone" 
+                    type="tel" 
+                    placeholder="+351 123 456 789" 
+                    data-testid="input-phone"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="service">Serviço</Label>
-                  <Select>
+                  <Select value={formData.service} onValueChange={(value) => setFormData({...formData, service: value})}>
                     <SelectTrigger id="service" data-testid="select-service">
                       <SelectValue placeholder="Selecione um serviço" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="tattoo">Tatuagem</SelectItem>
-                      <SelectItem value="piercing">Piercing</SelectItem>
-                      <SelectItem value="coverup">Cover-up</SelectItem>
-                      <SelectItem value="retoque">Retoque</SelectItem>
+                      <SelectItem value="Tatuagem">Tatuagem</SelectItem>
+                      <SelectItem value="Piercing">Piercing</SelectItem>
+                      <SelectItem value="Cover-up">Cover-up</SelectItem>
+                      <SelectItem value="Retoque">Retoque</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -455,10 +530,19 @@ export default function TatuagemPage() {
                     placeholder="Conte-nos sobre o desenho que imagina, estilo preferido, tamanho, localização no corpo, etc."
                     rows={5}
                     data-testid="textarea-message"
+                    value={formData.description}
+                    onChange={(e) => setFormData({...formData, description: e.target.value})}
+                    required
                   />
                 </div>
-                <Button type="submit" size="lg" className="w-full" data-testid="button-submit-form">
-                  Enviar Pedido
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  className="w-full" 
+                  data-testid="button-submit-form"
+                  disabled={bookingMutation.isPending}
+                >
+                  {bookingMutation.isPending ? "A enviar..." : "Enviar Pedido"}
                 </Button>
               </form>
             </Card>
