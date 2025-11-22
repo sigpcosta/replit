@@ -194,7 +194,14 @@ export default function TatuagemPage() {
               Transforme as suas ideias em arte permanente. Tatuagens e piercings profissionais em ambiente seguro.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" className="bg-[#F59E0B] hover:bg-[#D97706] text-white" data-testid="button-book-appointment">
+              <Button 
+                size="lg" 
+                className="bg-[#F59E0B] hover:bg-[#D97706] text-white" 
+                data-testid="button-book-appointment"
+                onClick={() => {
+                  document.getElementById('agendar-sessao')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Agendar Sessão
               </Button>
               <Link href="/portfolio">
@@ -406,7 +413,7 @@ export default function TatuagemPage() {
             </Tabs>
           </div>
 
-          <div className="mb-16 md:mb-24">
+          <div id="agendar-sessao" className="mb-16 md:mb-24">
             <h2 className="font-heading text-3xl font-bold mb-4 text-center">
               Agende a Sua Sessão
             </h2>
