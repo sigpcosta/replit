@@ -37,10 +37,10 @@
             </nav>
 
             <div class="header-actions">
-                <a href="#contacto" class="btn btn-outline">
+                <a href="<?php echo esc_url(home_url('/contacto')); ?>" class="btn btn-outline">
                     <?php esc_html_e('Contactar', 'azores4fun'); ?>
                 </a>
-                <a href="#reservar" class="btn btn-primary">
+                <a href="https://experiences.azores4fun.com" class="btn btn-primary" target="_blank" rel="noopener">
                     <?php esc_html_e('Reservar', 'azores4fun'); ?>
                 </a>
             </div>

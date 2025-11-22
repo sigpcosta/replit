@@ -39,8 +39,8 @@ get_header();
                 <a href="#servicos" class="btn btn-primary btn-lg">
                     <?php esc_html_e('Explorar Serviços', 'azores4fun'); ?>
                 </a>
-                <a href="#contacto" class="btn btn-outline btn-lg">
-                    <?php esc_html_e('Contactar', 'azores4fun'); ?>
+                <a href="https://experiences.azores4fun.com" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+                    <?php esc_html_e('Reservar Agora', 'azores4fun'); ?>
                 </a>
             </div>
         </div>
@@ -127,7 +127,7 @@ get_header();
                         </div>
                         <div class="service-content">
                             <p class="service-description"><?php echo esc_html($service['desc']); ?></p>
-                            <a href="#contacto" class="service-link">
+                            <a href="<?php echo esc_url(home_url('/' . $service['id'])); ?>" class="service-link">
                                 <?php esc_html_e('Saber Mais', 'azores4fun'); ?> →
                             </a>
                         </div>
@@ -144,13 +144,13 @@ get_header();
                 <?php esc_html_e('Pronto para a Aventura?', 'azores4fun'); ?>
             </h2>
             <p class="section-description">
-                <?php esc_html_e('Entre em contacto connosco e comece a planear a sua experiência perfeita nos Açores', 'azores4fun'); ?>
+                <?php esc_html_e('Reserve já a sua experiência na nossa plataforma ou contacte-nos para mais informações', 'azores4fun'); ?>
             </p>
             <div class="hero-buttons">
-                <a href="#reservar" class="btn btn-lg" style="background: white; color: var(--primary); border-color: white;">
+                <a href="https://experiences.azores4fun.com" class="btn btn-lg" style="background: white; color: var(--primary); border-color: white;" target="_blank" rel="noopener">
                     <?php esc_html_e('Reservar Agora', 'azores4fun'); ?>
                 </a>
-                <a href="mailto:info@azores4fun.com" class="btn btn-outline btn-lg">
+                <a href="<?php echo esc_url(home_url('/contacto')); ?>" class="btn btn-outline btn-lg">
                     <?php esc_html_e('Contactar', 'azores4fun'); ?>
                 </a>
             </div>

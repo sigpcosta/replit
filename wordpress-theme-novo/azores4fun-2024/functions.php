@@ -173,3 +173,62 @@ function azores4fun_excerpt_more($more) {
     return '...';
 }
 add_filter('excerpt_more', 'azores4fun_excerpt_more');
+
+/**
+ * Handler do formulário de contacto
+ */
+function azores4fun_handle_contact_form() {
+    // Verificar nonce
+    if (!isset($_POST['contact_nonce']) || !wp_verify_nonce($_POST['contact_nonce'], 'azores4fun_contact_nonce')) {
+        wp_send_json_error(array('message' => __('Erro de segurança. Recarregue a página e tente novamente.', 'azores4fun')));
+        exit;
+    }
+
+    // Sanitizar dados
+    $name = sanitize_text_field($_POST['contact_name']);
+    $email = sanitize_email($_POST['contact_email']);
+    $phone = sanitize_text_field($_POST['contact_phone']);
+    $subject = sanitize_text_field($_POST['contact_subject']);
+    $message = sanitize_textarea_field($_POST['contact_message']);
+
+    // Validar campos obrigatórios
+    if (empty($name) || empty($email) || empty($subject) || empty($message)) {
+        wp_send_json_error(array('message' => __('Por favor, preencha todos os campos obrigatórios.', 'azores4fun')));
+        exit;
+    }
+
+    // Validar email
+    if (!is_email($email)) {
+        wp_send_json_error(array('message' => __('Por favor, insira um email válido.', 'azores4fun')));
+        exit;
+    }
+
+    // Preparar email
+    $to = get_option('admin_email'); // Email do administrador do WordPress
+    $email_subject = '[Azores4fun] ' . $subject;
+    $email_body = "Nome: $name\n";
+    $email_body .= "Email: $email\n";
+    if (!empty($phone)) {
+        $email_body .= "Telefone: $phone\n";
+    }
+    $email_body .= "\nMensagem:\n$message";
+    
+    $headers = array(
+        'Content-Type: text/plain; charset=UTF-8',
+        'From: ' . $name . ' <' . $email . '>',
+        'Reply-To: ' . $email
+    );
+
+    // Enviar email
+    $sent = wp_mail($to, $email_subject, $email_body, $headers);
+
+    if ($sent) {
+        wp_send_json_success(array('message' => __('Mensagem enviada com sucesso! Entraremos em contacto em breve.', 'azores4fun')));
+    } else {
+        wp_send_json_error(array('message' => __('Erro ao enviar mensagem. Por favor, tente novamente ou contacte-nos directamente por telefone.', 'azores4fun')));
+    }
+    
+    exit;
+}
+add_action('admin_post_azores4fun_contact_form', 'azores4fun_handle_contact_form');
+add_action('admin_post_nopriv_azores4fun_contact_form', 'azores4fun_handle_contact_form');
