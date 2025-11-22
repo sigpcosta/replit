@@ -3,46 +3,101 @@ import Footer from "@/components/Footer";
 import FAQItem from "@/components/FAQItem";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Scissors, Sparkles, Shield, Palette, Check } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Scissors, Sparkles, Shield, Palette, Check, Star, Droplet, Sun, Clock } from "lucide-react";
 import tattooImage from "@assets/generated_images/Tattoo_studio_workspace_bfc3187a.png";
 
 export default function TatuagemPage() {
-  const services = [
+  const tattooStyles = [
     {
-      icon: Palette,
-      title: "Tatuagens Personalizadas",
-      description: "Desenhos únicos criados especialmente para si",
-      features: ["Consulta de design gratuita", "Artistas experientes", "Todos os estilos", "Retoques gratuitos"]
+      title: "Fineline",
+      description: "Traços finos e delicados, perfeitos para designs minimalistas e detalhados."
     },
     {
-      icon: Sparkles,
-      title: "Piercings Profissionais",
-      description: "Todos os tipos de piercings com material premium",
-      features: ["Joias de alta qualidade", "Técnicas modernas", "Cuidados pós-piercing", "Variedade de estilos"]
+      title: "Minimalista",
+      description: "Designs simples e elegantes com poucos elementos, mas grande impacto visual."
     },
     {
-      icon: Shield,
-      title: "Higiene e Segurança",
-      description: "Protocolos rigorosos para sua proteção",
-      features: ["Material esterilizado", "Agulhas descartáveis", "Licenças atualizadas", "Ambiente impecável"]
+      title: "Aquarela",
+      description: "Estilo artístico com cores vibrantes que simulam pinceladas de aquarela."
     },
     {
-      icon: Scissors,
-      title: "Coberturas e Remoções",
-      description: "Renovação de tatuagens antigas",
-      features: ["Cover-ups especializados", "Laser disponível (parceiros)", "Consultas gratuitas", "Orçamentos transparentes"]
+      title: "Realismo",
+      description: "Reprodução fiel de imagens, retratos e elementos com alto nível de detalhe."
+    },
+    {
+      title: "Geométrico",
+      description: "Formas geométricas precisas criando padrões e mandalas harmoniosas."
+    },
+    {
+      title: "Tradicional",
+      description: "Estilo clássico com linhas marcadas e cores sólidas."
     }
   ];
 
+  const processSteps = [
+    "Consulta inicial e discussão da ideia",
+    "Desenvolvimento do design personalizado",
+    "Aprovação do desenho e orçamento",
+    "Agendamento da sessão",
+    "Preparação da pele e aplicação",
+    "Instruções de cuidados pós-tatuagem"
+  ];
+
   const highlights = [
+    "Trabalhamos apenas com materiais descartáveis e esterilizados",
+    "Todas as tintas são de alta qualidade e seguras",
+    "Ambiente climatizado e confortável",
+    "Sessões de retoque gratuito após cicatrização (se necessário)",
     "Artistas certificados e experientes",
     "Estúdio licenciado e inspecionado",
-    "Material de uso único e esterilizado",
-    "Ambiente limpo e confortável",
-    "Desenhos personalizados incluídos",
-    "Instruções de cuidados detalhadas",
-    "Marcações flexíveis",
+    "Consultas de design gratuitas",
     "Localização central na Horta"
+  ];
+
+  const aftercareSteps = [
+    {
+      icon: Clock,
+      title: "Primeiras 24h",
+      description: "Mantenha o curativo por 2-4 horas. Lave suavemente com sabão neutro e água morna. Seque com papel toalha."
+    },
+    {
+      icon: Droplet,
+      title: "Hidratação",
+      description: "Aplique pomada específica 2-3 vezes ao dia. Use apenas produtos recomendados pelo tatuador."
+    },
+    {
+      icon: Sun,
+      title: "Proteção Solar",
+      description: "Evite exposição solar direta por 30 dias. Use protetor solar FPS 50+ após cicatrização completa."
+    },
+    {
+      icon: Shield,
+      title: "Cicatrização",
+      description: "Não coce nem remova as casquinhas. A cicatrização completa leva 2-4 semanas."
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Maria Silva",
+      text: "Experiência incrível! O profissionalismo e atenção aos detalhes são impecáveis. Minha tatuagem ficou perfeita!"
+    },
+    {
+      name: "João Santos",
+      text: "Ambiente limpo, equipamentos esterilizados e artistas muito talentosos. Recomendo de olhos fechados!"
+    },
+    {
+      name: "Ana Costa",
+      text: "Fiz meu piercing aqui e adorei o resultado. Equipa super atenciosa e tudo muito higiénico."
+    },
+    {
+      name: "Pedro Oliveira",
+      text: "Melhor estúdio da região! O tatuador entendeu exatamente o que eu queria e superou as minhas expectativas."
+    }
   ];
 
   const faqs = [
@@ -105,17 +160,17 @@ export default function TatuagemPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16 md:mb-24">
             <div>
               <h2 className="font-heading text-3xl font-bold mb-6">
-                Arte, Segurança e Profissionalismo
+                Transforme as Suas Ideias em Arte Permanente
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
                 No estúdio Azores4fun, transformamos as suas ideias em arte corporal única. Os nossos artistas experientes trabalham consigo para criar desenhos personalizados que contam a sua história.
               </p>
               <p className="text-muted-foreground text-lg mb-8">
-                Seguimos os mais rigorosos protocolos de higiene e segurança, utilizando apenas material esterilizado e agulhas de uso único. O seu bem-estar é a nossa prioridade.
+                Tatuagens e piercings profissionais em ambiente seguro, higiénico e confortável. Cada trabalho é uma obra de arte pensada especialmente para si.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" data-testid="button-book-appointment">
-                  Marcar Consulta
+                  Agendar Sessão
                 </Button>
                 <Button size="lg" variant="outline" data-testid="button-view-portfolio">
                   Ver Portfolio
@@ -132,27 +187,42 @@ export default function TatuagemPage() {
           </div>
 
           <div className="mb-16 md:mb-24">
-            <h2 className="font-heading text-3xl font-bold mb-12 text-center">
-              Os Nossos Serviços
+            <h2 className="font-heading text-3xl font-bold mb-4 text-center">
+              Estilos de Tatuagem
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {services.map((service, index) => (
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+              Trabalhamos com diversos estilos para transformar a sua ideia em arte
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              {tattooStyles.map((style, index) => (
                 <Card key={index} className="p-6 hover-elevate transition-all">
-                  <service.icon className="h-12 w-12 text-primary mb-4" />
-                  <h3 className="font-heading text-xl font-bold mb-2">
-                    {service.title}
+                  <h3 className="font-heading text-xl font-bold mb-3">
+                    {style.title}
                   </h3>
-                  <p className="text-muted-foreground mb-6">
-                    {service.description}
+                  <p className="text-muted-foreground">
+                    {style.description}
                   </p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm">
-                        <Check className="h-4 w-4 text-primary flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          <div className="mb-16 md:mb-24">
+            <h2 className="font-heading text-3xl font-bold mb-4 text-center">
+              Processo de Tatuagem
+            </h2>
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+              Como funciona do primeiro contacto até à tatuagem finalizada
+            </p>
+            <div className="max-w-3xl mx-auto space-y-4">
+              {processSteps.map((step, index) => (
+                <Card key={index} className="p-6 hover-elevate transition-all">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary text-primary-foreground rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">
+                      {index + 1}
+                    </div>
+                    <p className="text-foreground pt-2 text-lg">{step}</p>
+                  </div>
                 </Card>
               ))}
             </div>
@@ -160,9 +230,9 @@ export default function TatuagemPage() {
 
           <div className="bg-muted/30 rounded-lg p-8 md:p-12 mb-16 md:mb-24">
             <h2 className="font-heading text-3xl font-bold mb-8 text-center">
-              Compromisso com a Qualidade
+              Informações Importantes
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {highlights.map((highlight, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
@@ -172,20 +242,102 @@ export default function TatuagemPage() {
             </div>
           </div>
 
-          <Card className="p-8 md:p-12 mb-16 md:mb-24 bg-primary text-primary-foreground">
-            <div className="text-center max-w-3xl mx-auto">
-              <Shield className="h-16 w-16 mx-auto mb-6" />
-              <h2 className="font-heading text-3xl font-bold mb-4">
-                Segurança em Primeiro Lugar
-              </h2>
-              <p className="text-primary-foreground/90 mb-6 text-lg">
-                Cumprimos rigorosamente todas as normas de saúde e segurança. Material esterilizado, ambiente impecável e profissionais certificados garantem uma experiência segura do início ao fim.
-              </p>
-              <p className="text-primary-foreground/80">
-                Todas as agulhas são de uso único · Material autoclavado · Licenças atualizadas · Inspecionado regularmente
-              </p>
+          <div className="mb-16 md:mb-24">
+            <h2 className="font-heading text-3xl font-bold mb-4 text-center">
+              Agende a Sua Sessão
+            </h2>
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+              Preencha o formulário e entraremos em contacto para orçamento e agendamento
+            </p>
+            <Card className="p-8 max-w-2xl mx-auto">
+              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                <div className="space-y-2">
+                  <Label htmlFor="name">Nome</Label>
+                  <Input id="name" placeholder="O seu nome" data-testid="input-name" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input id="email" type="email" placeholder="seu@email.com" data-testid="input-email" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="phone">Telefone</Label>
+                  <Input id="phone" type="tel" placeholder="+351 123 456 789" data-testid="input-phone" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="service">Serviço</Label>
+                  <Select>
+                    <SelectTrigger id="service" data-testid="select-service">
+                      <SelectValue placeholder="Selecione um serviço" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="tattoo">Tatuagem</SelectItem>
+                      <SelectItem value="piercing">Piercing</SelectItem>
+                      <SelectItem value="coverup">Cover-up</SelectItem>
+                      <SelectItem value="retoque">Retoque</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="message">Descreva a sua ideia</Label>
+                  <Textarea 
+                    id="message" 
+                    placeholder="Conte-nos sobre o desenho que imagina, estilo preferido, tamanho, localização no corpo, etc."
+                    rows={5}
+                    data-testid="textarea-message"
+                  />
+                </div>
+                <Button type="submit" size="lg" className="w-full" data-testid="button-submit-form">
+                  Enviar Pedido
+                </Button>
+              </form>
+            </Card>
+          </div>
+
+          <div className="mb-16 md:mb-24">
+            <h2 className="font-heading text-3xl font-bold mb-4 text-center">
+              Cuidados Pós-Procedimento
+            </h2>
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+              Seguir os cuidados corretos garante melhor cicatrização e resultado final impecável
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {aftercareSteps.map((step, index) => (
+                <Card key={index} className="p-6 hover-elevate transition-all">
+                  <step.icon className="h-12 w-12 text-primary mb-4" />
+                  <h3 className="font-heading text-lg font-bold mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {step.description}
+                  </p>
+                </Card>
+              ))}
             </div>
-          </Card>
+          </div>
+
+          <div className="mb-16 md:mb-24">
+            <h2 className="font-heading text-3xl font-bold mb-4 text-center">
+              O Que Dizem os Nossos Clientes
+            </h2>
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+              Avaliações reais dos nossos clientes
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {testimonials.map((testimonial, index) => (
+                <Card key={index} className="p-6">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+                    ))}
+                  </div>
+                  <p className="text-muted-foreground mb-4 italic">
+                    "{testimonial.text}"
+                  </p>
+                  <p className="font-semibold">— {testimonial.name}</p>
+                </Card>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="max-w-4xl mx-auto px-4 md:px-8 pb-16 md:pb-24">
