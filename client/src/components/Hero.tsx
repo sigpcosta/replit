@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@assets/generated_images/Azores_coastline_hero_image_28cfac0a.png";
 
 export default function Hero() {
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -29,6 +36,7 @@ export default function Hero() {
             size="lg"
             className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-lg rounded-full"
             data-testid="button-hero-explore"
+            onClick={scrollToServices}
           >
             Explorar Serviços
             <ArrowRight className="ml-2 h-5 w-5" />
