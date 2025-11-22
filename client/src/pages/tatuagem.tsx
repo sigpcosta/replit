@@ -140,49 +140,90 @@ export default function TatuagemPage() {
       <Navigation />
       
       <div className="pt-20 md:pt-24">
-        <div className="bg-primary text-primary-foreground py-12 md:py-16">
-          <div className="max-w-7xl mx-auto px-4 md:px-8">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="bg-primary-foreground/10 p-3 rounded-lg">
-                <Scissors className="h-8 w-8" />
-              </div>
-              <h1 className="font-heading text-3xl md:text-5xl font-bold" data-testid="text-page-title">
-                Tatuagem & Piercings
-              </h1>
-            </div>
-            <p className="text-lg text-primary-foreground/90 max-w-3xl">
-              Arte corporal profissional num ambiente seguro e higiénico. Artistas experientes para dar vida às suas ideias.
+        <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
+          <div 
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${tattooImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          />
+          <div className="relative z-10 text-center px-4 md:px-8 max-w-4xl mx-auto">
+            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6" data-testid="text-page-title">
+              Arte na Pele
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
+              Transforme as suas ideias em arte permanente. Tatuagens e piercings profissionais em ambiente seguro.
             </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button size="lg" data-testid="button-book-appointment">
+                Agendar Sessão
+              </Button>
+              <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20" data-testid="button-view-portfolio">
+                Ver Portfolio
+              </Button>
+            </div>
           </div>
-        </div>
+        </section>
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-16 md:mb-24">
-            <div>
-              <h2 className="font-heading text-3xl font-bold mb-6">
-                Transforme as Suas Ideias em Arte Permanente
-              </h2>
-              <p className="text-muted-foreground text-lg mb-6">
-                No estúdio Azores4fun, transformamos as suas ideias em arte corporal única. Os nossos artistas experientes trabalham consigo para criar desenhos personalizados que contam a sua história.
-              </p>
-              <p className="text-muted-foreground text-lg mb-8">
-                Tatuagens e piercings profissionais em ambiente seguro, higiénico e confortável. Cada trabalho é uma obra de arte pensada especialmente para si.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" data-testid="button-book-appointment">
-                  Agendar Sessão
-                </Button>
-                <Button size="lg" variant="outline" data-testid="button-view-portfolio">
-                  Ver Portfolio
-                </Button>
+          <div className="mb-16 md:mb-24">
+            <h2 className="font-heading text-3xl font-bold mb-4 text-center">
+              Nosso Portfolio
+            </h2>
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+              Cada tatuagem é única. Confira alguns dos nossos trabalhos recentes.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="aspect-square rounded-lg overflow-hidden hover-elevate transition-all cursor-pointer">
+                <img
+                  src={tattooImage}
+                  alt="Trabalho de tatuagem 1"
+                  className="w-full h-full object-cover"
+                  data-testid="portfolio-image-1"
+                />
               </div>
-            </div>
-            <div>
-              <img
-                src={tattooImage}
-                alt="Estúdio de tatuagem profissional"
-                className="rounded-lg w-full h-96 object-cover"
-              />
+              <div className="aspect-square rounded-lg overflow-hidden hover-elevate transition-all cursor-pointer">
+                <img
+                  src={tattooImage}
+                  alt="Trabalho de tatuagem 2"
+                  className="w-full h-full object-cover"
+                  data-testid="portfolio-image-2"
+                />
+              </div>
+              <div className="aspect-square rounded-lg overflow-hidden hover-elevate transition-all cursor-pointer">
+                <img
+                  src={tattooImage}
+                  alt="Trabalho de tatuagem 3"
+                  className="w-full h-full object-cover"
+                  data-testid="portfolio-image-3"
+                />
+              </div>
+              <div className="aspect-square rounded-lg overflow-hidden hover-elevate transition-all cursor-pointer">
+                <img
+                  src={tattooImage}
+                  alt="Trabalho de tatuagem 4"
+                  className="w-full h-full object-cover"
+                  data-testid="portfolio-image-4"
+                />
+              </div>
+              <div className="aspect-square rounded-lg overflow-hidden hover-elevate transition-all cursor-pointer">
+                <img
+                  src={tattooImage}
+                  alt="Trabalho de tatuagem 5"
+                  className="w-full h-full object-cover"
+                  data-testid="portfolio-image-5"
+                />
+              </div>
+              <div className="aspect-square rounded-lg overflow-hidden hover-elevate transition-all cursor-pointer">
+                <img
+                  src={tattooImage}
+                  alt="Trabalho de tatuagem 6"
+                  className="w-full h-full object-cover"
+                  data-testid="portfolio-image-6"
+                />
+              </div>
             </div>
           </div>
 
