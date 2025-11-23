@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import FAQItem from "@/components/FAQItem";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Home as HomeIcon, Wifi, Utensils, MapPin, Check } from "lucide-react";
+import { Home as HomeIcon, Wifi, Utensils, MapPin, Check, Images } from "lucide-react";
 import apartmentImage from "@assets/TPN1 e 3 porta fechada_1763903607815.png";
 import apt1Image from "@assets/apt1-azores4fun.jpg";
 import apt2Image from "@assets/apt2-travessa-terreo.jpg";
@@ -20,7 +20,8 @@ export default function AlojamentoPage() {
       description: t.accommodation.apartmentTypes.t1Description,
       features: t.accommodation.aptFeatures.t1,
       image: apt1Image,
-      bookingUrl: "https://www.vacation-bookings.com/d/56064021?currency=EUR&locale=pt-PT&salesChannelId=HOLIDU_HOST_WEBSITE&colorPrimary=%23024251&colorPrimaryDark=%23003644&colorCTA=%2300809D&colorCTAActive=%2300728f&colorCTAText=%23FFFFFF&title=Azores4Fun%2C+Turismo+e+Aventura%2C+Unipessoal+Lda&ccons=MTc2MzkwMzU0NzczOToxMTE%3D"
+      bookingUrl: "https://www.vacation-bookings.com/d/56064021?currency=EUR&locale=pt-PT&salesChannelId=HOLIDU_HOST_WEBSITE&colorPrimary=%23024251&colorPrimaryDark=%23003644&colorCTA=%2300809D&colorCTAActive=%2300728f&colorCTAText=%23FFFFFF&title=Azores4Fun%2C+Turismo+e+Aventura%2C+Unipessoal+Lda&ccons=MTc2Mzg4MTA0NDA0NjoxMTE%3D",
+      galleryUrl: "https://www.vacation-bookings.com/d/56064021?currency=EUR&locale=pt-PT&salesChannelId=HOLIDU_HOST_WEBSITE&colorPrimary=%23024251&colorPrimaryDark=%23003644&colorCTA=%2300809D&colorCTAActive=%2300728f&colorCTAText=%23FFFFFF&title=Azores4Fun%2C+Turismo+e+Aventura%2C+Unipessoal+Lda&ccons=MTc2Mzg4MTA0NDA0NjoxMTE%3D#sm-lightbox"
     },
     {
       name: t.accommodation.apartmentTypes.t2Centro,
@@ -28,7 +29,8 @@ export default function AlojamentoPage() {
       description: t.accommodation.apartmentTypes.t2CentroDescription,
       features: t.accommodation.aptFeatures.t2Centro,
       image: apt2Image,
-      bookingUrl: "https://www.vacation-bookings.com/d/51943948?currency=EUR&locale=pt-PT&salesChannelId=HOLIDU_HOST_WEBSITE&colorPrimary=%23024251&colorPrimaryDark=%23003644&colorCTA=%2300809D&colorCTAActive=%2300728f&colorCTAText=%23FFFFFF&title=Azores4Fun%2C+Turismo+e+Aventura%2C+Unipessoal+Lda&ccons=MTc2Mzg4MTA0NDA0NjoxMTE%3D"
+      bookingUrl: "https://www.vacation-bookings.com/d/51943948?currency=EUR&locale=pt-PT&salesChannelId=HOLIDU_HOST_WEBSITE&colorPrimary=%23024251&colorPrimaryDark=%23003644&colorCTA=%2300809D&colorCTAActive=%2300728f&colorCTAText=%23FFFFFF&title=Azores4Fun%2C+Turismo+e+Aventura%2C+Unipessoal+Lda&ccons=MTc2Mzg4MTA0NDA0NjoxMTE%3D",
+      galleryUrl: "https://www.vacation-bookings.com/d/51943948?currency=EUR&locale=pt-PT&salesChannelId=HOLIDU_HOST_WEBSITE&colorPrimary=%23024251&colorPrimaryDark=%23003644&colorCTA=%2300809D&colorCTAActive=%2300728f&colorCTAText=%23FFFFFF&title=Azores4Fun%2C+Turismo+e+Aventura%2C+Unipessoal+Lda&ccons=MTc2Mzg4MTA0NDA0NjoxMTE%3D#sm-lightbox"
     },
     {
       name: t.accommodation.apartmentTypes.t2Pico,
@@ -36,7 +38,8 @@ export default function AlojamentoPage() {
       description: t.accommodation.apartmentTypes.t2PicoDescription,
       features: t.accommodation.aptFeatures.t2Pico,
       image: apt3Image,
-      bookingUrl: "https://www.vacation-bookings.com/d/51943951?currency=EUR&locale=pt-PT&salesChannelId=HOLIDU_HOST_WEBSITE&colorPrimary=%23024251&colorPrimaryDark=%23003644&colorCTA=%2300809D&colorCTAActive=%2300728f&colorCTAText=%23FFFFFF&title=Azores4Fun%2C+Turismo+e+Aventura%2C+Unipessoal+Lda&ccons=MTc2MzkwMzU0NzczOToxMTE%3D"
+      bookingUrl: "https://www.vacation-bookings.com/d/51943951?currency=EUR&locale=pt-PT&salesChannelId=HOLIDU_HOST_WEBSITE&colorPrimary=%23024251&colorPrimaryDark=%23003644&colorCTA=%2300809D&colorCTAActive=%2300728f&colorCTAText=%23FFFFFF&title=Azores4Fun%2C+Turismo+e+Aventura%2C+Unipessoal+Lda&ccons=MTc2MzkwMzU0NzczOToxMTE%3D",
+      galleryUrl: "https://www.vacation-bookings.com/d/51943951?currency=EUR&locale=pt-PT&salesChannelId=HOLIDU_HOST_WEBSITE&colorPrimary=%23024251&colorPrimaryDark=%23003644&colorCTA=%2300809D&colorCTAActive=%2300728f&colorCTAText=%23FFFFFF&title=Azores4Fun%2C+Turismo+e+Aventura%2C+Unipessoal+Lda&ccons=MTc2MzkwMzU0NzczOToxMTE%3D#sm-lightbox"
     }
   ];
 
@@ -103,12 +106,26 @@ export default function AlojamentoPage() {
             <div className="grid md:grid-cols-3 gap-8">
               {apartments.map((apt, index) => (
                 <Card key={index} className="overflow-hidden hover-elevate transition-all">
-                  <img
-                    src={apt.image}
-                    alt={apt.name}
-                    className="w-full h-48 object-cover"
-                    data-testid={`img-apt-${index}`}
-                  />
+                  <div className="relative group">
+                    <img
+                      src={apt.image}
+                      alt={apt.name}
+                      className="w-full h-48 object-cover"
+                      data-testid={`img-apt-${index}`}
+                    />
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm border-white/50 hover:bg-white text-foreground"
+                      asChild
+                      data-testid={`button-gallery-apt-${index}`}
+                    >
+                      <a href={apt.galleryUrl} target="_blank" rel="noopener noreferrer">
+                        <Images className="h-4 w-4 mr-2" />
+                        {t.accommodation.viewMorePhotos}
+                      </a>
+                    </Button>
+                  </div>
                   <div className="p-6">
                     <h3 className="font-heading text-xl font-bold mb-2" data-testid={`text-apt-name-${index}`}>
                       {apt.name}
