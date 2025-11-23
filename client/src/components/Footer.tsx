@@ -49,8 +49,8 @@ export default function Footer() {
               <li>Rua da Horta, 123</li>
               <li>9900-000 Horta, Faial</li>
               <li>
-                <a href="tel:+351123456789" className="hover:text-foreground transition-colors" data-testid="link-footer-phone">
-                  +351 123 456 789
+                <a href="tel:+351934993770" className="hover:text-foreground transition-colors" data-testid="link-footer-phone">
+                  +351 934 993 770
                 </a>
               </li>
               <li>

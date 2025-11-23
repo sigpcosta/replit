@@ -45,12 +45,12 @@ export default function CTASection() {
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mb-8">
           <a
-            href="tel:+351123456789"
+            href="tel:+351934993770"
             className="flex items-center gap-2 text-primary-foreground/90 hover:text-primary-foreground transition-colors"
             data-testid="link-phone"
           >
             <Phone className="h-5 w-5" />
-            <span>+351 123 456 789</span>
+            <span>+351 934 993 770</span>
           </a>
           <a
             href="mailto:info@azores4fun.com"

@@ -138,8 +138,8 @@ export default function ContactDialog({ open, onOpenChange }: ContactDialogProps
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <a href="tel:+351292200470" className="hover:text-foreground transition-colors">
-                  +351 292 200 470
+                <a href="tel:+351934993770" className="hover:text-foreground transition-colors">
+                  +351 934 993 770
                 </a>
               </div>
               <div className="flex items-center gap-2">
