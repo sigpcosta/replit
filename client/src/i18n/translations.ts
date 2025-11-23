@@ -8,6 +8,7 @@ export const translations = {
       tattoo: "Tatuagem & Piercings",
       property: "Imobiliária",
       shop: "Loja",
+      about: "Sobre Nós",
       contact: "Contactar",
       book: "Reservar",
       toggleMenu: "Alternar menu",
@@ -792,6 +793,79 @@ export const translations = {
       ]
     },
 
+    // About Page
+    about: {
+      title: "Sobre a Azores4fun",
+      subtitle: "A sua empresa de confiança para turismo, alojamento e serviços nos Açores desde o início da nossa jornada em Horta, Faial.",
+      metaDescription: "Conheça a Azores4fun: empresa de turismo multi-serviço em Horta, Faial. Alojamento local, animação turística, eventos, tatuagens, gestão imobiliária e loja. A sua aventura completa nos Açores.",
+      heroTitle: "A Nossa História",
+      heroSubtitle: "De 3 apartamentos a uma empresa multi-serviço completa",
+      ourStory: "A Nossa Jornada",
+      storyP1: "A Azores4fun começou como um sonho simples: oferecer alojamento de qualidade no coração da Horta, Faial. Com 3 apartamentos modernos e totalmente equipados, rapidamente nos tornámos uma escolha popular para viajantes que procuravam conforto e autenticidade nos Açores.",
+      storyP2: "Mas não parámos por aí. Ouvindo os nossos hóspedes e respondendo às suas necessidades, expandimos para a animação turística, criando experiências únicas e emocionantes. Construímos um campo próprio para Lasertag, Paintball, Gelblaster e Nerfs, investimos em equipamento náutico de qualidade e adquirimos uma carrinha elétrica de 9 lugares para tours ecológicos pela ilha.",
+      storyP3: "A nossa paixão por criar momentos memoráveis levou-nos a expandir para eventos, com tendas de grandes dimensões, insufláveis para festas e atividades de teambuilding. Flexibilizamos as nossas operações para levar a diversão a qualquer local da ilha.",
+      storyP4: "Sempre focados em diversificar e inovar, abrimos um estúdio profissional de tatuagem e piercings, oferecendo arte corporal com segurança e qualidade. Expandimos também para a gestão imobiliária, oferecendo serviços de arrendamento de longa duração, manutenção e construção.",
+      storyP5: "Hoje, a Azores4fun é mais do que uma empresa de turismo. Somos uma marca completa que combina alojamento, aventura, eventos, arte e serviços imobiliários - tudo pensado para tornar a sua experiência nos Açores verdadeiramente inesquecível.",
+      timeline: "A Nossa Evolução",
+      milestones: [
+        {
+          year: "Início",
+          title: "Alojamento Local",
+          desc: "Começámos com 3 apartamentos modernos no centro da Horta, oferecendo acomodação de qualidade para viajantes."
+        },
+        {
+          year: "Expansão",
+          title: "Animação Turística",
+          desc: "Construímos um campo próprio para jogos de estratégia e investimos em equipamento náutico (SUPs, kayaks, snorkeling)."
+        },
+        {
+          year: "Crescimento",
+          title: "Eventos e Mobilidade",
+          desc: "Adquirimos tendas de eventos, insufláveis e carrinha elétrica de 9 lugares para tours ecológicos pela ilha."
+        },
+        {
+          year: "Diversificação",
+          title: "Novos Serviços",
+          desc: "Abrimos estúdio de tatuagem & piercings e expandimos para gestão imobiliária com serviços de construção."
+        },
+        {
+          year: "Hoje",
+          title: "Empresa Multi-Serviço",
+          desc: "6 áreas de negócio integradas: Alojamento, Animação, Eventos, Tatuagem, Imobiliária e Loja física."
+        }
+      ],
+      businessAreas: "As Nossas Áreas de Negócio",
+      businessAreasSubtitle: "Seis serviços distintos, uma experiência completa",
+      mission: "Missão",
+      missionText: "Proporcionar experiências completas e memoráveis nos Açores, combinando alojamento de qualidade, aventuras emocionantes e serviços profissionais que superam as expectativas dos nossos clientes.",
+      vision: "Visão",
+      visionText: "Ser a empresa de referência em Horta para turismo multi-serviço, reconhecida pela qualidade, inovação e compromisso com a satisfação total dos clientes e desenvolvimento sustentável da região.",
+      values: "Valores",
+      valuesList: [
+        "Qualidade em todos os serviços",
+        "Inovação e adaptação constante",
+        "Compromisso com a segurança",
+        "Respeito pelo ambiente",
+        "Atendimento personalizado",
+        "Paixão pelo que fazemos"
+      ],
+      whyChoose: "Porque Escolher a Azores4fun",
+      advantages: [
+        "Única empresa com 6 serviços integrados",
+        "Equipamento próprio e moderno",
+        "Equipa local experiente e apaixonada",
+        "Loja física no centro da Horta",
+        "Flexibilidade e personalização",
+        "Compromisso com sustentabilidade",
+        "Preços competitivos e pacotes",
+        "Disponibilidade todo o ano"
+      ],
+      ctaTitle: "Pronto para a Sua Aventura Completa?",
+      ctaText: "Descubra tudo o que a Azores4fun tem para oferecer. Do alojamento às atividades, da tatuagem à gestão imobiliária - estamos aqui para tornar a sua experiência nos Açores inesquecível.",
+      ctaButton: "Contacte-nos Hoje",
+      exploreServices: "Explorar Serviços"
+    },
+
     // Shop Page
     shop: {
       title: "Loja",
@@ -906,6 +980,7 @@ export const translations = {
       tattoo: "Tattoo & Piercings",
       property: "Property",
       shop: "Shop",
+      about: "About Us",
       contact: "Contact",
       book: "Book Now",
       toggleMenu: "Toggle menu",
@@ -1688,6 +1763,79 @@ export const translations = {
           answer: "It depends on the scale of the project. Small renovations can take 1-2 weeks, while complete renovations can take 2-3 months. We always provide a detailed timeline in the quote."
         }
       ]
+    },
+
+    // About Page
+    about: {
+      title: "About Azores4fun",
+      subtitle: "Your trusted multi-service tourism company in the Azores since the beginning of our journey in Horta, Faial.",
+      metaDescription: "Meet Azores4fun: multi-service tourism company in Horta, Faial. Local accommodation, tourist activities, events, tattoos, property management and shop. Your complete adventure in the Azores.",
+      heroTitle: "Our Story",
+      heroSubtitle: "From 3 apartments to a complete multi-service company",
+      ourStory: "Our Journey",
+      storyP1: "Azores4fun began as a simple dream: to offer quality accommodation in the heart of Horta, Faial. With 3 modern and fully equipped apartments, we quickly became a popular choice for travelers seeking comfort and authenticity in the Azores.",
+      storyP2: "But we didn't stop there. Listening to our guests and responding to their needs, we expanded into tourist activities, creating unique and exciting experiences. We built our own field for Lasertag, Paintball, Gelblaster and Nerfs, invested in quality nautical equipment and acquired a 9-seater electric van for eco-friendly island tours.",
+      storyP3: "Our passion for creating memorable moments led us to expand into events, with large tents, inflatables for parties and teambuilding activities. We made our operations flexible to bring fun to any location on the island.",
+      storyP4: "Always focused on diversifying and innovating, we opened a professional tattoo and piercing studio, offering body art with safety and quality. We also expanded into property management, offering long-term rental, maintenance and construction services.",
+      storyP5: "Today, Azores4fun is more than a tourism company. We are a complete brand that combines accommodation, adventure, events, art and property services - all designed to make your Azores experience truly unforgettable.",
+      timeline: "Our Evolution",
+      milestones: [
+        {
+          year: "Beginning",
+          title: "Local Accommodation",
+          desc: "We started with 3 modern apartments in the center of Horta, offering quality accommodation for travelers."
+        },
+        {
+          year: "Expansion",
+          title: "Tourist Activities",
+          desc: "We built our own field for strategy games and invested in nautical equipment (SUPs, kayaks, snorkeling)."
+        },
+        {
+          year: "Growth",
+          title: "Events and Mobility",
+          desc: "We acquired event tents, inflatables and a 9-seater electric van for eco-friendly island tours."
+        },
+        {
+          year: "Diversification",
+          title: "New Services",
+          desc: "We opened a tattoo & piercing studio and expanded into property management with construction services."
+        },
+        {
+          year: "Today",
+          title: "Multi-Service Company",
+          desc: "6 integrated business areas: Accommodation, Activities, Events, Tattoo, Property Management and Physical Shop."
+        }
+      ],
+      businessAreas: "Our Business Areas",
+      businessAreasSubtitle: "Six distinct services, one complete experience",
+      mission: "Mission",
+      missionText: "To provide complete and memorable experiences in the Azores, combining quality accommodation, exciting adventures and professional services that exceed our customers' expectations.",
+      vision: "Vision",
+      visionText: "To be the reference company in Horta for multi-service tourism, recognized for quality, innovation and commitment to total customer satisfaction and sustainable development of the region.",
+      values: "Values",
+      valuesList: [
+        "Quality in all services",
+        "Innovation and constant adaptation",
+        "Commitment to safety",
+        "Respect for the environment",
+        "Personalized service",
+        "Passion for what we do"
+      ],
+      whyChoose: "Why Choose Azores4fun",
+      advantages: [
+        "Only company with 6 integrated services",
+        "Modern equipment and facilities",
+        "Experienced and passionate local team",
+        "Physical shop in the center of Horta",
+        "Flexibility and customization",
+        "Commitment to sustainability",
+        "Competitive prices and packages",
+        "Available year-round"
+      ],
+      ctaTitle: "Ready for Your Complete Adventure?",
+      ctaText: "Discover everything Azores4fun has to offer. From accommodation to activities, from tattoos to property management - we're here to make your Azores experience unforgettable.",
+      ctaButton: "Contact Us Today",
+      exploreServices: "Explore Services"
     },
 
     // Shop Page

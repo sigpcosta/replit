@@ -18,6 +18,7 @@ export default function Navigation() {
     { label: t.nav.tattoo, href: "/tatuagem" },
     { label: t.nav.property, href: "/imobiliaria" },
     { label: t.nav.shop, href: "/loja" },
+    { label: t.nav.about, href: "/sobre" },
   ];
 
   return (
