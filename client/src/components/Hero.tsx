@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
 import ContactDialog from "@/components/ContactDialog";
-import heroImage from "@assets/generated_images/Azores_coastline_hero_image_28cfac0a.png";
+import heroImage from "@assets/hero-capelinhos.jpg";
 
 export default function Hero() {
   const [contactOpen, setContactOpen] = useState(false);
