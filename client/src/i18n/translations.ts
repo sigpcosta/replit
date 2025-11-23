@@ -22,6 +22,7 @@ export const translations = {
     hero: {
       title: "Azores4fun",
       subtitle: "A Sua Aventura Completa nos Açores",
+      location: "Experiências únicas na Horta, Faial.",
       services: "Alojamento · Animação Turística · Eventos · Tatuagem · Gestão Imobiliária · Loja",
       explore: "Explorar Serviços",
       contact: "Contactar",
@@ -898,6 +899,7 @@ export const translations = {
     hero: {
       title: "Azores4fun",
       subtitle: "Your Complete Azores Adventure",
+      location: "Unique experiences in Horta, Faial.",
       services: "Accommodation · Tourism Activities · Events · Tattoo · Property Management · Shop",
       explore: "Explore Services",
       contact: "Contact",
