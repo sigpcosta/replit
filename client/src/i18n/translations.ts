@@ -523,6 +523,8 @@ export const translations = {
       tattooStyles: "Estilos de Tatuagem",
       piercingTypes: "Tipos de Piercing",
       theProcess: "O Processo",
+      tattoosTab: "Tatuagens",
+      piercingsTab: "Piercings",
       aftercareTitle: "Cuidados Pós-Sessão",
       bookingForm: {
         title: "Marque a Sua Sessão",
@@ -1403,6 +1405,8 @@ export const translations = {
       tattooStyles: "Tattoo Styles",
       piercingTypes: "Piercing Types",
       theProcess: "The Process",
+      tattoosTab: "Tattoos",
+      piercingsTab: "Piercings",
       aftercareTitle: "Aftercare",
       bookingForm: {
         title: "Book Your Session",
