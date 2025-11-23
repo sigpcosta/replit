@@ -67,7 +67,7 @@ export default function CTASection() {
             href="#"
             className="bg-primary-foreground/10 hover:bg-primary-foreground/20 p-3 rounded-full transition-colors"
             data-testid="link-facebook"
-            aria-label="Facebook"
+            aria-label={t.social.facebook}
           >
             <Facebook className="h-5 w-5" />
           </a>
@@ -75,7 +75,7 @@ export default function CTASection() {
             href="#"
             className="bg-primary-foreground/10 hover:bg-primary-foreground/20 p-3 rounded-full transition-colors"
             data-testid="link-instagram"
-            aria-label="Instagram"
+            aria-label={t.social.instagram}
           >
             <Instagram className="h-5 w-5" />
           </a>

@@ -4,8 +4,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "wouter";
 import tattooImage from "@assets/generated_images/Tattoo_studio_workspace_bfc3187a.png";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function PortfolioPage() {
+  const { t } = useLanguage();
   const portfolioItems = [
     { id: 1, title: "Tatuagem realista preto e cinza", category: "Realismo" },
     { id: 2, title: "Sleeve colorida estilo japonês", category: "Tradicional" },
@@ -32,22 +34,22 @@ export default function PortfolioPage() {
               <Link href="/tatuagem">
                 <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10" data-testid="button-back">
                   <ArrowLeft className="mr-2 h-4 w-4" />
-                  Voltar para Tatuagens
+                  {t.portfolio.backToTattoo}
                 </Button>
               </Link>
             </div>
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-center" data-testid="text-page-title">
-              Portfolio Completo
+              {t.portfolio.title}
             </h1>
             <p className="text-lg text-primary-foreground/90 max-w-3xl mx-auto text-center">
-              Explore nossa galeria completa de trabalhos. Cada peça é única e representa a dedicação e talento dos nossos artistas.
+              {t.portfolio.subtitle}
             </p>
           </div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {portfolioItems.map((item) => (
+            {portfolioItems.map((item, index: number) => (
               <Card key={item.id} className="overflow-hidden hover-elevate transition-all cursor-pointer group">
                 <div className="aspect-square relative overflow-hidden">
                   <img

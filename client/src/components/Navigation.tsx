@@ -23,7 +23,7 @@ export default function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#" className="flex items-center gap-2" data-testid="link-home">
+          <a href="/" className="flex items-center gap-2" data-testid="link-home">
             <div className="font-heading text-2xl font-bold text-primary">
               Azores<span className="text-foreground">4fun</span>
             </div>
@@ -67,7 +67,7 @@ export default function Navigation() {
             className="lg:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             data-testid="button-mobile-menu"
-            aria-label="Toggle menu"
+            aria-label={t.nav.toggleMenu}
           >
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />

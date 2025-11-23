@@ -15,9 +15,11 @@ import { apiRequest } from "@/lib/queryClient";
 import { useMutation } from "@tanstack/react-query";
 import { useState } from "react";
 import tattooImage from "@assets/generated_images/Tattoo_studio_workspace_bfc3187a.png";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function TatuagemPage() {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -33,8 +35,8 @@ export default function TatuagemPage() {
     },
     onSuccess: () => {
       toast({
-        title: "Sucesso!",
-        description: "A sua solicitação foi enviada. Entraremos em contacto em breve.",
+        title: t.tattoo.bookingForm.successTitle,
+        description: t.tattoo.bookingForm.successDesc,
       });
       setFormData({
         name: "",
@@ -46,8 +48,8 @@ export default function TatuagemPage() {
     },
     onError: (error: any) => {
       toast({
-        title: "Erro",
-        description: error.message || "Erro ao enviar solicitação. Por favor, tente novamente.",
+        title: t.tattoo.bookingForm.errorTitle,
+        description: error.message || t.tattoo.bookingForm.errorDesc,
         variant: "destructive",
       });
     },
@@ -57,8 +59,8 @@ export default function TatuagemPage() {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.phone || !formData.service || !formData.description) {
       toast({
-        title: "Campos obrigatórios",
-        description: "Por favor, preencha todos os campos.",
+        title: t.tattoo.bookingForm.requiredFields,
+        description: t.tattoo.bookingForm.requiredFieldsDesc,
         variant: "destructive",
       });
       return;
@@ -67,168 +69,98 @@ export default function TatuagemPage() {
   };
   const tattooStyles = [
     {
-      title: "Fineline",
-      description: "Traços finos e delicados, perfeitos para designs minimalistas e detalhados."
+      title: t.tattoo.styles.fineline.title,
+      description: t.tattoo.styles.fineline.desc
     },
     {
-      title: "Minimalista",
-      description: "Designs simples e elegantes com poucos elementos, mas grande impacto visual."
+      title: t.tattoo.styles.minimalist.title,
+      description: t.tattoo.styles.minimalist.desc
     },
     {
-      title: "Aquarela",
-      description: "Estilo artístico com cores vibrantes que simulam pinceladas de aquarela."
+      title: t.tattoo.styles.watercolor.title,
+      description: t.tattoo.styles.watercolor.desc
     },
     {
-      title: "Realismo",
-      description: "Reprodução fiel de imagens, retratos e elementos com alto nível de detalhe."
+      title: t.tattoo.styles.realism.title,
+      description: t.tattoo.styles.realism.desc
     },
     {
-      title: "Geométrico",
-      description: "Formas geométricas precisas criando padrões e mandalas harmoniosas."
+      title: t.tattoo.styles.geometric.title,
+      description: t.tattoo.styles.geometric.desc
     },
     {
-      title: "Tradicional",
-      description: "Estilo clássico com linhas marcadas e cores sólidas."
+      title: t.tattoo.styles.traditional.title,
+      description: t.tattoo.styles.traditional.desc
     }
   ];
 
   const piercingTypes = [
     {
-      title: "Orelha",
-      healing: "Cicatrização: 6-12 semanas",
-      description: "Lóbulo, hélix, tragus, conch, daith, rook e industrial. Variedade de joias disponíveis."
+      title: t.tattoo.piercings.ear.title,
+      healing: t.tattoo.piercings.ear.healing,
+      description: t.tattoo.piercings.ear.desc
     },
     {
-      title: "Nariz",
-      healing: "Cicatrização: 2-4 meses",
-      description: "Nostril e septum com joias delicadas ou statement pieces."
+      title: t.tattoo.piercings.nose.title,
+      healing: t.tattoo.piercings.nose.healing,
+      description: t.tattoo.piercings.nose.desc
     },
     {
-      title: "Facial",
-      healing: "Cicatrização: 6-8 semanas",
-      description: "Sobrancelha, labret, monroe, medusa e bridge com técnicas modernas."
+      title: t.tattoo.piercings.facial.title,
+      healing: t.tattoo.piercings.facial.healing,
+      description: t.tattoo.piercings.facial.desc
     },
     {
-      title: "Oral",
-      healing: "Cicatrização: 4-6 semanas",
-      description: "Língua, smiley e frenulum com materiais hipoalergénicos."
+      title: t.tattoo.piercings.oral.title,
+      healing: t.tattoo.piercings.oral.healing,
+      description: t.tattoo.piercings.oral.desc
     },
     {
-      title: "Corpo",
-      healing: "Cicatrização: 6-9 meses",
-      description: "Umbigo, mamilo e superfícies com joias de qualidade premium."
+      title: t.tattoo.piercings.body.title,
+      healing: t.tattoo.piercings.body.healing,
+      description: t.tattoo.piercings.body.desc
     },
     {
-      title: "Microdermal",
-      healing: "Cicatrização: 3-6 meses",
-      description: "Implantes dérmicos para áreas únicas do corpo."
+      title: t.tattoo.piercings.microdermal.title,
+      healing: t.tattoo.piercings.microdermal.healing,
+      description: t.tattoo.piercings.microdermal.desc
     }
   ];
 
-  const tattooProcessSteps = [
-    "Consulta inicial e discussão da ideia",
-    "Desenvolvimento do design personalizado",
-    "Aprovação do desenho e orçamento",
-    "Agendamento da sessão",
-    "Preparação da pele e aplicação",
-    "Instruções de cuidados pós-tatuagem"
-  ];
+  const tattooProcessSteps = t.tattoo.tattooProcess;
 
-  const piercingProcessSteps = [
-    "Consulta e escolha do local e joia",
-    "Verificação de anatomia e viabilidade",
-    "Seleção do material hipoalergénico",
-    "Marcação e preparação da área",
-    "Realização do piercing com técnica profissional",
-    "Instruções detalhadas de cuidados e limpeza"
-  ];
+  const piercingProcessSteps = t.tattoo.piercingProcess;
 
-  const tattooHighlights = [
-    "Trabalhamos apenas com materiais descartáveis e esterilizados",
-    "Todas as tintas são veganas e de alta qualidade",
-    "Ambiente climatizado e confortável",
-    "Sessões de retoque gratuito após cicatrização (se necessário)"
-  ];
+  const tattooHighlights = t.tattoo.tattooHighlights;
 
-  const piercingHighlights = [
-    "Joias de titânio ASTM F136 e aço cirúrgico 316L",
-    "Técnicas modernas de perfuração com agulhas",
-    "Material esterilizado em autoclave",
-    "Ambiente higiénico e controlado",
-    "Profissionais certificados e experientes",
-    "Variedade de estilos e materiais premium",
-    "Aftercare detalhado e acompanhamento",
-    "Troca de joias disponível"
-  ];
+  const piercingHighlights = t.tattoo.piercingHighlights;
 
   const aftercareSteps = [
     {
       icon: Clock,
-      title: "Primeiras 24h",
-      description: "Mantenha o curativo por 2-4 horas. Lave suavemente com sabão neutro e água morna. Seque com papel toalha."
+      title: t.tattoo.aftercare.first24h.title,
+      description: t.tattoo.aftercare.first24h.desc
     },
     {
       icon: Droplet,
-      title: "Hidratação",
-      description: "Aplique pomada específica 2-3 vezes ao dia. Use apenas produtos recomendados pelo tatuador."
+      title: t.tattoo.aftercare.moisturize.title,
+      description: t.tattoo.aftercare.moisturize.desc
     },
     {
       icon: Sun,
-      title: "Proteção Solar",
-      description: "Evite exposição solar direta por 30 dias. Use protetor solar FPS 50+ após cicatrização completa."
+      title: t.tattoo.aftercare.sunProtection.title,
+      description: t.tattoo.aftercare.sunProtection.desc
     },
     {
       icon: Shield,
-      title: "Cicatrização",
-      description: "Não coce nem remova as casquinhas. A cicatrização completa leva 2-4 semanas."
+      title: t.tattoo.aftercare.healing.title,
+      description: t.tattoo.aftercare.healing.desc
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Maria Silva",
-      text: "Experiência incrível! O profissionalismo e atenção aos detalhes são impecáveis. Minha tatuagem ficou perfeita!"
-    },
-    {
-      name: "João Santos",
-      text: "Ambiente limpo, equipamentos esterilizados e artistas muito talentosos. Recomendo de olhos fechados!"
-    },
-    {
-      name: "Ana Costa",
-      text: "Fiz meu piercing aqui e adorei o resultado. Equipa super atenciosa e tudo muito higiénico."
-    },
-    {
-      name: "Pedro Oliveira",
-      text: "Melhor estúdio da região! O tatuador entendeu exatamente o que eu queria e superou as minhas expectativas."
-    }
-  ];
+  const testimonials = t.tattoo.testimonials;
 
-  const faqs = [
-    {
-      question: "Dói muito fazer uma tatuagem?",
-      answer: "A dor varia conforme a região do corpo e a sensibilidade individual. Geralmente é descrita como um desconforto tolerável. Áreas com mais gordura ou músculo são menos sensíveis do que áreas ósseas."
-    },
-    {
-      question: "Quanto tempo demora uma sessão?",
-      answer: "Depende do tamanho e complexidade do desenho. Tatuagens pequenas podem demorar 30-60 minutos, enquanto peças maiores podem requerer várias sessões de 3-4 horas cada."
-    },
-    {
-      question: "Posso doar sangue depois de fazer uma tatuagem?",
-      answer: "Em Portugal, é necessário aguardar 4 meses após fazer uma tatuagem para poder doar sangue. Este período de segurança serve para garantir a saúde do doador e do receptor."
-    },
-    {
-      question: "Qual o valor de uma tatuagem?",
-      answer: "O valor varia conforme o tamanho, complexidade, tempo de execução e estilo. Oferecemos orçamentos gratuitos e personalizados. Entre em contacto connosco com a sua ideia para recebermos um orçamento."
-    },
-    {
-      question: "Preciso levar o desenho pronto?",
-      answer: "Não é necessário! Pode trazer referências, ideias ou simplesmente descrever o que pretende. Os nossos artistas trabalham consigo para criar um design personalizado que represente a sua visão."
-    },
-    {
-      question: "Como cuidar do piercing?",
-      answer: "Limpe 2x ao dia com solução salina, não toque com as mãos sujas, evite piscinas e mar nas primeiras semanas, não remova a joia durante a cicatrização. Fornecemos instruções detalhadas após o procedimento."
-    }
-  ];
+  const faqs = t.tattoo.faqs;
 
   return (
     <div className="min-h-screen">
@@ -246,10 +178,10 @@ export default function TatuagemPage() {
           />
           <div className="relative z-10 text-center px-4 md:px-8 max-w-4xl mx-auto">
             <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6" data-testid="text-page-title">
-              Arte na Pele
+              {t.tattoo.heroTitle}
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Transforme as suas ideias em arte permanente. Tatuagens e piercings profissionais em ambiente seguro.
+              {t.tattoo.subtitle}
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button 
@@ -260,11 +192,11 @@ export default function TatuagemPage() {
                   document.getElementById('agendar-sessao')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                Agendar Sessão
+                {t.tattoo.bookConsultation}
               </Button>
               <Link href="/portfolio">
                 <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20" data-testid="button-view-portfolio">
-                  Ver Portfolio
+                  {t.tattoo.viewPortfolio}
                 </Button>
               </Link>
             </div>
@@ -274,16 +206,16 @@ export default function TatuagemPage() {
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
           <div className="mb-16 md:mb-24">
             <h2 className="font-heading text-3xl font-bold mb-4 text-center">
-              Nosso Portfolio
+              {t.tattoo.portfolio.title}
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Cada tatuagem é única. Confira alguns dos nossos trabalhos recentes.
+              {t.tattoo.portfolio.subtitle}
             </p>
             <div className="grid grid-cols-2 gap-4 max-w-4xl mx-auto">
               <div className="aspect-square rounded-lg overflow-hidden hover-elevate transition-all cursor-pointer">
                 <img
                   src={tattooImage}
-                  alt="Trabalho de tatuagem 1"
+                  alt={t.tattoo.altTattooWork1}
                   className="w-full h-full object-cover"
                   data-testid="portfolio-image-1"
                 />
@@ -291,7 +223,7 @@ export default function TatuagemPage() {
               <div className="aspect-square rounded-lg overflow-hidden hover-elevate transition-all cursor-pointer">
                 <img
                   src={tattooImage}
-                  alt="Trabalho de tatuagem 2"
+                  alt={t.tattoo.altTattooWork2}
                   className="w-full h-full object-cover"
                   data-testid="portfolio-image-2"
                 />
@@ -299,7 +231,7 @@ export default function TatuagemPage() {
               <div className="aspect-square rounded-lg overflow-hidden hover-elevate transition-all cursor-pointer">
                 <img
                   src={tattooImage}
-                  alt="Trabalho de tatuagem 3"
+                  alt={t.tattoo.altTattooWork3}
                   className="w-full h-full object-cover"
                   data-testid="portfolio-image-3"
                 />
@@ -307,7 +239,7 @@ export default function TatuagemPage() {
               <div className="aspect-square rounded-lg overflow-hidden hover-elevate transition-all cursor-pointer">
                 <img
                   src={tattooImage}
-                  alt="Trabalho de tatuagem 4"
+                  alt={t.tattoo.altTattooWork4}
                   className="w-full h-full object-cover"
                   data-testid="portfolio-image-4"
                 />
@@ -315,7 +247,7 @@ export default function TatuagemPage() {
               <div className="aspect-square rounded-lg overflow-hidden hover-elevate transition-all cursor-pointer">
                 <img
                   src={tattooImage}
-                  alt="Trabalho de tatuagem 5"
+                  alt={t.tattoo.altTattooWork5}
                   className="w-full h-full object-cover"
                   data-testid="portfolio-image-5"
                 />
@@ -323,7 +255,7 @@ export default function TatuagemPage() {
               <div className="aspect-square rounded-lg overflow-hidden hover-elevate transition-all cursor-pointer">
                 <img
                   src={tattooImage}
-                  alt="Trabalho de tatuagem 6"
+                  alt={t.tattoo.altTattooWork6}
                   className="w-full h-full object-cover"
                   data-testid="portfolio-image-6"
                 />
@@ -333,19 +265,19 @@ export default function TatuagemPage() {
 
           <div className="mb-16 md:mb-24">
             <h2 className="font-heading text-3xl font-bold mb-4 text-center">
-              Nossos Serviços
+              {t.tattoo.servicesTitle}
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Conheça em detalhe os serviços que oferecemos
+              {t.tattoo.servicesSubtitle}
             </p>
             
             <Tabs defaultValue="tatuagens" className="w-full">
               <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12" data-testid="tabs-services">
                 <TabsTrigger value="tatuagens" data-testid="tab-tatuagens">
-                  Tatuagens
+                  {t.tattoo.tattoosTab}
                 </TabsTrigger>
                 <TabsTrigger value="piercings" data-testid="tab-piercings">
-                  Piercings
+                  {t.tattoo.piercingsTab}
                 </TabsTrigger>
               </TabsList>
               
@@ -353,13 +285,13 @@ export default function TatuagemPage() {
                 <div className="space-y-16">
                   <div>
                     <h3 className="font-heading text-2xl font-bold mb-8 text-center">
-                      Estilos de Tatuagem
+                      {t.tattoo.tattooStyles}
                     </h3>
                     <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-                      Trabalhamos com diversos estilos para transformar a sua ideia em arte
+                      {t.tattoo.tattooStylesSubtitle}
                     </p>
                     <div className="grid md:grid-cols-3 gap-6">
-                      {tattooStyles.map((style, index) => (
+                      {tattooStyles.map((style: { title: string; description: string }, index: number) => (
                         <Card key={index} className="p-6 hover-elevate transition-all border-l-4 border-l-[#F59E0B]">
                           <h4 className="font-heading text-xl font-bold mb-3">
                             {style.title}
@@ -374,13 +306,13 @@ export default function TatuagemPage() {
 
                   <div>
                     <h3 className="font-heading text-2xl font-bold mb-8 text-center">
-                      Processo de Tatuagem
+                      {t.tattoo.tattooProcessTitle}
                     </h3>
                     <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-                      Como funciona do primeiro contacto até à tatuagem finalizada
+                      {t.tattoo.tattooProcessSubtitle}
                     </p>
                     <div className="max-w-3xl mx-auto space-y-3">
-                      {tattooProcessSteps.map((step, index) => (
+                      {tattooProcessSteps.map((step: string, index: number) => (
                         <Card key={index} className="p-4 hover-elevate transition-all">
                           <div className="flex items-start gap-3">
                             <div className="bg-[#F59E0B] text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0 text-sm">
@@ -395,10 +327,10 @@ export default function TatuagemPage() {
 
                   <div className="bg-muted/30 rounded-lg p-8 md:p-12">
                     <h3 className="font-heading text-2xl font-bold mb-8 text-center">
-                      Informações Importantes
+                      {t.tattoo.importantInfo}
                     </h3>
                     <div className="space-y-4 max-w-2xl mx-auto">
-                      {tattooHighlights.map((highlight, index) => (
+                      {tattooHighlights.map((highlight: string, index: number) => (
                         <div key={index} className="flex items-start gap-3">
                           <Check className="h-5 w-5 text-[#F59E0B] flex-shrink-0 mt-0.5" />
                           <span className="text-foreground">{highlight}</span>
@@ -413,13 +345,13 @@ export default function TatuagemPage() {
                 <div className="space-y-16">
                   <div>
                     <h3 className="font-heading text-2xl font-bold mb-8 text-center">
-                      Tipos de Piercings
+                      {t.tattoo.piercingTypes}
                     </h3>
                     <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-                      Todos os tipos de piercings com material de alta qualidade
+                      {t.tattoo.piercingTypesSubtitle}
                     </p>
                     <div className="grid md:grid-cols-3 gap-6">
-                      {piercingTypes.map((type, index) => (
+                      {piercingTypes.map((type: { title: string; healing: string; description: string }, index: number) => (
                         <Card key={index} className="p-6 hover-elevate transition-all border-l-4 border-l-[#F59E0B]">
                           <h4 className="font-heading text-xl font-bold mb-2">
                             {type.title}
@@ -437,13 +369,13 @@ export default function TatuagemPage() {
 
                   <div>
                     <h3 className="font-heading text-2xl font-bold mb-8 text-center">
-                      Processo de Piercing
+                      {t.tattoo.piercingProcessTitle}
                     </h3>
                     <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-                      Como funciona do primeiro contacto até ao piercing finalizado
+                      {t.tattoo.piercingProcessSubtitle}
                     </p>
                     <div className="max-w-3xl mx-auto space-y-3">
-                      {piercingProcessSteps.map((step, index) => (
+                      {piercingProcessSteps.map((step: string, index: number) => (
                         <Card key={index} className="p-4 hover-elevate transition-all">
                           <div className="flex items-start gap-3">
                             <div className="bg-[#F59E0B] text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0 text-sm">
@@ -458,10 +390,10 @@ export default function TatuagemPage() {
 
                   <div className="bg-muted/30 rounded-lg p-8 md:p-12">
                     <h3 className="font-heading text-2xl font-bold mb-8 text-center">
-                      Informações Importantes
+                      {t.tattoo.importantInfo}
                     </h3>
                     <div className="grid md:grid-cols-2 gap-6">
-                      {piercingHighlights.map((highlight, index) => (
+                      {piercingHighlights.map((highlight: string, index: number) => (
                         <div key={index} className="flex items-start gap-3">
                           <Check className="h-5 w-5 text-[#F59E0B] flex-shrink-0 mt-0.5" />
                           <span className="text-foreground">{highlight}</span>
@@ -476,18 +408,18 @@ export default function TatuagemPage() {
 
           <div id="agendar-sessao" className="mb-16 md:mb-24">
             <h2 className="font-heading text-3xl font-bold mb-4 text-center">
-              Agende a Sua Sessão
+              {t.tattoo.bookingForm.title}
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Preencha o formulário e entraremos em contacto para orçamento e agendamento
+              {t.tattoo.bookingForm.description}
             </p>
             <Card className="p-8 max-w-2xl mx-auto">
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="space-y-2">
-                  <Label htmlFor="name">Nome</Label>
+                  <Label htmlFor="name">{t.tattoo.bookingForm.name}</Label>
                   <Input 
                     id="name" 
-                    placeholder="O seu nome" 
+                    placeholder={t.contactDialog.namePlaceholder}
                     data-testid="input-name"
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
@@ -495,11 +427,11 @@ export default function TatuagemPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email">{t.tattoo.bookingForm.email}</Label>
                   <Input 
                     id="email" 
                     type="email" 
-                    placeholder="seu@email.com" 
+                    placeholder={t.contactDialog.emailPlaceholder}
                     data-testid="input-email"
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
@@ -507,11 +439,11 @@ export default function TatuagemPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="phone">Telefone</Label>
+                  <Label htmlFor="phone">{t.tattoo.bookingForm.phone}</Label>
                   <Input 
                     id="phone" 
                     type="tel" 
-                    placeholder="+351 123 456 789" 
+                    placeholder={t.contactDialog.phonePlaceholder}
                     data-testid="input-phone"
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
@@ -519,24 +451,24 @@ export default function TatuagemPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="service">Serviço</Label>
+                  <Label htmlFor="service">{t.tattoo.bookingForm.service}</Label>
                   <Select value={formData.service} onValueChange={(value) => setFormData({...formData, service: value})}>
                     <SelectTrigger id="service" data-testid="select-service">
-                      <SelectValue placeholder="Selecione um serviço" />
+                      <SelectValue placeholder={t.tattoo.bookingForm.servicePlaceholder} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Tatuagem">Tatuagem</SelectItem>
-                      <SelectItem value="Piercing">Piercing</SelectItem>
-                      <SelectItem value="Cover-up">Cover-up</SelectItem>
-                      <SelectItem value="Retoque">Retoque</SelectItem>
+                      <SelectItem value="tattooConsult">{t.tattoo.bookingForm.serviceOptions.tattooConsult}</SelectItem>
+                      <SelectItem value="tattooSession">{t.tattoo.bookingForm.serviceOptions.tattooSession}</SelectItem>
+                      <SelectItem value="piercing">{t.tattoo.bookingForm.serviceOptions.piercing}</SelectItem>
+                      <SelectItem value="touchup">{t.tattoo.bookingForm.serviceOptions.touchup}</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="message">Descreva a sua ideia</Label>
+                  <Label htmlFor="message">{t.tattoo.bookingForm.descriptionLabel}</Label>
                   <Textarea 
                     id="message" 
-                    placeholder="Conte-nos sobre o desenho que imagina, estilo preferido, tamanho, localização no corpo, etc."
+                    placeholder={t.tattoo.bookingForm.descriptionPlaceholder}
                     rows={5}
                     data-testid="textarea-message"
                     value={formData.description}
@@ -551,7 +483,7 @@ export default function TatuagemPage() {
                   data-testid="button-submit-form"
                   disabled={bookingMutation.isPending}
                 >
-                  {bookingMutation.isPending ? "A enviar..." : "Enviar Pedido"}
+                  {bookingMutation.isPending ? t.tattoo.bookingForm.submitting : t.tattoo.bookingForm.submit}
                 </Button>
               </form>
             </Card>
@@ -559,13 +491,13 @@ export default function TatuagemPage() {
 
           <div className="mb-16 md:mb-24">
             <h2 className="font-heading text-3xl font-bold mb-4 text-center">
-              Cuidados Pós-Procedimento
+              {t.tattoo.aftercare.title}
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Seguir os cuidados corretos garante melhor cicatrização e resultado final impecável
+              {t.tattoo.aftercare.subtitle}
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {aftercareSteps.map((step, index) => (
+              {aftercareSteps.map((step: { icon: any; title: string; description: string }, index: number) => (
                 <Card key={index} className="p-6 hover-elevate transition-all">
                   <step.icon className="h-12 w-12 text-primary mb-4" />
                   <h3 className="font-heading text-lg font-bold mb-3">
@@ -581,13 +513,13 @@ export default function TatuagemPage() {
 
           <div className="mb-16 md:mb-24">
             <h2 className="font-heading text-3xl font-bold mb-4 text-center">
-              O Que Dizem os Nossos Clientes
+              {t.tattoo.testimonialsTitle}
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Avaliações reais dos nossos clientes
+              {t.tattoo.testimonialsSubtitle}
             </p>
             <div className="grid md:grid-cols-2 gap-6">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial: { name: string; text: string }, index: number) => (
                 <Card key={index} className="p-6">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
@@ -606,12 +538,12 @@ export default function TatuagemPage() {
 
         <div className="max-w-4xl mx-auto px-4 md:px-8 pb-16 md:pb-24">
           <h2 className="font-heading text-2xl md:text-3xl font-bold mb-8" data-testid="text-faq-section-title">
-            Perguntas Frequentes - Tatuagem & Piercings
+            {t.tattoo.faqTitle}
           </h2>
           
           <Card className="p-6">
             <div className="space-y-1">
-              {faqs.map((faq, index) => (
+              {faqs.map((faq: { question: string; answer: string }, index: number) => (
                 <FAQItem key={index} question={faq.question} answer={faq.answer} />
               ))}
             </div>
@@ -619,14 +551,14 @@ export default function TatuagemPage() {
 
           <div className="mt-12 text-center">
             <p className="text-muted-foreground mb-4">
-              Não encontrou a resposta que procurava?
+              {t.common.faqNotFound}
             </p>
             <a
               href="#"
               className="text-primary font-semibold hover:underline"
               data-testid="link-contact-us"
             >
-              Entre em contacto connosco
+              {t.common.contactUs}
             </a>
           </div>
         </div>

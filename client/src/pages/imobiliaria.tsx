@@ -5,44 +5,36 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Building2, Home as HomeIcon, Wrench, Hammer, Key, Check } from "lucide-react";
 import propertyImage from "@assets/generated_images/Azorean_property_exterior_4bd4f6fb.png";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function ImobiliariaPage() {
+  const { t } = useLanguage();
+
   const services = [
     {
       icon: Key,
-      title: "Arrendamento Longa Duração",
-      description: "Gestão completa de propriedades para arrendamento",
+      title: t.property.services.rental.title,
+      description: t.property.services.rental.desc,
       features: ["Seleção de inquilinos", "Contratos profissionais", "Gestão de pagamentos", "Suporte jurídico"]
     },
     {
       icon: HomeIcon,
-      title: "Gestão de Alojamento Turístico",
-      description: "Maximize o retorno do seu investimento",
+      title: t.property.services.tourism.title,
+      description: t.property.services.tourism.desc,
       features: ["Gestão de reservas", "Limpeza profissional", "Manutenção regular", "Marketing digital"]
     },
     {
       icon: Wrench,
-      title: "Manutenção e Reparações",
-      description: "Mantenha a sua propriedade em perfeito estado",
+      title: t.property.services.maintenance.title,
+      description: t.property.services.maintenance.desc,
       features: ["Manutenção preventiva", "Reparações rápidas", "Equipas especializadas", "Materiais de qualidade"]
     },
     {
       icon: Hammer,
-      title: "Construção e Renovação",
-      description: "Transforme e valorize o seu imóvel",
+      title: t.property.services.construction.title,
+      description: t.property.services.construction.desc,
       features: ["Projetos completos", "Renovações parciais", "Design e execução", "Licenciamentos incluídos"]
     }
-  ];
-
-  const highlights = [
-    "Experiência no mercado dos Açores",
-    "Equipas de manutenção próprias",
-    "Orçamentos transparentes e detalhados",
-    "Materiais de qualidade certificada",
-    "Licenças e seguros em dia",
-    "Resposta rápida a emergências",
-    "Gestão profissional de propriedades",
-    "Conhecimento local profundo"
   ];
 
   const faqs = [
@@ -92,11 +84,11 @@ export default function ImobiliariaPage() {
                 <Building2 className="h-8 w-8" />
               </div>
               <h1 className="font-heading text-3xl md:text-5xl font-bold" data-testid="text-page-title">
-                Gestão Imobiliária
+                {t.property.title}
               </h1>
             </div>
             <p className="text-lg text-primary-foreground/90 max-w-3xl">
-              Serviços completos de gestão, manutenção e construção para a sua propriedade nos Açores.
+              {t.property.subtitle}
             </p>
           </div>
         </div>
@@ -105,27 +97,27 @@ export default function ImobiliariaPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16 md:mb-24">
             <div>
               <h2 className="font-heading text-3xl font-bold mb-6">
-                Cuide da Sua Propriedade com Profissionais
+                {t.property.heroTitle}
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
-                A Azores4fun oferece serviços completos de gestão imobiliária, desde arrendamento de longa duração até construção e renovação. Cuidamos da sua propriedade como se fosse nossa.
+                {t.property.heroP1}
               </p>
               <p className="text-muted-foreground text-lg mb-8">
-                Com equipas especializadas, conhecimento profundo do mercado local e compromisso com a qualidade, garantimos que o seu investimento está em boas mãos.
+                {t.property.heroP2}
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" data-testid="button-request-quote">
-                  Pedir Orçamento
+                  {t.property.requestQuote}
                 </Button>
                 <Button size="lg" variant="outline" data-testid="button-schedule-visit">
-                  Agendar Visita
+                  {t.property.scheduleVisit}
                 </Button>
               </div>
             </div>
             <div>
               <img
                 src={propertyImage}
-                alt="Propriedade nos Açores"
+                alt={t.property.altProperty}
                 className="rounded-lg w-full h-96 object-cover"
               />
             </div>
@@ -133,10 +125,10 @@ export default function ImobiliariaPage() {
 
           <div className="mb-16 md:mb-24">
             <h2 className="font-heading text-3xl font-bold mb-12 text-center">
-              Os Nossos Serviços
+              {t.property.ourServices}
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
-              {services.map((service, index) => (
+              {services.map((service, index: number) => (
                 <Card key={index} className="p-6 hover-elevate transition-all">
                   <service.icon className="h-12 w-12 text-primary mb-4" />
                   <h3 className="font-heading text-xl font-bold mb-2">
@@ -146,7 +138,7 @@ export default function ImobiliariaPage() {
                     {service.description}
                   </p>
                   <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
+                    {service.features.map((feature: string, idx: number) => (
                       <li key={idx} className="flex items-center gap-2 text-sm">
                         <Check className="h-4 w-4 text-primary flex-shrink-0" />
                         <span>{feature}</span>
@@ -160,10 +152,10 @@ export default function ImobiliariaPage() {
 
           <div className="bg-muted/30 rounded-lg p-8 md:p-12 mb-16 md:mb-24">
             <h2 className="font-heading text-3xl font-bold mb-8 text-center">
-              Porque Nos Escolher
+              {t.property.whyChoose}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {highlights.map((highlight, index) => (
+              {t.property.highlights.map((highlight: string, index: number) => (
                 <div key={index} className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                   <span className="text-foreground">{highlight}</span>
@@ -176,28 +168,28 @@ export default function ImobiliariaPage() {
             <Card className="p-6 text-center">
               <Building2 className="h-12 w-12 text-primary mx-auto mb-4" />
               <h3 className="font-heading text-xl font-bold mb-2">
-                Gestão Completa
+                {t.property.cards.experience}
               </h3>
               <p className="text-muted-foreground">
-                Desde a seleção de inquilinos até à manutenção regular
+                {t.property.cards.experienceDesc}
               </p>
             </Card>
             <Card className="p-6 text-center">
               <Wrench className="h-12 w-12 text-primary mx-auto mb-4" />
               <h3 className="font-heading text-xl font-bold mb-2">
-                Manutenção Rápida
+                {t.property.cards.team}
               </h3>
               <p className="text-muted-foreground">
-                Equipas próprias para resposta imediata a problemas
+                {t.property.cards.teamDesc}
               </p>
             </Card>
             <Card className="p-6 text-center">
               <Hammer className="h-12 w-12 text-primary mx-auto mb-4" />
               <h3 className="font-heading text-xl font-bold mb-2">
-                Renovações
+                {t.property.cards.transparency}
               </h3>
               <p className="text-muted-foreground">
-                Valorizamos o seu imóvel com obras de qualidade
+                {t.property.cards.transparencyDesc}
               </p>
             </Card>
           </div>
@@ -205,12 +197,12 @@ export default function ImobiliariaPage() {
 
         <div className="max-w-4xl mx-auto px-4 md:px-8 pb-16 md:pb-24">
           <h2 className="font-heading text-2xl md:text-3xl font-bold mb-8" data-testid="text-faq-section-title">
-            Perguntas Frequentes - Gestão Imobiliária
+            {t.property.faqTitle}
           </h2>
           
           <Card className="p-6">
             <div className="space-y-1">
-              {faqs.map((faq, index) => (
+              {faqs.map((faq, index: number) => (
                 <FAQItem key={index} question={faq.question} answer={faq.answer} />
               ))}
             </div>
@@ -218,14 +210,14 @@ export default function ImobiliariaPage() {
 
           <div className="mt-12 text-center">
             <p className="text-muted-foreground mb-4">
-              Não encontrou a resposta que procurava?
+              {t.common.faqNotFound}
             </p>
             <a
               href="#"
               className="text-primary font-semibold hover:underline"
               data-testid="link-contact-us"
             >
-              Entre em contacto connosco
+              {t.common.contactUs}
             </a>
           </div>
         </div>

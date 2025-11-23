@@ -8,44 +8,36 @@ import lasertagImage from "@assets/generated_images/Laser_tag_action_shot_63a174
 import supImage from "@assets/generated_images/SUP_paddleboarding_Azores_ocean_960e2ee9.png";
 import paintballImage from "@assets/generated_images/Paintball_action_gameplay_8c01711a.png";
 import vanImage from "@assets/generated_images/Electric_van_island_tour_9d32feea.png";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function AnimacaoPage() {
+  const { t } = useLanguage();
+
   const activities = [
     {
       icon: Target,
-      title: "Lasertag & Paintball",
-      description: "Jogos de estratégia emocionantes no nosso campo próprio",
+      title: t.activities.activityTypes.lasertag,
+      description: t.activities.activityTypes.lasertagDesc,
       features: ["Campo dedicado", "Equipamento profissional", "Gelblaster e Nerfs disponíveis", "Ideal para grupos"]
     },
     {
       icon: Waves,
-      title: "Desportos Aquáticos",
-      description: "Explore as águas cristalinas dos Açores",
+      title: t.activities.activityTypes.watersports,
+      description: t.activities.activityTypes.watersportsDesc,
       features: ["Aluguer de SUPs e Kayaks", "Material de snorkeling", "Equipamento de qualidade", "Todos os níveis"]
     },
     {
       icon: Car,
-      title: "Tours Personalizados",
-      description: "Descubra o Faial na nossa carrinha elétrica",
+      title: t.activities.activityTypes.tours,
+      description: t.activities.activityTypes.toursDesc,
       features: ["Carrinha elétrica 9 lugares", "Itinerários flexíveis", "Guias experientes", "Transferências incluídas"]
     },
     {
       icon: Camera,
-      title: "Pacotes Multi-atividades",
-      description: "Combine várias experiências numa só reserva",
+      title: t.activities.activityTypes.packages,
+      description: t.activities.activityTypes.packagesDesc,
       features: ["Descontos em pacotes", "Planeamento personalizado", "Tendas de campismo", "Experiências únicas"]
     }
-  ];
-
-  const highlights = [
-    "Campo próprio para jogos de estratégia",
-    "Equipamento moderno e bem mantido",
-    "Instrutores certificados e experientes",
-    "Seguros de atividades incluídos",
-    "Carrinha elétrica ecológica",
-    "Material de qualidade premium",
-    "Flexibilidade de horários",
-    "Pacotes para grupos"
   ];
 
   const faqs = [
@@ -95,11 +87,11 @@ export default function AnimacaoPage() {
                 <Zap className="h-8 w-8" />
               </div>
               <h1 className="font-heading text-3xl md:text-5xl font-bold" data-testid="text-page-title">
-                Animação Turística
+                {t.activities.title}
               </h1>
             </div>
             <p className="text-lg text-primary-foreground/90 max-w-3xl">
-              Aventuras emocionantes e experiências únicas nos Açores. Lasertag, Paintball, desportos aquáticos e tours personalizados.
+              {t.activities.subtitle}
             </p>
           </div>
         </div>
@@ -108,37 +100,37 @@ export default function AnimacaoPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16 md:mb-24">
             <div className="order-2 md:order-1">
               <h2 className="font-heading text-3xl font-bold mb-6">
-                Aventura e Emoção nos Açores
+                {t.activities.heroTitle}
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
-                A Azores4fun oferece uma ampla variedade de atividades de animação turística para tornar a sua visita aos Açores verdadeiramente inesquecível. Desde jogos de estratégia emocionantes até experiências aquáticas relaxantes.
+                {t.activities.heroP1}
               </p>
               <p className="text-muted-foreground text-lg mb-8">
-                Com equipamento de qualidade, instrutores experientes e um compromisso com a segurança, garantimos que cada atividade seja uma experiência memorável.
+                {t.activities.heroP2}
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" data-testid="button-book-activity">
-                  Reservar Atividade
+                  {t.activities.bookActivity}
                 </Button>
                 <Button size="lg" variant="outline" data-testid="button-view-packages">
-                  Ver Pacotes
+                  {t.activities.viewPackages}
                 </Button>
               </div>
             </div>
             <div className="order-1 md:order-2 grid grid-cols-2 gap-4">
               <img
                 src={lasertagImage}
-                alt="Lasertag em ação"
+                alt={t.activities.altLasertag}
                 className="rounded-lg w-full h-48 object-cover"
               />
               <img
                 src={paintballImage}
-                alt="Paintball"
+                alt={t.activities.altPaintball}
                 className="rounded-lg w-full h-48 object-cover"
               />
               <img
                 src={supImage}
-                alt="SUP paddleboarding"
+                alt={t.activities.altSUP}
                 className="rounded-lg w-full h-48 object-cover col-span-2"
               />
             </div>
@@ -146,10 +138,10 @@ export default function AnimacaoPage() {
 
           <div className="mb-16 md:mb-24">
             <h2 className="font-heading text-3xl font-bold mb-12 text-center">
-              As Nossas Atividades
+              {t.activities.ourActivities}
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
-              {activities.map((activity, index) => (
+              {activities.map((activity, index: number) => (
                 <Card key={index} className="p-6 hover-elevate transition-all">
                   <activity.icon className="h-12 w-12 text-primary mb-4" />
                   <h3 className="font-heading text-xl font-bold mb-2">
@@ -159,7 +151,7 @@ export default function AnimacaoPage() {
                     {activity.description}
                   </p>
                   <ul className="space-y-2">
-                    {activity.features.map((feature, idx) => (
+                    {activity.features.map((feature: string, idx: number) => (
                       <li key={idx} className="flex items-center gap-2 text-sm">
                         <Check className="h-4 w-4 text-primary flex-shrink-0" />
                         <span>{feature}</span>
@@ -173,10 +165,10 @@ export default function AnimacaoPage() {
 
           <div className="bg-muted/30 rounded-lg p-8 md:p-12 mb-16 md:mb-24">
             <h2 className="font-heading text-3xl font-bold mb-8 text-center">
-              Porque Escolher as Nossas Atividades
+              {t.activities.whyChoose}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {highlights.map((highlight, index) => (
+              {t.activities.highlights.map((highlight: string, index: number) => (
                 <div key={index} className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                   <span className="text-foreground">{highlight}</span>
@@ -189,18 +181,18 @@ export default function AnimacaoPage() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="font-heading text-3xl font-bold mb-4">
-                  Tours Personalizados
+                  {t.activities.customTours}
                 </h2>
                 <p className="text-primary-foreground/90 mb-6">
-                  Explore a ilha do Faial ao seu próprio ritmo na nossa carrinha elétrica ecológica. Criamos itinerários personalizados baseados nos seus interesses.
+                  {t.activities.customToursDesc}
                 </p>
                 <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20">
-                  Planear o Meu Tour
+                  {t.activities.planTour}
                 </Button>
               </div>
               <img
                 src={vanImage}
-                alt="Tour em carrinha elétrica"
+                alt={t.activities.altTour}
                 className="rounded-lg w-full h-64 object-cover"
               />
             </div>
@@ -209,12 +201,12 @@ export default function AnimacaoPage() {
 
         <div className="max-w-4xl mx-auto px-4 md:px-8 pb-16 md:pb-24">
           <h2 className="font-heading text-2xl md:text-3xl font-bold mb-8" data-testid="text-faq-section-title">
-            Perguntas Frequentes - Animação Turística
+            {t.activities.faqTitle}
           </h2>
           
           <Card className="p-6">
             <div className="space-y-1">
-              {faqs.map((faq, index) => (
+              {faqs.map((faq, index: number) => (
                 <FAQItem key={index} question={faq.question} answer={faq.answer} />
               ))}
             </div>
@@ -222,14 +214,14 @@ export default function AnimacaoPage() {
 
           <div className="mt-12 text-center">
             <p className="text-muted-foreground mb-4">
-              Não encontrou a resposta que procurava?
+              {t.common.faqNotFound}
             </p>
             <a
               href="#"
               className="text-primary font-semibold hover:underline"
               data-testid="link-contact-us"
             >
-              Entre em contacto connosco
+              {t.common.contactUs}
             </a>
           </div>
         </div>
