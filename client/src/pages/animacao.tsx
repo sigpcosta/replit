@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import FAQItem from "@/components/FAQItem";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Zap, Target, Waves, Car, Camera, Tent, Check } from "lucide-react";
+import { Zap, Target, Waves, Car, Tent, Check, Eye } from "lucide-react";
 import lasertagImage from "@assets/generated_images/Laser_tag_action_shot_63a174d9.png";
 import supImage from "@assets/generated_images/SUP_paddleboarding_Azores_ocean_960e2ee9.png";
 import paintballImage from "@assets/generated_images/Paintball_action_gameplay_8c01711a.png";
@@ -21,22 +21,28 @@ export default function AnimacaoPage() {
       features: t.activities.lasertagFeatures
     },
     {
-      icon: Waves,
-      title: t.activities.activityTypes.watersports,
-      description: t.activities.activityTypes.watersportsDesc,
-      features: t.activities.watersportsFeatures
-    },
-    {
       icon: Car,
-      title: t.activities.activityTypes.tours,
-      description: t.activities.activityTypes.toursDesc,
-      features: t.activities.toursFeatures
+      title: t.activities.activityTypes.vantours,
+      description: t.activities.activityTypes.vantoursDesc,
+      features: t.activities.vantoursFeatures
     },
     {
-      icon: Camera,
-      title: t.activities.activityTypes.packages,
-      description: t.activities.activityTypes.packagesDesc,
-      features: t.activities.packagesFeatures
+      icon: Waves,
+      title: t.activities.activityTypes.sups,
+      description: t.activities.activityTypes.supsDesc,
+      features: t.activities.supsFeatures
+    },
+    {
+      icon: Eye,
+      title: t.activities.activityTypes.snorkeling,
+      description: t.activities.activityTypes.snorkelingDesc,
+      features: t.activities.snorkelingFeatures
+    },
+    {
+      icon: Tent,
+      title: t.activities.activityTypes.trails,
+      description: t.activities.activityTypes.trailsDesc,
+      features: t.activities.trailsFeatures
     }
   ];
 
@@ -105,9 +111,9 @@ export default function AnimacaoPage() {
             <h2 className="font-heading text-3xl font-bold mb-12 text-center">
               {t.activities.ourActivities}
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {activities.map((activity, index: number) => (
-                <Card key={index} className="p-6 hover-elevate transition-all">
+                <Card key={index} className="p-6 hover-elevate transition-all" data-testid={`card-activity-${index}`}>
                   <activity.icon className="h-12 w-12 text-primary mb-4" />
                   <h3 className="font-heading text-xl font-bold mb-2">
                     {activity.title}

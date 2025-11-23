@@ -345,14 +345,16 @@ export const translations = {
       customToursDesc: "Explore a ilha do Faial ao seu próprio ritmo na nossa carrinha elétrica ecológica. Criamos itinerários personalizados baseados nos seus interesses.",
       planTour: "Planear o Meu Tour",
       activityTypes: {
-        lasertag: "Lasertag & Paintball",
-        lasertagDesc: "Jogos de estratégia emocionantes no nosso campo próprio",
-        watersports: "Desportos Aquáticos",
-        watersportsDesc: "Explore as águas cristalinas dos Açores",
-        tours: "Tours Personalizados",
-        toursDesc: "Descubra o Faial na nossa carrinha elétrica",
-        packages: "Pacotes Multi-atividades",
-        packagesDesc: "Combine várias experiências numa só reserva"
+        lasertag: "Lasertag, Paintball, GelBlasters & NERFs",
+        lasertagDesc: "Atividades de estratégia ao ar livre num campo construído de raiz, como se estivesse a jogar 'Call of Duty' em tempo real. Desafie-se!",
+        vantours: "Tours em Carrinha",
+        vantoursDesc: "Venha descobrir a ilha e todos os seus cantos fantásticos na nossa carrinha confortável. Programas pré-definidos ou à medida para si, com ou sem almoço incluído.",
+        sups: "SUPs & Kayaks",
+        supsDesc: "Com os nossos SUPs e kayaks infláveis pode aventurar-se em portos e praias por toda a ilha do Faial e ter o privilégio de conhecê-la numa outra perspetiva.",
+        snorkeling: "Snorkeling",
+        snorkelingDesc: "Máscara, tubo e barbatanas é tudo o que precisa para desfrutar do maravilhoso mundo subaquático da nossa ilha.",
+        trails: "Trilhos Pedestres & Campismo",
+        trailsDesc: "Calce as botas, ponha a mochila ao ombro e venha descobrir trilhos incríveis! Só precisa de transferências ou quer dormir na natureza e não trouxe a sua tenda!? Contacte-nos!"
       },
       highlights: [
         "Campo próprio para jogos de estratégia",
@@ -369,28 +371,34 @@ export const translations = {
       altSUP: "SUP paddleboarding",
       altTour: "Tour em carrinha elétrica",
       lasertagFeatures: [
-        "Campo dedicado",
-        "Equipamento profissional",
-        "Gelblaster e Nerfs disponíveis",
-        "Ideal para grupos"
+        "Campo construído de raiz",
+        "Lasertag, Paintball, GelBlasters e NERFs",
+        "Experiência tipo 'Call of Duty'",
+        "Ideal para grupos e festas"
       ],
-      watersportsFeatures: [
-        "Aluguer de SUPs e Kayaks",
-        "Material de snorkeling",
-        "Equipamento de qualidade",
-        "Todos os níveis"
+      vantoursFeatures: [
+        "Carrinha confortável",
+        "Tours pré-definidos ou personalizados",
+        "Com ou sem almoço incluído",
+        "Descubra todos os cantos da ilha"
       ],
-      toursFeatures: [
-        "Carrinha elétrica 9 lugares",
-        "Itinerários flexíveis",
-        "Guias experientes",
-        "Transferências incluídas"
+      supsFeatures: [
+        "SUPs e kayaks infláveis",
+        "Explore portos e praias",
+        "Perspetiva única da ilha",
+        "Equipamento de qualidade"
       ],
-      packagesFeatures: [
-        "Descontos em pacotes",
-        "Planeamento personalizado",
-        "Tendas de campismo",
-        "Experiências únicas"
+      snorkelingFeatures: [
+        "Equipamento completo fornecido",
+        "Mundo subaquático maravilhoso",
+        "Águas cristalinas",
+        "Adequado para todos os níveis"
+      ],
+      trailsFeatures: [
+        "Trilhos pedestres incríveis",
+        "Transferências disponíveis",
+        "Aluguer de equipamento de campismo",
+        "Experiência na natureza"
       ],
       faqTitle: "Perguntas Frequentes - Animação Turística",
       faqs: [
@@ -1227,14 +1235,16 @@ export const translations = {
       customToursDesc: "Explore Faial island at your own pace in our eco-friendly electric van. We create customized itineraries based on your interests.",
       planTour: "Plan My Tour",
       activityTypes: {
-        lasertag: "Lasertag & Paintball",
-        lasertagDesc: "Exciting strategy games on our own field",
-        watersports: "Water Sports",
-        watersportsDesc: "Explore the crystal-clear waters of the Azores",
-        tours: "Customized Tours",
-        toursDesc: "Discover Faial in our electric van",
-        packages: "Multi-activity Packages",
-        packagesDesc: "Combine multiple experiences in one booking"
+        lasertag: "Lasertag, Paintball, GelBlasters & NERFs",
+        lasertagDesc: "Outdoor strategy activities in a built field from the scratch, as if you were playing 'Call of Duty' in real time. Challenge yourself!",
+        vantours: "Van Tours",
+        vantoursDesc: "Come and discover the island and all its fantastic corners in our comfortable van. Pre-defined or tailor-made programs for you, with or without lunch included.",
+        sups: "SUPs & Kayaks",
+        supsDesc: "With our inflatable SUPs and kayaks you can venture into ports and beaches throughout the Faial island and have the privilege of getting to know it from another perspective.",
+        snorkeling: "Snorkeling",
+        snorkelingDesc: "Mask, tube and fins is all you need to enjoy the wonderful underwater world on our island.",
+        trails: "Pedestrian Trails & Camping",
+        trailsDesc: "Put on your boots, your backpack on your shoulder and come discover incredible trails! Do you only need transfers or want to sleep in nature and didn't bring your tent!? Contact us!"
       },
       highlights: [
         "Own field for strategy games",
@@ -1251,28 +1261,34 @@ export const translations = {
       altSUP: "SUP paddleboarding",
       altTour: "Electric van island tour",
       lasertagFeatures: [
-        "Dedicated field",
-        "Professional equipment",
-        "Gelblaster and Nerfs available",
-        "Ideal for groups"
+        "Built field from scratch",
+        "Lasertag, Paintball, GelBlasters and NERFs",
+        "'Call of Duty' type experience",
+        "Ideal for groups and parties"
       ],
-      watersportsFeatures: [
-        "SUPs and Kayaks rental",
-        "Snorkeling gear",
-        "Quality equipment",
-        "All levels"
+      vantoursFeatures: [
+        "Comfortable van",
+        "Pre-defined or customized tours",
+        "With or without lunch included",
+        "Discover all corners of the island"
       ],
-      toursFeatures: [
-        "Electric 9-seater van",
-        "Flexible itineraries",
-        "Experienced guides",
-        "Transfers included"
+      supsFeatures: [
+        "Inflatable SUPs and kayaks",
+        "Explore ports and beaches",
+        "Unique perspective of the island",
+        "Quality equipment"
       ],
-      packagesFeatures: [
-        "Package discounts",
-        "Personalized planning",
-        "Camping tents",
-        "Unique experiences"
+      snorkelingFeatures: [
+        "Complete equipment provided",
+        "Wonderful underwater world",
+        "Crystal-clear waters",
+        "Suitable for all levels"
+      ],
+      trailsFeatures: [
+        "Incredible pedestrian trails",
+        "Transfers available",
+        "Camping equipment rental",
+        "Nature experience"
       ],
       faqTitle: "Frequently Asked Questions - Tourism Activities",
       faqs: [
