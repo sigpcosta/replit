@@ -289,7 +289,7 @@ export const translations = {
         kitchen: "Cozinha Equipada",
         kitchenDesc: "Tudo o que precisa para preparar as suas refeições"
       },
-      altApartmentInterior: "Interior moderno do apartamento",
+      altApartmentInterior: "Exterior dos apartamentos Azores4fun na Horta",
       faqTitle: "Perguntas Frequentes - Alojamento Local",
       faqs: [
         {
@@ -1166,7 +1166,7 @@ export const translations = {
         kitchen: "Equipped Kitchen",
         kitchenDesc: "Everything you need to prepare your meals"
       },
-      altApartmentInterior: "Modern apartment interior",
+      altApartmentInterior: "Azores4fun apartments exterior in Horta",
       faqTitle: "Frequently Asked Questions - Local Accommodation",
       faqs: [
         {

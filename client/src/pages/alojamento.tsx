@@ -4,7 +4,7 @@ import FAQItem from "@/components/FAQItem";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Home as HomeIcon, Wifi, Utensils, MapPin, Check } from "lucide-react";
-import apartmentImage from "@assets/generated_images/Modern_Horta_apartment_interior_ec6f658d.png";
+import apartmentImage from "@assets/TPN1 e 3 porta fechada_1763903607815.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function AlojamentoPage() {
