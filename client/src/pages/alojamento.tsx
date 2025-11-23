@@ -67,11 +67,14 @@ export default function AlojamentoPage() {
                 {t.accommodation.heroP2}
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" data-testid="button-book-now">
-                  {t.accommodation.bookNow}
-                </Button>
-                <Button size="lg" variant="outline" data-testid="button-view-availability">
-                  {t.accommodation.viewAvailability}
+                <Button 
+                  size="lg" 
+                  asChild
+                  data-testid="button-bookings-availability"
+                >
+                  <a href="https://azores4fun.vacation-bookings.com/" target="_blank" rel="noopener noreferrer">
+                    {t.accommodation.bookingsAndAvailability}
+                  </a>
                 </Button>
               </div>
             </div>
