@@ -5,6 +5,9 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Home as HomeIcon, Wifi, Utensils, MapPin, Check } from "lucide-react";
 import apartmentImage from "@assets/TPN1 e 3 porta fechada_1763903607815.png";
+import apt1Image from "@assets/apt1-azores4fun.jpg";
+import apt2Image from "@assets/apt2-travessa-terreo.jpg";
+import apt3Image from "@assets/apt3-travessa-3quartos.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function AlojamentoPage() {
@@ -15,19 +18,25 @@ export default function AlojamentoPage() {
       name: t.accommodation.apartmentTypes.t1,
       capacity: t.accommodation.apartmentTypes.t1Capacity,
       description: t.accommodation.apartmentTypes.t1Description,
-      features: t.accommodation.aptFeatures.t1
+      features: t.accommodation.aptFeatures.t1,
+      image: apt1Image,
+      bookingUrl: "https://www.vacation-bookings.com/d/56064021?currency=EUR&locale=pt-PT&salesChannelId=HOLIDU_HOST_WEBSITE&colorPrimary=%23024251&colorPrimaryDark=%23003644&colorCTA=%2300809D&colorCTAActive=%2300728f&colorCTAText=%23FFFFFF&title=Azores4Fun%2C+Turismo+e+Aventura%2C+Unipessoal+Lda&ccons=MTc2MzkwMzU0NzczOToxMTE%3D"
     },
     {
       name: t.accommodation.apartmentTypes.t2Centro,
       capacity: t.accommodation.apartmentTypes.t2CentroCapacity,
       description: t.accommodation.apartmentTypes.t2CentroDescription,
-      features: t.accommodation.aptFeatures.t2Centro
+      features: t.accommodation.aptFeatures.t2Centro,
+      image: apt2Image,
+      bookingUrl: "https://www.vacation-bookings.com/d/51943948?currency=EUR&locale=pt-PT&salesChannelId=HOLIDU_HOST_WEBSITE&colorPrimary=%23024251&colorPrimaryDark=%23003644&colorCTA=%2300809D&colorCTAActive=%2300728f&colorCTAText=%23FFFFFF&title=Azores4Fun%2C+Turismo+e+Aventura%2C+Unipessoal+Lda&ccons=MTc2Mzg4MTA0NDA0NjoxMTE%3D"
     },
     {
       name: t.accommodation.apartmentTypes.t2Pico,
       capacity: t.accommodation.apartmentTypes.t2PicoCapacity,
       description: t.accommodation.apartmentTypes.t2PicoDescription,
-      features: t.accommodation.aptFeatures.t2Pico
+      features: t.accommodation.aptFeatures.t2Pico,
+      image: apt3Image,
+      bookingUrl: "https://www.vacation-bookings.com/d/51943951?currency=EUR&locale=pt-PT&salesChannelId=HOLIDU_HOST_WEBSITE&colorPrimary=%23024251&colorPrimaryDark=%23003644&colorCTA=%2300809D&colorCTAActive=%2300728f&colorCTAText=%23FFFFFF&title=Azores4Fun%2C+Turismo+e+Aventura%2C+Unipessoal+Lda&ccons=MTc2MzkwMzU0NzczOToxMTE%3D"
     }
   ];
 
@@ -93,24 +102,41 @@ export default function AlojamentoPage() {
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               {apartments.map((apt, index) => (
-                <Card key={index} className="p-6 hover-elevate transition-all">
-                  <h3 className="font-heading text-xl font-bold mb-2" data-testid={`text-apt-name-${index}`}>
-                    {apt.name}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    {t.accommodation.capacity}: {apt.capacity}
-                  </p>
-                  <p className="text-muted-foreground mb-6">
-                    {apt.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {apt.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm">
-                        <Check className="h-4 w-4 text-primary flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <Card key={index} className="overflow-hidden hover-elevate transition-all">
+                  <img
+                    src={apt.image}
+                    alt={apt.name}
+                    className="w-full h-48 object-cover"
+                    data-testid={`img-apt-${index}`}
+                  />
+                  <div className="p-6">
+                    <h3 className="font-heading text-xl font-bold mb-2" data-testid={`text-apt-name-${index}`}>
+                      {apt.name}
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      {t.accommodation.capacity}: {apt.capacity}
+                    </p>
+                    <p className="text-muted-foreground mb-6">
+                      {apt.description}
+                    </p>
+                    <ul className="space-y-2 mb-6">
+                      {apt.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center gap-2 text-sm">
+                          <Check className="h-4 w-4 text-primary flex-shrink-0" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Button 
+                      className="w-full" 
+                      asChild
+                      data-testid={`button-book-apt-${index}`}
+                    >
+                      <a href={apt.bookingUrl} target="_blank" rel="noopener noreferrer">
+                        {t.accommodation.book}
+                      </a>
+                    </Button>
+                  </div>
                 </Card>
               ))}
             </div>
