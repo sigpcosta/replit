@@ -3,14 +3,11 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
 import ContactDialog from "@/components/ContactDialog";
-import heroImagePt from "@assets/hero-capelinhos.jpg";
-import heroImageEn from "@assets/navegar_3.jpg";
+import heroImage from "@assets/navegar_3.jpg";
 
 export default function Hero() {
   const [contactOpen, setContactOpen] = useState(false);
-  const { t, language } = useLanguage();
-  
-  const heroImage = language === 'en' ? heroImageEn : heroImagePt;
+  const { t } = useLanguage();
 
   const scrollToServices = () => {
     const servicesSection = document.getElementById('services');
