@@ -13,64 +13,31 @@ export default function LojaPage() {
   const offerings = [
     {
       icon: ShoppingBag,
-      title: t.shop.offerings.products,
-      description: t.shop.offerings.productsDesc,
-      features: ["Artesanato local", "Produtos gourmet", "Vinhos e licores", "Souvenirs únicos"]
+      title: t.shop.offerings.regional.title,
+      description: t.shop.offerings.regional.desc,
+      features: t.shop.offerings.regional.features
     },
     {
       icon: Ticket,
-      title: t.shop.offerings.tourism,
-      description: t.shop.offerings.tourismDesc,
-      features: ["Reservas de atividades", "Informações turísticas", "Bilhetes e passes", "Pacotes personalizados"]
+      title: t.shop.offerings.tourism.title,
+      description: t.shop.offerings.tourism.desc,
+      features: t.shop.offerings.tourism.features
     },
     {
       icon: Gift,
-      title: t.shop.offerings.merchandise,
-      description: t.shop.offerings.merchandiseDesc,
-      features: ["T-shirts e bonés", "Acessórios outdoor", "Material desportivo", "Presentes originais"]
+      title: t.shop.offerings.merch.title,
+      description: t.shop.offerings.merch.desc,
+      features: t.shop.offerings.merch.features
     },
     {
       icon: MapPin,
-      title: t.shop.offerings.meetingPoint,
-      description: t.shop.offerings.meetingPointDesc,
-      features: ["Check-in de alojamento", "Informações locais", "Wi-Fi gratuito", "Zona de espera confortável"]
+      title: t.shop.offerings.meetingPoint.title,
+      description: t.shop.offerings.meetingPoint.desc,
+      features: t.shop.offerings.meetingPoint.features
     }
   ];
 
-  const faqs = [
-    {
-      question: "Onde fica localizada a loja?",
-      answer: "A nossa loja está localizada no centro da Horta, Faial, de fácil acesso. É aqui que recebemos clientes e vendemos produtos e serviços de turismo local."
-    },
-    {
-      question: "Que produtos vendem na loja?",
-      answer: "Vendemos produtos regionais dos Açores, merchandising da Azores4fun, equipamento para atividades ao ar livre, artigos de turismo e presentes locais únicos."
-    },
-    {
-      question: "Posso reservar atividades diretamente na loja?",
-      answer: "Sim! A loja é o ponto central para reservar todas as nossas atividades: alojamento, animação turística, eventos, tours e muito mais. A nossa equipa está pronta para ajudar."
-    },
-    {
-      question: "Qual é o horário de funcionamento?",
-      answer: "Estamos abertos de Segunda a Sexta das 9h às 19h, Sábado das 10h às 18h, e Domingo das 10h às 14h. Em época alta, podemos ter horário alargado."
-    },
-    {
-      question: "Têm wi-fi disponível para clientes?",
-      answer: "Sim, oferecemos wi-fi gratuito para todos os clientes que visitam a nossa loja."
-    },
-    {
-      question: "Posso comprar bilhetes para outras atrações da ilha?",
-      answer: "Sim, trabalhamos com diversos parceiros locais e podemos ajudá-lo a organizar toda a sua experiência nos Açores, incluindo bilhetes para outras atrações."
-    },
-    {
-      question: "Fazem entregas de produtos?",
-      answer: "Para compras de maior valor ou para hóspedes do nosso alojamento, podemos arranjar entrega. Contacte-nos para mais detalhes."
-    },
-    {
-      question: "Aceitam cartões de pagamento?",
-      answer: "Sim, aceitamos dinheiro, cartões de débito e crédito, e pagamentos por Multibanco."
-    }
-  ];
+  const faqs = t.shop.faqs;
 
   return (
     <div className="min-h-screen">

@@ -18,60 +18,25 @@ export default function AnimacaoPage() {
       icon: Target,
       title: t.activities.activityTypes.lasertag,
       description: t.activities.activityTypes.lasertagDesc,
-      features: ["Campo dedicado", "Equipamento profissional", "Gelblaster e Nerfs disponíveis", "Ideal para grupos"]
+      features: t.activities.lasertagFeatures
     },
     {
       icon: Waves,
       title: t.activities.activityTypes.watersports,
       description: t.activities.activityTypes.watersportsDesc,
-      features: ["Aluguer de SUPs e Kayaks", "Material de snorkeling", "Equipamento de qualidade", "Todos os níveis"]
+      features: t.activities.watersportsFeatures
     },
     {
       icon: Car,
       title: t.activities.activityTypes.tours,
       description: t.activities.activityTypes.toursDesc,
-      features: ["Carrinha elétrica 9 lugares", "Itinerários flexíveis", "Guias experientes", "Transferências incluídas"]
+      features: t.activities.toursFeatures
     },
     {
       icon: Camera,
       title: t.activities.activityTypes.packages,
       description: t.activities.activityTypes.packagesDesc,
-      features: ["Descontos em pacotes", "Planeamento personalizado", "Tendas de campismo", "Experiências únicas"]
-    }
-  ];
-
-  const faqs = [
-    {
-      question: "Que atividades de animação turística oferecem?",
-      answer: "Oferecemos Lasertag, Paintball, Gelblaster, Nerfs em campo próprio, aluguer de SUPs e Kayaks, material de snorkeling, tours personalizados pela ilha com carrinha elétrica de 9 lugares, e muito mais."
-    },
-    {
-      question: "É necessário fazer reserva prévia?",
-      answer: "Sim, recomendamos fortemente a reserva prévia para garantir disponibilidade, especialmente para grupos e durante a época alta. Pode reservar por telefone, email ou através do nosso site."
-    },
-    {
-      question: "Qual é a idade mínima para as atividades?",
-      answer: "Para Lasertag e Paintball, a idade mínima é 10 anos. Gelblaster e Nerfs podem ser praticados a partir dos 8 anos. Para desportos aquáticos, depende da atividade e condições, mas geralmente a partir dos 12 anos com supervisão."
-    },
-    {
-      question: "Fornecem todo o equipamento necessário?",
-      answer: "Sim, fornecemos todo o equipamento de segurança e material necessário para todas as atividades. Apenas precisa de trazer roupa confortável e protetor solar."
-    },
-    {
-      question: "Os tours são personalizáveis?",
-      answer: "Absolutamente! Os nossos tours com a carrinha elétrica são totalmente personalizados de acordo com os seus interesses, tempo disponível e locais que deseja visitar na ilha do Faial."
-    },
-    {
-      question: "Quanto tempo duram as atividades?",
-      answer: "As sessões de Lasertag/Paintball duram tipicamente 2-3 horas. O aluguer de SUPs/Kayaks é por períodos de 2, 4 ou 8 horas. Os tours são personalizados, geralmente entre 3-8 horas."
-    },
-    {
-      question: "Fazem atividades em grupo?",
-      answer: "Sim! Somos especialistas em eventos de grupo, festas de aniversário e teambuilding. Oferecemos pacotes especiais para grupos de 10 ou mais pessoas."
-    },
-    {
-      question: "As atividades realizam-se com mau tempo?",
-      answer: "Atividades de campo (Lasertag, Paintball) realizam-se com chuva ligeira. Atividades aquáticas dependem das condições do mar. Em caso de cancelamento por mau tempo, oferecemos remarcação ou reembolso total."
+      features: t.activities.packagesFeatures
     }
   ];
 
@@ -206,7 +171,7 @@ export default function AnimacaoPage() {
           
           <Card className="p-6">
             <div className="space-y-1">
-              {faqs.map((faq, index: number) => (
+              {t.activities.faqs.map((faq, index: number) => (
                 <FAQItem key={index} question={faq.question} answer={faq.answer} />
               ))}
             </div>

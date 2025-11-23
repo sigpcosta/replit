@@ -15,60 +15,25 @@ export default function ImobiliariaPage() {
       icon: Key,
       title: t.property.services.rental.title,
       description: t.property.services.rental.desc,
-      features: ["Seleção de inquilinos", "Contratos profissionais", "Gestão de pagamentos", "Suporte jurídico"]
+      features: t.property.rentalFeatures
     },
     {
       icon: HomeIcon,
       title: t.property.services.tourism.title,
       description: t.property.services.tourism.desc,
-      features: ["Gestão de reservas", "Limpeza profissional", "Manutenção regular", "Marketing digital"]
+      features: t.property.tourismFeatures
     },
     {
       icon: Wrench,
       title: t.property.services.maintenance.title,
       description: t.property.services.maintenance.desc,
-      features: ["Manutenção preventiva", "Reparações rápidas", "Equipas especializadas", "Materiais de qualidade"]
+      features: t.property.maintenanceFeatures
     },
     {
       icon: Hammer,
       title: t.property.services.construction.title,
       description: t.property.services.construction.desc,
-      features: ["Projetos completos", "Renovações parciais", "Design e execução", "Licenciamentos incluídos"]
-    }
-  ];
-
-  const faqs = [
-    {
-      question: "Que serviços de gestão imobiliária oferecem?",
-      answer: "Oferecemos arrendamento de longa duração, gestão completa de propriedades, serviços de manutenção, pequenas reparações, construção e renovações para empreendimentos turísticos e particulares."
-    },
-    {
-      question: "Fazem gestão de propriedades para alojamento turístico?",
-      answer: "Sim, gerimos propriedades destinadas a alojamento turístico, incluindo manutenção, limpeza, comunicação com hóspedes e gestão de reservas."
-    },
-    {
-      question: "Oferecem serviços de manutenção preventiva?",
-      answer: "Sim, criamos planos de manutenção preventiva personalizados para garantir que a sua propriedade se mantém em excelente estado e evitar problemas maiores no futuro."
-    },
-    {
-      question: "Têm equipa própria de construção?",
-      answer: "Sim, temos equipa especializada em construção e renovação. Realizamos desde pequenas reparações até projetos de renovação completa."
-    },
-    {
-      question: "Trabalham apenas na ilha do Faial?",
-      answer: "Atualmente os nossos serviços concentram-se principalmente na ilha do Faial, especialmente na zona da Horta. Para projetos noutras ilhas, por favor contacte-nos."
-    },
-    {
-      question: "Como funcionam os contratos de arrendamento?",
-      answer: "Oferecemos contratos de arrendamento de longa duração flexíveis, adaptados às necessidades de proprietários e inquilinos. Tratamos de toda a documentação e gestão contratual."
-    },
-    {
-      question: "Fazem orçamentos gratuitos?",
-      answer: "Sim, fazemos orçamentos gratuitos e sem compromisso para todos os nossos serviços de manutenção, construção e gestão de propriedades."
-    },
-    {
-      question: "Quanto tempo demoram os trabalhos de renovação?",
-      answer: "Depende da escala do projeto. Pequenas renovações podem demorar 1-2 semanas, enquanto renovações completas podem levar 2-3 meses. Fornecemos sempre um cronograma detalhado no orçamento."
+      features: t.property.constructionFeatures
     }
   ];
 
@@ -202,7 +167,7 @@ export default function ImobiliariaPage() {
           
           <Card className="p-6">
             <div className="space-y-1">
-              {faqs.map((faq, index: number) => (
+              {t.property.faqs.map((faq, index: number) => (
                 <FAQItem key={index} question={faq.question} answer={faq.answer} />
               ))}
             </div>

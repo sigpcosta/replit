@@ -364,7 +364,65 @@ export const translations = {
       altPaintball: "Paintball",
       altSUP: "SUP paddleboarding",
       altTour: "Tour em carrinha elétrica",
+      lasertagFeatures: [
+        "Campo dedicado",
+        "Equipamento profissional",
+        "Gelblaster e Nerfs disponíveis",
+        "Ideal para grupos"
+      ],
+      watersportsFeatures: [
+        "Aluguer de SUPs e Kayaks",
+        "Material de snorkeling",
+        "Equipamento de qualidade",
+        "Todos os níveis"
+      ],
+      toursFeatures: [
+        "Carrinha elétrica 9 lugares",
+        "Itinerários flexíveis",
+        "Guias experientes",
+        "Transferências incluídas"
+      ],
+      packagesFeatures: [
+        "Descontos em pacotes",
+        "Planeamento personalizado",
+        "Tendas de campismo",
+        "Experiências únicas"
+      ],
       faqTitle: "Perguntas Frequentes - Animação Turística",
+      faqs: [
+        {
+          question: "Que atividades de animação turística oferecem?",
+          answer: "Oferecemos Lasertag, Paintball, Gelblaster, Nerfs em campo próprio, aluguer de SUPs e Kayaks, material de snorkeling, tours personalizados pela ilha com carrinha elétrica de 9 lugares, e muito mais."
+        },
+        {
+          question: "É necessário fazer reserva prévia?",
+          answer: "Sim, recomendamos fortemente a reserva prévia para garantir disponibilidade, especialmente para grupos e durante a época alta. Pode reservar por telefone, email ou através do nosso site."
+        },
+        {
+          question: "Qual é a idade mínima para as atividades?",
+          answer: "Para Lasertag e Paintball, a idade mínima é 10 anos. Gelblaster e Nerfs podem ser praticados a partir dos 8 anos. Para desportos aquáticos, depende da atividade e condições, mas geralmente a partir dos 12 anos com supervisão."
+        },
+        {
+          question: "Fornecem todo o equipamento necessário?",
+          answer: "Sim, fornecemos todo o equipamento de segurança e material necessário para todas as atividades. Apenas precisa de trazer roupa confortável e protetor solar."
+        },
+        {
+          question: "Os tours são personalizáveis?",
+          answer: "Absolutamente! Os nossos tours com a carrinha elétrica são totalmente personalizados de acordo com os seus interesses, tempo disponível e locais que deseja visitar na ilha do Faial."
+        },
+        {
+          question: "Quanto tempo duram as atividades?",
+          answer: "As sessões de Lasertag/Paintball duram tipicamente 2-3 horas. O aluguer de SUPs/Kayaks é por períodos de 2, 4 ou 8 horas. Os tours são personalizados, geralmente entre 3-8 horas."
+        },
+        {
+          question: "Fazem atividades em grupo?",
+          answer: "Sim! Somos especialistas em eventos de grupo, festas de aniversário e teambuilding. Oferecemos pacotes especiais para grupos de 10 ou mais pessoas."
+        },
+        {
+          question: "As atividades realizam-se com mau tempo?",
+          answer: "Atividades de campo (Lasertag, Paintball) realizam-se com chuva ligeira. Atividades aquáticas dependem das condições do mar. Em caso de cancelamento por mau tempo, oferecemos remarcação ou reembolso total."
+        }
+      ]
     },
 
     // Events Page
@@ -615,11 +673,47 @@ export const translations = {
       ourServices: "Os Nossos Serviços",
       whyChoose: "Porque Nos Escolher",
       services: {
-        rental: { title: "Arrendamento Longa Duração", desc: "Gestão completa de propriedades para arrendamento" },
-        tourism: { title: "Gestão de Alojamento Turístico", desc: "Maximize o retorno do seu investimento" },
-        maintenance: { title: "Manutenção e Reparações", desc: "Mantenha a sua propriedade em perfeito estado" },
-        construction: { title: "Construção e Renovação", desc: "Transforme e valorize o seu imóvel" }
+        rental: {
+          title: "Arrendamento Longa Duração",
+          desc: "Gestão completa de propriedades para arrendamento"
+        },
+        tourism: {
+          title: "Gestão de Alojamento Turístico",
+          desc: "Maximize o retorno do seu investimento"
+        },
+        maintenance: {
+          title: "Manutenção e Reparações",
+          desc: "Mantenha a sua propriedade em perfeito estado"
+        },
+        construction: {
+          title: "Construção e Renovação",
+          desc: "Transforme e valorize o seu imóvel"
+        }
       },
+      rentalFeatures: [
+        "Seleção de inquilinos",
+        "Contratos profissionais",
+        "Gestão de pagamentos",
+        "Suporte jurídico"
+      ],
+      tourismFeatures: [
+        "Gestão de reservas",
+        "Limpeza profissional",
+        "Manutenção regular",
+        "Marketing digital"
+      ],
+      maintenanceFeatures: [
+        "Manutenção preventiva",
+        "Reparações rápidas",
+        "Equipas especializadas",
+        "Materiais de qualidade"
+      ],
+      constructionFeatures: [
+        "Projetos completos",
+        "Renovações parciais",
+        "Design e execução",
+        "Licenciamentos incluídos"
+      ],
       highlights: [
         "Experiência no mercado dos Açores",
         "Equipas de manutenção próprias",
@@ -640,6 +734,40 @@ export const translations = {
       },
       altProperty: "Propriedade nos Açores",
       faqTitle: "Perguntas Frequentes - Gestão Imobiliária",
+      faqs: [
+        {
+          question: "Que serviços de gestão imobiliária oferecem?",
+          answer: "Oferecemos arrendamento de longa duração, gestão completa de propriedades, serviços de manutenção, pequenas reparações, construção e renovações para empreendimentos turísticos e particulares."
+        },
+        {
+          question: "Fazem gestão de propriedades para alojamento turístico?",
+          answer: "Sim, gerimos propriedades destinadas a alojamento turístico, incluindo manutenção, limpeza, comunicação com hóspedes e gestão de reservas."
+        },
+        {
+          question: "Oferecem serviços de manutenção preventiva?",
+          answer: "Sim, criamos planos de manutenção preventiva personalizados para garantir que a sua propriedade se mantém em excelente estado e evitar problemas maiores no futuro."
+        },
+        {
+          question: "Têm equipa própria de construção?",
+          answer: "Sim, temos equipa especializada em construção e renovação. Realizamos desde pequenas reparações até projetos de renovação completa."
+        },
+        {
+          question: "Trabalham apenas na ilha do Faial?",
+          answer: "Atualmente os nossos serviços concentram-se principalmente na ilha do Faial, especialmente na zona da Horta. Para projetos noutras ilhas, por favor contacte-nos."
+        },
+        {
+          question: "Como funcionam os contratos de arrendamento?",
+          answer: "Oferecemos contratos de arrendamento de longa duração flexíveis, adaptados às necessidades de proprietários e inquilinos. Tratamos de toda a documentação e gestão contratual."
+        },
+        {
+          question: "Fazem orçamentos gratuitos?",
+          answer: "Sim, fazemos orçamentos gratuitos e sem compromisso para todos os nossos serviços de manutenção, construção e gestão de propriedades."
+        },
+        {
+          question: "Quanto tempo demoram os trabalhos de renovação?",
+          answer: "Depende da escala do projeto. Pequenas renovações podem demorar 1-2 semanas, enquanto renovações completas podem levar 2-3 meses. Fornecemos sempre um cronograma detalhado no orçamento."
+        }
+      ]
     },
 
     // Shop Page
@@ -654,10 +782,26 @@ export const translations = {
       whatWeOffer: "O Que Oferecemos",
       advantages: "Vantagens da Nossa Loja",
       offerings: {
-        regional: { title: "Produtos Regionais", desc: "O melhor dos Açores numa só loja" },
-        tourism: { title: "Serviços de Turismo", desc: "Tudo para a sua visita aos Açores" },
-        merch: { title: "Merchandising Azores4fun", desc: "Leve uma lembrança connosco" },
-        meetingPoint: { title: "Ponto de Encontro", desc: "Receção e apoio a clientes" }
+        regional: { 
+          title: "Produtos Regionais", 
+          desc: "O melhor dos Açores numa só loja",
+          features: ["Artesanato local", "Produtos gourmet", "Vinhos e licores", "Souvenirs únicos"]
+        },
+        tourism: { 
+          title: "Serviços de Turismo", 
+          desc: "Tudo para a sua visita aos Açores",
+          features: ["Reservas de atividades", "Informações turísticas", "Bilhetes e passes", "Pacotes personalizados"]
+        },
+        merch: { 
+          title: "Merchandising Azores4fun", 
+          desc: "Leve uma lembrança connosco",
+          features: ["T-shirts e bonés", "Acessórios outdoor", "Material desportivo", "Presentes originais"]
+        },
+        meetingPoint: { 
+          title: "Ponto de Encontro", 
+          desc: "Receção e apoio a clientes",
+          features: ["Check-in de alojamento", "Informações locais", "Wi-Fi gratuito", "Zona de espera confortável"]
+        }
       },
       highlights: [
         "Localização central na Horta",
@@ -678,6 +822,48 @@ export const translations = {
         staffDesc: "Profissionais prontos para ajudar em qualquer língua"
       },
       altShop: "Loja Azores4fun",
+      hours: {
+        weekdays: "Segunda a Sexta",
+        weekdaysTime: "9:00 - 19:00",
+        saturday: "Sábado",
+        saturdayTime: "10:00 - 18:00",
+        sunday: "Domingo",
+        sundayTime: "Fechado"
+      },
+      faqs: [
+        {
+          question: "Onde fica localizada a loja?",
+          answer: "A nossa loja está localizada no centro da Horta, Faial, de fácil acesso. É aqui que recebemos clientes e vendemos produtos e serviços de turismo local."
+        },
+        {
+          question: "Que produtos vendem na loja?",
+          answer: "Vendemos produtos regionais dos Açores, merchandising da Azores4fun, equipamento para atividades ao ar livre, artigos de turismo e presentes locais únicos."
+        },
+        {
+          question: "Posso reservar atividades diretamente na loja?",
+          answer: "Sim! A loja é o ponto central para reservar todas as nossas atividades: alojamento, animação turística, eventos, tours e muito mais. A nossa equipa está pronta para ajudar."
+        },
+        {
+          question: "Qual é o horário de funcionamento?",
+          answer: "Estamos abertos de Segunda a Sexta das 9h às 19h, Sábado das 10h às 18h, e Domingo das 10h às 14h. Em época alta, podemos ter horário alargado."
+        },
+        {
+          question: "Têm wi-fi disponível para clientes?",
+          answer: "Sim, oferecemos wi-fi gratuito para todos os clientes que visitam a nossa loja."
+        },
+        {
+          question: "Posso comprar bilhetes para outras atrações da ilha?",
+          answer: "Sim, trabalhamos com diversos parceiros locais e podemos ajudá-lo a organizar toda a sua experiência nos Açores, incluindo bilhetes para outras atrações."
+        },
+        {
+          question: "Fazem entregas de produtos?",
+          answer: "Para compras de maior valor ou para hóspedes do nosso alojamento, podemos arranjar entrega. Contacte-nos para mais detalhes."
+        },
+        {
+          question: "Aceitam cartões de pagamento?",
+          answer: "Sim, aceitamos dinheiro, cartões de débito e crédito, e pagamentos por Multibanco."
+        }
+      ],
       faqTitle: "Perguntas Frequentes - Loja",
     },
 
@@ -1054,7 +1240,65 @@ export const translations = {
       altPaintball: "Paintball gameplay",
       altSUP: "SUP paddleboarding",
       altTour: "Electric van island tour",
+      lasertagFeatures: [
+        "Dedicated field",
+        "Professional equipment",
+        "Gelblaster and Nerfs available",
+        "Ideal for groups"
+      ],
+      watersportsFeatures: [
+        "SUPs and Kayaks rental",
+        "Snorkeling gear",
+        "Quality equipment",
+        "All levels"
+      ],
+      toursFeatures: [
+        "Electric 9-seater van",
+        "Flexible itineraries",
+        "Experienced guides",
+        "Transfers included"
+      ],
+      packagesFeatures: [
+        "Package discounts",
+        "Personalized planning",
+        "Camping tents",
+        "Unique experiences"
+      ],
       faqTitle: "Frequently Asked Questions - Tourism Activities",
+      faqs: [
+        {
+          question: "What tourism activities do you offer?",
+          answer: "We offer Lasertag, Paintball, Gelblaster, Nerfs on our own field, SUPs and Kayaks rental, snorkeling equipment, customized island tours with a 9-seater electric van, and much more."
+        },
+        {
+          question: "Is it necessary to book in advance?",
+          answer: "Yes, we strongly recommend booking in advance to ensure availability, especially for groups and during high season. You can book by phone, email or through our website."
+        },
+        {
+          question: "What is the minimum age for activities?",
+          answer: "For Lasertag and Paintball, the minimum age is 10 years. Gelblaster and Nerfs can be practiced from 8 years old. For water sports, it depends on the activity and conditions, but generally from 12 years old with supervision."
+        },
+        {
+          question: "Do you provide all necessary equipment?",
+          answer: "Yes, we provide all safety equipment and materials needed for all activities. You just need to bring comfortable clothes and sunscreen."
+        },
+        {
+          question: "Are tours customizable?",
+          answer: "Absolutely! Our electric van tours are fully customized according to your interests, available time and places you want to visit on Faial island."
+        },
+        {
+          question: "How long do activities last?",
+          answer: "Lasertag/Paintball sessions typically last 2-3 hours. SUP/Kayak rental is for periods of 2, 4 or 8 hours. Tours are customized, generally between 3-8 hours."
+        },
+        {
+          question: "Do you do group activities?",
+          answer: "Yes! We are specialists in group events, birthday parties and teambuilding. We offer special packages for groups of 10 or more people."
+        },
+        {
+          question: "Do activities take place in bad weather?",
+          answer: "Field activities (Lasertag, Paintball) take place in light rain. Water activities depend on sea conditions. In case of cancellation due to bad weather, we offer rescheduling or full refund."
+        }
+      ]
     },
 
     // Events Page
@@ -1305,11 +1549,47 @@ export const translations = {
       ourServices: "Our Services",
       whyChoose: "Why Choose Us",
       services: {
-        rental: { title: "Long-Term Rental", desc: "Complete management of rental properties" },
-        tourism: { title: "Tourist Accommodation Management", desc: "Maximize your investment return" },
-        maintenance: { title: "Maintenance and Repairs", desc: "Keep your property in perfect condition" },
-        construction: { title: "Construction and Renovation", desc: "Transform and enhance your property" }
+        rental: {
+          title: "Long-Term Rental",
+          desc: "Complete management of rental properties"
+        },
+        tourism: {
+          title: "Tourist Accommodation Management",
+          desc: "Maximize your investment return"
+        },
+        maintenance: {
+          title: "Maintenance and Repairs",
+          desc: "Keep your property in perfect condition"
+        },
+        construction: {
+          title: "Construction and Renovation",
+          desc: "Transform and enhance your property"
+        }
       },
+      rentalFeatures: [
+        "Tenant selection",
+        "Professional contracts",
+        "Payment management",
+        "Legal support"
+      ],
+      tourismFeatures: [
+        "Booking management",
+        "Professional cleaning",
+        "Regular maintenance",
+        "Digital marketing"
+      ],
+      maintenanceFeatures: [
+        "Preventive maintenance",
+        "Quick repairs",
+        "Specialized teams",
+        "Quality materials"
+      ],
+      constructionFeatures: [
+        "Complete projects",
+        "Partial renovations",
+        "Design and execution",
+        "Licenses included"
+      ],
       highlights: [
         "Experience in the Azores market",
         "Our own maintenance teams",
@@ -1330,6 +1610,40 @@ export const translations = {
       },
       altProperty: "Azorean property exterior",
       faqTitle: "Frequently Asked Questions - Property Management",
+      faqs: [
+        {
+          question: "What property management services do you offer?",
+          answer: "We offer long-term rentals, complete property management, maintenance services, small repairs, construction and renovations for tourist developments and private properties."
+        },
+        {
+          question: "Do you manage properties for tourist accommodation?",
+          answer: "Yes, we manage properties intended for tourist accommodation, including maintenance, cleaning, guest communication and booking management."
+        },
+        {
+          question: "Do you offer preventive maintenance services?",
+          answer: "Yes, we create customized preventive maintenance plans to ensure your property remains in excellent condition and avoid bigger problems in the future."
+        },
+        {
+          question: "Do you have your own construction team?",
+          answer: "Yes, we have a specialized construction and renovation team. We carry out everything from small repairs to complete renovation projects."
+        },
+        {
+          question: "Do you only work on Faial island?",
+          answer: "Currently our services are mainly focused on Faial island, especially in the Horta area. For projects on other islands, please contact us."
+        },
+        {
+          question: "How do rental contracts work?",
+          answer: "We offer flexible long-term rental contracts, adapted to the needs of landlords and tenants. We handle all documentation and contract management."
+        },
+        {
+          question: "Do you do free quotes?",
+          answer: "Yes, we provide free, no-obligation quotes for all our maintenance, construction and property management services."
+        },
+        {
+          question: "How long do renovation works take?",
+          answer: "It depends on the scale of the project. Small renovations can take 1-2 weeks, while complete renovations can take 2-3 months. We always provide a detailed timeline in the quote."
+        }
+      ]
     },
 
     // Shop Page
@@ -1344,10 +1658,26 @@ export const translations = {
       whatWeOffer: "What We Offer",
       advantages: "Our Shop Advantages",
       offerings: {
-        regional: { title: "Regional Products", desc: "The best of the Azores in one shop" },
-        tourism: { title: "Tourism Services", desc: "Everything for your visit to the Azores" },
-        merch: { title: "Azores4fun Merchandising", desc: "Take a souvenir home with you" },
-        meetingPoint: { title: "Meeting Point", desc: "Customer reception and support" }
+        regional: { 
+          title: "Regional Products", 
+          desc: "The best of the Azores in one shop",
+          features: ["Local crafts", "Gourmet products", "Wines and liqueurs", "Unique souvenirs"]
+        },
+        tourism: { 
+          title: "Tourism Services", 
+          desc: "Everything for your visit to the Azores",
+          features: ["Activity bookings", "Tourist information", "Tickets and passes", "Customized packages"]
+        },
+        merch: { 
+          title: "Azores4fun Merchandising", 
+          desc: "Take a souvenir home with you",
+          features: ["T-shirts and caps", "Outdoor accessories", "Sports equipment", "Original gifts"]
+        },
+        meetingPoint: { 
+          title: "Meeting Point", 
+          desc: "Customer reception and support",
+          features: ["Accommodation check-in", "Local information", "Free Wi-Fi", "Comfortable waiting area"]
+        }
       },
       highlights: [
         "Central location in Horta",
@@ -1368,6 +1698,48 @@ export const translations = {
         staffDesc: "Professionals ready to help in any language"
       },
       altShop: "Azores4fun retail shop",
+      hours: {
+        weekdays: "Monday to Friday",
+        weekdaysTime: "9:00 AM - 7:00 PM",
+        saturday: "Saturday",
+        saturdayTime: "10:00 AM - 6:00 PM",
+        sunday: "Sunday",
+        sundayTime: "Closed"
+      },
+      faqs: [
+        {
+          question: "Where is the shop located?",
+          answer: "Our shop is located in the center of Horta, Faial, easily accessible. This is where we receive clients and sell local tourism products and services."
+        },
+        {
+          question: "What products do you sell in the shop?",
+          answer: "We sell regional Azores products, Azores4fun merchandising, outdoor activity equipment, tourism items and unique local gifts."
+        },
+        {
+          question: "Can I book activities directly at the shop?",
+          answer: "Yes! The shop is the central point for booking all our activities: accommodation, tourist activities, events, tours and much more. Our team is ready to help."
+        },
+        {
+          question: "What are the opening hours?",
+          answer: "We are open Monday to Friday from 9am to 7pm, Saturday from 10am to 6pm, and Sunday from 10am to 2pm. During high season, we may have extended hours."
+        },
+        {
+          question: "Do you have wi-fi available for customers?",
+          answer: "Yes, we offer free wi-fi for all customers who visit our shop."
+        },
+        {
+          question: "Can I buy tickets for other island attractions?",
+          answer: "Yes, we work with several local partners and can help you organize your entire Azores experience, including tickets for other attractions."
+        },
+        {
+          question: "Do you deliver products?",
+          answer: "For higher value purchases or for guests of our accommodation, we can arrange delivery. Contact us for more details."
+        },
+        {
+          question: "Do you accept card payments?",
+          answer: "Yes, we accept cash, debit and credit cards, and Multibanco payments."
+        }
+      ],
       faqTitle: "Frequently Asked Questions - Shop",
     },
 
