@@ -354,7 +354,9 @@ export const translations = {
         snorkeling: "Snorkeling",
         snorkelingDesc: "Máscara, tubo e barbatanas é tudo o que precisa para desfrutar do maravilhoso mundo subaquático da nossa ilha.",
         trails: "Trilhos Pedestres & Campismo",
-        trailsDesc: "Calce as botas, ponha a mochila ao ombro e venha descobrir trilhos incríveis! Só precisa de transferências ou quer dormir na natureza e não trouxe a sua tenda!? Contacte-nos!"
+        trailsDesc: "Calce as botas, ponha a mochila ao ombro e venha descobrir trilhos incríveis! Só precisa de transferências ou quer dormir na natureza e não trouxe a sua tenda!? Contacte-nos!",
+        packages: "Pacotes Multi-atividades",
+        packagesDesc: "Combine várias experiências numa só reserva e desfrute de descontos especiais"
       },
       highlights: [
         "Campo próprio para jogos de estratégia",
@@ -399,6 +401,12 @@ export const translations = {
         "Transferências disponíveis",
         "Aluguer de equipamento de campismo",
         "Experiência na natureza"
+      ],
+      packagesFeatures: [
+        "Descontos em pacotes",
+        "Planeamento personalizado",
+        "Combine várias atividades",
+        "Experiências únicas"
       ],
       faqTitle: "Perguntas Frequentes - Animação Turística",
       faqs: [
@@ -1244,7 +1252,9 @@ export const translations = {
         snorkeling: "Snorkeling",
         snorkelingDesc: "Mask, tube and fins is all you need to enjoy the wonderful underwater world on our island.",
         trails: "Pedestrian Trails & Camping",
-        trailsDesc: "Put on your boots, your backpack on your shoulder and come discover incredible trails! Do you only need transfers or want to sleep in nature and didn't bring your tent!? Contact us!"
+        trailsDesc: "Put on your boots, your backpack on your shoulder and come discover incredible trails! Do you only need transfers or want to sleep in nature and didn't bring your tent!? Contact us!",
+        packages: "Multi-activity Packages",
+        packagesDesc: "Combine multiple experiences in one booking and enjoy special discounts"
       },
       highlights: [
         "Own field for strategy games",
@@ -1289,6 +1299,12 @@ export const translations = {
         "Transfers available",
         "Camping equipment rental",
         "Nature experience"
+      ],
+      packagesFeatures: [
+        "Package discounts",
+        "Personalized planning",
+        "Combine multiple activities",
+        "Unique experiences"
       ],
       faqTitle: "Frequently Asked Questions - Tourism Activities",
       faqs: [
