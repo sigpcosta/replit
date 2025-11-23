@@ -863,7 +863,41 @@ export const translations = {
       ctaTitle: "Pronto para a Sua Aventura Completa?",
       ctaText: "Descubra tudo o que a Azores4fun tem para oferecer. Do alojamento às atividades, da tatuagem à gestão imobiliária - estamos aqui para tornar a sua experiência nos Açores inesquecível.",
       ctaButton: "Contacte-nos Hoje",
-      exploreServices: "Explorar Serviços"
+      exploreServices: "Explorar Serviços",
+      team: "A Nossa Equipa",
+      teamSubtitle: "Conheça as pessoas que tornam tudo isto possível",
+      teamMembers: [
+        {
+          name: "João Silva",
+          role: "Fundador & Diretor Geral",
+          bio: "Empreendedor açoriano apaixonado por turismo e inovação. Fundou a Azores4fun com a visão de criar uma empresa multi-serviço que oferece experiências completas aos visitantes."
+        },
+        {
+          name: "Ana Costa",
+          role: "Gestora de Alojamento",
+          bio: "Responsável pelos nossos 3 apartamentos modernos, garantindo que cada hóspede tem uma experiência memorável desde o check-in até à partida."
+        },
+        {
+          name: "Pedro Sousa",
+          role: "Coordenador de Atividades",
+          bio: "Especialista em turismo ativo e desportos aquáticos. Organiza tours personalizados, jogos de estratégia e todas as nossas atividades de aventura."
+        },
+        {
+          name: "Maria Santos",
+          role: "Tatuadora Profissional",
+          bio: "Artista certificada com anos de experiência em body art. Transforma ideias em obras de arte únicas com técnica apurada e em ambiente totalmente seguro."
+        },
+        {
+          name: "Carlos Mendes",
+          role: "Gestor de Propriedades",
+          bio: "Engenheiro civil especializado em manutenção e construção. Gere arrendamentos de longa duração e lidera a nossa equipa de obras e renovações."
+        },
+        {
+          name: "Sofia Rodrigues",
+          role: "Responsável da Loja",
+          bio: "O rosto da Azores4fun na nossa loja física. Acolhe clientes, fornece informações turísticas e gere vendas de produtos regionais e merchandising."
+        }
+      ]
     },
 
     // Shop Page
@@ -1835,7 +1869,41 @@ export const translations = {
       ctaTitle: "Ready for Your Complete Adventure?",
       ctaText: "Discover everything Azores4fun has to offer. From accommodation to activities, from tattoos to property management - we're here to make your Azores experience unforgettable.",
       ctaButton: "Contact Us Today",
-      exploreServices: "Explore Services"
+      exploreServices: "Explore Services",
+      team: "Our Team",
+      teamSubtitle: "Meet the people who make it all possible",
+      teamMembers: [
+        {
+          name: "João Silva",
+          role: "Founder & General Manager",
+          bio: "Azorean entrepreneur passionate about tourism and innovation. Founded Azores4fun with the vision of creating a multi-service company that offers complete experiences to visitors."
+        },
+        {
+          name: "Ana Costa",
+          role: "Accommodation Manager",
+          bio: "Responsible for our 3 modern apartments, ensuring every guest has a memorable experience from check-in to departure."
+        },
+        {
+          name: "Pedro Sousa",
+          role: "Activities Coordinator",
+          bio: "Specialist in active tourism and water sports. Organizes personalized tours, strategy games and all our adventure activities."
+        },
+        {
+          name: "Maria Santos",
+          role: "Professional Tattoo Artist",
+          bio: "Certified artist with years of experience in body art. Transforms ideas into unique works of art with refined technique in a completely safe environment."
+        },
+        {
+          name: "Carlos Mendes",
+          role: "Property Manager",
+          bio: "Civil engineer specialized in maintenance and construction. Manages long-term rentals and leads our construction and renovation team."
+        },
+        {
+          name: "Sofia Rodrigues",
+          role: "Shop Manager",
+          bio: "The face of Azores4fun at our physical shop. Welcomes customers, provides tourist information and manages sales of regional products and merchandising."
+        }
+      ]
     },
 
     // Shop Page

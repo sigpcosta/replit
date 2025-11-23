@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Building2, Zap, CalendarDays, Sparkles, Home, Store, Check, Target, Eye, Heart } from "lucide-react";
 
@@ -194,6 +195,39 @@ export default function SobrePage() {
                   <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                   <span className="text-foreground">{advantage}</span>
                 </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mb-16 md:mb-24">
+            <div className="text-center mb-12">
+              <h2 className="font-heading text-3xl font-bold mb-4" data-testid="text-team">
+                {t.about.team}
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                {t.about.teamSubtitle}
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {t.about.teamMembers.map((member: any, index: number) => (
+                <Card key={index} className="p-6 hover-elevate transition-all" data-testid={`team-member-${index}`}>
+                  <div className="flex flex-col items-center text-center">
+                    <Avatar className="h-20 w-20 mb-4">
+                      <AvatarFallback className="bg-primary/10 text-primary text-xl font-semibold">
+                        {member.name.split(' ').map((n: string) => n[0]).join('')}
+                      </AvatarFallback>
+                    </Avatar>
+                    <h3 className="font-heading text-xl font-bold mb-1">
+                      {member.name}
+                    </h3>
+                    <p className="text-primary font-semibold mb-3 text-sm">
+                      {member.role}
+                    </p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {member.bio}
+                    </p>
+                  </div>
+                </Card>
               ))}
             </div>
           </div>
