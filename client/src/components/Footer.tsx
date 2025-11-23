@@ -11,6 +11,7 @@ export default function Footer() {
     { label: t.services.tattoo.title, href: "/tatuagem" },
     { label: t.services.property.title, href: "/imobiliaria" },
     { label: t.services.shop.title, href: "/loja" },
+    { label: t.nav.blog, href: "https://www.azores4fun.com/blog", external: true },
   ];
 
   return (
@@ -34,7 +35,9 @@ export default function Footer() {
                   <a
                     href={service.href}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    data-testid={`link-footer-${service.href.slice(1)}`}
+                    data-testid={`link-footer-${service.external ? 'blog' : service.href.slice(1)}`}
+                    target={service.external ? "_blank" : undefined}
+                    rel={service.external ? "noopener noreferrer" : undefined}
                   >
                     {service.label}
                   </a>
