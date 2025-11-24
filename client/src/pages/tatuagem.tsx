@@ -15,6 +15,7 @@ import { apiRequest } from "@/lib/queryClient";
 import { useMutation } from "@tanstack/react-query";
 import { useState } from "react";
 import tattooImage from "@assets/generated_images/Tattoo_studio_workspace_bfc3187a.png";
+import heroTattooImage from "@assets/principal pagina tatoo_1763980260678.jpeg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function TatuagemPage() {
@@ -171,7 +172,7 @@ export default function TatuagemPage() {
           <div 
             className="absolute inset-0 z-0"
             style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${tattooImage})`,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${heroTattooImage})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
