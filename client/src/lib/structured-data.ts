@@ -3,7 +3,7 @@ export const organizationSchema = {
   "@type": "Organization",
   "name": "Azores4fun",
   "url": "https://azores4fun.com",
-  "logo": "https://azores4fun.com/logo.png",
+  "logo": "https://azores4fun.com/logo.gif",
   "description": "Multi-service tourism company in Horta, Faial, Azores offering accommodation, activities, events, tattoo studio, property management and retail shop",
   "address": {
     "@type": "PostalAddress",
@@ -29,7 +29,7 @@ export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Azores4fun",
-  "image": "https://azores4fun.com/images/og-home.jpg",
+  "image": "https://azores4fun.com/og-home.jpg",
   "url": "https://azores4fun.com",
   "telephone": "+351-934-993-770",
   "address": {
@@ -60,7 +60,7 @@ export const tattooStudioSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
   "name": "Azores4fun Tattoo Studio - Catarina Gomes",
-  "image": "https://azores4fun.com/images/principal pagina tatoo2_1763984346847.jpeg",
+  "image": "https://azores4fun.com/og-default.jpg",
   "url": "https://azores4fun.com/tatuagem",
   "telephone": "+351-934-993-770",
   "address": {
