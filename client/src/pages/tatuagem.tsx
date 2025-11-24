@@ -15,7 +15,7 @@ import { apiRequest } from "@/lib/queryClient";
 import { useMutation } from "@tanstack/react-query";
 import { useState } from "react";
 import tattooImage from "@assets/generated_images/Tattoo_studio_workspace_bfc3187a.png";
-import heroTattooImage from "@assets/principal pagina tatoo_1763980260678.jpeg";
+import heroTattooImage from "@assets/principal pagina tatoo2_1763984346847.jpeg";
 import catarinaImage from "@assets/catarina_1763981152349.jpg";
 import studioImage from "@assets/estudio_1763981152350.jpg";
 import portfolio1Image from "@assets/portfolio1_1763981152351.jpg";
