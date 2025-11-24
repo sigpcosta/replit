@@ -1,15 +1,31 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQItem from "@/components/FAQItem";
+import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PartyPopper, Tent as TentIcon, Users, Trophy, Music, Check } from "lucide-react";
+import { seoConfig } from "@/lib/seo-config";
+import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
 import eventsImage from "@assets/generated_images/Event_tent_celebration_fca04953.png";
 import teambuildingImage from "@assets/generated_images/Teambuilding_outdoor_activity_99e77711.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function EventosPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const seo = seoConfig[language].eventos;
+  
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      generateServiceSchema(
+        language === 'pt' ? 'Organização de Eventos' : 'Event Planning',
+        seo.description,
+        'https://azores4fun.com/eventos'
+      ),
+      generateFAQSchema(t.events.faqs)
+    ]
+  };
 
   const eventTypes = [
     {
@@ -42,6 +58,14 @@ export default function EventosPage() {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        ogImage={seo.ogImage}
+        canonicalPath="/eventos"
+        structuredData={combinedSchema}
+      />
       <Navigation />
       
       <div className="pt-20 md:pt-24">

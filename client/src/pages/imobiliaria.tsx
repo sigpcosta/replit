@@ -1,14 +1,30 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQItem from "@/components/FAQItem";
+import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Building2, Home as HomeIcon, Wrench, Hammer, Key, Check } from "lucide-react";
+import { seoConfig } from "@/lib/seo-config";
+import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
 import propertyImage from "@assets/generated_images/Azorean_property_exterior_4bd4f6fb.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function ImobiliariaPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const seo = seoConfig[language].imobiliaria;
+  
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      generateServiceSchema(
+        language === 'pt' ? 'Gestão Imobiliária' : 'Property Management',
+        seo.description,
+        'https://azores4fun.com/imobiliaria'
+      ),
+      generateFAQSchema(t.property.faqs)
+    ]
+  };
 
   const services = [
     {
@@ -39,6 +55,14 @@ export default function ImobiliariaPage() {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        ogImage={seo.ogImage}
+        canonicalPath="/imobiliaria"
+        structuredData={combinedSchema}
+      />
       <Navigation />
       
       <div className="pt-20 md:pt-24">

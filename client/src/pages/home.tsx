@@ -6,7 +6,10 @@ import WhyChoose from "@/components/WhyChoose";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { seoConfig } from "@/lib/seo-config";
+import { organizationSchema, localBusinessSchema, generateFAQSchema } from "@/lib/structured-data";
 import { Home as HomeIcon, Activity, PartyPopper, Pencil, Building2, Store } from "lucide-react";
 
 import apartmentImage from "@assets/generated_images/Modern_Horta_apartment_interior_ec6f658d.png";
@@ -21,7 +24,19 @@ import teambuildingImage from "@assets/generated_images/Teambuilding_outdoor_act
 import paintballImage from "@assets/generated_images/Paintball_action_gameplay_8c01711a.png";
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const seo = seoConfig[language].home;
+  
+  const allFaqs = t.home.faqCategories.flatMap((category: any) => category.faqs);
+  
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organizationSchema,
+      localBusinessSchema,
+      generateFAQSchema(allFaqs)
+    ]
+  };
   
   const services = [
     {
@@ -70,6 +85,14 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        ogImage={seo.ogImage}
+        canonicalPath="/"
+        structuredData={combinedSchema}
+      />
       <Navigation />
       
       <Hero />

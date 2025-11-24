@@ -1,0 +1,11 @@
+# Azores4fun Robots.txt
+# Allow all crawlers to index all content
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://azores4fun.com/sitemap.xml
+
+# Crawl-delay for polite crawling (optional)
+Crawl-delay: 1

@@ -1,9 +1,12 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQItem from "@/components/FAQItem";
+import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Zap, Target, Waves, Car, Tent, Check, Eye, Camera } from "lucide-react";
+import { seoConfig } from "@/lib/seo-config";
+import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
 import lasertagImage from "@assets/generated_images/Laser_tag_action_shot_63a174d9.png";
 import supImage from "@assets/generated_images/SUP_paddleboarding_Azores_ocean_960e2ee9.png";
 import paintballImage from "@assets/generated_images/Paintball_action_gameplay_8c01711a.png";
@@ -11,7 +14,20 @@ import vanImage from "@assets/generated_images/Electric_van_island_tour_9d32feea
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function AnimacaoPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const seo = seoConfig[language].animacao;
+  
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      generateServiceSchema(
+        language === 'pt' ? 'Atividades Turísticas & Animação' : 'Tourist Activities & Entertainment',
+        seo.description,
+        'https://azores4fun.com/animacao'
+      ),
+      generateFAQSchema(t.activities.faqs)
+    ]
+  };
 
   const activities = [
     {
@@ -54,6 +70,14 @@ export default function AnimacaoPage() {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        ogImage={seo.ogImage}
+        canonicalPath="/animacao"
+        structuredData={combinedSchema}
+      />
       <Navigation />
       
       <div className="pt-20 md:pt-24">

@@ -1,49 +1,20 @@
-import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
+import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { seoConfig } from "@/lib/seo-config";
+import { organizationSchema, generateFAQSchema } from "@/lib/structured-data";
 import { Building2, Zap, CalendarDays, Sparkles, Home, Store, Check, Target, Eye, Heart } from "lucide-react";
 
 export default function SobrePage() {
-  const { t } = useLanguage();
-
-  useEffect(() => {
-    document.title = `${t.about.title} | Azores4fun`;
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', t.about.metaDescription);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = t.about.metaDescription;
-      document.head.appendChild(meta);
-    }
-
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) {
-      ogTitle.setAttribute('content', `${t.about.title} | Azores4fun`);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:title');
-      meta.content = `${t.about.title} | Azores4fun`;
-      document.head.appendChild(meta);
-    }
-
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) {
-      ogDescription.setAttribute('content', t.about.metaDescription);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:description');
-      meta.content = t.about.metaDescription;
-      document.head.appendChild(meta);
-    }
-  }, [t]);
+  const { t, language } = useLanguage();
+  const seo = seoConfig[language].sobre;
+  
+  const combinedSchema = organizationSchema;
 
   const businessAreas = [
     {
@@ -80,6 +51,14 @@ export default function SobrePage() {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        ogImage={seo.ogImage}
+        canonicalPath="/sobre"
+        structuredData={combinedSchema}
+      />
       <Navigation />
       
       <div className="pt-20 md:pt-24">

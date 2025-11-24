@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQItem from "@/components/FAQItem";
+import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,6 +15,8 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { useMutation } from "@tanstack/react-query";
 import { useState } from "react";
+import { seoConfig } from "@/lib/seo-config";
+import { tattooStudioSchema, catarinaGomesSchema, generateFAQSchema, generateServiceSchema } from "@/lib/structured-data";
 import tattooImage from "@assets/generated_images/Tattoo_studio_workspace_bfc3187a.png";
 import heroTattooImage from "@assets/principal pagina tatoo2_1763984346847.jpeg";
 import catarinaImage from "@assets/catarina_1763981152349.jpg";
@@ -28,7 +31,22 @@ import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function TatuagemPage() {
   const { toast } = useToast();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const seo = seoConfig[language].tatuagem;
+  
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      tattooStudioSchema,
+      catarinaGomesSchema,
+      generateFAQSchema(t.tattoo.faqs),
+      generateServiceSchema(
+        language === 'pt' ? 'Tatuagem & Piercings' : 'Tattoo & Piercings',
+        seo.description,
+        'https://azores4fun.com/tatuagem'
+      )
+    ]
+  };
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -173,6 +191,14 @@ export default function TatuagemPage() {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        ogImage={seo.ogImage}
+        canonicalPath="/tatuagem"
+        structuredData={combinedSchema}
+      />
       <Navigation />
       
       <div className="pt-20 md:pt-24">

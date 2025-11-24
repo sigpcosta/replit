@@ -1,9 +1,12 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQItem from "@/components/FAQItem";
+import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Home as HomeIcon, Wifi, Utensils, MapPin, Check, Images } from "lucide-react";
+import { seoConfig } from "@/lib/seo-config";
+import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
 import apartmentImage from "@assets/TPN1 e 3 porta fechada_1763903607815.png";
 import apt1Image from "@assets/apt1-azores4fun.jpg";
 import apt2Image from "@assets/apt2-travessa-terreo.jpg";
@@ -11,7 +14,20 @@ import apt3Image from "@assets/apt3-travessa-3quartos.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function AlojamentoPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const seo = seoConfig[language].alojamento;
+  
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      generateServiceSchema(
+        language === 'pt' ? 'Alojamento Local' : 'Local Accommodation',
+        seo.description,
+        'https://azores4fun.com/alojamento'
+      ),
+      generateFAQSchema(t.accommodation.faqs)
+    ]
+  };
 
   const apartments = [
     {
@@ -47,6 +63,14 @@ export default function AlojamentoPage() {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        ogImage={seo.ogImage}
+        canonicalPath="/alojamento"
+        structuredData={combinedSchema}
+      />
       <Navigation />
       
       <div className="pt-20 md:pt-24">
