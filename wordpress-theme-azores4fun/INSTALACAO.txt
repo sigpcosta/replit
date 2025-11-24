@@ -1,0 +1,256 @@
+═══════════════════════════════════════════════════════════════════
+  AZORES4FUN - TEMPLATE WORDPRESS
+  Guia de Instalação Completo
+═══════════════════════════════════════════════════════════════════
+
+📦 CONTEÚDO DO PACOTE
+───────────────────────────────────────────────────────────────────
+Este pacote contém um tema WordPress completo baseado no design
+original do site Azores4fun desenvolvido em React.
+
+Arquivos incluídos:
+✓ style.css - Estilos principais
+✓ functions.php - Funções do tema
+✓ front-page.php - Template da página inicial
+✓ header.php - Cabeçalho
+✓ footer.php - Rodapé
+✓ index.php - Template padrão
+✓ single.php - Template de post individual
+✓ js/main.js - JavaScript
+✓ README.md - Documentação completa
+
+
+🚀 INSTALAÇÃO RÁPIDA (3 PASSOS)
+───────────────────────────────────────────────────────────────────
+
+PASSO 1: Fazer Upload do Tema
+──────────────────────────────
+1. Comprima toda a pasta 'wordpress-theme-azores4fun' em ZIP
+2. Aceda ao painel WordPress: wp-admin
+3. Vá para: Aparência > Temas > Adicionar Novo
+4. Clique em "Enviar Tema"
+5. Selecione o arquivo ZIP
+6. Clique em "Instalar Agora"
+7. Após instalação, clique em "Ativar"
+
+PASSO 2: Configurar Página Inicial
+───────────────────────────────────
+1. Vá para: Páginas > Adicionar Nova
+2. Título: "Início" ou "Home"
+3. No editor, escolha Template: "Front Page (Home)"
+   (caixa no lado direito do editor)
+4. Publique a página
+5. Vá para: Configurações > Leitura
+6. Selecione "Uma página estática"
+7. Escolha a página "Início" como Página Inicial
+8. Salve as alterações
+
+PASSO 3: Configurar Menu
+─────────────────────────
+1. Vá para: Aparência > Menus
+2. Clique em "criar um novo menu"
+3. Nome do menu: "Menu Principal"
+4. Adicione os itens do menu:
+   - Alojamento
+   - Animação
+   - Eventos  
+   - Tatuagem
+   - Imobiliária
+   - Loja
+   - Blog
+5. Marque "Primary Menu" em Localização do tema
+6. Clique em "Salvar Menu"
+
+
+⚙️ CONFIGURAÇÃO DETALHADA
+───────────────────────────────────────────────────────────────────
+
+CONFIGURAR LOGO
+───────────────
+1. Vá para: Aparência > Personalizar
+2. Clique em: Identidade do Site
+3. Clique em: Selecionar Logo
+4. Faça upload do logo Azores4fun (formato PNG ou SVG recomendado)
+5. Ajuste o tamanho se necessário
+6. Clique em "Publicar"
+
+CONFIGURAR HERO SECTION
+───────────────────────
+1. Vá para: Aparência > Personalizar
+2. Clique em: Hero Section
+3. Configure:
+   • Hero Title: "Azores4fun - A Sua Aventura Completa nos Açores"
+   • Hero Subtitle: "Alojamento | Animação | Eventos | Tatuagens | Imobiliária | Loja"
+   • Hero Background Image: Faça upload de uma imagem de paisagem dos Açores
+     (recomendado: 1920x1080px ou maior)
+4. Clique em "Publicar"
+
+CONFIGURAR INFORMAÇÕES DE CONTACTO
+──────────────────────────────────
+1. Vá para: Aparência > Personalizar
+2. Clique em: Contact Information
+3. Preencha:
+   • Phone Number: +351 934 993 770
+   • Email Address: info@azores4fun.com
+   • Address: Rua da Horta, 123<br>9900-000 Horta, Faial
+4. Clique em "Publicar"
+
+
+📝 ADICIONAR CONTEÚDO
+───────────────────────────────────────────────────────────────────
+
+ADICIONAR SERVIÇOS
+──────────────────
+1. No painel, vá para: Serviços > Adicionar Novo
+2. Preencha:
+   • Título: ex: "Alojamento Local"
+   • Conteúdo: Descrição completa do serviço
+   • Imagem Destacada: Clique em "Definir imagem destacada"
+     e faça upload de uma imagem representativa
+3. Clique em "Publicar"
+
+Repita para os 6 serviços principais:
+1. Alojamento Local
+2. Animação Turística
+3. Eventos
+4. Tatuagem & Piercings
+5. Gestão Imobiliária
+6. Loja
+
+ADICIONAR ATIVIDADES DESTACADAS
+───────────────────────────────
+1. Vá para: Atividades > Adicionar Nova
+2. Preencha:
+   • Título: ex: "Lasertag & Paintball"
+   • Conteúdo: Descrição da atividade
+   • Imagem Destacada: Foto de ação da atividade
+3. Publique
+
+Atividades sugeridas:
+• Lasertag & Paintball
+• SUP & Kayak
+• Tours Personalizados
+• Teambuilding
+
+ADICIONAR FAQs
+──────────────
+Primeiro, criar categorias:
+1. Vá para: FAQs > Categorias
+2. Adicione categorias como:
+   • Alojamento
+   • Atividades
+   • Eventos
+   • Tatuagem
+   • Imobiliária
+   • Loja
+
+Depois, adicionar FAQs:
+1. Vá para: FAQs > Adicionar Nova
+2. Título: A pergunta (ex: "Qual o horário de check-in?")
+3. Conteúdo: A resposta
+4. Categoria: Selecione a categoria apropriada
+5. Publique
+
+
+🔌 PLUGINS RECOMENDADOS
+───────────────────────────────────────────────────────────────────
+
+ESSENCIAIS (Instale estes):
+────────────────────────────
+✓ Advanced Custom Fields (ACF) - GRATUITO
+  Para adicionar campos personalizados aos serviços e atividades
+  
+✓ Contact Form 7 - GRATUITO
+  Para criar formulários de contacto
+  
+✓ Yoast SEO - GRATUITO
+  Para otimização SEO
+
+RECOMENDADOS:
+─────────────
+• WPML ou Polylang - Para site Português/Inglês
+• WP Rocket - Para cache e velocidade (pago)
+• Smush - Para otimizar imagens (gratuito)
+• Wordfence Security - Para segurança (gratuito)
+
+
+🎨 PERSONALIZAÇÃO
+───────────────────────────────────────────────────────────────────
+
+ALTERAR CORES
+─────────────
+1. Vá para: Aparência > Editor de Temas
+2. Selecione: style.css
+3. Procure por ":root" (linha ~6)
+4. Altere as cores conforme necessário:
+   
+   --color-primary: hsl(192, 100%, 40%);     [Cor principal - Azul]
+   --color-background: hsl(210, 4%, 98%);    [Fundo]
+   --color-foreground: hsl(210, 6%, 12%);    [Texto]
+
+5. Clique em "Atualizar Ficheiro"
+
+NOTA: Use ferramentas online como "HSL Color Picker" para 
+escolher cores no formato HSL.
+
+
+🐛 RESOLUÇÃO DE PROBLEMAS
+───────────────────────────────────────────────────────────────────
+
+Problema: Menu não aparece
+Solução: Certifique-se que criou e atribuiu o menu em 
+         Aparência > Menus, e marcou "Primary Menu"
+
+Problema: Página inicial não mostra o design correto
+Solução: 1. Verifique se selecionou o template "Front Page (Home)"
+         2. Vá para Configurações > Leitura e defina como página estática
+
+Problema: Serviços não aparecem
+Solução: Certifique-se que publicou os posts (não salvou como rascunho)
+
+Problema: Imagens não aparecem
+Solução: Verifique se adicionou "Imagem Destacada" em cada post
+
+Problema: Layout quebrado/estranho
+Solução: 1. Limpe cache do navegador (Ctrl+F5)
+         2. Se usa plugin de cache, limpe o cache
+         3. Desative temporariamente outros plugins para verificar conflitos
+
+
+📞 SUPORTE E AJUDA
+───────────────────────────────────────────────────────────────────
+
+Se encontrar dificuldades ou precisar de ajuda:
+
+Email: info@azores4fun.com
+Telefone: +351 934 993 770
+Website: https://azores4fun.com
+
+
+✅ CHECKLIST FINAL
+───────────────────────────────────────────────────────────────────
+
+Antes de colocar o site no ar, verifique:
+
+□ Tema instalado e ativado
+□ Página inicial configurada com template "Front Page (Home)"
+□ Menu principal criado e atribuído
+□ Logo carregado
+□ Hero section configurada (título, subtítulo, imagem)
+□ Informações de contacto preenchidas
+□ Pelo menos 3-6 Serviços publicados com imagens
+□ Pelo menos 3-4 Atividades publicadas com imagens
+□ FAQs adicionadas e categorizadas
+□ Plugins essenciais instalados (ACF, Contact Form 7, Yoast SEO)
+□ Testado em mobile e desktop
+□ Links de redes sociais configurados
+
+
+═══════════════════════════════════════════════════════════════════
+
+Desenvolvido especialmente para Azores4fun
+Versão 1.0 - Novembro 2024
+
+Boa sorte com o seu novo site! 🌊
+
+═══════════════════════════════════════════════════════════════════

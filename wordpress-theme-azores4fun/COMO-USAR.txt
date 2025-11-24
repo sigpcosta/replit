@@ -1,0 +1,95 @@
+═══════════════════════════════════════════════════════════════════
+  AZORES4FUN - TEMPLATE WORDPRESS
+  Guia Rápido de Uso
+═══════════════════════════════════════════════════════════════════
+
+🎯 INÍCIO RÁPIDO - 5 MINUTOS
+───────────────────────────────────────────────────────────────────
+
+1. CRIAR ZIP DO TEMA
+   Windows: Botão direito na pasta > Enviar para > Pasta compactada
+   Mac: Botão direito na pasta > Comprimir
+   Linux: Execute: ./create-zip.sh
+
+2. INSTALAR NO WORDPRESS
+   → wp-admin
+   → Aparência > Temas > Adicionar Novo > Enviar Tema
+   → Selecione o ZIP > Instalar > Ativar
+
+3. CRIAR PÁGINA INICIAL
+   → Páginas > Adicionar Nova
+   → Título: "Início"
+   → Template: "Front Page (Home)" (lado direito)
+   → Publicar
+   → Configurações > Leitura > Página estática > Escolha "Início"
+
+4. CRIAR MENU
+   → Aparência > Menus
+   → Criar menu "Menu Principal"
+   → Adicionar páginas: Alojamento, Animação, Eventos, etc.
+   → Marcar "Primary Menu"
+   → Salvar
+
+5. PERSONALIZAR
+   → Aparência > Personalizar
+   → Configure: Logo, Hero Section, Contacto
+
+PRONTO! Seu site está funcionando! 🎉
+
+
+📝 ADICIONAR CONTEÚDO
+───────────────────────────────────────────────────────────────────
+
+SERVIÇOS (aparecem na página inicial)
+→ Serviços > Adicionar Novo
+→ Título + Descrição + Imagem Destacada
+→ Publicar
+
+ATIVIDADES (aparecem em destaque)
+→ Atividades > Adicionar Nova
+→ Título + Descrição + Imagem Destacada
+→ Publicar
+
+FAQs (perguntas frequentes)
+→ FAQs > Categorias > Criar categorias primeiro
+→ FAQs > Adicionar Nova
+→ Título (pergunta) + Conteúdo (resposta)
+→ Publicar
+
+
+🔌 PLUGINS RECOMENDADOS
+───────────────────────────────────────────────────────────────────
+
+Instale estes 3 plugins (todos gratuitos):
+
+1. Advanced Custom Fields
+   Para campos personalizados
+
+2. Contact Form 7
+   Para formulários de contacto
+
+3. Yoast SEO
+   Para SEO
+
+
+💡 DICAS IMPORTANTES
+───────────────────────────────────────────────────────────────────
+
+✓ Use imagens de boa qualidade (mínimo 1200px de largura)
+✓ Escreva descrições curtas e atrativas
+✓ Adicione pelo menos 6 serviços para preencher a página
+✓ Configure informações de contacto corretas
+✓ Teste o site em mobile e desktop
+
+
+📞 PRECISA DE AJUDA?
+───────────────────────────────────────────────────────────────────
+
+Email: info@azores4fun.com
+Telefone: +351 934 993 770
+
+Leia o arquivo README.md para documentação completa
+Leia o arquivo INSTALACAO.txt para guia detalhado
+
+
+═══════════════════════════════════════════════════════════════════
