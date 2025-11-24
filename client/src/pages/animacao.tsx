@@ -12,6 +12,7 @@ import supImage from "@assets/generated_images/SUP_paddleboarding_Azores_ocean_9
 import paintballImage from "@assets/generated_images/Paintball_action_gameplay_8c01711a.png";
 import vanImage from "@assets/generated_images/Electric_van_island_tour_9d32feea.png";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { Link } from "wouter";
 
 export default function AnimacaoPage() {
   const { t, language } = useLanguage();
@@ -106,8 +107,19 @@ export default function AnimacaoPage() {
               <p className="text-muted-foreground text-lg mb-6">
                 {t.activities.heroP1}
               </p>
-              <p className="text-muted-foreground text-lg mb-8">
+              <p className="text-muted-foreground text-lg mb-6">
                 {t.activities.heroP2}
+              </p>
+              <p className="text-muted-foreground text-lg mb-8">
+                {language === 'pt' 
+                  ? 'Visite a nossa '
+                  : 'Visit our '}
+                <Link href="/loja" className="text-primary hover:underline font-medium" data-testid="link-to-shop">
+                  {language === 'pt' ? 'loja no centro da Horta' : 'shop in the center of Horta'}
+                </Link>
+                {language === 'pt' 
+                  ? ' para mais informações e reservas presenciais.'
+                  : ' for more information and in-person bookings.'}
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" data-testid="button-book-activity">

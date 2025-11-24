@@ -256,8 +256,17 @@ export default function TatuagemPage() {
                 <p className="text-primary font-medium mb-4">
                   {t.tattoo.artist.subtitle}
                 </p>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-muted-foreground mb-4 leading-relaxed">
                   {t.tattoo.artist.bio}
+                </p>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  {language === 'pt' 
+                    ? 'Conheça mais sobre a nossa equipa na página '
+                    : 'Learn more about our team on the '}
+                  <Link href="/sobre" className="text-primary hover:underline font-medium" data-testid="link-to-about">
+                    {language === 'pt' ? 'Sobre Nós' : 'About Us'}
+                  </Link>
+                  .
                 </p>
                 <Button 
                   variant="outline" 

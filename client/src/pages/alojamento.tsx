@@ -12,6 +12,7 @@ import apt1Image from "@assets/apt1-azores4fun.jpg";
 import apt2Image from "@assets/apt2-travessa-terreo.jpg";
 import apt3Image from "@assets/apt3-travessa-3quartos.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { Link } from "wouter";
 
 export default function AlojamentoPage() {
   const { t, language } = useLanguage();
@@ -99,8 +100,19 @@ export default function AlojamentoPage() {
               <p className="text-muted-foreground text-lg mb-6">
                 {t.accommodation.heroP1}
               </p>
-              <p className="text-muted-foreground text-lg mb-8">
+              <p className="text-muted-foreground text-lg mb-6">
                 {t.accommodation.heroP2}
+              </p>
+              <p className="text-muted-foreground text-lg mb-8">
+                {language === 'pt' 
+                  ? 'Durante a sua estadia, aproveite para explorar as nossas '
+                  : 'During your stay, take advantage of our '}
+                <Link href="/animacao" className="text-primary hover:underline font-medium" data-testid="link-to-activities">
+                  {language === 'pt' ? 'atividades turísticas' : 'tourist activities'}
+                </Link>
+                {language === 'pt' 
+                  ? ' como passeios de barco, laser tag e SUP.'
+                  : ' such as boat tours, laser tag and SUP.'}
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button 

@@ -28,9 +28,9 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 py-24 text-center">
-        <p className="font-heading text-xl md:text-2xl lg:text-3xl text-white/95 mb-4 max-w-3xl mx-auto">
+        <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-4xl mx-auto" data-testid="text-hero-title">
           {t.hero.subtitle}
-        </p>
+        </h1>
         <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto italic">
           {t.hero.location}
         </p>

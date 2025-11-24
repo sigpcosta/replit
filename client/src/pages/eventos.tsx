@@ -10,6 +10,7 @@ import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data"
 import eventsImage from "@assets/generated_images/Event_tent_celebration_fca04953.png";
 import teambuildingImage from "@assets/generated_images/Teambuilding_outdoor_activity_99e77711.png";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { Link } from "wouter";
 
 export default function EventosPage() {
   const { t, language } = useLanguage();
@@ -94,8 +95,19 @@ export default function EventosPage() {
               <p className="text-muted-foreground text-lg mb-6">
                 {t.events.heroP1}
               </p>
-              <p className="text-muted-foreground text-lg mb-8">
+              <p className="text-muted-foreground text-lg mb-6">
                 {t.events.heroP2}
+              </p>
+              <p className="text-muted-foreground text-lg mb-8">
+                {language === 'pt' 
+                  ? 'Para planeamento personalizado, visite a nossa '
+                  : 'For personalized planning, visit our '}
+                <Link href="/loja" className="text-primary hover:underline font-medium" data-testid="link-to-shop">
+                  {language === 'pt' ? 'loja na Horta' : 'shop in Horta'}
+                </Link>
+                {language === 'pt' 
+                  ? ' ou contacte-nos diretamente.'
+                  : ' or contact us directly.'}
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" data-testid="button-plan-event">
