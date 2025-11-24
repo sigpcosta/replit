@@ -90,15 +90,22 @@ function aiproultra_defer_scripts($tag, $handle, $src) {
 add_filter('script_loader_tag', 'aiproultra_defer_scripts', 10, 3);
 
 /**
- * Add lazy loading to images
+ * Add lazy loading to images (only for WordPress < 5.5)
+ * WordPress 5.5+ adds lazy loading automatically, so we skip this for modern versions
  */
 function aiproultra_add_lazy_loading($content) {
+    // Skip if WordPress version is 5.5 or higher (native lazy loading)
+    global $wp_version;
+    if (version_compare($wp_version, '5.5', '>=')) {
+        return $content;
+    }
+
     if (is_admin() || is_feed()) {
         return $content;
     }
 
-    // Add loading="lazy" to images
-    $content = preg_replace('/<img(.*?)>/i', '<img$1 loading="lazy">', $content);
+    // Add loading="lazy" to images that don't already have it
+    $content = preg_replace('/<img((?:(?!loading=)[^>])*)>/i', '<img$1 loading="lazy">', $content);
     
     return $content;
 }

@@ -1,0 +1,130 @@
+═══════════════════════════════════════════════════════════════
+  AI PRO ULTRA THEME - INSTALLATION GUIDE
+═══════════════════════════════════════════════════════════════
+
+📦 PACKAGE INFORMATION
+───────────────────────────────────────────────────────────────
+Theme Name: AI Pro Ultra Theme
+Version: 1.0.0
+File: ai-pro-ultra-theme.tar.gz
+Compatible with: WordPress 6.0+
+
+═══════════════════════════════════════════════════════════════
+  INSTALLATION METHODS
+═══════════════════════════════════════════════════════════════
+
+METHOD 1: WordPress Admin Panel (Recommended)
+───────────────────────────────────────────────────────────────
+⚠️ Note: WordPress admin panel typically expects .zip files.
+
+To install this .tar.gz file:
+
+Option A - Convert to ZIP first (if you have zip tools):
+  1. Extract the tar.gz file
+  2. Create a new ZIP from the extracted folder
+  3. Upload the ZIP via WordPress admin
+
+Option B - Extract and upload via FTP (see METHOD 2 below)
+
+METHOD 2: FTP/File Manager Upload (Easiest for .tar.gz)
+───────────────────────────────────────────────────────────────
+1. Extract ai-pro-ultra-theme.tar.gz on your computer
+2. Connect to your server via FTP (FileZilla, etc.)
+3. Navigate to: /wp-content/themes/
+4. Upload the entire 'ai-pro-ultra-theme' folder
+5. Go to WordPress Admin → Appearance → Themes
+6. Find "AI Pro Ultra Theme" and click Activate
+
+METHOD 3: Command Line (SSH Access Required)
+───────────────────────────────────────────────────────────────
+1. Upload ai-pro-ultra-theme.tar.gz to your server
+2. SSH into your server
+3. Navigate to WordPress themes directory:
+   cd /path/to/wordpress/wp-content/themes/
+4. Extract the theme:
+   tar -xzf ai-pro-ultra-theme.tar.gz
+5. Set proper permissions:
+   chmod -R 755 ai-pro-ultra-theme
+6. Go to WordPress Admin → Appearance → Themes → Activate
+
+═══════════════════════════════════════════════════════════════
+  POST-INSTALLATION SETUP
+═══════════════════════════════════════════════════════════════
+
+✅ STEP 1: Configure Menus
+• Go to: Appearance → Menus
+• Create a Primary Menu and assign pages
+• Optionally create a Footer Menu
+
+✅ STEP 2: Add Logo
+• Go to: Appearance → Customize → Site Identity
+• Upload your logo
+
+✅ STEP 3: Set Homepage
+• Go to: Settings → Reading
+• Select "A static page" 
+• Choose your homepage
+
+✅ STEP 4: For PageLayer Users
+• Create a new page
+• Select template: "Full Width" or "Blank"
+• Edit with PageLayer
+• Set as homepage if desired
+
+═══════════════════════════════════════════════════════════════
+  THEME FEATURES CHECKLIST
+═══════════════════════════════════════════════════════════════
+
+✅ Ultra-lightweight (minimal CSS/JS)
+✅ PageLayer & PageLayer Pro compatible
+✅ SEO optimized with JSON-LD structured data
+✅ Lazy-load images
+✅ Deferred script loading
+✅ Security headers enabled
+✅ WordPress bloat removed
+✅ SVG & WebP support
+✅ Translation ready
+✅ Child theme ready
+✅ Custom action hooks
+✅ Mobile responsive
+✅ RTL language support
+
+═══════════════════════════════════════════════════════════════
+  FILE STRUCTURE
+═══════════════════════════════════════════════════════════════
+
+ai-pro-ultra-theme/
+├── assets/
+│   ├── css/custom.css      (Your custom styles)
+│   ├── js/custom.js        (Your custom scripts)
+│   └── img/                (Your images)
+├── templates/
+│   ├── template-fullwidth.php  (PageLayer Full Width)
+│   └── template-blank.php      (PageLayer Blank)
+├── style.css              (Main stylesheet)
+├── functions.php          (Theme functions)
+├── header.php
+├── footer.php
+├── index.php
+├── page.php
+├── single.php
+├── archive.php
+├── 404.php
+├── front-page.php
+└── README.md              (Full documentation)
+
+═══════════════════════════════════════════════════════════════
+  SUPPORT & DOCUMENTATION
+═══════════════════════════════════════════════════════════════
+
+📖 Full documentation available in README.md
+🔧 Custom hooks for developers
+🎨 Easy customization via custom.css/custom.js
+🌐 Translation ready (i18n)
+
+For detailed information, see the README.md file included
+in the theme package.
+
+═══════════════════════════════════════════════════════════════
+  ENJOY YOUR NEW THEME! 🚀
+═══════════════════════════════════════════════════════════════
