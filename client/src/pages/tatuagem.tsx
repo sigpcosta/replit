@@ -16,6 +16,14 @@ import { useMutation } from "@tanstack/react-query";
 import { useState } from "react";
 import tattooImage from "@assets/generated_images/Tattoo_studio_workspace_bfc3187a.png";
 import heroTattooImage from "@assets/principal pagina tatoo_1763980260678.jpeg";
+import catarinaImage from "@assets/catarina_1763981152349.jpg";
+import studioImage from "@assets/estudio_1763981152350.jpg";
+import portfolio1Image from "@assets/portfolio1_1763981152351.jpg";
+import portfolio2Image from "@assets/portfolio2_1763981152351.jpg";
+import portfolio3Image from "@assets/portfolio3_1763981152351.jpg";
+import portfolio4Image from "@assets/porfolio4_1763981152350.jpg";
+import portfolio5Image from "@assets/portfolio5_1763981152351.jpg";
+import portfolio6Image from "@assets/portfolio6_1763981152352.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function TatuagemPage() {
@@ -206,6 +214,56 @@ export default function TatuagemPage() {
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
           <div className="mb-16 md:mb-24">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+              <Card className="p-8 hover-elevate transition-all">
+                <div className="mb-6">
+                  <img 
+                    src={catarinaImage} 
+                    alt={t.tattoo.artist.title}
+                    className="w-full aspect-[3/4] object-cover rounded-lg"
+                    data-testid="img-artist"
+                  />
+                </div>
+                <h2 className="font-heading text-2xl font-bold mb-2" data-testid="text-artist-name">
+                  {t.tattoo.artist.title}
+                </h2>
+                <p className="text-primary font-medium mb-4">
+                  {t.tattoo.artist.subtitle}
+                </p>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  {t.tattoo.artist.bio}
+                </p>
+                <Button 
+                  variant="outline" 
+                  asChild
+                  data-testid="button-artist-website"
+                >
+                  <a href={t.tattoo.artist.websiteUrl} target="_blank" rel="noopener noreferrer">
+                    {t.tattoo.artist.learnMore}
+                  </a>
+                </Button>
+              </Card>
+
+              <Card className="p-8 hover-elevate transition-all">
+                <div className="mb-6">
+                  <img 
+                    src={studioImage} 
+                    alt={t.tattoo.studio.title}
+                    className="w-full aspect-[3/4] object-cover rounded-lg"
+                    data-testid="img-studio"
+                  />
+                </div>
+                <h2 className="font-heading text-2xl font-bold mb-4" data-testid="text-studio-title">
+                  {t.tattoo.studio.title}
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  {t.tattoo.studio.description}
+                </p>
+              </Card>
+            </div>
+          </div>
+
+          <div className="mb-16 md:mb-24">
             <h2 className="font-heading text-3xl font-bold mb-4 text-center">
               {t.tattoo.portfolio.title}
             </h2>
@@ -215,7 +273,7 @@ export default function TatuagemPage() {
             <div className="grid grid-cols-2 gap-4 max-w-4xl mx-auto">
               <div className="aspect-square rounded-lg overflow-hidden hover-elevate transition-all cursor-pointer">
                 <img
-                  src={tattooImage}
+                  src={portfolio1Image}
                   alt={t.tattoo.altTattooWork1}
                   className="w-full h-full object-cover"
                   data-testid="portfolio-image-1"
@@ -223,7 +281,7 @@ export default function TatuagemPage() {
               </div>
               <div className="aspect-square rounded-lg overflow-hidden hover-elevate transition-all cursor-pointer">
                 <img
-                  src={tattooImage}
+                  src={portfolio2Image}
                   alt={t.tattoo.altTattooWork2}
                   className="w-full h-full object-cover"
                   data-testid="portfolio-image-2"
@@ -231,7 +289,7 @@ export default function TatuagemPage() {
               </div>
               <div className="aspect-square rounded-lg overflow-hidden hover-elevate transition-all cursor-pointer">
                 <img
-                  src={tattooImage}
+                  src={portfolio3Image}
                   alt={t.tattoo.altTattooWork3}
                   className="w-full h-full object-cover"
                   data-testid="portfolio-image-3"
@@ -239,7 +297,7 @@ export default function TatuagemPage() {
               </div>
               <div className="aspect-square rounded-lg overflow-hidden hover-elevate transition-all cursor-pointer">
                 <img
-                  src={tattooImage}
+                  src={portfolio4Image}
                   alt={t.tattoo.altTattooWork4}
                   className="w-full h-full object-cover"
                   data-testid="portfolio-image-4"
@@ -247,7 +305,7 @@ export default function TatuagemPage() {
               </div>
               <div className="aspect-square rounded-lg overflow-hidden hover-elevate transition-all cursor-pointer">
                 <img
-                  src={tattooImage}
+                  src={portfolio5Image}
                   alt={t.tattoo.altTattooWork5}
                   className="w-full h-full object-cover"
                   data-testid="portfolio-image-5"
@@ -255,7 +313,7 @@ export default function TatuagemPage() {
               </div>
               <div className="aspect-square rounded-lg overflow-hidden hover-elevate transition-all cursor-pointer">
                 <img
-                  src={tattooImage}
+                  src={portfolio6Image}
                   alt={t.tattoo.altTattooWork6}
                   className="w-full h-full object-cover"
                   data-testid="portfolio-image-6"

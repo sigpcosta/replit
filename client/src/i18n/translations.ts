@@ -536,6 +536,17 @@ export const translations = {
       heroTitle: "Arte que Vive na Sua Pele",
       heroP1: "No nosso estúdio, cada tatuagem é uma obra de arte única. Os nossos artistas experientes trabalham consigo para dar vida às suas ideias, seja um design minimalista ou uma peça complexa.",
       heroP2: "Com equipamento de última geração, materiais premium e os mais altos padrões de higiene e segurança, garantimos uma experiência profissional do início ao fim.",
+      artist: {
+        title: "Catarina Gomes",
+        subtitle: "Tatuadora & Body Piercer",
+        bio: "Olá, eu sou a Catarina, nascida e criada na Ilha do Faial, nos Açores. Desde pequena que o desenho faz parte da minha vida e sempre foi a minha forma de expressão favorita. Aos 13 anos fiz a minha primeira tatuagem e percebi que era este o caminho que queria seguir. Em 2019 comecei a tatuar profissionalmente e, em 2022, vivi uma experiência transformadora no Canadá, onde aperfeiçoei as minhas técnicas e cresci como artista. Em outubro de 2024 realizei o meu sonho de abrir o meu próprio estúdio na minha ilha natal. Hoje, uso a minha arte para criar tatuagens que refletem histórias, confiança e momentos especiais. Mais do que tatuar, procuro criar uma experiência tranquila, segura e cheia de significado — onde cada pessoa se sinta à vontade para expressar quem é.",
+        learnMore: "Saiba Mais",
+        websiteUrl: "https://catarinamachado00.wixsite.com/tattooartist"
+      },
+      studio: {
+        title: "O Estúdio",
+        description: "Apresento-vos o meu estúdio de tatuagem, um espaço criado com muita dedicação para transformar ideias e memórias em arte que levarás para sempre contigo. Aqui, cada traço é pensado com carinho e precisão, garantindo que a tua experiência seja tão única quanto a arte que criamos juntos. Estar no Faial é viver cercado por beleza e histórias únicas, e é essa essência que quero capturar em cada tatuagem. Comigo, podes eternizar as memórias e experiências vividas nesta ilha incrível. Seja uma homenagem aos momentos que marcaram a tua vida ou a expressão de quem és, o meu objetivo é criar algo que ressoe com a tua história e personalidade."
+      },
       viewPortfolio: "Ver Portfolio",
       bookConsultation: "Marcar Consulta",
       tattooStyles: "Estilos de Tatuagem",
@@ -1543,6 +1554,17 @@ export const translations = {
       heroTitle: "Art That Lives on Your Skin",
       heroP1: "In our studio, each tattoo is a unique work of art. Our experienced artists work with you to bring your ideas to life, whether it's a minimalist design or a complex piece.",
       heroP2: "With state-of-the-art equipment, premium materials and the highest hygiene and safety standards, we guarantee a professional experience from start to finish.",
+      artist: {
+        title: "Catarina Gomes",
+        subtitle: "Tattoo Artist & Body Piercer",
+        bio: "Hi, I'm Catarina, born and raised on Faial Island in the Azores. Drawing has been part of my life since childhood and has always been my favorite form of expression. At 13, I got my first tattoo and realized this was the path I wanted to follow. In 2019, I started tattooing professionally, and in 2022, I had a transformative experience in Canada, where I perfected my techniques and grew as an artist. In October 2024, I fulfilled my dream of opening my own studio on my home island. Today, I use my art to create tattoos that reflect stories, confidence, and special moments. More than tattooing, I seek to create a calm, safe, and meaningful experience — where everyone feels comfortable expressing who they are.",
+        learnMore: "Learn More",
+        websiteUrl: "https://catarinamachado00.wixsite.com/tattooartist"
+      },
+      studio: {
+        title: "The Studio",
+        description: "Welcome to my tattoo studio, a space created with great dedication to transform ideas and memories into art you'll carry with you forever. Here, every line is thought out with care and precision, ensuring your experience is as unique as the art we create together. Being in Faial means living surrounded by beauty and unique stories, and that's the essence I want to capture in every tattoo. With me, you can immortalize the memories and experiences lived on this incredible island. Whether it's a tribute to the moments that marked your life or the expression of who you are, my goal is to create something that resonates with your story and personality."
+      },
       viewPortfolio: "View Portfolio",
       bookConsultation: "Book Consultation",
       tattooStyles: "Tattoo Styles",

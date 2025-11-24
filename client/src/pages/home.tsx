@@ -12,7 +12,7 @@ import { Home as HomeIcon, Activity, PartyPopper, Pencil, Building2, Store } fro
 import apartmentImage from "@assets/generated_images/Modern_Horta_apartment_interior_ec6f658d.png";
 import lasertagImage from "@assets/generated_images/Laser_tag_action_shot_63a174d9.png";
 import eventsImage from "@assets/generated_images/Event_tent_celebration_fca04953.png";
-import tattooImage from "@assets/generated_images/Tattoo_studio_workspace_bfc3187a.png";
+import tattooImage from "@assets/estudio hub_1763981152350.jpg";
 import propertyImage from "@assets/generated_images/Azorean_property_exterior_4bd4f6fb.png";
 import shopImage from "@assets/generated_images/Azores4fun_retail_shop_8204420f.png";
 import supImage from "@assets/generated_images/SUP_paddleboarding_Azores_ocean_960e2ee9.png";
