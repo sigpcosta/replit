@@ -58,7 +58,7 @@ export default function TatuagemPage() {
     onError: (error: any) => {
       toast({
         title: t.tattoo.bookingForm.errorTitle,
-        description: error.message || t.tattoo.bookingForm.errorDesc,
+        description: error.message,
         variant: "destructive",
       });
     },
