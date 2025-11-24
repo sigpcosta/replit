@@ -1,0 +1,42 @@
+/**
+ * Custom CSS - AI Pro Ultra Theme
+ * 
+ * Add your custom styles here. This file is enqueued after the main
+ * theme stylesheet, so you can override any default styles.
+ *
+ * @package AIProUltra
+ */
+
+/* ==========================================================================
+   Custom Styles
+   ========================================================================== */
+
+/* Example: Custom button styles */
+/*
+.custom-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.custom-button:hover {
+    transform: translateY(-2px);
+}
+*/
+
+/* Example: Custom hero section */
+/*
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    text-align: center;
+}
+*/
+
+/* Add your custom styles below */
