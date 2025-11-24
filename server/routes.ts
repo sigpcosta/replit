@@ -2,6 +2,8 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { z } from "zod";
+import path from "path";
+import fs from "fs";
 
 const bookingSchema = z.object({
   name: z.string().min(1, "Nome é obrigatório"),
@@ -19,6 +21,54 @@ const contactSchema = z.object({
 });
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve static SEO files from public/ folder
+  const publicPath = path.resolve(import.meta.dirname, "..", "public");
+  
+  app.get("/sitemap.xml", (_req, res) => {
+    const sitemapPath = path.join(publicPath, "sitemap.xml");
+    if (fs.existsSync(sitemapPath)) {
+      res.type("application/xml").sendFile(sitemapPath);
+    } else {
+      res.status(404).send("Sitemap not found");
+    }
+  });
+  
+  app.get("/robots.txt", (_req, res) => {
+    const robotsPath = path.join(publicPath, "robots.txt");
+    if (fs.existsSync(robotsPath)) {
+      res.type("text/plain").sendFile(robotsPath);
+    } else {
+      res.status(404).send("Robots.txt not found");
+    }
+  });
+  
+  app.get("/logo.gif", (_req, res) => {
+    const logoPath = path.join(publicPath, "logo.gif");
+    if (fs.existsSync(logoPath)) {
+      res.type("image/gif").sendFile(logoPath);
+    } else {
+      res.status(404).send("Logo not found");
+    }
+  });
+  
+  app.get("/og-home.jpg", (_req, res) => {
+    const imagePath = path.join(publicPath, "og-home.jpg");
+    if (fs.existsSync(imagePath)) {
+      res.type("image/jpeg").sendFile(imagePath);
+    } else {
+      res.status(404).send("OG image not found");
+    }
+  });
+  
+  app.get("/og-default.jpg", (_req, res) => {
+    const imagePath = path.join(publicPath, "og-default.jpg");
+    if (fs.existsSync(imagePath)) {
+      res.type("image/jpeg").sendFile(imagePath);
+    } else {
+      res.status(404).send("OG image not found");
+    }
+  });
+
   app.post("/api/booking", async (req, res) => {
     try {
       const data = bookingSchema.parse(req.body);
