@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estúdio profissional de tatuagens e piercings nos Açores. Artistas experientes, ambiente seguro e designs personalizados.">
+    <meta name="keywords" content="tatuagem, piercing, Açores, Faial, estúdio, arte corporal, Catarina Gomes">
+    <title>Tatuagem & Piercings | Azores4fun</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-primary: #2B7BA0;
+            --color-accent: #F59E0B;
+            --color-accent-dark: #D97706;
+            --color-background: #F8FAFC;
+            --color-foreground: #1E293B;
+            --color-muted: #64748B;
+            --color-card: #FFFFFF;
+            --color-border: #E2E8F0;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --radius: 0.5rem;
+            --shadow: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-background);
+            color: var(--color-foreground);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .logo-primary { color: var(--color-primary); }
+        .logo-dark { color: var(--color-foreground); }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--color-foreground);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover { color: var(--color-primary); }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--color-accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--color-accent-dark);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--color-border);
+            color: var(--color-foreground);
+        }
+
+        .btn-outline:hover {
+            background: var(--color-background);
+        }
+
+        .btn-outline-white {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+        }
+
+        .btn-outline-white:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?w=1920&q=80') center/cover no-repeat;
+        }
+
+        .hero-content {
+            text-align: center;
+            padding: 2rem;
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--color-card);
+            border-radius: var(--radius);
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-accent {
+            border-left: 4px solid var(--color-accent);
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 1rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--color-muted);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Artist & Studio Grid */
+        .artist-studio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .artist-card, .studio-card {
+            padding: 2rem;
+        }
+
+        .artist-card img, .studio-card img {
+            width: 100%;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            border-radius: var(--radius);
+            margin-bottom: 1.5rem;
+        }
+
+        .artist-name {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .artist-role {
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .artist-bio {
+            color: var(--color-muted);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .portfolio-item {
+            aspect-ratio: 1;
+            border-radius: var(--radius);
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Tabs */
+        .tabs-container {
+            margin-bottom: 3rem;
+        }
+
+        .tabs-list {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .tab-btn {
+            padding: 0.75rem 2rem;
+            background: var(--color-background);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tab-btn.active {
+            background: var(--color-foreground);
+            color: white;
+            border-color: var(--color-foreground);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Service Cards Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .service-card {
+            padding: 1.5rem;
+        }
+
+        .service-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card .healing {
+            color: var(--color-accent);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            color: var(--color-muted);
+        }
+
+        /* Process Steps */
+        .process-steps {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .process-step {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .step-number {
+            width: 2rem;
+            height: 2rem;
+            background: var(--color-accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.875rem;
+            flex-shrink: 0;
+        }
+
+        .step-text {
+            padding-top: 0.25rem;
+            font-size: 0.9rem;
+        }
+
+        /* Highlights Box */
+        .highlights-box {
+            background: rgba(0, 0, 0, 0.03);
+            border-radius: var(--radius);
+            padding: 3rem;
+            margin-top: 3rem;
+        }
+
+        .highlights-box h3 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+
+        .highlights-list {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .highlight-item {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .check-icon {
+            color: var(--color-accent);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        /* Booking Form */
+        .booking-section {
+            background: var(--color-card);
+            padding: 4rem 1rem;
+        }
+
+        .booking-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--color-background);
+            border-radius: var(--radius);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+        }
+
+        /* Aftercare Section */
+        .aftercare-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .aftercare-card {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .aftercare-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .aftercare-card h4 {
+            margin-bottom: 0.75rem;
+        }
+
+        .aftercare-card p {
+            color: var(--color-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .testimonial-card {
+            padding: 2rem;
+        }
+
+        .stars {
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .testimonial-text {
+            color: var(--color-muted);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+        }
+
+        /* FAQs */
+        .faq-item {
+            border-bottom: 1px solid var(--color-border);
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: var(--color-muted);
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, #1E5A7A 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--color-foreground);
+            color: white;
+            padding: 4rem 1rem 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand .primary { color: var(--color-primary); }
+
+        .footer h3 {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .artist-studio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .aftercare-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            
+            .header-actions {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .aftercare-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="/" class="logo">
+                <span class="logo-primary">Azores</span><span class="logo-dark">4fun</span>
+            </a>
+            <nav class="nav">
+                <a href="/">Inicio</a>
+                <a href="/alojamento">Alojamento</a>
+                <a href="/animacao">Animacao</a>
+                <a href="/eventos">Eventos</a>
+                <a href="/tatuagem">Tatuagem</a>
+                <a href="/imobiliaria">Imobiliaria</a>
+                <a href="/loja">Loja</a>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:+351934993770" class="btn btn-outline">Contactar</a>
+                <a href="https://book.azores4fun.com" class="btn btn-primary">Reservar</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">&#9776;</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Arte que Vive na Sua Pele</h1>
+            <p>Estudio profissional com artistas experientes. Transforme as suas ideias em arte permanente com seguranca e qualidade.</p>
+            <div class="hero-buttons">
+                <a href="#agendar" class="btn btn-primary">Marcar Consulta</a>
+                <a href="#portfolio" class="btn btn-outline-white">Ver Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artist & Studio Section -->
+    <section class="section">
+        <div class="container">
+            <div class="artist-studio-grid">
+                <!-- Artist Card -->
+                <div class="card artist-card">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80" alt="Catarina Gomes - Tatuadora">
+                    <h2 class="artist-name">Catarina Gomes</h2>
+                    <p class="artist-role">Tatuadora & Body Piercer</p>
+                    <p class="artist-bio">
+                        Ola, eu sou a Catarina, nascida e criada na Ilha do Faial, nos Acores. Desde pequena que o desenho faz parte da minha vida e sempre foi a minha forma de expressao favorita. Aos 13 anos fiz a minha primeira tatuagem e percebi que era este o caminho que queria seguir. Em 2019 comecei a tatuar profissionalmente e, em 2022, vivi uma experiencia transformadora no Canada, onde aperfeicoei as minhas tecnicas e cresci como artista.
+                    </p>
+                    <a href="https://catarinamachado00.wixsite.com/tattooartist" class="btn btn-outline" target="_blank">Saiba Mais</a>
+                </div>
+                
+                <!-- Studio Card -->
+                <div class="card studio-card">
+                    <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?w=600&q=80" alt="O Estudio">
+                    <h2 class="artist-name">O Estudio</h2>
+                    <p class="artist-bio">
+                        Apresento-vos o meu estudio de tatuagem, um espaco criado com muita dedicacao para transformar ideias e memorias em arte que levaras para sempre contigo. Aqui, cada traco e pensado com carinho e precisao, garantindo que a tua experiencia seja tao unica quanto a arte que criamos juntos. Estar no Faial e viver cercado por beleza e historias unicas, e e essa essencia que quero capturar em cada tatuagem.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Portfolio Section -->
+            <div id="portfolio">
+                <h2 class="section-title">Nosso Portfolio</h2>
+                <p class="section-subtitle">Veja alguns dos nossos trabalhos mais recentes</p>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item card">
+                        <img src="https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=400&q=80" alt="Trabalho de tatuagem 1">
+                    </div>
+                    <div class="portfolio-item card">
+                        <img src="https://images.unsplash.com/photo-1590246814883-57c511e76a2f?w=400&q=80" alt="Trabalho de tatuagem 2">
+                    </div>
+                    <div class="portfolio-item card">
+                        <img src="https://images.unsplash.com/photo-1562962230-16e4623d36e6?w=400&q=80" alt="Trabalho de tatuagem 3">
+                    </div>
+                    <div class="portfolio-item card">
+                        <img src="https://images.unsplash.com/photo-1475180098004-ca77a66827be?w=400&q=80" alt="Trabalho de tatuagem 4">
+                    </div>
+                    <div class="portfolio-item card">
+                        <img src="https://images.unsplash.com/photo-1604941598520-d5ca89c1fb13?w=400&q=80" alt="Trabalho de tatuagem 5">
+                    </div>
+                    <div class="portfolio-item card">
+                        <img src="https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?w=400&q=80" alt="Trabalho de tatuagem 6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section with Tabs -->
+    <section class="section" style="background: var(--color-card);">
+        <div class="container">
+            <h2 class="section-title">Nossos Servicos</h2>
+            <p class="section-subtitle">Escolha entre tatuagens personalizadas ou piercings profissionais</p>
+            
+            <div class="tabs-container">
+                <div class="tabs-list">
+                    <button class="tab-btn active" data-tab="tatuagens">Tatuagens</button>
+                    <button class="tab-btn" data-tab="piercings">Piercings</button>
+                </div>
+                
+                <!-- Tatuagens Tab -->
+                <div class="tab-content active" id="tatuagens">
+                    <h3 class="section-title" style="font-size: 1.5rem;">Estilos de Tatuagem</h3>
+                    <p class="section-subtitle">Exploramos diversos estilos para criar a tatuagem perfeita para si</p>
+                    
+                    <div class="services-grid">
+                        <div class="card card-accent service-card">
+                            <h4>Fineline</h4>
+                            <p>Tracos finos e delicados, perfeitos para designs minimalistas e detalhados.</p>
+                        </div>
+                        <div class="card card-accent service-card">
+                            <h4>Minimalista</h4>
+                            <p>Designs simples e elegantes com poucos elementos, mas grande impacto visual.</p>
+                        </div>
+                        <div class="card card-accent service-card">
+                            <h4>Aquarela</h4>
+                            <p>Estilo artistico com cores vibrantes que simulam pinceladas de aquarela.</p>
+                        </div>
+                        <div class="card card-accent service-card">
+                            <h4>Realismo</h4>
+                            <p>Reproducao fiel de imagens, retratos e elementos com alto nivel de detalhe.</p>
+                        </div>
+                        <div class="card card-accent service-card">
+                            <h4>Geometrico</h4>
+                            <p>Formas geometricas precisas criando padroes e mandalas harmoniosas.</p>
+                        </div>
+                        <div class="card card-accent service-card">
+                            <h4>Tradicional</h4>
+                            <p>Estilo classico com linhas marcadas e cores solidas.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="section-title" style="font-size: 1.5rem; margin-top: 3rem;">Como Funciona</h3>
+                    <p class="section-subtitle">Do conceito a execucao, um processo profissional e personalizado</p>
+                    
+                    <div class="process-steps">
+                        <div class="card process-step">
+                            <span class="step-number">1</span>
+                            <span class="step-text">Consulta inicial para discutir ideias e expectativas</span>
+                        </div>
+                        <div class="card process-step">
+                            <span class="step-number">2</span>
+                            <span class="step-text">Criacao de design personalizado adaptado ao seu estilo</span>
+                        </div>
+                        <div class="card process-step">
+                            <span class="step-number">3</span>
+                            <span class="step-text">Preparacao profissional da pele e area de trabalho</span>
+                        </div>
+                        <div class="card process-step">
+                            <span class="step-number">4</span>
+                            <span class="step-text">Execucao da tatuagem com tecnicas modernas</span>
+                        </div>
+                        <div class="card process-step">
+                            <span class="step-number">5</span>
+                            <span class="step-text">Instrucoes detalhadas de cuidados pos-sessao</span>
+                        </div>
+                    </div>
+                    
+                    <div class="highlights-box">
+                        <h3>Informacao Importante</h3>
+                        <div class="highlights-list">
+                            <div class="highlight-item">
+                                <span class="check-icon">&#10003;</span>
+                                <span>Artistas certificados e experientes</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="check-icon">&#10003;</span>
+                                <span>Equipamento de ultima geracao</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="check-icon">&#10003;</span>
+                                <span>Tintas premium hipoalergenicas</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="check-icon">&#10003;</span>
+                                <span>Ambiente esterilizado e seguro</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="check-icon">&#10003;</span>
+                                <span>Designs personalizados exclusivos</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="check-icon">&#10003;</span>
+                                <span>Acompanhamento pos-sessao</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Piercings Tab -->
+                <div class="tab-content" id="piercings">
+                    <h3 class="section-title" style="font-size: 1.5rem;">Tipos de Piercing</h3>
+                    <p class="section-subtitle">Oferecemos uma vasta gama de piercings com joias de qualidade premium</p>
+                    
+                    <div class="services-grid">
+                        <div class="card card-accent service-card">
+                            <h4>Orelha</h4>
+                            <p class="healing">Cicatrizacao: 6-12 semanas</p>
+                            <p>Lobulo, helix, tragus, conch, daith, rook e industrial. Variedade de joias disponiveis.</p>
+                        </div>
+                        <div class="card card-accent service-card">
+                            <h4>Nariz</h4>
+                            <p class="healing">Cicatrizacao: 2-4 meses</p>
+                            <p>Nostril e septum com joias delicadas ou statement pieces.</p>
+                        </div>
+                        <div class="card card-accent service-card">
+                            <h4>Facial</h4>
+                            <p class="healing">Cicatrizacao: 6-8 semanas</p>
+                            <p>Sobrancelha, labret, monroe, medusa e bridge com tecnicas modernas.</p>
+                        </div>
+                        <div class="card card-accent service-card">
+                            <h4>Oral</h4>
+                            <p class="healing">Cicatrizacao: 4-6 semanas</p>
+                            <p>Lingua, smiley e frenulum com materiais hipoalergenicos.</p>
+                        </div>
+                        <div class="card card-accent service-card">
+                            <h4>Corpo</h4>
+                            <p class="healing">Cicatrizacao: 6-9 meses</p>
+                            <p>Umbigo, mamilo e superficies com joias de qualidade premium.</p>
+                        </div>
+                        <div class="card card-accent service-card">
+                            <h4>Microdermal</h4>
+                            <p class="healing">Cicatrizacao: 3-6 meses</p>
+                            <p>Implantes dermicos para areas unicas do corpo.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="section-title" style="font-size: 1.5rem; margin-top: 3rem;">Como Funciona</h3>
+                    <p class="section-subtitle">Procedimento seguro e profissional do inicio ao fim</p>
+                    
+                    <div class="process-steps">
+                        <div class="card process-step">
+                            <span class="step-number">1</span>
+                            <span class="step-text">Avaliacao da anatomia e escolha do local ideal</span>
+                        </div>
+                        <div class="card process-step">
+                            <span class="step-number">2</span>
+                            <span class="step-text">Selecao de joia hipoalergenica de qualidade</span>
+                        </div>
+                        <div class="card process-step">
+                            <span class="step-number">3</span>
+                            <span class="step-text">Marcacao precisa e esterilizacao completa</span>
+                        </div>
+                        <div class="card process-step">
+                            <span class="step-number">4</span>
+                            <span class="step-text">Execucao rapida e profissional do piercing</span>
+                        </div>
+                        <div class="card process-step">
+                            <span class="step-number">5</span>
+                            <span class="step-text">Orientacoes completas para cicatrizacao</span>
+                        </div>
+                    </div>
+                    
+                    <div class="highlights-box">
+                        <h3>Informacao Importante</h3>
+                        <div class="highlights-list" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                            <div class="highlight-item">
+                                <span class="check-icon">&#10003;</span>
+                                <span>Tecnicas modernas e seguras</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="check-icon">&#10003;</span>
+                                <span>Joias de titanio hipoalergenico</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="check-icon">&#10003;</span>
+                                <span>Esterilizacao de nivel hospitalar</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="check-icon">&#10003;</span>
+                                <span>Profissionais certificados</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="check-icon">&#10003;</span>
+                                <span>Grande variedade de estilos</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="check-icon">&#10003;</span>
+                                <span>Cuidados incluidos no servico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-section" id="agendar">
+        <div class="container">
+            <h2 class="section-title">Marque a Sua Sessao</h2>
+            <p class="section-subtitle">Preencha o formulario para agendar uma consulta ou sessao</p>
+            
+            <div class="booking-form card">
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="O seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="O seu email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+351 000 000 000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Servico</label>
+                        <select id="service" name="service" required>
+                            <option value="">Selecione um servico</option>
+                            <option value="tattooConsult">Consulta de Tatuagem</option>
+                            <option value="tattooSession">Sessao de Tatuagem</option>
+                            <option value="piercing">Piercing</option>
+                            <option value="touchup">Retoque</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Descricao</label>
+                        <textarea id="description" name="description" placeholder="Descreva a sua ideia ou necessidade..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">Enviar Pedido</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aftercare Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Cuidados Pos-Sessao</h2>
+            <p class="section-subtitle">Instrucoes essenciais para uma cicatrizacao perfeita</p>
+            
+            <div class="aftercare-grid">
+                <div class="card aftercare-card">
+                    <div class="aftercare-icon">&#128338;</div>
+                    <h4>Primeiras 24 Horas</h4>
+                    <p>Mantenha a pelicula protectora. Lave suavemente com sabao neutro apos 3-4 horas.</p>
+                </div>
+                <div class="card aftercare-card">
+                    <div class="aftercare-icon">&#128167;</div>
+                    <h4>Hidratacao</h4>
+                    <p>Aplique pomada recomendada 2-3 vezes ao dia. Nao use produtos com perfume.</p>
+                </div>
+                <div class="card aftercare-card">
+                    <div class="aftercare-icon">&#9728;</div>
+                    <h4>Proteccao Solar</h4>
+                    <p>Evite exposicao solar directa por 3-4 semanas. Use protector FPS 50+.</p>
+                </div>
+                <div class="card aftercare-card">
+                    <div class="aftercare-icon">&#128737;</div>
+                    <h4>Cicatrizacao</h4>
+                    <p>Nao coce nem arranque cascas. Evite piscinas e mar por 3-4 semanas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" style="background: var(--color-card);">
+        <div class="container">
+            <h2 class="section-title">O Que Dizem os Nossos Clientes</h2>
+            <p class="section-subtitle">Experiencias reais de pessoas que confiaram em nos</p>
+            
+            <div class="testimonials-grid">
+                <div class="card testimonial-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"Fiz a minha primeira tatuagem no estudio e a experiencia foi incrivel. O artista foi muito profissional e o resultado ficou melhor do que imaginei!"</p>
+                    <p class="testimonial-author">Ana Silva</p>
+                </div>
+                <div class="card testimonial-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"Ambiente super limpo e profissional. O piercing cicatrizou perfeitamente seguindo as instrucoes dadas. Recomendo 100%!"</p>
+                    <p class="testimonial-author">Joao Santos</p>
+                </div>
+                <div class="card testimonial-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"A equipa e excelente! Tiraram todas as minhas duvidas e fizeram-me sentir completamente a vontade. A tatuagem ficou perfeita!"</p>
+                    <p class="testimonial-author">Maria Costa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <p class="section-subtitle">Tire as suas duvidas sobre os nossos servicos</p>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quanto tempo demora uma sessao de tatuagem?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Depende do tamanho e complexidade. Tatuagens pequenas podem levar 1-2 horas, enquanto pecas maiores podem necessitar de multiplas sessoes.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        A tatuagem doi muito?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        A sensibilidade varia de pessoa para pessoa e da area do corpo. Muitos descrevem como um desconforto toleravel. Fazemos pausas sempre que necessario.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Posso trazer o meu proprio design?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Sim! Trabalhamos com o seu design ou criamos algo exclusivo para si. Na consulta inicial discutimos todas as opcoes.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quanto tempo leva para cicatrizar um piercing?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Varia conforme o tipo: lobulo 6-8 semanas, cartilagem 3-9 meses, oral 4-6 semanas. Seguir os cuidados e essencial.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Que tipo de joia usam nos piercings?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Usamos apenas materiais hipoalergenicos de alta qualidade: titanio ASTM F136, ouro 14k ou aco cirurgico implant-grade.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Pronto para a Sua Proxima Tatuagem?</h2>
+            <p>Agende uma consulta gratuita e transforme as suas ideias em arte permanente.</p>
+            <a href="#agendar" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Marcar Consulta Agora</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <span class="primary">Azores</span>4fun
+                    </div>
+                    <p style="color: rgba(255,255,255,0.7);">A sua aventura completa nos Acores. Alojamento, atividades, eventos e muito mais.</p>
+                </div>
+                <div>
+                    <h3>Servicos</h3>
+                    <ul>
+                        <li><a href="/alojamento">Alojamento Local</a></li>
+                        <li><a href="/animacao">Animacao Turistica</a></li>
+                        <li><a href="/eventos">Eventos</a></li>
+                        <li><a href="/tatuagem">Tatuagem</a></li>
+                        <li><a href="/imobiliaria">Imobiliaria</a></li>
+                        <li><a href="/loja">Loja</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li>Rua da Horta, 123<br>9900-000 Horta, Faial</li>
+                        <li><a href="tel:+351934993770">+351 934 993 770</a></li>
+                        <li><a href="mailto:info@azores4fun.com">info@azores4fun.com</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Horario</h3>
+                    <ul>
+                        <li>Segunda a Sexta: 9h - 18h</li>
+                        <li>Sabado: 10h - 14h</li>
+                        <li>Domingo: Fechado</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Azores4fun. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons and contents
+                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                this.classList.add('active');
+                document.getElementById(this.dataset.tab).classList.add('active');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Obrigado! O seu pedido foi enviado. Entraremos em contacto em breve.');
+            this.reset();
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const nav = document.querySelector('.nav');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
+</html>
