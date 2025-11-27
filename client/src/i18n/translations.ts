@@ -1198,7 +1198,7 @@ export const translations = {
           faqs: [
             {
               question: "Where are the apartments located?",
-              answer: "Our 3 apartments are located in the center of Horta, Faial, with easy access to all amenities."
+              answer: "Our 3 apartments are located in the center of Horta, Faial, at Travessa do Poiso Novo nºs 1 e 3, with easy access to all amenities."
             },
             {
               question: "Are the apartments equipped?",
