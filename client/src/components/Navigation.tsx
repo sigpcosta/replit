@@ -30,7 +30,7 @@ export default function Navigation() {
             <img 
               src={logoUrl} 
               alt="Azores4fun" 
-              className="h-10 md:h-12 w-auto"
+              className="h-10 md:h-12 w-auto ml-[0px] mr-[0px] pl-[5px] pr-[5px]"
             />
           </a>
 
@@ -84,7 +84,6 @@ export default function Navigation() {
           </button>
         </div>
       </div>
-
       {mobileMenuOpen && (
         <div className="lg:hidden border-t bg-background" data-testid="mobile-menu">
           <div className="px-4 py-6 space-y-4">
@@ -129,7 +128,6 @@ export default function Navigation() {
           </div>
         </div>
       )}
-
       <ContactDialog open={contactOpen} onOpenChange={setContactOpen} />
     </nav>
   );
