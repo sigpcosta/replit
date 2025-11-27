@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Building2, Home as HomeIcon, Wrench, Hammer, Key, Check } from "lucide-react";
 import { seoConfig } from "@/lib/seo-config";
 import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
-import propertyImage from "@assets/generated_images/Azorean_property_exterior_4bd4f6fb.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function ImobiliariaPage() {
@@ -83,32 +82,23 @@ export default function ImobiliariaPage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-16 md:mb-24">
-            <div>
-              <h2 className="font-heading text-3xl font-bold mb-6">
-                {t.property.heroTitle}
-              </h2>
-              <p className="text-muted-foreground text-lg mb-6">
-                {t.property.heroP1}
-              </p>
-              <p className="text-muted-foreground text-lg mb-8">
-                {t.property.heroP2}
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" data-testid="button-request-quote">
-                  {t.property.requestQuote}
-                </Button>
-                <Button size="lg" variant="outline" data-testid="button-schedule-visit">
-                  {t.property.scheduleVisit}
-                </Button>
-              </div>
-            </div>
-            <div>
-              <img
-                src={propertyImage}
-                alt={t.property.altProperty}
-                className="rounded-lg w-full h-96 object-cover"
-              />
+          <div className="mb-16 md:mb-24">
+            <h2 className="font-heading text-3xl font-bold mb-6">
+              {t.property.heroTitle}
+            </h2>
+            <p className="text-muted-foreground text-lg mb-6 max-w-3xl">
+              {t.property.heroP1}
+            </p>
+            <p className="text-muted-foreground text-lg mb-8 max-w-3xl">
+              {t.property.heroP2}
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button size="lg" data-testid="button-request-quote">
+                {t.property.requestQuote}
+              </Button>
+              <Button size="lg" variant="outline" data-testid="button-schedule-visit">
+                {t.property.scheduleVisit}
+              </Button>
             </div>
           </div>
 
