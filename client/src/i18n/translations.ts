@@ -169,7 +169,7 @@ export const translations = {
           faqs: [
             {
               question: "Onde ficam localizados os apartamentos?",
-              answer: "Os nossos 3 apartamentos estão localizados no centro da cidade da Horta, Faial, com fácil acesso a todas as comodidades."
+              answer: "Os nossos 3 apartamentos estão localizados no centro da cidade da Horta, Faial, na Travessa do Poiso Novo nºs 1 e 3, com fácil acesso a todas as comodidades."
             },
             {
               question: "Os apartamentos estão equipados?",
