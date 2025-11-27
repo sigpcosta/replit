@@ -12,7 +12,7 @@ import { seoConfig } from "@/lib/seo-config";
 import { organizationSchema, localBusinessSchema, generateFAQSchema } from "@/lib/structured-data";
 import { Home as HomeIcon, Activity, PartyPopper, Pencil, Building2, Store } from "lucide-react";
 
-import apartmentImage from "@assets/generated_images/Modern_Horta_apartment_interior_ec6f658d.png";
+import apartmentImage from "@assets/15_1764274865100.jpg";
 import lasertagImage from "@assets/generated_images/Laser_tag_action_shot_63a174d9.png";
 import eventsImage from "@assets/generated_images/Event_tent_celebration_fca04953.png";
 import tattooImage from "@assets/estudio hub_1763981152350.jpg";
