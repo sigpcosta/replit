@@ -708,7 +708,7 @@ export const translations = {
     // Property Page
     property: {
       title: "Gestão Imobiliária",
-      subtitle: "Serviços completos de gestão, manutenção e construção para a sua propriedade nos Açores.",
+      subtitle: "Serviços de manutenção e construção na sua propriedade no Faial.",
       heroTitle: "Cuide da Sua Propriedade com Profissionais",
       heroP1: "A Azores4fun oferece serviços completos de gestão imobiliária, desde arrendamento de longa duração até construção e renovação. Cuidamos da sua propriedade como se fosse nossa.",
       heroP2: "Com equipas especializadas, conhecimento profundo do mercado local e compromisso com a qualidade, garantimos que o seu investimento está em boas mãos.",
