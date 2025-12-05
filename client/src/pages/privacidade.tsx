@@ -1,11 +1,10 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 export default function Privacidade() {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <>
@@ -14,14 +13,10 @@ export default function Privacidade() {
         <meta name="description" content={t.legal.privacy.metaDescription} />
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <Navigation />
+      
+      <div className="min-h-screen bg-background pt-20 md:pt-24">
         <div className="max-w-4xl mx-auto px-4 py-12 md:py-16">
-          <Link href="/">
-            <Button variant="ghost" className="mb-6" data-testid="button-back-home">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              {t.common.backToHome}
-            </Button>
-          </Link>
 
           <article className="prose prose-slate dark:prose-invert max-w-none">
             <h1 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-8">
@@ -88,6 +83,8 @@ export default function Privacidade() {
           </article>
         </div>
       </div>
+      
+      <Footer />
     </>
   );
 }
