@@ -120,13 +120,28 @@ export const translations = {
       tagline: "A sua aventura completa nos Açores. Experiências únicas na Horta, Faial.",
       servicesTitle: "Serviços",
       contactTitle: "Contacto",
+      legalTitle: "Legal",
       scheduleTitle: "Horário",
       schedule: {
         weekdays: "Segunda - Sexta: 9h - 19h",
         saturday: "Sábado: 10h - 18h",
         sunday: "Domingo: 10h - 14h",
       },
+      address: {
+        street: "Travessa do Poiso Novo nºs 1 e 3",
+        city: "9900-000 Horta, Faial",
+        azores: "Açores, Portugal",
+      },
+      legal: {
+        privacy: "Política de Privacidade",
+        terms: "Termos de Serviço",
+        cookies: "Política de Cookies",
+        complaints: "Livro de Reclamações",
+      },
+      followUs: "Siga-nos",
       rights: "Todos os direitos reservados.",
+      developedBy: "Desenvolvido com",
+      inAzores: "nos Açores",
     },
     
     // Contact Dialog
@@ -1149,13 +1164,28 @@ export const translations = {
       tagline: "Your complete Azores adventure. Unique experiences in Horta, Faial.",
       servicesTitle: "Services",
       contactTitle: "Contact",
+      legalTitle: "Legal",
       scheduleTitle: "Schedule",
       schedule: {
         weekdays: "Monday - Friday: 9am - 7pm",
         saturday: "Saturday: 10am - 6pm",
         sunday: "Sunday: 10am - 2pm",
       },
+      address: {
+        street: "Travessa do Poiso Novo nºs 1 e 3",
+        city: "9900-000 Horta, Faial",
+        azores: "Azores, Portugal",
+      },
+      legal: {
+        privacy: "Privacy Policy",
+        terms: "Terms of Service",
+        cookies: "Cookie Policy",
+        complaints: "Complaints Book",
+      },
+      followUs: "Follow Us",
       rights: "All rights reserved.",
+      developedBy: "Developed with",
+      inAzores: "in the Azores",
     },
     
     // Contact Dialog
