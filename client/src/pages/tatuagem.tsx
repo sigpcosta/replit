@@ -650,7 +650,7 @@ export default function TatuagemPage() {
                 data-testid="link-google-reviews"
               >
                 <SiGoogle className="h-4 w-4" />
-                {language === 'pt' ? 'Ver todas as avaliações no Google' : 'View all reviews on Google'}
+                {t.tattoo.viewAllReviews}
                 <ExternalLink className="h-4 w-4" />
               </a>
             </div>

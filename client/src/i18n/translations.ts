@@ -869,18 +869,19 @@ export const translations = {
       testimonialsTitle: "O Que Dizem os Nossos Clientes",
       testimonialsSubtitle: "Avaliações reais do Google - 5.0 estrelas",
       googleReviewsLink: "https://maps.app.goo.gl/tD1qrRfPWpuQ3AVaA",
+      viewAllReviews: "Ver os originais de todas as avaliações no Google",
       testimonials: [
         {
           name: "Océane Rosenberg",
-          text: "I came in to have the second hole in my lobe drilled. I highly recommend it, I had a great time with Catarina. She is very talented and very nice. I wouldn't hesitate to come back. Thank you so much!!"
+          text: "Vim fazer o segundo furo no lóbulo. Recomendo vivamente, passei um óptimo momento com a Catarina. Ela é muito talentosa e muito simpática. Não hesitaria em voltar. Muito obrigada!!"
         },
         {
           name: "Jéssica Raposo",
-          text: "I loved the experience! Catarina is an excellent professional. Super attentive, careful, and incredibly talented. The space is very welcoming and made me feel comfortable from the very first moment. She made me feel completely at ease throughout the entire process. I recommend her 100%!"
+          text: "Adorei a experiência! A Catarina é uma excelente profissional. Super atenciosa, cuidadosa e incrivelmente talentosa. O espaço é muito acolhedor e fez-me sentir confortável desde o primeiro momento. Fez-me sentir completamente à vontade durante todo o processo. Recomendo a 100%!"
         },
         {
           name: "Érica Torres",
-          text: "The work turned out flawless! She was super attentive from start to finish, explained everything patiently, and made the process very smooth. Her technique is excellent, the lines are clean and detailed, and you can clearly see the care and dedication in every stroke."
+          text: "O trabalho ficou impecável! Foi super atenciosa do início ao fim, explicou tudo com paciência e tornou o processo muito tranquilo. A sua técnica é excelente, os traços são limpos e detalhados, e nota-se claramente o cuidado e dedicação em cada traço."
         }
       ],
       faqs: [
@@ -2122,6 +2123,7 @@ export const translations = {
       testimonialsTitle: "What Our Clients Say",
       testimonialsSubtitle: "Real Google Reviews - 5.0 stars",
       googleReviewsLink: "https://maps.app.goo.gl/tD1qrRfPWpuQ3AVaA",
+      viewAllReviews: "View the originals of all reviews on Google",
       testimonials: [
         {
           name: "Océane Rosenberg",
