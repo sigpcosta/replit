@@ -21,11 +21,21 @@ export default function BlogPage() {
     queryKey: ["/api/blog"],
   });
 
-  const formatDate = (date: Date | string) => {
-    const dateObj = typeof date === 'string' ? new Date(date) : date;
-    return format(dateObj, "d 'de' MMMM, yyyy", { 
-      locale: language === 'pt' ? pt : enUS 
-    });
+  const formatDate = (date: Date | string | null | undefined) => {
+    if (!date) {
+      return language === 'pt' ? 'Data não disponível' : 'Date not available';
+    }
+    try {
+      const dateObj = typeof date === 'string' ? new Date(date) : date;
+      if (isNaN(dateObj.getTime())) {
+        return language === 'pt' ? 'Data não disponível' : 'Date not available';
+      }
+      return format(dateObj, "d 'de' MMMM, yyyy", { 
+        locale: language === 'pt' ? pt : enUS 
+      });
+    } catch {
+      return language === 'pt' ? 'Data não disponível' : 'Date not available';
+    }
   };
 
   const getTitle = (post: BlogPost) => language === 'pt' ? post.titlePt : post.titleEn;
