@@ -867,19 +867,20 @@ export const translations = {
       altTattooWork5: "Trabalho de tatuagem 5",
       altTattooWork6: "Trabalho de tatuagem 6",
       testimonialsTitle: "O Que Dizem os Nossos Clientes",
-      testimonialsSubtitle: "Experiências reais de pessoas que confiaram em nós",
+      testimonialsSubtitle: "Avaliações reais do Google - 5.0 estrelas",
+      googleReviewsLink: "https://maps.app.goo.gl/tD1qrRfPWpuQ3AVaA",
       testimonials: [
         {
-          name: "Ana Silva",
-          text: "Fiz a minha primeira tatuagem no estúdio e a experiência foi incrível. O artista foi muito profissional e o resultado ficou melhor do que imaginei!"
+          name: "Océane Rosenberg",
+          text: "I came in to have the second hole in my lobe drilled. I highly recommend it, I had a great time with Catarina. She is very talented and very nice. I wouldn't hesitate to come back. Thank you so much!!"
         },
         {
-          name: "João Santos",
-          text: "Ambiente super limpo e profissional. O piercing cicatrizou perfeitamente seguindo as instruções dadas. Recomendo 100%!"
+          name: "Jéssica Raposo",
+          text: "I loved the experience! Catarina is an excellent professional. Super attentive, careful, and incredibly talented. The space is very welcoming and made me feel comfortable from the very first moment. She made me feel completely at ease throughout the entire process. I recommend her 100%!"
         },
         {
-          name: "Maria Costa",
-          text: "A equipa é excelente! Tiraram todas as minhas dúvidas e fizeram-me sentir completamente à vontade. A tatuagem ficou perfeita!"
+          name: "Érica Torres",
+          text: "The work turned out flawless! She was super attentive from start to finish, explained everything patiently, and made the process very smooth. Her technique is excellent, the lines are clean and detailed, and you can clearly see the care and dedication in every stroke."
         }
       ],
       faqs: [
@@ -2119,19 +2120,20 @@ export const translations = {
       altTattooWork5: "Tattoo artwork 5",
       altTattooWork6: "Tattoo artwork 6",
       testimonialsTitle: "What Our Clients Say",
-      testimonialsSubtitle: "Real experiences from people who trusted us",
+      testimonialsSubtitle: "Real Google Reviews - 5.0 stars",
+      googleReviewsLink: "https://maps.app.goo.gl/tD1qrRfPWpuQ3AVaA",
       testimonials: [
         {
-          name: "Ana Silva",
-          text: "I got my first tattoo at the studio and the experience was amazing. The artist was very professional and the result was better than I imagined!"
+          name: "Océane Rosenberg",
+          text: "I came in to have the second hole in my lobe drilled. I highly recommend it, I had a great time with Catarina. She is very talented and very nice. I wouldn't hesitate to come back. Thank you so much!!"
         },
         {
-          name: "João Santos",
-          text: "Super clean and professional environment. The piercing healed perfectly following the given instructions. 100% recommend!"
+          name: "Jéssica Raposo",
+          text: "I loved the experience! Catarina is an excellent professional. Super attentive, careful, and incredibly talented. The space is very welcoming and made me feel comfortable from the very first moment. She made me feel completely at ease throughout the entire process. I recommend her 100%!"
         },
         {
-          name: "Maria Costa",
-          text: "The team is excellent! They answered all my questions and made me feel completely at ease. The tattoo was perfect!"
+          name: "Érica Torres",
+          text: "The work turned out flawless! She was super attentive from start to finish, explained everything patiently, and made the process very smooth. Her technique is excellent, the lines are clean and detailed, and you can clearly see the care and dedication in every stroke."
         }
       ],
       faqs: [

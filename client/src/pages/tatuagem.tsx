@@ -9,7 +9,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Scissors, Sparkles, Shield, Palette, Check, Star, Droplet, Sun, Clock } from "lucide-react";
+import { Scissors, Sparkles, Shield, Palette, Check, Star, Droplet, Sun, Clock, ExternalLink } from "lucide-react";
+import { SiGoogle } from "react-icons/si";
 import { Link } from "wouter";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
@@ -609,23 +610,49 @@ export default function TatuagemPage() {
             <h2 className="font-heading text-3xl font-bold mb-4 text-center">
               {t.tattoo.testimonialsTitle}
             </h2>
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <SiGoogle className="h-6 w-6 text-[#4285F4]" />
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <span className="font-bold text-lg">5.0</span>
+              <span className="text-muted-foreground">(41 reviews)</span>
+            </div>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
               {t.tattoo.testimonialsSubtitle}
             </p>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
               {testimonials.map((testimonial: { name: string; text: string }, index: number) => (
-                <Card key={index} className="p-6">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-primary text-primary" />
-                    ))}
+                <Card key={index} className="p-6" data-testid={`card-testimonial-${index}`}>
+                  <div className="flex items-center gap-2 mb-4">
+                    <SiGoogle className="h-4 w-4 text-[#4285F4]" />
+                    <div className="flex gap-0.5">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
                   </div>
-                  <p className="text-muted-foreground mb-4 italic">
+                  <p className="text-muted-foreground mb-4 italic text-sm leading-relaxed">
                     "{testimonial.text}"
                   </p>
-                  <p className="font-semibold">— {testimonial.name}</p>
+                  <p className="font-semibold text-sm">— {testimonial.name}</p>
                 </Card>
               ))}
+            </div>
+            <div className="text-center mt-8">
+              <a
+                href={t.tattoo.googleReviewsLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+                data-testid="link-google-reviews"
+              >
+                <SiGoogle className="h-4 w-4" />
+                {language === 'pt' ? 'Ver todas as avaliações no Google' : 'View all reviews on Google'}
+                <ExternalLink className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </div>
