@@ -16,20 +16,24 @@ export default function Footer() {
 
   const legalLinks = [
     { 
-      label: t.footer.legal.privacy, 
-      href: `https://azores4fun.com/${language === 'pt' ? 'pt' : 'en'}/politica-de-privacidade/` 
+      label: t.footer.legal.termsSite, 
+      href: `https://azores4fun.com/${language === 'pt' ? 'pt' : 'en'}/termos-e-condicoes-site/` 
     },
     { 
-      label: t.footer.legal.terms, 
-      href: `https://azores4fun.com/${language === 'pt' ? 'pt' : 'en'}/termos-de-servico/` 
+      label: t.footer.legal.termsVending, 
+      href: `https://azores4fun.com/${language === 'pt' ? 'pt' : 'en'}/termos-e-condicoes-vending/` 
+    },
+    { 
+      label: t.footer.legal.privacy, 
+      href: `https://azores4fun.com/${language === 'pt' ? 'pt' : 'en'}/privacidade-protecao-de-dados/` 
     },
     { 
       label: t.footer.legal.cookies, 
       href: `https://azores4fun.com/${language === 'pt' ? 'pt' : 'en'}/politica-de-cookies/` 
     },
     { 
-      label: t.footer.legal.complaints, 
-      href: "https://www.livroreclamacoes.pt/" 
+      label: t.footer.legal.disputes, 
+      href: `https://azores4fun.com/${language === 'pt' ? 'pt' : 'en'}/resolucao-de-litigios/` 
     },
   ];
 
