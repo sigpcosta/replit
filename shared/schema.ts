@@ -36,6 +36,8 @@ export const blogPosts = pgTable("blog_posts", {
 export const insertBlogPostSchema = createInsertSchema(blogPosts).omit({
   id: true,
   createdAt: true,
+}).extend({
+  publishedAt: z.union([z.date(), z.string().transform((str) => new Date(str))]).optional(),
 });
 
 export type InsertBlogPost = z.infer<typeof insertBlogPostSchema>;

@@ -19,7 +19,7 @@ export default function Navigation() {
     { label: t.nav.property, href: "/imobiliaria" },
     { label: t.nav.shop, href: "/loja" },
     { label: t.nav.about, href: "/sobre" },
-    { label: t.nav.blog, href: "https://www.azores4fun.com/blog", external: true },
+    { label: t.nav.blog, href: "/blog" },
   ];
 
   return (
@@ -40,9 +40,7 @@ export default function Navigation() {
                 key={item.href}
                 href={item.href}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                data-testid={`link-nav-${item.external ? 'blog' : item.href.slice(1)}`}
-                target={item.external ? "_blank" : undefined}
-                rel={item.external ? "noopener noreferrer" : undefined}
+                data-testid={`link-nav-${item.href.slice(1)}`}
               >
                 {item.label}
               </a>
@@ -95,9 +93,7 @@ export default function Navigation() {
                 href={item.href}
                 className="block py-2 text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
-                data-testid={`link-mobile-${item.external ? 'blog' : item.href.slice(1)}`}
-                target={item.external ? "_blank" : undefined}
-                rel={item.external ? "noopener noreferrer" : undefined}
+                data-testid={`link-mobile-${item.href.slice(1)}`}
               >
                 {item.label}
               </a>
