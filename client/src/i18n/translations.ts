@@ -2001,7 +2001,7 @@ export const translations = {
       },
       studio: {
         title: "The Studio",
-        description: "Welcome to my tattoo studio, a space created with great dedication to transform ideas and memories into art you'll carry with you forever. Here, every line is thought out with care and precision, ensuring your experience is as unique as the art we create together. Being in Faial means living surrounded by beauty and unique stories, and that's the essence I want to capture in every tattoo. With me, you can immortalize the memories and experiences lived on this incredible island. Whether it's a tribute to the moments that marked your life or the expression of who you are, my goal is to create something that resonates with your story and personality."
+        description: "Welcome to our tattoo studio, a space created with great dedication to transform ideas and memories into art you'll carry with you forever. Here, every line is thought out with care and precision, ensuring your experience is as unique as the art we create together. Being in Faial means living surrounded by beauty and unique stories, and that's the essence we want to capture in every tattoo. With us, you can immortalize the memories and experiences lived on this incredible island. Whether it's a tribute to the moments that marked your life or the expression of who you are, our goal is to create something that resonates with your story and personality."
       },
       viewPortfolio: "View Portfolio",
       bookConsultation: "Book Consultation",
