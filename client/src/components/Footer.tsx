@@ -33,7 +33,7 @@ export default function Footer() {
     },
     { 
       label: t.footer.legal.disputes, 
-      href: `https://azores4fun.com/${language === 'pt' ? 'pt' : 'en'}/resolucao-de-litigios/` 
+      href: "https://www.consumidor.gov.pt/parceiros/sistema-de-defesa-do-consumidor/entidades-de-resolucao-alternativa-de-litigios-de-consumo" 
     },
   ];
 
