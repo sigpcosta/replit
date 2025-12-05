@@ -747,7 +747,7 @@ export const translations = {
       },
       studio: {
         title: "O Estúdio",
-        description: "Apresento-vos o meu estúdio de tatuagem, um espaço criado com muita dedicação para transformar ideias e memórias em arte que levarás para sempre contigo. Aqui, cada traço é pensado com carinho e precisão, garantindo que a tua experiência seja tão única quanto a arte que criamos juntos. Estar no Faial é viver cercado por beleza e histórias únicas, e é essa essência que quero capturar em cada tatuagem. Comigo, podes eternizar as memórias e experiências vividas nesta ilha incrível. Seja uma homenagem aos momentos que marcaram a tua vida ou a expressão de quem és, o meu objetivo é criar algo que ressoe com a tua história e personalidade."
+        description: "O nosso estúdio de tatuagem, um espaço criado com muita dedicação para transformar ideias e memórias em arte que levarás para sempre contigo. Aqui, cada traço é pensado com carinho e precisão, garantindo que a tua experiência seja tão única quanto a arte que criamos juntos. Estar no Faial é viver cercado por beleza e histórias únicas, e é essa essência que queremos capturar em cada tatuagem. Conosco, podes eternizar as memórias e experiências vividas nesta ilha incrível. Seja uma homenagem aos momentos que marcaram a tua vida ou a expressão de quem és, o nosso objetivo é criar algo que ressoe com a tua história e personalidade."
       },
       viewPortfolio: "Ver Portfolio",
       bookConsultation: "Marcar Consulta",
