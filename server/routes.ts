@@ -4,6 +4,7 @@ import { storage } from "./storage";
 import { z } from "zod";
 import path from "path";
 import fs from "fs";
+import { insertBlogPostSchema } from "@shared/schema";
 
 const bookingSchema = z.object({
   name: z.string().min(1, "Nome é obrigatório"),
@@ -196,6 +197,43 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.status(500).json({ 
         error: "Erro ao processar mensagem. Por favor, tente novamente." 
       });
+    }
+  });
+
+  app.get("/api/blog", async (_req, res) => {
+    try {
+      const posts = await storage.getAllBlogPosts();
+      res.json(posts);
+    } catch (error) {
+      console.error("Erro ao obter artigos:", error);
+      res.status(500).json({ error: "Erro ao obter artigos" });
+    }
+  });
+
+  app.get("/api/blog/:slug", async (req, res) => {
+    try {
+      const post = await storage.getBlogPostBySlug(req.params.slug);
+      if (!post) {
+        return res.status(404).json({ error: "Artigo não encontrado" });
+      }
+      res.json(post);
+    } catch (error) {
+      console.error("Erro ao obter artigo:", error);
+      res.status(500).json({ error: "Erro ao obter artigo" });
+    }
+  });
+
+  app.post("/api/blog", async (req, res) => {
+    try {
+      const data = insertBlogPostSchema.parse(req.body);
+      const post = await storage.createBlogPost(data);
+      res.status(201).json(post);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ error: "Dados inválidos", details: error.errors });
+      }
+      console.error("Erro ao criar artigo:", error);
+      res.status(500).json({ error: "Erro ao criar artigo" });
     }
   });
 

@@ -47,6 +47,12 @@ export const seoConfig = {
       description: 'Conheça a Azores4fun: empresa familiar na Horta, Faial, oferecendo 6 áreas de negócio - turismo, alojamento, eventos, tatuagem, imobiliária e loja local.',
       keywords: 'azores4fun, empresa horta, negócios faial, turismo açores, serviços horta',
       ogImage: '/og-default.jpg'
+    },
+    blog: {
+      title: 'Blog Azores4fun | Dicas & Artigos sobre Açores, Faial',
+      description: 'Blog da Azores4fun com artigos sobre atividades, desportos náuticos, dicas de viagem e experiências únicas na ilha do Faial, Açores.',
+      keywords: 'blog açores, dicas faial, atividades açores, sup kayak açores, paintball açores, turismo faial',
+      ogImage: '/og-default.jpg'
     }
   },
   en: {
@@ -96,6 +102,12 @@ export const seoConfig = {
       title: 'About Azores4fun | Multi-Service Company Horta Faial',
       description: 'Meet Azores4fun: family business in Horta, Faial, offering 6 business areas - tourism, accommodation, events, tattoo, real estate and local shop.',
       keywords: 'azores4fun, company horta, business faial, azores tourism, horta services',
+      ogImage: '/og-default.jpg'
+    },
+    blog: {
+      title: 'Azores4fun Blog | Tips & Articles about Azores, Faial',
+      description: 'Azores4fun blog with articles about activities, water sports, travel tips and unique experiences on Faial Island, Azores.',
+      keywords: 'azores blog, faial tips, azores activities, sup kayak azores, paintball azores, faial tourism',
       ogImage: '/og-default.jpg'
     }
   }

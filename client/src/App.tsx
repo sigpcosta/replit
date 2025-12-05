@@ -14,6 +14,8 @@ import ImobiliariaPage from "@/pages/imobiliaria";
 import LojaPage from "@/pages/loja";
 import SobrePage from "@/pages/sobre";
 import PortfolioPage from "@/pages/portfolio";
+import BlogPage from "@/pages/blog";
+import BlogPostPage from "@/pages/blog-post";
 import TermosSitePage from "@/pages/termos-site";
 import TermosVendingPage from "@/pages/termos-vending";
 import PrivacidadePage from "@/pages/privacidade";
@@ -32,6 +34,8 @@ function Router() {
       <Route path="/loja" component={LojaPage} />
       <Route path="/sobre" component={SobrePage} />
       <Route path="/portfolio" component={PortfolioPage} />
+      <Route path="/blog" component={BlogPage} />
+      <Route path="/blog/:slug" component={BlogPostPage} />
       <Route path="/termos-site" component={TermosSitePage} />
       <Route path="/termos-vending" component={TermosVendingPage} />
       <Route path="/privacidade" component={PrivacidadePage} />

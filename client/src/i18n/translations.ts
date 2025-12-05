@@ -1228,6 +1228,27 @@ export const translations = {
       subtitle: "Explore nossa galeria completa de trabalhos. Cada peça é única e representa a dedicação e talento dos nossos artistas.",
       backToTattoo: "Voltar para Tatuagens",
     },
+
+    // Blog Page
+    blog: {
+      title: "Blog",
+      subtitle: "Dicas, artigos e novidades sobre atividades, desportos náuticos e experiências únicas nos Açores.",
+      empty: "Ainda não há artigos publicados. Volte em breve!",
+      error: "Erro ao carregar artigos. Por favor, tente novamente.",
+      readMore: "Ler Mais",
+      publishedBy: "Publicado por",
+      on: "em",
+      backToBlog: "Voltar ao Blog",
+      relatedPosts: "Artigos Relacionados",
+      sharePost: "Partilhar Artigo",
+      categories: {
+        all: "Todos",
+        activities: "Atividades",
+        watersports: "Desportos Náuticos",
+        tips: "Dicas",
+        news: "Novidades",
+      },
+    },
   },
   
   en: {
@@ -2458,6 +2479,27 @@ export const translations = {
       title: "Complete Portfolio",
       subtitle: "Explore our complete gallery of work. Each piece is unique and represents the dedication and talent of our artists.",
       backToTattoo: "Back to Tattoos",
+    },
+
+    // Blog Page
+    blog: {
+      title: "Blog",
+      subtitle: "Tips, articles and news about activities, water sports and unique experiences in the Azores.",
+      empty: "No articles published yet. Come back soon!",
+      error: "Error loading articles. Please try again.",
+      readMore: "Read More",
+      publishedBy: "Published by",
+      on: "on",
+      backToBlog: "Back to Blog",
+      relatedPosts: "Related Posts",
+      sharePost: "Share Article",
+      categories: {
+        all: "All",
+        activities: "Activities",
+        watersports: "Water Sports",
+        tips: "Tips",
+        news: "News",
+      },
     },
   },
 };
