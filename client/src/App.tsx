@@ -14,6 +14,10 @@ import ImobiliariaPage from "@/pages/imobiliaria";
 import LojaPage from "@/pages/loja";
 import SobrePage from "@/pages/sobre";
 import PortfolioPage from "@/pages/portfolio";
+import TermosSitePage from "@/pages/termos-site";
+import TermosVendingPage from "@/pages/termos-vending";
+import PrivacidadePage from "@/pages/privacidade";
+import CookiesPage from "@/pages/cookies";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -28,6 +32,10 @@ function Router() {
       <Route path="/loja" component={LojaPage} />
       <Route path="/sobre" component={SobrePage} />
       <Route path="/portfolio" component={PortfolioPage} />
+      <Route path="/termos-site" component={TermosSitePage} />
+      <Route path="/termos-vending" component={TermosVendingPage} />
+      <Route path="/privacidade" component={PrivacidadePage} />
+      <Route path="/cookies" component={CookiesPage} />
       <Route component={NotFound} />
     </Switch>
   );

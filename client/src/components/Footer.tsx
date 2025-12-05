@@ -17,23 +17,28 @@ export default function Footer() {
   const legalLinks = [
     { 
       label: t.footer.legal.termsSite, 
-      href: `https://azores4fun.com/${language === 'pt' ? 'pt' : 'en'}/termos-e-condicoes-site/` 
+      href: "/termos-site",
+      external: false
     },
     { 
       label: t.footer.legal.termsVending, 
-      href: `https://azores4fun.com/${language === 'pt' ? 'pt' : 'en'}/termos-e-condicoes-vending/` 
+      href: "/termos-vending",
+      external: false
     },
     { 
       label: t.footer.legal.privacy, 
-      href: `https://azores4fun.com/${language === 'pt' ? 'pt' : 'en'}/privacidade-protecao-de-dados/` 
+      href: "/privacidade",
+      external: false
     },
     { 
       label: t.footer.legal.cookies, 
-      href: `https://azores4fun.com/${language === 'pt' ? 'pt' : 'en'}/politica-de-cookies/` 
+      href: "/cookies",
+      external: false
     },
     { 
       label: t.footer.legal.disputes, 
-      href: "https://www.consumidor.gov.pt/parceiros/sistema-de-defesa-do-consumidor/entidades-de-resolucao-alternativa-de-litigios-de-consumo" 
+      href: "https://www.consumidor.gov.pt/parceiros/sistema-de-defesa-do-consumidor/entidades-de-resolucao-alternativa-de-litigios-de-consumo",
+      external: true
     },
   ];
 
@@ -164,13 +169,13 @@ export default function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener noreferrer" : undefined}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"
                     data-testid={`link-footer-legal-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
                   >
                     {link.label}
-                    <ExternalLink className="w-3 h-3" />
+                    {link.external && <ExternalLink className="w-3 h-3" />}
                   </a>
                 </li>
               ))}

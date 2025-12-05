@@ -144,6 +144,192 @@ export const translations = {
       developedBy: "Desenvolvido com",
       inAzores: "nos Açores",
     },
+
+    // Legal Pages
+    legal: {
+      termsSite: {
+        title: "Termos e Condições - Site Azores4fun",
+        metaDescription: "Termos e Condições de utilização do site Azores4fun. Reservas, pagamentos, cancelamentos e políticas de serviço.",
+        sections: {
+          intro: {
+            title: "Introdução",
+            content: "Bem-vindo ao website da Azores4fun. Ao utilizar o nosso website e adquirir os nossos serviços ou produtos, aceita os presentes Termos e Condições. Recomendamos que os leia atentamente antes de efetuar qualquer reserva ou compra."
+          },
+          products: {
+            title: "Produtos e Serviços",
+            p1: "A Azores4fun comercializa serviços de alojamento para turistas e atividades de animação turística nos Açores.",
+            p2: "A descrição detalhada dos serviços e produtos, incluindo características, preços e condições específicas, está disponível no website."
+          },
+          prices: {
+            title: "Preços, Taxas e Impostos",
+            p1: "Todos os preços apresentados no website estão em euros (€) e incluem impostos aplicáveis.",
+            p2: "Poderão aplicar-se taxas adicionais, como taxas turísticas, taxas de serviço ou encargos específicos, que serão sempre comunicados antes da conclusão da reserva ou compra."
+          },
+          reservations: {
+            title: "Reservas, Pagamentos e Envios",
+            p1: "As reservas e compras são efetuadas através do website da Azores4fun e estão sujeitas à disponibilidade dos serviços.",
+            p2: "O pagamento pode ser realizado através de cartão de crédito/débito, transferência bancária ou outros métodos disponibilizados na plataforma.",
+            p3: "A confirmação da reserva ou compra será enviada por email após a validação do pagamento.",
+            p4: "No caso de vouchers, bilhetes eletrónicos ou outros produtos digitais, estes serão enviados para o email indicado no momento da compra."
+          },
+          cancellation: {
+            title: "Política de Cancelamento, Devoluções e Reembolsos",
+            p1: "O cliente pode cancelar uma reserva de alojamento ou atividade de animação turística de acordo com as condições específicas de cada serviço, indicadas no momento da reserva.",
+            p2: "Cancelamentos realizados com antecedência mínima definida podem ter direito a reembolso parcial ou total, dependendo das políticas de cada serviço.",
+            p3: "Em caso de não comparência (\"no-show\"), não haverá lugar a reembolso.",
+            p4: "Se uma atividade ou reserva for cancelada pela Azores4fun devido a condições meteorológicas adversas ou outras circunstâncias alheias à vontade do cliente, este poderá optar pelo reagendamento ou reembolso total."
+          },
+          guarantee: {
+            title: "Política de Garantia",
+            p1: "A Azores4fun garante que todos os serviços são prestados de acordo com elevados padrões de qualidade e segurança.",
+            p2: "Se o cliente identificar qualquer problema ou não estiver satisfeito com o serviço prestado, deverá contactar-nos imediatamente para que possamos avaliar a situação e, se aplicável, tomar medidas corretivas."
+          },
+          responsibilities: {
+            title: "Responsabilidades do Cliente",
+            p1: "O cliente é responsável por fornecer informações corretas no momento da reserva e assegurar que cumpre os requisitos de participação nas atividades contratadas.",
+            p2: "O cliente deve respeitar as regras de segurança e seguir as instruções fornecidas pelos prestadores de serviço da Azores4fun."
+          },
+          modifications: {
+            title: "Modificações aos Termos e Condições",
+            p1: "A Azores4fun reserva-se o direito de modificar estes Termos e Condições sempre que necessário.",
+            p2: "As alterações entrarão em vigor a partir da sua publicação no website."
+          },
+          contacts: {
+            title: "Contactos",
+            content: "Caso tenha alguma dúvida ou necessite de esclarecimentos adicionais, pode contactar a Azores4fun através do email ou telefone:"
+          }
+        }
+      },
+      termsVending: {
+        title: "Termos e Condições - Vending",
+        metaDescription: "Termos e Condições aplicáveis à utilização dos cacifos do sistema de vending da Azores4fun.",
+        intro: "Os seguintes Termos e Condições aplicam-se à utilização dos cacifos do sistema de vending propriedade da Azores4fun – Turismo e Aventura, Unipessoal Lda, número único de matrícula e contribuinte 509471323 com sede em Rua do Pasteleiro nº1, 9900-069 Horta.",
+        lockerPurpose: "Os cacifos são exclusivamente disponibilizados para o efeito de comercialização de produtos/objectos, sob responsabilidade e nas instalações do COMERCIALIZADOR, doravante designado POS.",
+        userDeclaration: "Ao aceder e utilizar a aplicação móvel, bem como as instalações do POS e/ou os respectivos cacifos, o UTILIZADOR declara que (i) leu e aceita, integralmente e sem reservas, os presentes termos e condições, que constituem um acordo vinculativo entre a Azores4fun, POS e o UTILIZADOR, (ii) não está impedido, por nenhuma disposição legal ou qualquer outro motivo, de ficar vinculado e cumprir os presentes termos e condições.",
+        disagreement: "Caso não concorde com os termos e condições, não deverá aceder nem utilizar a aplicação móvel, nem recorrer aos serviços aí prestados, devendo, nomeadamente, abster-se de aceder e utilizar as instalações do POS e os respectivos cacifos.",
+        userResponsibility: "O UTILIZADOR é inteiramente responsável pelo uso da aplicação e dos serviços aí prestados, pela utilização das instalações do POS e dos respectivos cacifos.",
+        termsChanges: "Os presentes termos e condições, e outras regras ou directrizes relativas à utilização das instalações do POS e respectivos cacifos, a configuração da aplicação móvel ou dos conteúdos e serviços nela disponibilizados, podem, a todo o tempo, e a exclusivo critério da Azores4fun ou POS, ser alterados, sendo da responsabilidade do UTILIZADOR, verificar regularmente os termos e condições actualizados.",
+        termsEffective: "Os termos e condições e subsequentes alterações consideram-se eficazes e vinculativas para os UTILIZADORES, após serem devidamente publicitadas no site www.azores4fun.com, do POS, ou em alternativa, numa versão mais reduzida que estará afixada no interior das instalações do POS.",
+        updateNotice: "Podemos atualizar esta política de privacidade ocasionalmente de forma a refletir, por exemplo, mudanças nas nossas práticas ou devido a outros motivos operacionais, legais ou regulatórios. Caso tenha mais questões e/ou precise de mais informação, não hesite em contactar-nos:",
+        clauses: {
+          first: {
+            title: "CLÁUSULA PRIMEIRA",
+            subtitle: "OBJECTO",
+            content: "Os presentes termos e condições disciplinam a organização, utilização e funcionamento dos CACIFOS e respectivas instalações do POS, através da aplicação Pick-a-Buy, personalizada para a Azores4fun, e aplica-se a todos os CACIFOS e UTILIZADORES."
+          },
+          second: {
+            title: "CLÁUSULA SEGUNDA",
+            subtitle: "CACIFOS",
+            p1: "Os CACIFOS com dimensões 40 x 40 x 40 cm, destinam-se exclusivamente à guarda para venda de produtos/objectos pelos UTILIZADORES.",
+            p2: "Os CACIFOS foram concebidos para uma utilização autónoma, devendo o UTILIZADOR seguir as instruções de funcionamento disponíveis na aplicação móvel.",
+            p3: "Os CACIFOS funcionam 24 horas por dia, 365 dias por ano, sem prejuízo de poderem ser encerrados por motivos de força maior, considerando-se como tal, qualquer evento que coloque em perigo os UTILIZADORES ou os objectos depositados e, ainda, caso se verifique necessidade de se proceder à reparação dos CACIFOS ou equipamentos conexos.",
+            p4: "O encerramento dos CACIFOS nos termos previstos no número antecedente, será comunicado aos UTILIZADORES, logo que conhecida tal necessidade."
+          },
+          third: {
+            title: "CLÁUSULA TERCEIRA",
+            subtitle: "PREÇO",
+            p1: "O UTILIZADOR dos CACIFOS obriga-se a pagar pelos produtos/objectos existentes no interior dos mesmos, o preço fixado nos cacifos no POS e/ou disponível na aplicação, a qual pode ser revista periodicamente, sem qualquer aviso directo a cada UTILIZADOR.",
+            p2: "Se, por algum motivo, o pagamento não tiver sido concretizado, a Azores4fun reserva-se ao direito de impedir a abertura do CACIFO."
+          },
+          fourth: {
+            title: "CLÁUSULA QUARTA",
+            subtitle: "DEVERES GERAIS E OBRIGAÇÕES DO UTILIZADOR",
+            intro: "Ao utilizar os CACIFOS, o UTILIZADOR obriga-se, sem qualquer limitação, a:",
+            items: [
+              "a. Não utilizar os CACIFOS em violação de quaisquer leis, regras, regulamentos ou para fins ilegais ou não autorizados;",
+              "b. Utilizar os CACIFOS com o único propósito de adquirir os produtos/objectos disponíveis no seu interior;",
+              "c. Não colocar, no interior dos CACIFOS, quaisquer objectos de qualquer tipo, sendo integralmente responsáveis pelos danos ou prejuízos daí decorrentes causados à Azores4fun, ao próprio ou a terceiros;",
+              "d. Cumprir as instruções dadas pelas entidades que asseguram a gestão, segurança, manutenção, conservação e limpeza dos CACIFOS;",
+              "e. Utilizar de forma diligente os CACIFOS e, em particular, garantir que tenham sido devidamente fechados, depois do UTILIZADOR recolher os produtos/objectos;",
+              "f. Deixar o CACIFO no mesmo estado e condições que lhe foi atribuído, e dar imediato conhecimento de qualquer incidente ocorrido durante a utilização do CACIFO;",
+              "g. Não perturbar por qualquer forma a utilização dos CACIFOS por parte de outros utilizadores, nomeadamente não ocupar qualquer área que dificulte ou impossibilite o acesso e a utilização dos CACIFOS."
+            ]
+          },
+          fifth: {
+            title: "CLÁUSULA QUINTA",
+            subtitle: "DEVERES GERAIS E OBRIGAÇÕES DO COMERCIALIZADOR",
+            intro: "Ao disponibilizar os CACIFOS, o POS obriga-se, sem qualquer limitação, a:",
+            items: [
+              "a. Não disponibilizar produtos/objectos nem ocupar os CACIFOS em violação de quaisquer leis, regras, regulamentos ou para fins ilegais ou não autorizados;",
+              "b. Utilizar os CACIFOS com o único propósito de comercializar os produtos/objectos disponíveis no seu interior;",
+              "c. Cumprir as regras de higiene e segurança, nomeadamente assegurar a gestão, segurança, manutenção, conservação e limpeza dos CACIFOS."
+            ]
+          },
+          sixth: {
+            title: "CLÁUSULA SEXTA",
+            subtitle: "SEGURANÇA",
+            content: "Para protecção dos UTILIZADORES, as instalações do POS onde se encontram os cacifos, encontram-se sob iluminação e videovigilância permanentemente activas, o que é expressamente autorizado pelo UTILIZADOR, com a aceitação dos presentes termos e condições de utilização."
+          },
+          seventh: {
+            title: "CLÁUSULA SÉTIMA",
+            subtitle: "ASSISTÊNCIA",
+            content: "O UTILIZADOR tem à sua disposição contactos para comunicação que lhes assegura o apoio durante 24 horas por dia, encontrando-se os respectivos contactos afixados no interior das instalações do POS."
+          },
+          eighth: {
+            title: "CLÁUSULA OITAVA",
+            subtitle: "RESPONSABILIDADE PRODUTOS/OBJECTOS EM VENDA",
+            p1: "O UTILIZADOR dos CACIFOS é única e integralmente responsável por eventuais prejuízos causados à Azores4fun, POS ou a terceiros, decorrentes da má utilização dos CACIFOS.",
+            p2: "O COMERCIANTE dos CACIFOS é única e integralmente responsável pelos produtos/objectos nele contidos.",
+            p3: "O UTILIZADOR assume a responsabilidade pelo custo de reparação ou substituição de qualquer CACIFO que tenha danificado."
+          }
+        }
+      },
+      privacy: {
+        title: "Política de Privacidade e Proteção de Dados",
+        metaDescription: "Política de Privacidade e Proteção de Dados da Azores4fun. Como recolhemos, usamos e protegemos a sua informação pessoal.",
+        intro: "Esta Política de Privacidade descreve como a sua informação pessoal é recolhida, usada e partilhada ao visitar ou utilizar os serviços da Azores4fun.",
+        contact: "Caso tenha mais questões e/ou precise de mais informação, não hesite em contactar-nos:",
+        sections: {
+          personalInfo: {
+            title: "Sobre informação pessoal",
+            p1: "Quando visita a nossa Webapp/Site ou Aplicações, não recolhemos quaisquer informações sobre o seu dispositivo, incluindo sobre o seu navegador de internet, endereço de IP, fuso horário e ou eventuais cookies que estejam instaladas no seu dispositivo.",
+            p2: "Enquanto navega pelo nosso Site/Webapp ou Aplicações, não recolhemos informação sobre as páginas individuais ou os produtos que visualiza, os sites ou termos de pesquisa que o direcionaram para o Site/Webapp ou Aplicações e a informação sobre como interage com qualquer dos mesmos.",
+            p3: "Além disso, quando realiza uma reserva ou tenta realizar uma compra através do Site/Webapp ou Aplicações, como informação da Reserva/Encomenda, recolhemos, mas não guardamos nenhuma informação para além da que identificar, tal como nome, endereço de eMail, nº. de telemóvel e NIF de faturação.",
+            p4: "Em circunstâncias nenhuma guardamos qualquer informação de pagamento.",
+            definition: "Por Informação Pessoal, nesta Política de Privacidade, referimo-nos a Informação do Dispositivo e Informação da Reserva/Encomenda."
+          },
+          usage: {
+            title: "Sobre uso da informação pessoal",
+            p1: "Usamos a Informação da Reserva/Encomenda recolhida para cumprir qualquer reserva/encomenda realizada através do Site/Webapp ou Aplicações (incluindo o processamento da sua informação de pagamento e fornecer-lhe as faturas e/ou confirmações da encomenda).",
+            additionally: "Adicionalmente, usamos esta Informação da Reserva/Encomenda para:",
+            items: ["Comunicar consigo", "Analisar as nossas reservas/encomendas em busca de potenciais riscos ou fraudes"]
+          },
+          sharing: {
+            title: "Sobre a partilha de informação pessoal",
+            p1: "Não partilhamos a sua Informação Pessoal com quaisquer entidades terceiras.",
+            p2: "Com exceção do que nos seja exigido para cumprir leis e regulamentos aplicáveis, para responder a intimações, mandados de busca ou outros pedidos legais relativos a informação que recebemos, ou para proteger os nossos direitos de qualquer outra forma."
+          },
+          advertising: {
+            title: "Publicidade comportamental",
+            content: "Não usamos a sua Informação Pessoal para lhe fornecer quaisquer anúncios, direcionados ou não, assim como quaisquer comunicações de marketing."
+          },
+          rights: {
+            title: "Os seus direitos",
+            p1: "Se for residente na Europa, tem o direito de aceder à informação pessoal que temos sobre si e de pedir que a sua informação pessoal seja corrigida, atualizada ou eliminada. Se desejar exercer este direito, por favor, contacte-nos.",
+            p2: "Além disso, se for residente na Europa, realçamos que processamos a sua informação exclusivamente para cumprir contratos que possamos ter consigo (por exemplo, se realizar uma reserva/encomenda através do Site)."
+          },
+          retention: {
+            title: "Retenção de dados",
+            content: "Quando realizar uma reserva/encomenda através do Site/Webapp ou Aplicações, manteremos a Informação que nos ceder nos nossos registos, com excepção de quaisquer dados de pagamento, a não ser que nos peça para eliminar a informação."
+          },
+          minors: {
+            title: "Menores",
+            content: "Este Site/Webapp ou Aplicações não se destina a menores de 12 Anos."
+          },
+          changes: {
+            title: "Alterações",
+            content: "Podemos atualizar esta política de privacidade ocasionalmente de forma a refletir, por exemplo, mudanças nas nossas práticas ou devido a outros motivos operacionais, legais ou regulatórios."
+          }
+        }
+      },
+      cookies: {
+        title: "Política de Cookies",
+        metaDescription: "Política de Cookies do site Azores4fun. Informação sobre como utilizamos cookies.",
+        p1: "O site da Azores4fun apenas utiliza cookies estritamente necessários para o seu bom funcionamento técnico, que o utilizador consente.",
+        p2: "O utilizador poderá gerir a recolha e armazenamento de cookies através de configurações no seu browser, podendo eliminar cookies previamente armazenados e até bloquear a sua recolha.",
+        p3: "Adicionalmente à gestão direta no browser, existem outras variáveis que têm influência direta na utilização de cookies, como configurações de \"Do Not Track\" (DNT), políticas de privacidade dos browsers, sessões autenticadas ou navegação anónima e ainda ferramentas de privacidade, como bloqueadores de anúncios, que podem afetar o funcionamento e recolha dos cookies e mesmo a sua visibilidade em diferentes browsers."
+      }
+    },
     
     // Contact Dialog
     contactDialog: {
@@ -1188,6 +1374,192 @@ export const translations = {
       rights: "All rights reserved.",
       developedBy: "Developed with",
       inAzores: "in the Azores",
+    },
+
+    // Legal Pages
+    legal: {
+      termsSite: {
+        title: "Terms and Conditions - Azores4fun Website",
+        metaDescription: "Terms and Conditions for using the Azores4fun website. Reservations, payments, cancellations and service policies.",
+        sections: {
+          intro: {
+            title: "Introduction",
+            content: "Welcome to the Azores4fun website. By using our website and purchasing our services or products, you accept these Terms and Conditions. We recommend that you read them carefully before making any reservation or purchase."
+          },
+          products: {
+            title: "Products and Services",
+            p1: "Azores4fun sells accommodation services for tourists and tourism activities in the Azores.",
+            p2: "The detailed description of services and products, including features, prices and specific conditions, is available on the website."
+          },
+          prices: {
+            title: "Prices, Fees and Taxes",
+            p1: "All prices shown on the website are in euros (€) and include applicable taxes.",
+            p2: "Additional fees may apply, such as tourist taxes, service fees or specific charges, which will always be communicated before completing the reservation or purchase."
+          },
+          reservations: {
+            title: "Reservations, Payments and Shipping",
+            p1: "Reservations and purchases are made through the Azores4fun website and are subject to service availability.",
+            p2: "Payment can be made by credit/debit card, bank transfer or other methods available on the platform.",
+            p3: "Reservation or purchase confirmation will be sent by email after payment validation.",
+            p4: "In the case of vouchers, electronic tickets or other digital products, these will be sent to the email address provided at the time of purchase."
+          },
+          cancellation: {
+            title: "Cancellation, Returns and Refunds Policy",
+            p1: "The customer may cancel an accommodation reservation or tourism activity according to the specific conditions of each service, indicated at the time of reservation.",
+            p2: "Cancellations made with the minimum advance notice defined may be entitled to partial or full refund, depending on each service's policies.",
+            p3: "In case of no-show, there will be no refund.",
+            p4: "If an activity or reservation is cancelled by Azores4fun due to adverse weather conditions or other circumstances beyond the customer's control, the customer may opt for rescheduling or full refund."
+          },
+          guarantee: {
+            title: "Guarantee Policy",
+            p1: "Azores4fun guarantees that all services are provided according to high quality and safety standards.",
+            p2: "If the customer identifies any problem or is not satisfied with the service provided, they should contact us immediately so we can evaluate the situation and, if applicable, take corrective action."
+          },
+          responsibilities: {
+            title: "Customer Responsibilities",
+            p1: "The customer is responsible for providing correct information at the time of reservation and ensuring they meet the participation requirements for the contracted activities.",
+            p2: "The customer must respect safety rules and follow instructions provided by Azores4fun service providers."
+          },
+          modifications: {
+            title: "Modifications to Terms and Conditions",
+            p1: "Azores4fun reserves the right to modify these Terms and Conditions whenever necessary.",
+            p2: "Changes will take effect from their publication on the website."
+          },
+          contacts: {
+            title: "Contacts",
+            content: "If you have any questions or need further clarification, you can contact Azores4fun by email or phone:"
+          }
+        }
+      },
+      termsVending: {
+        title: "Terms and Conditions - Vending",
+        metaDescription: "Terms and Conditions applicable to the use of Azores4fun vending system lockers.",
+        intro: "The following Terms and Conditions apply to the use of lockers in the vending system owned by Azores4fun – Turismo e Aventura, Unipessoal Lda, registration and tax number 509471323, headquartered at Rua do Pasteleiro nº1, 9900-069 Horta.",
+        lockerPurpose: "The lockers are exclusively available for the purpose of selling products/objects, under the responsibility and at the premises of the RETAILER, hereinafter referred to as POS.",
+        userDeclaration: "By accessing and using the mobile application, as well as the POS facilities and/or respective lockers, the USER declares that (i) they have read and accept, in full and without reservation, these terms and conditions, which constitute a binding agreement between Azores4fun, POS and the USER, (ii) they are not prevented, by any legal provision or any other reason, from being bound and complying with these terms and conditions.",
+        disagreement: "If you do not agree with the terms and conditions, you should not access or use the mobile application, nor use the services provided therein, and should refrain from accessing and using the POS facilities and respective lockers.",
+        userResponsibility: "The USER is entirely responsible for the use of the application and services provided therein, for the use of POS facilities and respective lockers.",
+        termsChanges: "These terms and conditions, and other rules or guidelines relating to the use of POS facilities and respective lockers, the configuration of the mobile application or the content and services made available therein, may, at any time, and at the sole discretion of Azores4fun or POS, be changed, and it is the USER's responsibility to regularly check the updated terms and conditions.",
+        termsEffective: "The terms and conditions and subsequent changes are considered effective and binding for USERS after being duly publicized on the website www.azores4fun.com, POS, or alternatively, in a shorter version that will be posted inside the POS facilities.",
+        updateNotice: "We may update this privacy policy occasionally to reflect, for example, changes in our practices or for other operational, legal or regulatory reasons. If you have any questions and/or need more information, please do not hesitate to contact us:",
+        clauses: {
+          first: {
+            title: "CLAUSE ONE",
+            subtitle: "OBJECT",
+            content: "These terms and conditions govern the organization, use and operation of LOCKERS and respective POS facilities, through the Pick-a-Buy application, customized for Azores4fun, and applies to all LOCKERS and USERS."
+          },
+          second: {
+            title: "CLAUSE TWO",
+            subtitle: "LOCKERS",
+            p1: "LOCKERS with dimensions 40 x 40 x 40 cm are exclusively intended for storing products/objects for sale by USERS.",
+            p2: "LOCKERS were designed for autonomous use, and the USER should follow the operating instructions available in the mobile application.",
+            p3: "LOCKERS operate 24 hours a day, 365 days a year, without prejudice to being closed for force majeure reasons, being considered as such any event that endangers USERS or deposited objects and also if there is a need to repair LOCKERS or connected equipment.",
+            p4: "The closure of LOCKERS under the terms provided in the preceding paragraph will be communicated to USERS as soon as such need is known."
+          },
+          third: {
+            title: "CLAUSE THREE",
+            subtitle: "PRICE",
+            p1: "The USER of LOCKERS is obliged to pay for the products/objects inside them, the price set in the lockers at POS and/or available in the application, which may be reviewed periodically, without any direct notice to each USER.",
+            p2: "If, for any reason, payment has not been completed, Azores4fun reserves the right to prevent the LOCKER from opening."
+          },
+          fourth: {
+            title: "CLAUSE FOUR",
+            subtitle: "GENERAL DUTIES AND OBLIGATIONS OF THE USER",
+            intro: "When using LOCKERS, the USER undertakes, without any limitation, to:",
+            items: [
+              "a. Not use LOCKERS in violation of any laws, rules, regulations or for illegal or unauthorized purposes;",
+              "b. Use LOCKERS for the sole purpose of acquiring the products/objects available inside;",
+              "c. Not place any objects of any kind inside LOCKERS, being fully responsible for any damages or losses resulting therefrom caused to Azores4fun, themselves or third parties;",
+              "d. Comply with instructions given by entities that ensure the management, security, maintenance, conservation and cleaning of LOCKERS;",
+              "e. Use LOCKERS diligently and, in particular, ensure that they have been properly closed after the USER collects the products/objects;",
+              "f. Leave the LOCKER in the same state and conditions in which it was assigned, and immediately report any incident that occurred during the use of the LOCKER;",
+              "g. Not disturb in any way the use of LOCKERS by other users, namely not occupy any area that makes access and use of LOCKERS difficult or impossible."
+            ]
+          },
+          fifth: {
+            title: "CLAUSE FIVE",
+            subtitle: "GENERAL DUTIES AND OBLIGATIONS OF THE RETAILER",
+            intro: "When making LOCKERS available, POS undertakes, without any limitation, to:",
+            items: [
+              "a. Not make products/objects available or occupy LOCKERS in violation of any laws, rules, regulations or for illegal or unauthorized purposes;",
+              "b. Use LOCKERS for the sole purpose of selling products/objects available inside;",
+              "c. Comply with hygiene and safety rules, namely ensure the management, security, maintenance, conservation and cleaning of LOCKERS."
+            ]
+          },
+          sixth: {
+            title: "CLAUSE SIX",
+            subtitle: "SECURITY",
+            content: "For USER protection, the POS facilities where the lockers are located are under permanently active lighting and video surveillance, which is expressly authorized by the USER with the acceptance of these terms and conditions of use."
+          },
+          seventh: {
+            title: "CLAUSE SEVEN",
+            subtitle: "ASSISTANCE",
+            content: "The USER has contacts available for communication that ensure support 24 hours a day, with the respective contacts posted inside the POS facilities."
+          },
+          eighth: {
+            title: "CLAUSE EIGHT",
+            subtitle: "RESPONSIBILITY FOR PRODUCTS/OBJECTS FOR SALE",
+            p1: "The USER of LOCKERS is solely and fully responsible for any damages caused to Azores4fun, POS or third parties, resulting from misuse of LOCKERS.",
+            p2: "The RETAILER of LOCKERS is solely and fully responsible for the products/objects contained therein.",
+            p3: "The USER assumes responsibility for the cost of repair or replacement of any LOCKER they have damaged."
+          }
+        }
+      },
+      privacy: {
+        title: "Privacy and Data Protection Policy",
+        metaDescription: "Azores4fun Privacy and Data Protection Policy. How we collect, use and protect your personal information.",
+        intro: "This Privacy Policy describes how your personal information is collected, used and shared when you visit or use Azores4fun services.",
+        contact: "If you have any questions and/or need more information, please do not hesitate to contact us:",
+        sections: {
+          personalInfo: {
+            title: "About personal information",
+            p1: "When you visit our Webapp/Site or Applications, we do not collect any information about your device, including your internet browser, IP address, time zone and any cookies that may be installed on your device.",
+            p2: "While browsing our Site/Webapp or Applications, we do not collect information about individual pages or products you view, sites or search terms that directed you to the Site/Webapp or Applications and information about how you interact with any of them.",
+            p3: "Additionally, when you make a reservation or attempt to make a purchase through the Site/Webapp or Applications, as Reservation/Order information, we collect but do not store any information beyond what you identify, such as name, email address, phone number and billing tax ID.",
+            p4: "Under no circumstances do we store any payment information.",
+            definition: "By Personal Information, in this Privacy Policy, we refer to Device Information and Reservation/Order Information."
+          },
+          usage: {
+            title: "About use of personal information",
+            p1: "We use the Reservation/Order Information collected to fulfill any reservation/order made through the Site/Webapp or Applications (including processing your payment information and providing you with invoices and/or order confirmations).",
+            additionally: "Additionally, we use this Reservation/Order Information to:",
+            items: ["Communicate with you", "Analyze our reservations/orders for potential risks or fraud"]
+          },
+          sharing: {
+            title: "About sharing personal information",
+            p1: "We do not share your Personal Information with any third parties.",
+            p2: "Except as required to comply with applicable laws and regulations, to respond to subpoenas, search warrants or other legal requests for information we receive, or to protect our rights in any other way."
+          },
+          advertising: {
+            title: "Behavioral advertising",
+            content: "We do not use your Personal Information to provide you with any advertisements, targeted or otherwise, as well as any marketing communications."
+          },
+          rights: {
+            title: "Your rights",
+            p1: "If you are a European resident, you have the right to access the personal information we hold about you and to request that your personal information be corrected, updated or deleted. If you wish to exercise this right, please contact us.",
+            p2: "Additionally, if you are a European resident, we emphasize that we process your information exclusively to fulfill contracts we may have with you (for example, if you make a reservation/order through the Site)."
+          },
+          retention: {
+            title: "Data retention",
+            content: "When you make a reservation/order through the Site/Webapp or Applications, we will keep the Information you provide us in our records, except for any payment data, unless you ask us to delete the information."
+          },
+          minors: {
+            title: "Minors",
+            content: "This Site/Webapp or Applications is not intended for minors under 12 years of age."
+          },
+          changes: {
+            title: "Changes",
+            content: "We may update this privacy policy occasionally to reflect, for example, changes in our practices or for other operational, legal or regulatory reasons."
+          }
+        }
+      },
+      cookies: {
+        title: "Cookie Policy",
+        metaDescription: "Azores4fun website Cookie Policy. Information about how we use cookies.",
+        p1: "The Azores4fun website only uses strictly necessary cookies for its proper technical functioning, which the user consents to.",
+        p2: "The user can manage the collection and storage of cookies through browser settings, being able to delete previously stored cookies and even block their collection.",
+        p3: "In addition to direct management in the browser, there are other variables that have a direct influence on the use of cookies, such as \"Do Not Track\" (DNT) settings, browser privacy policies, authenticated sessions or anonymous browsing and also privacy tools, such as ad blockers, which can affect the operation and collection of cookies and even their visibility in different browsers."
+      }
     },
     
     // Contact Dialog
