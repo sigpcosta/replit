@@ -70,18 +70,20 @@ export default function Navigation() {
             </Button>
           </div>
 
-          <button
-            className="lg:hidden"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            data-testid="button-mobile-menu"
-            aria-label={t.nav.toggleMenu}
-          >
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
+          <div className="flex items-center gap-3 lg:hidden">
+            <LanguageSelector />
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              data-testid="button-mobile-menu"
+              aria-label={t.nav.toggleMenu}
+            >
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
       {mobileMenuOpen && (
@@ -101,9 +103,6 @@ export default function Navigation() {
               </a>
             ))}
             <div className="pt-4 space-y-3">
-              <div className="flex justify-center mb-3">
-                <LanguageSelector />
-              </div>
               <Button 
                 variant="outline" 
                 className="w-full" 
