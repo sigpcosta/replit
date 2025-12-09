@@ -474,13 +474,13 @@ export const translations = {
         t2PicoDescription: "Apartamento moderno e bem equipado, ideal para grupos.",
       },
       features: [
-        "Localização central na Horta",
+        "Check-in autónomo",
         "Wi-Fi gratuito de alta velocidade",
         "Cozinha totalmente equipada",
         "Roupa de cama e banho incluída",
         "Ar condicionado",
         "Redes mosquiteiras em todas as janelas",
-        "Check-in autónomo",
+        "Lavandaria",
         "Limpeza profissional"
       ],
       aptFeatures: {
@@ -1728,13 +1728,13 @@ export const translations = {
         t2PicoDescription: "Modern and well-equipped apartment, ideal for groups.",
       },
       features: [
-        "Central location in Horta",
+        "Autonomous check-in",
         "Free high-speed Wi-Fi",
         "Fully equipped kitchen",
         "Bed linen and towels included",
         "Air conditioning",
         "Mosquito nets on all windows",
-        "Autonomous check-in",
+        "Laundry room",
         "Professional cleaning"
       ],
       aptFeatures: {
