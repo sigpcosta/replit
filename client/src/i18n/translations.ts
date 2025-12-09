@@ -476,7 +476,7 @@ export const translations = {
       features: [
         "Check-in autónomo",
         "Wi-Fi gratuito de alta velocidade",
-        "Cozinha totalmente equipada",
+        "Cozinhas totalmente equipadas",
         "Roupa de cama e banho incluída",
         "Ar condicionado",
         "Redes mosquiteiras em todas as janelas",
@@ -1730,7 +1730,7 @@ export const translations = {
       features: [
         "Autonomous check-in",
         "Free high-speed Wi-Fi",
-        "Fully equipped kitchen",
+        "Fully equipped kitchens",
         "Bed linen and towels included",
         "Air conditioning",
         "Mosquito nets on all windows",
