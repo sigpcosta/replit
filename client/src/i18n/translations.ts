@@ -481,7 +481,11 @@ export const translations = {
         "Ar condicionado",
         "Redes mosquiteiras em todas as janelas",
         "Berço disponível mediante reserva",
-        "Limpeza profissional"
+        "Limpeza profissional",
+        "Secador de cabelo",
+        "Ferro e tábua de engomar",
+        "Artigos de higiene (Shampoo, Amaciador e Gel de banho)",
+        "Limpeza final incluída"
       ],
       aptFeatures: {
         t1: ["1 Mezzanine", "1 casa de banho", "1 zona de estar ampla", "1 kitchenette bem equipada", "Acesso gratuito a lavandaria no rés-do-chão com máquina de lavar e secar roupa"],
@@ -1735,7 +1739,11 @@ export const translations = {
         "Air conditioning",
         "Mosquito nets on all windows",
         "Crib available upon request",
-        "Professional cleaning"
+        "Professional cleaning",
+        "Hair dryer",
+        "Iron and ironing board",
+        "Toiletries (Shampoo, Conditioner and Shower gel)",
+        "Final cleaning included"
       ],
       aptFeatures: {
         t1: ["1 Mezzanine", "1 bathroom", "1 spacious living area", "1 well-equipped kitchenette", "Free access to ground floor laundry with washer and dryer"],
