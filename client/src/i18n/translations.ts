@@ -509,7 +509,7 @@ export const translations = {
         },
         {
           question: "Os apartamentos estão totalmente equipados?",
-          answer: "Sim, todos os apartamentos dispõem de cozinha totalmente equipada, Wi-Fi gratuito, roupa de cama e banho, aquecimento, e todos os utensílios necessários para uma estadia confortável."
+          answer: "Sim, todos os apartamentos dispõem de cozinha totalmente equipada, Wi-Fi gratuito, roupa de cama e banho, aquecimento, secador, ferro e tábua de engomar e todos os utensílios necessários para uma estadia confortável. Consulte os detalhes de cada apartamento."
         },
         {
           question: "Qual é o horário de check-in e check-out?",
@@ -1767,7 +1767,7 @@ export const translations = {
         },
         {
           question: "Are the apartments fully equipped?",
-          answer: "Yes, all apartments have a fully equipped kitchen, free Wi-Fi, bed linen and towels, heating, and all the necessary utensils for a comfortable stay."
+          answer: "Yes, all apartments have a fully equipped kitchen, free Wi-Fi, bed linen and towels, heating, hair dryer, iron and ironing board and all the necessary utensils for a comfortable stay. Check the details of each apartment."
         },
         {
           question: "What are the check-in and check-out times?",
