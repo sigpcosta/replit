@@ -118,8 +118,8 @@ interface ApartmentGallery {
 const apartmentGalleries: ApartmentGallery[] = [
   {
     slug: "t1-mezzanine",
-    namePt: "T1 Mezzanine",
-    nameEn: "T1 Mezzanine",
+    namePt: "T0 - Estúdio Azores4fun",
+    nameEn: "T0 - Azores4fun Studio",
     descriptionPt: "Apartamento acolhedor com mezzanine no centro da Horta",
     descriptionEn: "Cozy apartment with mezzanine in Horta center",
     bookingUrl: "https://www.vacation-bookings.com/d/56064021?currency=EUR&locale=pt-PT&salesChannelId=HOLIDU_HOST_WEBSITE&colorPrimary=%23024251&colorPrimaryDark=%23003644&colorCTA=%2300809D&colorCTAActive=%2300728f&colorCTAText=%23FFFFFF&title=Azores4Fun%2C+Turismo+e+Aventura%2C+Unipessoal+Lda&ccons=MTc2Mzg4MTA0NDA0NjoxMTE%3D",
@@ -127,8 +127,8 @@ const apartmentGalleries: ApartmentGallery[] = [
   },
   {
     slug: "t2-centro",
-    namePt: "T2 Centro Histórico",
-    nameEn: "T2 Historic Center",
+    namePt: "T2 - Apartamento Casa da Travessa Piso Térreo",
+    nameEn: "T2 - Casa da Travessa Ground Floor Apartment",
     descriptionPt: "Apartamento T2 com terraço no centro histórico da Horta",
     descriptionEn: "T2 apartment with terrace in Horta's historic center",
     bookingUrl: "https://www.vacation-bookings.com/d/51943948?currency=EUR&locale=pt-PT&salesChannelId=HOLIDU_HOST_WEBSITE&colorPrimary=%23024251&colorPrimaryDark=%23003644&colorCTA=%2300809D&colorCTAActive=%2300728f&colorCTAText=%23FFFFFF&title=Azores4Fun%2C+Turismo+e+Aventura%2C+Unipessoal+Lda&ccons=MTc2Mzg4MTA0NDA0NjoxMTE%3D",
@@ -136,8 +136,8 @@ const apartmentGalleries: ApartmentGallery[] = [
   },
   {
     slug: "t3-vista-pico",
-    namePt: "T3 Vista Pico",
-    nameEn: "T3 Pico View",
+    namePt: "T3 - Apartamento Casa da Travessa com 3 Quartos",
+    nameEn: "T3 - Casa da Travessa 3 Bedroom Apartment",
     descriptionPt: "Apartamento T3 espaçoso com vista para a montanha do Pico",
     descriptionEn: "Spacious T3 apartment with Pico mountain view",
     bookingUrl: "https://www.vacation-bookings.com/d/51943951?currency=EUR&locale=pt-PT&salesChannelId=HOLIDU_HOST_WEBSITE&colorPrimary=%23024251&colorPrimaryDark=%23003644&colorCTA=%2300809D&colorCTAActive=%2300728f&colorCTAText=%23FFFFFF&title=Azores4Fun%2C+Turismo+e+Aventura%2C+Unipessoal+Lda&ccons=MTc2MzkwMzU0NzczOToxMTE%3D",
