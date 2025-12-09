@@ -38,7 +38,8 @@ export default function AnimacaoPage() {
       icon: Target,
       title: t.activities.activityTypes.lasertag,
       description: t.activities.activityTypes.lasertagDesc,
-      features: t.activities.lasertagFeatures
+      features: t.activities.lasertagFeatures,
+      moreInfoLink: "/paintball"
     },
     {
       icon: Car,
@@ -174,6 +175,13 @@ export default function AnimacaoPage() {
                       </li>
                     ))}
                   </ul>
+                  {activity.moreInfoLink && (
+                    <Link href={activity.moreInfoLink}>
+                      <Button variant="outline" size="sm" className="mt-4 w-full" data-testid={`button-more-info-${index}`}>
+                        {t.paintball.moreInfo}
+                      </Button>
+                    </Link>
+                  )}
                 </Card>
               ))}
             </div>
