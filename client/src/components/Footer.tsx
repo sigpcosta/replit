@@ -4,6 +4,8 @@ import acores2030Logo from "@assets/acores2030-funding-logo.png";
 import fichaTecnicaPdf from "@assets/ficha-tecnica-acores2030.pdf";
 import acores2020Logo from "@assets/acores2020-funding-logo.png";
 import fichaTecnica2020Pdf from "@assets/ficha-tecnica-acores2020.pdf";
+import adeliacorLogo from "@assets/adeliacor-funding-logo.jpg";
+import fichaTecnicaAdeliacorPdf from "@assets/ficha-tecnica-adeliacor.pdf";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -221,6 +223,25 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-ficha-tecnica-2020"
+              >
+                <FileText className="w-4 h-4" />
+                {language === 'pt' ? 'Ficha Técnica' : 'Technical Sheet'}
+              </a>
+            </div>
+            
+            <div className="flex flex-col items-center gap-2">
+              <img 
+                src={adeliacorLogo} 
+                alt="ADELIACOR - Cofinanciamento" 
+                className="max-w-full h-auto md:max-w-2xl"
+                data-testid="img-adeliacor-logo"
+              />
+              <a 
+                href={fichaTecnicaAdeliacorPdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-ficha-tecnica-adeliacor"
               >
                 <FileText className="w-4 h-4" />
                 {language === 'pt' ? 'Ficha Técnica' : 'Technical Sheet'}
