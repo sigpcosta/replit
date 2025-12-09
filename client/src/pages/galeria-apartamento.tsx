@@ -226,7 +226,6 @@ export default function GaleriaApartamentoPage() {
               <h1 className="font-heading text-3xl font-bold" data-testid="text-gallery-title">
                 {name}
               </h1>
-              <p className="text-muted-foreground mt-2">{description}</p>
             </div>
             <Button asChild data-testid="button-book-apartment">
               <a href={apartment.bookingUrl} target="_blank" rel="noopener noreferrer">
