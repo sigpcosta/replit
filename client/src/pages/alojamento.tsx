@@ -103,16 +103,19 @@ export default function AlojamentoPage() {
               <p className="text-muted-foreground text-lg mb-6">
                 {t.accommodation.heroP2}
               </p>
+              <p className="text-muted-foreground text-lg mb-6">
+                {language === 'pt' 
+                  ? 'Todos os apartamentos têm sistema de check-in autónomo e estacionamento gratuito nas proximidades.'
+                  : 'All apartments have autonomous check-in system and free parking nearby.'}
+              </p>
               <p className="text-muted-foreground text-lg mb-8">
                 {language === 'pt' 
-                  ? 'Durante a sua estadia, aproveite para explorar as nossas '
-                  : 'During your stay, take advantage of our '}
+                  ? 'Durante a sua estadia aproveite para visitar ou fazer atividades na ilha connosco, consulte a página de '
+                  : 'During your stay, take advantage to visit or do activities on the island with us, check out our '}
                 <Link href="/animacao" className="text-primary hover:underline font-medium" data-testid="link-to-activities">
-                  {language === 'pt' ? 'atividades turísticas' : 'tourist activities'}
+                  {language === 'pt' ? 'Animação Turística' : 'Tourism Activities'}
                 </Link>
-                {language === 'pt' 
-                  ? ' como passeios de barco, laser tag e SUP.'
-                  : ' such as boat tours, laser tag and SUP.'}
+                {language === 'pt' ? '.' : ' page.'}
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button 
