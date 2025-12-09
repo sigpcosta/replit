@@ -1719,7 +1719,7 @@ export const translations = {
       viewMorePhotos: "View more photos",
       ourApartments: "Our Apartments",
       capacity: "Capacity",
-      amenitiesTitle: "Included Amenities",
+      amenitiesTitle: "Included",
       apartmentTypes: {
         t1: "T0 - Azores4fun Studio",
         t1Capacity: "4 people, ideal 2",
