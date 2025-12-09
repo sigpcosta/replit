@@ -532,6 +532,10 @@ export const translations = {
           answer: "Pode fazer reservas através do nosso sistema de reservas ([aqui](https://azores4fun.vacation-bookings.com/) ou depois de escolher o apartamento no botão \"Reservar\"), por telefone +351 123 456 789, ou por email info@azores4fun.com. Respondemos rapidamente a todos os pedidos."
         },
         {
+          question: "Quais as condições e meios de pagamento disponíveis?",
+          answer: "As reservas devem ser pagas até 30 dias antes do dia de chegada via transferência bancária, PayPal, MBWay ou cartão de crédito."
+        },
+        {
           question: "Qual é a política de cancelamento?",
           answer: "Os cancelamentos são gratuitos até 30 dias da data de chegada. Cancelamentos mais tardios não são reembolsáveis. Aceitamos, sem custo, remarcação de datas."
         }
@@ -1788,6 +1792,10 @@ export const translations = {
         {
           question: "How can I make a reservation?",
           answer: "You can make reservations through our booking system ([here](https://azores4fun.vacation-bookings.com/) or after choosing the apartment on the \"Book\" button), by phone +351 123 456 789, or by email info@azores4fun.com. We respond quickly to all requests."
+        },
+        {
+          question: "What are the payment conditions and methods available?",
+          answer: "Reservations must be paid up to 30 days before the arrival date via bank transfer, PayPal, MBWay or credit card."
         },
         {
           question: "What is the cancellation policy?",
