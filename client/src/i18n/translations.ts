@@ -484,7 +484,7 @@ export const translations = {
         "Limpeza profissional"
       ],
       aptFeatures: {
-        t1: ["1 Mezzanine"],
+        t1: ["1 Mezzanine", "1 casa de banho", "1 zona de estar ampla", "1 kitchenette bem equipada"],
         t2Centro: ["2 quartos", "1 casa de banho", "Sala ampla", "Totalmente renovado"],
         t2Pico: ["2 quartos", "2 casas de banho", "Varanda panorâmica", "Equipamento premium"]
       },
@@ -1738,7 +1738,7 @@ export const translations = {
         "Professional cleaning"
       ],
       aptFeatures: {
-        t1: ["1 Mezzanine"],
+        t1: ["1 Mezzanine", "1 bathroom", "1 spacious living area", "1 well-equipped kitchenette"],
         t2Centro: ["2 bedrooms", "1 bathroom", "Spacious living room", "Fully renovated"],
         t2Pico: ["2 bedrooms", "2 bathrooms", "Panoramic balcony", "Premium equipment"]
       },
