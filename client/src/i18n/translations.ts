@@ -529,7 +529,7 @@ export const translations = {
         },
         {
           question: "Como posso fazer uma reserva?",
-          answer: "Pode fazer reservas através do nosso formulário online, por telefone +351 123 456 789, ou por email info@azores4fun.com. Respondemos rapidamente a todos os pedidos."
+          answer: "Pode fazer reservas através do nosso sistema de reservas (aqui https://azores4fun.vacation-bookings.com/ ou depois de escolher o apartamento no botão \"Reservar\"), por telefone +351 123 456 789, ou por email info@azores4fun.com. Respondemos rapidamente a todos os pedidos."
         },
         {
           question: "Qual é a política de cancelamento?",
@@ -1787,7 +1787,7 @@ export const translations = {
         },
         {
           question: "How can I make a reservation?",
-          answer: "You can make reservations through our online form, by phone +351 123 456 789, or by email info@azores4fun.com. We respond quickly to all requests."
+          answer: "You can make reservations through our booking system (here https://azores4fun.vacation-bookings.com/ or after choosing the apartment on the \"Book\" button), by phone +351 123 456 789, or by email info@azores4fun.com. We respond quickly to all requests."
         },
         {
           question: "What is the cancellation policy?",
