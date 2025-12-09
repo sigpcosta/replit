@@ -43,6 +43,38 @@ const t0Images = [
   t0_21, t0_22, t0_23, t0_24, t0_25, t0_26, t0_27, t0_28
 ];
 
+import t2_01 from "@assets/t2_fotos/t2_01.jpg";
+import t2_02 from "@assets/t2_fotos/t2_02.jpg";
+import t2_03 from "@assets/t2_fotos/t2_03.jpg";
+import t2_04 from "@assets/t2_fotos/t2_04.jpg";
+import t2_05 from "@assets/t2_fotos/t2_05.jpg";
+import t2_06 from "@assets/t2_fotos/t2_06.jpg";
+import t2_07 from "@assets/t2_fotos/t2_07.jpg";
+import t2_08 from "@assets/t2_fotos/t2_08.jpg";
+import t2_09 from "@assets/t2_fotos/t2_09.jpg";
+import t2_10 from "@assets/t2_fotos/t2_10.jpg";
+import t2_11 from "@assets/t2_fotos/t2_11.jpg";
+import t2_12 from "@assets/t2_fotos/t2_12.jpg";
+import t2_13 from "@assets/t2_fotos/t2_13.jpg";
+import t2_14 from "@assets/t2_fotos/t2_14.jpg";
+import t2_15 from "@assets/t2_fotos/t2_15.jpg";
+import t2_16 from "@assets/t2_fotos/t2_16.jpg";
+import t2_17 from "@assets/t2_fotos/t2_17.jpg";
+import t2_18 from "@assets/t2_fotos/t2_18.jpg";
+import t2_19 from "@assets/t2_fotos/t2_19.jpg";
+import t2_20 from "@assets/t2_fotos/t2_20.jpg";
+import t2_21 from "@assets/t2_fotos/t2_21.jpg";
+import t2_22 from "@assets/t2_fotos/t2_22.jpg";
+import t2_23 from "@assets/t2_fotos/t2_23.jpg";
+import t2_24 from "@assets/t2_fotos/t2_24.jpg";
+import t2_25 from "@assets/t2_fotos/t2_25.jpg";
+
+const t2Images = [
+  t2_01, t2_02, t2_03, t2_04, t2_05, t2_06, t2_07, t2_08, t2_09, t2_10,
+  t2_11, t2_12, t2_13, t2_14, t2_15, t2_16, t2_17, t2_18, t2_19, t2_20,
+  t2_21, t2_22, t2_23, t2_24, t2_25
+];
+
 interface ApartmentGallery {
   slug: string;
   namePt: string;
@@ -70,13 +102,7 @@ const apartmentGalleries: ApartmentGallery[] = [
     descriptionPt: "Apartamento T2 com terraço no centro histórico da Horta",
     descriptionEn: "T2 apartment with terrace in Horta's historic center",
     bookingUrl: "https://www.vacation-bookings.com/d/51943948?currency=EUR&locale=pt-PT&salesChannelId=HOLIDU_HOST_WEBSITE&colorPrimary=%23024251&colorPrimaryDark=%23003644&colorCTA=%2300809D&colorCTAActive=%2300728f&colorCTAText=%23FFFFFF&title=Azores4Fun%2C+Turismo+e+Aventura%2C+Unipessoal+Lda&ccons=MTc2Mzg4MTA0NDA0NjoxMTE%3D",
-    images: [
-      "https://img.holidu.com/images/c8910d31-2830-487f-a7cf-d74a4fa3d189/l.jpg",
-      "https://img.holidu.com/images/eb87fad2-5278-4538-b5df-9d7c150e8f2b/l.jpg",
-      "https://img.holidu.com/images/70afdde0-9304-4ade-b2d4-cb58223db68d/l.jpg",
-      "https://img.holidu.com/images/16463464-5688-4184-b9b8-42488b63cd27/l.jpg",
-      "https://img.holidu.com/images/2d21d218-4faf-4d8d-90ef-59ab2de7b1f4/l.jpg"
-    ]
+    images: t2Images
   },
   {
     slug: "t3-vista-pico",
