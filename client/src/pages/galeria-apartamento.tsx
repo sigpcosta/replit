@@ -8,6 +8,41 @@ import { ArrowLeft, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 import { Helmet } from "react-helmet-async";
 
+import t0_01 from "@assets/t0_fotos/t0_01.jpg";
+import t0_02 from "@assets/t0_fotos/t0_02.jpg";
+import t0_03 from "@assets/t0_fotos/t0_03.jpg";
+import t0_04 from "@assets/t0_fotos/t0_04.jpg";
+import t0_05 from "@assets/t0_fotos/t0_05.jpg";
+import t0_06 from "@assets/t0_fotos/t0_06.jpg";
+import t0_07 from "@assets/t0_fotos/t0_07.jpg";
+import t0_08 from "@assets/t0_fotos/t0_08.jpg";
+import t0_09 from "@assets/t0_fotos/t0_09.jpg";
+import t0_10 from "@assets/t0_fotos/t0_10.jpg";
+import t0_11 from "@assets/t0_fotos/t0_11.jpg";
+import t0_12 from "@assets/t0_fotos/t0_12.jpg";
+import t0_13 from "@assets/t0_fotos/t0_13.jpg";
+import t0_14 from "@assets/t0_fotos/t0_14.jpg";
+import t0_15 from "@assets/t0_fotos/t0_15.jpg";
+import t0_16 from "@assets/t0_fotos/t0_16.jpg";
+import t0_17 from "@assets/t0_fotos/t0_17.jpg";
+import t0_18 from "@assets/t0_fotos/t0_18.jpg";
+import t0_19 from "@assets/t0_fotos/t0_19.jpg";
+import t0_20 from "@assets/t0_fotos/t0_20.jpg";
+import t0_21 from "@assets/t0_fotos/t0_21.jpg";
+import t0_22 from "@assets/t0_fotos/t0_22.jpg";
+import t0_23 from "@assets/t0_fotos/t0_23.jpg";
+import t0_24 from "@assets/t0_fotos/t0_24.jpg";
+import t0_25 from "@assets/t0_fotos/t0_25.jpg";
+import t0_26 from "@assets/t0_fotos/t0_26.jpg";
+import t0_27 from "@assets/t0_fotos/t0_27.jpg";
+import t0_28 from "@assets/t0_fotos/t0_28.jpg";
+
+const t0Images = [
+  t0_01, t0_02, t0_03, t0_04, t0_05, t0_06, t0_07, t0_08, t0_09, t0_10,
+  t0_11, t0_12, t0_13, t0_14, t0_15, t0_16, t0_17, t0_18, t0_19, t0_20,
+  t0_21, t0_22, t0_23, t0_24, t0_25, t0_26, t0_27, t0_28
+];
+
 interface ApartmentGallery {
   slug: string;
   namePt: string;
@@ -26,13 +61,7 @@ const apartmentGalleries: ApartmentGallery[] = [
     descriptionPt: "Apartamento acolhedor com mezzanine no centro da Horta",
     descriptionEn: "Cozy apartment with mezzanine in Horta center",
     bookingUrl: "https://www.vacation-bookings.com/d/56064021?currency=EUR&locale=pt-PT&salesChannelId=HOLIDU_HOST_WEBSITE&colorPrimary=%23024251&colorPrimaryDark=%23003644&colorCTA=%2300809D&colorCTAActive=%2300728f&colorCTAText=%23FFFFFF&title=Azores4Fun%2C+Turismo+e+Aventura%2C+Unipessoal+Lda&ccons=MTc2Mzg4MTA0NDA0NjoxMTE%3D",
-    images: [
-      "https://img.holidu.com/images/b6b2d85a-1565-48dd-906f-81167f07e1bc/l.jpg",
-      "https://img.holidu.com/images/b91b13fd-d5ff-476b-b382-e7e61564eace/l.jpg",
-      "https://img.holidu.com/images/15b35581-d1be-4bbf-8258-89b0da3477f6/l.jpg",
-      "https://img.holidu.com/images/1014e080-c77f-427d-b5db-ecf307904b4e/l.jpg",
-      "https://img.holidu.com/images/f125ab76-9e1b-4c89-a14e-8a041991ab9b/l.jpg"
-    ]
+    images: t0Images
   },
   {
     slug: "t2-centro",
