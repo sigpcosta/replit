@@ -478,8 +478,8 @@ export const translations = {
         "Wi-Fi gratuito de alta velocidade",
         "Cozinha totalmente equipada",
         "Roupa de cama e banho incluída",
-        "Aquecimento central",
-        "Vista para a cidade ou marina",
+        "Ar condicionado",
+        "Redes mosquiteiras em todas as janelas",
         "Check-in flexível",
         "Limpeza profissional"
       ],
@@ -1732,8 +1732,8 @@ export const translations = {
         "Free high-speed Wi-Fi",
         "Fully equipped kitchen",
         "Bed linen and towels included",
-        "Central heating",
-        "City or marina view",
+        "Air conditioning",
+        "Mosquito nets on all windows",
         "Flexible check-in",
         "Professional cleaning"
       ],
