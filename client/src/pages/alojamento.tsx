@@ -4,7 +4,7 @@ import FAQItem from "@/components/FAQItem";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Home as HomeIcon, Car, Utensils, MapPin, Check, Images } from "lucide-react";
+import { Home as HomeIcon, Car, WashingMachine, MapPin, Check, Images } from "lucide-react";
 import { seoConfig } from "@/lib/seo-config";
 import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
 import apartmentImage from "@assets/TPN1 e 3 porta fechada_1763903607815.png";
@@ -227,12 +227,12 @@ export default function AlojamentoPage() {
               </p>
             </Card>
             <Card className="p-6 text-center">
-              <Utensils className="h-12 w-12 text-primary mx-auto mb-4" />
+              <WashingMachine className="h-12 w-12 text-primary mx-auto mb-4" />
               <h3 className="font-heading text-xl font-bold mb-2">
-                {t.accommodation.highlights.kitchen}
+                {t.accommodation.highlights.laundry}
               </h3>
               <p className="text-muted-foreground">
-                {t.accommodation.highlights.kitchenDesc}
+                {t.accommodation.highlights.laundryDesc}
               </p>
             </Card>
           </div>

@@ -493,8 +493,8 @@ export const translations = {
         locationDesc: "Centro da Horta, a poucos minutos a pé de restaurantes, lojas, mercado municipal e terminal marítimo",
         parking: "Estacionamento Gratuito",
         parkingDesc: "Muito estacionamento gratuito nas proximidades do alojamento",
-        kitchen: "Cozinha Equipada",
-        kitchenDesc: "Tudo o que precisa para preparar as suas refeições"
+        laundry: "Lavandaria",
+        laundryDesc: "Lavandaria de acesso gratuito com máquina de lavar e máquina de secar"
       },
       altApartmentInterior: "Exterior dos apartamentos Azores4fun na Horta",
       faqTitle: "Perguntas Frequentes - Alojamento Local",
@@ -1747,8 +1747,8 @@ export const translations = {
         locationDesc: "Center of Horta, minutes walk from restaurants, shops, municipal market and ferry terminal",
         parking: "Free Parking",
         parkingDesc: "Plenty of free parking near the accommodation",
-        kitchen: "Equipped Kitchen",
-        kitchenDesc: "Everything you need to prepare your meals"
+        laundry: "Laundry Room",
+        laundryDesc: "Free access laundry room with washing machine and dryer"
       },
       altApartmentInterior: "Azores4fun apartments exterior in Horta",
       faqTitle: "Frequently Asked Questions - Local Accommodation",
