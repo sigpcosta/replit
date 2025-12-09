@@ -464,8 +464,8 @@ export const translations = {
       amenitiesTitle: "Comodidades Incluídas",
       apartmentTypes: {
         t1: "T0 - Estúdio Azores4fun",
-        t1Capacity: "2 pessoas",
-        t1Description: "Apartamento acolhedor com vista para a marina, perfeito para casais.",
+        t1Capacity: "4 pessoas, ideal 2",
+        t1Description: "Estúdio espaçoso com Mezanine, perfeito para casais ou aventureiros.",
         t2Centro: "T2 - Apartamento Casa da Travessa Piso Térreo",
         t2CentroCapacity: "4 pessoas",
         t2CentroDescription: "Espaçoso apartamento no coração da Horta, ideal para famílias.",
@@ -484,7 +484,7 @@ export const translations = {
         "Limpeza profissional"
       ],
       aptFeatures: {
-        t1: ["1 quarto", "1 casa de banho", "Cozinha equipada", "Varanda"],
+        t1: ["1 Mezanine"],
         t2Centro: ["2 quartos", "1 casa de banho", "Sala ampla", "Totalmente renovado"],
         t2Pico: ["2 quartos", "2 casas de banho", "Varanda panorâmica", "Equipamento premium"]
       },
@@ -1718,8 +1718,8 @@ export const translations = {
       amenitiesTitle: "Included Amenities",
       apartmentTypes: {
         t1: "T0 - Azores4fun Studio",
-        t1Capacity: "2 people",
-        t1Description: "Cozy apartment with marina view, perfect for couples.",
+        t1Capacity: "4 people, ideal 2",
+        t1Description: "Spacious studio with Mezzanine, perfect for couples or adventurers.",
         t2Centro: "T2 - Casa da Travessa Ground Floor Apartment",
         t2CentroCapacity: "4 people",
         t2CentroDescription: "Spacious apartment in the heart of Horta, ideal for families.",
@@ -1738,7 +1738,7 @@ export const translations = {
         "Professional cleaning"
       ],
       aptFeatures: {
-        t1: ["1 bedroom", "1 bathroom", "Equipped kitchen", "Balcony"],
+        t1: ["1 Mezzanine"],
         t2Centro: ["2 bedrooms", "1 bathroom", "Spacious living room", "Fully renovated"],
         t2Pico: ["2 bedrooms", "2 bathrooms", "Panoramic balcony", "Premium equipment"]
       },
