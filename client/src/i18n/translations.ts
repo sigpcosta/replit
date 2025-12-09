@@ -471,7 +471,7 @@ export const translations = {
         t2CentroDescription: "Apartamento no coração da cidade da Horta, ideal para famílias.",
         t2Pico: "T3 - Apartamento Casa da Travessa com 3 Quartos",
         t2PicoCapacity: "8 pessoas, ideal 5",
-        t2PicoDescription: "Apartamento moderno e bem equipado, perfeito para grupos.",
+        t2PicoDescription: "Apartamento moderno e bem equipado, ideal para grupos.",
       },
       features: [
         "Localização central na Horta",
@@ -1725,7 +1725,7 @@ export const translations = {
         t2CentroDescription: "Apartment in the heart of Horta city, ideal for families.",
         t2Pico: "T3 - Casa da Travessa 3 Bedroom Apartment",
         t2PicoCapacity: "8 people, ideal 5",
-        t2PicoDescription: "Modern and well-equipped apartment, perfect for groups.",
+        t2PicoDescription: "Modern and well-equipped apartment, ideal for groups.",
       },
       features: [
         "Central location in Horta",
