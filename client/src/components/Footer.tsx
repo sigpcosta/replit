@@ -2,6 +2,8 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { Facebook, Instagram, Mail, Phone, MapPin, Heart, ExternalLink, FileText } from "lucide-react";
 import acores2030Logo from "@assets/acores2030-funding-logo.png";
 import fichaTecnicaPdf from "@assets/ficha-tecnica-acores2030.pdf";
+import acores2020Logo from "@assets/acores2020-funding-logo.png";
+import fichaTecnica2020Pdf from "@assets/ficha-tecnica-acores2020.pdf";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -186,23 +188,44 @@ export default function Footer() {
         </div>
 
         <div className="border-t mt-12 pt-8">
-          <div className="flex flex-col items-center gap-4 mb-8">
-            <img 
-              src={acores2030Logo} 
-              alt="Açores 2030 - Cofinanciamento FEDER" 
-              className="max-w-full h-auto md:max-w-2xl"
-              data-testid="img-acores2030-logo"
-            />
-            <a 
-              href={fichaTecnicaPdf}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-              data-testid="link-ficha-tecnica"
-            >
-              <FileText className="w-4 h-4" />
-              {language === 'pt' ? 'Ficha Técnica' : 'Technical Sheet'}
-            </a>
+          <div className="flex flex-col items-center gap-6 mb-8">
+            <div className="flex flex-col items-center gap-2">
+              <img 
+                src={acores2030Logo} 
+                alt="Açores 2030 - Cofinanciamento FEDER" 
+                className="max-w-full h-auto md:max-w-2xl"
+                data-testid="img-acores2030-logo"
+              />
+              <a 
+                href={fichaTecnicaPdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-ficha-tecnica-2030"
+              >
+                <FileText className="w-4 h-4" />
+                {language === 'pt' ? 'Ficha Técnica' : 'Technical Sheet'}
+              </a>
+            </div>
+            
+            <div className="flex flex-col items-center gap-2">
+              <img 
+                src={acores2020Logo} 
+                alt="Açores 2020 - Cofinanciamento FEDER" 
+                className="max-w-full h-auto md:max-w-2xl"
+                data-testid="img-acores2020-logo"
+              />
+              <a 
+                href={fichaTecnica2020Pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-ficha-tecnica-2020"
+              >
+                <FileText className="w-4 h-4" />
+                {language === 'pt' ? 'Ficha Técnica' : 'Technical Sheet'}
+              </a>
+            </div>
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
             <p>&copy; {currentYear} Azores4fun. {t.footer.rights}</p>
