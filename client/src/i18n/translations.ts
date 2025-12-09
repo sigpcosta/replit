@@ -517,7 +517,7 @@ export const translations = {
         },
         {
           question: "Aceitam animais de estimação?",
-          answer: "Por favor, contacte-nos previamente para discutir a possibilidade de hospedar animais de estimação. Analisamos cada situação caso a caso."
+          answer: "Lamentamos mas os nossos apartamentos não têm condições para receber animais de estimação."
         },
         {
           question: "Há estacionamento disponível?",
@@ -1775,7 +1775,7 @@ export const translations = {
         },
         {
           question: "Do you accept pets?",
-          answer: "Please contact us in advance to discuss the possibility of hosting pets. We analyze each situation on a case-by-case basis."
+          answer: "We regret that our apartments are not suitable for hosting pets."
         },
         {
           question: "Is parking available?",
