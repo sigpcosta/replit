@@ -533,7 +533,7 @@ export const translations = {
         },
         {
           question: "Qual é a política de cancelamento?",
-          answer: "Oferecemos cancelamento gratuito até 7 dias antes da data de chegada. Para cancelamentos mais tardios, aplicam-se taxas conforme descrito nos nossos termos e condições."
+          answer: "Os cancelamentos são gratuitos até 30 dias da data de chegada. Cancelamentos mais tardios não são reembolsáveis. Aceitamos, sem custo, remarcação de datas."
         }
       ]
     },
@@ -1791,7 +1791,7 @@ export const translations = {
         },
         {
           question: "What is the cancellation policy?",
-          answer: "We offer free cancellation up to 7 days before the arrival date. For later cancellations, fees apply as described in our terms and conditions."
+          answer: "Cancellations are free up to 30 days before the arrival date. Later cancellations are non-refundable. We accept date changes at no extra cost."
         }
       ]
     },
