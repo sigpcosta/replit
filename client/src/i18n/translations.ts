@@ -533,7 +533,7 @@ export const translations = {
         },
         {
           question: "Quais as condições e meios de pagamento disponíveis?",
-          answer: "As reservas devem ser pagas até 30 dias antes do dia de chegada via transferência bancária, PayPal, MBWay ou cartão de crédito."
+          answer: "As reservas, para se efetivarem, devem ser pagas até 30 dias antes do dia de chegada, ou pagas no imediato caso esse prazo já não consiga ser cumprido. Os pagamentos podem ser via transferência bancária, PayPal, MBWay ou cartão de crédito."
         },
         {
           question: "Qual é a política de cancelamento?",
@@ -1795,7 +1795,7 @@ export const translations = {
         },
         {
           question: "What are the payment conditions and methods available?",
-          answer: "Reservations must be paid up to 30 days before the arrival date via bank transfer, PayPal, MBWay or credit card."
+          answer: "Reservations must be paid up to 30 days before the arrival date to be confirmed, or paid immediately if that deadline can no longer be met. Payments can be made via bank transfer, PayPal, MBWay or credit card."
         },
         {
           question: "What is the cancellation policy?",
