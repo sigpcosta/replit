@@ -1,6 +1,8 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FAQItem from "@/components/FAQItem";
+import ContactDialog from "@/components/ContactDialog";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -14,6 +16,7 @@ import { Link } from "wouter";
 
 export default function EventosPage() {
   const { t, language } = useLanguage();
+  const [contactOpen, setContactOpen] = useState(false);
   const seo = seoConfig[language].eventos;
   
   const combinedSchema = {
@@ -221,14 +224,15 @@ export default function EventosPage() {
             <p className="text-muted-foreground mb-4">
               {t.common.faqNotFound}
             </p>
-            <a
-              href="#"
+            <button
+              onClick={() => setContactOpen(true)}
               className="text-primary font-semibold hover:underline"
               data-testid="link-contact-us"
             >
               {t.common.contactUs}
-            </a>
+            </button>
           </div>
+          <ContactDialog open={contactOpen} onOpenChange={setContactOpen} />
         </div>
       </div>
 
