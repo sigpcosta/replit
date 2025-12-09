@@ -20,7 +20,6 @@ import TermosSitePage from "@/pages/termos-site";
 import TermosVendingPage from "@/pages/termos-vending";
 import PrivacidadePage from "@/pages/privacidade";
 import CookiesPage from "@/pages/cookies";
-import GaleriaApartamentoPage from "@/pages/galeria-apartamento";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -41,7 +40,6 @@ function Router() {
       <Route path="/termos-vending" component={TermosVendingPage} />
       <Route path="/privacidade" component={PrivacidadePage} />
       <Route path="/cookies" component={CookiesPage} />
-      <Route path="/galeria-apartamento/:slug" component={GaleriaApartamentoPage} />
       <Route component={NotFound} />
     </Switch>
   );
