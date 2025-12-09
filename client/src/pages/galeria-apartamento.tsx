@@ -75,6 +75,38 @@ const t2Images = [
   t2_21, t2_22, t2_23, t2_24, t2_25
 ];
 
+import t3_01 from "@assets/t3_fotos/t3_01.jpg";
+import t3_02 from "@assets/t3_fotos/t3_02.jpg";
+import t3_03 from "@assets/t3_fotos/t3_03.jpg";
+import t3_04 from "@assets/t3_fotos/t3_04.jpg";
+import t3_05 from "@assets/t3_fotos/t3_05.jpg";
+import t3_06 from "@assets/t3_fotos/t3_06.jpg";
+import t3_07 from "@assets/t3_fotos/t3_07.jpg";
+import t3_08 from "@assets/t3_fotos/t3_08.jpg";
+import t3_09 from "@assets/t3_fotos/t3_09.jpg";
+import t3_10 from "@assets/t3_fotos/t3_10.jpg";
+import t3_11 from "@assets/t3_fotos/t3_11.jpg";
+import t3_12 from "@assets/t3_fotos/t3_12.jpg";
+import t3_13 from "@assets/t3_fotos/t3_13.jpg";
+import t3_14 from "@assets/t3_fotos/t3_14.jpg";
+import t3_15 from "@assets/t3_fotos/t3_15.jpg";
+import t3_16 from "@assets/t3_fotos/t3_16.jpg";
+import t3_17 from "@assets/t3_fotos/t3_17.jpg";
+import t3_18 from "@assets/t3_fotos/t3_18.jpg";
+import t3_19 from "@assets/t3_fotos/t3_19.jpg";
+import t3_20 from "@assets/t3_fotos/t3_20.jpg";
+import t3_21 from "@assets/t3_fotos/t3_21.jpg";
+import t3_22 from "@assets/t3_fotos/t3_22.jpg";
+import t3_23 from "@assets/t3_fotos/t3_23.jpg";
+import t3_24 from "@assets/t3_fotos/t3_24.jpg";
+import t3_25 from "@assets/t3_fotos/t3_25.jpg";
+
+const t3Images = [
+  t3_01, t3_02, t3_03, t3_04, t3_05, t3_06, t3_07, t3_08, t3_09, t3_10,
+  t3_11, t3_12, t3_13, t3_14, t3_15, t3_16, t3_17, t3_18, t3_19, t3_20,
+  t3_21, t3_22, t3_23, t3_24, t3_25
+];
+
 interface ApartmentGallery {
   slug: string;
   namePt: string;
@@ -111,13 +143,7 @@ const apartmentGalleries: ApartmentGallery[] = [
     descriptionPt: "Apartamento T3 espaçoso com vista para a montanha do Pico",
     descriptionEn: "Spacious T3 apartment with Pico mountain view",
     bookingUrl: "https://www.vacation-bookings.com/d/51943951?currency=EUR&locale=pt-PT&salesChannelId=HOLIDU_HOST_WEBSITE&colorPrimary=%23024251&colorPrimaryDark=%23003644&colorCTA=%2300809D&colorCTAActive=%2300728f&colorCTAText=%23FFFFFF&title=Azores4Fun%2C+Turismo+e+Aventura%2C+Unipessoal+Lda&ccons=MTc2MzkwMzU0NzczOToxMTE%3D",
-    images: [
-      "https://img.holidu.com/images/3b4d1c68-48a4-42b0-9faf-3cbb3daa3379/l.jpg",
-      "https://img.holidu.com/images/2b84f484-489b-44bb-928d-74ef481c27ab/l.jpg",
-      "https://img.holidu.com/images/2e5b6898-caf4-4281-b783-43f5589e4558/l.jpg",
-      "https://img.holidu.com/images/3125356d-11cc-4874-99e5-acac6a9bd1dd/l.jpg",
-      "https://img.holidu.com/images/4faded87-be35-4969-b064-a5190456550b/l.jpg"
-    ]
+    images: t3Images
   }
 ];
 
