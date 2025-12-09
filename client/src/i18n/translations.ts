@@ -490,7 +490,7 @@ export const translations = {
       },
       highlights: {
         location: "Localização Premium",
-        locationDesc: "Centro da Horta, a poucos minutos a pé de restaurantes, lojas e marina",
+        locationDesc: "Centro da Horta, a poucos minutos a pé de restaurantes, lojas, mercado municipal e terminal marítimo",
         wifi: "Wi-Fi Grátis",
         wifiDesc: "Internet de alta velocidade em todos os apartamentos",
         kitchen: "Cozinha Equipada",
@@ -1744,7 +1744,7 @@ export const translations = {
       },
       highlights: {
         location: "Premium Location",
-        locationDesc: "Center of Horta, minutes walk from restaurants, shops and marina",
+        locationDesc: "Center of Horta, minutes walk from restaurants, shops, municipal market and ferry terminal",
         wifi: "Free Wi-Fi",
         wifiDesc: "High-speed internet in all apartments",
         kitchen: "Equipped Kitchen",
