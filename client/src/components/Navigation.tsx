@@ -26,7 +26,7 @@ export default function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="/" className="flex items-center" data-testid="link-home">
+          <a href="/" className="flex items-center mr-8" data-testid="link-home">
             <img 
               src={logoUrl} 
               alt="Azores4fun" 
@@ -47,7 +47,7 @@ export default function Navigation() {
             ))}
           </div>
 
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4 ml-8">
             <LanguageSelector />
             <Button 
               variant="outline" 
