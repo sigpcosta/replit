@@ -1742,7 +1742,7 @@ export const translations = {
         "Professional cleaning",
         "Hair dryer",
         "Iron and ironing board",
-        "Toiletries (Shampoo, Conditioner and Shower gel)",
+        "Amenities (Shampoo, Conditioner and Shower gel)",
         "Final cleaning included"
       ],
       aptFeatures: {
