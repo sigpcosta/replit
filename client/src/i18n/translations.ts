@@ -467,8 +467,8 @@ export const translations = {
         t1Capacity: "4 pessoas, ideal 2",
         t1Description: "Estúdio espaçoso com Mezzanine, perfeito para casais ou aventureiros.",
         t2Centro: "T2 - Apartamento Casa da Travessa Piso Térreo",
-        t2CentroCapacity: "4 pessoas",
-        t2CentroDescription: "Espaçoso apartamento no coração da Horta, ideal para famílias.",
+        t2CentroCapacity: "6 pessoas, ideal 3",
+        t2CentroDescription: "Apartamento no coração da cidade da Horta, ideal para famílias.",
         t2Pico: "T3 - Apartamento Casa da Travessa com 3 Quartos",
         t2PicoCapacity: "4-5 pessoas",
         t2PicoDescription: "Apartamento moderno com vista para o Monte Pico, máximo conforto.",
@@ -485,7 +485,7 @@ export const translations = {
       ],
       aptFeatures: {
         t1: ["1 Mezzanine", "1 casa de banho", "1 zona de estar ampla", "1 kitchenette bem equipada"],
-        t2Centro: ["2 quartos", "1 casa de banho", "Sala ampla", "Totalmente renovado"],
+        t2Centro: ["2 quartos", "1 casa de banho com banheira", "1 sala e cozinha totalmente equipada", "1 máquina lavar roupa", "1 pátio"],
         t2Pico: ["2 quartos", "2 casas de banho", "Varanda panorâmica", "Equipamento premium"]
       },
       highlights: {
@@ -1721,8 +1721,8 @@ export const translations = {
         t1Capacity: "4 people, ideal 2",
         t1Description: "Spacious studio with Mezzanine, perfect for couples or adventurers.",
         t2Centro: "T2 - Casa da Travessa Ground Floor Apartment",
-        t2CentroCapacity: "4 people",
-        t2CentroDescription: "Spacious apartment in the heart of Horta, ideal for families.",
+        t2CentroCapacity: "6 people, ideal 3",
+        t2CentroDescription: "Apartment in the heart of Horta city, ideal for families.",
         t2Pico: "T3 - Casa da Travessa 3 Bedroom Apartment",
         t2PicoCapacity: "4-5 people",
         t2PicoDescription: "Modern apartment with Mount Pico view, maximum comfort.",
@@ -1739,7 +1739,7 @@ export const translations = {
       ],
       aptFeatures: {
         t1: ["1 Mezzanine", "1 bathroom", "1 spacious living area", "1 well-equipped kitchenette"],
-        t2Centro: ["2 bedrooms", "1 bathroom", "Spacious living room", "Fully renovated"],
+        t2Centro: ["2 bedrooms", "1 bathroom with bathtub", "1 fully equipped living room and kitchen", "1 washing machine", "1 patio"],
         t2Pico: ["2 bedrooms", "2 bathrooms", "Panoramic balcony", "Premium equipment"]
       },
       highlights: {
