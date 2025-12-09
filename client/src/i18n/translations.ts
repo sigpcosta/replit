@@ -480,7 +480,7 @@ export const translations = {
         "Roupa de cama e banho incluída",
         "Ar condicionado",
         "Redes mosquiteiras em todas as janelas",
-        "Lavandaria",
+        "Berço disponível mediante reserva",
         "Limpeza profissional"
       ],
       aptFeatures: {
@@ -1734,7 +1734,7 @@ export const translations = {
         "Bed linen and towels included",
         "Air conditioning",
         "Mosquito nets on all windows",
-        "Laundry room",
+        "Crib available upon request",
         "Professional cleaning"
       ],
       aptFeatures: {
