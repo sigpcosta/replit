@@ -451,7 +451,7 @@ export const translations = {
     accommodation: {
       title: "Alojamento Local",
       subtitle: "3 apartamentos modernos no centro da Horta. Conforto, localização privilegiada e tudo o que precisa para uma estadia perfeita nos Açores.",
-      heroTitle: "O Seu Lar nos Açores",
+      heroTitle: "A sua casa nos Açores",
       heroP1: "Os nossos apartamentos estão estrategicamente localizados no centro da cidade da Horta, proporcionando acesso fácil a restaurantes, supermercados, a marina e todas as principais atrações da ilha do Faial.",
       heroP2: "Cada apartamento foi cuidadosamente equipado para garantir o máximo conforto durante a sua estadia, seja para uma escapadela de fim de semana ou para uma estadia prolongada.",
       bookNow: "Reservar Agora",
@@ -1705,7 +1705,7 @@ export const translations = {
     accommodation: {
       title: "Local Accommodation",
       subtitle: "3 modern apartments in the center of Horta. Comfort, privileged location and everything you need for a perfect stay in the Azores.",
-      heroTitle: "Your Home in the Azores",
+      heroTitle: "Your house in the Azores",
       heroP1: "Our apartments are strategically located in the center of Horta, providing easy access to restaurants, supermarkets, the marina and all the main attractions of Faial island.",
       heroP2: "Each apartment has been carefully equipped to ensure maximum comfort during your stay, whether for a weekend getaway or an extended stay.",
       bookNow: "Book Now",
