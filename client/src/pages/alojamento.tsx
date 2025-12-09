@@ -103,11 +103,6 @@ export default function AlojamentoPage() {
               <p className="text-muted-foreground text-lg mb-6">
                 {t.accommodation.heroP2}
               </p>
-              <p className="text-muted-foreground text-lg mb-6">
-                {language === 'pt' 
-                  ? 'Todos os apartamentos têm sistema de check-in autónomo e estacionamento gratuito nas proximidades.'
-                  : 'All apartments have autonomous check-in system and free parking nearby.'}
-              </p>
               <p className="text-muted-foreground text-lg mb-8">
                 {language === 'pt' 
                   ? 'Durante a sua estadia aproveite para visitar ou fazer atividades na ilha connosco, consulte a página de '
