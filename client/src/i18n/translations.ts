@@ -371,11 +371,11 @@ export const translations = {
           faqs: [
             {
               question: "Onde ficam localizados os apartamentos?",
-              answer: "Os nossos 3 apartamentos estão localizados no centro da cidade da Horta, Faial, na Travessa do Poiso Novo nºs 1 e 3, com fácil acesso a todas as comodidades."
+              answer: "Os nossos 3 apartamentos estão localizados no centro da cidade da Horta, Faial, na Travessa do Poiso Novo nºs 1 e 3, com fácil acesso a restaurantes, lojas, mercado municipal, terminal marítimo, marina e todas as principais atrações da cidade."
             },
             {
               question: "Os apartamentos estão equipados?",
-              answer: "Sim, todos os apartamentos estão totalmente equipados com cozinha, Wi-Fi, roupa de cama e tudo o que precisa para uma estadia confortável."
+              answer: "Sim, todos os apartamentos dispõem de cozinha totalmente equipada, Wi-Fi gratuito, roupa de cama e banho, aquecimento, secador, ferro e tábua de engomar e todos os utensílios necessários para uma estadia confortável. Consulte os detalhes de cada apartamento."
             }
           ]
         },
@@ -1629,11 +1629,11 @@ export const translations = {
           faqs: [
             {
               question: "Where are the apartments located?",
-              answer: "Our 3 apartments are located in the center of Horta, Faial, at Travessa do Poiso Novo nºs 1 e 3, with easy access to all amenities."
+              answer: "Our 3 apartments are located in the center of Horta, Faial, at Travessa do Poiso Novo nºs 1 and 3, with easy access to restaurants, shops, municipal market, ferry terminal, marina and all the main attractions of the city."
             },
             {
               question: "Are the apartments equipped?",
-              answer: "Yes, all apartments are fully equipped with kitchen, Wi-Fi, bed linen and everything you need for a comfortable stay."
+              answer: "Yes, all apartments have a fully equipped kitchen, free Wi-Fi, bed linen and towels, heating, hair dryer, iron and ironing board and all the necessary utensils for a comfortable stay. Check the details of each apartment."
             }
           ]
         },
