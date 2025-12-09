@@ -486,7 +486,7 @@ export const translations = {
       aptFeatures: {
         t1: ["1 Mezzanine", "1 casa de banho", "1 zona de estar ampla", "1 kitchenette bem equipada", "1 lavandaria com máquina de lavar e secar"],
         t2Centro: ["2 quartos", "1 casa de banho com banheira", "1 sala e cozinha totalmente equipada", "1 máquina lavar roupa", "1 pátio"],
-        t2Pico: ["2 quartos no 1º piso", "1 quarto no sótão, super acolhedor", "1 casa de banho", "1 sala ampla", "1 cozinha equipada com máquina de lavar loiça", "1 máquina de lavar roupa"]
+        t2Pico: ["2 quartos no 1º piso", "1 quarto no sótão, super acolhedor", "1 casa de banho", "1 sala ampla", "1 máquina de lavar loiça", "1 máquina de lavar roupa"]
       },
       highlights: {
         location: "Localização Premium",
@@ -1740,7 +1740,7 @@ export const translations = {
       aptFeatures: {
         t1: ["1 Mezzanine", "1 bathroom", "1 spacious living area", "1 well-equipped kitchenette", "1 laundry room with washer and dryer"],
         t2Centro: ["2 bedrooms", "1 bathroom with bathtub", "1 fully equipped living room and kitchen", "1 washing machine", "1 patio"],
-        t2Pico: ["2 bedrooms on 1st floor", "1 bedroom in the attic, super cozy", "1 bathroom", "1 spacious living room", "1 kitchen equipped with dishwasher", "1 washing machine"]
+        t2Pico: ["2 bedrooms on 1st floor", "1 bedroom in the attic, super cozy", "1 bathroom", "1 spacious living room", "1 dishwasher", "1 washing machine"]
       },
       highlights: {
         location: "Premium Location",
