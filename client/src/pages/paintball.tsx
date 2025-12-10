@@ -59,7 +59,8 @@ export default function PaintballPage() {
       />
       <Navigation />
 
-      <section className="relative py-20 bg-gradient-to-b from-primary/10 to-background">
+      <div className="pt-20 md:pt-24">
+        <section className="relative py-12 md:py-16 bg-gradient-to-b from-primary/10 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6" data-testid="text-paintball-title">
@@ -405,27 +406,28 @@ export default function PaintballPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">{t.cta.title}</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">{t.cta.subtitle}</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button
-              size="lg"
-              variant="secondary"
-              onClick={() => setContactOpen(true)}
-              data-testid="button-book-now"
-            >
-              {t.paintball.bookNow}
-            </Button>
-            <Link href="/animacao">
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10" data-testid="link-back-activities">
-                {t.nav.activities}
+        <section className="py-16 bg-primary text-primary-foreground">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-6">{t.cta.title}</h2>
+            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">{t.cta.subtitle}</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button
+                size="lg"
+                variant="secondary"
+                onClick={() => setContactOpen(true)}
+                data-testid="button-book-now"
+              >
+                {t.paintball.bookNow}
               </Button>
-            </Link>
+              <Link href="/animacao">
+                <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10" data-testid="link-back-activities">
+                  {t.nav.activities}
+                </Button>
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <ContactDialog open={contactOpen} onOpenChange={setContactOpen} />
       <Footer />
