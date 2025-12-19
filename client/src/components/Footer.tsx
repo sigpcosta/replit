@@ -6,6 +6,7 @@ import acores2020Logo from "@assets/acores2020-funding-logo.png";
 import fichaTecnica2020Pdf from "@assets/ficha-tecnica-acores2020.pdf";
 import adeliacorLogo from "@assets/adeliacor-funding-logo.jpg";
 import fichaTecnicaAdeliacorPdf from "@assets/ficha-tecnica-adeliacor.pdf";
+import prrLogo from "@assets/barra_prr_1766164794909.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -246,6 +247,15 @@ export default function Footer() {
                 <FileText className="w-4 h-4" />
                 {language === 'pt' ? 'Ficha Técnica' : 'Technical Sheet'}
               </a>
+            </div>
+            
+            <div className="flex flex-col items-center gap-2">
+              <img 
+                src={prrLogo} 
+                alt="PRR - Plano de Recuperação e Resiliência" 
+                className="max-w-full h-auto md:max-w-2xl"
+                data-testid="img-prr-logo"
+              />
             </div>
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
