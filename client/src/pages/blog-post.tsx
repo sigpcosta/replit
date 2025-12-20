@@ -1,5 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useParams, Link } from "wouter";
+import { useMemo } from "react";
+import { marked } from "marked";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
@@ -40,6 +42,12 @@ export default function BlogPostPage() {
   const getTitle = (p: BlogPost) => language === 'pt' ? p.titlePt : p.titleEn;
   const getContent = (p: BlogPost) => language === 'pt' ? p.contentPt : p.contentEn;
   const getExcerpt = (p: BlogPost) => language === 'pt' ? p.excerptPt : p.excerptEn;
+
+  const htmlContent = useMemo(() => {
+    if (!post) return '';
+    const content = getContent(post);
+    return marked.parse(content) as string;
+  }, [post, language]);
 
   const handleShare = () => {
     if (navigator.share && post) {
@@ -155,7 +163,7 @@ export default function BlogPostPage() {
 
           <div 
             className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-heading prose-headings:font-bold prose-a:text-primary prose-img:rounded-lg"
-            dangerouslySetInnerHTML={{ __html: getContent(post) }}
+            dangerouslySetInnerHTML={{ __html: htmlContent }}
             data-testid="content-body"
           />
 
