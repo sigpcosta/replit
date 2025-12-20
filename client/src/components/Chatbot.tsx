@@ -486,8 +486,7 @@ export default function Chatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-20 w-[calc(100%-2rem)] md:w-96 h-[500px] max-h-[70vh] bg-card border rounded-xl shadow-2xl flex flex-col z-[9999] overflow-hidden"
-            style={{ right: '1rem', left: 'auto' }}
+            className="fixed bottom-20 !right-4 !left-auto w-[calc(100%-2rem)] md:w-96 h-[500px] max-h-[70vh] bg-card border rounded-xl shadow-2xl flex flex-col z-[9999] overflow-hidden"
             data-testid="chatbot-window"
           >
             <div className="bg-primary text-primary-foreground p-4 flex items-center justify-between">
@@ -596,8 +595,7 @@ export default function Chatbot() {
 
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-4 w-14 h-14 bg-primary text-primary-foreground rounded-full shadow-lg flex items-center justify-center z-[9999] hover-elevate"
-        style={{ right: '1rem', left: 'auto' }}
+        className="fixed bottom-4 !right-4 !left-auto w-14 h-14 bg-primary text-primary-foreground rounded-full shadow-lg flex items-center justify-center z-[9999] hover-elevate"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         data-testid="button-toggle-chatbot"
