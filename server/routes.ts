@@ -24,6 +24,17 @@ const contactSchema = z.object({
 export async function registerRoutes(app: Express): Promise<Server> {
   // Serve static SEO files from public/ folder
   const publicPath = path.resolve(import.meta.dirname, "..", "public");
+  const attachedAssetsPath = path.resolve(import.meta.dirname, "..", "attached_assets");
+  
+  // Serve attached assets as static files
+  app.get("/attached_assets/:filename", (req, res) => {
+    const filePath = path.join(attachedAssetsPath, req.params.filename);
+    if (fs.existsSync(filePath)) {
+      res.sendFile(filePath);
+    } else {
+      res.status(404).send("File not found");
+    }
+  });
   
   app.get("/sitemap.xml", (_req, res) => {
     const sitemapPath = path.join(publicPath, "sitemap.xml");
