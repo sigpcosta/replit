@@ -255,19 +255,28 @@ const seedArticles = [
   },
 ];
 
-async function seedBlog() {
-  console.log("Seeding blog posts...");
-  
-  for (const article of seedArticles) {
-    try {
-      await db.insert(blogPosts).values(article).onConflictDoNothing();
-      console.log(`Inserted: ${article.slug}`);
-    } catch (error) {
-      console.error(`Error inserting ${article.slug}:`, error);
+export async function seedBlogIfEmpty() {
+  try {
+    const existing = await db.select().from(blogPosts).limit(1);
+    
+    if (existing.length > 0) {
+      console.log("Blog already has articles, skipping seed.");
+      return;
     }
-  }
-  
-  console.log("Blog seeding complete!");
-}
 
-seedBlog().catch(console.error);
+    console.log("Blog is empty, seeding articles...");
+    
+    for (const article of seedArticles) {
+      try {
+        await db.insert(blogPosts).values(article).onConflictDoNothing();
+        console.log(`Inserted: ${article.slug}`);
+      } catch (error) {
+        console.error(`Error inserting ${article.slug}:`, error);
+      }
+    }
+    
+    console.log("Blog seeding complete!");
+  } catch (error) {
+    console.error("Error checking/seeding blog:", error);
+  }
+}
