@@ -223,19 +223,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  app.post("/api/blog", async (req, res) => {
-    try {
-      const data = insertBlogPostSchema.parse(req.body);
-      const post = await storage.createBlogPost(data);
-      res.status(201).json(post);
-    } catch (error) {
-      if (error instanceof z.ZodError) {
-        return res.status(400).json({ error: "Dados inválidos", details: error.errors });
-      }
-      console.error("Erro ao criar artigo:", error);
-      res.status(500).json({ error: "Erro ao criar artigo" });
-    }
-  });
+  // Blog creation endpoint disabled for security - use seed script instead
+  // Uncomment and add authentication middleware if admin functionality is needed
+  // app.post("/api/blog", async (req, res) => {
+  //   try {
+  //     const data = insertBlogPostSchema.parse(req.body);
+  //     const post = await storage.createBlogPost(data);
+  //     res.status(201).json(post);
+  //   } catch (error) {
+  //     if (error instanceof z.ZodError) {
+  //       return res.status(400).json({ error: "Dados inválidos", details: error.errors });
+  //     }
+  //     console.error("Erro ao criar artigo:", error);
+  //     res.status(500).json({ error: "Erro ao criar artigo" });
+  //   }
+  // });
 
   const httpServer = createServer(app);
 

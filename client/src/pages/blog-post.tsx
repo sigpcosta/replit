@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useParams, Link } from "wouter";
 import { useMemo } from "react";
 import { marked } from "marked";
+import DOMPurify from "dompurify";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
@@ -46,7 +47,8 @@ export default function BlogPostPage() {
   const htmlContent = useMemo(() => {
     if (!post) return '';
     const content = getContent(post);
-    return marked.parse(content) as string;
+    const rawHtml = marked.parse(content) as string;
+    return DOMPurify.sanitize(rawHtml);
   }, [post, language]);
 
   const handleShare = () => {
