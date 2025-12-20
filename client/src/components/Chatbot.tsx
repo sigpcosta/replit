@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, X, Send, User, Bot, Phone, Mail, PhoneCall } from "lucide-react";
+import { MessageCircle, X, Send, User, Bot, Mail, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -285,9 +285,9 @@ export default function Chatbot() {
   useEffect(() => {
     if (location !== currentPath) {
       setCurrentPath(location);
-      if (isOpen) {
-        setMessages([]);
-      }
+      setMessages([]);
+      setIsTyping(false);
+      setInputValue("");
     }
   }, [location]);
 
