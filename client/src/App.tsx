@@ -5,6 +5,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/i18n/LanguageContext";
+import Chatbot from "@/components/Chatbot";
 import Home from "@/pages/home";
 import AlojamentoPage from "@/pages/alojamento";
 import AnimacaoPage from "@/pages/animacao";
@@ -22,6 +23,7 @@ import TermosVendingPage from "@/pages/termos-vending";
 import PrivacidadePage from "@/pages/privacidade";
 import CookiesPage from "@/pages/cookies";
 import GaleriaApartamentoPage from "@/pages/galeria-apartamento";
+import ContactPage from "@/pages/contact";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -44,6 +46,7 @@ function Router() {
       <Route path="/privacidade" component={PrivacidadePage} />
       <Route path="/cookies" component={CookiesPage} />
       <Route path="/galeria-apartamento/:slug" component={GaleriaApartamentoPage} />
+      <Route path="/contact" component={ContactPage} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -57,6 +60,7 @@ function App() {
           <TooltipProvider>
             <Toaster />
             <Router />
+            <Chatbot />
           </TooltipProvider>
         </LanguageProvider>
       </QueryClientProvider>
