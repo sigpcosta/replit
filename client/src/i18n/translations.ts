@@ -1142,42 +1142,48 @@ export const translations = {
     // About Page
     about: {
       title: "Sobre a Azores4fun",
-      subtitle: "A sua empresa de confiança para turismo, alojamento e serviços nos Açores desde o início da nossa jornada em Horta, Faial.",
-      metaDescription: "Conheça a Azores4fun: empresa de turismo multi-serviço em Horta, Faial. Alojamento local, animação turística, eventos, tatuagens, gestão imobiliária e loja. A sua aventura completa nos Açores.",
+      subtitle: "Inovação, Aventura e Tradição Açoriana desde 2011",
+      metaDescription: "Conheça a Azores4fun: empresa de turismo multi-serviço em Horta, Faial desde 2011. Alojamento local, animação turística, eventos, tatuagens, gestão imobiliária e loja. A sua aventura completa nos Açores.",
       heroTitle: "A Nossa História",
-      heroSubtitle: "De 3 apartamentos a uma empresa multi-serviço completa",
+      heroSubtitle: "Inovação, Aventura e Tradição Açoriana",
       ourStory: "A Nossa Jornada",
-      storyP1: "A Azores4fun começou como um sonho simples: oferecer alojamento de qualidade no coração da Horta, Faial. Com 3 apartamentos modernos e totalmente equipados, rapidamente nos tornámos uma escolha popular para viajantes que procuravam conforto e autenticidade nos Açores.",
-      storyP2: "Mas não parámos por aí. Ouvindo os nossos hóspedes e respondendo às suas necessidades, expandimos para a animação turística, criando experiências únicas e emocionantes. Construímos um campo próprio para Lasertag, Paintball, Gelblaster e Nerfs, investimos em equipamento náutico de qualidade e adquirimos uma carrinha elétrica de 9 lugares para tours ecológicos pela ilha.",
-      storyP3: "A nossa paixão por criar momentos memoráveis levou-nos a expandir para eventos, com tendas de grandes dimensões, insufláveis para festas e atividades de teambuilding. Flexibilizamos as nossas operações para levar a diversão a qualquer local da ilha.",
-      storyP4: "Sempre focados em diversificar e inovar, abrimos um estúdio profissional de tatuagem e piercings, oferecendo arte corporal com segurança e qualidade. Expandimos também para a gestão imobiliária, oferecendo serviços de arrendamento de longa duração, manutenção e construção.",
-      storyP5: "Hoje, a Azores4fun é mais do que uma empresa de turismo. Somos uma marca completa que combina alojamento, aventura, eventos, arte e serviços imobiliários - tudo pensado para tornar a sua experiência nos Açores verdadeiramente inesquecível.",
+      tagline: "O nosso objetivo permanece claro: diferenciar a oferta turística local com inovação, garantindo que cada cliente leve dos Açores e do Faial memórias inesquecíveis e um serviço de excelência.",
+      storyP1: "A Azores4fun nasceu em 2011, na Horta, Ilha do Faial, movida pela paixão pelo mar e pelo espírito de aventura. Começámos com experiências náuticas a bordo de um veleiro, proporcionando cruzeiros inter-ilhas e noites mágicas sob as estrelas.",
+      storyP2: "Em 2017, levámos a emoção para terra, restaurando um lendário Toyota BJ40 para transferes e passeios todo-o-terreno, dando início à nossa expansão. Em 2019, diversificámos para o alojamento local com a inauguração da \"Casa da Travessa\".",
+      storyP3: "Adaptámo-nos aos tempos desafiantes da pandemia, reinventando o nosso caminho. Foi nesse momento de viragem que investimos num campo de Paintball próprio, trazendo uma nova dimensão de diversão e ação para os nossos clientes.",
+      storyP4: "Entre 2022 e 2023, alargámos a nossa oferta com o aluguer de SUPs, Kayaks e material de snorkeling, conquistando a licença de Operador Marítimo-turístico. Adquirimos uma carrinha elétrica de 9 lugares e lançámos o aluguer de tendas de campismo para experiências multiactividades.",
+      storyP5: "Na Azores4fun, o nosso propósito é simples: inovar e diferenciar o turismo nos Açores, proporcionando experiências únicas e memoráveis a todos os que nos visitam. Seja no mar, na terra ou em família, garantimos aventura, segurança e hospitalidade açoriana!",
       timeline: "A Nossa Evolução",
       milestones: [
         {
-          year: "Início",
-          title: "Alojamento Local",
-          desc: "Começámos com 3 apartamentos modernos no centro da Horta, oferecendo acomodação de qualidade para viajantes."
+          year: "2011",
+          title: "Fundação",
+          desc: "Nascemos na Horta, Faial, com experiências náuticas a bordo de veleiro. Cruzeiros inter-ilhas e noites sob as estrelas."
         },
         {
-          year: "Expansão",
-          title: "Animação Turística",
-          desc: "Construímos um campo próprio para jogos de estratégia e investimos em equipamento náutico (SUPs, kayaks, snorkeling)."
+          year: "2017",
+          title: "Toyota BJ40",
+          desc: "Restaurámos um lendário Toyota BJ40 para transferes e passeios todo-o-terreno, levando a aventura para terra."
         },
         {
-          year: "Crescimento",
-          title: "Eventos e Mobilidade",
-          desc: "Adquirimos tendas de eventos, insufláveis e carrinha elétrica de 9 lugares para tours ecológicos pela ilha."
+          year: "2019",
+          title: "Casa da Travessa",
+          desc: "Diversificámos para alojamento local com a inauguração da Casa da Travessa no centro histórico da Horta."
         },
         {
-          year: "Diversificação",
-          title: "Novos Serviços",
-          desc: "Abrimos estúdio de tatuagem & piercings e expandimos para gestão imobiliária com serviços de construção."
+          year: "2021",
+          title: "Campo de Paintball",
+          desc: "Investimos num campo próprio de Paintball, trazendo nova dimensão de diversão e ação para os clientes."
         },
         {
-          year: "Hoje",
-          title: "Empresa Multi-Serviço",
-          desc: "6 áreas de negócio integradas: Alojamento, Animação, Eventos, Tatuagem, Imobiliária e Loja física."
+          year: "2022-2023",
+          title: "Expansão Náutica",
+          desc: "Aluguer de SUPs, Kayaks e snorkeling. Licença de Operador Marítimo-turístico. Carrinha elétrica 9 lugares."
+        },
+        {
+          year: "2024",
+          title: "Loja Física & T0",
+          desc: "Inaugurámos o apartamento Azores4fun (T0) e a nossa loja física. Laser Tag, Gel Blasters e Nerfs para toda a família."
         }
       ],
       businessAreas: "As Nossas Áreas de Negócio",
@@ -2517,42 +2523,48 @@ export const translations = {
     // About Page
     about: {
       title: "About Azores4fun",
-      subtitle: "Your trusted multi-service tourism company in the Azores since the beginning of our journey in Horta, Faial.",
-      metaDescription: "Meet Azores4fun: multi-service tourism company in Horta, Faial. Local accommodation, tourist activities, events, tattoos, property management and shop. Your complete adventure in the Azores.",
+      subtitle: "Innovation, Adventure and Azorean Tradition since 2011",
+      metaDescription: "Meet Azores4fun: multi-service tourism company in Horta, Faial since 2011. Local accommodation, tourist activities, events, tattoos, property management and shop. Your complete adventure in the Azores.",
       heroTitle: "Our Story",
-      heroSubtitle: "From 3 apartments to a complete multi-service company",
+      heroSubtitle: "Innovation, Adventure and Azorean Tradition",
       ourStory: "Our Journey",
-      storyP1: "Azores4fun began as a simple dream: to offer quality accommodation in the heart of Horta, Faial. With 3 modern and fully equipped apartments, we quickly became a popular choice for travelers seeking comfort and authenticity in the Azores.",
-      storyP2: "But we didn't stop there. Listening to our guests and responding to their needs, we expanded into tourist activities, creating unique and exciting experiences. We built our own field for Lasertag, Paintball, Gelblaster and Nerfs, invested in quality nautical equipment and acquired a 9-seater electric van for eco-friendly island tours.",
-      storyP3: "Our passion for creating memorable moments led us to expand into events, with large tents, inflatables for parties and teambuilding activities. We made our operations flexible to bring fun to any location on the island.",
-      storyP4: "Always focused on diversifying and innovating, we opened a professional tattoo and piercing studio, offering body art with safety and quality. We also expanded into property management, offering long-term rental, maintenance and construction services.",
-      storyP5: "Today, Azores4fun is more than a tourism company. We are a complete brand that combines accommodation, adventure, events, art and property services - all designed to make your Azores experience truly unforgettable.",
+      tagline: "Our goal remains clear: to differentiate the local tourist offer with innovation, ensuring that every customer takes unforgettable memories and excellent service from the Azores and Faial.",
+      storyP1: "Azores4fun was born in 2011, in Horta, Faial Island, driven by a passion for the sea and the spirit of adventure. We started with nautical experiences aboard a sailboat, providing inter-island cruises and magical nights under the stars.",
+      storyP2: "In 2017, we brought the excitement to land, restoring a legendary Toyota BJ40 for transfers and off-road tours, beginning our expansion. In 2019, we diversified into local accommodation with the opening of \"Casa da Travessa\".",
+      storyP3: "We adapted to the challenging times of the pandemic, reinventing our path. It was at this turning point that we invested in our own Paintball field, bringing a new dimension of fun and action for our customers.",
+      storyP4: "Between 2022 and 2023, we expanded our offer with SUP, Kayak and snorkeling equipment rental, obtaining the Maritime-Tourist Operator license. We acquired a 9-seater electric van and launched camping tent rentals for multi-activity experiences.",
+      storyP5: "At Azores4fun, our purpose is simple: to innovate and differentiate tourism in the Azores, providing unique and memorable experiences to all who visit us. Whether at sea, on land or with family, we guarantee adventure, safety and Azorean hospitality!",
       timeline: "Our Evolution",
       milestones: [
         {
-          year: "Beginning",
-          title: "Local Accommodation",
-          desc: "We started with 3 modern apartments in the center of Horta, offering quality accommodation for travelers."
+          year: "2011",
+          title: "Foundation",
+          desc: "Born in Horta, Faial, with nautical experiences aboard a sailboat. Inter-island cruises and nights under the stars."
         },
         {
-          year: "Expansion",
-          title: "Tourist Activities",
-          desc: "We built our own field for strategy games and invested in nautical equipment (SUPs, kayaks, snorkeling)."
+          year: "2017",
+          title: "Toyota BJ40",
+          desc: "We restored a legendary Toyota BJ40 for transfers and off-road tours, bringing adventure to land."
         },
         {
-          year: "Growth",
-          title: "Events and Mobility",
-          desc: "We acquired event tents, inflatables and a 9-seater electric van for eco-friendly island tours."
+          year: "2019",
+          title: "Casa da Travessa",
+          desc: "Diversified into local accommodation with the opening of Casa da Travessa in the historic center of Horta."
         },
         {
-          year: "Diversification",
-          title: "New Services",
-          desc: "We opened a tattoo & piercing studio and expanded into property management with construction services."
+          year: "2021",
+          title: "Paintball Field",
+          desc: "Invested in our own Paintball field, bringing a new dimension of fun and action for customers."
         },
         {
-          year: "Today",
-          title: "Multi-Service Company",
-          desc: "6 integrated business areas: Accommodation, Activities, Events, Tattoo, Property Management and Physical Shop."
+          year: "2022-2023",
+          title: "Nautical Expansion",
+          desc: "SUP, Kayak and snorkeling rental. Maritime-Tourist Operator license. 9-seater electric van."
+        },
+        {
+          year: "2024",
+          title: "Physical Shop & Studio",
+          desc: "Opened the Azores4fun apartment (T0) and our physical shop. Laser Tag, Gel Blasters and Nerfs for the whole family."
         }
       ],
       businessAreas: "Our Business Areas",
