@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
@@ -41,6 +42,50 @@ export default function BlogPage() {
   const getTitle = (post: BlogPost) => language === 'pt' ? post.titlePt : post.titleEn;
   const getExcerpt = (post: BlogPost) => language === 'pt' ? post.excerptPt : post.excerptEn;
 
+  const generateBlogListJsonLd = () => {
+    const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://azores4fun.com';
+    return {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": language === 'pt' ? "Blog Azores4Fun - Turismo e Aventura nos Açores" : "Azores4Fun Blog - Tourism and Adventure in the Azores",
+      "description": seo.description,
+      "url": `${baseUrl}/blog`,
+      "inLanguage": language === 'pt' ? 'pt-PT' : 'en-US',
+      "publisher": {
+        "@type": "Organization",
+        "name": "Azores4Fun",
+        "url": baseUrl,
+        "logo": {
+          "@type": "ImageObject",
+          "url": `${baseUrl}/logo.png`
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Horta",
+          "addressRegion": "Faial",
+          "addressCountry": "Portugal"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+351934993770",
+          "contactType": "customer service"
+        }
+      },
+      "blogPost": posts?.slice(0, 10).map(post => ({
+        "@type": "BlogPosting",
+        "headline": getTitle(post),
+        "description": getExcerpt(post),
+        "url": `${baseUrl}/blog/${post.slug}`,
+        "image": post.featuredImage ? `${baseUrl}${post.featuredImage}` : undefined,
+        "datePublished": post.publishedAt ? new Date(post.publishedAt).toISOString() : undefined,
+        "author": {
+          "@type": "Organization",
+          "name": post.author || "Azores4Fun"
+        }
+      })) || []
+    };
+  };
+
   return (
     <div className="min-h-screen">
       <SEOHead
@@ -50,6 +95,13 @@ export default function BlogPage() {
         ogImage={seo.ogImage}
         canonicalPath="/blog"
       />
+      {posts && posts.length > 0 && (
+        <Helmet>
+          <script type="application/ld+json">
+            {JSON.stringify(generateBlogListJsonLd())}
+          </script>
+        </Helmet>
+      )}
       <Navigation />
 
       <div className="pt-20 md:pt-24">

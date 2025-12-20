@@ -26,10 +26,18 @@ export const blogPosts = pgTable("blog_posts", {
   contentEn: text("content_en").notNull(),
   excerptPt: text("excerpt_pt").notNull(),
   excerptEn: text("excerpt_en").notNull(),
+  metaDescriptionPt: text("meta_description_pt"),
+  metaDescriptionEn: text("meta_description_en"),
+  keywordsPt: text("keywords_pt"),
+  keywordsEn: text("keywords_en"),
   author: text("author").notNull().default("Azores4fun"),
+  authorBio: text("author_bio"),
   featuredImage: text("featured_image"),
+  featuredImageAlt: text("featured_image_alt"),
   category: text("category"),
+  tags: text("tags"),
   publishedAt: timestamp("published_at").notNull().defaultNow(),
+  updatedAt: timestamp("updated_at"),
   createdAt: timestamp("created_at").notNull().defaultNow(),
 });
 

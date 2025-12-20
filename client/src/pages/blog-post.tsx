@@ -3,6 +3,7 @@ import { useParams, Link } from "wouter";
 import { useMemo } from "react";
 import { marked } from "marked";
 import DOMPurify from "dompurify";
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
@@ -43,6 +44,62 @@ export default function BlogPostPage() {
   const getTitle = (p: BlogPost) => language === 'pt' ? p.titlePt : p.titleEn;
   const getContent = (p: BlogPost) => language === 'pt' ? p.contentPt : p.contentEn;
   const getExcerpt = (p: BlogPost) => language === 'pt' ? p.excerptPt : p.excerptEn;
+  const getMetaDescription = (p: BlogPost) => {
+    const meta = language === 'pt' ? p.metaDescriptionPt : p.metaDescriptionEn;
+    return meta || getExcerpt(p);
+  };
+  const getKeywords = (p: BlogPost) => language === 'pt' ? p.keywordsPt : p.keywordsEn;
+
+  const generateJsonLd = (p: BlogPost) => {
+    const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://azores4fun.com';
+    return {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": getTitle(p),
+      "description": getMetaDescription(p),
+      "image": p.featuredImage ? `${baseUrl}${p.featuredImage}` : undefined,
+      "author": {
+        "@type": "Organization",
+        "name": p.author || "Azores4Fun",
+        "url": baseUrl,
+        "logo": `${baseUrl}/logo.png`
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Azores4Fun",
+        "url": baseUrl,
+        "logo": {
+          "@type": "ImageObject",
+          "url": `${baseUrl}/logo.png`
+        }
+      },
+      "datePublished": p.publishedAt ? new Date(p.publishedAt).toISOString() : undefined,
+      "dateModified": (p.updatedAt || p.publishedAt) ? new Date(p.updatedAt || p.publishedAt!).toISOString() : undefined,
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `${baseUrl}/blog/${p.slug}`
+      },
+      "articleSection": p.category || "Tourism",
+      "keywords": getKeywords(p) || p.tags || p.category,
+      "inLanguage": language === 'pt' ? 'pt-PT' : 'en-US',
+      "about": {
+        "@type": "Thing",
+        "name": "Tourism Activities in Faial Island, Azores"
+      },
+      "mentions": [
+        {
+          "@type": "Place",
+          "name": "Faial Island",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Horta",
+            "addressRegion": "Azores",
+            "addressCountry": "Portugal"
+          }
+        }
+      ]
+    };
+  };
 
   const htmlContent = useMemo(() => {
     if (!post) return '';
@@ -106,10 +163,16 @@ export default function BlogPostPage() {
     <div className="min-h-screen">
       <SEOHead
         title={`${getTitle(post)} | Blog Azores4fun`}
-        description={getExcerpt(post)}
+        description={getMetaDescription(post)}
+        keywords={getKeywords(post) || post.category || undefined}
         ogImage={post.featuredImage || "/og-default.jpg"}
         canonicalPath={`/blog/${post.slug}`}
       />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(generateJsonLd(post))}
+        </script>
+      </Helmet>
       <Navigation />
 
       <div className="pt-20 md:pt-24">
