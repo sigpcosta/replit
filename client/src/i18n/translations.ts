@@ -929,7 +929,7 @@ export const translations = {
       },
       portfolio: {
         title: "Nosso Portfolio",
-        subtitle: "Veja alguns dos nossos trabalhos mais recentes"
+        subtitle: "Siga-nos e veja alguns dos nossos trabalhos mais recentes em https://www.instagram.com/catarinagomestattoo/"
       },
       tattooProcess: [
         "Consulta inicial para discutir ideias e expectativas",
@@ -2304,7 +2304,7 @@ export const translations = {
       },
       portfolio: {
         title: "Our Portfolio",
-        subtitle: "See some of our most recent work"
+        subtitle: "Follow us and see some of our most recent work at https://www.instagram.com/catarinagomestattoo/"
       },
       tattooProcess: [
         "Initial consultation to discuss ideas and expectations",
