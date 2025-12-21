@@ -232,11 +232,11 @@ export default function TatuagemPage() {
               >
                 {t.tattoo.bookConsultation}
               </Button>
-              <Link href="/portfolio">
+              <a href="https://www.instagram.com/catarinagomestattoo/" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20" data-testid="button-view-portfolio">
                   {t.tattoo.viewPortfolio}
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </section>
