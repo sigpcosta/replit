@@ -1142,7 +1142,7 @@ export const translations = {
     // About Page
     about: {
       title: "Sobre a Azores4fun",
-      subtitle: "A sua empresa de confiança para turismo, alojamento e serviços nos Açores desde o início da nossa jornada em Horta, Faial.",
+      subtitle: "A sua empresa de confiança para turismo, alojamento e serviços na Horta, Faial, Açores.",
       metaDescription: "Conheça a Azores4fun: empresa de turismo multi-serviço em Horta, Faial. Alojamento local, animação turística, eventos, tatuagens, gestão imobiliária e loja. A sua aventura completa nos Açores.",
       heroTitle: "A Nossa História",
       heroSubtitle: "Uma Viagem de Aventura e Adaptação",
@@ -2517,7 +2517,7 @@ export const translations = {
     // About Page
     about: {
       title: "About Azores4fun",
-      subtitle: "Your trusted multi-service tourism company in the Azores since the beginning of our journey in Horta, Faial.",
+      subtitle: "Your trusted company for tourism, accommodation and services in Horta, Faial, Azores.",
       metaDescription: "Meet Azores4fun: multi-service tourism company in Horta, Faial. Local accommodation, tourist activities, events, tattoos, property management and shop. Your complete adventure in the Azores.",
       heroTitle: "Our Story",
       heroSubtitle: "A Journey of Adventure and Adaptation",
