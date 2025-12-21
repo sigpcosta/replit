@@ -855,7 +855,7 @@ export const translations = {
     // Tattoo Page
     tattoo: {
       title: "Tatuagem & Piercings",
-      subtitle: "Estúdio profissional com artistas experientes. Transforme as suas ideias em arte permanente com segurança e qualidade.",
+      subtitle: "Estúdio profissional com artista experiente. Transforme as suas ideias em arte permanente com segurança e qualidade.",
       heroTitle: "Arte que Vive na Sua Pele",
       heroP1: "No nosso estúdio, cada tatuagem é uma obra de arte única. Os nossos artistas experientes trabalham consigo para dar vida às suas ideias, seja um design minimalista ou uma peça complexa.",
       heroP2: "Com equipamento de última geração, materiais premium e os mais altos padrões de higiene e segurança, garantimos uma experiência profissional do início ao fim.",
@@ -2230,7 +2230,7 @@ export const translations = {
     // Tattoo Page
     tattoo: {
       title: "Tattoo & Piercings",
-      subtitle: "Professional studio with experienced artists. Transform your ideas into permanent art with safety and quality.",
+      subtitle: "Professional studio with experienced artist. Transform your ideas into permanent art with safety and quality.",
       heroTitle: "Art That Lives on Your Skin",
       heroP1: "In our studio, each tattoo is a unique work of art. Our experienced artists work with you to bring your ideas to life, whether it's a minimalist design or a complex piece.",
       heroP2: "With state-of-the-art equipment, premium materials and the highest hygiene and safety standards, we guarantee a professional experience from start to finish.",
