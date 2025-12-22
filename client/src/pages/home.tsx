@@ -3,13 +3,13 @@ import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import FeaturedActivity from "@/components/FeaturedActivity";
 import WhyChoose from "@/components/WhyChoose";
-import FAQSection from "@/components/FAQSection";
+import DatabaseFAQSection from "@/components/DatabaseFAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { seoConfig } from "@/lib/seo-config";
-import { organizationSchema, localBusinessSchema, generateFAQSchema } from "@/lib/structured-data";
+import { organizationSchema, localBusinessSchema } from "@/lib/structured-data";
 import { Home as HomeIcon, Activity, PartyPopper, Pencil, Building2, Store } from "lucide-react";
 
 import apartmentImage from "@assets/15_1764274865100.jpg";
@@ -27,16 +27,22 @@ export default function Home() {
   const { t, language } = useLanguage();
   const seo = seoConfig[language].home;
   
-  const allFaqs = t.home.faqCategories.flatMap((category: any) => category.faqs);
-  
   const combinedSchema = {
     "@context": "https://schema.org",
     "@graph": [
       organizationSchema,
-      localBusinessSchema,
-      generateFAQSchema(allFaqs)
+      localBusinessSchema
     ]
   };
+  
+  const faqCategories = [
+    { service: "accommodation", title: language === "pt" ? "Alojamento" : "Accommodation", icon: HomeIcon, href: "/alojamento" },
+    { service: "paintball", title: language === "pt" ? "Animação Turística" : "Tourism Activities", icon: Activity, href: "/animacao" },
+    { service: "events", title: language === "pt" ? "Eventos" : "Events", icon: PartyPopper, href: "/eventos" },
+    { service: "tattoo", title: language === "pt" ? "Tatuagens" : "Tattoos", icon: Pencil, href: "/tatuagem" },
+    { service: "realestate", title: language === "pt" ? "Imobiliária" : "Real Estate", icon: Building2, href: "/imobiliaria" },
+    { service: "shop", title: language === "pt" ? "Loja" : "Shop", icon: Store, href: "/loja" },
+  ];
   
   const services = [
     {
@@ -165,12 +171,11 @@ export default function Home() {
 
       <WhyChoose />
 
-      <FAQSection
-        categories={t.home.faqCategories.map((category: { title: string; faqs: Array<{ question: string; answer: string }> }, index: number) => ({
-          ...category,
-          icon: [HomeIcon, Activity, PartyPopper, Pencil, Building2, Store][index],
-          href: ["/alojamento", "/animacao", "/eventos", "/tatuagem", "/imobiliaria", "/loja"][index]
-        }))}
+      <DatabaseFAQSection
+        categories={faqCategories}
+        title={language === "pt" ? "Perguntas Frequentes" : "Frequently Asked Questions"}
+        subtitle={language === "pt" ? "Encontre respostas rápidas às perguntas mais comuns sobre os nossos serviços" : "Find quick answers to the most common questions about our services"}
+        viewMoreText={language === "pt" ? "Ver Mais" : "View More"}
       />
 
       <CTASection />
