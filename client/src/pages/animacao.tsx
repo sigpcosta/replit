@@ -1,8 +1,6 @@
-import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ServiceFAQs from "@/components/ServiceFAQs";
-import ContactDialog from "@/components/ContactDialog";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -18,7 +16,6 @@ import { Link } from "wouter";
 
 export default function AnimacaoPage() {
   const { t, language } = useLanguage();
-  const [contactOpen, setContactOpen] = useState(false);
   const seo = seoConfig[language].animacao;
   
   const combinedSchema = {

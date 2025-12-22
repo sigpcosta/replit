@@ -3,8 +3,9 @@ import { Card } from "@/components/ui/card";
 import { Loader2 } from "lucide-react";
 import FAQItem from "./FAQItem";
 import ContactDialog from "./ContactDialog";
-import { useDatabaseFaqs } from "@/hooks/useDatabaseFaqs";
+import { useQuery } from "@tanstack/react-query";
 import { useLanguage } from "@/i18n/LanguageContext";
+import type { Faq } from "@shared/schema";
 
 interface ServiceFAQsProps {
   service: string | string[];
@@ -12,21 +13,22 @@ interface ServiceFAQsProps {
 }
 
 export default function ServiceFAQs({ service, title }: ServiceFAQsProps) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [contactOpen, setContactOpen] = useState(false);
   
   const services = Array.isArray(service) ? service : [service];
-  const { faqs: faq1, isLoading: loading1 } = useDatabaseFaqs(services[0]);
-  const { faqs: faq2, isLoading: loading2 } = useDatabaseFaqs(services[1] || services[0]);
-  const { faqs: faq3, isLoading: loading3 } = useDatabaseFaqs(services[2] || services[0]);
-  const { faqs: faq4, isLoading: loading4 } = useDatabaseFaqs(services[3] || services[0]);
   
-  const isLoading = loading1 || (services.length > 1 && loading2) || (services.length > 2 && loading3) || (services.length > 3 && loading4);
-  
-  let allFaqs = [...faq1];
-  if (services.length > 1 && services[1] !== services[0]) allFaqs = [...allFaqs, ...faq2];
-  if (services.length > 2 && services[2] !== services[0]) allFaqs = [...allFaqs, ...faq3];
-  if (services.length > 3 && services[3] !== services[0]) allFaqs = [...allFaqs, ...faq4];
+  const { data: allFaqs = [], isLoading } = useQuery<Faq[]>({
+    queryKey: ["/api/faqs"],
+  });
+
+  const filteredFaqs = allFaqs
+    .filter(faq => services.includes(faq.service) && faq.isActive === "true")
+    .map(faq => ({
+      id: faq.id,
+      question: language === "pt" ? faq.questionPt : faq.questionEn,
+      answer: language === "pt" ? faq.answerPt : faq.answerEn,
+    }));
 
   if (isLoading) {
     return (
@@ -36,7 +38,7 @@ export default function ServiceFAQs({ service, title }: ServiceFAQsProps) {
     );
   }
 
-  if (allFaqs.length === 0) return null;
+  if (filteredFaqs.length === 0) return null;
 
   return (
     <div className="max-w-4xl mx-auto px-4 md:px-8 pb-16 md:pb-24">
@@ -46,7 +48,7 @@ export default function ServiceFAQs({ service, title }: ServiceFAQsProps) {
       
       <Card className="p-6">
         <div className="space-y-1">
-          {allFaqs.map((faq, index) => (
+          {filteredFaqs.map((faq, index) => (
             <FAQItem key={faq.id || index} question={faq.question} answer={faq.answer} />
           ))}
         </div>
