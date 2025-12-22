@@ -38,8 +38,18 @@ export default function AdminPage() {
   useEffect(() => {
     const savedToken = localStorage.getItem("adminToken");
     if (savedToken) {
-      setToken(savedToken);
-      setIsAuthenticated(true);
+      fetch("/api/admin/verify", {
+        headers: { Authorization: `Bearer ${savedToken}` }
+      }).then(res => {
+        if (res.ok) {
+          setToken(savedToken);
+          setIsAuthenticated(true);
+        } else {
+          localStorage.removeItem("adminToken");
+        }
+      }).catch(() => {
+        localStorage.removeItem("adminToken");
+      });
     }
   }, []);
 

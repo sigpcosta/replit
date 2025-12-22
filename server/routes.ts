@@ -282,6 +282,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.json({ success: true });
   });
 
+  app.get("/api/admin/verify", (req, res) => {
+    const token = req.headers.authorization?.replace("Bearer ", "");
+    if (token && adminTokens.has(token)) {
+      res.json({ valid: true });
+    } else {
+      res.status(401).json({ valid: false });
+    }
+  });
+
   const requireAdmin = (req: any, res: any, next: any) => {
     const token = req.headers.authorization?.replace("Bearer ", "");
     if (token && adminTokens.has(token)) {
