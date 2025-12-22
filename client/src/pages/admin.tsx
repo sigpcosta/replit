@@ -158,6 +158,7 @@ function FaqsManager({ token }: { token: string }) {
   const { toast } = useToast();
   const [editingFaq, setEditingFaq] = useState<Faq | null>(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [filterService, setFilterService] = useState<string>("all");
   const [formData, setFormData] = useState({
     service: "general",
     questionPt: "",
@@ -171,6 +172,10 @@ function FaqsManager({ token }: { token: string }) {
   const { data: faqs = [], isLoading } = useQuery<Faq[]>({
     queryKey: ["/api/faqs"],
   });
+
+  const filteredFaqs = filterService === "all" 
+    ? faqs 
+    : faqs.filter(faq => faq.service === filterService);
 
   const createMutation = useMutation({
     mutationFn: async (data: typeof formData) => {
@@ -273,7 +278,20 @@ function FaqsManager({ token }: { token: string }) {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between gap-4 flex-wrap">
-        <h2 className="text-2xl font-bold">Perguntas Frequentes ({faqs.length})</h2>
+        <div className="flex items-center gap-4 flex-wrap">
+          <h2 className="text-2xl font-bold">FAQs ({filteredFaqs.length}/{faqs.length})</h2>
+          <Select value={filterService} onValueChange={setFilterService}>
+            <SelectTrigger className="w-[180px]" data-testid="select-filter-service">
+              <SelectValue placeholder="Filtrar por serviço" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">Todos os serviços</SelectItem>
+              {SERVICES.map((s) => (
+                <SelectItem key={s.value} value={s.value}>{s.label}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
             <Button onClick={() => resetForm()} data-testid="button-add-faq">
@@ -374,7 +392,7 @@ function FaqsManager({ token }: { token: string }) {
       </div>
 
       <div className="grid gap-4">
-        {faqs.map((faq) => (
+        {filteredFaqs.map((faq) => (
           <Card key={faq.id} className="hover-elevate" data-testid={`card-faq-${faq.id}`}>
             <CardContent className="p-4">
               <div className="flex items-start justify-between gap-4">
