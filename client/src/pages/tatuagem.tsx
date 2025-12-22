@@ -101,26 +101,6 @@ export default function TatuagemPage() {
     {
       title: t.tattoo.styles.fineline.title,
       description: t.tattoo.styles.fineline.desc
-    },
-    {
-      title: t.tattoo.styles.minimalist.title,
-      description: t.tattoo.styles.minimalist.desc
-    },
-    {
-      title: t.tattoo.styles.watercolor.title,
-      description: t.tattoo.styles.watercolor.desc
-    },
-    {
-      title: t.tattoo.styles.realism.title,
-      description: t.tattoo.styles.realism.desc
-    },
-    {
-      title: t.tattoo.styles.geometric.title,
-      description: t.tattoo.styles.geometric.desc
-    },
-    {
-      title: t.tattoo.styles.traditional.title,
-      description: t.tattoo.styles.traditional.desc
     }
   ];
 

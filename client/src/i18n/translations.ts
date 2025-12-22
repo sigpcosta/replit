@@ -872,7 +872,7 @@ export const translations = {
       },
       viewPortfolio: "Ver Portfolio",
       bookConsultation: "Marcar Consulta",
-      tattooStyles: "Estilos de Tatuagem",
+      tattooStyles: "Estilo de Tatuagem",
       piercingTypes: "Tipos de Piercing",
       theProcess: "O Processo",
       tattoosTab: "Tatuagens",
@@ -880,7 +880,7 @@ export const translations = {
       aftercareTitle: "Cuidados Pós-Sessão",
       servicesTitle: "Nossos Serviços",
       servicesSubtitle: "Escolha entre tatuagens personalizadas ou piercings profissionais",
-      tattooStylesSubtitle: "Exploramos diversos estilos para criar a tatuagem perfeita para si",
+      tattooStylesSubtitle: "Especializamo-nos no estilo Fineline para criar tatuagens delicadas e elegantes",
       tattooProcessTitle: "Como Funciona",
       tattooProcessSubtitle: "Do conceito à execução, um processo profissional e personalizado",
       piercingTypesSubtitle: "Oferecemos uma vasta gama de piercings com joias de qualidade premium",
@@ -912,12 +912,7 @@ export const translations = {
         requiredFieldsDesc: "Por favor, preencha todos os campos."
       },
       styles: {
-        fineline: { title: "Fineline", desc: "Traços finos e delicados, perfeitos para designs minimalistas e detalhados." },
-        minimalist: { title: "Minimalista", desc: "Designs simples e elegantes com poucos elementos, mas grande impacto visual." },
-        watercolor: { title: "Aquarela", desc: "Estilo artístico com cores vibrantes que simulam pinceladas de aquarela." },
-        realism: { title: "Realismo", desc: "Reprodução fiel de imagens, retratos e elementos com alto nível de detalhe." },
-        geometric: { title: "Geométrico", desc: "Formas geométricas precisas criando padrões e mandalas harmoniosas." },
-        traditional: { title: "Tradicional", desc: "Estilo clássico com linhas marcadas e cores sólidas." }
+        fineline: { title: "Fineline", desc: "Especialidade da casa. Traços finos e delicados que criam designs minimalistas, elegantes e sofisticados. Perfeito para detalhes precisos, lettering delicado, flores e símbolos com linhas suaves. Uma técnica que valoriza a subtileza e a beleza do detalhe." }
       },
       piercings: {
         ear: { title: "Orelha", healing: "Cicatrização: 6-12 semanas", desc: "Lóbulo, hélix, tragus, conch, daith, rook e industrial. Variedade de joias disponíveis." },
@@ -2247,7 +2242,7 @@ export const translations = {
       },
       viewPortfolio: "View Portfolio",
       bookConsultation: "Book Consultation",
-      tattooStyles: "Tattoo Styles",
+      tattooStyles: "Tattoo Style",
       piercingTypes: "Piercing Types",
       theProcess: "The Process",
       tattoosTab: "Tattoos",
@@ -2255,7 +2250,7 @@ export const translations = {
       aftercareTitle: "Aftercare",
       servicesTitle: "Our Services",
       servicesSubtitle: "Choose between custom tattoos or professional piercings",
-      tattooStylesSubtitle: "We explore various styles to create the perfect tattoo for you",
+      tattooStylesSubtitle: "We specialize in Fineline style to create delicate and elegant tattoos",
       tattooProcessTitle: "How It Works",
       tattooProcessSubtitle: "From concept to execution, a professional and personalized process",
       piercingTypesSubtitle: "We offer a wide range of piercings with premium quality jewelry",
@@ -2287,12 +2282,7 @@ export const translations = {
         requiredFieldsDesc: "Please fill in all fields."
       },
       styles: {
-        fineline: { title: "Fineline", desc: "Fine and delicate strokes, perfect for minimalist and detailed designs." },
-        minimalist: { title: "Minimalist", desc: "Simple and elegant designs with few elements but great visual impact." },
-        watercolor: { title: "Watercolor", desc: "Artistic style with vibrant colors that simulate watercolor brushstrokes." },
-        realism: { title: "Realism", desc: "Faithful reproduction of images, portraits and elements with high level of detail." },
-        geometric: { title: "Geometric", desc: "Precise geometric shapes creating harmonious patterns and mandalas." },
-        traditional: { title: "Traditional", desc: "Classic style with bold lines and solid colors." }
+        fineline: { title: "Fineline", desc: "Our specialty. Fine and delicate strokes that create minimalist, elegant and sophisticated designs. Perfect for precise details, delicate lettering, flowers and symbols with soft lines. A technique that values subtlety and the beauty of detail." }
       },
       piercings: {
         ear: { title: "Ear", healing: "Healing: 6-12 weeks", desc: "Lobe, helix, tragus, conch, daith, rook and industrial. Variety of jewelry available." },
