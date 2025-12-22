@@ -338,6 +338,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Admin Reseed FAQs
+  app.post("/api/admin/faqs/reseed", requireAdmin, async (_req, res) => {
+    try {
+      const { reseedFaqs } = await import("./seed-faqs");
+      const count = await reseedFaqs();
+      res.json({ success: true, message: `FAQs atualizadas com sucesso. Total: ${count}` });
+    } catch (error) {
+      console.error("Erro ao atualizar FAQs:", error);
+      res.status(500).json({ error: "Erro ao atualizar FAQs" });
+    }
+  });
+
   // Admin Blog CRUD
   app.post("/api/admin/blog", requireAdmin, async (req, res) => {
     try {
