@@ -4,7 +4,13 @@ import { storage } from "./storage";
 import { z } from "zod";
 import path from "path";
 import fs from "fs";
-import { insertBlogPostSchema } from "@shared/schema";
+import { insertBlogPostSchema, insertFaqSchema } from "@shared/schema";
+import OpenAI from "openai";
+
+const openai = new OpenAI({
+  apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
+  baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
+});
 
 const bookingSchema = z.object({
   name: z.string().min(1, "Nome é obrigatório"),
@@ -249,6 +255,133 @@ export async function registerRoutes(app: Express): Promise<Server> {
   //     res.status(500).json({ error: "Erro ao criar artigo" });
   //   }
   // });
+
+  // FAQ Routes
+  app.get("/api/faqs", async (_req, res) => {
+    try {
+      const allFaqs = await storage.getAllFaqs();
+      res.json(allFaqs);
+    } catch (error) {
+      console.error("Erro ao obter FAQs:", error);
+      res.status(500).json({ error: "Erro ao obter FAQs" });
+    }
+  });
+
+  app.get("/api/faqs/:service", async (req, res) => {
+    try {
+      const serviceFaqs = await storage.getFaqsByService(req.params.service);
+      res.json(serviceFaqs);
+    } catch (error) {
+      console.error("Erro ao obter FAQs do serviço:", error);
+      res.status(500).json({ error: "Erro ao obter FAQs do serviço" });
+    }
+  });
+
+  // Chatbot AI endpoint
+  app.post("/api/chatbot", async (req, res) => {
+    try {
+      const { message, language = "pt", currentPage = "/" } = req.body;
+      
+      if (!message) {
+        return res.status(400).json({ error: "Mensagem é obrigatória" });
+      }
+
+      // Get all FAQs to provide context
+      const allFaqs = await storage.getAllFaqs();
+      
+      // Build context from FAQs
+      const faqContext = allFaqs.map(faq => {
+        const question = language === "pt" ? faq.questionPt : faq.questionEn;
+        const answer = language === "pt" ? faq.answerPt : faq.answerEn;
+        return `Serviço: ${faq.service}\nPergunta: ${question}\nResposta: ${answer}\nPalavras-chave: ${faq.keywords || ""}`;
+      }).join("\n\n");
+
+      const systemPrompt = language === "pt" 
+        ? `És o assistente virtual da Azores4Fun, uma empresa de turismo e serviços nos Açores, Ilha do Faial, Horta.
+
+INFORMAÇÕES DA EMPRESA:
+- Localização: Rua Vasco da Gama, Horta, Faial, Açores
+- Telefone: +351 934 993 770
+- WhatsApp: +351 969 519 950
+- Email: info@azores4fun.com
+- Website: azores4fun.com
+
+SERVIÇOS OFERECIDOS:
+1. Paintball - Jogos emocionantes com equipamento profissional
+2. LaserTag - Jogos para todas as idades, sem tinta
+3. Caiaque & SUP - Aluguer na Marina da Horta e Porto Pim
+4. Tours de Carrinha Elétrica - Passeios pela ilha (Caldeira, Capelinhos, etc.)
+5. Alojamento - Casa da Travessa com espírito náutico
+6. Tatuagens & Piercings - Estúdio profissional com artista experiente (Catarina Gomes)
+7. Eventos & Festas - Aniversários, despedidas, team building
+8. Transfers - Transporte em carrinha 100% elétrica
+9. Gestão Imobiliária - Gestão de propriedades na ilha
+10. Loja - Merchandising Azores4Fun e produtos locais
+
+PERGUNTAS FREQUENTES:
+${faqContext}
+
+REGRAS:
+- Responde SEMPRE em português de Portugal
+- Sê simpático, profissional e útil
+- Se não souberes a resposta, sugere contactar por WhatsApp (+351 969 519 950) ou telefone (+351 934 993 770)
+- Mantém respostas concisas (máximo 3-4 frases)
+- Se o utilizador quiser falar com uma pessoa, fornece os contactos
+- A página atual do utilizador é: ${currentPage}`
+        : `You are the virtual assistant for Azores4Fun, a tourism and services company in the Azores, Faial Island, Horta.
+
+COMPANY INFORMATION:
+- Location: Rua Vasco da Gama, Horta, Faial, Azores
+- Phone: +351 934 993 770
+- WhatsApp: +351 969 519 950
+- Email: info@azores4fun.com
+- Website: azores4fun.com
+
+SERVICES OFFERED:
+1. Paintball - Exciting games with professional equipment
+2. LaserTag - Games for all ages, no paint
+3. Kayak & SUP - Rental at Marina da Horta and Porto Pim
+4. Electric Van Tours - Island tours (Caldeira, Capelinhos, etc.)
+5. Accommodation - Casa da Travessa with nautical spirit
+6. Tattoos & Piercings - Professional studio with experienced artist (Catarina Gomes)
+7. Events & Parties - Birthdays, bachelor parties, team building
+8. Transfers - Transport in 100% electric van
+9. Property Management - Property management on the island
+10. Shop - Azores4Fun merchandise and local products
+
+FREQUENTLY ASKED QUESTIONS:
+${faqContext}
+
+RULES:
+- ALWAYS respond in English
+- Be friendly, professional and helpful
+- If you don't know the answer, suggest contacting via WhatsApp (+351 969 519 950) or phone (+351 934 993 770)
+- Keep responses concise (maximum 3-4 sentences)
+- If the user wants to talk to a person, provide contact details
+- The user's current page is: ${currentPage}`;
+
+      const response = await openai.chat.completions.create({
+        model: "gpt-4o-mini",
+        messages: [
+          { role: "system", content: systemPrompt },
+          { role: "user", content: message }
+        ],
+        max_completion_tokens: 500,
+      });
+
+      const aiResponse = response.choices[0]?.message?.content || (language === "pt" 
+        ? "Desculpe, não consegui processar a sua mensagem. Por favor, tente novamente." 
+        : "Sorry, I couldn't process your message. Please try again.");
+
+      res.json({ response: aiResponse });
+    } catch (error) {
+      console.error("Erro no chatbot:", error);
+      const errorMessage = req.body.language === "pt"
+        ? "Desculpe, ocorreu um erro. Por favor, contacte-nos por WhatsApp (+351 969 519 950) ou telefone (+351 934 993 770)."
+        : "Sorry, an error occurred. Please contact us via WhatsApp (+351 969 519 950) or phone (+351 934 993 770).";
+      res.status(500).json({ response: errorMessage });
+    }
+  });
 
   const httpServer = createServer(app);
 

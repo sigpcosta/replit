@@ -1,7 +1,7 @@
-import { type User, type InsertUser, type BlogPost, type InsertBlogPost, blogPosts } from "@shared/schema";
+import { type User, type InsertUser, type BlogPost, type InsertBlogPost, blogPosts, type Faq, type InsertFaq, faqs } from "@shared/schema";
 import { randomUUID } from "crypto";
 import { db } from "./db";
-import { eq, desc } from "drizzle-orm";
+import { eq, desc, and } from "drizzle-orm";
 
 export interface IStorage {
   getUser(id: string): Promise<User | undefined>;
@@ -13,6 +13,13 @@ export interface IStorage {
   createBlogPost(post: InsertBlogPost): Promise<BlogPost>;
   updateBlogPost(id: number, post: Partial<InsertBlogPost>): Promise<BlogPost | undefined>;
   deleteBlogPost(id: number): Promise<boolean>;
+  getAllFaqs(): Promise<Faq[]>;
+  getFaqsByService(service: string): Promise<Faq[]>;
+  getFaqById(id: number): Promise<Faq | undefined>;
+  createFaq(faq: InsertFaq): Promise<Faq>;
+  updateFaq(id: number, faq: Partial<InsertFaq>): Promise<Faq | undefined>;
+  deleteFaq(id: number): Promise<boolean>;
+  getFaqsCount(): Promise<number>;
 }
 
 export class MemStorage implements IStorage {
@@ -66,6 +73,39 @@ export class MemStorage implements IStorage {
   async deleteBlogPost(id: number): Promise<boolean> {
     const result = await db.delete(blogPosts).where(eq(blogPosts.id, id)).returning();
     return result.length > 0;
+  }
+
+  async getAllFaqs(): Promise<Faq[]> {
+    return db.select().from(faqs).where(eq(faqs.isActive, "true")).orderBy(faqs.service, faqs.displayOrder);
+  }
+
+  async getFaqsByService(service: string): Promise<Faq[]> {
+    return db.select().from(faqs).where(and(eq(faqs.service, service), eq(faqs.isActive, "true"))).orderBy(faqs.displayOrder);
+  }
+
+  async getFaqById(id: number): Promise<Faq | undefined> {
+    const result = await db.select().from(faqs).where(eq(faqs.id, id)).limit(1);
+    return result[0];
+  }
+
+  async createFaq(faq: InsertFaq): Promise<Faq> {
+    const result = await db.insert(faqs).values(faq).returning();
+    return result[0];
+  }
+
+  async updateFaq(id: number, faq: Partial<InsertFaq>): Promise<Faq | undefined> {
+    const result = await db.update(faqs).set(faq).where(eq(faqs.id, id)).returning();
+    return result[0];
+  }
+
+  async deleteFaq(id: number): Promise<boolean> {
+    const result = await db.delete(faqs).where(eq(faqs.id, id)).returning();
+    return result.length > 0;
+  }
+
+  async getFaqsCount(): Promise<number> {
+    const result = await db.select().from(faqs);
+    return result.length;
   }
 }
 

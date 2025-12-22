@@ -1,7 +1,9 @@
 import { sql } from "drizzle-orm";
-import { pgTable, text, varchar, timestamp, serial } from "drizzle-orm/pg-core";
+import { pgTable, text, varchar, timestamp, serial, integer } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
+
+export * from "./models/chat";
 
 export const users = pgTable("users", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
@@ -50,3 +52,26 @@ export const insertBlogPostSchema = createInsertSchema(blogPosts).omit({
 
 export type InsertBlogPost = z.infer<typeof insertBlogPostSchema>;
 export type BlogPost = typeof blogPosts.$inferSelect;
+
+// FAQs table for chatbot and page FAQs
+export const faqs = pgTable("faqs", {
+  id: serial("id").primaryKey(),
+  service: text("service").notNull(), // paintball, lasertag, kayak, tours, accommodation, tattoo, events, transfers, realestate, shop, general
+  questionPt: text("question_pt").notNull(),
+  questionEn: text("question_en").notNull(),
+  answerPt: text("answer_pt").notNull(),
+  answerEn: text("answer_en").notNull(),
+  keywords: text("keywords"), // comma-separated keywords for chatbot matching
+  displayOrder: serial("display_order"),
+  isActive: text("is_active").notNull().default("true"),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+});
+
+export const insertFaqSchema = createInsertSchema(faqs).omit({
+  id: true,
+  displayOrder: true,
+  createdAt: true,
+});
+
+export type InsertFaq = z.infer<typeof insertFaqSchema>;
+export type Faq = typeof faqs.$inferSelect;
