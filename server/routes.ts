@@ -256,6 +256,135 @@ export async function registerRoutes(app: Express): Promise<Server> {
   //   }
   // });
 
+  // Admin Authentication
+  const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+  
+  // Simple token-based auth for admin
+  const adminTokens = new Set<string>();
+  
+  app.post("/api/admin/login", (req, res) => {
+    const { password } = req.body;
+    if (!ADMIN_PASSWORD) {
+      return res.status(503).json({ error: "Painel de administração não configurado. Configure a variável ADMIN_PASSWORD." });
+    }
+    if (password === ADMIN_PASSWORD) {
+      const token = Math.random().toString(36).substring(2) + Date.now().toString(36);
+      adminTokens.add(token);
+      res.json({ success: true, token });
+    } else {
+      res.status(401).json({ error: "Password incorreta" });
+    }
+  });
+
+  app.post("/api/admin/logout", (req, res) => {
+    const token = req.headers.authorization?.replace("Bearer ", "");
+    if (token) adminTokens.delete(token);
+    res.json({ success: true });
+  });
+
+  const requireAdmin = (req: any, res: any, next: any) => {
+    const token = req.headers.authorization?.replace("Bearer ", "");
+    if (token && adminTokens.has(token)) {
+      next();
+    } else {
+      res.status(401).json({ error: "Não autorizado" });
+    }
+  };
+
+  // Admin FAQ CRUD
+  app.post("/api/admin/faqs", requireAdmin, async (req, res) => {
+    try {
+      const data = insertFaqSchema.parse(req.body);
+      const faq = await storage.createFaq(data);
+      res.status(201).json(faq);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ error: "Dados inválidos", details: error.errors });
+      }
+      console.error("Erro ao criar FAQ:", error);
+      res.status(500).json({ error: "Erro ao criar FAQ" });
+    }
+  });
+
+  app.put("/api/admin/faqs/:id", requireAdmin, async (req, res) => {
+    try {
+      const id = parseInt(req.params.id);
+      const data = insertFaqSchema.partial().parse(req.body);
+      const faq = await storage.updateFaq(id, data);
+      if (!faq) {
+        return res.status(404).json({ error: "FAQ não encontrada" });
+      }
+      res.json(faq);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ error: "Dados inválidos", details: error.errors });
+      }
+      console.error("Erro ao atualizar FAQ:", error);
+      res.status(500).json({ error: "Erro ao atualizar FAQ" });
+    }
+  });
+
+  app.delete("/api/admin/faqs/:id", requireAdmin, async (req, res) => {
+    try {
+      const id = parseInt(req.params.id);
+      const success = await storage.deleteFaq(id);
+      if (!success) {
+        return res.status(404).json({ error: "FAQ não encontrada" });
+      }
+      res.json({ success: true });
+    } catch (error) {
+      console.error("Erro ao eliminar FAQ:", error);
+      res.status(500).json({ error: "Erro ao eliminar FAQ" });
+    }
+  });
+
+  // Admin Blog CRUD
+  app.post("/api/admin/blog", requireAdmin, async (req, res) => {
+    try {
+      const data = insertBlogPostSchema.parse(req.body);
+      const post = await storage.createBlogPost(data);
+      res.status(201).json(post);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ error: "Dados inválidos", details: error.errors });
+      }
+      console.error("Erro ao criar artigo:", error);
+      res.status(500).json({ error: "Erro ao criar artigo" });
+    }
+  });
+
+  app.put("/api/admin/blog/:id", requireAdmin, async (req, res) => {
+    try {
+      const id = parseInt(req.params.id);
+      const data = insertBlogPostSchema.partial().parse(req.body);
+      const post = await storage.updateBlogPost(id, data);
+      if (!post) {
+        return res.status(404).json({ error: "Artigo não encontrado" });
+      }
+      res.json(post);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ error: "Dados inválidos", details: error.errors });
+      }
+      console.error("Erro ao atualizar artigo:", error);
+      res.status(500).json({ error: "Erro ao atualizar artigo" });
+    }
+  });
+
+  app.delete("/api/admin/blog/:id", requireAdmin, async (req, res) => {
+    try {
+      const id = parseInt(req.params.id);
+      const success = await storage.deleteBlogPost(id);
+      if (!success) {
+        return res.status(404).json({ error: "Artigo não encontrado" });
+      }
+      res.json({ success: true });
+    } catch (error) {
+      console.error("Erro ao eliminar artigo:", error);
+      res.status(500).json({ error: "Erro ao eliminar artigo" });
+    }
+  });
+
   // FAQ Routes
   app.get("/api/faqs", async (_req, res) => {
     try {
