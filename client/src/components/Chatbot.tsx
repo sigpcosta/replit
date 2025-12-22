@@ -397,75 +397,60 @@ export default function Chatbot() {
     }
   };
 
-  const handleSendMessage = () => {
+  const handleSendMessage = async () => {
     if (!inputValue.trim()) return;
 
     const userMessage = inputValue.trim().toLowerCase();
+    const originalMessage = inputValue.trim();
+    
     setMessages(prev => [...prev, {
       id: Date.now(),
-      text: inputValue.trim(),
+      text: originalMessage,
       isBot: false,
     }]);
     setInputValue("");
+    setIsTyping(true);
 
-    const keywords = {
-      paintball: ["paintball", "paint", "bolas", "tinta"],
-      lasertag: ["laser", "lasertag", "tag"],
-      kayak: ["kayak", "caiaque", "sup", "paddle", "stand up"],
-      tours: ["tour", "tours", "carrinha", "van", "passeio", "passeios"],
-      accommodation: ["alojamento", "accommodation", "casa", "house", "hotel", "dormir", "sleep", "stay"],
-      tattoo: ["tattoo", "tatuagem", "piercing", "body art"],
-      events: ["festa", "party", "aniversário", "birthday", "despedida", "bachelor", "evento", "event"],
-      transfers: ["transfer", "transporte", "aeroporto", "airport"],
-      location: ["onde", "where", "localização", "location", "morada", "address"],
-      prices: ["preço", "price", "custo", "cost", "quanto", "how much", "valor"],
-      human: ["humano", "human", "pessoa", "person", "falar", "talk", "contacto", "contact", "ajuda", "help", "whatsapp", "ligar", "call", "telefone", "phone"],
+    // Extended keywords for quick matching (before AI call)
+    const quickKeywords = {
+      human: [
+        "humano", "human", "pessoa", "person", "falar", "talk", "contacto", "contact", 
+        "ajuda", "help", "whatsapp", "ligar", "call", "telefone", "phone", "atendimento",
+        "operador", "assistente", "real", "verdadeiro", "suporte", "support", "agent",
+        "representante", "funcionário", "employee", "staff", "equipa", "team"
+      ],
     };
 
-    let matched = false;
-    for (const [key, words] of Object.entries(keywords)) {
-      if (words.some(word => userMessage.includes(word))) {
-        matched = true;
-        switch (key) {
-          case "paintball":
-            addBotMessage(t.paintballInfo, getFollowUpOptions());
-            break;
-          case "lasertag":
-            addBotMessage(t.lasertagInfo, getFollowUpOptions());
-            break;
-          case "kayak":
-            addBotMessage(t.kayakInfo, getFollowUpOptions());
-            break;
-          case "tours":
-            addBotMessage(t.toursInfo, getFollowUpOptions());
-            break;
-          case "accommodation":
-            addBotMessage(t.accommodationInfo, getFollowUpOptions());
-            break;
-          case "tattoo":
-            addBotMessage(t.tattooInfo, getFollowUpOptions());
-            break;
-          case "events":
-            addBotMessage(t.eventsInfo, getFollowUpOptions());
-            break;
-          case "transfers":
-            addBotMessage(t.transfersInfo, getFollowUpOptions());
-            break;
-          case "location":
-            addBotMessage(t.locationInfo, getFollowUpOptions());
-            break;
-          case "prices":
-            addBotMessage(t.pricesInfo, getFollowUpOptions());
-            break;
-          case "human":
-            addBotMessage(t.humanResponse, getHumanContactOptions());
-            break;
-        }
-        break;
-      }
+    // Check for human handoff keywords first (instant response)
+    if (quickKeywords.human.some(word => userMessage.includes(word))) {
+      setIsTyping(false);
+      addBotMessage(t.humanResponse, getHumanContactOptions());
+      return;
     }
 
-    if (!matched) {
+    // Call AI endpoint for intelligent response
+    try {
+      const response = await fetch("/api/chatbot", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          message: originalMessage,
+          language,
+          currentPage: location,
+        }),
+      });
+
+      const data = await response.json();
+      setIsTyping(false);
+      
+      if (data.response) {
+        addBotMessage(data.response, getFollowUpOptions());
+      } else {
+        addBotMessage(t.notUnderstood, getMainMenuOptions());
+      }
+    } catch (error) {
+      console.error("Chatbot error:", error);
+      setIsTyping(false);
       addBotMessage(t.notUnderstood, getMainMenuOptions());
     }
   };
