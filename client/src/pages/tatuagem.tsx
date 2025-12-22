@@ -367,18 +367,14 @@ export default function TatuagemPage() {
                     <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
                       {t.tattoo.tattooStylesSubtitle}
                     </p>
-                    <div className="grid md:grid-cols-3 gap-6">
-                      {tattooStyles.map((style: { title: string; description: string }, index: number) => (
-                        <Card key={index} className="p-6 hover-elevate transition-all border-l-4 border-l-[#F59E0B]">
-                          <h4 className="font-heading text-xl font-bold mb-3">
-                            {style.title}
-                          </h4>
-                          <p className="text-muted-foreground">
-                            {style.description}
-                          </p>
-                        </Card>
-                      ))}
-                    </div>
+                    <Card className="p-8 hover-elevate transition-all border-l-4 border-l-[#F59E0B]">
+                      <h4 className="font-heading text-2xl font-bold mb-4">
+                        {tattooStyles[0].title}
+                      </h4>
+                      <p className="text-muted-foreground text-lg leading-relaxed">
+                        {tattooStyles[0].description}
+                      </p>
+                    </Card>
                   </div>
 
                   <div>
