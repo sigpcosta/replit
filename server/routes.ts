@@ -409,7 +409,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // FAQ Routes
   app.get("/api/faqs", async (_req, res) => {
     try {
-      const allFaqs = await storage.getAllFaqs();
+      let allFaqs = await storage.getAllFaqs();
+      
+      // Auto-seed if database is empty (production safety net)
+      if (allFaqs.length === 0) {
+        console.log("[API] FAQs empty, triggering auto-seed...");
+        const { seedFaqsIfEmpty } = await import("./seed-faqs");
+        await seedFaqsIfEmpty();
+        allFaqs = await storage.getAllFaqs();
+        console.log(`[API] Auto-seeded, now have ${allFaqs.length} FAQs`);
+      }
+      
       res.json(allFaqs);
     } catch (error) {
       console.error("Erro ao obter FAQs:", error);

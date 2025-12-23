@@ -791,18 +791,29 @@ const faqSeedData = [
 
 export async function seedFaqsIfEmpty() {
   try {
+    console.log("[SEED] Checking FAQs database...");
     const existingFaqs = await db.select().from(faqs);
+    console.log(`[SEED] Found ${existingFaqs.length} existing FAQs, seed has ${faqSeedData.length}`);
+    
     if (existingFaqs.length === 0) {
-      console.log("Seeding FAQs database...");
+      console.log("[SEED] Database empty, seeding FAQs...");
       for (const faq of faqSeedData) {
         await db.insert(faqs).values(faq);
       }
-      console.log(`Successfully seeded ${faqSeedData.length} FAQs`);
+      console.log(`[SEED] Successfully seeded ${faqSeedData.length} FAQs`);
+    } else if (existingFaqs.length < faqSeedData.length) {
+      console.log(`[SEED] Database has fewer FAQs than seed (${existingFaqs.length} < ${faqSeedData.length}). Reseeding...`);
+      await db.delete(faqs);
+      for (const faq of faqSeedData) {
+        await db.insert(faqs).values(faq);
+      }
+      console.log(`[SEED] Successfully reseeded ${faqSeedData.length} FAQs`);
     } else {
-      console.log(`FAQs database already has ${existingFaqs.length} entries, skipping seed`);
+      console.log(`[SEED] FAQs database already has ${existingFaqs.length} entries, skipping seed`);
     }
   } catch (error) {
-    console.error("Error seeding FAQs:", error);
+    console.error("[SEED] Error seeding FAQs:", error);
+    throw error;
   }
 }
 
