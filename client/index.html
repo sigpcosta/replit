@@ -3,14 +3,214 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Azores4fun</title>
+    
+    <!-- Default SEO Meta Tags (overridden by React Helmet) -->
+    <title>Azores4fun - Turismo, Alojamento e Eventos nos Açores | Faial</title>
+    <meta name="description" content="Azores4fun oferece alojamento, animação turística, paintball, tatuagens, eventos e gestão imobiliária na Horta, Faial, Açores. Reserve a sua experiência única!" />
+    <meta name="keywords" content="Açores, Faial, Horta, turismo, alojamento, paintball, lasertag, tatuagem, eventos, Azores, tourism, accommodation" />
+    <meta name="author" content="Azores4fun" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Azores4fun" />
+    <meta property="og:title" content="Azores4fun - Turismo, Alojamento e Eventos nos Açores" />
+    <meta property="og:description" content="Experiências únicas na ilha do Faial: alojamento, paintball, tours, tatuagens e muito mais!" />
+    <meta property="og:url" content="https://azores4fun.com" />
+    <meta property="og:image" content="https://azores4fun.com/og-home.jpg" />
+    <meta property="og:locale" content="pt_PT" />
+    <meta property="og:locale:alternate" content="en_US" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Azores4fun - Turismo nos Açores" />
+    <meta name="twitter:description" content="Experiências únicas na ilha do Faial" />
+    <meta name="twitter:image" content="https://azores4fun.com/og-home.jpg" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://azores4fun.com" />
+    <link rel="alternate" hreflang="pt" href="https://azores4fun.com" />
+    <link rel="alternate" hreflang="en" href="https://azores4fun.com/?lang=en" />
+    <link rel="alternate" hreflang="x-default" href="https://azores4fun.com" />
+    
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Code:wght@300..700&family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Azores4fun",
+      "description": "Multi-service tourism company in Horta, Faial, Azores. Accommodation, tourist activities, events, tattoo services, property management and shop.",
+      "url": "https://azores4fun.com",
+      "telephone": "+351 934 993 770",
+      "email": "info@azores4fun.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Conselheiro Medeiros, 27",
+        "addressLocality": "Horta",
+        "addressRegion": "Açores",
+        "postalCode": "9900-144",
+        "addressCountry": "PT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.5333,
+        "longitude": -28.6333
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Ilha do Faial, Açores"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/azores4fun",
+        "https://www.instagram.com/azores4fun"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços Azores4fun",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Alojamento",
+              "description": "Casa da Travessa - Alojamento com espírito náutico na Horta"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Animação Turística",
+              "description": "Paintball, LaserTag, Kayak, SUP, Tours de Carrinha Elétrica"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tatuagens e Piercings",
+              "description": "Estúdio profissional com artista Catarina Gomes"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Eventos",
+              "description": "Festas de aniversário, despedidas de solteiro, team building"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- WebSite Schema for Sitelinks Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Azores4fun",
+      "url": "https://azores4fun.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://azores4fun.com/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    
+    <!-- Noscript fallback for search engines and users without JavaScript -->
+    <noscript>
+      <div style="max-width: 1200px; margin: 0 auto; padding: 20px; font-family: sans-serif;">
+        <header style="text-align: center; padding: 40px 0;">
+          <h1>Azores4fun - Turismo, Alojamento e Eventos nos Açores</h1>
+          <p>A sua porta de entrada para experiências únicas na Ilha do Faial</p>
+        </header>
+        
+        <nav style="background: #f5f5f5; padding: 20px; margin-bottom: 40px;">
+          <h2>Navegação</h2>
+          <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 20px;">
+            <li><a href="/">Início</a></li>
+            <li><a href="/alojamento">Alojamento</a></li>
+            <li><a href="/animacao">Animação Turística</a></li>
+            <li><a href="/tatuagem">Tatuagem</a></li>
+            <li><a href="/eventos">Eventos</a></li>
+            <li><a href="/imobiliaria">Imobiliária</a></li>
+            <li><a href="/loja">Loja</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contact">Contacto</a></li>
+          </ul>
+        </nav>
+        
+        <main>
+          <section style="margin-bottom: 40px;">
+            <h2>Os Nossos Serviços</h2>
+            
+            <article style="margin-bottom: 30px; padding: 20px; border: 1px solid #ddd;">
+              <h3>Alojamento - Casa da Travessa</h3>
+              <p>Apartamentos com espírito náutico no centro da Horta. Vista para o mar e marina, a poucos passos de restaurantes e lojas.</p>
+              <a href="/alojamento">Saber mais sobre alojamento</a>
+            </article>
+            
+            <article style="margin-bottom: 30px; padding: 20px; border: 1px solid #ddd;">
+              <h3>Animação Turística</h3>
+              <p>Paintball, LaserTag, Kayak, SUP, Tours de Carrinha Elétrica pela ilha. Experiências para todas as idades.</p>
+              <a href="/animacao">Ver atividades disponíveis</a>
+            </article>
+            
+            <article style="margin-bottom: 30px; padding: 20px; border: 1px solid #ddd;">
+              <h3>Tatuagens e Piercings</h3>
+              <p>Estúdio profissional com a artista Catarina Gomes. Trabalhos personalizados, higiene e qualidade garantidas.</p>
+              <a href="/tatuagem">Ver portfolio de tatuagens</a>
+            </article>
+            
+            <article style="margin-bottom: 30px; padding: 20px; border: 1px solid #ddd;">
+              <h3>Eventos e Festas</h3>
+              <p>Organizamos festas de aniversário, despedidas de solteiro, team building empresarial e eventos temáticos.</p>
+              <a href="/eventos">Planear o seu evento</a>
+            </article>
+          </section>
+          
+          <section style="margin-bottom: 40px;">
+            <h2>Perguntas Frequentes</h2>
+            <p>Visite as nossas páginas de serviços para ver as perguntas frequentes sobre cada serviço, ou contacte-nos directamente.</p>
+          </section>
+          
+          <section style="margin-bottom: 40px;">
+            <h2>Contactos</h2>
+            <p><strong>Telefone:</strong> +351 934 993 770</p>
+            <p><strong>WhatsApp:</strong> +351 969 519 950</p>
+            <p><strong>Email:</strong> info@azores4fun.com</p>
+            <p><strong>Morada:</strong> Rua Conselheiro Medeiros, 27, 9900-144 Horta, Faial, Açores</p>
+          </section>
+        </main>
+        
+        <footer style="background: #333; color: #fff; padding: 20px; text-align: center;">
+          <p>&copy; 2025 Azores4fun. Todos os direitos reservados.</p>
+          <nav>
+            <a href="/termos-site" style="color: #fff; margin: 0 10px;">Termos e Condições</a>
+            <a href="/privacidade" style="color: #fff; margin: 0 10px;">Política de Privacidade</a>
+            <a href="/cookies" style="color: #fff; margin: 0 10px;">Política de Cookies</a>
+          </nav>
+        </footer>
+      </div>
+    </noscript>
+    
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-import type { Express } from "express";
+import type { Express, Request, Response, NextFunction } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { z } from "zod";
@@ -6,6 +6,18 @@ import path from "path";
 import fs from "fs";
 import { insertBlogPostSchema, insertFaqSchema } from "@shared/schema";
 import OpenAI from "openai";
+
+function isSearchBot(userAgent: string): boolean {
+  const bots = [
+    'googlebot', 'bingbot', 'yandexbot', 'duckduckbot', 'slurp',
+    'baiduspider', 'facebookexternalhit', 'twitterbot', 'linkedinbot',
+    'whatsapp', 'telegrambot', 'applebot', 'semrushbot', 'ahrefsbot',
+    'mj12bot', 'dotbot', 'rogerbot', 'seznambot', 'ia_archiver',
+    'curl', 'wget', 'python-requests', 'chatgpt', 'claude', 'anthropic'
+  ];
+  const ua = userAgent.toLowerCase();
+  return bots.some(bot => ua.includes(bot));
+}
 
 const openai = new OpenAI({
   apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
@@ -28,9 +40,109 @@ const contactSchema = z.object({
 });
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Serve static SEO files from public/ folder
   const publicPath = path.resolve(import.meta.dirname, "..", "public");
+  const prerenderPath = path.resolve(publicPath, "prerender");
   const attachedAssetsPath = path.resolve(import.meta.dirname, "..", "attached_assets");
+
+  async function generateDynamicPrerenderHTML(routePath: string, language: string = 'pt'): Promise<string | null> {
+    try {
+      const faqs = await storage.getAllFaqs();
+      
+      const routeConfig: Record<string, { title: string; titleEn: string; desc: string; descEn: string; service?: string }> = {
+        '/': { title: 'Azores4fun - Turismo, Alojamento e Eventos nos Açores', titleEn: 'Azores4fun - Tourism, Accommodation and Events in the Azores', desc: 'Experiências únicas na ilha do Faial', descEn: 'Unique experiences on Faial island' },
+        '/alojamento': { title: 'Alojamento na Horta - Casa da Travessa', titleEn: 'Accommodation in Horta - Casa da Travessa', desc: 'Apartamentos com espírito náutico', descEn: 'Apartments with nautical spirit', service: 'accommodation' },
+        '/animacao': { title: 'Animação Turística - Atividades nos Açores', titleEn: 'Tourist Activities in the Azores', desc: 'Paintball, LaserTag, Kayak, SUP, Tours', descEn: 'Paintball, LaserTag, Kayak, SUP, Tours', service: 'tourism' },
+        '/tatuagem': { title: 'Tatuagens e Piercings na Horta', titleEn: 'Tattoos and Piercings in Horta', desc: 'Estúdio profissional Catarina Gomes', descEn: 'Professional studio Catarina Gomes', service: 'tattoo' },
+        '/eventos': { title: 'Eventos e Festas no Faial', titleEn: 'Events and Parties in Faial', desc: 'Aniversários, despedidas, team building', descEn: 'Birthdays, bachelor parties, team building', service: 'events' },
+        '/paintball': { title: 'Paintball e LaserTag no Faial', titleEn: 'Paintball and LaserTag in Faial', desc: 'Jogos para grupos e eventos', descEn: 'Games for groups and events', service: 'paintball' },
+      };
+
+      const config = routeConfig[routePath];
+      if (!config) return null;
+
+      const title = language === 'pt' ? config.title : config.titleEn;
+      const desc = language === 'pt' ? config.desc : config.descEn;
+      const serviceFaqs = config.service ? faqs.filter(f => f.service === config.service) : faqs.slice(0, 15);
+
+      const faqSchema = serviceFaqs.length > 0 ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": serviceFaqs.map(faq => ({
+          "@type": "Question",
+          "name": language === 'pt' ? faq.questionPt : faq.questionEn,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": language === 'pt' ? faq.answerPt : faq.answerEn
+          }
+        }))
+      } : null;
+
+      const orgSchema = {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Azores4fun",
+        "url": "https://azores4fun.com",
+        "telephone": "+351 934 993 770",
+        "address": { "@type": "PostalAddress", "addressLocality": "Horta", "addressCountry": "PT" }
+      };
+
+      const faqsHtml = serviceFaqs.map(faq => `
+        <article itemscope itemtype="https://schema.org/Question">
+          <h3 itemprop="name">${language === 'pt' ? faq.questionPt : faq.questionEn}</h3>
+          <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+            <p itemprop="text">${language === 'pt' ? faq.answerPt : faq.answerEn}</p>
+          </div>
+        </article>
+      `).join('');
+
+      return `<!DOCTYPE html>
+<html lang="${language}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${title} | Azores4fun</title>
+  <meta name="description" content="${desc}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://azores4fun.com${routePath}">
+  <meta property="og:title" content="${title}">
+  <meta property="og:description" content="${desc}">
+  <meta property="og:url" content="https://azores4fun.com${routePath}">
+  <script type="application/ld+json">${JSON.stringify(orgSchema)}</script>
+  ${faqSchema ? `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>` : ''}
+</head>
+<body>
+  <header><h1>${title}</h1><p>${desc}</p></header>
+  <nav><a href="/">Início</a> | <a href="/alojamento">Alojamento</a> | <a href="/animacao">Atividades</a> | <a href="/tatuagem">Tatuagem</a> | <a href="/eventos">Eventos</a> | <a href="/contact">Contacto</a></nav>
+  <main>
+    <section><h2>${language === 'pt' ? 'Perguntas Frequentes' : 'Frequently Asked Questions'}</h2>${faqsHtml}</section>
+  </main>
+  <footer><p>Azores4fun - Horta, Faial | Tel: +351 934 993 770 | info@azores4fun.com</p></footer>
+</body>
+</html>`;
+    } catch (error) {
+      console.error('Error generating prerender HTML:', error);
+      return null;
+    }
+  }
+
+  app.use(async (req: Request, res: Response, next: NextFunction) => {
+    const userAgent = req.headers['user-agent'] || '';
+    const url = req.path;
+
+    if (!isSearchBot(userAgent) || url.startsWith('/api/') || url.includes('.')) {
+      return next();
+    }
+
+    const language = (req.query.lang === 'en' || req.headers['accept-language']?.includes('en')) ? 'en' : 'pt';
+
+    const prerenderHtml = await generateDynamicPrerenderHTML(url, language);
+    if (prerenderHtml) {
+      console.log(`[SEO] Serving prerendered content for ${url} to ${userAgent.substring(0, 30)}...`);
+      return res.type('html').send(prerenderHtml);
+    }
+
+    next();
+  });
   
   // Serve attached assets as static files
   app.get("/attached_assets/:filename", (req, res) => {
@@ -42,12 +154,19 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
   
-  app.get("/sitemap.xml", (_req, res) => {
-    const sitemapPath = path.join(publicPath, "sitemap.xml");
-    if (fs.existsSync(sitemapPath)) {
-      res.type("application/xml").sendFile(sitemapPath);
-    } else {
-      res.status(404).send("Sitemap not found");
+  app.get("/sitemap.xml", async (_req, res) => {
+    try {
+      const { generateSitemap } = await import("./generate-sitemap");
+      const sitemap = await generateSitemap();
+      res.type("application/xml").send(sitemap);
+    } catch (error) {
+      console.error("Error generating sitemap:", error);
+      const sitemapPath = path.join(publicPath, "sitemap.xml");
+      if (fs.existsSync(sitemapPath)) {
+        res.type("application/xml").sendFile(sitemapPath);
+      } else {
+        res.status(500).send("Error generating sitemap");
+      }
     }
   });
   

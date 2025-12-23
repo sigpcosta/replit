@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-  <!-- Homepage -->
+  <!-- Homepage - Portuguese -->
   <url>
     <loc>https://azores4fun.com/</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://azores4fun.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://azores4fun.com/?lang=en" />
     <lastmod>2025-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -12,22 +15,38 @@
   <!-- Alojamento / Accommodation -->
   <url>
     <loc>https://azores4fun.com/alojamento</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://azores4fun.com/alojamento" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://azores4fun.com/alojamento?lang=en" />
     <lastmod>2025-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Animação / Activities -->
+  <!-- Animação Turística / Tourist Activities -->
   <url>
     <loc>https://azores4fun.com/animacao</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://azores4fun.com/animacao" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://azores4fun.com/animacao?lang=en" />
     <lastmod>2025-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <!-- Paintball / LaserTag -->
+  <url>
+    <loc>https://azores4fun.com/paintball</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://azores4fun.com/paintball" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://azores4fun.com/paintball?lang=en" />
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- Tatuagem / Tattoo -->
   <url>
     <loc>https://azores4fun.com/tatuagem</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://azores4fun.com/tatuagem" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://azores4fun.com/tatuagem?lang=en" />
     <lastmod>2025-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -36,6 +55,8 @@
   <!-- Eventos / Events -->
   <url>
     <loc>https://azores4fun.com/eventos</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://azores4fun.com/eventos" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://azores4fun.com/eventos?lang=en" />
     <lastmod>2025-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -44,6 +65,8 @@
   <!-- Imobiliária / Property Management -->
   <url>
     <loc>https://azores4fun.com/imobiliaria</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://azores4fun.com/imobiliaria" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://azores4fun.com/imobiliaria?lang=en" />
     <lastmod>2025-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -52,6 +75,8 @@
   <!-- Loja / Shop -->
   <url>
     <loc>https://azores4fun.com/loja</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://azores4fun.com/loja" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://azores4fun.com/loja?lang=en" />
     <lastmod>2025-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -60,6 +85,8 @@
   <!-- Sobre / About -->
   <url>
     <loc>https://azores4fun.com/sobre</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://azores4fun.com/sobre" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://azores4fun.com/sobre?lang=en" />
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -68,9 +95,60 @@
   <!-- Portfolio -->
   <url>
     <loc>https://azores4fun.com/portfolio</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://azores4fun.com/portfolio" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://azores4fun.com/portfolio?lang=en" />
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://azores4fun.com/blog</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://azores4fun.com/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://azores4fun.com/blog?lang=en" />
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contacto / Contact -->
+  <url>
+    <loc>https://azores4fun.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://azores4fun.com/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://azores4fun.com/contact?lang=en" />
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://azores4fun.com/termos-site</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://azores4fun.com/termos-vending</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://azores4fun.com/privacidade</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://azores4fun.com/cookies</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>
