@@ -220,7 +220,7 @@ export default function AnimacaoPage() {
           </Card>
         </div>
 
-        <ServiceFAQs service={["paintball", "lasertag", "kayak", "tours", "sabres"]} title={t.activities.faqTitle} />
+        <ServiceFAQs service={["paintball", "lasertag", "kayak", "tours"]} title={t.activities.faqTitle} />
       </div>
 
       <Footer />
