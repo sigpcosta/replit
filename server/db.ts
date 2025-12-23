@@ -7,8 +7,26 @@ import ws from "ws";
 
 const isProduction = process.env.NODE_ENV === "production" || process.env.REPLIT_DEPLOYMENT === "1";
 
+// Check if we have valid database configuration
+function hasValidDatabaseConfig(): boolean {
+  const dbUrl = process.env.DATABASE_URL;
+  const pgHost = process.env.PGHOST;
+  
+  // In production, we need a valid Neon hostname
+  if (isProduction) {
+    // Check if we have Neon-style hostname
+    if (pgHost && pgHost.includes('.neon.tech')) return true;
+    if (dbUrl && (dbUrl.includes('.neon.tech') || dbUrl.includes('.neon.aws'))) return true;
+    // Internal hostnames like "helium" won't work in production
+    return false;
+  }
+  
+  // In development, any DATABASE_URL works
+  return !!dbUrl;
+}
+
 // Build database URL with proper error handling
-function getDatabaseUrl(): string {
+function getDatabaseUrl(): string | null {
   const dbUrl = process.env.DATABASE_URL;
   const pgHost = process.env.PGHOST;
   const pgUser = process.env.PGUSER;
@@ -17,71 +35,79 @@ function getDatabaseUrl(): string {
   const pgPort = process.env.PGPORT || "5432";
   
   console.log(`[DB] Environment: ${isProduction ? 'PRODUCTION' : 'DEVELOPMENT'}`);
-  console.log(`[DB] PGHOST available: ${!!pgHost}, ends with .neon.tech: ${pgHost?.includes('.neon.tech') || false}`);
+  console.log(`[DB] PGHOST: ${pgHost || 'not set'}`);
   
-  // In production, try to use a valid external hostname
+  // In production, require valid Neon hostname
   if (isProduction) {
-    // Check if PGHOST has a valid external domain (.neon.tech)
     if (pgHost && pgHost.includes('.neon.tech') && pgUser && pgPassword && pgDatabase) {
       const constructedUrl = `postgresql://${pgUser}:${encodeURIComponent(pgPassword)}@${pgHost}:${pgPort}/${pgDatabase}?sslmode=require`;
-      console.log(`[DB] Production: Using Neon host ${pgHost}`);
+      console.log(`[DB] Production: Using Neon host`);
       return constructedUrl;
     }
     
-    // Check if DATABASE_URL has a valid external domain
     if (dbUrl && (dbUrl.includes('.neon.tech') || dbUrl.includes('.neon.aws'))) {
-      console.log("[DB] Production: Using DATABASE_URL with valid Neon domain");
+      console.log("[DB] Production: Using DATABASE_URL with Neon domain");
       return dbUrl;
     }
     
-    // Log warning if using potentially internal hostname
-    if (dbUrl) {
-      const urlHost = dbUrl.match(/@([^:\/]+)/)?.[1] || 'unknown';
-      console.warn(`[DB] Warning: DATABASE_URL host "${urlHost}" may be internal. Using anyway.`);
-      return dbUrl;
-    }
+    // No valid production database - return null (app will run without DB)
+    console.warn("[DB] Production: No valid Neon database configured. App will run without database.");
+    return null;
   }
   
+  // Development mode
   if (!dbUrl) {
-    throw new Error("DATABASE_URL must be set. Did you forget to provision a database?");
+    console.warn("[DB] Development: No DATABASE_URL set");
+    return null;
   }
   
   return dbUrl;
 }
 
-let connectionString: string;
-try {
-  connectionString = getDatabaseUrl();
-} catch (error) {
-  console.error("[DB] Failed to get database URL:", error);
-  throw error;
-}
+// Database instance - may be null if no valid database is configured
+let db: ReturnType<typeof drizzleHttp<typeof schema>> | ReturnType<typeof drizzleServerless<typeof schema>> | null = null;
+let dbAvailable = false;
 
-// Use HTTP mode in production (serverless), WebSocket in development
-let db: ReturnType<typeof drizzleHttp<typeof schema>> | ReturnType<typeof drizzleServerless<typeof schema>>;
-
-try {
-  if (isProduction) {
-    // Production: Use HTTP mode (neon-http) - works better in serverless environments
-    const sql = neon(connectionString);
-    db = drizzleHttp(sql, { schema });
-    console.log("[DB] Initialized with HTTP mode for production");
-  } else {
-    // Development: Use WebSocket mode for better performance
-    neonConfig.webSocketConstructor = ws;
-    const pool = new Pool({ 
-      connectionString,
-      connectionTimeoutMillis: 10000,
-    });
-    pool.on('error', (err) => {
-      console.error('[DB] Unexpected pool error:', err.message);
-    });
-    db = drizzleServerless(pool, { schema });
-    console.log("[DB] Initialized with WebSocket mode for development");
+function initializeDatabase() {
+  const connectionString = getDatabaseUrl();
+  
+  if (!connectionString) {
+    console.log("[DB] No database connection - app will run with limited functionality");
+    return;
   }
-} catch (error) {
-  console.error("[DB] Failed to initialize database:", error);
-  throw error;
+  
+  try {
+    if (isProduction) {
+      const sql = neon(connectionString);
+      db = drizzleHttp(sql, { schema });
+      dbAvailable = true;
+      console.log("[DB] Initialized with HTTP mode for production");
+    } else {
+      neonConfig.webSocketConstructor = ws;
+      const pool = new Pool({ 
+        connectionString,
+        connectionTimeoutMillis: 10000,
+      });
+      pool.on('error', (err) => {
+        console.error('[DB] Pool error:', err.message);
+      });
+      db = drizzleServerless(pool, { schema });
+      dbAvailable = true;
+      console.log("[DB] Initialized with WebSocket mode for development");
+    }
+  } catch (error) {
+    console.error("[DB] Failed to initialize database:", error);
+    db = null;
+    dbAvailable = false;
+  }
 }
 
-export { db };
+// Initialize on module load
+initializeDatabase();
+
+// Helper to check if database is available
+function isDatabaseAvailable(): boolean {
+  return dbAvailable && db !== null;
+}
+
+export { db, isDatabaseAvailable };

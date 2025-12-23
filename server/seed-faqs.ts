@@ -1,4 +1,4 @@
-import { db } from "./db";
+import { db, isDatabaseAvailable } from "./db";
 import { faqs } from "@shared/schema";
 
 const faqSeedData = [
@@ -790,6 +790,11 @@ const faqSeedData = [
 ];
 
 export async function seedFaqsIfEmpty() {
+  if (!isDatabaseAvailable() || !db) {
+    console.log("[SEED] Database not available, skipping FAQs seed");
+    return;
+  }
+  
   try {
     console.log("[SEED] Checking FAQs database...");
     const existingFaqs = await db.select().from(faqs);
@@ -818,6 +823,10 @@ export async function seedFaqsIfEmpty() {
 }
 
 export async function reseedFaqs() {
+  if (!isDatabaseAvailable() || !db) {
+    throw new Error("Database not available");
+  }
+  
   try {
     console.log("Clearing existing FAQs and reseeding...");
     await db.delete(faqs);

@@ -1,4 +1,4 @@
-import { db } from "./db";
+import { db, isDatabaseAvailable } from "./db";
 import { blogPosts } from "@shared/schema";
 
 const seedArticles = [
@@ -256,6 +256,11 @@ const seedArticles = [
 ];
 
 export async function seedBlogIfEmpty() {
+  if (!isDatabaseAvailable() || !db) {
+    console.log("[SEED] Database not available, skipping blog seed");
+    return;
+  }
+  
   try {
     const existing = await db.select().from(blogPosts).limit(1);
     

@@ -1,6 +1,6 @@
 import { type User, type InsertUser, type BlogPost, type InsertBlogPost, blogPosts, type Faq, type InsertFaq, faqs } from "@shared/schema";
 import { randomUUID } from "crypto";
-import { db } from "./db";
+import { db, isDatabaseAvailable } from "./db";
 import { eq, desc, and } from "drizzle-orm";
 
 export interface IStorage {
@@ -20,6 +20,7 @@ export interface IStorage {
   updateFaq(id: number, faq: Partial<InsertFaq>): Promise<Faq | undefined>;
   deleteFaq(id: number): Promise<boolean>;
   getFaqsCount(): Promise<number>;
+  isDatabaseReady(): boolean;
 }
 
 export class MemStorage implements IStorage {
@@ -27,6 +28,10 @@ export class MemStorage implements IStorage {
 
   constructor() {
     this.users = new Map();
+  }
+
+  isDatabaseReady(): boolean {
+    return isDatabaseAvailable();
   }
 
   async getUser(id: string): Promise<User | undefined> {
@@ -47,63 +52,76 @@ export class MemStorage implements IStorage {
   }
 
   async getAllBlogPosts(): Promise<BlogPost[]> {
+    if (!db) return [];
     return db.select().from(blogPosts).orderBy(desc(blogPosts.publishedAt));
   }
 
   async getBlogPostBySlug(slug: string): Promise<BlogPost | undefined> {
+    if (!db) return undefined;
     const result = await db.select().from(blogPosts).where(eq(blogPosts.slug, slug)).limit(1);
     return result[0];
   }
 
   async getBlogPostById(id: number): Promise<BlogPost | undefined> {
+    if (!db) return undefined;
     const result = await db.select().from(blogPosts).where(eq(blogPosts.id, id)).limit(1);
     return result[0];
   }
 
   async createBlogPost(post: InsertBlogPost): Promise<BlogPost> {
+    if (!db) throw new Error("Database not available");
     const result = await db.insert(blogPosts).values(post).returning();
     return result[0];
   }
 
   async updateBlogPost(id: number, post: Partial<InsertBlogPost>): Promise<BlogPost | undefined> {
+    if (!db) return undefined;
     const result = await db.update(blogPosts).set(post).where(eq(blogPosts.id, id)).returning();
     return result[0];
   }
 
   async deleteBlogPost(id: number): Promise<boolean> {
+    if (!db) return false;
     const result = await db.delete(blogPosts).where(eq(blogPosts.id, id)).returning();
     return result.length > 0;
   }
 
   async getAllFaqs(): Promise<Faq[]> {
+    if (!db) return [];
     return db.select().from(faqs).where(eq(faqs.isActive, "true")).orderBy(faqs.service, faqs.displayOrder);
   }
 
   async getFaqsByService(service: string): Promise<Faq[]> {
+    if (!db) return [];
     return db.select().from(faqs).where(and(eq(faqs.service, service), eq(faqs.isActive, "true"))).orderBy(faqs.displayOrder);
   }
 
   async getFaqById(id: number): Promise<Faq | undefined> {
+    if (!db) return undefined;
     const result = await db.select().from(faqs).where(eq(faqs.id, id)).limit(1);
     return result[0];
   }
 
   async createFaq(faq: InsertFaq): Promise<Faq> {
+    if (!db) throw new Error("Database not available");
     const result = await db.insert(faqs).values(faq).returning();
     return result[0];
   }
 
   async updateFaq(id: number, faq: Partial<InsertFaq>): Promise<Faq | undefined> {
+    if (!db) return undefined;
     const result = await db.update(faqs).set(faq).where(eq(faqs.id, id)).returning();
     return result[0];
   }
 
   async deleteFaq(id: number): Promise<boolean> {
+    if (!db) return false;
     const result = await db.delete(faqs).where(eq(faqs.id, id)).returning();
     return result.length > 0;
   }
 
   async getFaqsCount(): Promise<number> {
+    if (!db) return 0;
     const result = await db.select().from(faqs);
     return result.length;
   }
