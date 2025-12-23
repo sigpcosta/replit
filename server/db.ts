@@ -28,6 +28,7 @@ function hasValidDatabaseConfig(): boolean {
 // Build database URL with proper error handling
 function getDatabaseUrl(): string | null {
   const dbUrl = process.env.DATABASE_URL;
+  const neonUrl = process.env.NEON_DATABASE_URL;
   const pgHost = process.env.PGHOST;
   const pgUser = process.env.PGUSER;
   const pgPassword = process.env.PGPASSWORD;
@@ -36,9 +37,16 @@ function getDatabaseUrl(): string | null {
   
   console.log(`[DB] Environment: ${isProduction ? 'PRODUCTION' : 'DEVELOPMENT'}`);
   console.log(`[DB] PGHOST: ${pgHost || 'not set'}`);
+  console.log(`[DB] NEON_DATABASE_URL: ${neonUrl ? 'set' : 'not set'}`);
   
   // In production, require valid Neon hostname
   if (isProduction) {
+    // First check custom NEON_DATABASE_URL (for external Neon database)
+    if (neonUrl && neonUrl.includes('.neon.tech')) {
+      console.log("[DB] Production: Using NEON_DATABASE_URL");
+      return neonUrl;
+    }
+    
     if (pgHost && pgHost.includes('.neon.tech') && pgUser && pgPassword && pgDatabase) {
       const constructedUrl = `postgresql://${pgUser}:${encodeURIComponent(pgPassword)}@${pgHost}:${pgPort}/${pgDatabase}?sslmode=require`;
       console.log(`[DB] Production: Using Neon host`);
