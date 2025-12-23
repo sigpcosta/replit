@@ -44,25 +44,77 @@ export async function registerRoutes(app: Express): Promise<Server> {
   const prerenderPath = path.resolve(publicPath, "prerender");
   const attachedAssetsPath = path.resolve(import.meta.dirname, "..", "attached_assets");
 
+  interface RouteConfig {
+    title: string;
+    titleEn: string;
+    desc: string;
+    descEn: string;
+    service?: string;
+    serviceType?: string;
+  }
+
+  const routeConfig: Record<string, RouteConfig> = {
+    '/': { title: 'Azores4fun - Turismo, Alojamento e Eventos nos Açores', titleEn: 'Azores4fun - Tourism, Accommodation and Events in the Azores', desc: 'Experiências únicas na ilha do Faial: alojamento, paintball, tatuagem, eventos e mais.', descEn: 'Unique experiences on Faial island: accommodation, paintball, tattoos, events and more.' },
+    '/alojamento': { title: 'Alojamento na Horta - Casa da Travessa', titleEn: 'Accommodation in Horta - Casa da Travessa', desc: 'Apartamentos com espírito náutico no centro da Horta, Faial.', descEn: 'Apartments with nautical spirit in the center of Horta, Faial.', service: 'accommodation', serviceType: 'LodgingBusiness' },
+    '/animacao': { title: 'Animação Turística - Atividades nos Açores', titleEn: 'Tourist Activities in the Azores', desc: 'Paintball, LaserTag, GelBlaster, Nerfs, Kayak, SUP, Tours de Carrinha.', descEn: 'Paintball, LaserTag, GelBlaster, Nerfs, Kayak, SUP, Van Tours.', service: 'tourism', serviceType: 'TouristAttraction' },
+    '/tatuagem': { title: 'Tatuagens e Piercings na Horta - Catarina Gomes', titleEn: 'Tattoos and Piercings in Horta - Catarina Gomes', desc: 'Estúdio profissional de tatuagem e piercing com a artista Catarina Gomes.', descEn: 'Professional tattoo and piercing studio with artist Catarina Gomes.', service: 'tattoo', serviceType: 'TattooParlor' },
+    '/eventos': { title: 'Eventos e Festas no Faial', titleEn: 'Events and Parties in Faial', desc: 'Festas de aniversário, despedidas de solteiro, team building, organização completa.', descEn: 'Birthday parties, bachelor parties, team building, complete organization.', service: 'events', serviceType: 'EventVenue' },
+    '/paintball': { title: 'Paintball e LaserTag no Faial', titleEn: 'Paintball and LaserTag in Faial', desc: 'Jogos de paintball e lasertag para grupos, festas e eventos corporativos.', descEn: 'Paintball and lasertag games for groups, parties and corporate events.', service: 'paintball', serviceType: 'SportsActivityLocation' },
+    '/imobiliaria': { title: 'Gestão Imobiliária no Faial', titleEn: 'Property Management in Faial', desc: 'Gestão de propriedades, aluguer de longa e curta duração na ilha do Faial.', descEn: 'Property management, long and short term rentals on Faial island.', service: 'property', serviceType: 'RealEstateAgent' },
+    '/loja': { title: 'Loja Azores4fun na Horta', titleEn: 'Azores4fun Shop in Horta', desc: 'Loja física com merchandising Azores4fun e produtos regionais açorianos.', descEn: 'Physical store with Azores4fun merchandise and Azorean regional products.', service: 'shop', serviceType: 'Store' },
+    '/sobre': { title: 'Sobre Nós - A Nossa História', titleEn: 'About Us - Our Story', desc: 'Conheça a equipa Azores4fun e a nossa missão de proporcionar experiências únicas.', descEn: 'Meet the Azores4fun team and our mission to provide unique experiences.' },
+    '/portfolio': { title: 'Portfolio de Tatuagens - Catarina Gomes', titleEn: 'Tattoo Portfolio - Catarina Gomes', desc: 'Galeria de trabalhos de tatuagem realizados pela artista Catarina Gomes.', descEn: 'Gallery of tattoo work by artist Catarina Gomes.', service: 'tattoo' },
+    '/blog': { title: 'Blog Azores4fun - Dicas e Novidades', titleEn: 'Azores4fun Blog - Tips and News', desc: 'Artigos sobre turismo, cultura, gastronomia e atividades nos Açores.', descEn: 'Articles about tourism, culture, gastronomy and activities in the Azores.' },
+    '/contact': { title: 'Contacto - Fale Connosco', titleEn: 'Contact - Get in Touch', desc: 'Entre em contacto: telefone, WhatsApp, email. Rua Conselheiro Medeiros 27, Horta.', descEn: 'Get in touch: phone, WhatsApp, email. Rua Conselheiro Medeiros 27, Horta.' },
+  };
+
   async function generateDynamicPrerenderHTML(routePath: string, language: string = 'pt'): Promise<string | null> {
     try {
       const faqs = await storage.getAllFaqs();
-      
-      const routeConfig: Record<string, { title: string; titleEn: string; desc: string; descEn: string; service?: string }> = {
-        '/': { title: 'Azores4fun - Turismo, Alojamento e Eventos nos Açores', titleEn: 'Azores4fun - Tourism, Accommodation and Events in the Azores', desc: 'Experiências únicas na ilha do Faial', descEn: 'Unique experiences on Faial island' },
-        '/alojamento': { title: 'Alojamento na Horta - Casa da Travessa', titleEn: 'Accommodation in Horta - Casa da Travessa', desc: 'Apartamentos com espírito náutico', descEn: 'Apartments with nautical spirit', service: 'accommodation' },
-        '/animacao': { title: 'Animação Turística - Atividades nos Açores', titleEn: 'Tourist Activities in the Azores', desc: 'Paintball, LaserTag, Kayak, SUP, Tours', descEn: 'Paintball, LaserTag, Kayak, SUP, Tours', service: 'tourism' },
-        '/tatuagem': { title: 'Tatuagens e Piercings na Horta', titleEn: 'Tattoos and Piercings in Horta', desc: 'Estúdio profissional Catarina Gomes', descEn: 'Professional studio Catarina Gomes', service: 'tattoo' },
-        '/eventos': { title: 'Eventos e Festas no Faial', titleEn: 'Events and Parties in Faial', desc: 'Aniversários, despedidas, team building', descEn: 'Birthdays, bachelor parties, team building', service: 'events' },
-        '/paintball': { title: 'Paintball e LaserTag no Faial', titleEn: 'Paintball and LaserTag in Faial', desc: 'Jogos para grupos e eventos', descEn: 'Games for groups and events', service: 'paintball' },
-      };
+      let config = routeConfig[routePath];
+      let blogPost = null;
 
-      const config = routeConfig[routePath];
+      if (!config && routePath.startsWith('/blog/')) {
+        const slug = routePath.replace('/blog/', '');
+        const posts = await storage.getAllBlogPosts();
+        blogPost = posts.find(p => p.slug === slug);
+        if (blogPost) {
+          config = {
+            title: blogPost.titlePt || blogPost.title,
+            titleEn: blogPost.titleEn || blogPost.title,
+            desc: blogPost.excerptPt || blogPost.excerpt || '',
+            descEn: blogPost.excerptEn || blogPost.excerpt || '',
+          };
+        }
+      }
+
       if (!config) return null;
 
       const title = language === 'pt' ? config.title : config.titleEn;
       const desc = language === 'pt' ? config.desc : config.descEn;
-      const serviceFaqs = config.service ? faqs.filter(f => f.service === config.service) : faqs.slice(0, 15);
+      const serviceFaqs = config.service ? faqs.filter(f => f.service === config.service) : (routePath === '/' ? faqs.slice(0, 20) : []);
+      const canonicalUrl = `https://azores4fun.com${routePath}`;
+
+      const orgSchema = {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Azores4fun",
+        "description": language === 'pt' ? "Empresa de turismo multi-serviços na Horta, Faial, Açores." : "Multi-service tourism company in Horta, Faial, Azores.",
+        "url": "https://azores4fun.com",
+        "telephone": "+351 934 993 770",
+        "email": "info@azores4fun.com",
+        "address": { "@type": "PostalAddress", "streetAddress": "Rua Conselheiro Medeiros, 27", "addressLocality": "Horta", "postalCode": "9900-144", "addressCountry": "PT" },
+        "geo": { "@type": "GeoCoordinates", "latitude": 38.5333, "longitude": -28.6333 }
+      };
+
+      const serviceSchema = config.serviceType ? {
+        "@context": "https://schema.org",
+        "@type": config.serviceType,
+        "name": title,
+        "description": desc,
+        "url": canonicalUrl,
+        "provider": { "@type": "LocalBusiness", "name": "Azores4fun", "url": "https://azores4fun.com" }
+      } : null;
 
       const faqSchema = serviceFaqs.length > 0 ? {
         "@context": "https://schema.org",
@@ -70,30 +122,30 @@ export async function registerRoutes(app: Express): Promise<Server> {
         "mainEntity": serviceFaqs.map(faq => ({
           "@type": "Question",
           "name": language === 'pt' ? faq.questionPt : faq.questionEn,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": language === 'pt' ? faq.answerPt : faq.answerEn
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": language === 'pt' ? faq.answerPt : faq.answerEn }
         }))
       } : null;
 
-      const orgSchema = {
+      const blogPostSchema = blogPost ? {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Azores4fun",
-        "url": "https://azores4fun.com",
-        "telephone": "+351 934 993 770",
-        "address": { "@type": "PostalAddress", "addressLocality": "Horta", "addressCountry": "PT" }
-      };
+        "@type": "BlogPosting",
+        "headline": title,
+        "description": desc,
+        "url": canonicalUrl,
+        "author": { "@type": "Organization", "name": "Azores4fun" },
+        "publisher": { "@type": "Organization", "name": "Azores4fun", "url": "https://azores4fun.com" }
+      } : null;
 
-      const faqsHtml = serviceFaqs.map(faq => `
+      const faqsHtml = serviceFaqs.length > 0 ? serviceFaqs.map(faq => `
         <article itemscope itemtype="https://schema.org/Question">
           <h3 itemprop="name">${language === 'pt' ? faq.questionPt : faq.questionEn}</h3>
           <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
             <p itemprop="text">${language === 'pt' ? faq.answerPt : faq.answerEn}</p>
           </div>
         </article>
-      `).join('');
+      `).join('') : '';
+
+      const blogContentHtml = blogPost ? `<article>${language === 'pt' ? (blogPost.contentPt || blogPost.content) : (blogPost.contentEn || blogPost.content)}</article>` : '';
 
       return `<!DOCTYPE html>
 <html lang="${language}">
@@ -103,20 +155,35 @@ export async function registerRoutes(app: Express): Promise<Server> {
   <title>${title} | Azores4fun</title>
   <meta name="description" content="${desc}">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://azores4fun.com${routePath}">
+  <link rel="canonical" href="${canonicalUrl}">
+  <link rel="alternate" hreflang="pt" href="${canonicalUrl}">
+  <link rel="alternate" hreflang="en" href="${canonicalUrl}?lang=en">
+  <link rel="alternate" hreflang="x-default" href="${canonicalUrl}">
+  <meta property="og:type" content="${blogPost ? 'article' : 'website'}">
   <meta property="og:title" content="${title}">
   <meta property="og:description" content="${desc}">
-  <meta property="og:url" content="https://azores4fun.com${routePath}">
+  <meta property="og:url" content="${canonicalUrl}">
+  <meta property="og:site_name" content="Azores4fun">
+  <meta property="og:locale" content="${language === 'pt' ? 'pt_PT' : 'en_US'}">
   <script type="application/ld+json">${JSON.stringify(orgSchema)}</script>
+  ${serviceSchema ? `<script type="application/ld+json">${JSON.stringify(serviceSchema)}</script>` : ''}
   ${faqSchema ? `<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>` : ''}
+  ${blogPostSchema ? `<script type="application/ld+json">${JSON.stringify(blogPostSchema)}</script>` : ''}
 </head>
 <body>
   <header><h1>${title}</h1><p>${desc}</p></header>
-  <nav><a href="/">Início</a> | <a href="/alojamento">Alojamento</a> | <a href="/animacao">Atividades</a> | <a href="/tatuagem">Tatuagem</a> | <a href="/eventos">Eventos</a> | <a href="/contact">Contacto</a></nav>
+  <nav>
+    <a href="/">Início</a> | <a href="/alojamento">Alojamento</a> | <a href="/animacao">Atividades</a> | <a href="/tatuagem">Tatuagem</a> | <a href="/eventos">Eventos</a> | <a href="/imobiliaria">Imobiliária</a> | <a href="/loja">Loja</a> | <a href="/blog">Blog</a> | <a href="/contact">Contacto</a>
+  </nav>
   <main>
-    <section><h2>${language === 'pt' ? 'Perguntas Frequentes' : 'Frequently Asked Questions'}</h2>${faqsHtml}</section>
+    ${blogContentHtml}
+    ${faqsHtml ? `<section><h2>${language === 'pt' ? 'Perguntas Frequentes' : 'Frequently Asked Questions'}</h2>${faqsHtml}</section>` : ''}
   </main>
-  <footer><p>Azores4fun - Horta, Faial | Tel: +351 934 993 770 | info@azores4fun.com</p></footer>
+  <footer>
+    <p>Azores4fun - Horta, Faial, Açores</p>
+    <p>Tel: +351 934 993 770 | Email: info@azores4fun.com</p>
+    <p>Rua Conselheiro Medeiros, 27, 9900-144 Horta</p>
+  </footer>
 </body>
 </html>`;
     } catch (error) {
