@@ -49,8 +49,16 @@ app.use((req, res, next) => {
 });
 
 (async () => {
-  await seedBlogIfEmpty();
-  await seedFaqsIfEmpty();
+  // Seed database with error handling to prevent crash loops
+  try {
+    await seedBlogIfEmpty();
+    await seedFaqsIfEmpty();
+    console.log("[SERVER] Database seeding completed successfully");
+  } catch (error) {
+    console.error("[SERVER] Database seeding failed, continuing without seed:", error instanceof Error ? error.message : error);
+    // Don't crash - allow app to start and handle DB errors gracefully
+  }
+  
   const server = await registerRoutes(app);
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
