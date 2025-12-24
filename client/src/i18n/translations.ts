@@ -944,7 +944,7 @@ export const translations = {
         "Artistas certificados e experientes",
         "Equipamento de última geração",
         "Tintas hipoalergénicas",
-        "Ambiente esterilizado e seguro",
+        "Ambiente seguro e esterilizado",
         "Designs personalizados exclusivos",
         "Acompanhamento pós-sessão"
       ],
@@ -2313,7 +2313,7 @@ export const translations = {
         "Certified and experienced artists",
         "State-of-the-art equipment",
         "Hypoallergenic inks",
-        "Sterilized and safe environment",
+        "Safe and sterilized environment",
         "Exclusive personalized designs",
         "Post-session follow-up"
       ],
