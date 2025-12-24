@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Store, MapPin, ShoppingBag, Ticket, Gift, Check } from "lucide-react";
 import { seoConfig } from "@/lib/seo-config";
 import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
-import shopImage from "@assets/generated_images/Azores4fun_retail_shop_8204420f.png";
+import shopImage from "@assets/exterior_porta_1_1766554856794.jpeg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function LojaPage() {
