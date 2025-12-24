@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Store, MapPin, ShoppingBag, Ticket, Gift, Check } from "lucide-react";
 import { seoConfig } from "@/lib/seo-config";
 import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
-import shopImage from "@assets/exterior_porta_1_1766554856794.jpeg";
+import shopExteriorImage from "@assets/exterior_porta_1_1766554856794.jpeg";
+import shopInteriorImage from "@assets/interior_1_nova_1766555283240.jpeg";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function LojaPage() {
@@ -104,11 +105,16 @@ export default function LojaPage() {
                 </Button>
               </div>
             </div>
-            <div>
+            <div className="grid grid-cols-2 gap-4">
               <img
-                src={shopImage}
+                src={shopExteriorImage}
                 alt={t.shop.altShop}
-                className="rounded-lg w-full h-96 object-cover"
+                className="rounded-lg w-full h-80 object-cover col-span-2"
+              />
+              <img
+                src={shopInteriorImage}
+                alt={language === 'pt' ? 'Interior da loja Azores4fun' : 'Azores4fun shop interior'}
+                className="rounded-lg w-full h-48 object-cover col-span-2"
               />
             </div>
           </div>
