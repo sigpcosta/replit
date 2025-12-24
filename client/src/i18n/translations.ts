@@ -1272,7 +1272,7 @@ export const translations = {
         meetingPoint: { 
           title: "Ponto de Encontro", 
           desc: "Receção e apoio a clientes",
-          features: ["Check-in de alojamento", "Informações locais", "Wi-Fi gratuito", "Zona de espera confortável"]
+          features: ["Check-in dos alojamentos", "Informações locais", "Wi-Fi gratuito", "Zona de espera confortável"]
         }
       },
       highlights: [
@@ -2641,7 +2641,7 @@ export const translations = {
         meetingPoint: { 
           title: "Meeting Point", 
           desc: "Customer reception and support",
-          features: ["Accommodation check-in", "Local information", "Free Wi-Fi", "Comfortable waiting area"]
+          features: ["Accommodations check-in", "Local information", "Free Wi-Fi", "Comfortable waiting area"]
         }
       },
       highlights: [
