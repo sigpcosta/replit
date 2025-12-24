@@ -943,7 +943,7 @@ export const translations = {
       tattooHighlights: [
         "Artistas certificados e experientes",
         "Equipamento de última geração",
-        "Tintas premium hipoalergénicas",
+        "Tintas hipoalergénicas",
         "Ambiente esterilizado e seguro",
         "Designs personalizados exclusivos",
         "Acompanhamento pós-sessão"
@@ -2312,7 +2312,7 @@ export const translations = {
       tattooHighlights: [
         "Certified and experienced artists",
         "State-of-the-art equipment",
-        "Premium hypoallergenic inks",
+        "Hypoallergenic inks",
         "Sterilized and safe environment",
         "Exclusive personalized designs",
         "Post-session follow-up"
