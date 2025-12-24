@@ -4,16 +4,30 @@ import ServiceFAQs from "@/components/ServiceFAQs";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Store, MapPin, ShoppingBag, Ticket, Gift, Check } from "lucide-react";
+import { Store, MapPin, ShoppingBag, Ticket, Gift, Check, ChevronLeft, ChevronRight } from "lucide-react";
 import { seoConfig } from "@/lib/seo-config";
 import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
-import shopExteriorImage from "@assets/exterior_porta_1_1766554856794.jpeg";
-import shopInteriorImage from "@assets/interior_1_nova_1766555283240.jpeg";
+import { useState } from "react";
+import shopImage1 from "@assets/exterior_porta_1_1766555488215.jpeg";
+import shopImage2 from "@assets/interior_1_nova_1766555488215.jpeg";
+import shopImage3 from "@assets/interior_3_nova_1766555488216.jpeg";
+import shopImage4 from "@assets/interior_7_1766555488216.jpeg";
 import { useLanguage } from "@/i18n/LanguageContext";
+
+const shopImages = [shopImage1, shopImage2, shopImage3, shopImage4];
 
 export default function LojaPage() {
   const { t, language } = useLanguage();
   const seo = seoConfig[language].loja;
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const goToPrevious = () => {
+    setCurrentImageIndex(prev => (prev === 0 ? shopImages.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentImageIndex(prev => (prev === shopImages.length - 1 ? 0 : prev + 1));
+  };
   
   const combinedSchema = {
     "@context": "https://schema.org",
@@ -105,17 +119,40 @@ export default function LojaPage() {
                 </Button>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <img
-                src={shopExteriorImage}
-                alt={t.shop.altShop}
-                className="rounded-lg w-full h-80 object-cover col-span-2"
-              />
-              <img
-                src={shopInteriorImage}
-                alt={language === 'pt' ? 'Interior da loja Azores4fun' : 'Azores4fun shop interior'}
-                className="rounded-lg w-full h-48 object-cover col-span-2"
-              />
+            <div className="relative">
+              <div className="overflow-hidden rounded-lg">
+                <img
+                  src={shopImages[currentImageIndex]}
+                  alt={`${t.shop.altShop} ${currentImageIndex + 1}`}
+                  className="w-full h-96 object-cover transition-all duration-300"
+                />
+              </div>
+              <button
+                onClick={goToPrevious}
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+                data-testid="button-prev-shop-image"
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </button>
+              <button
+                onClick={goToNext}
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+                data-testid="button-next-shop-image"
+              >
+                <ChevronRight className="h-6 w-6" />
+              </button>
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                {shopImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    className={`w-2 h-2 rounded-full transition-colors ${
+                      index === currentImageIndex ? 'bg-white' : 'bg-white/50'
+                    }`}
+                    data-testid={`button-dot-${index}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
 
