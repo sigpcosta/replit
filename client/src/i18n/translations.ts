@@ -916,7 +916,7 @@ export const translations = {
       },
       piercings: {
         ear: { title: "Orelha", healing: "Cicatrização: 3-12 meses", desc: "Lóbulo, hélix, tragus, conch e rook." },
-        nose: { title: "Nariz", healing: "Cicatrização: 4-9 meses", desc: "Nostril e septum com joias delicadas ou statement pieces." },
+        nose: { title: "Nariz", healing: "Cicatrização: 4-9 meses", desc: "Aba nasal." },
         facial: { title: "Facial", healing: "Cicatrização: 6-8 semanas", desc: "Sobrancelha, labret, monroe, medusa e bridge com técnicas modernas." },
         oral: { title: "Oral", healing: "Cicatrização: 4-6 semanas", desc: "Língua, smiley e frenulum com materiais hipoalergénicos." },
         body: { title: "Corpo", healing: "Cicatrização: 6-9 meses", desc: "Umbigo, mamilo e superfícies com joias de qualidade premium." },
@@ -2285,7 +2285,7 @@ export const translations = {
       },
       piercings: {
         ear: { title: "Ear", healing: "Healing: 3-12 months", desc: "Lobe, helix, tragus, conch and rook." },
-        nose: { title: "Nose", healing: "Healing: 4-9 months", desc: "Nostril and septum with delicate or statement pieces." },
+        nose: { title: "Nose", healing: "Healing: 4-9 months", desc: "Nostril." },
         facial: { title: "Facial", healing: "Healing: 6-8 weeks", desc: "Eyebrow, labret, monroe, medusa and bridge with modern techniques." },
         oral: { title: "Oral", healing: "Healing: 4-6 weeks", desc: "Tongue, smiley and frenulum with hypoallergenic materials." },
         body: { title: "Body", healing: "Healing: 6-9 months", desc: "Navel, nipple and surfaces with premium quality jewelry." },
