@@ -4,7 +4,7 @@ import ServiceFAQs from "@/components/ServiceFAQs";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Store, MapPin, ShoppingBag, Ticket, Gift, Check, ChevronLeft, ChevronRight } from "lucide-react";
+import { Store, MapPin, ShoppingBag, Ticket, Check, ChevronLeft, ChevronRight } from "lucide-react";
 import { seoConfig } from "@/lib/seo-config";
 import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
 import { useState } from "react";
@@ -53,12 +53,6 @@ export default function LojaPage() {
       title: t.shop.offerings.tourism.title,
       description: t.shop.offerings.tourism.desc,
       features: t.shop.offerings.tourism.features
-    },
-    {
-      icon: Gift,
-      title: t.shop.offerings.merch.title,
-      description: t.shop.offerings.merch.desc,
-      features: t.shop.offerings.merch.features
     },
     {
       icon: MapPin,
