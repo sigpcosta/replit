@@ -950,10 +950,9 @@ export const translations = {
       ],
       piercingHighlights: [
         "Técnicas modernas e seguras",
-        "Joias de titânio hipoalergénico",
-        "Esterilização de nível hospitalar",
-        "Profissionais certificados",
-        "Grande variedade de estilos",
+        "Todas as perfurações incluem uma joia de titânio básica",
+        "Esterilização de boa qualidade",
+        "Profissional experiente",
         "Cuidados incluídos no serviço"
       ],
       aftercare: {
@@ -2320,10 +2319,9 @@ export const translations = {
       ],
       piercingHighlights: [
         "Modern and safe techniques",
-        "Hypoallergenic titanium jewelry",
-        "Hospital-grade sterilization",
-        "Certified professionals",
-        "Wide variety of styles",
+        "All piercings include a basic titanium jewelry",
+        "Good quality sterilization",
+        "Experienced professional",
         "Care included in service"
       ],
       aftercare: {
