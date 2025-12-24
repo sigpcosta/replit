@@ -1262,7 +1262,7 @@ export const translations = {
         tourism: { 
           title: "Serviços de Turismo", 
           desc: "Tudo para a sua visita aos Açores",
-          features: ["Reservas de atividades", "Informações turísticas", "Bilhetes e passes", "Pacotes personalizados"]
+          features: ["Reservas de atividades", "Informações turísticas", "Pacotes personalizados"]
         },
         merch: { 
           title: "Merchandising Azores4fun", 
@@ -2631,7 +2631,7 @@ export const translations = {
         tourism: { 
           title: "Tourism Services", 
           desc: "Everything for your visit to the Azores",
-          features: ["Activity bookings", "Tourist information", "Tickets and passes", "Customized packages"]
+          features: ["Activity bookings", "Tourist information", "Customized packages"]
         },
         merch: { 
           title: "Azores4fun Merchandising", 
