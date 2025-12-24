@@ -1257,7 +1257,7 @@ export const translations = {
         regional: { 
           title: "Produtos Regionais", 
           desc: "O melhor dos Açores numa só loja",
-          features: ["Artesanato local", "Produtos gourmet", "Vinhos e licores", "Souvenirs únicos"]
+          features: ["Artesanato local", "Joias e peças de arte de Sofia Sant'Ana", "Souvenirs únicos"]
         },
         tourism: { 
           title: "Serviços de Turismo", 
@@ -2626,7 +2626,7 @@ export const translations = {
         regional: { 
           title: "Regional Products", 
           desc: "The best of the Azores in one shop",
-          features: ["Local crafts", "Gourmet products", "Wines and liqueurs", "Unique souvenirs"]
+          features: ["Local crafts", "Jewelry and art pieces by Sofia Sant'Ana", "Unique souvenirs"]
         },
         tourism: { 
           title: "Tourism Services", 
