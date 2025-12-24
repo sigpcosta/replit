@@ -915,7 +915,7 @@ export const translations = {
         fineline: { title: "Fineline", desc: "Especialidade da casa. Traços finos e delicados que criam designs minimalistas, elegantes e sofisticados. Perfeito para detalhes precisos, lettering delicado, flores e símbolos com linhas suaves. Uma técnica que valoriza a subtileza e a beleza do detalhe." }
       },
       piercings: {
-        ear: { title: "Orelha", healing: "Cicatrização: 6-12 semanas", desc: "Lóbulo, hélix, tragus, conch e rook." },
+        ear: { title: "Orelha", healing: "Cicatrização: 3-12 meses", desc: "Lóbulo, hélix, tragus, conch e rook." },
         nose: { title: "Nariz", healing: "Cicatrização: 2-4 meses", desc: "Nostril e septum com joias delicadas ou statement pieces." },
         facial: { title: "Facial", healing: "Cicatrização: 6-8 semanas", desc: "Sobrancelha, labret, monroe, medusa e bridge com técnicas modernas." },
         oral: { title: "Oral", healing: "Cicatrização: 4-6 semanas", desc: "Língua, smiley e frenulum com materiais hipoalergénicos." },
@@ -2284,7 +2284,7 @@ export const translations = {
         fineline: { title: "Fineline", desc: "Our specialty. Fine and delicate strokes that create minimalist, elegant and sophisticated designs. Perfect for precise details, delicate lettering, flowers and symbols with soft lines. A technique that values subtlety and the beauty of detail." }
       },
       piercings: {
-        ear: { title: "Ear", healing: "Healing: 6-12 weeks", desc: "Lobe, helix, tragus, conch and rook." },
+        ear: { title: "Ear", healing: "Healing: 3-12 months", desc: "Lobe, helix, tragus, conch and rook." },
         nose: { title: "Nose", healing: "Healing: 2-4 months", desc: "Nostril and septum with delicate or statement pieces." },
         facial: { title: "Facial", healing: "Healing: 6-8 weeks", desc: "Eyebrow, labret, monroe, medusa and bridge with modern techniques." },
         oral: { title: "Oral", healing: "Healing: 4-6 weeks", desc: "Tongue, smiley and frenulum with hypoallergenic materials." },
