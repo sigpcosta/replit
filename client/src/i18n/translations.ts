@@ -1243,7 +1243,7 @@ export const translations = {
     // Shop Page
     shop: {
       title: "Loja",
-      subtitle: "O seu ponto de encontro na Horta. Produtos locais, merchandising e receção para todos os nossos serviços.",
+      subtitle: "O seu ponto de encontro na Horta. Produtos locais e receção para todos os nossos serviços.",
       heroTitle: "O Coração da Azores4fun",
       heroP1: "A nossa loja no centro da Horta é muito mais do que um simples ponto de venda. É o ponto de encontro central para todos os serviços Azores4fun, onde pode reservar atividades, fazer check-in no alojamento e descobrir produtos únicos dos Açores.",
       heroP2: "Com uma equipa acolhedora e conhecedora, estamos prontos para tornar a sua experiência nos Açores inesquecível.",
@@ -2612,7 +2612,7 @@ export const translations = {
     // Shop Page
     shop: {
       title: "Shop",
-      subtitle: "Your meeting point in Horta. Local products, merchandising and reception for all our services.",
+      subtitle: "Your meeting point in Horta. Local products and reception for all our services.",
       heroTitle: "The Heart of Azores4fun",
       heroP1: "Our shop in the center of Horta is much more than a simple point of sale. It's the central meeting point for all Azores4fun services, where you can book activities, check in to accommodation and discover unique products from the Azores.",
       heroP2: "With a welcoming and knowledgeable team, we're ready to make your Azores experience unforgettable.",
