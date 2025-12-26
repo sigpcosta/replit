@@ -67,7 +67,7 @@ export const translations = {
       subtitle: "Experiências únicas que tornam a sua visita inesquecível",
       lasertag: {
         title: "Lasertag & Paintball",
-        description: "Viva momentos emocionantes com os nossos jogos de estratégia em campo próprio. Equipamento de qualidade e cenários desafiantes para grupos de amigos, famílias ou eventos corporativos.",
+        description: "Viva momentos emocionantes com os nossos jogos de estratégia em campo próprio, no meio da natureza ou num local à sua escolha. Equipamento de qualidade e cenários desafiantes para grupos de amigos, famílias ou eventos corporativos.",
         highlights: [
           "Campo próprio em localização privilegiada",
           "Equipamento moderno e seguro",
@@ -77,10 +77,10 @@ export const translations = {
       },
       watersports: {
         title: "Desportos Aquáticos",
-        description: "Explore a beleza natural dos Açores com os nossos SUPs e Kayaks. Descubra praias escondidas, grutas marinhas e a vida marinha vibrante das águas cristalinas do Faial.",
+        description: "Explore a beleza natural dos Açores com os nossos SUPs e Kayaks insufláveis. Descubra uma costa geologicamente única, praias escondidas, grutas e uma vida marinha vibrante nas águas cristalinas do Faial. Pode fazê-lo autonomamente ou com o nosso guia.",
         highlights: [
-          "Aluguer de SUPs e Kayaks de qualidade",
-          "Material de snorkeling incluído",
+          "Aluguer de SUPs e Kayaks insufláveis",
+          "Material de snorkeling disponível",
           "Águas cristalinas e seguras",
           "Perfeito para todos os níveis de experiência"
         ]
@@ -92,14 +92,14 @@ export const translations = {
           "Carrinha elétrica ecológica e confortável",
           "Itinerários personalizados",
           "Guias locais experientes",
-          "Transferências para clientes do alojamento"
+          "Serviços de Transfer de/para o aeroporto ou terminal marítimo"
         ]
       },
       corporate: {
         title: "Eventos Corporativos",
-        description: "Organize o seu próximo evento de teambuilding num ambiente único. Tendas espaçosas, atividades diversificadas e cenários naturais inspiradores para fortalecer a sua equipa.",
+        description: "Organize o seu próximo evento de teambuilding num ambiente único. Tenda espaçosa, atividades diversificadas e cenários naturais inspiradores para fortalecer o espírito da sua equipa.",
         highlights: [
-          "Tendas de grandes dimensões",
+          "Tenda de grandes dimensões",
           "Atividades de teambuilding personalizadas",
           "Jogos de estratégia e cooperação",
           "Infraestrutura completa para eventos"
@@ -1436,7 +1436,7 @@ export const translations = {
       subtitle: "Unique experiences that make your visit unforgettable",
       lasertag: {
         title: "Lasertag & Paintball",
-        description: "Experience thrilling moments with our strategy games on our own field. Quality equipment and challenging scenarios for groups of friends, families or corporate events.",
+        description: "Experience thrilling moments with our strategy games on our own field, in nature or at a location of your choice. Quality equipment and challenging scenarios for groups of friends, families or corporate events.",
         highlights: [
           "Own field in privileged location",
           "Modern and safe equipment",
@@ -1446,10 +1446,10 @@ export const translations = {
       },
       watersports: {
         title: "Water Sports",
-        description: "Explore the natural beauty of the Azores with our SUPs and Kayaks. Discover hidden beaches, marine caves and the vibrant marine life of Faial's crystal-clear waters.",
+        description: "Explore the natural beauty of the Azores with our inflatable SUPs and Kayaks. Discover a geologically unique coastline, hidden beaches, caves and vibrant marine life in Faial's crystal-clear waters. You can do it independently or with our guide.",
         highlights: [
-          "Quality SUP and Kayak rentals",
-          "Snorkeling equipment included",
+          "Inflatable SUP and Kayak rentals",
+          "Snorkeling equipment available",
           "Crystal clear and safe waters",
           "Perfect for all experience levels"
         ]
@@ -1461,14 +1461,14 @@ export const translations = {
           "Ecological and comfortable electric van",
           "Customized itineraries",
           "Experienced local guides",
-          "Transfers for accommodation guests"
+          "Transfer services to/from airport or maritime terminal"
         ]
       },
       corporate: {
         title: "Corporate Events",
-        description: "Organize your next teambuilding event in a unique environment. Spacious tents, diverse activities and inspiring natural scenarios to strengthen your team.",
+        description: "Organize your next teambuilding event in a unique environment. Spacious tent, diverse activities and inspiring natural scenarios to strengthen your team spirit.",
         highlights: [
-          "Large-sized tents",
+          "Large-sized tent",
           "Customized teambuilding activities",
           "Strategy and cooperation games",
           "Complete infrastructure for events"
