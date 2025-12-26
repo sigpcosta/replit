@@ -37,27 +37,27 @@ export const translations = {
       subtitle: "Descubra tudo o que a Azores4fun tem para oferecer",
       accommodation: {
         title: "Alojamento Local",
-        description: "3 apartamentos modernos no centro da cidade da Horta, totalmente equipados para uma estadia confortável e memorável.",
+        description: "3 apartamentos modernos, bem localizados no centro da cidade da Horta, totalmente equipados para uma estadia confortável e agradável.",
       },
       activities: {
         title: "Atividades de Animação Turística",
-        description: "Lasertag, Paintball, Gelblaster, Nerfs, aluguer de SUPs e Kayaks, tours personalizados pela ilha e muito mais.",
+        description: "Tours de Carrinha, Trilhos pedestres, Lasertag, Paintball, aluguer de SUPs e muito mais.",
       },
       events: {
         title: "Eventos",
-        description: "Tendas para eventos, insufláveis, festas de aniversário, teambuilding e jogos de estratégia personalizados.",
+        description: "Festas de aniversário, despedidas de solteiro, teambuilding, jogos de estratégia personalizados, tendas e insufláveis.",
       },
       tattoo: {
         title: "Tatuagem & Piercings",
-        description: "Estúdio profissional com artistas experientes, ambiente higiénico e seguro para dar vida às suas ideias.",
+        description: "Estúdio profissional com artista experiente, ambiente higiénico e seguro para dar vida às suas ideias.",
       },
       property: {
         title: "Gestão Imobiliária",
-        description: "Serviços de arrendamento de longa duração, manutenção e construção para empreendimentos turísticos e particulares.",
+        description: "Serviços de arrendamento de longa duração, gestão de alojamentos e serviços de manutenção e pequenas reparações.",
       },
       shop: {
         title: "Loja",
-        description: "Loja aberta para receção de clientes, venda de bens e serviços de turismo local, produtos regionais e merchandising.",
+        description: "Loja aberta para receção de clientes, venda de bens e serviços de turismo, produtos regionais e receção do estúdio.",
       },
     },
     
@@ -1406,27 +1406,27 @@ export const translations = {
       subtitle: "Discover everything Azores4fun has to offer",
       accommodation: {
         title: "Local Accommodation",
-        description: "3 modern apartments in the center of Horta, fully equipped for a comfortable and memorable stay.",
+        description: "3 modern apartments, well located in the center of Horta, fully equipped for a comfortable and pleasant stay.",
       },
       activities: {
         title: "Tourism Activities",
-        description: "Lasertag, Paintball, Gelblaster, Nerfs, SUP and Kayak rentals, customized island tours and much more.",
+        description: "Van Tours, Hiking Trails, Lasertag, Paintball, SUP rentals and much more.",
       },
       events: {
         title: "Events",
-        description: "Event tents, inflatables, birthday parties, teambuilding and customized strategy games.",
+        description: "Birthday parties, bachelor/bachelorette parties, teambuilding, customized strategy games, tents and inflatables.",
       },
       tattoo: {
         title: "Tattoo & Piercings",
-        description: "Professional studio with experienced artists, hygienic and safe environment to bring your ideas to life.",
+        description: "Professional studio with experienced artist, hygienic and safe environment to bring your ideas to life.",
       },
       property: {
         title: "Property Management",
-        description: "Long-term rental services, maintenance and construction for tourism and private properties.",
+        description: "Long-term rental services, accommodation management and maintenance and small repair services.",
       },
       shop: {
         title: "Shop",
-        description: "Open store for customer reception, sale of local tourism goods and services, regional products and merchandising.",
+        description: "Open store for customer reception, sale of tourism goods and services, regional products and studio reception.",
       },
     },
     
