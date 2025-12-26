@@ -40,7 +40,7 @@ export const translations = {
         description: "3 apartamentos modernos no centro da cidade da Horta, totalmente equipados para uma estadia confortável e memorável.",
       },
       activities: {
-        title: "Animação Turística",
+        title: "Atividades de Animação Turística",
         description: "Lasertag, Paintball, Gelblaster, Nerfs, aluguer de SUPs e Kayaks, tours personalizados pela ilha e muito mais.",
       },
       events: {
@@ -380,7 +380,7 @@ export const translations = {
           ]
         },
         {
-          title: "Animação Turística",
+          title: "Atividades de Animação Turística",
           faqs: [
             {
               question: "Que atividades oferecem?",
@@ -544,7 +544,7 @@ export const translations = {
 
     // Activities Page
     activities: {
-      title: "Animação Turística",
+      title: "Atividades de Animação Turística",
       subtitle: "Aventuras emocionantes e experiências únicas nos Açores. Lasertag, Paintball, atividades aquáticas, trilhos e tours personalizados.",
       heroTitle: "Aventura e Emoção nos Açores",
       heroP1: "A Azores4fun oferece uma ampla variedade de atividades de animação turística para tornar a sua visita aos Açores verdadeiramente inesquecível. Desde jogos de estratégia emocionantes até experiências aquáticas relaxantes.",
