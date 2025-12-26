@@ -13,8 +13,8 @@ import { organizationSchema, localBusinessSchema } from "@/lib/structured-data";
 import { Home as HomeIcon, Activity, PartyPopper, Pencil, Building2, Store } from "lucide-react";
 
 import apartmentImage from "@assets/15_1764274865100.jpg";
-import lasertagImage from "@assets/generated_images/Laser_tag_action_shot_63a174d9.png";
-import eventsImage from "@assets/generated_images/Event_tent_celebration_fca04953.png";
+import activitiesImage from "@assets/carrinha3_1766744828213.jpg";
+import eventsImage from "@assets/eventos1_1766744828215.jpg";
 import tattooImage from "@assets/estudio hub_1763981152350.jpg";
 import propertyImage from "@assets/TPN1 e 3 porta fechada_1764275620915.png";
 import shopImage from "@assets/Porta_loja_com_Sol_1766554753058.png";
@@ -55,7 +55,7 @@ export default function Home() {
     {
       title: t.services.activities.title,
       description: t.services.activities.description,
-      image: lasertagImage,
+      image: activitiesImage,
       icon: Activity,
       href: "/animacao",
     },
