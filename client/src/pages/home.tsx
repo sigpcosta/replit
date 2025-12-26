@@ -18,10 +18,10 @@ import eventsImage from "@assets/eventos1_1766744828215.jpg";
 import tattooImage from "@assets/estudio hub_1763981152350.jpg";
 import propertyImage from "@assets/TPN1 e 3 porta fechada_1764275620915.png";
 import shopImage from "@assets/Porta_loja_com_Sol_1766554753058.png";
-import supImage from "@assets/generated_images/SUP_paddleboarding_Azores_ocean_960e2ee9.png";
-import vanImage from "@assets/generated_images/Electric_van_island_tour_9d32feea.png";
-import teambuildingImage from "@assets/generated_images/Teambuilding_outdoor_activity_99e77711.png";
-import paintballImage from "@assets/generated_images/Paintball_action_gameplay_8c01711a.png";
+import laserImage from "@assets/laser1_1766745835509.JPG";
+import kayakImage from "@assets/kayake1_1766745835508.jpg";
+import vanImage from "@assets/carrinha1_1766745835506.jpg";
+import grupoImage from "@assets/grupo2_1766745835507.jpg";
 
 export default function Home() {
   const { t, language } = useLanguage();
@@ -137,7 +137,7 @@ export default function Home() {
             <FeaturedActivity
               title={t.featured.lasertag.title}
               description={t.featured.lasertag.description}
-              image={paintballImage}
+              image={laserImage}
               imagePosition="left"
               highlights={t.featured.lasertag.highlights}
             />
@@ -145,7 +145,7 @@ export default function Home() {
             <FeaturedActivity
               title={t.featured.watersports.title}
               description={t.featured.watersports.description}
-              image={supImage}
+              image={kayakImage}
               imagePosition="right"
               highlights={t.featured.watersports.highlights}
             />
@@ -161,7 +161,7 @@ export default function Home() {
             <FeaturedActivity
               title={t.featured.corporate.title}
               description={t.featured.corporate.description}
-              image={teambuildingImage}
+              image={grupoImage}
               imagePosition="right"
               highlights={t.featured.corporate.highlights}
             />
