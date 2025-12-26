@@ -25,7 +25,7 @@ export const translations = {
       title: "Azores4fun",
       subtitle: "A Sua Aventura Completa nos Açores",
       location: "Experiências únicas na Horta, Faial.",
-      services: "Alojamento · Animação Turística · Eventos · Tatuagem · Gestão Imobiliária · Loja",
+      services: "Alojamento · Atividades de Animação Turística · Eventos · Tatuagem & Piercing · Loja · Gestão Imobiliária",
       explore: "Explorar Serviços",
       contact: "Contactar",
       discover: "Descubra Mais",
@@ -545,7 +545,7 @@ export const translations = {
     // Activities Page
     activities: {
       title: "Animação Turística",
-      subtitle: "Aventuras emocionantes e experiências únicas nos Açores. Lasertag, Paintball, desportos aquáticos e tours personalizados.",
+      subtitle: "Aventuras emocionantes e experiências únicas nos Açores. Lasertag, Paintball, atividades aquáticas, trilhos e tours personalizados.",
       heroTitle: "Aventura e Emoção nos Açores",
       heroP1: "A Azores4fun oferece uma ampla variedade de atividades de animação turística para tornar a sua visita aos Açores verdadeiramente inesquecível. Desde jogos de estratégia emocionantes até experiências aquáticas relaxantes.",
       heroP2: "Com equipamento de qualidade, instrutores experientes e um compromisso com a segurança, garantimos que cada atividade seja uma experiência memorável.",
@@ -1394,7 +1394,7 @@ export const translations = {
       title: "Azores4fun",
       subtitle: "Your Complete Azores Adventure",
       location: "Unique experiences in Horta, Faial.",
-      services: "Accommodation · Tourism Activities · Events · Tattoo · Property Management · Shop",
+      services: "Accommodation · Tourism Activities · Events · Tattoo & Piercing · Shop · Property Management",
       explore: "Explore Services",
       contact: "Contact",
       discover: "Discover More",
@@ -1914,7 +1914,7 @@ export const translations = {
     // Activities Page
     activities: {
       title: "Tourism Activities",
-      subtitle: "Exciting adventures and unique experiences in the Azores. Lasertag, Paintball, water sports and customized tours.",
+      subtitle: "Exciting adventures and unique experiences in the Azores. Lasertag, Paintball, water activities, trails and customized tours.",
       heroTitle: "Adventure and Excitement in the Azores",
       heroP1: "Azores4fun offers a wide variety of tourism activities to make your visit to the Azores truly unforgettable. From exciting strategy games to relaxing water experiences.",
       heroP2: "With quality equipment, experienced instructors and a commitment to safety, we ensure each activity is a memorable experience.",
