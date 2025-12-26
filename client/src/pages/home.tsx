@@ -18,7 +18,7 @@ import eventsImage from "@assets/eventos1_1766744828215.jpg";
 import tattooImage from "@assets/estudio hub_1763981152350.jpg";
 import propertyImage from "@assets/TPN1 e 3 porta fechada_1764275620915.png";
 import shopImage from "@assets/Porta_loja_com_Sol_1766554753058.png";
-import laserImage from "@assets/laser1_1766745835509.JPG";
+import laserImage from "@assets/laser1_1766745835509.jpg";
 import kayakImage from "@assets/kayake1_1766745835508.jpg";
 import vanImage from "@assets/carrinha1_1766745835506.jpg";
 import grupoImage from "@assets/grupo2_1766745835507.jpg";
