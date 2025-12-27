@@ -566,7 +566,7 @@ export const translations = {
         snorkeling: "Snorkeling",
         snorkelingDesc: "Máscara, tubo e barbatanas é tudo o que precisa para desfrutar autónomamente o maravilhoso mundo subaquático da nossa ilha.",
         trails: "Trilhos Pedestres & Transferes",
-        trailsDesc: "Calce as botas, ponha a mochila ao ombro e venha descobrir trilhos incríveis com o nosso guia! Quer ir sozinho e só precisa de transporte para o inicio e/ou fim do trilho? Contacte-nos!",
+        trailsDesc: "Calce as botas, ponha a mochila às costas e venha descobrir trilhos incríveis com o nosso guia! Quer ir sozinho e só precisa de transporte para o inicio e/ou fim do trilho? Contacte-nos!",
         packages: "Pacotes Multi-atividades",
         packagesDesc: "Combine várias experiências numa só reserva e desfrute de descontos especiais",
         camping: "Campismo",
