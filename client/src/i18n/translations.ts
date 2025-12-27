@@ -796,12 +796,12 @@ export const translations = {
         teambuilding: "Teambuilding",
         teambuildingDesc: "Fortalece a tua equipa com atividades envolventes",
         teambuildingFeatures: ["Jogos de estratégia", "Atividades cooperativas", "Técnico experiente", "Possibilidade de incluir alojamento"],
-        outdoor: "Eventos ao Ar Livre",
-        outdoorDesc: "Tendas e infraestrutura para qualquer ocasião",
-        outdoorFeatures: ["3 tendas disponíveis", "Montagem incluída", "Capacidade até 100 pessoas", "Localizações flexíveis"],
-        competitions: "Competições e Jogos",
-        competitionsDesc: "Desafios emocionantes para grupos",
-        competitionsFeatures: ["Torneios organizados", "Prémios personalizados", "Equipamento fornecido", "Árbitros profissionais"]
+        outdoor: "Eventos ao Ar Livre, Competições e Jogos",
+        outdoorDesc: "Tendas, infraestrutura e desafios para qualquer ocasião",
+        outdoorFeatures: ["3 tendas disponíveis", "Montagem incluída", "Torneios organizados", "Equipamento fornecido"],
+        bachelorParty: "Despedida de Solteiro",
+        bachelorPartyDesc: "Celebre o fim da vida de solteiro com experiências únicas",
+        bachelorPartyFeatures: ["Atividades personalizadas", "Jogos e desafios", "Experiências memoráveis", "Organização completa"]
       },
       highlights: [
         "Tendas de grandes dimensões",
@@ -2173,12 +2173,12 @@ export const translations = {
         teambuilding: "Teambuilding",
         teambuildingDesc: "Strengthen your team with engaging activities",
         teambuildingFeatures: ["Strategy games", "Cooperative activities", "Experienced technician", "Option to include accommodation"],
-        outdoor: "Outdoor Events",
-        outdoorDesc: "Tents and infrastructure for any occasion",
-        outdoorFeatures: ["3 tents available", "Assembly included", "Capacity up to 100 people", "Flexible locations"],
-        competitions: "Competitions and Games",
-        competitionsDesc: "Exciting challenges for groups",
-        competitionsFeatures: ["Organized tournaments", "Custom prizes", "Equipment provided", "Professional referees"]
+        outdoor: "Outdoor Events, Competitions and Games",
+        outdoorDesc: "Tents, infrastructure and challenges for any occasion",
+        outdoorFeatures: ["3 tents available", "Assembly included", "Organized tournaments", "Equipment provided"],
+        bachelorParty: "Bachelor Party",
+        bachelorPartyDesc: "Celebrate the end of single life with unique experiences",
+        bachelorPartyFeatures: ["Personalized activities", "Games and challenges", "Memorable experiences", "Full organization"]
       },
       highlights: [
         "Large-sized tents",

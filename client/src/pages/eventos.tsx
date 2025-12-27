@@ -4,7 +4,7 @@ import ServiceFAQs from "@/components/ServiceFAQs";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { PartyPopper, Tent as TentIcon, Users, Trophy, Music, Check } from "lucide-react";
+import { PartyPopper, Tent as TentIcon, Users, Heart, Music, Check } from "lucide-react";
 import { seoConfig } from "@/lib/seo-config";
 import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
 import eventsImage from "@assets/generated_images/Event_tent_celebration_fca04953.png";
@@ -48,10 +48,10 @@ export default function EventosPage() {
       features: t.events.eventTypesList.outdoorFeatures
     },
     {
-      icon: Trophy,
-      title: t.events.eventTypesList.competitions,
-      description: t.events.eventTypesList.competitionsDesc,
-      features: t.events.eventTypesList.competitionsFeatures
+      icon: Heart,
+      title: t.events.eventTypesList.bachelorParty,
+      description: t.events.eventTypesList.bachelorPartyDesc,
+      features: t.events.eventTypesList.bachelorPartyFeatures
     }
   ];
 
