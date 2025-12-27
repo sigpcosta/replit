@@ -623,10 +623,10 @@ export const translations = {
         "Experiências únicas"
       ],
       campingFeatures: [
-        "Aluguer de tendas e equipamento",
-        "Experiência única na natureza",
-        "Sob as estrelas dos Açores",
-        "Contacte-nos para disponibilidade"
+        "Dormir a ver as estrelas",
+        "Planeamento e transfer personalizado",
+        "Ouvir a noite",
+        "Experiências únicas na natureza"
       ],
       faqTitle: "Perguntas Frequentes - Animação Turística",
       faqs: [
@@ -2000,10 +2000,10 @@ export const translations = {
         "Unique experiences"
       ],
       campingFeatures: [
-        "Tent and equipment rental",
-        "Unique nature experience",
-        "Under the Azores stars",
-        "Contact us for availability"
+        "Sleep watching the stars",
+        "Personalized planning and transfer",
+        "Listen to the night",
+        "Unique nature experiences"
       ],
       faqTitle: "Frequently Asked Questions - Tourism Activities",
       faqs: [
