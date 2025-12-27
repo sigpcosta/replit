@@ -10,7 +10,7 @@ import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data"
 import lasertagImage from "@assets/generated_images/Laser_tag_action_shot_63a174d9.png";
 import supImage from "@assets/generated_images/SUP_paddleboarding_Azores_ocean_960e2ee9.png";
 import paintballImage from "@assets/generated_images/Paintball_action_gameplay_8c01711a.png";
-import vanImage from "@assets/generated_images/Electric_van_island_tour_9d32feea.png";
+import packagesImage from "@assets/Kayakes_1766856007742.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "wouter";
 
@@ -212,7 +212,7 @@ export default function AnimacaoPage() {
                 </Button>
               </div>
               <img
-                src={vanImage}
+                src={packagesImage}
                 alt={t.activities.altTour}
                 className="rounded-lg w-full h-64 object-cover"
               />
