@@ -610,9 +610,9 @@ export const translations = {
       ],
       trailsFeatures: [
         "Trilhos pedestres incríveis",
-        "Transferências disponíveis",
-        "Aluguer de equipamento de campismo",
-        "Experiência na natureza"
+        "Transfers disponíveis",
+        "Possibilidade de acompanhamento por Guia experiente",
+        "Experiência segura na natureza"
       ],
       packagesFeatures: [
         "Descontos em pacotes",
@@ -1978,10 +1978,10 @@ export const translations = {
         "Suitable for all levels"
       ],
       trailsFeatures: [
-        "Incredible pedestrian trails",
+        "Incredible hiking trails",
         "Transfers available",
-        "Camping equipment rental",
-        "Nature experience"
+        "Option for experienced guide accompaniment",
+        "Safe nature experience"
       ],
       packagesFeatures: [
         "Package discounts",
