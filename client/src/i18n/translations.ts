@@ -791,8 +791,8 @@ export const translations = {
       whatWeOffer: "O Que Oferecemos",
       eventTypesList: {
         birthdays: "Festas de Aniversário",
-        birthdaysDesc: "Celebrações memoráveis para todas as idades",
-        birthdaysFeatures: ["Insufláveis divertidos", "Decoração festiva", "Espaço amplo", "Personalização completa"],
+        birthdaysDesc: "Festas para todas as idades, no nosso espaço ou num local à sua escolha",
+        birthdaysFeatures: ["Insuflável gigante", "Obstáculos insufláveis", "Espaço amplo", "Jogos para todas as idades"],
         teambuilding: "Teambuilding",
         teambuildingDesc: "Fortalece a tua equipa com atividades envolventes",
         teambuildingFeatures: ["Jogos de estratégia", "Atividades cooperativas", "Facilitadores experientes", "Eventos corporativos"],
@@ -2168,8 +2168,8 @@ export const translations = {
       whatWeOffer: "What We Offer",
       eventTypesList: {
         birthdays: "Birthday Parties",
-        birthdaysDesc: "Memorable celebrations for all ages",
-        birthdaysFeatures: ["Fun inflatables", "Festive decoration", "Ample space", "Full customization"],
+        birthdaysDesc: "Parties for all ages, at our venue or a location of your choice",
+        birthdaysFeatures: ["Giant inflatable", "Inflatable obstacles", "Ample space", "Games for all ages"],
         teambuilding: "Teambuilding",
         teambuildingDesc: "Strengthen your team with engaging activities",
         teambuildingFeatures: ["Strategy games", "Cooperative activities", "Experienced facilitators", "Corporate events"],
