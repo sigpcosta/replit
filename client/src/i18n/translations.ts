@@ -570,7 +570,7 @@ export const translations = {
         packages: "Pacotes Multi-atividades",
         packagesDesc: "Combine várias experiências numa só reserva e desfrute de descontos especiais",
         camping: "Campismo",
-        campingDesc: "Quer dormir na natureza e não trouxe a sua tenda? Alugue o nosso equipamento de campismo e desfrute de uma experiência única sob as estrelas dos Açores."
+        campingDesc: "Quer dormir na natureza e não trouxe a sua tenda!? Nem saco cama!? Quer ir de forma relaxada e necessita de transfers para a sua experiência!? Contacte-nos!"
       },
       highlights: [
         "Campo próprio para jogos de estratégia",
@@ -1947,7 +1947,7 @@ export const translations = {
         packages: "Multi-activity Packages",
         packagesDesc: "Combine multiple experiences in one booking and enjoy special discounts",
         camping: "Camping",
-        campingDesc: "Want to sleep in nature but didn't bring your tent? Rent our camping equipment and enjoy a unique experience under the Azores stars."
+        campingDesc: "Want to sleep in nature but didn't bring your tent!? No sleeping bag!? Want to go relaxed and need transfers for your experience!? Contact us!"
       },
       highlights: [
         "Own field for strategy games",
