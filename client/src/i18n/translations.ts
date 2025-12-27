@@ -562,7 +562,7 @@ export const translations = {
         vantours: "Tours em Carrinha",
         vantoursDesc: "Venha descobrir a ilha e todos os seus recantos únicos na nossa carrinha elétrica, silenciosa, ecológica e confortável. Programas pré-definidos ou à medida para si, com ou sem almoço incluído.",
         sups: "SUPs & Kayaks",
-        supsDesc: "Com os nossos SUPs e kayaks infláveis pode aventurar-se em portos e praias por toda a ilha do Faial e ter o privilégio de conhecê-la numa outra perspetiva.",
+        supsDesc: "Com os nossos SUPs e kayaks insufláveis pode aventurar-se sozinho em portos e praias por toda a ilha do Faial e ter o privilégio de conhecê-la numa outra perspetiva.",
         snorkeling: "Snorkeling",
         snorkelingDesc: "Máscara, tubo e barbatanas é tudo o que precisa para desfrutar do maravilhoso mundo subaquático da nossa ilha.",
         trails: "Trilhos Pedestres & Campismo",
@@ -597,10 +597,10 @@ export const translations = {
         "Descubra todos os cantos da ilha"
       ],
       supsFeatures: [
-        "SUPs e kayaks infláveis",
+        "SUPs e kayaks insufláveis",
         "Explore portos e praias",
         "Perspetiva única da ilha",
-        "Equipamento de qualidade"
+        "Equipamento de fácil transporte"
       ],
       snorkelingFeatures: [
         "Equipamento completo fornecido",
@@ -1931,7 +1931,7 @@ export const translations = {
         vantours: "Van Tours",
         vantoursDesc: "Come and discover the island and all its unique hidden spots in our electric, silent, eco-friendly and comfortable van. Pre-defined or tailor-made programs for you, with or without lunch included.",
         sups: "SUPs & Kayaks",
-        supsDesc: "With our inflatable SUPs and kayaks you can venture into ports and beaches throughout the Faial island and have the privilege of getting to know it from another perspective.",
+        supsDesc: "With our inflatable SUPs and kayaks you can venture on your own into ports and beaches throughout the Faial island and have the privilege of getting to know it from another perspective.",
         snorkeling: "Snorkeling",
         snorkelingDesc: "Mask, tube and fins is all you need to enjoy the wonderful underwater world on our island.",
         trails: "Pedestrian Trails & Camping",
@@ -1969,7 +1969,7 @@ export const translations = {
         "Inflatable SUPs and kayaks",
         "Explore ports and beaches",
         "Unique perspective of the island",
-        "Quality equipment"
+        "Easy-to-transport equipment"
       ],
       snorkelingFeatures: [
         "Complete equipment provided",
