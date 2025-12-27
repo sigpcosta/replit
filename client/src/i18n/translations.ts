@@ -565,8 +565,8 @@ export const translations = {
         supsDesc: "Com os nossos SUPs e kayaks insufláveis pode aventurar-se sozinho em portos e praias por toda a ilha do Faial e ter o privilégio de conhecê-la numa outra perspetiva.",
         snorkeling: "Snorkeling",
         snorkelingDesc: "Máscara, tubo e barbatanas é tudo o que precisa para desfrutar autónomamente o maravilhoso mundo subaquático da nossa ilha.",
-        trails: "Trilhos Pedestres & Campismo",
-        trailsDesc: "Calce as botas, ponha a mochila ao ombro e venha descobrir trilhos incríveis! Só precisa de transferências ou quer dormir na natureza e não trouxe a sua tenda!? Contacte-nos!",
+        trails: "Trilhos Pedestres & Transferes",
+        trailsDesc: "Calce as botas, ponha a mochila ao ombro e venha descobrir trilhos incríveis com o nosso guia! Quer ir sozinho e só precisa de transporte para o inicio e/ou fim do trilho? Contacte-nos!",
         packages: "Pacotes Multi-atividades",
         packagesDesc: "Combine várias experiências numa só reserva e desfrute de descontos especiais"
       },
@@ -1934,8 +1934,8 @@ export const translations = {
         supsDesc: "With our inflatable SUPs and kayaks you can venture on your own into ports and beaches throughout the Faial island and have the privilege of getting to know it from another perspective.",
         snorkeling: "Snorkeling",
         snorkelingDesc: "Mask, tube and fins is all you need to independently enjoy the wonderful underwater world on our island.",
-        trails: "Pedestrian Trails & Camping",
-        trailsDesc: "Put on your boots, your backpack on your shoulder and come discover incredible trails! Do you only need transfers or want to sleep in nature and didn't bring your tent!? Contact us!",
+        trails: "Hiking Trails & Transfers",
+        trailsDesc: "Put on your boots, your backpack on your shoulder and come discover incredible trails with our guide! Want to go alone and only need transport to the start and/or end of the trail? Contact us!",
         packages: "Multi-activity Packages",
         packagesDesc: "Combine multiple experiences in one booking and enjoy special discounts"
       },
