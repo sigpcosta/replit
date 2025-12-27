@@ -568,7 +568,9 @@ export const translations = {
         trails: "Trilhos Pedestres & Transferes",
         trailsDesc: "Calce as botas, ponha a mochila ao ombro e venha descobrir trilhos incríveis com o nosso guia! Quer ir sozinho e só precisa de transporte para o inicio e/ou fim do trilho? Contacte-nos!",
         packages: "Pacotes Multi-atividades",
-        packagesDesc: "Combine várias experiências numa só reserva e desfrute de descontos especiais"
+        packagesDesc: "Combine várias experiências numa só reserva e desfrute de descontos especiais",
+        camping: "Campismo",
+        campingDesc: "Quer dormir na natureza e não trouxe a sua tenda? Alugue o nosso equipamento de campismo e desfrute de uma experiência única sob as estrelas dos Açores."
       },
       highlights: [
         "Campo próprio para jogos de estratégia",
@@ -619,6 +621,12 @@ export const translations = {
         "Planeamento personalizado",
         "Combine várias atividades",
         "Experiências únicas"
+      ],
+      campingFeatures: [
+        "Aluguer de tendas e equipamento",
+        "Experiência única na natureza",
+        "Sob as estrelas dos Açores",
+        "Contacte-nos para disponibilidade"
       ],
       faqTitle: "Perguntas Frequentes - Animação Turística",
       faqs: [
@@ -1937,7 +1945,9 @@ export const translations = {
         trails: "Hiking Trails & Transfers",
         trailsDesc: "Put on your boots, your backpack on your shoulder and come discover incredible trails with our guide! Want to go alone and only need transport to the start and/or end of the trail? Contact us!",
         packages: "Multi-activity Packages",
-        packagesDesc: "Combine multiple experiences in one booking and enjoy special discounts"
+        packagesDesc: "Combine multiple experiences in one booking and enjoy special discounts",
+        camping: "Camping",
+        campingDesc: "Want to sleep in nature but didn't bring your tent? Rent our camping equipment and enjoy a unique experience under the Azores stars."
       },
       highlights: [
         "Own field for strategy games",
@@ -1988,6 +1998,12 @@ export const translations = {
         "Personalized planning",
         "Combine multiple activities",
         "Unique experiences"
+      ],
+      campingFeatures: [
+        "Tent and equipment rental",
+        "Unique nature experience",
+        "Under the Azores stars",
+        "Contact us for availability"
       ],
       faqTitle: "Frequently Asked Questions - Tourism Activities",
       faqs: [

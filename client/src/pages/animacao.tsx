@@ -4,7 +4,7 @@ import ServiceFAQs from "@/components/ServiceFAQs";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Zap, Target, Waves, Car, Tent, Check, Eye, Camera } from "lucide-react";
+import { Zap, Target, Waves, Car, Tent, Check, Eye, Footprints } from "lucide-react";
 import { seoConfig } from "@/lib/seo-config";
 import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
 import lasertagImage from "@assets/generated_images/Laser_tag_action_shot_63a174d9.png";
@@ -57,16 +57,16 @@ export default function AnimacaoPage() {
       features: t.activities.snorkelingFeatures
     },
     {
-      icon: Tent,
+      icon: Footprints,
       title: t.activities.activityTypes.trails,
       description: t.activities.activityTypes.trailsDesc,
       features: t.activities.trailsFeatures
     },
     {
-      icon: Camera,
-      title: t.activities.activityTypes.packages,
-      description: t.activities.activityTypes.packagesDesc,
-      features: t.activities.packagesFeatures
+      icon: Tent,
+      title: t.activities.activityTypes.camping,
+      description: t.activities.activityTypes.campingDesc,
+      features: t.activities.campingFeatures
     }
   ];
 
