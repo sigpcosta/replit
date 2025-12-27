@@ -545,7 +545,7 @@ export const translations = {
     // Activities Page
     activities: {
       title: "Atividades de Animação Turística",
-      subtitle: "Aventuras emocionantes e experiências únicas nos Açores. Lasertag, Paintball, atividades aquáticas, trilhos e tours personalizados.",
+      subtitle: "Aventuras emocionantes e experiências únicas no Faial. Trilhos, Transferes, Tours de Carrinha, Lasertag, Paintball, atividades aquáticas ou pacotes multiatividades.",
       heroTitle: "Aventura e Emoção nos Açores",
       heroP1: "A Azores4fun oferece uma ampla variedade de atividades de animação turística para tornar a sua visita aos Açores verdadeiramente inesquecível. De passeios pedestres, em trilhos únicos, a passeios de carrinha ecológicos, a jogos de estratégia emocionantes até experiências aquáticas relaxantes.",
       heroP2: "Com equipamento de qualidade, guias experientes e um compromisso com a segurança, garantimos que cada atividade seja uma experiência memorável.",
@@ -1914,7 +1914,7 @@ export const translations = {
     // Activities Page
     activities: {
       title: "Tourism Activities",
-      subtitle: "Exciting adventures and unique experiences in the Azores. Lasertag, Paintball, water activities, trails and customized tours.",
+      subtitle: "Exciting adventures and unique experiences in Faial. Trails, Transfers, Van Tours, Lasertag, Paintball, water activities or multi-activity packages.",
       heroTitle: "Adventure and Excitement in the Azores",
       heroP1: "Azores4fun offers a wide variety of tourism activities to make your visit to the Azores truly unforgettable. From hiking trails on unique paths, to eco-friendly van tours, to exciting strategy games and relaxing water experiences.",
       heroP2: "With quality equipment, experienced guides and a commitment to safety, we ensure each activity is a memorable experience.",
