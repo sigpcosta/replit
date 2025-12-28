@@ -94,26 +94,6 @@ export default function SobrePage() {
           </div>
 
           <div className="mb-16 md:mb-24">
-            <h2 className="font-heading text-3xl font-bold mb-12 text-center" data-testid="text-timeline">
-              {t.about.timeline}
-            </h2>
-            <div className="max-w-3xl mx-auto">
-              {t.about.milestones.map((milestone: any, index: number) => (
-                <div key={index} className="relative pl-8 pb-12 last:pb-0 border-l-2 border-primary/30" data-testid={`milestone-${index}`}>
-                  <div className="absolute left-0 top-0 -translate-x-[9px] w-4 h-4 rounded-full bg-primary"></div>
-                  <div className="mb-1">
-                    <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full">
-                      {milestone.year}
-                    </span>
-                  </div>
-                  <h3 className="font-heading text-xl font-bold mb-2">{milestone.title}</h3>
-                  <p className="text-muted-foreground">{milestone.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mb-16 md:mb-24">
             <div className="text-center mb-12">
               <h2 className="font-heading text-3xl font-bold mb-4" data-testid="text-business-areas">
                 {t.about.businessAreas}
