@@ -1236,9 +1236,9 @@ export const translations = {
           bio: "Artista certificada com anos de experiência em body art. Transforma ideias em obras de arte únicas com técnica apurada e em ambiente totalmente seguro. É também a responsável pela gestão da Loja e Estúdio."
         },
         {
-          name: "Emanuela Rosa",
-          role: "Gestor de Propriedades",
-          bio: "Engenheiro civil especializado em manutenção e construção. Gere arrendamentos de longa duração e lidera a nossa equipa de obras e renovações."
+          name: "Emanuel Rosa",
+          role: "Técnico de Apoio e Manutenção",
+          bio: "Responsável pela manutenção das infraestruturas e apoia nas Atividades Turísticas e Eventos."
         }
       ]
     },
@@ -2608,9 +2608,9 @@ export const translations = {
           bio: "Certified artist with years of experience in body art. Transforms ideas into unique works of art with refined technique in a completely safe environment. She is also responsible for managing the Shop and Studio."
         },
         {
-          name: "Emanuela Rosa",
-          role: "Property Manager",
-          bio: "Civil engineer specialized in maintenance and construction. Manages long-term rentals and leads our construction and renovation team."
+          name: "Emanuel Rosa",
+          role: "Support and Maintenance Technician",
+          bio: "Responsible for infrastructure maintenance and supports Tourism Activities and Events."
         }
       ]
     },
