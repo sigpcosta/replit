@@ -1236,14 +1236,9 @@ export const translations = {
           bio: "Artista certificada com anos de experiência em body art. Transforma ideias em obras de arte únicas com técnica apurada e em ambiente totalmente seguro. É também a responsável pela gestão da Loja e Estúdio."
         },
         {
-          name: "Carlos Mendes",
+          name: "Emanuela Rosa",
           role: "Gestor de Propriedades",
           bio: "Engenheiro civil especializado em manutenção e construção. Gere arrendamentos de longa duração e lidera a nossa equipa de obras e renovações."
-        },
-        {
-          name: "Sofia Rodrigues",
-          role: "Responsável da Loja",
-          bio: "O rosto da Azores4fun na nossa loja física. Acolhe clientes, fornece informações turísticas e gere vendas de produtos regionais e merchandising."
         }
       ]
     },
@@ -2613,14 +2608,9 @@ export const translations = {
           bio: "Certified artist with years of experience in body art. Transforms ideas into unique works of art with refined technique in a completely safe environment. She is also responsible for managing the Shop and Studio."
         },
         {
-          name: "Carlos Mendes",
+          name: "Emanuela Rosa",
           role: "Property Manager",
           bio: "Civil engineer specialized in maintenance and construction. Manages long-term rentals and leads our construction and renovation team."
-        },
-        {
-          name: "Sofia Rodrigues",
-          role: "Shop Manager",
-          bio: "The face of Azores4fun at our physical shop. Welcomes customers, provides tourist information and manages sales of regional products and merchandising."
         }
       ]
     },
