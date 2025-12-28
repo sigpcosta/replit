@@ -1187,7 +1187,7 @@ export const translations = {
       mission: "Missão",
       missionText: "Proporcionar experiências completas e memoráveis nos Açores, combinando alojamento de qualidade, aventuras emocionantes e serviços profissionais que superam as expectativas dos nossos clientes.",
       vision: "Visão",
-      visionText: "Ser a empresa de referência em Horta para turismo multi-serviço, reconhecida pela qualidade, inovação e compromisso com a satisfação total dos clientes e desenvolvimento sustentável da região.",
+      visionText: "Ser uma empresa de referência na ilha do Faial, Açores, para turismo multi-serviço, reconhecida pela qualidade, inovação e compromisso com a satisfação total dos clientes e desenvolvimento sustentável da região.",
       values: "Valores",
       valuesList: [
         "Qualidade em todos os serviços",
@@ -2559,7 +2559,7 @@ export const translations = {
       mission: "Mission",
       missionText: "To provide complete and memorable experiences in the Azores, combining quality accommodation, exciting adventures and professional services that exceed our customers' expectations.",
       vision: "Vision",
-      visionText: "To be the reference company in Horta for multi-service tourism, recognized for quality, innovation and commitment to total customer satisfaction and sustainable development of the region.",
+      visionText: "To be a reference company on Faial Island, Azores, for multi-service tourism, recognized for quality, innovation and commitment to total customer satisfaction and sustainable development of the region.",
       values: "Values",
       valuesList: [
         "Quality in all services",
