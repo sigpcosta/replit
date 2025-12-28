@@ -1221,9 +1221,9 @@ export const translations = {
           bio: "Empreendedores açorianos apaixonados por turismo e inovação."
         },
         {
-          name: "Ana Costa",
-          role: "Gestora de Alojamento",
-          bio: "Responsável pelos nossos 3 apartamentos modernos, garantindo que cada hóspede tem uma experiência memorável desde o check-in até à partida."
+          name: "Sandra & Conceição",
+          role: "Equipa do Alojamento",
+          bio: "A Sandra é a responsável pelas reservas e comunicação com os clientes, a Conceição é a governanta dos 3 apartamentos, responsável por todas as comodidades. Ambas garantem que cada hóspede tem uma experiência memorável desde o check-in até à partida."
         },
         {
           name: "Pedro Sousa",
@@ -2598,9 +2598,9 @@ export const translations = {
           bio: "Azorean entrepreneurs passionate about tourism and innovation."
         },
         {
-          name: "Ana Costa",
-          role: "Accommodation Manager",
-          bio: "Responsible for our 3 modern apartments, ensuring every guest has a memorable experience from check-in to departure."
+          name: "Sandra & Conceição",
+          role: "Accommodation Team",
+          bio: "Sandra handles reservations and guest communication, Conceição is the housekeeper for our 3 apartments, responsible for all amenities. Together they ensure every guest has a memorable experience from check-in to departure."
         },
         {
           name: "Pedro Sousa",
