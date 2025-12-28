@@ -1226,12 +1226,12 @@ export const translations = {
           bio: "A Sandra é a responsável pelas reservas e comunicação com os clientes, a Conceição é a governanta dos 3 apartamentos, responsável por todas as comodidades. Ambas garantem que cada hóspede tem uma experiência memorável desde o check-in até à partida."
         },
         {
-          name: "Pedro Sousa",
+          name: "Miguel Moniz",
           role: "Coordenador de Atividades",
           bio: "Especialista em turismo ativo e desportos aquáticos. Organiza tours personalizados, jogos de estratégia e todas as nossas atividades de aventura."
         },
         {
-          name: "Maria Santos",
+          name: "Catarina Gomes",
           role: "Tatuadora Profissional",
           bio: "Artista certificada com anos de experiência em body art. Transforma ideias em obras de arte únicas com técnica apurada e em ambiente totalmente seguro."
         },
@@ -2603,12 +2603,12 @@ export const translations = {
           bio: "Sandra handles reservations and guest communication, Conceição is the housekeeper for our 3 apartments, responsible for all amenities. Together they ensure every guest has a memorable experience from check-in to departure."
         },
         {
-          name: "Pedro Sousa",
+          name: "Miguel Moniz",
           role: "Activities Coordinator",
           bio: "Specialist in active tourism and water sports. Organizes personalized tours, strategy games and all our adventure activities."
         },
         {
-          name: "Maria Santos",
+          name: "Catarina Gomes",
           role: "Professional Tattoo Artist",
           bio: "Certified artist with years of experience in body art. Transforms ideas into unique works of art with refined technique in a completely safe environment."
         },
