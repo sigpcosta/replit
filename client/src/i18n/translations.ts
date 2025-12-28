@@ -1233,7 +1233,7 @@ export const translations = {
         {
           name: "Catarina Gomes",
           role: "Tatuadora Profissional & Responsável Loja e Estúdio",
-          bio: "Artista certificada com anos de experiência em body art. Transforma ideias em obras de arte únicas com técnica apurada e em ambiente totalmente seguro."
+          bio: "Artista certificada com anos de experiência em body art. Transforma ideias em obras de arte únicas com técnica apurada e em ambiente totalmente seguro. É também a responsável pela gestão da Loja e Estúdio."
         },
         {
           name: "Carlos Mendes",
@@ -2610,7 +2610,7 @@ export const translations = {
         {
           name: "Catarina Gomes",
           role: "Professional Tattoo Artist & Shop and Studio Manager",
-          bio: "Certified artist with years of experience in body art. Transforms ideas into unique works of art with refined technique in a completely safe environment."
+          bio: "Certified artist with years of experience in body art. Transforms ideas into unique works of art with refined technique in a completely safe environment. She is also responsible for managing the Shop and Studio."
         },
         {
           name: "Carlos Mendes",
