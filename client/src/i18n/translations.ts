@@ -1216,9 +1216,9 @@ export const translations = {
       teamSubtitle: "Conheça as pessoas que tornam tudo isto possível",
       teamMembers: [
         {
-          name: "João Silva",
-          role: "Fundador & Diretor Geral",
-          bio: "Empreendedor açoriano apaixonado por turismo e inovação. Fundou a Azores4fun com a visão de criar uma empresa multi-serviço que oferece experiências completas aos visitantes."
+          name: "Carlos & Sandra",
+          role: "Fundadores & Gestores",
+          bio: "Empreendedores açorianos apaixonados por turismo e inovação."
         },
         {
           name: "Ana Costa",
@@ -2593,9 +2593,9 @@ export const translations = {
       teamSubtitle: "Meet the people who make it all possible",
       teamMembers: [
         {
-          name: "João Silva",
-          role: "Founder & General Manager",
-          bio: "Azorean entrepreneur passionate about tourism and innovation. Founded Azores4fun with the vision of creating a multi-service company that offers complete experiences to visitors."
+          name: "Carlos & Sandra",
+          role: "Founders & Managers",
+          bio: "Azorean entrepreneurs passionate about tourism and innovation."
         },
         {
           name: "Ana Costa",
