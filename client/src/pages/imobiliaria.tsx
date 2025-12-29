@@ -2,9 +2,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ServiceFAQs from "@/components/ServiceFAQs";
 import { SEOHead } from "@/components/SEOHead";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Building2, Home as HomeIcon, Wrench, Key, Check } from "lucide-react";
+import { Building2 } from "lucide-react";
 import { seoConfig } from "@/lib/seo-config";
 import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -24,27 +23,6 @@ export default function ImobiliariaPage() {
       generateFAQSchema(t.property.faqs)
     ]
   };
-
-  const services = [
-    {
-      icon: Key,
-      title: t.property.services.rental.title,
-      description: t.property.services.rental.desc,
-      features: t.property.rentalFeatures
-    },
-    {
-      icon: HomeIcon,
-      title: t.property.services.tourism.title,
-      description: t.property.services.tourism.desc,
-      features: t.property.tourismFeatures
-    },
-    {
-      icon: Wrench,
-      title: t.property.services.maintenance.title,
-      description: t.property.services.maintenance.desc,
-      features: t.property.maintenanceFeatures
-    }
-  ];
 
   return (
     <div className="min-h-screen">
@@ -90,33 +68,6 @@ export default function ImobiliariaPage() {
               <Button size="lg" asChild data-testid="button-contact-us">
                 <a href="#contacto">{t.property.contactUs}</a>
               </Button>
-            </div>
-          </div>
-
-          <div className="mb-16 md:mb-24">
-            <h2 className="font-heading text-3xl font-bold mb-12 text-center">
-              {t.property.ourServices}
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {services.map((service, index: number) => (
-                <Card key={index} className="p-6 hover-elevate transition-all">
-                  <service.icon className="h-12 w-12 text-primary mb-4" />
-                  <h3 className="font-heading text-xl font-bold mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground mb-6">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature: string, idx: number) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm">
-                        <Check className="h-4 w-4 text-primary flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </Card>
-              ))}
             </div>
           </div>
         </div>
