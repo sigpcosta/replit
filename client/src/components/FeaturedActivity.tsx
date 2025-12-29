@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "wouter";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 interface FeaturedActivityProps {
   title: string;
@@ -7,6 +9,7 @@ interface FeaturedActivityProps {
   image: string;
   imagePosition?: "left" | "right";
   highlights?: string[];
+  link?: string;
 }
 
 export default function FeaturedActivity({
@@ -15,7 +18,9 @@ export default function FeaturedActivity({
   image,
   imagePosition = "left",
   highlights = [],
+  link = "/animacao",
 }: FeaturedActivityProps) {
+  const { t } = useLanguage();
   return (
     <div className={`grid md:grid-cols-2 gap-8 md:gap-12 items-center ${imagePosition === "right" ? "md:flex-row-reverse" : ""}`}>
       <div className={`${imagePosition === "right" ? "md:order-2" : ""}`}>
@@ -42,10 +47,12 @@ export default function FeaturedActivity({
             ))}
           </ul>
         )}
-        <Button size="lg" data-testid="button-activity-learn">
-          Saber Mais
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Button>
+        <Link href={link}>
+          <Button size="lg" data-testid="button-activity-learn">
+            {t.nav.learnMore || "Saber Mais"}
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+        </Link>
       </div>
     </div>
   );

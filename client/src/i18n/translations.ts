@@ -13,6 +13,7 @@ export const translations = {
       contact: "Contactar",
       book: "Reservar",
       toggleMenu: "Alternar menu",
+      learnMore: "Saber Mais",
     },
 
     social: {
@@ -1392,6 +1393,7 @@ export const translations = {
       contact: "Contact",
       book: "Book Now",
       toggleMenu: "Toggle menu",
+      learnMore: "Learn More",
     },
 
     social: {

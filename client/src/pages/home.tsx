@@ -140,6 +140,7 @@ export default function Home() {
               image={laserImage}
               imagePosition="left"
               highlights={t.featured.lasertag.highlights}
+              link="/animacao"
             />
 
             <FeaturedActivity
@@ -148,6 +149,7 @@ export default function Home() {
               image={kayakImage}
               imagePosition="right"
               highlights={t.featured.watersports.highlights}
+              link="/animacao"
             />
 
             <FeaturedActivity
@@ -156,6 +158,7 @@ export default function Home() {
               image={vanImage}
               imagePosition="left"
               highlights={t.featured.tours.highlights}
+              link="/animacao"
             />
 
             <FeaturedActivity
@@ -164,6 +167,7 @@ export default function Home() {
               image={grupoImage}
               imagePosition="right"
               highlights={t.featured.corporate.highlights}
+              link="/eventos"
             />
           </div>
         </div>
