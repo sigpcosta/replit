@@ -88,7 +88,7 @@ export default function SobrePage() {
               <p>{t.about.storyP2}</p>
               <p>{t.about.storyP3}</p>
               <p>{t.about.storyP4}</p>
-              <p className="font-semibold text-foreground">{t.about.storyP5}</p>
+              <p>{t.about.storyP5}</p>
             </div>
           </div>
 
