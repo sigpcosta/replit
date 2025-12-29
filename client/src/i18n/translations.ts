@@ -1088,9 +1088,7 @@ export const translations = {
       ],
       maintenanceFeatures: [
         "Manutenção preventiva",
-        "Reparações rápidas",
-        "Equipas especializadas",
-        "Materiais de qualidade"
+        "Reparações rápidas"
       ],
       highlights: [
         "Experiência no mercado dos Açores",
@@ -2467,9 +2465,7 @@ export const translations = {
       ],
       maintenanceFeatures: [
         "Preventive maintenance",
-        "Quick repairs",
-        "Specialized teams",
-        "Quality materials"
+        "Quick repairs"
       ],
       highlights: [
         "Experience in the Azores market",
