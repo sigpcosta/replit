@@ -66,6 +66,16 @@ export const translations = {
     featured: {
       title: "Atividades em Destaque",
       subtitle: "Experiências únicas que tornam a sua visita inesquecível",
+      transfer: {
+        title: "Transfer com Guia Turístico",
+        description: "Relaxe ao máximo e deixe-nos tratar da logística dos seus transportes na ilha. Seja à chegada, na hora da partida ou quando quer simplesmente desfrutar de um trilho durante a sua estadia, fazemos transfers, com Guia, até 8 pessoas, de e para o aeroporto, terminal marítimo ou para o início e/ou fim do trilho. Faça um dois em 1: desloque-se e vá conhecendo a ilha.",
+        highlights: [
+          "Serviço Profissional",
+          "Informação turística durante a viagem",
+          "Pré-reserva disponível",
+          "Flexibilidade de horários"
+        ]
+      },
       lasertag: {
         title: "Lasertag & Paintball",
         description: "Viva momentos emocionantes com os nossos jogos de estratégia em campo próprio, no meio da natureza ou num local à sua escolha. Equipamento de qualidade e cenários desafiantes para grupos de amigos, famílias ou eventos corporativos.",
@@ -1446,6 +1456,16 @@ export const translations = {
     featured: {
       title: "Featured Activities",
       subtitle: "Unique experiences that make your visit unforgettable",
+      transfer: {
+        title: "Transfer with Tourist Guide",
+        description: "Relax and let us handle the logistics of your transport on the island. Whether on arrival, departure time or when you simply want to enjoy a trail during your stay, we do transfers, with a Guide, for up to 8 people, to and from the airport, maritime terminal or to the start and/or end of the trail. Do a two in one: travel and get to know the island.",
+        highlights: [
+          "Professional Service",
+          "Tourist information during the trip",
+          "Pre-booking available",
+          "Schedule flexibility"
+        ]
+      },
       lasertag: {
         title: "Lasertag & Paintball",
         description: "Experience thrilling moments with our strategy games on our own field, in nature or at a location of your choice. Quality equipment and challenging scenarios for groups of friends, families or corporate events.",

@@ -22,6 +22,7 @@ import laserImage from "@assets/laser1_1766745835509.jpg";
 import kayakImage from "@assets/kayake1_1766745835508.jpg";
 import vanImage from "@assets/carrinha1_1766745835506.jpg";
 import grupoImage from "@assets/grupo2_1766745835507.jpg";
+import transferImage from "@assets/carrinha4_1767021825286.jpg";
 
 export default function Home() {
   const { t, language } = useLanguage();
@@ -135,10 +136,19 @@ export default function Home() {
 
           <div className="space-y-16 md:space-y-24">
             <FeaturedActivity
+              title={t.featured.transfer.title}
+              description={t.featured.transfer.description}
+              image={transferImage}
+              imagePosition="left"
+              highlights={t.featured.transfer.highlights}
+              link="/animacao"
+            />
+
+            <FeaturedActivity
               title={t.featured.lasertag.title}
               description={t.featured.lasertag.description}
               image={laserImage}
-              imagePosition="left"
+              imagePosition="right"
               highlights={t.featured.lasertag.highlights}
               link="/animacao"
             />
@@ -147,7 +157,7 @@ export default function Home() {
               title={t.featured.watersports.title}
               description={t.featured.watersports.description}
               image={kayakImage}
-              imagePosition="right"
+              imagePosition="left"
               highlights={t.featured.watersports.highlights}
               link="/animacao"
             />
@@ -156,7 +166,7 @@ export default function Home() {
               title={t.featured.tours.title}
               description={t.featured.tours.description}
               image={vanImage}
-              imagePosition="left"
+              imagePosition="right"
               highlights={t.featured.tours.highlights}
               link="/animacao"
             />
@@ -165,7 +175,7 @@ export default function Home() {
               title={t.featured.corporate.title}
               description={t.featured.corporate.description}
               image={grupoImage}
-              imagePosition="right"
+              imagePosition="left"
               highlights={t.featured.corporate.highlights}
               link="/eventos"
             />

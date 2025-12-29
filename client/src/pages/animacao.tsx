@@ -101,38 +101,6 @@ export default function AnimacaoPage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
-          {/* Featured Transfer Section */}
-          <Card className="p-8 md:p-12 mb-16 md:mb-24 bg-primary text-primary-foreground">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h2 className="font-heading text-3xl font-bold mb-4">
-                  {t.activities.featuredTransfer.title}
-                </h2>
-                <p className="text-primary-foreground/90 mb-6">
-                  {t.activities.featuredTransfer.description}
-                </p>
-                <ul className="space-y-2 mb-6">
-                  {t.activities.featuredTransfer.features.map((feature: string, idx: number) => (
-                    <li key={idx} className="flex items-center gap-2">
-                      <Check className="h-4 w-4 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link href="/contacto">
-                  <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20" data-testid="button-transfer-learn-more">
-                    {t.activities.featuredTransfer.button}
-                  </Button>
-                </Link>
-              </div>
-              <img
-                src={transferImage}
-                alt={t.activities.featuredTransfer.altImage}
-                className="rounded-lg w-full h-64 object-cover"
-              />
-            </div>
-          </Card>
-
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16 md:mb-24">
             <div className="order-2 md:order-1">
               <h2 className="font-heading text-3xl font-bold mb-6">
