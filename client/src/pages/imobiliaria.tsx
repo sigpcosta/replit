@@ -93,11 +93,8 @@ export default function ImobiliariaPage() {
               {t.property.heroP2}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" data-testid="button-request-quote">
-                {t.property.requestQuote}
-              </Button>
-              <Button size="lg" variant="outline" data-testid="button-schedule-visit">
-                {t.property.scheduleVisit}
+              <Button size="lg" asChild data-testid="button-contact-us">
+                <a href="#contacto">{t.property.contactUs}</a>
               </Button>
             </div>
           </div>
