@@ -556,6 +556,13 @@ export const translations = {
       customTours: "Pacotes Multi-atividades",
       customToursDesc: "Combine várias experiências numa só reserva e desfrute de descontos especiais.",
       planTour: "Ver Pacotes",
+      featuredTransfer: {
+        title: "Transfer com Guia Turístico",
+        description: "Relaxe ao máximo e deixe-nos tratar da logística dos seus transportes na ilha. Seja à chegada, na hora da partida ou quando quer simplesmente desfrutar de um trilho durante a sua estadia, fazemos transfers, com Guia, até 8 pessoas, de e para o aeroporto, terminal marítimo ou para o início e/ou fim do trilho. Faça um dois em 1: desloque-se e vá conhecendo a ilha.",
+        features: ["Serviço Profissional", "Informação turística", "Pré-reserva", "Flexibilidade"],
+        button: "Saber mais",
+        altImage: "Carrinha de transfers turísticos"
+      },
       activityTypes: {
         lasertag: "Lasertag, Paintball, GelBlasters & NERFs",
         lasertagDesc: "Atividades de estratégia ao ar livre num campo construído de raiz, como se estivesse a jogar 'Call of Duty' em tempo real. Desafie-se!",
@@ -1928,6 +1935,13 @@ export const translations = {
       customTours: "Multi-activity Packages",
       customToursDesc: "Combine multiple experiences in one booking and enjoy special discounts.",
       planTour: "View Packages",
+      featuredTransfer: {
+        title: "Transfer with Tourist Guide",
+        description: "Relax and let us handle the logistics of your transport on the island. Whether on arrival, departure time or when you simply want to enjoy a trail during your stay, we do transfers, with a Guide, for up to 8 people, to and from the airport, maritime terminal or to the start and/or end of the trail. Do a two in one: travel and get to know the island.",
+        features: ["Professional Service", "Tourist Information", "Pre-booking", "Flexibility"],
+        button: "Learn more",
+        altImage: "Tourist transfer van"
+      },
       activityTypes: {
         lasertag: "Lasertag, Paintball, GelBlasters & NERFs",
         lasertagDesc: "Outdoor strategy activities in a built field from the scratch, as if you were playing 'Call of Duty' in real time. Challenge yourself!",
