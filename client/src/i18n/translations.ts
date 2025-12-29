@@ -1072,10 +1072,6 @@ export const translations = {
         maintenance: {
           title: "Manutenção e Reparações",
           desc: "Mantenha a sua propriedade em perfeito estado"
-        },
-        construction: {
-          title: "Construção e Renovação",
-          desc: "Transforme e valorize o seu imóvel"
         }
       },
       rentalFeatures: [
@@ -1096,12 +1092,6 @@ export const translations = {
         "Equipas especializadas",
         "Materiais de qualidade"
       ],
-      constructionFeatures: [
-        "Projetos completos",
-        "Renovações parciais",
-        "Design e execução",
-        "Licenciamentos incluídos"
-      ],
       highlights: [
         "Experiência no mercado dos Açores",
         "Equipas de manutenção próprias",
@@ -1116,7 +1106,7 @@ export const translations = {
         experience: "Experiência Local",
         experienceDesc: "Conhecimento profundo do mercado imobiliário dos Açores",
         team: "Equipas Especializadas",
-        teamDesc: "Profissionais qualificados para manutenção e construção",
+        teamDesc: "Profissionais qualificados para manutenção e reparações",
         transparency: "Transparência Total",
         transparencyDesc: "Orçamentos detalhados e comunicação clara"
       },
@@ -2461,10 +2451,6 @@ export const translations = {
         maintenance: {
           title: "Maintenance and Repairs",
           desc: "Keep your property in perfect condition"
-        },
-        construction: {
-          title: "Construction and Renovation",
-          desc: "Transform and enhance your property"
         }
       },
       rentalFeatures: [
@@ -2485,12 +2471,6 @@ export const translations = {
         "Specialized teams",
         "Quality materials"
       ],
-      constructionFeatures: [
-        "Complete projects",
-        "Partial renovations",
-        "Design and execution",
-        "Licenses included"
-      ],
       highlights: [
         "Experience in the Azores market",
         "Our own maintenance teams",
@@ -2505,7 +2485,7 @@ export const translations = {
         experience: "Local Experience",
         experienceDesc: "Deep knowledge of the Azores real estate market",
         team: "Specialized Teams",
-        teamDesc: "Qualified professionals for maintenance and construction",
+        teamDesc: "Qualified professionals for maintenance and repairs",
         transparency: "Total Transparency",
         transparencyDesc: "Detailed quotes and clear communication"
       },

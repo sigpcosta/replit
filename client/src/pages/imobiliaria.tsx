@@ -4,7 +4,7 @@ import ServiceFAQs from "@/components/ServiceFAQs";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Building2, Home as HomeIcon, Wrench, Hammer, Key, Check } from "lucide-react";
+import { Building2, Home as HomeIcon, Wrench, Key, Check, Shield } from "lucide-react";
 import { seoConfig } from "@/lib/seo-config";
 import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -43,12 +43,6 @@ export default function ImobiliariaPage() {
       title: t.property.services.maintenance.title,
       description: t.property.services.maintenance.desc,
       features: t.property.maintenanceFeatures
-    },
-    {
-      icon: Hammer,
-      title: t.property.services.construction.title,
-      description: t.property.services.construction.desc,
-      features: t.property.constructionFeatures
     }
   ];
 
@@ -160,7 +154,7 @@ export default function ImobiliariaPage() {
               </p>
             </Card>
             <Card className="p-6 text-center">
-              <Hammer className="h-12 w-12 text-primary mx-auto mb-4" />
+              <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
               <h3 className="font-heading text-xl font-bold mb-2">
                 {t.property.cards.transparency}
               </h3>
