@@ -1081,10 +1081,9 @@ export const translations = {
         "Suporte jurídico"
       ],
       tourismFeatures: [
-        "Gestão de reservas",
-        "Limpeza profissional",
-        "Manutenção regular",
-        "Marketing digital"
+        "Sujeito a um limite de propriedades",
+        "Receção para checkins",
+        "Manutenção a pedido"
       ],
       maintenanceFeatures: [
         "Manutenção preventiva",
@@ -2458,10 +2457,9 @@ export const translations = {
         "Legal support"
       ],
       tourismFeatures: [
-        "Booking management",
-        "Professional cleaning",
-        "Regular maintenance",
-        "Digital marketing"
+        "Subject to a property limit",
+        "Reception for check-ins",
+        "Maintenance on request"
       ],
       maintenanceFeatures: [
         "Preventive maintenance",
