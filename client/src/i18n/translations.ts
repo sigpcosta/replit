@@ -1053,7 +1053,7 @@ export const translations = {
     // Property Page
     property: {
       title: "Gestão Imobiliária",
-      subtitle: "Serviços de manutenção e construção na sua propriedade no Faial.",
+      subtitle: "Gestão de alojamentos e serviços de manutenção e pequenas reparações.",
       heroTitle: "Cuide da Sua Propriedade com Profissionais",
       heroP1: "A Azores4fun oferece serviços completos de gestão imobiliária, desde arrendamento de longa duração até construção e renovação. Cuidamos da sua propriedade como se fosse nossa.",
       heroP2: "Com equipas especializadas, conhecimento profundo do mercado local e compromisso com a qualidade, garantimos que o seu investimento está em boas mãos.",
@@ -2443,7 +2443,7 @@ export const translations = {
     // Property Page
     property: {
       title: "Property Management",
-      subtitle: "Complete management, maintenance and construction services for your property in the Azores.",
+      subtitle: "Accommodation management and maintenance and small repair services.",
       heroTitle: "Take Care of Your Property with Professionals",
       heroP1: "Azores4fun offers complete property management services, from long-term rentals to construction and renovation. We take care of your property as if it were our own.",
       heroP2: "With specialized teams, deep knowledge of the local market and commitment to quality, we guarantee your investment is in good hands.",
