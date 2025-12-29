@@ -4,7 +4,7 @@ import ServiceFAQs from "@/components/ServiceFAQs";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Building2, Home as HomeIcon, Wrench, Key, Check, Shield } from "lucide-react";
+import { Building2, Home as HomeIcon, Wrench, Key, Check } from "lucide-react";
 import { seoConfig } from "@/lib/seo-config";
 import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -118,50 +118,6 @@ export default function ImobiliariaPage() {
                 </Card>
               ))}
             </div>
-          </div>
-
-          <div className="bg-muted/30 rounded-lg p-8 md:p-12 mb-16 md:mb-24">
-            <h2 className="font-heading text-3xl font-bold mb-8 text-center">
-              {t.property.whyChoose}
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {t.property.highlights.map((highlight: string, index: number) => (
-                <div key={index} className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground">{highlight}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16 md:mb-24">
-            <Card className="p-6 text-center">
-              <Building2 className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="font-heading text-xl font-bold mb-2">
-                {t.property.cards.experience}
-              </h3>
-              <p className="text-muted-foreground">
-                {t.property.cards.experienceDesc}
-              </p>
-            </Card>
-            <Card className="p-6 text-center">
-              <Wrench className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="font-heading text-xl font-bold mb-2">
-                {t.property.cards.team}
-              </h3>
-              <p className="text-muted-foreground">
-                {t.property.cards.teamDesc}
-              </p>
-            </Card>
-            <Card className="p-6 text-center">
-              <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="font-heading text-xl font-bold mb-2">
-                {t.property.cards.transparency}
-              </h3>
-              <p className="text-muted-foreground">
-                {t.property.cards.transparencyDesc}
-              </p>
-            </Card>
           </div>
         </div>
 
