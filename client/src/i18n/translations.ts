@@ -24,8 +24,8 @@ export const translations = {
     // Hero
     hero: {
       title: "Uma empresa da Marca Açores",
-      subtitle: "A ligar pessoas, natureza e experiências autênticas.",
-      location: "Experiências únicas na Horta, Faial.",
+      subtitle: "Uma empresa da Marca Açores",
+      location: "A ligar pessoas, natureza e experiências autênticas.",
       services: "Alojamento · Atividades de Animação Turística · Eventos · Tatuagem & Piercing · Loja · Gestão Imobiliária",
       explore: "Explorar Serviços",
       contact: "Contactar",
@@ -1414,8 +1414,8 @@ export const translations = {
     // Hero
     hero: {
       title: "A Marca Açores Company",
-      subtitle: "Connecting people, nature and authentic experiences.",
-      location: "Unique experiences in Horta, Faial.",
+      subtitle: "A Marca Açores Company",
+      location: "Connecting people, nature and authentic experiences.",
       services: "Accommodation · Tourism Activities · Events · Tattoo & Piercing · Shop · Property Management",
       explore: "Explore Services",
       contact: "Contact",
