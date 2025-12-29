@@ -1,5 +1,7 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Facebook, Instagram, Mail, Phone, MapPin, Heart, ExternalLink, FileText } from "lucide-react";
+import marcaAcoresPtLogo from "@assets/AF_ACO_SELO_POS_PT_1767027675830.jpg";
+import marcaAcoresEnLogo from "@assets/AF_ACO_SELO_POS_ING_1767027687274.jpg";
 import acores2030Logo from "@assets/acores2030-funding-logo.png";
 import fichaTecnicaPdf from "@assets/ficha-tecnica-acores2030.pdf";
 import acores2020Logo from "@assets/acores2020-funding-logo.png";
@@ -192,6 +194,26 @@ export default function Footer() {
 
         <div className="border-t mt-12 pt-8">
           <div className="flex flex-col items-center gap-6 mb-8">
+            <a 
+              href="https://marcaacores.pt/promotor/fff7862d-b223-4cff-9425-29928fc42f4a"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col md:flex-row items-center gap-4 hover:opacity-80 transition-opacity"
+              data-testid="link-marca-acores"
+            >
+              <img 
+                src={language === 'pt' ? marcaAcoresPtLogo : marcaAcoresEnLogo} 
+                alt={language === 'pt' ? 'Açores - Certificado pela Natureza' : 'Azores - Certified by Nature'} 
+                className="h-24 w-auto"
+                data-testid="img-marca-acores-logo"
+              />
+              <p className="text-sm text-muted-foreground text-center md:text-left max-w-md">
+                {language === 'pt' 
+                  ? 'Orgulhosamente uma empresa certificada pela Marca Açores, comprometida com a sustentabilidade, a autenticidade e a excelência no serviço.'
+                  : 'Proudly a company certified by Marca Açores, committed to sustainability, authenticity and service excellence.'}
+              </p>
+            </a>
+            
             <div className="flex flex-col items-center gap-2">
               <img 
                 src={acores2030Logo} 
