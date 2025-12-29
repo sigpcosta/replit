@@ -1413,8 +1413,8 @@ export const translations = {
     
     // Hero
     hero: {
-      title: "A Marca Açores Company",
-      subtitle: "A Marca Açores Company",
+      title: "Azores Certified by Nature Company",
+      subtitle: "Azores Certified by Nature Company",
       location: "Connecting people, nature and authentic experiences.",
       services: "Accommodation · Tourism Activities · Events · Tattoo & Piercing · Shop · Property Management",
       explore: "Explore Services",
