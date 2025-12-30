@@ -1214,7 +1214,7 @@ export const translations = {
             items: [
               "Uso exclusivo de lâmpadas de baixo consumo e aproveitamento de energia solar na sede",
               "Priorização de transporte em viatura de 9 lugares 100% elétrica",
-              "Alojamentos equipados com PVC e vidro duplo para máxima eficiência energética"
+              "Alojamentos equipados com janelas e portas em PVC e vidro duplo para máxima eficiência energética"
             ]
           },
           water: {
@@ -2642,7 +2642,7 @@ export const translations = {
             items: [
               "Exclusive use of low-consumption bulbs and solar energy at headquarters",
               "Priority transport in a 100% electric 9-seater vehicle",
-              "Accommodations equipped with PVC and double glazing for maximum energy efficiency"
+              "Accommodations equipped with PVC windows and doors with double glazing for maximum energy efficiency"
             ]
           },
           water: {
