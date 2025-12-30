@@ -6,6 +6,7 @@ import path from "path";
 import fs from "fs";
 import { insertBlogPostSchema, insertFaqSchema } from "@shared/schema";
 import OpenAI from "openai";
+import { staticFaqs, getFaqsByService as getStaticFaqsByService } from "./static-faqs";
 
 function isSearchBot(userAgent: string): boolean {
   const bots = [
@@ -70,7 +71,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   async function generateDynamicPrerenderHTML(routePath: string, language: string = 'pt'): Promise<string | null> {
     try {
-      const faqs = await storage.getAllFaqs();
+      // Use static FAQs instead of database
+      const faqs = staticFaqs;
       let config = routeConfig[routePath];
       let blogPost = null;
 
@@ -80,10 +82,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
         blogPost = posts.find(p => p.slug === slug);
         if (blogPost) {
           config = {
-            title: blogPost.titlePt || blogPost.title,
-            titleEn: blogPost.titleEn || blogPost.title,
-            desc: blogPost.excerptPt || blogPost.excerpt || '',
-            descEn: blogPost.excerptEn || blogPost.excerpt || '',
+            title: blogPost.titlePt,
+            titleEn: blogPost.titleEn,
+            desc: blogPost.excerptPt || '',
+            descEn: blogPost.excerptEn || '',
           };
         }
       }
@@ -145,7 +147,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         </article>
       `).join('') : '';
 
-      const blogContentHtml = blogPost ? `<article>${language === 'pt' ? (blogPost.contentPt || blogPost.content) : (blogPost.contentEn || blogPost.content)}</article>` : '';
+      const blogContentHtml = blogPost ? `<article>${language === 'pt' ? blogPost.contentPt : blogPost.contentEn}</article>` : '';
 
       return `<!DOCTYPE html>
 <html lang="${language}">
@@ -632,11 +634,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(400).json({ error: "Mensagem é obrigatória" });
       }
 
-      // Get all FAQs to provide context
-      const allFaqs = await storage.getAllFaqs();
-      
-      // Build context from FAQs
-      const faqContext = allFaqs.map(faq => {
+      // Use static FAQs for context (no database dependency)
+      const faqContext = staticFaqs.map(faq => {
         const question = language === "pt" ? faq.questionPt : faq.questionEn;
         const answer = language === "pt" ? faq.answerPt : faq.answerEn;
         return `Serviço: ${faq.service}\nPergunta: ${question}\nResposta: ${answer}\nPalavras-chave: ${faq.keywords || ""}`;
