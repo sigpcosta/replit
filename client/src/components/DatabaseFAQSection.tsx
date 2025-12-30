@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, LucideIcon } from "lucide-react";
 import FAQItem from "./FAQItem";
 import { Link } from "wouter";
-import { staticFaqs } from "@/data/faqs";
+import { staticFaqs } from "@shared/static-faqs";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 interface FAQCategoryConfig {

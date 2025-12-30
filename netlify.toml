@@ -1,4 +1,25 @@
+[build]
+  command = "node scripts/sync-netlify-data.js && npm run build"
+  publish = "dist/public"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
 [[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+  from = "/api/chatbot"
+  to = "/.netlify/functions/chatbot"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions]
+  node_bundler = "esbuild"
+
+[dev]
+  command = "npm run dev"
+  port = 5000
+  targetPort = 5000

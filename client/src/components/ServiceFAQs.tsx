@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import FAQItem from "./FAQItem";
 import ContactDialog from "./ContactDialog";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { staticFaqs } from "@/data/faqs";
+import { staticFaqs } from "@shared/static-faqs";
 
 interface ServiceFAQsProps {
   service: string | string[];

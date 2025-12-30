@@ -237,3 +237,73 @@ curl -A "Googlebot" https://your-site.com/animacao
 ```
 
 This should return HTML with FAQs, JSON-LD, and meta tags.
+
+---
+
+## JAMstack Migration (December 2024)
+
+### Overview
+
+The project has been migrated to a JAMstack-friendly architecture to reduce database dependencies and prepare for static hosting platforms like Netlify.
+
+### Static Data Architecture
+
+**FAQs (client/src/data/faqs.ts)**
+- 51+ FAQs organized by service (paintball, accommodation, tourism, tattoo, events, etc.)
+- Bilingual content (Portuguese and English)
+- Keywords for chatbot matching
+- Helper functions: `getFaqsByService()`, `getAllFaqs()`
+
+**Blog Articles (client/src/data/blog-articles.ts)**
+- 8 full articles with bilingual content
+- Markdown-formatted content
+- SEO metadata (descriptions, keywords)
+- Helper function: `getBlogArticleBySlug()`
+
+**Server FAQs (server/static-faqs.ts)**
+- Copy of FAQs for server-side prerendering
+- Used by chatbot endpoint and SEO prerendering
+
+**Shared FAQs (shared/static-faqs.ts)**
+- Canonical source for FAQs that can be imported by both client and server
+
+### Components Using Static Data
+
+1. **ServiceFAQs** - Uses `getFaqsByService()` from static data
+2. **DatabaseFAQSection** - Uses `staticFaqs` directly
+3. **blog.tsx** - Uses `staticBlogArticles`
+4. **blog-post.tsx** - Uses `getBlogArticleBySlug()`
+5. **Chatbot endpoint** - Uses `staticFaqs` for AI context
+6. **SEO prerendering** - Uses `staticFaqs` for bot-friendly HTML
+
+### Netlify Deployment
+
+**Configuration (netlify.toml)**
+- Build command: `node scripts/sync-netlify-data.js && npm run build`
+- Publish directory: `dist/public`
+- Functions directory: `netlify/functions`
+- Chatbot function at `/api/chatbot`
+
+**Data Synchronization**
+- `scripts/sync-netlify-data.js` copies shared/static-faqs.ts to netlify/functions/data/
+- Runs automatically before build to ensure FAQs are synchronized
+
+**Serverless Functions**
+- `netlify/functions/chatbot.ts` - AI chatbot with static FAQs context
+- Uses OpenAI API for responses
+- Environment variables: `OPENAI_API_KEY` or `AI_INTEGRATIONS_OPENAI_API_KEY`
+
+### Remaining Backend Dependencies
+
+The following features still require a backend server:
+1. **Contact/Booking forms** - Use Resend API for email
+2. **Database operations** - Blog posts in DB (can be migrated to static)
+3. **Admin functions** - Blog/FAQ management
+
+### Migration Path to Full Static
+
+To complete migration to fully static:
+1. Move remaining blog posts to static data
+2. Replace Resend email with Web3Forms or Netlify Forms
+3. Remove database dependency for public-facing features
+4. Keep database only for admin/CMS functions
