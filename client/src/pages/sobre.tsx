@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { seoConfig } from "@/lib/seo-config";
 import { organizationSchema, generateFAQSchema } from "@/lib/structured-data";
-import { Building2, Zap, CalendarDays, Sparkles, Home, Store, Check, Target, Eye, Heart } from "lucide-react";
+import { Building2, Zap, CalendarDays, Sparkles, Home, Store, Check, Target, Eye, Heart, Leaf, Award, TreeDeciduous, Sun, Droplets, Recycle, BarChart3 } from "lucide-react";
 
 export default function SobrePage() {
   const { t, language } = useLanguage();
@@ -117,6 +117,146 @@ export default function SobrePage() {
                 </ul>
               </Card>
             </div>
+          </div>
+
+          {/* Sustainability Section */}
+          <div className="mb-16 md:mb-24">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 mb-4">
+                <Leaf className="h-8 w-8 text-green-600 dark:text-green-400" />
+              </div>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4" data-testid="text-sustainability">
+                {t.about.sustainability.title}
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                {t.about.sustainability.intro}
+              </p>
+            </div>
+
+            {/* Certifications */}
+            <div className="mb-12">
+              <h3 className="font-heading text-2xl font-bold mb-6 text-center flex items-center justify-center gap-2">
+                <Award className="h-6 w-6 text-primary" />
+                {t.about.sustainability.certifications.title}
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <Card className="p-6 border-green-200 dark:border-green-800 bg-green-50/50 dark:bg-green-900/10">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-green-100 dark:bg-green-800 flex items-center justify-center">
+                      <Award className="h-6 w-6 text-green-600 dark:text-green-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-heading font-bold text-lg mb-2">{t.about.sustainability.certifications.marcaAcores.name}</h4>
+                      <p className="text-muted-foreground text-sm">{t.about.sustainability.certifications.marcaAcores.desc}</p>
+                    </div>
+                  </div>
+                </Card>
+                <Card className="p-6 border-green-200 dark:border-green-800 bg-green-50/50 dark:bg-green-900/10">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-green-100 dark:bg-green-800 flex items-center justify-center">
+                      <Leaf className="h-6 w-6 text-green-600 dark:text-green-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-heading font-bold text-lg mb-2">{t.about.sustainability.certifications.amigoNatureza.name}</h4>
+                      <p className="text-muted-foreground text-sm">{t.about.sustainability.certifications.amigoNatureza.desc}</p>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </div>
+
+            {/* Practices */}
+            <div className="mb-12">
+              <h3 className="font-heading text-2xl font-bold mb-8 text-center">
+                {t.about.sustainability.practices.title}
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Carbon */}
+                <Card className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+                      <TreeDeciduous className="h-5 w-5 text-green-600 dark:text-green-400" />
+                    </div>
+                    <h4 className="font-heading font-bold">{t.about.sustainability.practices.carbon.title}</h4>
+                  </div>
+                  <ul className="space-y-2">
+                    {t.about.sustainability.practices.carbon.items.map((item: string, idx: number) => (
+                      <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <Check className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </Card>
+
+                {/* Energy */}
+                <Card className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center">
+                      <Sun className="h-5 w-5 text-yellow-600 dark:text-yellow-400" />
+                    </div>
+                    <h4 className="font-heading font-bold">{t.about.sustainability.practices.energy.title}</h4>
+                  </div>
+                  <ul className="space-y-2">
+                    {t.about.sustainability.practices.energy.items.map((item: string, idx: number) => (
+                      <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <Check className="h-4 w-4 text-yellow-500 flex-shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </Card>
+
+                {/* Water */}
+                <Card className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                      <Droplets className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+                    </div>
+                    <h4 className="font-heading font-bold">{t.about.sustainability.practices.water.title}</h4>
+                  </div>
+                  <ul className="space-y-2">
+                    {t.about.sustainability.practices.water.items.map((item: string, idx: number) => (
+                      <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <Check className="h-4 w-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </Card>
+
+                {/* Waste */}
+                <Card className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center">
+                      <Recycle className="h-5 w-5 text-orange-600 dark:text-orange-400" />
+                    </div>
+                    <h4 className="font-heading font-bold">{t.about.sustainability.practices.waste.title}</h4>
+                  </div>
+                  <ul className="space-y-2">
+                    {t.about.sustainability.practices.waste.items.map((item: string, idx: number) => (
+                      <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <Check className="h-4 w-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </Card>
+              </div>
+            </div>
+
+            {/* Monitoring */}
+            <Card className="p-6 md:p-8 bg-muted/30 border-dashed">
+              <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <BarChart3 className="h-7 w-7 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-heading font-bold text-lg mb-2">{t.about.sustainability.monitoring.title}</h4>
+                  <p className="text-muted-foreground">{t.about.sustainability.monitoring.desc}</p>
+                </div>
+              </div>
+            </Card>
           </div>
 
           <div className="mb-16 md:mb-24">

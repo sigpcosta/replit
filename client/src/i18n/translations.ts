@@ -1186,6 +1186,58 @@ export const translations = {
           desc: "Laser Tag, Gel Blasters e Nerfs para atividades em qualquer local e condições. Continuamos a inovar e diferenciar o turismo nos Açores!"
         }
       ],
+      sustainability: {
+        title: "O Nosso Compromisso com a Sustentabilidade",
+        intro: "A sustentabilidade é o pilar central da Azores4fun. Atuamos com o objetivo de reduzir o impacto negativo no ambiente e proteger o ecossistema do Faial. O nosso desempenho é validado por certificações de referência que garantem a qualidade e a responsabilidade da nossa operação.",
+        certifications: {
+          title: "Reconhecimentos Oficiais",
+          marcaAcores: {
+            name: "Marca Açores",
+            desc: "Certificação que atesta a origem açoriana e a qualidade superior dos nossos serviços de alojamento e animação turística."
+          },
+          amigoNatureza: {
+            name: "Amigo da Natureza",
+            desc: "Reconhecimento oficial da nossa gestão ambiental proativa e do cumprimento de rigorosas boas práticas sustentáveis (Portaria n.º 118/2023)."
+          }
+        },
+        practices: {
+          title: "Ações Concretas e Boas Práticas",
+          carbon: {
+            title: "Compensação Carbónica e Biodiversidade",
+            items: [
+              "Criação da Mata Azores4fun, com plantação anual de Criptomérias para compensar as emissões das viagens dos nossos hóspedes",
+              "Ausência total de uso de herbicidas nas nossas instalações"
+            ]
+          },
+          energy: {
+            title: "Energia e Clima",
+            items: [
+              "Uso exclusivo de lâmpadas de baixo consumo e aproveitamento de energia solar na sede",
+              "Priorização de transporte em viatura de 9 lugares 100% elétrica",
+              "Alojamentos equipados com PVC e vidro duplo para máxima eficiência energética"
+            ]
+          },
+          water: {
+            title: "Gestão da Água",
+            items: [
+              "Instalação de torneiras com redução de caudal e sistemas de descarga dupla nos autoclismos",
+              "Recolha de águas pluviais para rega e incentivo ao consumo de água da rede (não engarrafada)"
+            ]
+          },
+          waste: {
+            title: "Resíduos e Economia Circular",
+            items: [
+              "Separação seletiva em todas as unidades de alojamento e eventos de animação",
+              "Faturação exclusivamente digital e uso de materiais biodegradáveis (balas de Paintball)",
+              "Promoção de compras sustentáveis com produtos locais nas cestas de boas-vindas"
+            ]
+          }
+        },
+        monitoring: {
+          title: "Monitorização e Melhoria Contínua",
+          desc: "Avaliamos regularmente as nossas práticas através da medição de consumos de água, luz e gás, garantindo a evolução constante do nosso Plano de Gestão da Sustentabilidade."
+        }
+      },
       businessAreas: "As Nossas Áreas de Negócio",
       businessAreasSubtitle: "Seis serviços distintos, uma experiência completa",
       mission: "Missão",
@@ -2562,6 +2614,58 @@ export const translations = {
           desc: "Laser Tag, Gel Blasters and Nerfs for activities in any location and conditions. We continue to innovate and differentiate tourism in the Azores!"
         }
       ],
+      sustainability: {
+        title: "Our Commitment to Sustainability",
+        intro: "Sustainability is the central pillar of Azores4fun. We operate with the goal of reducing negative environmental impact and protecting Faial's ecosystem. Our performance is validated by reference certifications that guarantee the quality and responsibility of our operation.",
+        certifications: {
+          title: "Official Recognitions",
+          marcaAcores: {
+            name: "Marca Açores",
+            desc: "Certification attesting to the Azorean origin and superior quality of our accommodation and tourist entertainment services."
+          },
+          amigoNatureza: {
+            name: "Friend of Nature",
+            desc: "Official recognition of our proactive environmental management and compliance with rigorous sustainable best practices (Decree n.º 118/2023)."
+          }
+        },
+        practices: {
+          title: "Concrete Actions and Best Practices",
+          carbon: {
+            title: "Carbon Offset and Biodiversity",
+            items: [
+              "Creation of the Azores4fun Forest, with annual planting of Cryptomeria trees to offset emissions from our guests' travels",
+              "Complete absence of herbicide use in our facilities"
+            ]
+          },
+          energy: {
+            title: "Energy and Climate",
+            items: [
+              "Exclusive use of low-consumption bulbs and solar energy at headquarters",
+              "Priority transport in a 100% electric 9-seater vehicle",
+              "Accommodations equipped with PVC and double glazing for maximum energy efficiency"
+            ]
+          },
+          water: {
+            title: "Water Management",
+            items: [
+              "Installation of flow-reducing taps and dual flush systems in toilets",
+              "Rainwater collection for irrigation and encouragement of tap water consumption (not bottled)"
+            ]
+          },
+          waste: {
+            title: "Waste and Circular Economy",
+            items: [
+              "Selective separation in all accommodation units and entertainment events",
+              "Exclusively digital invoicing and use of biodegradable materials (Paintball pellets)",
+              "Promotion of sustainable purchases with local products in welcome baskets"
+            ]
+          }
+        },
+        monitoring: {
+          title: "Monitoring and Continuous Improvement",
+          desc: "We regularly evaluate our practices through measurement of water, electricity and gas consumption, ensuring the constant evolution of our Sustainability Management Plan."
+        }
+      },
       businessAreas: "Our Business Areas",
       businessAreasSubtitle: "Six distinct services, one complete experience",
       mission: "Mission",
