@@ -30,7 +30,8 @@ export default function Navigation() {
             <img 
               src={logoUrl} 
               alt="Azores4fun" 
-              className="h-10 md:h-12 w-auto ml-[0px] mr-[0px] pl-[5px] pr-[5px]"
+              className="h-8 md:h-10 w-auto"
+              style={{ imageRendering: 'crisp-edges' }}
             />
           </a>
 
