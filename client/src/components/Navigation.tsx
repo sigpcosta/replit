@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LanguageSelector from "@/components/LanguageSelector";
 import ContactDialog from "@/components/ContactDialog";
-import logoUrl from "@assets/LogoAzores4fun360_1763895112388.gif";
+import logoUrl from "@assets/LogoAzores4fun360_1767098687848.jpg";
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -30,8 +30,7 @@ export default function Navigation() {
             <img 
               src={logoUrl} 
               alt="Azores4fun" 
-              className="h-8 md:h-10 w-auto"
-              style={{ imageRendering: 'crisp-edges' }}
+              className="h-10 md:h-12 w-auto"
             />
           </a>
 
