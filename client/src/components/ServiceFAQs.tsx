@@ -1,11 +1,9 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Card } from "@/components/ui/card";
-import { Loader2 } from "lucide-react";
 import FAQItem from "./FAQItem";
 import ContactDialog from "./ContactDialog";
-import { useQuery } from "@tanstack/react-query";
 import { useLanguage } from "@/i18n/LanguageContext";
-import type { Faq } from "@shared/schema";
+import { staticFaqs } from "@/data/faqs";
 
 interface ServiceFAQsProps {
   service: string | string[];
@@ -18,25 +16,16 @@ export default function ServiceFAQs({ service, title }: ServiceFAQsProps) {
   
   const services = Array.isArray(service) ? service : [service];
   
-  const { data: allFaqs = [], isLoading } = useQuery<Faq[]>({
-    queryKey: ["/api/faqs"],
-  });
-
-  const filteredFaqs = allFaqs
-    .filter(faq => services.includes(faq.service) && faq.isActive === "true")
-    .map(faq => ({
-      id: faq.id,
-      question: language === "pt" ? faq.questionPt : faq.questionEn,
-      answer: language === "pt" ? faq.answerPt : faq.answerEn,
-    }));
-
-  if (isLoading) {
-    return (
-      <div className="text-center py-8">
-        <Loader2 className="h-8 w-8 animate-spin mx-auto text-primary" />
-      </div>
-    );
-  }
+  const filteredFaqs = useMemo(() => 
+    staticFaqs
+      .filter(faq => services.includes(faq.service) && faq.isActive)
+      .map(faq => ({
+        id: faq.id,
+        question: language === "pt" ? faq.questionPt : faq.questionEn,
+        answer: language === "pt" ? faq.answerPt : faq.answerEn,
+      })),
+    [services, language]
+  );
 
   if (filteredFaqs.length === 0) return null;
 

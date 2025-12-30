@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+import { useMemo } from "react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
@@ -6,10 +6,9 @@ import Footer from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Skeleton } from "@/components/ui/skeleton";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { seoConfig } from "@/lib/seo-config";
-import type { BlogPost } from "@shared/schema";
+import { staticBlogArticles, type BlogArticle } from "@/data/blog-articles";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import { format } from "date-fns";
 import { pt, enUS } from "date-fns/locale";
@@ -18,9 +17,12 @@ export default function BlogPage() {
   const { t, language } = useLanguage();
   const seo = seoConfig[language].blog;
 
-  const { data: posts, isLoading, error } = useQuery<BlogPost[]>({
-    queryKey: ["/api/blog"],
-  });
+  const posts = useMemo(() => 
+    staticBlogArticles.sort((a, b) => 
+      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+    ), 
+    []
+  );
 
   const formatDate = (date: Date | string | null | undefined) => {
     if (!date) {
@@ -39,8 +41,8 @@ export default function BlogPage() {
     }
   };
 
-  const getTitle = (post: BlogPost) => language === 'pt' ? post.titlePt : post.titleEn;
-  const getExcerpt = (post: BlogPost) => language === 'pt' ? post.excerptPt : post.excerptEn;
+  const getTitle = (post: BlogArticle) => language === 'pt' ? post.titlePt : post.titleEn;
+  const getExcerpt = (post: BlogArticle) => language === 'pt' ? post.excerptPt : post.excerptEn;
 
   const generateBlogListJsonLd = () => {
     const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://azores4fun.com';
@@ -117,24 +119,7 @@ export default function BlogPage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
-          {isLoading ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <Card key={i} className="overflow-hidden">
-                  <Skeleton className="w-full h-48" />
-                  <CardContent className="p-6">
-                    <Skeleton className="h-6 w-3/4 mb-4" />
-                    <Skeleton className="h-4 w-full mb-2" />
-                    <Skeleton className="h-4 w-2/3" />
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          ) : error ? (
-            <div className="text-center py-12">
-              <p className="text-muted-foreground">{t.blog.error}</p>
-            </div>
-          ) : posts && posts.length > 0 ? (
+          {posts.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {posts.map((post) => (
                 <Link key={post.id} href={`/blog/${post.slug}`}>

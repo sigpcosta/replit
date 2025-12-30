@@ -1,4 +1,3 @@
-import { useQuery } from "@tanstack/react-query";
 import { useParams, Link } from "wouter";
 import { useMemo } from "react";
 import { marked } from "marked";
@@ -9,9 +8,8 @@ import Footer from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Skeleton } from "@/components/ui/skeleton";
 import { useLanguage } from "@/i18n/LanguageContext";
-import type { BlogPost } from "@shared/schema";
+import { getBlogArticleBySlug, type BlogArticle } from "@/data/blog-articles";
 import { Calendar, User, ArrowLeft, Share2 } from "lucide-react";
 import { format } from "date-fns";
 import { pt, enUS } from "date-fns/locale";
@@ -20,9 +18,7 @@ export default function BlogPostPage() {
   const { t, language } = useLanguage();
   const { slug } = useParams<{ slug: string }>();
 
-  const { data: post, isLoading, error } = useQuery<BlogPost>({
-    queryKey: ["/api/blog", slug],
-  });
+  const post = useMemo(() => getBlogArticleBySlug(slug || ''), [slug]);
 
   const formatDate = (date: Date | string | null | undefined) => {
     if (!date) {
@@ -41,16 +37,16 @@ export default function BlogPostPage() {
     }
   };
 
-  const getTitle = (p: BlogPost) => language === 'pt' ? p.titlePt : p.titleEn;
-  const getContent = (p: BlogPost) => language === 'pt' ? p.contentPt : p.contentEn;
-  const getExcerpt = (p: BlogPost) => language === 'pt' ? p.excerptPt : p.excerptEn;
-  const getMetaDescription = (p: BlogPost) => {
+  const getTitle = (p: BlogArticle) => language === 'pt' ? p.titlePt : p.titleEn;
+  const getContent = (p: BlogArticle) => language === 'pt' ? p.contentPt : p.contentEn;
+  const getExcerpt = (p: BlogArticle) => language === 'pt' ? p.excerptPt : p.excerptEn;
+  const getMetaDescription = (p: BlogArticle) => {
     const meta = language === 'pt' ? p.metaDescriptionPt : p.metaDescriptionEn;
     return meta || getExcerpt(p);
   };
-  const getKeywords = (p: BlogPost) => language === 'pt' ? p.keywordsPt : p.keywordsEn;
+  const getKeywords = (p: BlogArticle) => language === 'pt' ? p.keywordsPt : p.keywordsEn;
 
-  const generateJsonLd = (p: BlogPost) => {
+  const generateJsonLd = (p: BlogArticle) => {
     const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://azores4fun.com';
     return {
       "@context": "https://schema.org",
@@ -74,7 +70,7 @@ export default function BlogPostPage() {
         }
       },
       "datePublished": p.publishedAt ? new Date(p.publishedAt).toISOString() : undefined,
-      "dateModified": (p.updatedAt || p.publishedAt) ? new Date(p.updatedAt || p.publishedAt!).toISOString() : undefined,
+      "dateModified": p.publishedAt ? new Date(p.publishedAt).toISOString() : undefined,
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": `${baseUrl}/blog/${p.slug}`
@@ -118,27 +114,7 @@ export default function BlogPostPage() {
     }
   };
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen">
-        <Navigation />
-        <div className="pt-20 md:pt-24">
-          <div className="max-w-4xl mx-auto px-4 md:px-8 py-12">
-            <Skeleton className="h-8 w-32 mb-8" />
-            <Skeleton className="h-12 w-3/4 mb-4" />
-            <Skeleton className="h-6 w-1/2 mb-8" />
-            <Skeleton className="w-full h-96 mb-8" />
-            <Skeleton className="h-4 w-full mb-2" />
-            <Skeleton className="h-4 w-full mb-2" />
-            <Skeleton className="h-4 w-3/4" />
-          </div>
-        </div>
-        <Footer />
-      </div>
-    );
-  }
-
-  if (error || !post) {
+  if (!post) {
     return (
       <div className="min-h-screen">
         <Navigation />

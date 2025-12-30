@@ -1,9 +1,11 @@
+import { useMemo } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, LucideIcon, Loader2 } from "lucide-react";
+import { ArrowRight, LucideIcon } from "lucide-react";
 import FAQItem from "./FAQItem";
 import { Link } from "wouter";
-import { useFaqsByServices } from "@/hooks/useDatabaseFaqs";
+import { staticFaqs } from "@/data/faqs";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 interface FAQCategoryConfig {
   service: string;
@@ -54,18 +56,22 @@ interface DatabaseFAQSectionProps {
 }
 
 export default function DatabaseFAQSection({ categories, title, subtitle, viewMoreText }: DatabaseFAQSectionProps) {
-  const services = categories.map(c => c.service);
-  const { faqsByService, isLoading } = useFaqsByServices(services);
-
-  if (isLoading) {
-    return (
-      <section className="py-16 md:py-24 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
-          <Loader2 className="h-8 w-8 animate-spin mx-auto text-primary" />
-        </div>
-      </section>
-    );
-  }
+  const { language } = useLanguage();
+  
+  const faqsByService = useMemo(() => {
+    const result: Record<string, { question: string; answer: string }[]> = {};
+    
+    for (const category of categories) {
+      result[category.service] = staticFaqs
+        .filter(faq => faq.service === category.service && faq.isActive)
+        .map(faq => ({
+          question: language === "pt" ? faq.questionPt : faq.questionEn,
+          answer: language === "pt" ? faq.answerPt : faq.answerEn,
+        }));
+    }
+    
+    return result;
+  }, [categories, language]);
 
   const categoriesWithFaqs = categories.filter(cat => faqsByService[cat.service]?.length > 0);
 
