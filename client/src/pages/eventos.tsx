@@ -7,8 +7,10 @@ import { Button } from "@/components/ui/button";
 import { PartyPopper, Tent as TentIcon, Users, Heart, Music, Check } from "lucide-react";
 import { seoConfig } from "@/lib/seo-config";
 import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
-import eventsImage from "@assets/generated_images/Event_tent_celebration_fca04953.png";
-import teambuildingImage from "@assets/generated_images/Teambuilding_outdoor_activity_99e77711.png";
+import inflatableImage from "@assets/insuflavel_1767111462652.jpeg";
+import tentsImage from "@assets/tendas_1767111462653.jpg";
+import lasertagKidsImage from "@assets/nautiferias1_1767111462652.jpg";
+import outdoorEventImage from "@assets/eventos2_1767111462652.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "wouter";
 
@@ -119,14 +121,24 @@ export default function EventosPage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <img
-                src={eventsImage}
-                alt={t.events.altEventTents}
-                className="rounded-lg w-full h-48 object-cover col-span-2"
+                src={inflatableImage}
+                alt="Inflatable playground for kids events"
+                className="rounded-lg w-full h-48 object-cover"
               />
               <img
-                src={teambuildingImage}
+                src={tentsImage}
+                alt={t.events.altEventTents}
+                className="rounded-lg w-full h-48 object-cover"
+              />
+              <img
+                src={lasertagKidsImage}
+                alt="Kids playing lasertag at event"
+                className="rounded-lg w-full h-48 object-cover"
+              />
+              <img
+                src={outdoorEventImage}
                 alt={t.events.altTeambuilding}
-                className="rounded-lg w-full h-48 object-cover col-span-2"
+                className="rounded-lg w-full h-48 object-cover"
               />
             </div>
           </div>
