@@ -606,6 +606,65 @@ Planting a tree is planting the future. When you choose to stay with us, you're 
 ---
 
 *At Azores4fun, we believe that tourism can and should be a positive force for the environment. Join us in this mission.*`
+  },
+  {
+    slug: "certificacao-marca-acores-amigo-natureza",
+    titlePt: "Qualidade e Sustentabilidade com Selo Oficial: A Nossa Certificação \"Marca Açores\" e \"Amigo da Natureza\"",
+    titleEn: "Quality and Sustainability with Official Seal: Our \"Marca Açores\" and \"Friend of Nature\" Certification",
+    author: "Azores4fun",
+    featuredImage: "/attached_assets/AF_ACO_SELO_NEG_PT_1767092255014.jpg",
+    featuredImageAlt: "Selo Marca Açores - Certificado pela Natureza",
+    category: "Sustentabilidade",
+    tags: "sustentabilidade,marca açores,amigo da natureza,certificação,qualidade,turismo responsável",
+    publishedAt: new Date("2024-12-30"),
+    excerptPt: "Na Azores4fun, acreditamos que o turismo de excelência deve caminhar de mãos dadas com a valorização do que é nosso e a proteção do meio ambiente.",
+    excerptEn: "At Azores4fun, we believe that excellent tourism must go hand in hand with valuing what is ours and protecting the environment.",
+    metaDescriptionPt: "Descubra como a Azores4fun é certificada pela Marca Açores e distinguida como Amigo da Natureza, garantindo qualidade e sustentabilidade.",
+    metaDescriptionEn: "Discover how Azores4fun is certified by Marca Açores and distinguished as Friend of Nature, ensuring quality and sustainability.",
+    keywordsPt: "marca açores, amigo da natureza, certificação turismo, sustentabilidade açores, turismo responsável faial",
+    keywordsEn: "marca acores, friend of nature, tourism certification, azores sustainability, responsible tourism faial",
+    contentPt: `Na Azores4fun, acreditamos que o turismo de excelência deve caminhar de mãos dadas com a valorização do que é nosso e a proteção do meio ambiente. É com enorme orgulho que partilhamos que o nosso compromisso é agora duplamente reconhecido através da certificação **"Marca Açores"** e do selo **"Amigo da Natureza"**.
+
+## Marca Açores: Identidade e Qualidade Regional
+
+Ser uma empresa certificada pela "Marca Açores" significa que os nossos serviços carregam a identidade, o valor e a qualidade da nossa região. Ao escolher-nos, está a apoiar uma economia local forte e a garantir uma experiência autenticamente açoriana, desde as cestas de boas-vindas repletas de produtos regionais até às nossas atividades de aventura.
+
+## Amigo da Natureza: Reconhecimento Ambiental Oficial
+
+Complementarmente, fomos distinguidos como **"Amigo da Natureza"**, no âmbito da Portaria n.º 118/2023 de 29 de dezembro. Este selo é um reconhecimento oficial das nossas práticas ambientais rigorosas, como:
+
+- Monitorização ativa de consumos
+- Gestão eficiente de resíduos
+- Compensação carbónica através da Mata Azores4fun
+
+## O Nosso Compromisso
+
+Estas certificações não são apenas selos na parede; são a garantia de que, ao confiar na Azores4fun, está a contribuir para um futuro onde o turismo e a natureza coexistem em perfeita harmonia.
+
+---
+
+*Escolha qualidade. Escolha sustentabilidade. Escolha Azores4fun.*`,
+    contentEn: `At Azores4fun, we believe that excellent tourism must go hand in hand with valuing what is ours and protecting the environment. It is with great pride that we share that our commitment is now doubly recognized through the **"Marca Açores"** certification and the **"Friend of Nature"** seal.
+
+## Marca Açores: Regional Identity and Quality
+
+Being a company certified by "Marca Açores" means that our services carry the identity, value and quality of our region. By choosing us, you are supporting a strong local economy and guaranteeing an authentically Azorean experience, from welcome baskets full of regional products to our adventure activities.
+
+## Friend of Nature: Official Environmental Recognition
+
+Additionally, we have been distinguished as **"Friend of Nature"**, under Ordinance No. 118/2023 of December 29. This seal is an official recognition of our rigorous environmental practices, such as:
+
+- Active monitoring of consumption
+- Efficient waste management
+- Carbon offsetting through the Azores4fun Forest
+
+## Our Commitment
+
+These certifications are not just seals on the wall; they are the guarantee that, by trusting Azores4fun, you are contributing to a future where tourism and nature coexist in perfect harmony.
+
+---
+
+*Choose quality. Choose sustainability. Choose Azores4fun.*`
   }
 ];
 
