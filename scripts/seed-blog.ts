@@ -547,6 +547,65 @@ In 2019, "Casa da Travessa" opened, in a building in the heart of the city of Ho
 In 2021, it invested in PaintBall material and created a field for that purpose from scratch, with trenches, obstacles, bases and a briefing and assistance area. With a field created for this purpose, Azores4Fun provides unique conditions for this strategy game in physical and real mode.
 
 One of Azores4Fun's bets, as a differentiation of its offer, will be the availability of complete and complementary packages of activities. With various durations, from hours to days, the packages may include off-road tours, in Kart Cross or in the Classic Toyota BJ40, Paintball, walking routes, camping or local accommodation and nautical activities (SUP, Canoeing, Snorkeling).`
+  },
+  {
+    slug: "pegada-carbono-floresta",
+    titlePt: "Viajar com Propósito: Como a Azores4fun está a Transformar a sua Pegada de Carbono em Floresta",
+    titleEn: "Travel with Purpose: How Azores4fun is Transforming Your Carbon Footprint into Forest",
+    author: "Azores4fun",
+    featuredImage: "/attached_assets/plantio_criptomerias_1767092159031.jpg",
+    featuredImageAlt: "Plantio de Criptomérias na Mata Azores4fun",
+    category: "Sustentabilidade",
+    tags: "sustentabilidade,ambiente,CO2,reflorestação,turismo responsável",
+    publishedAt: new Date("2024-12-30"),
+    excerptPt: "Viajar para os Açores é, para muitos, um sonho de ligação à natureza. Na Azores4fun, decidimos que não bastava apenas oferecer aventuras; era preciso cuidar do cenário onde elas acontecem.",
+    excerptEn: "Traveling to the Azores is, for many, a dream of connecting with nature. At Azores4fun, we decided that it wasn't enough to just offer adventures; we needed to take care of the scenery where they happen.",
+    metaDescriptionPt: "Descubra como a Azores4fun está a compensar as emissões de CO2 dos seus hóspedes através da plantação de árvores na Mata Azores4fun, no Faial.",
+    metaDescriptionEn: "Discover how Azores4fun is offsetting CO2 emissions from its guests by planting trees in the Azores4fun Forest, in Faial.",
+    keywordsPt: "sustentabilidade açores, turismo responsável, compensação carbono, reflorestação faial, mata azores4fun, criptomérias",
+    keywordsEn: "azores sustainability, responsible tourism, carbon offset, faial reforestation, azores4fun forest, cryptomeria",
+    contentPt: `Viajar para os Açores é, para muitos, um sonho de ligação à natureza. No entanto, sabemos que chegar ao "Coração do Atlântico" implica emissões de CO₂ que não podemos ignorar. Na Azores4fun, decidimos que não bastava apenas oferecer aventuras; era preciso cuidar do cenário onde elas acontecem.
+
+## O Nosso Compromisso Ambiental
+
+Este ano, analisámos a origem dos nossos hóspedes e calculámos o impacto ambiental das suas viagens. Com base nos dados, identificámos que os nossos clientes produziram cerca de **253 toneladas de CO₂**. Para mitigar este impacto, passámos à ação direta: criámos a **"Mata Azores4fun"**.
+
+## A Mata Azores4fun
+
+Localizada na nossa sede, esta mata de Criptomérias é o nosso pulmão verde. No final desta época, plantámos **70 novas árvores**, um número calculado para compensar as emissões das deslocações dos nossos clientes até ao Faial.
+
+## Mais do que Plantar Árvores
+
+Mas o nosso compromisso vai mais longe. Desde a utilização de uma **viatura de 9 lugares 100% elétrica** até ao incentivo ao consumo de **água da rede** e a oferta de **produtos locais nas nossas cestas de boas-vindas**, cada detalhe no nosso Alojamento Local foi pensado para proteger a nossa biodiversidade.
+
+## Plantar Futuro
+
+Plantar uma árvore é plantar futuro. Quando escolhe ficar connosco, não está apenas a visitar os Açores; **está a ajudar-nos a reflorestá-los**.
+
+---
+
+*Na Azores4fun, acreditamos que o turismo pode e deve ser uma força positiva para o ambiente. Junte-se a nós nesta missão.*`,
+    contentEn: `Traveling to the Azores is, for many, a dream of connecting with nature. However, we know that reaching the "Heart of the Atlantic" involves CO₂ emissions that we cannot ignore. At Azores4fun, we decided that it wasn't enough to just offer adventures; we needed to take care of the scenery where they happen.
+
+## Our Environmental Commitment
+
+This year, we analyzed the origin of our guests and calculated the environmental impact of their travels. Based on the data, we identified that our clients produced approximately **253 tons of CO₂**. To mitigate this impact, we took direct action: we created the **"Azores4fun Forest"**.
+
+## The Azores4fun Forest
+
+Located at our headquarters, this Cryptomeria forest is our green lung. At the end of this season, we planted **70 new trees**, a number calculated to offset the emissions from our clients' travels to Faial.
+
+## More Than Planting Trees
+
+But our commitment goes further. From using a **100% electric 9-seater vehicle** to encouraging the consumption of **tap water** and offering **local products in our welcome baskets**, every detail in our Local Accommodation has been designed to protect our biodiversity.
+
+## Planting the Future
+
+Planting a tree is planting the future. When you choose to stay with us, you're not just visiting the Azores; **you're helping us reforest them**.
+
+---
+
+*At Azores4fun, we believe that tourism can and should be a positive force for the environment. Join us in this mission.*`
   }
 ];
 
