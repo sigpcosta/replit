@@ -7,9 +7,9 @@ import { Button } from "@/components/ui/button";
 import { Zap, Target, Waves, Car, Tent, Check, Eye, Footprints } from "lucide-react";
 import { seoConfig } from "@/lib/seo-config";
 import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
-import lasertagImage from "@assets/generated_images/Laser_tag_action_shot_63a174d9.png";
-import supImage from "@assets/generated_images/SUP_paddleboarding_Azores_ocean_960e2ee9.png";
-import paintballImage from "@assets/generated_images/Paintball_action_gameplay_8c01711a.png";
+import paintballImage from "@assets/animacao1_1767111143181.jpg";
+import snorkelingImage from "@assets/anima2_(2)_1767111143180.jpg";
+import kayakImage from "@assets/anima3_1767111143180.jpg";
 import packagesImage from "@assets/Kayakes_1766856007742.jpg";
 import transferImage from "@assets/carrinha4_1767021825286.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -134,17 +134,17 @@ export default function AnimacaoPage() {
             </div>
             <div className="order-1 md:order-2 grid grid-cols-2 gap-4">
               <img
-                src={lasertagImage}
-                alt={t.activities.altLasertag}
-                className="rounded-lg w-full h-48 object-cover"
-              />
-              <img
                 src={paintballImage}
                 alt={t.activities.altPaintball}
                 className="rounded-lg w-full h-48 object-cover"
               />
               <img
-                src={supImage}
+                src={snorkelingImage}
+                alt="Snorkeling equipment in Azores"
+                className="rounded-lg w-full h-48 object-cover"
+              />
+              <img
+                src={kayakImage}
                 alt={t.activities.altSUP}
                 className="rounded-lg w-full h-48 object-cover col-span-2"
               />
