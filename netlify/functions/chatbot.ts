@@ -48,13 +48,14 @@ export const handler = async (event: HandlerEvent): Promise<HandlerResponse> => 
     const openaiBaseUrl = process.env.OPENAI_BASE_URL || process.env.AI_INTEGRATIONS_OPENAI_BASE_URL || "https://api.openai.com/v1";
 
     if (!openaiApiKey) {
+      console.error("OpenAI API key not configured. Check OPENAI_API_KEY environment variable in Netlify.");
       return {
-        statusCode: 500,
+        statusCode: 200,
         headers,
         body: JSON.stringify({ 
           response: language === "pt" 
-            ? "Desculpe, o chatbot está temporariamente indisponível. Por favor, contacte-nos por WhatsApp (+351 962537160)." 
-            : "Sorry, the chatbot is temporarily unavailable. Please contact us via WhatsApp (+351 962537160)."
+            ? "O nosso assistente AI está em configuração. Por favor, contacte-nos por WhatsApp (+351 962537160) ou telefone (+351 934 993 770)." 
+            : "Our AI assistant is being configured. Please contact us via WhatsApp (+351 962537160) or phone (+351 934 993 770)."
         }),
       };
     }
@@ -156,12 +157,12 @@ IMPORTANT RULES:
     console.error("Chatbot error:", error);
     const language = JSON.parse(event.body || "{}").language || "pt";
     return {
-      statusCode: 500,
+      statusCode: 200,
       headers,
       body: JSON.stringify({ 
         response: language === "pt"
-          ? "Desculpe, ocorreu um erro. Contacte-nos por WhatsApp (+351 962537160)."
-          : "Sorry, an error occurred. Contact us via WhatsApp (+351 962537160)."
+          ? "Peço desculpa, tive um problema técnico. Por favor, contacte-nos diretamente por WhatsApp (+351 962537160) ou telefone (+351 934 993 770)."
+          : "Sorry, I had a technical issue. Please contact us directly via WhatsApp (+351 962537160) or phone (+351 934 993 770)."
       }),
     };
   }
