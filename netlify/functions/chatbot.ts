@@ -58,8 +58,9 @@ export const handler = async (event: HandlerEvent): Promise<HandlerResponse> => 
         headers,
         body: JSON.stringify({ 
           response: language === "pt" 
-            ? "O nosso assistente AI está em configuração. Por favor, contacte-nos por WhatsApp (+351 962537160) ou telefone (+351 934 993 770)." 
-            : "Our AI assistant is being configured. Please contact us via WhatsApp (+351 962537160) or phone (+351 934 993 770)."
+            ? "[DEBUG: OPENAI_API_KEY não encontrada] O nosso assistente AI está em configuração. Por favor, contacte-nos por WhatsApp (+351 962537160) ou telefone (+351 934 993 770)." 
+            : "[DEBUG: OPENAI_API_KEY not found] Our AI assistant is being configured. Please contact us via WhatsApp (+351 962537160) or phone (+351 934 993 770).",
+          debug: { keyExists: false, baseUrl: openaiBaseUrl }
         }),
       };
     }
@@ -167,13 +168,15 @@ IMPORTANT RULES:
   } catch (error) {
     console.error("Chatbot error:", error);
     const language = JSON.parse(event.body || "{}").language || "pt";
+    const errorMessage = error instanceof Error ? error.message : String(error);
     return {
       statusCode: 200,
       headers,
       body: JSON.stringify({ 
         response: language === "pt"
-          ? "Peço desculpa, tive um problema técnico. Por favor, contacte-nos diretamente por WhatsApp (+351 962537160) ou telefone (+351 934 993 770)."
-          : "Sorry, I had a technical issue. Please contact us directly via WhatsApp (+351 962537160) or phone (+351 934 993 770)."
+          ? `[DEBUG: Erro - ${errorMessage}] Peço desculpa, tive um problema técnico. Por favor, contacte-nos diretamente por WhatsApp (+351 962537160) ou telefone (+351 934 993 770).`
+          : `[DEBUG: Error - ${errorMessage}] Sorry, I had a technical issue. Please contact us directly via WhatsApp (+351 962537160) or phone (+351 934 993 770).`,
+        debug: { error: errorMessage }
       }),
     };
   }
