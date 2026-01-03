@@ -77,7 +77,7 @@ export default function TermosSite() {
             <section className="mb-8">
               <h2>9. {t.legal.termsSite.sections.contacts.title}</h2>
               <p>{t.legal.termsSite.sections.contacts.content}</p>
-              <p className="font-semibold">+351 961 515 990 | info@azores4fun.com</p>
+              <p className="font-semibold">+351 934 993 770 | info@azores4fun.com</p>
             </section>
           </article>
         </div>

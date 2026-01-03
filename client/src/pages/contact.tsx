@@ -228,7 +228,7 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <a
-                    href="https://wa.me/351969519950"
+                    href="https://wa.me/351962537160"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 rounded-lg bg-green-500/10 hover:bg-green-500/20 transition-colors"
@@ -239,7 +239,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold">{ct.whatsappTitle}</p>
-                      <p className="text-sm text-muted-foreground">+351 969 519 950</p>
+                      <p className="text-sm text-muted-foreground">+351 962 537 160</p>
                       <p className="text-xs text-muted-foreground">{ct.whatsappDesc}</p>
                     </div>
                   </a>
@@ -327,7 +327,7 @@ export default function ContactPage() {
                       <SiInstagram className="w-5 h-5" />
                     </a>
                     <a
-                      href="https://wa.me/351969519950"
+                      href="https://wa.me/351962537160"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center hover:bg-green-600 transition-colors"

@@ -78,7 +78,7 @@ export default function Privacidade() {
 
             <section className="mb-8">
               <p>{t.legal.privacy.contact}</p>
-              <p className="font-semibold">+351 961 515 990 | info@azores4fun.com</p>
+              <p className="font-semibold">+351 934 993 770 | info@azores4fun.com</p>
             </section>
           </article>
         </div>
