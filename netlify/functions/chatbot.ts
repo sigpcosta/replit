@@ -36,6 +36,8 @@ export const handler = async (event: HandlerEvent): Promise<HandlerResponse> => 
     const body = JSON.parse(event.body || "{}");
     const { message, language = "pt", currentPage = "/" } = body;
 
+    console.log("[Chatbot] Request received:", { message: message?.substring(0, 50), language, currentPage });
+
     if (!message) {
       return {
         statusCode: 400,
@@ -47,8 +49,10 @@ export const handler = async (event: HandlerEvent): Promise<HandlerResponse> => 
     const openaiApiKey = process.env.OPENAI_API_KEY || process.env.AI_INTEGRATIONS_OPENAI_API_KEY;
     const openaiBaseUrl = process.env.OPENAI_BASE_URL || process.env.AI_INTEGRATIONS_OPENAI_BASE_URL || "https://api.openai.com/v1";
 
+    console.log("[Chatbot] API Key exists:", !!openaiApiKey, "Base URL:", openaiBaseUrl);
+
     if (!openaiApiKey) {
-      console.error("OpenAI API key not configured. Check OPENAI_API_KEY environment variable in Netlify.");
+      console.error("[Chatbot] ERROR: OpenAI API key not configured. Check OPENAI_API_KEY environment variable in Netlify.");
       return {
         statusCode: 200,
         headers,
@@ -123,6 +127,8 @@ IMPORTANT RULES:
 - If truly unsure, suggest contacting via WhatsApp: +351 962537160
 - Current page: ${currentPage}`;
 
+    console.log("[Chatbot] Calling OpenAI API...");
+    
     const response = await fetch(`${openaiBaseUrl}/chat/completions`, {
       method: "POST",
       headers: {
@@ -139,11 +145,16 @@ IMPORTANT RULES:
       }),
     });
 
+    console.log("[Chatbot] OpenAI response status:", response.status);
+
     if (!response.ok) {
-      throw new Error(`OpenAI API error: ${response.status}`);
+      const errorText = await response.text();
+      console.error("[Chatbot] OpenAI API error:", response.status, errorText);
+      throw new Error(`OpenAI API error: ${response.status} - ${errorText}`);
     }
 
     const data = await response.json();
+    console.log("[Chatbot] OpenAI response received, has choices:", !!data.choices?.length);
     const aiResponse = data.choices?.[0]?.message?.content || (language === "pt" 
       ? "Desculpe, não consegui processar. Tente novamente." 
       : "Sorry, I couldn't process. Please try again.");
