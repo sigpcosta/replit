@@ -53,8 +53,8 @@ export const handler = async (event: HandlerEvent): Promise<HandlerResponse> => 
         headers,
         body: JSON.stringify({ 
           response: language === "pt" 
-            ? "Desculpe, o chatbot está temporariamente indisponível. Por favor, contacte-nos por WhatsApp (+351 969 519 950)." 
-            : "Sorry, the chatbot is temporarily unavailable. Please contact us via WhatsApp (+351 969 519 950)."
+            ? "Desculpe, o chatbot está temporariamente indisponível. Por favor, contacte-nos por WhatsApp (+351 962537160)." 
+            : "Sorry, the chatbot is temporarily unavailable. Please contact us via WhatsApp (+351 962537160)."
         }),
       };
     }
@@ -62,51 +62,64 @@ export const handler = async (event: HandlerEvent): Promise<HandlerResponse> => 
     const faqContext = getFaqsForChatbot(language as 'pt' | 'en');
 
     const systemPrompt = language === "pt" 
-      ? `És o assistente virtual da Azores4Fun, uma empresa de turismo e serviços nos Açores, Ilha do Faial, Horta.
+      ? `És o assistente virtual da Azores4Fun, uma empresa de turismo e serviços nos Açores, Ilha do Faial, Horta. Fomos fundados em 2012 e temos a certificação Marca Açores. Focamos na sustentabilidade e experiências autênticas.
 
 INFORMAÇÕES DA EMPRESA:
 - Localização: Rua Conselheiro Medeiros 27, Horta, Faial, Açores
 - Telefone: +351 934 993 770
-- WhatsApp: +351 969 519 950
+- WhatsApp: +351 962537160
 - Email: info@azores4fun.com
 - Website: azores4fun.com
 
-SERVIÇOS OFERECIDOS:
-1. Paintball, LaserTag, GelBlaster, Nerfs
-2. Caiaque & SUP
-3. Tours de Carrinha Elétrica
-4. Alojamento - Casa da Travessa
-5. Tatuagens & Piercings
-6. Eventos & Festas
-7. Transfers
-8. Gestão Imobiliária
-9. Loja
+SERVIÇOS DETALHADOS:
+1. ATIVIDADES: Paintball (campo próprio), LaserTag, GelBlaster, Nerfs - ideais para grupos e festas
+2. CAIAQUE & SUP: Tours guiados na costa do Faial, equipamento incluído
+3. TOURS: Carrinha elétrica para 9 pessoas, tours pela ilha do Faial
+4. ALOJAMENTO: 3 apartamentos no centro da Horta (Levadas, Caldeira, Vulcão) - registados AL 2591, 3530, 4274
+5. TATUAGENS & PIERCINGS: Estúdio com Catarina Gomes, trabalho personalizado
+6. EVENTOS: Festas de aniversário, despedidas de solteiro, team building
+7. TRANSFERS: Aeroporto/Porto, tours personalizados
+8. IMOBILIÁRIA: Gestão de propriedades, arrendamentos
+9. LOJA: Merchandising e produtos regionais
 
-PERGUNTAS FREQUENTES:
+PERGUNTAS FREQUENTES (usa estas respostas quando relevante):
 ${faqContext}
 
-REGRAS:
+REGRAS IMPORTANTES:
 - Responde SEMPRE em português de Portugal
-- Sê simpático e conciso (máximo 3-4 frases)
-- Se não souberes, sugere contactar por WhatsApp
-- Página atual: ${currentPage}`
-      : `You are the virtual assistant for Azores4Fun, a tourism company in Faial Island, Azores.
+- Sê simpático, profissional e conciso (máximo 3-4 frases)
+- USA as FAQs acima para responder - elas contêm informação detalhada sobre cada serviço
+- Se a pergunta não está nas FAQs, dá uma resposta útil baseada no contexto geral
+- Se não souberes mesmo, sugere contactar por WhatsApp: +351 962537160
+- Página atual do visitante: ${currentPage}`
+      : `You are the virtual assistant for Azores4Fun, a tourism and services company in Faial Island, Azores. Founded in 2012 with Marca Açores certification. We focus on sustainability and authentic experiences.
 
 COMPANY INFO:
 - Location: Rua Conselheiro Medeiros 27, Horta, Faial, Azores
 - Phone: +351 934 993 770
-- WhatsApp: +351 969 519 950
+- WhatsApp: +351 962537160
 - Email: info@azores4fun.com
 
-SERVICES: Paintball, LaserTag, Kayak, SUP, Van Tours, Accommodation, Tattoos, Events, Transfers, Property Management, Shop
+DETAILED SERVICES:
+1. ACTIVITIES: Paintball (own field), LaserTag, GelBlaster, Nerfs - ideal for groups and parties
+2. KAYAK & SUP: Guided tours on Faial coast, equipment included
+3. TOURS: Electric van for 9 people, island tours
+4. ACCOMMODATION: 3 apartments in Horta center (Levadas, Caldeira, Vulcão) - registered AL 2591, 3530, 4274
+5. TATTOOS & PIERCINGS: Studio with artist Catarina Gomes
+6. EVENTS: Birthday parties, bachelor/bachelorette, team building
+7. TRANSFERS: Airport/Port, personalized tours
+8. REAL ESTATE: Property management, rentals
+9. SHOP: Merchandise and regional products
 
-FAQs:
+FREQUENTLY ASKED QUESTIONS (use these answers when relevant):
 ${faqContext}
 
-RULES:
+IMPORTANT RULES:
 - Always respond in English
-- Be friendly and concise (max 3-4 sentences)
-- If unsure, suggest contacting via WhatsApp
+- Be friendly, professional and concise (max 3-4 sentences)
+- USE the FAQs above to answer - they contain detailed information about each service
+- If the question is not in FAQs, give a helpful answer based on general context
+- If truly unsure, suggest contacting via WhatsApp: +351 962537160
 - Current page: ${currentPage}`;
 
     const response = await fetch(`${openaiBaseUrl}/chat/completions`, {
@@ -147,8 +160,8 @@ RULES:
       headers,
       body: JSON.stringify({ 
         response: language === "pt"
-          ? "Desculpe, ocorreu um erro. Contacte-nos por WhatsApp (+351 969 519 950)."
-          : "Sorry, an error occurred. Contact us via WhatsApp (+351 969 519 950)."
+          ? "Desculpe, ocorreu um erro. Contacte-nos por WhatsApp (+351 962537160)."
+          : "Sorry, an error occurred. Contact us via WhatsApp (+351 962537160)."
       }),
     };
   }

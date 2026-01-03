@@ -27,8 +27,8 @@ export const staticFaqs: FAQ[] = [
     service: "accommodation",
     questionPt: "Quantas pessoas os apartamentos acomodam?",
     questionEn: "How many people do the apartments accommodate?",
-    answerPt: "Os apartamentos podem acomodar entre 2 a 6 pessoas, dependendo da unidade. Contacte-nos para saber a disponibilidade de cada apartamento.",
-    answerEn: "The apartments can accommodate between 2 to 6 people, depending on the unit. Contact us to check availability for each apartment.",
+    answerPt: "Os apartamentos podem acomodar entre 2 a 8 pessoas, dependendo da unidade. Contacte-nos para saber a disponibilidade de cada apartamento.",
+    answerEn: "The apartments can accommodate between 2 to 8 people, depending on the unit. Contact us to check availability for each apartment.",
     keywords: "pessoas,capacidade,quartos,acomodar,hóspedes,apartamento",
     displayOrder: 58,
     isActive: true
