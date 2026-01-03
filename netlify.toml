@@ -10,6 +10,13 @@
   from = "/api/chatbot"
   to = "/.netlify/functions/chatbot"
   status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/*"
@@ -18,6 +25,7 @@
 
 [functions]
   node_bundler = "esbuild"
+  included_files = ["data/**"]
 
 [dev]
   command = "npm run dev"
