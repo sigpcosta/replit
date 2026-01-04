@@ -88,7 +88,7 @@ These certifications are not a destination, but rather the recognition of a path
 
 When you choose Azores4fun, you are choosing a company that values quality, Azorean authenticity and the protection of our unique environment.`,
     author: "Azores4fun",
-    featuredImage: "/attached_assets/AF_ACO_SELO_NEG_PT_1767092255014.jpg",
+    featuredImage: "/images/blog/AF_ACO_SELO_NEG_PT_1767092255014.jpg",
     featuredImageAlt: "Selo Marca Açores - Certificado pela Natureza",
     category: "Sustentabilidade",
     publishedAt: "2024-12-30",
@@ -182,7 +182,7 @@ When you choose Azores4fun, you're not just choosing a tourist experience. You'r
 
 Come see our forest. Come plant the future with us.`,
     author: "Azores4fun",
-    featuredImage: "/attached_assets/plantio_criptomerias_1767092159031.jpg",
+    featuredImage: "/images/blog/plantio_criptomerias_1767092159031.jpg",
     featuredImageAlt: "Plantio de Criptomérias na Mata Azores4fun",
     category: "Sustentabilidade",
     publishedAt: "2024-12-30",
@@ -242,7 +242,7 @@ We create programs tailored to your preferences:
 
 Contact us to plan the perfect party!`,
     author: "Azores4fun",
-    featuredImage: "/attached_assets/eventos1_1766744828215.jpg",
+    featuredImage: "/images/blog/eventos1_1766744828215.jpg",
     category: "Eventos",
     publishedAt: "2025-11-12",
     metaDescriptionPt: "Despedidas de solteiro nos Açores com Paintball, LaserTag, tours e atividades náuticas. Pacotes personalizados na Ilha do Faial.",
@@ -309,7 +309,7 @@ Oferecemos pacotes para diferentes tamanhos de grupo e orçamentos. Contacte-nos
 
 We offer packages for different group sizes and budgets. Contact us for a personalized quote!`,
     author: "Azores4fun",
-    featuredImage: "/attached_assets/insuflavel_1767111462652.jpeg",
+    featuredImage: "/images/blog/insuflavel_1767111462652.jpeg",
     category: "Eventos",
     publishedAt: "2025-11-13",
     metaDescriptionPt: "Festas de aniversário nos Açores com Paintball, LaserTag, Nerfs e insufláveis. Diversão para todas as idades na Ilha do Faial.",
@@ -384,7 +384,7 @@ Complete 2-day program with accommodation at Casa da Travessa.
 
 Contact us to create your personalized package!`,
     author: "Azores4fun",
-    featuredImage: "/attached_assets/Kayakes_1766856007742.jpg",
+    featuredImage: "/images/blog/Kayakes_1766856007742.jpg",
     category: "Multiatividades",
     publishedAt: "2025-11-14",
     metaDescriptionPt: "Pacotes multiatividades nos Açores: Paintball, SUP, Caiaque, Tours. Combine aventuras terrestres e aquáticas na Ilha do Faial.",
@@ -451,7 +451,7 @@ Transfer to Caldeira, Capelinhos, Porto Pim and other points of interest.
 
 Contact us in advance to secure your reservation. We'll provide the best price for your route.`,
     author: "Azores4fun",
-    featuredImage: "/attached_assets/aeroporto_horta_1766218185402.jpg",
+    featuredImage: "/images/blog/aeroporto_horta_1766218185402.jpg",
     category: "Transfers",
     publishedAt: "2025-11-15",
     metaDescriptionPt: "Transfers em carrinha 100% elétrica na Ilha do Faial. Aeroporto Horta, Caldeira, Capelinhos. Transporte sustentável, pontual e confortável.",
@@ -532,7 +532,7 @@ Unlike Paintball, there is no physical impact or paint — the marker emits a co
 
 **Book your LaserTag session now!**`,
     author: "Azores4fun",
-    featuredImage: "/attached_assets/6O6A6271-Aprimorado-NR_1766217757151.jpg",
+    featuredImage: "/images/blog/6O6A6271-Aprimorado-NR_1766217757151.jpg",
     category: "LaserTag",
     publishedAt: "2025-11-16",
     metaDescriptionPt: "LaserTag na Ilha do Faial com equipamento profissional. Jogos táticos para todas as idades - festas, team building, despedidas. Sem dor, sem tinta, 100% seguro.",
@@ -603,7 +603,7 @@ We customize the itinerary according to your interests.
 
 Contact us for updated prices!`,
     author: "Azores4fun",
-    featuredImage: "/attached_assets/20250615_114223_1766217619228.jpg",
+    featuredImage: "/images/blog/20250615_114223_1766217619228.jpg",
     category: "Tours",
     publishedAt: "2025-11-16",
     metaDescriptionPt: "Tours de carrinha 100% elétrica na Ilha do Faial, Açores. Visite o Vulcão dos Capelinhos, Caldeira, miradouros panorâmicos.",
@@ -700,7 +700,7 @@ Foam darts for guaranteed fun.
 
 Contact us for more information!`,
     author: "Azores4fun",
-    featuredImage: "/attached_assets/6O6A4383-Aprimorado-NR_1766217417180.jpg",
+    featuredImage: "/images/blog/6O6A4383-Aprimorado-NR_1766217417180.jpg",
     category: "Paintball",
     publishedAt: "2025-11-16",
     metaDescriptionPt: "Jogos de estratégia na Ilha do Faial: Paintball, LaserTag, Gelblaster e Nerfs. Diversão para todas as idades.",
@@ -755,7 +755,7 @@ The studio was created to be more than a workplace — it is a safe, calm and in
 
 **If you're looking for a tattoo made with care, or a piercing done safely, this is your place.**`,
     author: "Azores4fun",
-    featuredImage: "/attached_assets/IMG_6545_1766217086991.JPG",
+    featuredImage: "/images/blog/IMG_6545_1766217086991.JPG",
     category: "Tatuagem",
     publishedAt: "2025-11-16",
     metaDescriptionPt: "Estúdio de tatuagens e piercings na Horta, Faial. Artistas experientes, higiene máxima, designs personalizados.",
