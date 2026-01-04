@@ -1,4 +1,13 @@
-import { staticFaqs, getFaqsForChatbot } from "./data/faqs";
+let staticFaqs: any[] = [];
+let getFaqsForChatbot: (lang: 'pt' | 'en') => string = () => '';
+
+try {
+  const faqModule = require("./data/faqs");
+  staticFaqs = faqModule.staticFaqs || [];
+  getFaqsForChatbot = faqModule.getFaqsForChatbot || (() => '');
+} catch (importError) {
+  console.error("[Chatbot] Failed to import FAQs:", importError);
+}
 
 interface HandlerEvent {
   httpMethod: string;
@@ -12,27 +21,28 @@ interface HandlerResponse {
   body: string;
 }
 
+const defaultHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "Content-Type",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  "Content-Type": "application/json",
+};
+
 export const handler = async (event: HandlerEvent): Promise<HandlerResponse> => {
-  const headers = {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": "Content-Type",
-    "Access-Control-Allow-Methods": "POST, OPTIONS",
-    "Content-Type": "application/json",
-  };
-
-  if (event.httpMethod === "OPTIONS") {
-    return { statusCode: 200, headers, body: "" };
-  }
-
-  if (event.httpMethod !== "POST") {
-    return {
-      statusCode: 405,
-      headers,
-      body: JSON.stringify({ error: "Method not allowed" }),
-    };
-  }
+  const headers = defaultHeaders;
 
   try {
+    if (event.httpMethod === "OPTIONS") {
+      return { statusCode: 200, headers, body: "" };
+    }
+
+    if (event.httpMethod !== "POST") {
+      return {
+        statusCode: 405,
+        headers,
+        body: JSON.stringify({ error: "Method not allowed" }),
+      };
+    }
     const body = JSON.parse(event.body || "{}");
     const { message, language = "pt", currentPage = "/" } = body;
 
@@ -167,11 +177,14 @@ IMPORTANT RULES:
     };
   } catch (error) {
     console.error("Chatbot error:", error);
-    const language = JSON.parse(event.body || "{}").language || "pt";
+    let language = "pt";
+    try {
+      language = JSON.parse(event.body || "{}").language || "pt";
+    } catch {}
     const errorMessage = error instanceof Error ? error.message : String(error);
     return {
       statusCode: 200,
-      headers,
+      headers: defaultHeaders,
       body: JSON.stringify({ 
         response: language === "pt"
           ? `[DEBUG: Erro - ${errorMessage}] Peço desculpa, tive um problema técnico. Por favor, contacte-nos diretamente por WhatsApp (+351 962537160) ou telefone (+351 934 993 770).`
