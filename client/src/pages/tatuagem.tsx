@@ -58,7 +58,18 @@ export default function TatuagemPage() {
 
   const bookingMutation = useMutation({
     mutationFn: async (data: typeof formData) => {
-      const res = await apiRequest("POST", "/api/booking", data);
+      const res = await fetch("https://formspree.io/f/xwvpwygv", {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          ...data,
+          _subject: "Novo Agendamento Tatuagem/Piercing - Azores4fun"
+        }),
+      });
+      if (!res.ok) throw new Error("Failed to send");
       return await res.json();
     },
     onSuccess: () => {

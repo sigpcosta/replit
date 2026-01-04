@@ -25,9 +25,12 @@ export default function ContactDialog({ open, onOpenChange }: ContactDialogProps
 
   const sendContactMutation = useMutation({
     mutationFn: async (data: { name: string; email: string; phone: string; message: string }) => {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://formspree.io/f/xwvpwygv", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
         body: JSON.stringify(data),
       });
       if (!response.ok) throw new Error("Failed to send message");
