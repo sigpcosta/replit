@@ -20,12 +20,12 @@ export default function TeamSection({ members = ["miguel", "emanuel"] }: TeamSec
       pt: {
         name: "Miguel Moniz",
         role: "Coordenador de Atividades",
-        bio: "Especialista em turismo ativo e desportos aquáticos. Organiza tours personalizados, jogos de estratégia e todas as nossas atividades de aventura."
+        bio: "Técnico Especialista em Turismo de Natureza e Aventura. Organiza tours personalizados, jogos de estratégia e todas as nossas atividades e eventos."
       },
       en: {
         name: "Miguel Moniz",
         role: "Activities Coordinator",
-        bio: "Specialist in active tourism and water sports. Organizes personalized tours, strategy games and all our adventure activities."
+        bio: "Specialist Technician in Nature and Adventure Tourism. Organizes personalized tours, strategy games and all our activities and events."
       }
     },
     emanuel: {
