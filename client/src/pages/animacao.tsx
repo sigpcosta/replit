@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ServiceFAQs from "@/components/ServiceFAQs";
+import TeamSection from "@/components/TeamSection";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -219,6 +220,8 @@ export default function AnimacaoPage() {
               />
             </div>
           </Card>
+
+          <TeamSection members={["miguel", "emanuel"]} />
         </div>
 
         <ServiceFAQs service={["tourism", "paintball", "lasertag", "kayak", "tours"]} title={t.activities.faqTitle} />

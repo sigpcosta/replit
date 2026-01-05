@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ServiceFAQs from "@/components/ServiceFAQs";
+import TeamSection from "@/components/TeamSection";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -213,6 +214,8 @@ export default function EventosPage() {
               </p>
             </Card>
           </div>
+
+          <TeamSection members={["miguel", "emanuel"]} />
         </div>
 
         <ServiceFAQs service="events" title={t.events.faqTitle} />
