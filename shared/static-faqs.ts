@@ -70,7 +70,7 @@ export const staticFaqs: FAQ[] = [
   {
     id: 134,
     service: "accommodation",
-    questionPt: "Qual o nome e o número de registo do seu alojamento local?",
+    questionPt: "Qual o número de registo do vosso alojamento local?",
     questionEn: "What is the name and registration number of your accommodation?",
     answerPt: "Os nossos ALs, apartamentos \"Levadas\", \"Caldeira\" e \"Vulcão\", estão devidamente registados sob os n.ºs 2591, 3530 e 4274. A sua reserva connosco é totalmente legal e segura.",
     answerEn: "Our vacation rentals, apartments \"Levadas\", \"Caldeira\" and \"Vulcão\", are duly registered under numbers 2591, 3530 and 4274. Your booking with us is completely legal and safe.",

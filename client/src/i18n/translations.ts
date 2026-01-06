@@ -476,7 +476,7 @@ export const translations = {
       apartmentTypes: {
         t1: "T0 - Estúdio Azores4fun",
         t1Capacity: "4 pessoas, ideal 2",
-        t1Rral: "RRAL nº4274",
+        t1Rral: "(Estúdio Azores4fun) RRAL nº4274",
         t1Description: "Estúdio espaçoso com Mezzanine, perfeito para casais ou aventureiros.",
         t2Centro: "T2 - Apartamento Casa da Travessa Piso Térreo",
         t2CentroCapacity: "6 pessoas, ideal 3",
@@ -1907,7 +1907,7 @@ export const translations = {
       apartmentTypes: {
         t1: "T0 - Azores4fun Studio",
         t1Capacity: "4 people, ideal 2",
-        t1Rral: "RRAL nº4274",
+        t1Rral: "(Estúdio Azores4fun) RRAL nº4274",
         t1Description: "Spacious studio with Mezzanine, perfect for couples or adventurers.",
         t2Centro: "T2 - Casa da Travessa Ground Floor Apartment",
         t2CentroCapacity: "6 people, ideal 3",
