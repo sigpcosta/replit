@@ -27,7 +27,7 @@ export const staticFaqs: FAQ[] = [
     service: "accommodation",
     questionPt: "Quantas pessoas os apartamentos acomodam?",
     questionEn: "How many people do the apartments accommodate?",
-    answerPt: "Os apartamentos podem acomodar entre 2 a 8 pessoas, dependendo da unidade. Contacte-nos para saber a disponibilidade de cada apartamento.",
+    answerPt: "Os apartamentos podem acomodar entre 2 a 8 pessoas, dependendo da unidade. Consulte os detalhes ou contacte-nos para saber a disponibilidade de cada apartamento.",
     answerEn: "The apartments can accommodate between 2 to 8 people, depending on the unit. Contact us to check availability for each apartment.",
     keywords: "pessoas,capacidade,quartos,acomodar,hóspedes,apartamento",
     displayOrder: 58,
@@ -77,17 +77,7 @@ export const staticFaqs: FAQ[] = [
     displayOrder: 62,
     isActive: true
   },
-  {
-    id: 63,
-    service: "accommodation",
-    questionPt: "Aceitam animais de estimação?",
-    questionEn: "Do you accept pets?",
-    answerPt: "Alguns apartamentos aceitam animais de estimação mediante consulta prévia. Contacte-nos para verificar disponibilidade e condições.",
-    answerEn: "Some apartments accept pets upon prior consultation. Contact us to check availability and conditions.",
-    keywords: "animais,estimação,pets,cão,gato,permitido",
-    displayOrder: 63,
-    isActive: true
-  },
+  
   {
     id: 64,
     service: "accommodation",
