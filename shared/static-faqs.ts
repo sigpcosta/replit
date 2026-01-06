@@ -12,23 +12,12 @@ export interface FAQ {
 
 export const staticFaqs: FAQ[] = [
   {
-    id: 57,
-    service: "accommodation",
-    questionPt: "Onde ficam localizados os apartamentos?",
-    questionEn: "Where are the apartments located?",
-    answerPt: "Os nossos 3 apartamentos ficam no centro da cidade da Horta, na Ilha do Faial, com fácil acesso a restaurantes, marina e principais atrações turísticas.",
-    answerEn: "Our 3 apartments are located in the center of Horta city, on Faial Island, with easy access to restaurants, marina and main tourist attractions.",
-    keywords: "onde,localização,apartamento,horta,centro,faial",
-    displayOrder: 57,
-    isActive: true
-  },
-  {
     id: 58,
     service: "accommodation",
     questionPt: "Quantas pessoas os apartamentos acomodam?",
     questionEn: "How many people do the apartments accommodate?",
-    answerPt: "Os apartamentos podem acomodar entre 2 a 8 pessoas, dependendo da unidade. Consulte os detalhes ou contacte-nos para saber a disponibilidade de cada apartamento.",
-    answerEn: "The apartments can accommodate between 2 to 8 people, depending on the unit. Contact us to check availability for each apartment.",
+    answerPt: "Os apartamentos podem acomodar entre 2 a 8 pessoas, dependendo da unidade. Consulte os detalhes de cada um ou contacte-nos para saber a disponibilidade de cada apartamento.",
+    answerEn: "The apartments can accommodate between 2 to 8 people, depending on the unit. Check detailed info or contact us to check availability for each apartment.",
     keywords: "pessoas,capacidade,quartos,acomodar,hóspedes,apartamento",
     displayOrder: 58,
     isActive: true
@@ -77,18 +66,7 @@ export const staticFaqs: FAQ[] = [
     displayOrder: 62,
     isActive: true
   },
-  
-  {
-    id: 64,
-    service: "accommodation",
-    questionPt: "Os apartamentos têm vista para o mar?",
-    questionEn: "Do the apartments have sea views?",
-    answerPt: "Alguns dos nossos apartamentos oferecem vista para o mar ou para a marina. Informe-nos da sua preferência ao fazer a reserva.",
-    answerEn: "Some of our apartments offer sea or marina views. Let us know your preference when making a reservation.",
-    keywords: "vista,mar,marina,paisagem,janela,apartamento",
-    displayOrder: 64,
-    isActive: true
-  },
+
   {
     id: 134,
     service: "accommodation",
