@@ -476,12 +476,15 @@ export const translations = {
       apartmentTypes: {
         t1: "T0 - Estúdio Azores4fun",
         t1Capacity: "4 pessoas, ideal 2",
+        t1Rral: "RRAL nº4274",
         t1Description: "Estúdio espaçoso com Mezzanine, perfeito para casais ou aventureiros.",
         t2Centro: "T2 - Apartamento Casa da Travessa Piso Térreo",
         t2CentroCapacity: "6 pessoas, ideal 3",
+        t2CentroRral: "RRAL nº2591",
         t2CentroDescription: "Apartamento no coração da cidade da Horta, ideal para famílias.",
         t2Pico: "T3 - Apartamento Casa da Travessa com 3 Quartos",
         t2PicoCapacity: "8 pessoas, ideal 5",
+        t2PicoRral: "RRAL nº3530",
         t2PicoDescription: "Apartamento moderno e bem equipado, ideal para grupos.",
       },
       features: [
@@ -1904,12 +1907,15 @@ export const translations = {
       apartmentTypes: {
         t1: "T0 - Azores4fun Studio",
         t1Capacity: "4 people, ideal 2",
+        t1Rral: "RRAL nº4274",
         t1Description: "Spacious studio with Mezzanine, perfect for couples or adventurers.",
         t2Centro: "T2 - Casa da Travessa Ground Floor Apartment",
         t2CentroCapacity: "6 people, ideal 3",
+        t2CentroRral: "RRAL nº2591",
         t2CentroDescription: "Apartment in the heart of Horta city, ideal for families.",
         t2Pico: "T3 - Casa da Travessa 3 Bedroom Apartment",
         t2PicoCapacity: "8 people, ideal 5",
+        t2PicoRral: "RRAL nº3530",
         t2PicoDescription: "Modern and well-equipped apartment, ideal for groups.",
       },
       features: [

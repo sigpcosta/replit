@@ -81,7 +81,7 @@ export const handler = async (event: HandlerEvent): Promise<HandlerResponse> => 
       ? `És o assistente virtual da Azores4Fun, uma empresa de turismo e serviços nos Açores, Ilha do Faial, Horta. Fomos fundados em 2012 e temos a certificação Marca Açores. Focamos na sustentabilidade e experiências autênticas.
 
 INFORMAÇÕES DA EMPRESA:
-- Localização: Rua Conselheiro Medeiros 27, Horta, Faial, Açores
+- Localização: Travessa Poiso Novo 1, Horta, Faial, Açores
 - Telefone: +351 934 993 770
 - WhatsApp: +351 962537160
 - Email: info@azores4fun.com
@@ -111,7 +111,7 @@ REGRAS IMPORTANTES:
       : `You are the virtual assistant for Azores4Fun, a tourism and services company in Faial Island, Azores. Founded in 2012 with Marca Açores certification. We focus on sustainability and authentic experiences.
 
 COMPANY INFO:
-- Location: Rua Conselheiro Medeiros 27, Horta, Faial, Azores
+- Location: Travessa Poiso Novo 1, Horta, Faial, Azores
 - Phone: +351 934 993 770
 - WhatsApp: +351 962537160
 - Email: info@azores4fun.com

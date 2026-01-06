@@ -160,6 +160,17 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
+            <div className="mt-4 pt-4 border-t border-border/50">
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                {language === 'pt' ? 'Alojamento Local' : 'Local Accommodation'}: RRAL nº2591, nº3530 {language === 'pt' ? 'e' : 'and'} nº4274
+              </p>
+              <p className="text-xs text-muted-foreground">
+                {language === 'pt' ? 'Animação Turística' : 'Tourist Entertainment'}: RRAAT nº11/2021
+              </p>
+              <p className="text-xs text-muted-foreground">
+                {language === 'pt' ? 'Operador Marítimo-Turístico' : 'Maritime-Tourist Operator'}: nº19/2023
+              </p>
+            </div>
           </div>
 
           <div>

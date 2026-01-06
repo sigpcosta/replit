@@ -66,7 +66,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     '/sobre': { title: 'Sobre Nós - A Nossa História', titleEn: 'About Us - Our Story', desc: 'Conheça a equipa Azores4fun e a nossa missão de proporcionar experiências únicas.', descEn: 'Meet the Azores4fun team and our mission to provide unique experiences.' },
     '/portfolio': { title: 'Portfolio de Tatuagens - Catarina Gomes', titleEn: 'Tattoo Portfolio - Catarina Gomes', desc: 'Galeria de trabalhos de tatuagem realizados pela artista Catarina Gomes.', descEn: 'Gallery of tattoo work by artist Catarina Gomes.', service: 'tattoo' },
     '/blog': { title: 'Blog Azores4fun - Dicas e Novidades', titleEn: 'Azores4fun Blog - Tips and News', desc: 'Artigos sobre turismo, cultura, gastronomia e atividades nos Açores.', descEn: 'Articles about tourism, culture, gastronomy and activities in the Azores.' },
-    '/contact': { title: 'Contacto - Fale Connosco', titleEn: 'Contact - Get in Touch', desc: 'Entre em contacto: telefone, WhatsApp, email. Rua Conselheiro Medeiros 27, Horta.', descEn: 'Get in touch: phone, WhatsApp, email. Rua Conselheiro Medeiros 27, Horta.' },
+    '/contact': { title: 'Contacto - Fale Connosco', titleEn: 'Contact - Get in Touch', desc: 'Entre em contacto: telefone, WhatsApp, email. Travessa Poiso Novo 1, Horta.', descEn: 'Get in touch: phone, WhatsApp, email. Travessa Poiso Novo 1, Horta.' },
   };
 
   async function generateDynamicPrerenderHTML(routePath: string, language: string = 'pt'): Promise<string | null> {
@@ -105,7 +105,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         "url": "https://azores4fun.com",
         "telephone": "+351 934 993 770",
         "email": "info@azores4fun.com",
-        "address": { "@type": "PostalAddress", "streetAddress": "Rua Conselheiro Medeiros, 27", "addressLocality": "Horta", "postalCode": "9900-144", "addressCountry": "PT" },
+        "address": { "@type": "PostalAddress", "streetAddress": "Travessa Poiso Novo, 1", "addressLocality": "Horta", "postalCode": "9900-098", "addressCountry": "PT" },
         "geo": { "@type": "GeoCoordinates", "latitude": 38.5333, "longitude": -28.6333 }
       };
 
@@ -184,7 +184,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   <footer>
     <p>Azores4fun - Horta, Faial, Açores</p>
     <p>Tel: +351 934 993 770 | Email: info@azores4fun.com</p>
-    <p>Rua Conselheiro Medeiros, 27, 9900-144 Horta</p>
+    <p>Travessa Poiso Novo, 1, 9900-098 Horta</p>
   </footer>
 </body>
 </html>`;

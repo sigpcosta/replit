@@ -53,10 +53,10 @@ export function generateOrganizationSchema() {
     "telephone": "+351 934 993 770",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Rua Conselheiro Medeiros, 27",
+      "streetAddress": "Travessa do Poiso Novo, 1",
       "addressLocality": "Horta",
       "addressRegion": "Açores",
-      "postalCode": "9900-144",
+      "postalCode": "9900-098",
       "addressCountry": "PT"
     },
     "geo": {

@@ -34,6 +34,7 @@ export default function AlojamentoPage() {
     {
       name: t.accommodation.apartmentTypes.t1,
       capacity: t.accommodation.apartmentTypes.t1Capacity,
+      rral: t.accommodation.apartmentTypes.t1Rral,
       description: t.accommodation.apartmentTypes.t1Description,
       features: t.accommodation.aptFeatures.t1,
       image: apt1Image,
@@ -43,6 +44,7 @@ export default function AlojamentoPage() {
     {
       name: t.accommodation.apartmentTypes.t2Centro,
       capacity: t.accommodation.apartmentTypes.t2CentroCapacity,
+      rral: t.accommodation.apartmentTypes.t2CentroRral,
       description: t.accommodation.apartmentTypes.t2CentroDescription,
       features: t.accommodation.aptFeatures.t2Centro,
       image: apt2Image,
@@ -52,6 +54,7 @@ export default function AlojamentoPage() {
     {
       name: t.accommodation.apartmentTypes.t2Pico,
       capacity: t.accommodation.apartmentTypes.t2PicoCapacity,
+      rral: t.accommodation.apartmentTypes.t2PicoRral,
       description: t.accommodation.apartmentTypes.t2PicoDescription,
       features: t.accommodation.aptFeatures.t2Pico,
       image: apt3Image,
@@ -163,8 +166,11 @@ export default function AlojamentoPage() {
                     <h3 className="font-heading text-xl font-bold mb-2" data-testid={`text-apt-name-${index}`}>
                       {apt.name}
                     </h3>
-                    <p className="text-sm text-muted-foreground mb-4">
+                    <p className="text-sm text-muted-foreground mb-1">
                       {t.accommodation.capacity}: {apt.capacity}
+                    </p>
+                    <p className="text-xs text-muted-foreground mb-4">
+                      {apt.rral}
                     </p>
                     <p className="text-muted-foreground mb-6">
                       {apt.description}
