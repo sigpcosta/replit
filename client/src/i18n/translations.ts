@@ -482,9 +482,9 @@ export const translations = {
         t2CentroCapacity: "6 pessoas, ideal 3",
         t2CentroRral: "RRAL nº2591 (Apartamentos Casa da Travessa Piso Térreo)",
         t2CentroDescription: "Apartamento no coração da cidade da Horta, ideal para famílias.",
-        t2Pico: "T3 - Apartamento Casa da Travessa com 3 Quartos",
+        t2Pico: "T3 - Apartamento \"Caldeira\"",
         t2PicoCapacity: "8 pessoas, ideal 5",
-        t2PicoRral: "RRAL nº3530",
+        t2PicoRral: "RRAL nº3530 (Apartamentos Casa da Travessa 1ºPiso)",
         t2PicoDescription: "Apartamento moderno e bem equipado, ideal para grupos.",
       },
       features: [
@@ -1913,9 +1913,9 @@ export const translations = {
         t2CentroCapacity: "6 people, ideal 3",
         t2CentroRral: "RRAL nº2591 (Casa da Travessa Ground Floor Apartments)",
         t2CentroDescription: "Apartment in the heart of Horta city, ideal for families.",
-        t2Pico: "T3 - Casa da Travessa 3 Bedroom Apartment",
+        t2Pico: "T3 - \"Caldeira\" Apartment",
         t2PicoCapacity: "8 people, ideal 5",
-        t2PicoRral: "RRAL nº3530",
+        t2PicoRral: "RRAL nº3530 (Casa da Travessa 1st Floor Apartments)",
         t2PicoDescription: "Modern and well-equipped apartment, ideal for groups.",
       },
       features: [
