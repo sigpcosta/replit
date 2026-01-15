@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useMutation } from "@tanstack/react-query";
+import { useSearch } from "wouter";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -56,6 +57,7 @@ type FormData = z.infer<typeof formSchema>;
 export default function GuestPage() {
   const { t, language } = useLanguage();
   const { toast } = useToast();
+  const searchString = useSearch();
   const [guestCount, setGuestCount] = useState(1);
 
   const form = useForm<FormData>({
@@ -69,6 +71,31 @@ export default function GuestPage() {
       guests: [{ firstName: "", lastName: "", dateOfBirth: "", nationality: "", idDocument: "", issuingCountry: "" }],
     },
   });
+
+  // Pre-fill form from URL parameters
+  useEffect(() => {
+    const params = new URLSearchParams(searchString);
+    
+    const checkin = params.get("checkin");
+    const checkout = params.get("checkout");
+    const email = params.get("email");
+    const phone = params.get("phone");
+    const guests = params.get("guests");
+    
+    if (checkin) form.setValue("checkInDate", checkin);
+    if (checkout) form.setValue("checkOutDate", checkout);
+    if (email) form.setValue("email", email);
+    if (phone) form.setValue("phoneNumber", phone);
+    
+    if (guests) {
+      const count = Math.min(Math.max(parseInt(guests) || 1, 1), 10);
+      setGuestCount(count);
+      const guestArray = Array.from({ length: count }, () => ({
+        firstName: "", lastName: "", dateOfBirth: "", nationality: "", idDocument: "", issuingCountry: ""
+      }));
+      form.setValue("guests", guestArray);
+    }
+  }, [searchString, form]);
 
   const submitMutation = useMutation({
     mutationFn: async (data: FormData) => {
