@@ -25,6 +25,7 @@ import CookiesPage from "@/pages/cookies";
 import GaleriaApartamentoPage from "@/pages/galeria-apartamento";
 import ContactPage from "@/pages/contact";
 import AdminPage from "@/pages/admin";
+import GuestPage from "@/pages/guest";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -49,6 +50,7 @@ function Router() {
       <Route path="/galeria-apartamento/:slug" component={GaleriaApartamentoPage} />
       <Route path="/contact" component={ContactPage} />
       <Route path="/admin" component={AdminPage} />
+      <Route path="/guest" component={GuestPage} />
       <Route component={NotFound} />
     </Switch>
   );
