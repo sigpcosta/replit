@@ -1,5 +1,6 @@
 let staticFaqs: any[] = [];
 let getFaqsForChatbot: (lang: 'pt' | 'en') => string = () => '';
+let getBlogSummariesForChatbot: (lang: 'pt' | 'en') => string = () => '';
 
 try {
   const faqModule = require("./data/faqs");
@@ -7,6 +8,13 @@ try {
   getFaqsForChatbot = faqModule.getFaqsForChatbot || (() => '');
 } catch (importError) {
   console.error("[Chatbot] Failed to import FAQs:", importError);
+}
+
+try {
+  const blogModule = require("./data/blogs");
+  getBlogSummariesForChatbot = blogModule.getBlogSummariesForChatbot || (() => '');
+} catch (importError) {
+  console.error("[Chatbot] Failed to import blog summaries:", importError);
 }
 
 interface HandlerEvent {
@@ -76,6 +84,7 @@ export const handler = async (event: HandlerEvent): Promise<HandlerResponse> => 
     }
 
     const faqContext = getFaqsForChatbot(language as 'pt' | 'en');
+    const blogContext = getBlogSummariesForChatbot(language as 'pt' | 'en');
 
     const systemPrompt = language === "pt" 
       ? `És o assistente virtual da Azores4Fun, uma empresa de turismo e serviços nos Açores, Ilha do Faial, Horta. Fomos fundados em 2012 e temos a certificação Marca Açores. Focamos na sustentabilidade e experiências autênticas.
@@ -98,14 +107,18 @@ SERVIÇOS DETALHADOS:
 8. IMOBILIÁRIA: Gestão de propriedades, arrendamentos
 9. LOJA: Merchandising e produtos regionais
 
+ARTIGOS DO BLOG (informação detalhada sobre os nossos serviços e valores):
+${blogContext}
+
 PERGUNTAS FREQUENTES (usa estas respostas quando relevante):
 ${faqContext}
 
 REGRAS IMPORTANTES:
 - Responde SEMPRE em português de Portugal
 - Sê simpático, profissional e conciso (máximo 3-4 frases)
-- USA as FAQs acima para responder - elas contêm informação detalhada sobre cada serviço
-- Se a pergunta não está nas FAQs, dá uma resposta útil baseada no contexto geral
+- USA as FAQs e artigos do blog acima para responder - contêm informação detalhada
+- Se perguntarem sobre sustentabilidade, menciona a Mata Azores4fun e a carrinha elétrica
+- Se a pergunta não está nas FAQs/blog, dá uma resposta útil baseada no contexto geral
 - Se não souberes mesmo, sugere contactar por WhatsApp: +351 962537160
 - Página atual do visitante: ${currentPage}`
       : `You are the virtual assistant for Azores4Fun, a tourism and services company in Faial Island, Azores. Founded in 2012 with Marca Açores certification. We focus on sustainability and authentic experiences.
@@ -127,14 +140,18 @@ DETAILED SERVICES:
 8. REAL ESTATE: Property management, rentals
 9. SHOP: Merchandise and regional products
 
+BLOG ARTICLES (detailed information about our services and values):
+${blogContext}
+
 FREQUENTLY ASKED QUESTIONS (use these answers when relevant):
 ${faqContext}
 
 IMPORTANT RULES:
 - Always respond in English
 - Be friendly, professional and concise (max 3-4 sentences)
-- USE the FAQs above to answer - they contain detailed information about each service
-- If the question is not in FAQs, give a helpful answer based on general context
+- USE the FAQs and blog articles above to answer - they contain detailed information
+- If asked about sustainability, mention the Azores4fun Forest and electric van
+- If the question is not in FAQs/blog, give a helpful answer based on general context
 - If truly unsure, suggest contacting via WhatsApp: +351 962537160
 - Current page: ${currentPage}`;
 
