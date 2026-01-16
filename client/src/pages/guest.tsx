@@ -260,9 +260,10 @@ ${guestsFormatted}
                   type="date"
                   {...form.register("checkInDate")}
                   data-testid="input-checkin-date"
+                  className={form.formState.errors.checkInDate ? "border-destructive" : ""}
                 />
                 {form.formState.errors.checkInDate && (
-                  <p className="text-destructive text-sm mt-1">{form.formState.errors.checkInDate.message}</p>
+                  <p className="text-destructive text-sm mt-1">{language === "pt" ? "Obrigatório" : "Required"}</p>
                 )}
               </div>
               <div>
@@ -272,9 +273,10 @@ ${guestsFormatted}
                   type="date"
                   {...form.register("checkOutDate")}
                   data-testid="input-checkout-date"
+                  className={form.formState.errors.checkOutDate ? "border-destructive" : ""}
                 />
                 {form.formState.errors.checkOutDate && (
-                  <p className="text-destructive text-sm mt-1">{form.formState.errors.checkOutDate.message}</p>
+                  <p className="text-destructive text-sm mt-1">{language === "pt" ? "Obrigatório" : "Required"}</p>
                 )}
               </div>
             </div>
@@ -286,9 +288,10 @@ ${guestsFormatted}
                 type="email"
                 {...form.register("email")}
                 data-testid="input-email"
+                className={form.formState.errors.email ? "border-destructive" : ""}
               />
               {form.formState.errors.email && (
-                <p className="text-destructive text-sm mt-1">{form.formState.errors.email.message}</p>
+                <p className="text-destructive text-sm mt-1">{language === "pt" ? "Email inválido" : "Invalid email"}</p>
               )}
             </div>
 
@@ -362,14 +365,22 @@ ${guestsFormatted}
                     <Input
                       {...form.register(`guests.${index}.firstName`)}
                       data-testid={`input-guest-${index}-firstname`}
+                      className={form.formState.errors.guests?.[index]?.firstName ? "border-destructive" : ""}
                     />
+                    {form.formState.errors.guests?.[index]?.firstName && (
+                      <p className="text-destructive text-sm mt-1">{language === "pt" ? "Obrigatório" : "Required"}</p>
+                    )}
                   </div>
                   <div>
                     <Label>{txt.lastName} *</Label>
                     <Input
                       {...form.register(`guests.${index}.lastName`)}
                       data-testid={`input-guest-${index}-lastname`}
+                      className={form.formState.errors.guests?.[index]?.lastName ? "border-destructive" : ""}
                     />
+                    {form.formState.errors.guests?.[index]?.lastName && (
+                      <p className="text-destructive text-sm mt-1">{language === "pt" ? "Obrigatório" : "Required"}</p>
+                    )}
                   </div>
                   <div>
                     <Label>{txt.dob} *</Label>
@@ -377,7 +388,11 @@ ${guestsFormatted}
                       type="date"
                       {...form.register(`guests.${index}.dateOfBirth`)}
                       data-testid={`input-guest-${index}-dob`}
+                      className={form.formState.errors.guests?.[index]?.dateOfBirth ? "border-destructive" : ""}
                     />
+                    {form.formState.errors.guests?.[index]?.dateOfBirth && (
+                      <p className="text-destructive text-sm mt-1">{language === "pt" ? "Obrigatório" : "Required"}</p>
+                    )}
                   </div>
                   <div>
                     <Label>{txt.nationality} *</Label>
@@ -385,7 +400,10 @@ ${guestsFormatted}
                       value={form.watch(`guests.${index}.nationality`)}
                       onValueChange={(value) => form.setValue(`guests.${index}.nationality`, value)}
                     >
-                      <SelectTrigger data-testid={`select-guest-${index}-nationality`}>
+                      <SelectTrigger 
+                        data-testid={`select-guest-${index}-nationality`}
+                        className={form.formState.errors.guests?.[index]?.nationality ? "border-destructive" : ""}
+                      >
                         <SelectValue placeholder={txt.selectCountry} />
                       </SelectTrigger>
                       <SelectContent>
@@ -396,6 +414,9 @@ ${guestsFormatted}
                         ))}
                       </SelectContent>
                     </Select>
+                    {form.formState.errors.guests?.[index]?.nationality && (
+                      <p className="text-destructive text-sm mt-1">{language === "pt" ? "Obrigatório" : "Required"}</p>
+                    )}
                   </div>
                   <div>
                     <Label>{txt.idDoc} *</Label>
@@ -403,7 +424,11 @@ ${guestsFormatted}
                       {...form.register(`guests.${index}.idDocument`)}
                       placeholder={language === "pt" ? "Nº do passaporte ou BI" : "Passport or ID number"}
                       data-testid={`input-guest-${index}-id`}
+                      className={form.formState.errors.guests?.[index]?.idDocument ? "border-destructive" : ""}
                     />
+                    {form.formState.errors.guests?.[index]?.idDocument && (
+                      <p className="text-destructive text-sm mt-1">{language === "pt" ? "Obrigatório" : "Required"}</p>
+                    )}
                   </div>
                   <div>
                     <Label>{txt.issuingCountry} *</Label>
@@ -411,7 +436,10 @@ ${guestsFormatted}
                       value={form.watch(`guests.${index}.issuingCountry`)}
                       onValueChange={(value) => form.setValue(`guests.${index}.issuingCountry`, value)}
                     >
-                      <SelectTrigger data-testid={`select-guest-${index}-issuing`}>
+                      <SelectTrigger 
+                        data-testid={`select-guest-${index}-issuing`}
+                        className={form.formState.errors.guests?.[index]?.issuingCountry ? "border-destructive" : ""}
+                      >
                         <SelectValue placeholder={txt.selectCountry} />
                       </SelectTrigger>
                       <SelectContent>
@@ -422,6 +450,9 @@ ${guestsFormatted}
                         ))}
                       </SelectContent>
                     </Select>
+                    {form.formState.errors.guests?.[index]?.issuingCountry && (
+                      <p className="text-destructive text-sm mt-1">{language === "pt" ? "Obrigatório" : "Required"}</p>
+                    )}
                   </div>
                 </div>
               </div>
