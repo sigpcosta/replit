@@ -3,6 +3,7 @@ import { useMemo } from "react";
 import { marked } from "marked";
 import DOMPurify from "dompurify";
 import { Helmet } from "react-helmet-async";
+import { useQuery } from "@tanstack/react-query";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
@@ -10,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { getBlogArticleBySlug, type BlogArticle } from "@/data/blog-articles";
-import { Calendar, User, ArrowLeft, Share2 } from "lucide-react";
+import { Calendar, User, ArrowLeft, Share2, Loader2 } from "lucide-react";
 import { format } from "date-fns";
 import { pt, enUS } from "date-fns/locale";
 
@@ -18,7 +19,19 @@ export default function BlogPostPage() {
   const { t, language } = useLanguage();
   const { slug } = useParams<{ slug: string }>();
 
-  const post = useMemo(() => getBlogArticleBySlug(slug || ''), [slug]);
+  const { data: apiPost, isLoading } = useQuery<BlogArticle>({
+    queryKey: ["/api/blogs", slug],
+    queryFn: async () => {
+      const res = await fetch(`/api/blogs?slug=${slug}`);
+      if (!res.ok) throw new Error("Not found");
+      return res.json();
+    },
+    enabled: !!slug,
+    staleTime: 1000 * 60 * 5,
+  });
+
+  const staticPost = useMemo(() => getBlogArticleBySlug(slug || ''), [slug]);
+  const post = apiPost || staticPost;
 
   const formatDate = (date: Date | string | null | undefined) => {
     if (!date) {

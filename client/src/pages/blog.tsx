@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
+import { useQuery } from "@tanstack/react-query";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
@@ -9,7 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { seoConfig } from "@/lib/seo-config";
 import { staticBlogArticles, type BlogArticle } from "@/data/blog-articles";
-import { Calendar, User, ArrowRight } from "lucide-react";
+import { Calendar, User, ArrowRight, Loader2 } from "lucide-react";
 import { format } from "date-fns";
 import { pt, enUS } from "date-fns/locale";
 
@@ -17,12 +18,17 @@ export default function BlogPage() {
   const { t, language } = useLanguage();
   const seo = seoConfig[language].blog;
 
-  const posts = useMemo(() => 
-    staticBlogArticles.sort((a, b) => 
+  const { data: apiBlogPosts, isLoading } = useQuery<BlogArticle[]>({
+    queryKey: ["/api/blogs"],
+    staleTime: 1000 * 60 * 5,
+  });
+
+  const posts = useMemo(() => {
+    const allPosts = apiBlogPosts && apiBlogPosts.length > 0 ? apiBlogPosts : staticBlogArticles;
+    return allPosts.sort((a, b) => 
       new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
-    ), 
-    []
-  );
+    );
+  }, [apiBlogPosts]);
 
   const formatDate = (date: Date | string | null | undefined) => {
     if (!date) {
