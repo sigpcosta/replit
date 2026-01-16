@@ -11,13 +11,13 @@ export interface FAQ {
 }
 
 export const staticFaqs: FAQ[] = [
-    {
+  {
     id: 58,
     service: "accommodation",
     questionPt: "Quantas pessoas os apartamentos acomodam?",
     questionEn: "How many people do the apartments accommodate?",
-    answerPt: "Os apartamentos podem acomodar individualmente entre 2 a 8 pessoas, dependendo da unidade. Consulte os detalhes de cada unidade ou contacte-nos para saber a disponibilidade de cada apartamento.",
-    answerEn: "The apartments can accommodate between 2 to 8 people, depending on the unit. Consult unit details or contact us to check availability for each apartment.",
+    answerPt: "Os apartamentos podem acomodar entre 2 a 8 pessoas, dependendo da unidade. Consulte os detalhes de cada um ou contacte-nos para saber a disponibilidade de cada apartamento.",
+    answerEn: "The apartments can accommodate between 2 to 8 people, depending on the unit. Check detailed info or contact us to check availability for each apartment.",
     keywords: "pessoas,capacidade,quartos,acomodar,hóspedes,apartamento",
     displayOrder: 58,
     isActive: true
@@ -66,6 +66,7 @@ export const staticFaqs: FAQ[] = [
     displayOrder: 62,
     isActive: true
   },
+
   {
     id: 134,
     service: "accommodation",
