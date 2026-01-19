@@ -1,6 +1,6 @@
 // Blog summaries for chatbot context - AUTO-GENERATED
 // Run: npm run sync-netlify-data to regenerate from database
-// Last updated: 2026-01-19T13:29:01.078Z
+// Last updated: 2026-01-19T15:45:06.992Z
 
 export interface BlogSummary {
   slug: string;
