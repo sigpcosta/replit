@@ -820,7 +820,7 @@ For 8 years, we focused on diversifying the tourist offer, investing in innovati
 
 To provide unique and memorable experiences, always respecting nature and Azorean culture.`,
     author: "Azores4fun",
-    featuredImage: "https://azores4fun.com/old/wp-content/uploads/2022/06/navegar_3.jpg",
+    featuredImage: "/images/blog/old-site/navegar_3.jpg",
     category: "Azores4Fun",
     publishedAt: "2022-01-26",
     metaDescriptionPt: "Azores4Fun - empresa de turismo e aventura na Horta, Faial desde 2011. Atividades náuticas, jogos de estratégia, tours e alojamento.",
@@ -885,7 +885,7 @@ Our boards and canoes are inflatable, easy to transport anywhere.
 
 Venture out to explore Faial's coast!`,
     author: "Azores4fun",
-    featuredImage: "https://azores4fun.com/old/wp-content/uploads/2022/06/stand-up-paddle-sup-em-pedro-miguel-praia-boca-da-grota-com-pico-ao-fundo-com-azores4fun.jpg",
+    featuredImage: "/images/blog/old-site/sup-pedro-miguel.jpg",
     category: "SUP",
     publishedAt: "2022-06-11",
     metaDescriptionPt: "SUP e Caiaques nos Açores. Descubra as melhores experiências aquáticas na Ilha do Faial. Natureza, mar e aventura.",
@@ -954,7 +954,7 @@ The protective mask is mandatory whenever you enter the playing area.
 
 Once you are well equipped, have fun playing!`,
     author: "Azores4fun",
-    featuredImage: "https://azores4fun.com/old/wp-content/uploads/2022/06/paintball-azores4fun-faial-jogador-fazendo-mira.jpg",
+    featuredImage: "/images/blog/old-site/paintball-mira.jpg",
     category: "Paintball",
     publishedAt: "2022-06-12",
     metaDescriptionPt: "Equipamento para jogar Paintball: marcadores, máscaras, coletes. Segurança e proteção garantida.",
@@ -1025,7 +1025,7 @@ Stay focused and, above all, have fun!
 
 Keep reading and researching to learn the best paintball tricks!`,
     author: "Azores4fun",
-    featuredImage: "https://azores4fun.com/old/wp-content/uploads/2022/06/paintball-azores4fun-faial-dois-jogadores-no-meio-trincheira-pneus.jpg",
+    featuredImage: "/images/blog/old-site/paintball-trincheira.jpg",
     category: "Paintball",
     publishedAt: "2022-06-12",
     metaDescriptionPt: "Dicas e estratégias para ganhar no Paintball. Técnicas de jogo, comunicação em equipa e posicionamento.",
@@ -1090,7 +1090,7 @@ The balls are made of thin gelatine, filled with paint and are environmentally f
 
 To play, create your team and wear your most comfortable clothes!`,
     author: "Azores4fun",
-    featuredImage: "https://azores4fun.com/old/wp-content/uploads/2022/06/paintball-azores4fun-faial-dois-amigos-depois-do-jogo.jpg",
+    featuredImage: "/images/blog/old-site/paintball-dois-amigos.jpg",
     category: "Paintball",
     publishedAt: "2022-06-12",
     metaDescriptionPt: "História e benefícios do Paintball. Origem, regras e vantagens físicas e mentais. Praticar paintball na Ilha do Faial.",
@@ -1155,7 +1155,7 @@ Our Casa da Travessa was decorated with a nautical spirit, reflecting the mariti
 
 Come live the nautical experience at Casa da Travessa!`,
     author: "Azores4fun",
-    featuredImage: "https://azores4fun.com/old/wp-content/uploads/2022/06/navegar_3.jpg",
+    featuredImage: "/images/blog/old-site/navegar_3.jpg",
     category: "Alojamento",
     publishedAt: "2022-06-15",
     metaDescriptionPt: "Alojamento na Horta, Faial. Casa da Travessa - Tiny & Yacht Spirit City Break. Experiência única na cidade mais cosmopolita do mundo náutico.",
@@ -1224,7 +1224,7 @@ Azores4fun solves the matter by providing equipment for rent:
 
 We dare to say that we hardly don't have the solution for you!`,
     author: "Azores4fun",
-    featuredImage: "https://azores4fun.com/old/wp-content/uploads/2022/09/Snorkeling-2-e1664215149637.jpg",
+    featuredImage: "/images/blog/old-site/snorkeling.jpg",
     category: "SUP",
     publishedAt: "2022-06-16",
     metaDescriptionPt: "Alugue equipamento náutico nos Açores em vez de transportar. SUP, caiaques e equipamento de snorkeling disponível na Ilha do Faial.",
@@ -1303,7 +1303,7 @@ Our SUP boards and canoes are inflatable, very practical to easily take anywhere
 
 Venture into these activities and enjoy Faial!`,
     author: "Azores4fun",
-    featuredImage: "https://azores4fun.com/old/wp-content/uploads/2022/06/canoagem-em-caiaque-duplo-na-praia-do-almoxarife-com-pico-ao-fundo.jpg",
+    featuredImage: "/images/blog/old-site/canoagem-caiaque-almoxarife.jpg",
     category: "SUP",
     publishedAt: "2022-09-26",
     metaDescriptionPt: "Atividades náuticas na Ilha do Faial: SUP, Canoagem e Snorkeling. Aluguer de equipamento ao dia.",
@@ -1370,7 +1370,7 @@ Kayaking allows you to explore incredible places, discover stunning landscapes a
 
 Contact us! Our team is ready to help. Call 934 993 770.`,
     author: "Azores4fun",
-    featuredImage: "https://azores4fun.com/old/wp-content/uploads/2023/06/beneficios-caiaque-faial.jpeg",
+    featuredImage: "/images/blog/old-site/beneficios-caiaque.jpeg",
     category: "Canoagem",
     publishedAt: "2023-06-13",
     metaDescriptionPt: "Benefícios do caiaque para corpo e mente. Exercício completo, contacto com natureza, redução stress. Canoagem na Ilha do Faial.",
@@ -1423,7 +1423,7 @@ Paintball is not just a game full of excitement, but also an experience that str
 
 Gather your team, prepare for adventure and enjoy the social and emotional benefits that paintball has to offer.`,
     author: "Raquel Medeiros",
-    featuredImage: "https://azores4fun.com/old/wp-content/uploads/2023/07/paintball-beneficios-social-scaled.jpg",
+    featuredImage: "/images/blog/old-site/paintball-social.jpg",
     category: "Paintball",
     publishedAt: "2023-07-07",
     metaDescriptionPt: "Benefícios do Paintball: trabalho em equipa, exercício físico, estratégia e diversão. Descubra as vantagens sociais desta atividade.",
@@ -1478,7 +1478,7 @@ Natural pools with calm and transparent waters. Ideal for a more relaxed SUP day
 
 Contact us to rent your SUP equipment and explore these incredible spots!`,
     author: "Azores4fun",
-    featuredImage: "https://azores4fun.com/old/wp-content/uploads/2023/06/porto-pim-faial-scaled.jpg",
+    featuredImage: "/images/blog/old-site/porto-pim.jpg",
     category: "watersports",
     publishedAt: "2023-06-27",
     metaDescriptionPt: "Melhores locais para SUP Stand Up Paddle na Ilha do Faial. Marina da Horta, Porto Pim, Varadouro. Aluguer de equipamento disponível.",
