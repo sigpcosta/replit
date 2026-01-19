@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { useChatbot } from "@/contexts/ChatbotContext";
 import LanguageSelector from "@/components/LanguageSelector";
 import ContactDialog from "@/components/ContactDialog";
 import logoUrl from "@assets/LogoAzores4fun360_1763895112388.gif";
@@ -10,6 +11,7 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const { t } = useLanguage();
+  const { openChat } = useChatbot();
 
   const navItems = [
     { label: t.nav.accommodation, href: "/alojamento" },
@@ -50,6 +52,16 @@ export default function Navigation() {
 
           <div className="hidden lg:flex items-center gap-4 ml-8">
             <LanguageSelector />
+            <Button 
+              variant="ghost" 
+              size="default" 
+              data-testid="button-assistant"
+              onClick={openChat}
+              className="gap-2"
+            >
+              <Bot className="w-4 h-4" />
+              {t.nav.assistant}
+            </Button>
             <Button 
               variant="outline" 
               size="default" 
@@ -100,6 +112,18 @@ export default function Navigation() {
               </a>
             ))}
             <div className="pt-4 space-y-3">
+              <Button 
+                variant="ghost" 
+                className="w-full justify-start gap-2" 
+                data-testid="button-mobile-assistant"
+                onClick={() => {
+                  openChat();
+                  setMobileMenuOpen(false);
+                }}
+              >
+                <Bot className="w-4 h-4" />
+                {t.nav.assistant}
+              </Button>
               <Button 
                 variant="outline" 
                 className="w-full" 

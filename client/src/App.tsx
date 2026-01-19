@@ -5,6 +5,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/i18n/LanguageContext";
+import { ChatbotProvider } from "@/contexts/ChatbotContext";
 import Chatbot from "@/components/Chatbot";
 import Home from "@/pages/home";
 import AlojamentoPage from "@/pages/alojamento";
@@ -61,11 +62,13 @@ function App() {
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
         <LanguageProvider>
-          <TooltipProvider>
-            <Toaster />
-            <Router />
-            <Chatbot />
-          </TooltipProvider>
+          <ChatbotProvider>
+            <TooltipProvider>
+              <Toaster />
+              <Router />
+              <Chatbot />
+            </TooltipProvider>
+          </ChatbotProvider>
         </LanguageProvider>
       </QueryClientProvider>
     </HelmetProvider>

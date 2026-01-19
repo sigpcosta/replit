@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { useChatbot } from "@/contexts/ChatbotContext";
 import { SiWhatsapp } from "react-icons/si";
 
 interface Message {
@@ -97,8 +98,8 @@ const PAGE_CONTEXTS: Record<string, PageContext> = {
 
 export default function Chatbot() {
   const { language } = useLanguage();
+  const { isOpen, setIsOpen, toggleChat } = useChatbot();
   const [location] = useLocation();
-  const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
@@ -471,7 +472,7 @@ export default function Chatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-20 !right-4 !left-auto w-[calc(100%-2rem)] md:w-96 h-[500px] max-h-[70vh] bg-card border rounded-xl shadow-2xl flex flex-col z-[9999] overflow-hidden"
+            className="fixed bottom-20 right-4 w-[calc(100%-2rem)] md:w-96 h-[500px] max-h-[70vh] bg-card border rounded-xl shadow-2xl flex flex-col z-[9999] overflow-hidden"
             data-testid="chatbot-window"
           >
             <div className="bg-primary text-primary-foreground p-4 flex items-center justify-between">
@@ -579,8 +580,8 @@ export default function Chatbot() {
       </AnimatePresence>
 
       <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-4 !right-4 !left-auto w-14 h-14 bg-primary text-primary-foreground rounded-full shadow-lg flex items-center justify-center z-[9999] hover-elevate"
+        onClick={toggleChat}
+        className="fixed bottom-4 right-4 w-14 h-14 bg-primary text-primary-foreground rounded-full shadow-lg flex items-center justify-center z-[9999] hover-elevate"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         data-testid="button-toggle-chatbot"
