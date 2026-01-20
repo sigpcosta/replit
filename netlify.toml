@@ -13,8 +13,26 @@
   force = true
 
 [[redirects]]
+  from = "/api/blog"
+  to = "/.netlify/functions/blogs"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/api/blogs"
   to = "/.netlify/functions/blogs"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/faqs"
+  to = "/.netlify/functions/faqs"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/faqs/*"
+  to = "/.netlify/functions/faqs"
   status = 200
   force = true
 
