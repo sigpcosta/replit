@@ -1,5 +1,5 @@
 [build]
-  command = "node scripts/sync-netlify-data.js && npm run build"
+  command = "npm run build"
   publish = "dist/public"
   functions = "netlify/functions"
 
