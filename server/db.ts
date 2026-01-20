@@ -6,18 +6,22 @@ import * as schema from "@shared/schema";
 import ws from "ws";
 
 const isProduction = process.env.NODE_ENV === "production" || process.env.REPLIT_DEPLOYMENT === "1";
+const isReplitDeployment = process.env.REPLIT_DEPLOYMENT === "1";
 
 // Check if we have valid database configuration
 function hasValidDatabaseConfig(): boolean {
   const dbUrl = process.env.DATABASE_URL;
   const pgHost = process.env.PGHOST;
   
-  // In production, we need a valid Neon hostname
-  if (isProduction) {
-    // Check if we have Neon-style hostname
+  // Replit deployment can use internal database
+  if (isReplitDeployment && dbUrl) {
+    return true;
+  }
+  
+  // In production (non-Replit), we need a valid Neon hostname
+  if (isProduction && !isReplitDeployment) {
     if (pgHost && pgHost.includes('.neon.tech')) return true;
     if (dbUrl && (dbUrl.includes('.neon.tech') || dbUrl.includes('.neon.aws'))) return true;
-    // Internal hostnames like "helium" won't work in production
     return false;
   }
   
@@ -39,8 +43,14 @@ function getDatabaseUrl(): string | null {
   console.log(`[DB] PGHOST: ${pgHost || 'not set'}`);
   console.log(`[DB] NEON_DATABASE_URL: ${neonUrl ? 'set' : 'not set'}`);
   
-  // In production, require valid Neon hostname
-  if (isProduction) {
+  // Replit deployment can use internal database
+  if (isReplitDeployment && dbUrl) {
+    console.log("[DB] Replit Deployment: Using internal DATABASE_URL");
+    return dbUrl;
+  }
+  
+  // In production (non-Replit), require valid Neon hostname
+  if (isProduction && !isReplitDeployment) {
     // First check custom NEON_DATABASE_URL (for external Neon database)
     if (neonUrl && neonUrl.includes('.neon.tech')) {
       console.log("[DB] Production: Using NEON_DATABASE_URL");
@@ -85,12 +95,11 @@ function initializeDatabase() {
   }
   
   try {
-    if (isProduction) {
-      const sql = neon(connectionString);
-      db = drizzleHttp(sql, { schema });
-      dbAvailable = true;
-      console.log("[DB] Initialized with HTTP mode for production");
-    } else {
+    // Use WebSocket mode for development and Replit deployment (internal DB)
+    // Use HTTP mode only for external production (Netlify with Neon)
+    const useWebSocket = !isProduction || isReplitDeployment;
+    
+    if (useWebSocket) {
       neonConfig.webSocketConstructor = ws;
       const pool = new Pool({ 
         connectionString,
@@ -101,7 +110,12 @@ function initializeDatabase() {
       });
       db = drizzleServerless(pool, { schema });
       dbAvailable = true;
-      console.log("[DB] Initialized with WebSocket mode for development");
+      console.log("[DB] Initialized with WebSocket mode");
+    } else {
+      const sql = neon(connectionString);
+      db = drizzleHttp(sql, { schema });
+      dbAvailable = true;
+      console.log("[DB] Initialized with HTTP mode for production");
     }
   } catch (error) {
     console.error("[DB] Failed to initialize database:", error);
