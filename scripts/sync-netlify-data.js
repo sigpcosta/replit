@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { copyFileSync, existsSync, mkdirSync, writeFileSync } from 'fs';
+import { existsSync, mkdirSync, writeFileSync, copyFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import pg from 'pg';
@@ -7,35 +7,97 @@ import pg from 'pg';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+const sharedDir = join(__dirname, '..', 'shared');
 const destDir = join(__dirname, '..', 'netlify', 'functions', 'data');
 
 if (!existsSync(destDir)) {
   mkdirSync(destDir, { recursive: true });
 }
 
-// 1. Sync FAQs (copy from shared)
-function syncFaqs() {
-  const source = join(__dirname, '..', 'shared', 'static-faqs.ts');
-  const dest = join(destDir, 'faqs.ts');
-  copyFileSync(source, dest);
-  console.log('[sync-netlify-data] ✓ Copied shared/static-faqs.ts to netlify/functions/data/faqs.ts');
+// 1. Export FAQs from database to shared/static-faqs.ts AND copy to netlify/functions/data/faqs.ts
+async function syncFaqs(client) {
+  try {
+    const result = await client.query(`
+      SELECT id, service, question_pt, question_en, answer_pt, answer_en, keywords, display_order, is_active 
+      FROM faqs 
+      ORDER BY service, display_order
+    `);
+
+    const rows = result.rows;
+    console.log(`[sync-netlify-data] Found ${rows.length} FAQs in database`);
+
+    const escape = (s) => s ? s.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\n/g, '\\n') : '';
+
+    const faqsArray = rows.map(row => `  {
+    id: ${row.id},
+    service: "${row.service}",
+    questionPt: "${escape(row.question_pt)}",
+    questionEn: "${escape(row.question_en)}",
+    answerPt: "${escape(row.answer_pt)}",
+    answerEn: "${escape(row.answer_en)}",
+    keywords: "${escape(row.keywords || '')}",
+    displayOrder: ${row.display_order},
+    isActive: ${row.is_active}
+  }`);
+
+    const faqsContent = `// FAQs for chatbot context - AUTO-GENERATED
+// Run: npm run sync-netlify-data to regenerate from database
+// Last updated: ${new Date().toISOString()}
+
+export interface FAQ {
+  id: number;
+  service: string;
+  questionPt: string;
+  questionEn: string;
+  answerPt: string;
+  answerEn: string;
+  keywords: string;
+  displayOrder: number;
+  isActive: boolean;
+}
+
+export const staticFaqs: FAQ[] = [
+${faqsArray.join(',\n')}
+];
+
+export function getFaqsForChatbot(language: 'pt' | 'en'): string {
+  return staticFaqs
+    .filter(faq => faq.isActive)
+    .map(faq => {
+      const q = language === 'pt' ? faq.questionPt : faq.questionEn;
+      const a = language === 'pt' ? faq.answerPt : faq.answerEn;
+      return \`Q: \${q}\\nA: \${a}\`;
+    })
+    .join('\\n\\n');
+}
+
+export function getFaqsByService(service: string): FAQ[] {
+  return staticFaqs.filter(faq => faq.service === service && faq.isActive);
+}
+
+export function getAllFaqs(): FAQ[] {
+  return staticFaqs.filter(faq => faq.isActive);
+}
+`;
+
+    // Write to shared/static-faqs.ts
+    const sharedDest = join(sharedDir, 'static-faqs.ts');
+    writeFileSync(sharedDest, faqsContent);
+    console.log('[sync-netlify-data] ✓ Generated shared/static-faqs.ts from database');
+
+    // Copy to netlify/functions/data/faqs.ts
+    const netlifyDest = join(destDir, 'faqs.ts');
+    copyFileSync(sharedDest, netlifyDest);
+    console.log('[sync-netlify-data] ✓ Copied to netlify/functions/data/faqs.ts');
+
+  } catch (error) {
+    console.error('[sync-netlify-data] ✗ Error syncing FAQs:', error.message);
+  }
 }
 
 // 2. Generate blogs.ts from database
-async function syncBlogs() {
-  const databaseUrl = process.env.DATABASE_URL;
-  
-  if (!databaseUrl) {
-    console.log('[sync-netlify-data] ⚠ DATABASE_URL not set, skipping blog sync');
-    return;
-  }
-
-  const client = new pg.Client({ connectionString: databaseUrl });
-  
+async function syncBlogs(client) {
   try {
-    await client.connect();
-    console.log('[sync-netlify-data] Connected to database');
-
     const result = await client.query(`
       SELECT slug, title_pt, title_en, excerpt_pt, excerpt_en, keywords_pt, keywords_en 
       FROM blog_posts 
@@ -83,19 +145,40 @@ export function getBlogSummariesForChatbot(lang: 'pt' | 'en'): string {
 
   } catch (error) {
     console.error('[sync-netlify-data] ✗ Error syncing blogs:', error.message);
-  } finally {
-    await client.end();
   }
 }
 
 // Run sync
 async function main() {
   console.log('[sync-netlify-data] Starting sync...');
+  console.log('[sync-netlify-data] This script exports FAQs and Blogs from database to static files');
   
-  syncFaqs();
-  await syncBlogs();
+  const databaseUrl = process.env.DATABASE_URL;
   
-  console.log('[sync-netlify-data] Done!');
+  if (!databaseUrl) {
+    console.error('[sync-netlify-data] ✗ DATABASE_URL not set. Cannot sync from database.');
+    console.log('[sync-netlify-data] Please ensure DATABASE_URL environment variable is configured.');
+    process.exit(1);
+  }
+
+  const client = new pg.Client({ connectionString: databaseUrl });
+  
+  try {
+    await client.connect();
+    console.log('[sync-netlify-data] ✓ Connected to database');
+
+    await syncFaqs(client);
+    await syncBlogs(client);
+    
+    console.log('[sync-netlify-data] ✓ Done! All static files updated.');
+    console.log('[sync-netlify-data] Next steps: commit changes and push to GitHub for Netlify rebuild.');
+
+  } catch (error) {
+    console.error('[sync-netlify-data] ✗ Database connection error:', error.message);
+    process.exit(1);
+  } finally {
+    await client.end();
+  }
 }
 
 main().catch(console.error);
