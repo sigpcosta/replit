@@ -27,6 +27,7 @@ import GaleriaApartamentoPage from "@/pages/galeria-apartamento";
 import ContactPage from "@/pages/contact";
 import AdminPage from "@/pages/admin";
 import GuestPage from "@/pages/guest";
+import ApiDocsPage from "@/pages/api-docs";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -52,6 +53,7 @@ function Router() {
       <Route path="/contact" component={ContactPage} />
       <Route path="/admin" component={AdminPage} />
       <Route path="/guest" component={GuestPage} />
+      <Route path="/api-docs" component={ApiDocsPage} />
       <Route component={NotFound} />
     </Switch>
   );
