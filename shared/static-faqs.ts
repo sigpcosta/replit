@@ -1,6 +1,6 @@
 // FAQs for chatbot context - AUTO-GENERATED
 // Run: npm run sync-netlify-data to regenerate from database
-// Last updated: 2026-01-20T13:23:56.789Z
+// Last updated: 2026-01-24T16:17:51.573Z
 
 export interface FAQ {
   id: number;
