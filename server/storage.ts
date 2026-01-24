@@ -108,7 +108,7 @@ export class MemStorage implements IStorage {
     return result[0];
   }
 
-  async updateFaq(id: number, faq: Partial<InsertFaq>): Promise<Faq | undefined> {
+  async updateFaq(id: number, faq: Record<string, unknown>): Promise<Faq | undefined> {
     if (!db) return undefined;
     const result = await db.update(faqs).set(faq).where(eq(faqs.id, id)).returning();
     return result[0];

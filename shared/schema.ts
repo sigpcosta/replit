@@ -73,5 +73,12 @@ export const insertFaqSchema = createInsertSchema(faqs).omit({
   createdAt: true,
 });
 
+// Schema for updating FAQs - allows displayOrder and isActive updates
+export const updateFaqSchema = createInsertSchema(faqs).omit({
+  id: true,
+  createdAt: true,
+}).partial();
+
 export type InsertFaq = z.infer<typeof insertFaqSchema>;
+export type UpdateFaq = z.infer<typeof updateFaqSchema>;
 export type Faq = typeof faqs.$inferSelect;

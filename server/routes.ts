@@ -4,7 +4,7 @@ import { storage } from "./storage";
 import { z } from "zod";
 import path from "path";
 import fs from "fs";
-import { insertBlogPostSchema, insertFaqSchema, type Faq, type BlogPost } from "@shared/schema";
+import { insertBlogPostSchema, insertFaqSchema, updateFaqSchema, type Faq, type BlogPost } from "@shared/schema";
 import OpenAI from "openai";
 import { staticFaqs, getFaqsByService as getStaticFaqsByService } from "./static-faqs";
 
@@ -631,7 +631,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.put("/api/admin/faqs/:id", requireAdmin, async (req, res) => {
     try {
       const id = parseInt(req.params.id);
-      const data = insertFaqSchema.partial().parse(req.body);
+      const data = updateFaqSchema.parse(req.body);
       const faq = await storage.updateFaq(id, data);
       if (!faq) {
         return res.status(404).json({ error: "FAQ não encontrada" });
