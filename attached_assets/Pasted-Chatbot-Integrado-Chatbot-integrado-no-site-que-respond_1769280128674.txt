@@ -1,0 +1,54 @@
+Chatbot Integrado
+Chatbot integrado no site que responde a perguntas dos visitantes usando conhecimento específico da Azores4fun, tendo sido treinado com a informação constante nas páginas dos serviços, FAQs e artigos de blog.
+Arquitetura Técnica
+Utilizador → Frontend (React) → Netlify Function → OpenAI API
+                                      ↓
+                              Contexto (FAQs + Páginas + BLOG)
+1. Frontend (ChatWidget.tsx)
+•	Componente React flutuante no canto inferior
+•	Interface de chat com histórico de mensagens
+•	Envia pergunta do utilizador via POST /api/chat
+2. Backend (netlify/functions/chatbot.ts)
+•	Função serverless que recebe a pergunta
+•	Carrega contexto estático:
+o	FAQs do ficheiro netlify/functions/data/faqs.ts
+o	Informações das páginas (alojamento, atividades, serviços)
+o	Artigos blog do ficheiro netlify/functions/data/blogs.ts
+•	Constrói o prompt de sistema com todo o contexto
+•	Chama a API OpenAI (modelo GPT-4o-mini)
+3. Prompt de Sistema
+"És o assistente virtual da Azores4fun. 
+Responde apenas com base nas seguintes informações:
+FAQS: [...]
+ALOJAMENTO: [...]
+ATIVIDADES: [...]
+Responde em português ou inglês conforme a pergunta."
+4. Resposta
+•	OpenAI gera resposta baseada apenas no contexto fornecido
+•	Resposta enviada de volta ao frontend
+•	Exibida na interface de chat
+Fontes de Conhecimento
+Fonte	Ficheiro	Conteúdo
+FAQs	netlify/functions/data/faqs.ts	183 perguntas/respostas PT/EN
+Blogs	netlify/functions/data/blogs.ts	21 resumos artigos de blog PT/EN
+Apartamentos	Texto fixo no código	Nomes, capacidades, licenças
+Atividades	Texto fixo no código	Serviços disponíveis
+Contactos	Texto fixo no código	WhatsApp, email, horários
+
+Sincronização Automática
+Admin atualiza FAQ/Blog → API grava na BD Neon → syncStaticFiles() → 
+Ficheiros .ts regenerados → Git commit → Deploy Netlify atualiza chatbot
+
+Ficheiros regenerados automaticamente:
+•	shared/static-faqs.ts - Contexto do chatbot (servidor Replit)
+•	netlify/functions/data/faqs.ts - FAQs para Netlify
+•	netlify/functions/data/blogs.ts - Blogs para Netlify
+Vantagens desta Abordagem
+•	Respostas precisas - IA só responde com informação real
+•	Sem alucinações - Contexto limitado evita inventar dados
+•	Bilingue - Detecta idioma e responde em PT ou EN
+•	Baixo custo - GPT-4o-mini é económico
+•	Manutenção automática - Atualizar FAQs e Blog no admin atualiza automaticamente o chatbot
+•	Base de dados unificada - Neon PostgreSQL partilhada entre desenvolvimento e produção
+Segurança
+A solução desenvolvida, com base numa abordagem de "contextualização local" (RAG) com dados internos, está preparada para escalar com novas fontes de conteúdo, com chamadas à OpenAI protegidas por variáveis de ambiente (chaves API) no Netlify e Replit.
