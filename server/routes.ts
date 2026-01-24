@@ -4,9 +4,116 @@ import { storage } from "./storage";
 import { z } from "zod";
 import path from "path";
 import fs from "fs";
-import { insertBlogPostSchema, insertFaqSchema } from "@shared/schema";
+import { insertBlogPostSchema, insertFaqSchema, type Faq, type BlogPost } from "@shared/schema";
 import OpenAI from "openai";
 import { staticFaqs, getFaqsByService as getStaticFaqsByService } from "./static-faqs";
+
+// Auto-sync static files for Netlify and chatbot after admin updates
+async function syncStaticFiles() {
+  try {
+    const faqs = await storage.getAllFaqs();
+    const blogs = await storage.getAllBlogPosts();
+    
+    const sharedDir = path.resolve(import.meta.dirname, "..", "shared");
+    const netlifyDir = path.resolve(import.meta.dirname, "..", "netlify", "functions", "data");
+    
+    // Ensure directories exist
+    if (!fs.existsSync(netlifyDir)) {
+      fs.mkdirSync(netlifyDir, { recursive: true });
+    }
+    
+    const escape = (s: string | null) => s ? s.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\n/g, '\\n') : '';
+    
+    // Generate FAQs static file
+    const faqsArray = faqs.map((faq: Faq) => `  {
+    id: ${faq.id},
+    service: "${faq.service}",
+    questionPt: "${escape(faq.questionPt)}",
+    questionEn: "${escape(faq.questionEn)}",
+    answerPt: "${escape(faq.answerPt)}",
+    answerEn: "${escape(faq.answerEn)}",
+    keywords: "${escape(faq.keywords || '')}",
+    displayOrder: ${faq.displayOrder},
+    isActive: ${faq.isActive}
+  }`);
+    
+    const faqsContent = `// FAQs for chatbot context - AUTO-GENERATED
+// Last updated: ${new Date().toISOString()}
+
+export interface FAQ {
+  id: number;
+  service: string;
+  questionPt: string;
+  questionEn: string;
+  answerPt: string;
+  answerEn: string;
+  keywords: string;
+  displayOrder: number;
+  isActive: boolean;
+}
+
+export const staticFaqs: FAQ[] = [
+${faqsArray.join(',\n')}
+];
+
+export function getFaqsByService(service: string): FAQ[] {
+  return staticFaqs.filter(faq => faq.service === service && faq.isActive);
+}
+`;
+    
+    fs.writeFileSync(path.join(sharedDir, 'static-faqs.ts'), faqsContent);
+    fs.writeFileSync(path.join(netlifyDir, 'faqs.ts'), faqsContent);
+    
+    // Generate Blogs static file
+    const blogsArray = blogs.filter((b: BlogPost) => b.publishedAt).map((blog: BlogPost) => `  {
+    id: ${blog.id},
+    slug: "${blog.slug}",
+    titlePt: "${escape(blog.titlePt)}",
+    titleEn: "${escape(blog.titleEn || '')}",
+    excerptPt: "${escape(blog.excerptPt || '')}",
+    excerptEn: "${escape(blog.excerptEn || '')}",
+    contentPt: "${escape(blog.contentPt)}",
+    contentEn: "${escape(blog.contentEn || '')}",
+    category: "${blog.category || ''}",
+    author: "${blog.author || ''}",
+    featuredImage: "${blog.featuredImage || ''}",
+    publishedAt: "${blog.publishedAt ? new Date(blog.publishedAt).toISOString() : ''}"
+  }`);
+    
+    const blogsContent = `// Blogs for static pages - AUTO-GENERATED
+// Last updated: ${new Date().toISOString()}
+
+export interface BlogPost {
+  id: number;
+  slug: string;
+  titlePt: string;
+  titleEn: string;
+  excerptPt: string;
+  excerptEn: string;
+  contentPt: string;
+  contentEn: string;
+  category: string;
+  author: string;
+  featuredImage: string;
+  publishedAt: string;
+}
+
+export const staticBlogs: BlogPost[] = [
+${blogsArray.join(',\n')}
+];
+
+export function getBlogBySlug(slug: string): BlogPost | undefined {
+  return staticBlogs.find(blog => blog.slug === slug);
+}
+`;
+    
+    fs.writeFileSync(path.join(netlifyDir, 'blogs.ts'), blogsContent);
+    
+    console.log(`[sync] Static files updated: ${faqs.length} FAQs, ${blogs.filter((b: BlogPost) => b.publishedAt).length} blogs`);
+  } catch (error) {
+    console.error('[sync] Error syncing static files:', error);
+  }
+}
 
 function isSearchBot(userAgent: string): boolean {
   const bots = [
@@ -510,6 +617,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const data = insertFaqSchema.parse(req.body);
       const faq = await storage.createFaq(data);
+      await syncStaticFiles(); // Auto-sync after create
       res.status(201).json(faq);
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -528,6 +636,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       if (!faq) {
         return res.status(404).json({ error: "FAQ não encontrada" });
       }
+      await syncStaticFiles(); // Auto-sync after update
       res.json(faq);
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -545,6 +654,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       if (!success) {
         return res.status(404).json({ error: "FAQ não encontrada" });
       }
+      await syncStaticFiles(); // Auto-sync after delete
       res.json({ success: true });
     } catch (error) {
       console.error("Erro ao eliminar FAQ:", error);
@@ -557,6 +667,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { reseedFaqs } = await import("./seed-faqs");
       const count = await reseedFaqs();
+      await syncStaticFiles(); // Auto-sync after reseed
       res.json({ success: true, message: `FAQs atualizadas com sucesso. Total: ${count}` });
     } catch (error) {
       console.error("Erro ao atualizar FAQs:", error);
@@ -569,6 +680,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const data = insertBlogPostSchema.parse(req.body);
       const post = await storage.createBlogPost(data);
+      await syncStaticFiles(); // Auto-sync after create
       res.status(201).json(post);
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -587,6 +699,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       if (!post) {
         return res.status(404).json({ error: "Artigo não encontrado" });
       }
+      await syncStaticFiles(); // Auto-sync after update
       res.json(post);
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -604,6 +717,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       if (!success) {
         return res.status(404).json({ error: "Artigo não encontrado" });
       }
+      await syncStaticFiles(); // Auto-sync after delete
       res.json({ success: true });
     } catch (error) {
       console.error("Erro ao eliminar artigo:", error);
