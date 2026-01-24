@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Bot } from "lucide-react";
+import { Menu, X, Bot, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { useChatbot } from "@/contexts/ChatbotContext";
@@ -38,6 +38,14 @@ export default function Navigation() {
           </a>
 
           <div className="hidden lg:flex items-center gap-8">
+            <a
+              href="/"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              data-testid="link-nav-home"
+              title="Home"
+            >
+              <Home className="h-5 w-5" />
+            </a>
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -100,6 +108,15 @@ export default function Navigation() {
       {mobileMenuOpen && (
         <div className="lg:hidden border-t bg-background" data-testid="mobile-menu">
           <div className="px-4 py-6 space-y-4">
+            <a
+              href="/"
+              className="flex items-center gap-2 py-2 text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+              data-testid="link-mobile-home"
+            >
+              <Home className="h-5 w-5" />
+              Home
+            </a>
             {navItems.map((item) => (
               <a
                 key={item.href}
