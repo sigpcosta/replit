@@ -1,6 +1,6 @@
 // FAQs for chatbot context - AUTO-GENERATED
 // Run: npm run sync-netlify-data to regenerate from database
-// Last updated: 2026-01-24T16:30:30.252Z
+// Last updated: 2026-01-24T16:58:08.559Z
 
 export interface FAQ {
   id: number;
@@ -119,7 +119,7 @@ export const staticFaqs: FAQ[] = [
     service: "accommodation",
     questionPt: "Onde estão localizados os Alojamentos?",
     questionEn: "Where are the accommodations located?",
-    answerPt: "Estão localizados no centro da cidade da Horta, na Travessa do Poiso Novo, nº1 e 3, a cerca de 1 minuto a pé do Mercado Municipal, Praça da República ou avenida marginal, e a apenas 5 minutos do Terminal Marítimo ou da Marina da Horta, ponto de partida para as ilhas do Pico e São Jorge, ou ponto de encontro de velejadores internacionais, respetivamente.",
+    answerPt: "Estão localizados no centro da cidade da Horta, na Travessa do Poiso Novo, nº1 e nº3, a cerca de 1 minuto a pé do Mercado Municipal, Praça da República ou avenida marginal, e a apenas 5 minutos do Terminal Marítimo ou da Marina da Horta, ponto de partida para as ilhas do Pico e São Jorge, ou ponto de encontro de velejadores internacionais, respetivamente.",
     answerEn: "They are located in the center of Horta city, at Travessa do Poiso Novo, no. 1 and 3, about 1 minute walk from the Municipal Market, Praça da República or the waterfront avenue, and just 5 minutes from the Maritime Terminal or Horta Marina, departure point for Pico and São Jorge islands, or meeting point for international sailors, respectively.",
     keywords: "localização,centro,horta,marina,terminal,mercado",
     displayOrder: 135,
@@ -1164,8 +1164,8 @@ export const staticFaqs: FAQ[] = [
     service: "realestate",
     questionPt: "Que serviços de gestão imobiliária oferecem?",
     questionEn: "What property management services do you offer?",
-    answerPt: "Oferecemos gestão completa de propriedades: arrendamento de longa duração, manutenção, limpeza, check-in/check-out de hóspedes, marketing e construção.",
-    answerEn: "We offer complete property management: long-term rental, maintenance, cleaning, guest check-in/check-out, marketing and construction.",
+    answerPt: "Oferecemos gestão completa de propriedades: arrendamento de longa duração, manutenção, limpeza, check-in/check-out de hóspedes, marketing e manutençao.",
+    answerEn: "We offer complete property management: long-term rental, maintenance, cleaning, guest check-in/check-out, marketing and maintenance.",
     keywords: "gestão,imobiliária,propriedade,manutenção,aluguer,arrendamento,serviços",
     displayOrder: 86,
     isActive: true
@@ -1197,8 +1197,8 @@ export const staticFaqs: FAQ[] = [
     service: "realestate",
     questionPt: "Oferecem serviços de construção?",
     questionEn: "Do you offer construction services?",
-    answerPt: "Sim! Temos serviços de construção e renovação para empreendimentos turísticos e particulares nos Açores.",
-    answerEn: "Yes! We have construction and renovation services for tourist developments and private properties in the Azores.",
+    answerPt: "Sim! Temos serviços de construção e renovação para empreendimentos turísticos e particulares no Faial.",
+    answerEn: "Yes! We have construction and renovation services for tourist developments and private properties in Faial.",
     keywords: "construção,renovação,obras,empreitada,imobiliária",
     displayOrder: 89,
     isActive: true
@@ -1285,8 +1285,8 @@ export const staticFaqs: FAQ[] = [
     service: "tattoo",
     questionPt: "Preciso de marcar consulta prévia para tatuagem?",
     questionEn: "Do I need to book a prior consultation for a tattoo?",
-    answerPt: "Sim, recomendamos uma consulta prévia gratuita para discutir o design, tamanho, localização e orçamento da tatuagem. Assim garantimos que o resultado será exatamente o que pretende.",
-    answerEn: "Yes, we recommend a free prior consultation to discuss the design, size, placement and budget of the tattoo. This ensures the result will be exactly what you want.",
+    answerPt: "Sim, recomendamos uma consulta prévia para discutir o design, tamanho, localização e orçamento da tatuagem. Assim garantimos que o resultado será exatamente o que pretende.",
+    answerEn: "Yes, we recommend a prior consultation to discuss the design, size, placement and budget of the tattoo. This ensures the result will be exactly what you want.",
     keywords: "consulta,marcação,agendar,prévia,reservar,tatuagem",
     displayOrder: 66,
     isActive: true
@@ -1307,8 +1307,8 @@ export const staticFaqs: FAQ[] = [
     service: "tattoo",
     questionPt: "Fazem piercings também?",
     questionEn: "Do you also do piercings?",
-    answerPt: "Sim! Oferecemos vários tipos de piercings: lóbulo, hélix, tragus, nostril, septo, sobrancelha, língua, umbigo e microdermal.",
-    answerEn: "Yes! We offer various types of piercings: lobe, helix, tragus, nostril, septum, eyebrow, tongue, navel and microdermal.",
+    answerPt: "Sim! Oferecemos vários tipos de piercings: lóbulo, hélix, flat, conch, rook, tragus e aba nasal.",
+    answerEn: "Yes! We offer various types of piercings: lobe, helix, flat, conch, rook, tragus and nostril.",
     keywords: "piercing,piercings,lóbulo,hélix,tragus,nostril,septo,umbigo",
     displayOrder: 68,
     isActive: true
@@ -1340,8 +1340,8 @@ export const staticFaqs: FAQ[] = [
     service: "tattoo",
     questionPt: "Quanto custa uma tatuagem?",
     questionEn: "How much does a tattoo cost?",
-    answerPt: "O preço depende do tamanho, complexidade e tempo necessário. Agende uma consulta gratuita para obter um orçamento personalizado para o seu projeto.",
-    answerEn: "The price depends on size, complexity and time required. Schedule a free consultation to get a personalized quote for your project.",
+    answerPt: "O preço depende do tamanho, complexidade e local do corpo. Entre em contacto para obter um orçamento personalizado para o seu projeto.",
+    answerEn: "The price depends on size, complexity and placement. Contact us to get a personalized quote for your project.",
     keywords: "preço,custo,quanto,valor,orçamento,tatuagem",
     displayOrder: 71,
     isActive: true
@@ -1362,8 +1362,8 @@ export const staticFaqs: FAQ[] = [
     service: "tattoo",
     questionPt: "Posso trazer o meu próprio design de tatuagem?",
     questionEn: "Can I bring my own tattoo design?",
-    answerPt: "Sim! Pode trazer o seu design ou uma referência. A Catarina trabalha consigo para adaptar e aperfeiçoar o conceito até ficar perfeito.",
-    answerEn: "Yes! You can bring your design or a reference. Catarina works with you to adapt and perfect the concept until it's perfect.",
+    answerPt: "Sim! Pode trazer o seu design ou uma referência. Trabalhamos consigo para adaptar e aperfeiçoar o conceito até ficar perfeito.",
+    answerEn: "Yes! You can bring your design or a reference. We work with you to adapt and perfect the concept until it's perfect.",
     keywords: "design,próprio,desenho,referência,ideia,tatuagem",
     displayOrder: 73,
     isActive: true
@@ -1395,8 +1395,8 @@ export const staticFaqs: FAQ[] = [
     service: "tattoo",
     questionPt: "Posso pedir um orçamento antes?",
     questionEn: "Can I request a quote beforehand?",
-    answerPt: "Sim! Para um orçamento correto preciso sempre de: Referências do estilo/design, tamanho aproximado (em cm) e local do corpo.",
-    answerEn: "Yes! For an accurate quote I always need: Style/design references, approximate size (in cm) and body location.",
+    answerPt: "Sim! As informações necessárias para um orçamento são: Referências do estilo/design, tamanho aproximado (em cm) e local do corpo.",
+    answerEn: "Yes! The informations necessary for a budget are: Style/design references, approximate size (in cm) and placement.",
     keywords: "",
     displayOrder: 112,
     isActive: true
@@ -1404,10 +1404,10 @@ export const staticFaqs: FAQ[] = [
   {
     id: 113,
     service: "tattoo",
-    questionPt: "Fazes projetos personalizados?",
+    questionPt: "Fazem projetos personalizados?",
     questionEn: "Do you do custom designs?",
-    answerPt: "Sim! Adoro criar projetos completamente personalizados. Cada cliente é único e merece uma tatuagem única. Trabalho contigo desde a ideia inicial até ao design final para garantir que o resultado seja exatamente o que querias.",
-    answerEn: "Yes! I love creating completely personalized designs. Each client is unique and deserves a unique tattoo. I work with you from the initial idea to the final design to ensure the result is exactly what you wanted.",
+    answerPt: "Sim! Adoramos criar projetos completamente personalizados. Cada cliente é único e merece uma tatuagem única. Trabalho contigo desde a ideia inicial até ao design final para garantir que o resultado seja exatamente o que querias.",
+    answerEn: "Yes! We love creating completely personalized designs. Each client is unique and deserves a unique tattoo. I work with you from the initial idea to the final design to ensure the result is exactly what you wanted.",
     keywords: "",
     displayOrder: 113,
     isActive: true
@@ -1415,10 +1415,10 @@ export const staticFaqs: FAQ[] = [
   {
     id: 114,
     service: "tattoo",
-    questionPt: "Fazes tatuagens de cor?",
+    questionPt: "Fazem tatuagens de cor?",
     questionEn: "Do you do color tattoos?",
-    answerPt: "Trabalho exclusivamente com pigmento preto, e eventualmente pequenos detalhes em vermelho. Não trabalho com outros pigmentos coloridos.",
-    answerEn: "I work exclusively with black pigment, and occasionally small details in red. I do not work with other colored pigments.",
+    answerPt: "Trabalhamos exclusivamente com pigmento preto, e eventualmente pequenos detalhes em vermelho. Não trabalhamos com outros pigmentos coloridos.",
+    answerEn: "We work exclusively with black pigment, and occasionally small details in red. We do not work with other colored pigments.",
     keywords: "",
     displayOrder: 114,
     isActive: true
@@ -1448,10 +1448,10 @@ export const staticFaqs: FAQ[] = [
   {
     id: 117,
     service: "tattoo",
-    questionPt: "Usas pomada anestésica?",
+    questionPt: "Usam pomada anestésica?",
     questionEn: "Do you use numbing cream?",
-    answerPt: "Não utilizo pomada anestésica por questões de segurança, eficácia reduzida e possibilidade de reação alérgica.",
-    answerEn: "I do not use numbing cream due to safety concerns, reduced effectiveness and possibility of allergic reaction.",
+    answerPt: "Não utilizamos pomada anestésica por questões de segurança, eficácia reduzida e possibilidade de reação alérgica.",
+    answerEn: "We do not use numbing cream due to safety concerns, reduced effectiveness and possibility of allergic reaction.",
     keywords: "",
     displayOrder: 117,
     isActive: true
@@ -1472,8 +1472,8 @@ export const staticFaqs: FAQ[] = [
     service: "tattoo",
     questionPt: "Posso fazer uma tatuagem se tiver alergia?",
     questionEn: "Can I get a tattoo if I have allergies?",
-    answerPt: "Se tem histórico de alergias a tintas ou metais, informe-me antes da sessão. Podemos fazer um teste de patch com a tinta para garantir que não há reação alérgica.",
-    answerEn: "If you have a history of allergies to inks or metals, please inform me before the session. We can do a patch test with the ink to ensure there is no allergic reaction.",
+    answerPt: "Se tem histórico de alergias a tintas ou metais, informe antes da sessão. Podemos fazer um teste de patch com a tinta para garantir que não há reação alérgica.",
+    answerEn: "If you have a history of allergies to inks or metals, please inform before the session. We can do a patch test with the ink to ensure there is no allergic reaction.",
     keywords: "",
     displayOrder: 119,
     isActive: true
@@ -1483,8 +1483,8 @@ export const staticFaqs: FAQ[] = [
     service: "tattoo",
     questionPt: "As tintas são seguras?",
     questionEn: "Are the inks safe?",
-    answerPt: "Uso apenas tintas aprovadas e regulamentadas pela UE.",
-    answerEn: "I only use inks approved and regulated by the EU.",
+    answerPt: "Utilizamos apenas tintas aprovadas e regulamentadas pela UE.",
+    answerEn: "We only use inks approved and regulated by the EU.",
     keywords: "",
     displayOrder: 120,
     isActive: true
@@ -1492,10 +1492,10 @@ export const staticFaqs: FAQ[] = [
   {
     id: 121,
     service: "tattoo",
-    questionPt: "Que materiais utilizas nas perfurações?",
-    questionEn: "What materials do you use for piercings?",
-    answerPt: "Uso exclusivamente titânio de grau implante — hipoalergénico e biocompatível, o material mais seguro para perfurações iniciais.",
-    answerEn: "I exclusively use implant-grade titanium — hypoallergenic and biocompatible, the safest material for initial piercings.",
+    questionPt: "Que materiais são utilizados nas perfurações?",
+    questionEn: "What materials are used for piercings?",
+    answerPt: "Utilizamos exclusivamente titânio de grau implante — hipoalergénico e biocompatível, o material mais seguro para perfurações iniciais.",
+    answerEn: "We exclusively use implant-grade titanium — hypoallergenic and biocompatible, the safest material for initial piercings.",
     keywords: "",
     displayOrder: 121,
     isActive: true
@@ -1503,10 +1503,10 @@ export const staticFaqs: FAQ[] = [
   {
     id: 122,
     service: "tattoo",
-    questionPt: "Fazes piercings nos mamilos?",
+    questionPt: "Fazem piercings nos mamilos?",
     questionEn: "Do you do nipple piercings?",
-    answerPt: "Atualmente não faço piercings nos mamilos ou perfurações íntimas.",
-    answerEn: "I currently do not do nipple piercings or intimate piercings.",
+    answerPt: "Atualmente não fazemos piercings nos mamilos ou perfurações íntimas.",
+    answerEn: "We currently do not do nipple piercings or intimate piercings.",
     keywords: "",
     displayOrder: 122,
     isActive: true
@@ -1514,7 +1514,7 @@ export const staticFaqs: FAQ[] = [
   {
     id: 123,
     service: "tattoo",
-    questionPt: "Usas anestesia para piercings?",
+    questionPt: "Usam anestesia para piercings?",
     questionEn: "Do you use anesthesia for piercings?",
     answerPt: "Não. Pomadas anestésicas podem alterar a textura da pele, aumentar sangramento e gerar reações alérgicas. O processo é rápido e seguro sem anestesia.",
     answerEn: "No. Numbing creams can alter skin texture, increase bleeding and cause allergic reactions. The process is quick and safe without anesthesia.",
@@ -1538,7 +1538,7 @@ export const staticFaqs: FAQ[] = [
     service: "tattoo",
     questionPt: "Quando posso trocar a jóia do piercing?",
     questionEn: "When can I change my piercing jewelry?",
-    answerPt: "Depende da perfuração: Lóbulo: 2-3 meses, Nariz: 4-6 meses, Cartilagem: 6-12 meses, Hélice/Tragus/etc: até 1 ano. Trocar cedo demais é a maior causa de complicações.",
+    answerPt: "Depende da perfuração: Lóbulo: 2-3 meses, Nariz: 4-6 meses, Cartilagem: 6-12 meses, Hélix/Tragus/etc: até 1 ano. Trocar cedo demais é a maior causa de complicações.",
     answerEn: "It depends on the piercing: Lobe: 2-3 months, Nose: 4-6 months, Cartilage: 6-12 months, Helix/Tragus/etc: up to 1 year. Changing too early is the biggest cause of complications.",
     keywords: "",
     displayOrder: 125,
@@ -1593,8 +1593,8 @@ export const staticFaqs: FAQ[] = [
     service: "tattoo",
     questionPt: "O que devo fazer no dia da tatuagem/piercing?",
     questionEn: "What should I do on the day of my tattoo/piercing?",
-    answerPt: "Trazer documento de identificação (obrigatório para menores de 18 com responsável presente), ter a pele limpa, não beber álcool ou tomar calmantes nas 24h anteriores e comer antes da sessão.",
-    answerEn: "Bring ID (mandatory for under 18s with a guardian present), have clean skin, do not drink alcohol or take sedatives 24h before and eat before the session.",
+    answerPt: "Ter a pele limpa, não beber álcool ou tomar calmantes nas 24h anteriores e comer antes da sessão.",
+    answerEn: "Have clean skin, do not drink alcohol or take sedatives 24h before and eat before the session.",
     keywords: "",
     displayOrder: 130,
     isActive: true

@@ -30,6 +30,7 @@ function hasValidDatabaseConfig(): boolean {
 }
 
 // Build database URL with proper error handling
+// PRIORITY: Always use NEON_DATABASE_URL if available (single database for dev + prod)
 function getDatabaseUrl(): string | null {
   const dbUrl = process.env.DATABASE_URL;
   const neonUrl = process.env.NEON_DATABASE_URL;
@@ -40,46 +41,29 @@ function getDatabaseUrl(): string | null {
   const pgPort = process.env.PGPORT || "5432";
   
   console.log(`[DB] Environment: ${isProduction ? 'PRODUCTION' : 'DEVELOPMENT'}`);
-  console.log(`[DB] PGHOST: ${pgHost || 'not set'}`);
   console.log(`[DB] NEON_DATABASE_URL: ${neonUrl ? 'set' : 'not set'}`);
   
-  // Replit deployment can use internal database
-  if (isReplitDeployment && dbUrl) {
-    console.log("[DB] Replit Deployment: Using internal DATABASE_URL");
+  // PRIORITY 1: Always use NEON_DATABASE_URL if available (shared database)
+  if (neonUrl && neonUrl.includes('.neon.tech')) {
+    console.log("[DB] Using NEON_DATABASE_URL (shared external database)");
+    return neonUrl;
+  }
+  
+  // PRIORITY 2: Fallback to internal Replit database
+  if (dbUrl) {
+    console.log("[DB] Fallback: Using internal DATABASE_URL");
     return dbUrl;
   }
   
-  // In production (non-Replit), require valid Neon hostname
-  if (isProduction && !isReplitDeployment) {
-    // First check custom NEON_DATABASE_URL (for external Neon database)
-    if (neonUrl && neonUrl.includes('.neon.tech')) {
-      console.log("[DB] Production: Using NEON_DATABASE_URL");
-      return neonUrl;
-    }
-    
-    if (pgHost && pgHost.includes('.neon.tech') && pgUser && pgPassword && pgDatabase) {
-      const constructedUrl = `postgresql://${pgUser}:${encodeURIComponent(pgPassword)}@${pgHost}:${pgPort}/${pgDatabase}?sslmode=require`;
-      console.log(`[DB] Production: Using Neon host`);
-      return constructedUrl;
-    }
-    
-    if (dbUrl && (dbUrl.includes('.neon.tech') || dbUrl.includes('.neon.aws'))) {
-      console.log("[DB] Production: Using DATABASE_URL with Neon domain");
-      return dbUrl;
-    }
-    
-    // No valid production database - return null (app will run without DB)
-    console.warn("[DB] Production: No valid Neon database configured. App will run without database.");
-    return null;
+  // PRIORITY 3: Construct from PG* vars if available
+  if (pgHost && pgUser && pgPassword && pgDatabase) {
+    const constructedUrl = `postgresql://${pgUser}:${encodeURIComponent(pgPassword)}@${pgHost}:${pgPort}/${pgDatabase}?sslmode=require`;
+    console.log("[DB] Using constructed URL from PG* variables");
+    return constructedUrl;
   }
   
-  // Development mode
-  if (!dbUrl) {
-    console.warn("[DB] Development: No DATABASE_URL set");
-    return null;
-  }
-  
-  return dbUrl;
+  console.warn("[DB] No database configured");
+  return null;
 }
 
 // Database instance - may be null if no valid database is configured

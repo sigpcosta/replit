@@ -153,14 +153,17 @@ async function main() {
   console.log('[sync-netlify-data] Starting sync...');
   console.log('[sync-netlify-data] This script exports FAQs and Blogs from database to static files');
   
-  const databaseUrl = process.env.DATABASE_URL;
+  // PRIORITY: Use NEON_DATABASE_URL (shared external database) if available
+  const neonUrl = process.env.NEON_DATABASE_URL;
+  const databaseUrl = (neonUrl && neonUrl.includes('.neon.tech')) ? neonUrl : process.env.DATABASE_URL;
   
   if (!databaseUrl) {
-    console.error('[sync-netlify-data] ✗ DATABASE_URL not set. Cannot sync from database.');
-    console.log('[sync-netlify-data] Please ensure DATABASE_URL environment variable is configured.');
+    console.error('[sync-netlify-data] ✗ No database URL set. Cannot sync from database.');
+    console.log('[sync-netlify-data] Please ensure NEON_DATABASE_URL or DATABASE_URL environment variable is configured.');
     process.exit(1);
   }
 
+  console.log(`[sync-netlify-data] Using ${neonUrl && neonUrl.includes('.neon.tech') ? 'NEON_DATABASE_URL' : 'DATABASE_URL'}`);
   const client = new pg.Client({ connectionString: databaseUrl });
   
   try {
