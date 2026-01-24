@@ -1,0 +1,51 @@
+Chatbot integrado no site que responde a perguntas dos visitantes usando conhecimento específico da Azores4fun, tendo sido treinado com a informação constante nas páginas dos serviços, FAQs e artigos de blog.
+
+Arquitetura Técnica
+Utilizador → Frontend (React) → Netlify Function → OpenAI API
+                                      ↓
+                              Contexto (FAQs + Páginas + BLOG)
+1. Frontend (ChatWidget.tsx)
+•	Componente React flutuante no canto inferior
+•	Interface de chat com histórico de mensagens
+•	Envia pergunta do utilizador via POST /api/chat
+2. Backend (netlify/functions/chatbot.ts)
+•	Função serverless que recebe a pergunta
+•	Carrega contexto estático:
+o	FAQs do ficheiro data/faqs.ts
+o	Informações das páginas (alojamento, atividades, serviços)
+o	Artigos blog do ficheiro data/blogs.ts
+•	Constrói o prompt de sistema com todo o contexto
+•	Chama a API OpenAI (modelo GPT-4o-mini)
+3. Prompt de Sistema
+"És o assistente virtual da Azores4fun. 
+Responde apenas com base nas seguintes informações:
+FAQS:
+- Pergunta: ... Resposta: ...
+ALOJAMENTO:
+- T0 Vulcão: 2 pessoas, RRAL nº4274...
+- T2 Levadas: 6 pessoas, RRAL nº2591...
+ATIVIDADES:
+- Observação de baleias, trilhos, mergulho...
+Responde em português ou inglês conforme a pergunta."
+4. Resposta
+•	OpenAI gera resposta baseada apenas no contexto fornecido
+•	Resposta enviada de volta ao frontend
+•	Exibida na interface de chat
+
+Fontes de Conhecimento
+Fonte	Ficheiro	Conteúdo
+FAQs	shared/static-faqs.ts	200+ perguntas/respostas PT/EN
+Blogs	shared/ blogs.ts	20+ resumos artigos de blog PT/EN
+Apartamentos	Embedado no prompt	Nomes, capacidades, licenças
+Atividades	Embedado no prompt	Serviços disponíveis
+Contactos	Embedado no prompt	WhatsApp, email, horários
+
+Vantagens desta Abordagem
+•	Respostas precisas - IA só responde com informação real
+•	Sem alucinações - Contexto limitado evita inventar dados
+•	Bilingue - Detecta idioma e responde em PT ou EN
+•	Baixo custo - GPT-4o-mini é económico
+•	Manutenção fácil - Atualizar FAQs e BLOG atualiza o chatbot
+Foi criado um pequeno manual relativamente à Manutenção de FAQs e Blogs, que se encontra em anexo. 
+
+A solução desenvolvida, com base numa abordagem de “contextualização local” (RAG) com dados internos, prática recomendada para chatbots empresariais, está preparada para escalar com novas fontes de conteúdo (ex: novos microsites, novos tipos de dados), assim como foi reforçada do ponto de vista de segurança com as chamadas à OpenAI via chaves API protegidas por variáveis de ambiente no Netlify.

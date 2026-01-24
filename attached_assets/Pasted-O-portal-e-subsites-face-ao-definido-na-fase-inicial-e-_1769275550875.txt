@@ -1,0 +1,56 @@
+O portal e subsites, face ao definido na fase inicial, e com os conteúdos e layouts apresentados no ponto anterior do presente relatório, do ponto de vista técnico, resume-se ao seguinte: 
+Frontend via Replit
+•	React 18 - Biblioteca principal para UI
+•	TypeScript - Tipagem estática para maior segurança de código
+•	Vite - Bundler e servidor de desenvolvimento rápido
+•	Tailwind CSS - Framework de estilos utilitários
+•	shadcn/ui - Componentes UI pré-construídos (Cards, Buttons, Forms, etc.)
+•	Wouter - Routing leve para navegação entre páginas
+•	TanStack Query (React Query) - Gestão de estado e cache para dados assíncronos
+•	React Hook Form + Zod - Formulários com validação
+•	Lucide React - Ícones
+•	react-helmet-async - SEO/meta tags dinâmicas
+Backend via Replit
+•	Node.js + Express - Servidor API REST
+•	PostgreSQL (Neon) - Base de dados relacional
+Integrações Externas
+•	OpenAI API - Chatbot com IA
+•	Formspree - Envio de formulários por email (contacto e pre-checkin)
+Multilingue
+•	Sistema próprio de traduções PT/EN com contexto React
+Arquitetura
+•	Monorepo com client/ (frontend) e server/ (backend)
+•	Pasta shared/ para tipos e schemas partilhados
+•	Preparado para deploy no Netlify (JAMstack) com funções serverless
+
+Arquitetura no Netlify (via GitHub), após deploy no Netlify, o projeto funciona como JAMstack:
+Frontend (Estático)
+•	React SPA - Compilado para HTML/CSS/JS estáticos
+•	Vite - Gera o bundle otimizado (dist/public/)
+•	Servido diretamente pela CDN do Netlify (ultra-rápido)
+Backend (Serverless)
+•	Netlify Functions - Funções Lambda para APIs
+o	/netlify/functions/api.ts - Endpoints REST
+o	/netlify/functions/chatbot.ts - Integração OpenAI
+o	/netlify/functions/faqs.ts - FAQs 
+o	/netlify/functions/blogs.ts – artigos BLOG 
+•	Dados estáticos em /netlify/functions/data/
+Base de Dados
+•	Neon PostgreSQL - Base de dados cloud (serverless)
+•	Conectada via DATABASE_URL nas variáveis de ambiente do Netlify
+Formulários
+•	Formspree - Serviço externo para envio de emails
+o	Formulário de contacto
+o	Pre Check-in de hóspedes
+
+Com estas Tecnologias e arquitetura garantiu-se:
+Renderização no servidor :  todo o conteúdo textual (incluindo FAQs) renderizado no servidor e entregue no HTML inicial (SSR ou SSG). Não há conteúdo crítico carregado apenas por JavaScript no browser.
+HTML limpo, legível e indexável : O HTML final contem o texto completo visível (títulos, parágrafos, FAQs), sem depender de JS para aparecer.
+Estrutura semântica correta : HTML semântico correto: <h1>, <h2>, <h3>, <p>, <section>; nada de <div> para tudo.
+FAQPage Schema (JSON-LD) : Adicionamos schema.org FAQPage em JSON-LD no HTML, sincronizado com as FAQs visíveis.
+URLs estáveis e crawláveis : Cada página tem uma URL estável, pública e acessível sem login.
+Meta tags no HTML inicial: Todas as páginas incluiem <title> e <meta name="description"> renderizados no servidor.
+Sitemap.xml automático : Gerar e servir /sitemap.xml com todas as páginas públicas.
+Robots.txt permissivo : Garantir robots.txt permite crawl de todo o conteúdo público.
+Performance básica (SEO técnico) : Ativamos cache HTTP e evitamos JS desnecessário no first load.
+Conteúdo previsível para LLMs: Estruturamos as  FAQs sempre como pares pergunta–resposta claros, com respostas diretas na primeira frase.
