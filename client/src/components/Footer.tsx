@@ -1,5 +1,5 @@
 import { useLanguage } from "@/i18n/LanguageContext";
-import { Facebook, Instagram, Mail, Phone, MapPin, Heart, ExternalLink, FileText } from "lucide-react";
+import { Facebook, Instagram, Mail, Phone, MapPin, Heart, ExternalLink, FileText, Map } from "lucide-react";
 import marcaAcoresPtLogo from "@assets/AF_ACO_SELO_POS_PT_1767027675830.jpg";
 import marcaAcoresEnLogo from "@assets/AF_ACO_SELO_POS_ING_1767027687274.jpg";
 import acores2030Logo from "@assets/acores2030-funding-logo.png";
@@ -72,9 +72,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-10">
           
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="font-heading text-2xl font-bold text-primary mb-4">
-              Azores<span className="text-foreground">4fun</span>
-            </div>
+            <a href="/" className="block mb-4">
+              <img 
+                src="/logo.gif" 
+                alt="Azores4fun" 
+                className="h-16 w-auto"
+                data-testid="img-footer-logo"
+              />
+            </a>
             <p className="text-muted-foreground text-sm mb-6">
               {t.footer.tagline}
             </p>
@@ -137,6 +142,16 @@ export default function Footer() {
                   <div>{t.footer.address.street}</div>
                   <div>{t.footer.address.city}</div>
                   <div>{t.footer.address.azores}</div>
+                  <a 
+                    href="https://www.google.com/travel/hotels/entity/CgsI5aePgc-Rr5_fARAB/location?gsas=1&ts=CAESCAoCCAMKAggDGiAKAhoAEhoSFAoHCOoPEAEYGhIHCOoPEAEYGxgBMgIIASoGCgIgABoA&qs=OAI&ictx=111&hl=pt-PT&ap=MAE&ved=0CAAQ5JsGahcKEwjwyLCoiaSSAxUAAAAAHQAAAAAQAw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-primary hover:underline mt-1"
+                    data-testid="link-footer-google-maps"
+                  >
+                    <Map className="w-3 h-3" />
+                    Google Maps
+                  </a>
                 </div>
               </li>
               <li>

@@ -218,9 +218,20 @@ export default function AlojamentoPage() {
               <h3 className="font-heading text-xl font-bold mb-2">
                 {t.accommodation.highlights.location}
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground mb-4">
                 {t.accommodation.highlights.locationDesc}
               </p>
+              <a 
+                href="https://www.google.com/travel/hotels/entity/CgsI5aePgc-Rr5_fARAB/location?gsas=1&ts=CAESCAoCCAMKAggDGiAKAhoAEhoSFAoHCOoPEAEYGhIHCOoPEAEYGxgBMgIIASoGCgIgABoA&qs=OAI&ictx=111&hl=pt-PT&ap=MAE&ved=0CAAQ5JsGahcKEwjwyLCoiaSSAxUAAAAAHQAAAAAQAw"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="button-google-maps"
+              >
+                <Button variant="outline" size="sm" className="gap-2">
+                  <MapPin className="h-4 w-4" />
+                  Google Maps
+                </Button>
+              </a>
             </Card>
             <Card className="p-6 text-center">
               <Car className="h-12 w-12 text-primary mx-auto mb-4" />
