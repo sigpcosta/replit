@@ -1,6 +1,6 @@
 // FAQs for chatbot context - AUTO-GENERATED
 // Run: npm run sync-netlify-data to regenerate from database
-// Last updated: 2026-01-24T16:58:08.559Z
+// Last updated: 2026-01-24T17:50:44.321Z
 
 export interface FAQ {
   id: number;
@@ -31,8 +31,8 @@ export const staticFaqs: FAQ[] = [
     service: "accommodation",
     questionPt: "Quantas pessoas os apartamentos acomodam?",
     questionEn: "How many people do the apartments accommodate?",
-    answerPt: "Os apartamentos podem acomodar entre 2 a 6 pessoas, dependendo da unidade. Contacte-nos para saber a disponibilidade de cada apartamento.",
-    answerEn: "The apartments can accommodate between 2 to 6 people, depending on the unit. Contact us to check availability for each apartment.",
+    answerPt: "Os apartamentos podem acomodar entre 2 a 8 pessoas, dependendo da unidade. Como são todos próximos conseguimos  acomodar grupos até 18 pessoas.  Contacte-nos para saber a disponibilidade de cada apartamento.",
+    answerEn: "The apartments can accommodate between 2 to 8 people, depending on the unit. Since they are all close together, we can accommodate groups of up to 18 people. Contact us to check availability for each apartment.",
     keywords: "pessoas,capacidade,quartos,acomodar,hóspedes,apartamento",
     displayOrder: 58,
     isActive: true
