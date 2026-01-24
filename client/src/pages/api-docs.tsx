@@ -28,6 +28,7 @@ const translations = {
     singleBlog: "Obtém um artigo específico pelo slug",
     blogById: "Obtém um artigo específico pelo ID",
     allFaqs: "Lista todas as FAQs",
+    faqById: "Obtém uma FAQ específica pelo ID",
     faqsByService: "FAQs filtradas por serviço",
     services: "Serviços Disponíveis",
     servicesDesc: "Use estes valores no parâmetro :service",
@@ -71,6 +72,7 @@ const translations = {
     singleBlog: "Get a specific article by slug",
     blogById: "Get a specific article by ID",
     allFaqs: "List all FAQs",
+    faqById: "Get a specific FAQ by ID",
     faqsByService: "FAQs filtered by service",
     services: "Available Services",
     servicesDesc: "Use these values in the :service parameter",
@@ -323,6 +325,38 @@ export default function ApiDocsPage() {
                       asChild
                     >
                       <a href="/api/faqs" target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-3 h-3 mr-1" />
+                        {t.tryIt}
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader className="pb-3">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <Badge className="bg-green-600">GET</Badge>
+                    <code className="font-mono text-sm">/api/faqs/id/:id</code>
+                  </div>
+                  <CardDescription>{t.faqById}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex gap-2 flex-wrap">
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      onClick={() => copyToClipboard(`${baseUrl}/api/faqs/id/57`)}
+                    >
+                      <Copy className="w-3 h-3 mr-1" />
+                      {t.copyUrl}
+                    </Button>
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      asChild
+                    >
+                      <a href="/api/faqs/id/57" target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="w-3 h-3 mr-1" />
                         {t.tryIt}
                       </a>

@@ -632,6 +632,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.get("/api/faqs/id/:id", async (req, res) => {
+    try {
+      const id = parseInt(req.params.id);
+      if (isNaN(id)) {
+        return res.status(400).json({ error: "ID inválido" });
+      }
+      const faq = await storage.getFaqById(id);
+      if (!faq) {
+        return res.status(404).json({ error: "FAQ não encontrada" });
+      }
+      res.json(faq);
+    } catch (error) {
+      console.error("Erro ao obter FAQ por ID:", error);
+      res.status(500).json({ error: "Erro ao obter FAQ" });
+    }
+  });
+
   app.get("/api/faqs/:service", async (req, res) => {
     try {
       const serviceFaqs = await storage.getFaqsByService(req.params.service);
