@@ -1,5 +1,6 @@
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Facebook, Instagram, Mail, Phone, MapPin, Heart, ExternalLink, FileText, Map } from "lucide-react";
+import logoUrl from "@assets/LogoAzores4fun360_1763895112388.gif";
 import marcaAcoresPtLogo from "@assets/AF_ACO_SELO_POS_PT_1767027675830.jpg";
 import marcaAcoresEnLogo from "@assets/AF_ACO_SELO_POS_ING_1767027687274.jpg";
 import acores2030Logo from "@assets/acores2030-funding-logo.png";
@@ -72,9 +73,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-10">
           
           <div className="sm:col-span-2 lg:col-span-1">
-            <a href="/" className="block mb-4">
+            <a href="/" className="block mb-4" data-testid="link-footer-home">
               <img 
-                src="/logo.gif" 
+                src={logoUrl} 
                 alt="Azores4fun" 
                 className="h-16 w-auto"
                 data-testid="img-footer-logo"
