@@ -66,7 +66,8 @@ export function getFaqsForChatbot(language: 'pt' | 'en'): string {
     .map(faq => {
       const q = language === 'pt' ? faq.questionPt : faq.questionEn;
       const a = language === 'pt' ? faq.answerPt : faq.answerEn;
-      return \`Q: \${q}\\nA: \${a}\`;
+      const keywords = faq.keywords ? \` [Sinónimos: \${faq.keywords}]\` : '';
+      return \`Q: \${q}\${keywords}\\nA: \${a}\`;
     })
     .join('\\n\\n');
 }

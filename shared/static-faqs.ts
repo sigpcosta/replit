@@ -1,5 +1,6 @@
 // FAQs for chatbot context - AUTO-GENERATED
-// Last updated: 2026-01-24T17:54:57.456Z
+// Run: npm run sync-netlify-data to regenerate from database
+// Last updated: 2026-01-24T18:39:30.979Z
 
 export interface FAQ {
   id: number;
@@ -32,7 +33,7 @@ export const staticFaqs: FAQ[] = [
     questionEn: "How many people do the apartments accommodate?",
     answerPt: "Os apartamentos podem acomodar entre 2 a 8 pessoas, dependendo da unidade. Como são todos próximos conseguimos  acomodar grupos até 18 pessoas.  Contacte-nos para saber a disponibilidade de cada apartamento.",
     answerEn: "The apartments can accommodate between 2 to 8 people, depending on the unit. Since they are all close together, we can accommodate groups of up to 18 people. Contact us to check availability for each apartment.",
-    keywords: "pessoas,capacidade,quartos,acomodar,hóspedes,apartamento",
+    keywords: "pessoas,capacidade,quartos,acomodar,hóspedes,apartamento,levar,levam,quantas,lotação,cabem,dormem",
     displayOrder: 58,
     isActive: true
   },
@@ -89,17 +90,6 @@ export const staticFaqs: FAQ[] = [
     answerEn: "Some apartments accept pets upon prior consultation. Contact us to check availability and conditions.",
     keywords: "animais,estimação,pets,cão,gato,permitido",
     displayOrder: 63,
-    isActive: true
-  },
-  {
-    id: 64,
-    service: "accommodation",
-    questionPt: "Os apartamentos têm vista para o mar?",
-    questionEn: "Do the apartments have sea views?",
-    answerPt: "Alguns dos nossos apartamentos oferecem vista para o mar ou para a marina. Informe-nos da sua preferência ao fazer a reserva.",
-    answerEn: "Some of our apartments offer sea or marina views. Let us know your preference when making a reservation.",
-    keywords: "vista,mar,marina,paisagem,janela,apartamento",
-    displayOrder: 64,
     isActive: true
   },
   {
@@ -426,8 +416,8 @@ export const staticFaqs: FAQ[] = [
     service: "accommodation",
     questionPt: "É aconselhável alugar carro no Faial ou os transportes públicos são suficientes?",
     questionEn: "Is it advisable to rent a car in Faial or is public transport sufficient?",
-    answerPt: "Para explorar a ilha do Faial e os pontos mais distantes da cidade da Horta (como o Vulcão dos Capelinhos ou a Caldeira), recomenda-se vivamente reservar um transfer ou alugar um carro. A cidade da Horta é perfeitamente explorada a pé. O transporte público na ilha é muito limitado.",
-    answerEn: "To explore Faial island and the most distant points from Horta city (such as Capelinhos Volcano or Caldeira), it is highly recommended to book a transfer or rent a car. Horta city is perfectly explored on foot. Public transport on the island is very limited.",
+    answerPt: "Para explorar a ilha do Faial e os pontos mais distantes da cidade da Horta (como o Vulcão dos Capelinhos ou a Caldeira), recomenda-se vivamente reservar um transfer ou alugar um carro. A cidade da Horta é perfeitamente explorada a pé. O transporte público na ilha é muito limitado, mas existe e tem uma paragem junto do nosso alojamento.",
+    answerEn: "To explore Faial island and the most distant points from Horta city (such as Capelinhos Volcano or Caldeira), it is highly recommended to book a transfer or rent a car. Horta city is perfectly explored on foot. Public transport on the island is very limited, but it exists, and there's a bus stop right next to our accommodation.",
     keywords: "carro,aluguer,transporte,público,transfer,autocarro",
     displayOrder: 163,
     isActive: true
@@ -2029,6 +2019,22 @@ export const staticFaqs: FAQ[] = [
   }
 ];
 
+export function getFaqsForChatbot(language: 'pt' | 'en'): string {
+  return staticFaqs
+    .filter(faq => faq.isActive)
+    .map(faq => {
+      const q = language === 'pt' ? faq.questionPt : faq.questionEn;
+      const a = language === 'pt' ? faq.answerPt : faq.answerEn;
+      const keywords = faq.keywords ? ` [Sinónimos: ${faq.keywords}]` : '';
+      return `Q: ${q}${keywords}\nA: ${a}`;
+    })
+    .join('\n\n');
+}
+
 export function getFaqsByService(service: string): FAQ[] {
   return staticFaqs.filter(faq => faq.service === service && faq.isActive);
+}
+
+export function getAllFaqs(): FAQ[] {
+  return staticFaqs.filter(faq => faq.isActive);
 }
