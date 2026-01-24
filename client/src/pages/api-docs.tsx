@@ -26,6 +26,7 @@ const translations = {
     example: "Exemplo",
     allBlogs: "Lista todos os artigos do blog",
     singleBlog: "Obtém um artigo específico pelo slug",
+    blogById: "Obtém um artigo específico pelo ID",
     allFaqs: "Lista todas as FAQs",
     faqsByService: "FAQs filtradas por serviço",
     services: "Serviços Disponíveis",
@@ -68,6 +69,7 @@ const translations = {
     example: "Example",
     allBlogs: "List all blog articles",
     singleBlog: "Get a specific article by slug",
+    blogById: "Get a specific article by ID",
     allFaqs: "List all FAQs",
     faqsByService: "FAQs filtered by service",
     services: "Available Services",
@@ -249,6 +251,38 @@ export default function ApiDocsPage() {
                       asChild
                     >
                       <a href="/api/blog/bem-vindo-estudio-tatuagens-piercings" target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-3 h-3 mr-1" />
+                        {t.tryIt}
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader className="pb-3">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <Badge className="bg-green-600">GET</Badge>
+                    <code className="font-mono text-sm">/api/blog/id/:id</code>
+                  </div>
+                  <CardDescription>{t.blogById}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex gap-2">
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      onClick={() => copyToClipboard(`${baseUrl}/api/blog/id/16`)}
+                    >
+                      <Copy className="w-3 h-3 mr-1" />
+                      {t.copyUrl}
+                    </Button>
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      asChild
+                    >
+                      <a href="/api/blog/id/16" target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="w-3 h-3 mr-1" />
                         {t.tryIt}
                       </a>

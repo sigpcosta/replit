@@ -415,6 +415,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.get("/api/blog/id/:id", async (req, res) => {
+    try {
+      const id = parseInt(req.params.id);
+      if (isNaN(id)) {
+        return res.status(400).json({ error: "ID inválido" });
+      }
+      const post = await storage.getBlogPostById(id);
+      if (!post) {
+        return res.status(404).json({ error: "Artigo não encontrado" });
+      }
+      res.json(post);
+    } catch (error) {
+      console.error("Erro ao obter artigo por ID:", error);
+      res.status(500).json({ error: "Erro ao obter artigo" });
+    }
+  });
+
   app.get("/api/blog/:slug", async (req, res) => {
     try {
       const post = await storage.getBlogPostBySlug(req.params.slug);
