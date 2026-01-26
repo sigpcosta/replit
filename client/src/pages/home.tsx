@@ -10,7 +10,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { seoConfig } from "@/lib/seo-config";
 import { organizationSchema, localBusinessSchema } from "@/lib/structured-data";
-import { Home as HomeIcon, Activity, PartyPopper, Pencil, Building2, Store } from "lucide-react";
+import { Home as HomeIcon, Activity, PartyPopper, Pencil, Building2, Store, HelpCircle } from "lucide-react";
 
 import apartmentImage from "@assets/15_1764274865100.jpg";
 import activitiesImage from "@assets/carrinha3_1766744828213.jpg";
@@ -37,6 +37,7 @@ export default function Home() {
   };
   
   const faqCategories = [
+    { service: "general", title: language === "pt" ? "Geral" : "General", icon: HelpCircle, href: "/" },
     { service: "accommodation", title: language === "pt" ? "Alojamento" : "Accommodation", icon: HomeIcon, href: "/alojamento" },
     { service: "paintball", title: language === "pt" ? "Animação Turística" : "Tourism Activities", icon: Activity, href: "/animacao" },
     { service: "events", title: language === "pt" ? "Eventos" : "Events", icon: PartyPopper, href: "/eventos" },
