@@ -59,7 +59,7 @@ export default function AlojamentoPage() {
       features: t.accommodation.aptFeatures.t2Pico,
       image: apt3Image,
       bookingUrl: "https://www.vacation-bookings.com/d/51943951?currency=EUR&locale=pt-PT&salesChannelId=HOLIDU_HOST_WEBSITE&colorPrimary=%23024251&colorPrimaryDark=%23003644&colorCTA=%2300809D&colorCTAActive=%2300728f&colorCTAText=%23FFFFFF&title=Azores4Fun%2C+Turismo+e+Aventura%2C+Unipessoal+Lda&ccons=MTc2MzkwMzU0NzczOToxMTE%3D",
-      galleryUrl: "/galeria-apartamento/t3-vista-pico"
+      galleryUrl: "/galeria-apartamento/t3-centro"
     }
   ];
 

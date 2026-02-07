@@ -135,7 +135,7 @@ const apartmentGalleries: ApartmentGallery[] = [
     images: t2Images
   },
   {
-    slug: "t3-vista-pico",
+    slug: "t3-centro",
     namePt: "T3 - Apartamento Casa da Travessa com 3 Quartos",
     nameEn: "T3 - Casa da Travessa 3 Bedroom Apartment",
     descriptionPt: "Apartamento T3 espaçoso com vista para a montanha do Pico",
