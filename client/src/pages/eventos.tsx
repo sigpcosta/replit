@@ -1,10 +1,11 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ServiceFAQs from "@/components/ServiceFAQs";
 import TeamSection from "@/components/TeamSection";
+import ContactDialog from "@/components/ContactDialog";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { PartyPopper, Tent as TentIcon, Users, Heart, Music, Check } from "lucide-react";
 import { seoConfig } from "@/lib/seo-config";
 import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
@@ -16,6 +17,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "wouter";
 
 export default function EventosPage() {
+  const [contactOpen, setContactOpen] = useState(false);
   const { t, language } = useLanguage();
   const seo = seoConfig[language].eventos;
   
@@ -107,18 +109,17 @@ export default function EventosPage() {
                 <Link href="/loja" className="text-primary hover:underline font-medium" data-testid="link-to-shop">
                   {language === 'pt' ? 'loja na Horta' : 'shop in Horta'}
                 </Link>
-                {language === 'pt' 
-                  ? ' ou contacte-nos diretamente.'
-                  : ' or contact us directly.'}
+                {language === 'pt' ? ' ou ' : ' or '}
+                <button 
+                  onClick={() => setContactOpen(true)} 
+                  className="text-primary hover:underline font-medium"
+                  data-testid="link-contact-directly"
+                >
+                  {language === 'pt' ? 'contacte-nos diretamente' : 'contact us directly'}
+                </button>
+                .
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" data-testid="button-plan-event">
-                  {t.events.planEvent}
-                </Button>
-                <Button size="lg" variant="outline" data-testid="button-request-quote">
-                  {t.events.requestQuote}
-                </Button>
-              </div>
+              <ContactDialog open={contactOpen} onOpenChange={setContactOpen} />
             </div>
             <div className="grid grid-cols-2 gap-4">
               <img
