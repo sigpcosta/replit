@@ -692,7 +692,7 @@ export const translations = {
       title: "LaserTag, Paintball, GelBlaster e NERFs",
       subtitle: "Diversão garantida em jogos de estratégia ao ar livre",
       moreInfo: "Mais Informação",
-      heroIntro: "Se pretendes passar um dia diferente e ainda gastar várias calorias, junta os teus amigos e vem jogar um dos nossos jogos de estratégia connosco.",
+      heroIntro: "Se pretendes passar um dia diferente e ainda gastar muita energia, junta os teus amigos e vem jogar um dos nossos jogos de estratégia connosco.",
       heroP1: "A diversão será uma constante e 'só' precisarás de ter a pontaria certeira e pensamento estratégico e perspicaz!",
       heroP2: "Embora tenhas de planear e executar um ataque contra o 'inimigo', com muita ação à mistura, estas atividades de ação e estratégia são muito divertidas, relaxantes e não representam nenhum risco para quem pratica.",
       heroP3: "Temos vários tipos de atividades, onde o que muda é o marcador, para todos os tipos de jogadores e idades, como o LaserTag, Paintball, Gelblaster e NERFs.",
