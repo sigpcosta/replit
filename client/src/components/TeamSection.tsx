@@ -1,11 +1,13 @@
 import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Users } from "lucide-react";
+import emanuelPhoto from "@assets/foto_1771450043323.jpeg";
 
 interface TeamMember {
   name: string;
   role: string;
   bio: string;
+  image?: string;
 }
 
 interface TeamSectionProps {
@@ -32,12 +34,14 @@ export default function TeamSection({ members = ["miguel", "emanuel"] }: TeamSec
       pt: {
         name: "Emanuel Rosa",
         role: "Técnico de Apoio e Manutenção",
-        bio: "Responsável pela manutenção das infraestruturas e apoia nas Atividades Turísticas e Eventos."
+        bio: "Responsável pela manutenção das infraestruturas e apoia nas Atividades Turísticas e Eventos.",
+        image: emanuelPhoto
       },
       en: {
         name: "Emanuel Rosa",
         role: "Support and Maintenance Technician",
-        bio: "Responsible for infrastructure maintenance and supports Tourism Activities and Events."
+        bio: "Responsible for infrastructure maintenance and supports Tourism Activities and Events.",
+        image: emanuelPhoto
       }
     }
   };
@@ -73,10 +77,14 @@ export default function TeamSection({ members = ["miguel", "emanuel"] }: TeamSec
       <div className={`grid gap-8 max-w-4xl mx-auto ${displayMembers.length === 1 ? 'md:grid-cols-1 max-w-md' : 'md:grid-cols-2'}`}>
         {displayMembers.map((member, index) => (
           <Card key={index} className="p-6 text-center hover-elevate transition-all">
-            <div className="w-20 h-20 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
-              <span className="text-2xl font-bold text-primary">
-                {member.name.split(' ').map(n => n[0]).join('')}
-              </span>
+            <div className="w-20 h-20 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center overflow-hidden">
+              {member.image ? (
+                <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+              ) : (
+                <span className="text-2xl font-bold text-primary">
+                  {member.name.split(' ').map(n => n[0]).join('')}
+                </span>
+              )}
             </div>
             <h3 className="font-heading text-xl font-bold mb-1">
               {member.name}
