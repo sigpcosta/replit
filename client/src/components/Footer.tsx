@@ -308,7 +308,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <p>&copy; {currentYear} Azores4fun. {t.footer.rights}</p>
+            <p>&copy; 2025 Azores4fun. {t.footer.rights}</p>
           </div>
         </div>
       </div>
