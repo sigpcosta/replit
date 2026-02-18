@@ -39,15 +39,13 @@ export default function TeamSection({ members = ["miguel", "emanuel"] }: TeamSec
         name: "Emanuel Rosa",
         role: "Técnico de Apoio e Manutenção",
         bio: "Responsável pela manutenção das infraestruturas e apoia nas Atividades Turísticas e Eventos.",
-        image: emanuelPhoto,
-        imageScale: "scale-[0.7]"
+        image: emanuelPhoto
       },
       en: {
         name: "Emanuel Rosa",
         role: "Support and Maintenance Technician",
         bio: "Responsible for infrastructure maintenance and supports Tourism Activities and Events.",
-        image: emanuelPhoto,
-        imageScale: "scale-[0.7]"
+        image: emanuelPhoto
       }
     }
   };
