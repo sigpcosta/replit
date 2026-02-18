@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Users } from "lucide-react";
 import emanuelPhoto from "@assets/foto_1771450043323.jpeg";
+import miguelPhoto from "@assets/image_1771450466879.png";
 
 interface TeamMember {
   name: string;
@@ -22,12 +23,14 @@ export default function TeamSection({ members = ["miguel", "emanuel"] }: TeamSec
       pt: {
         name: "Miguel Moniz",
         role: "Coordenador de Atividades",
-        bio: "Técnico Especialista em Turismo de Natureza e Aventura. Organiza tours personalizados, jogos de estratégia e todas as nossas atividades e eventos."
+        bio: "Técnico Especialista em Turismo de Natureza e Aventura. Organiza tours personalizados, jogos de estratégia e todas as nossas atividades e eventos.",
+        image: miguelPhoto
       },
       en: {
         name: "Miguel Moniz",
         role: "Activities Coordinator",
-        bio: "Specialist Technician in Nature and Adventure Tourism. Organizes personalized tours, strategy games and all our activities and events."
+        bio: "Specialist Technician in Nature and Adventure Tourism. Organizes personalized tours, strategy games and all our activities and events.",
+        image: miguelPhoto
       }
     },
     emanuel: {
