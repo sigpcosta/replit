@@ -99,8 +99,11 @@ export default function EventosPage() {
               <p className="text-muted-foreground text-lg mb-6">
                 {t.events.heroP1}
               </p>
-              <p className="text-muted-foreground text-lg mb-6">
+              <p className="text-muted-foreground text-lg mb-4">
                 {t.events.heroP2}
+              </p>
+              <p className="text-muted-foreground text-lg mb-6">
+                {t.events.heroP3extra}
               </p>
               <p className="text-muted-foreground text-lg mb-8">
                 {language === 'pt' 
