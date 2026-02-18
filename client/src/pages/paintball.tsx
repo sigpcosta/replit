@@ -380,6 +380,11 @@ export default function PaintballPage() {
                     </li>
                   </ul>
                 </div>
+                <div className="md:col-span-2 mt-2">
+                  <p className="text-sm font-semibold text-primary">
+                    {t.paintball.offSiteNote}
+                  </p>
+                </div>
               </div>
             </Card>
           </div>
