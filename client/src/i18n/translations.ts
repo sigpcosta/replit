@@ -580,7 +580,7 @@ export const translations = {
       },
       activityTypes: {
         lasertag: "Lasertag, Paintball, GelBlasters & NERFs",
-        lasertagDesc: "Atividades de estratégia ao ar livre num campo construído de raiz, como se estivesse a jogar 'Call of Duty' em tempo real. Desafie-se!",
+        lasertagDesc: "Atividades de estratégia ao ar livre num campo construído de raiz, ou num local à tua escolha, como se estivesse a jogar 'Call of Duty' em tempo real. Desafie-se!",
         vantours: "Tours em Carrinha",
         vantoursDesc: "Venha descobrir a ilha e todos os seus recantos únicos na nossa carrinha elétrica, silenciosa, ecológica e confortável. Programas pré-definidos ou à medida para si, com ou sem almoço incluído.",
         sups: "SUPs & Kayaks",
@@ -609,10 +609,10 @@ export const translations = {
       altSUP: "SUP paddleboarding",
       altTour: "Tour em carrinha elétrica",
       lasertagFeatures: [
-        "Campo construído de raiz",
-        "Lasertag, Paintball, GelBlasters e NERFs",
-        "Experiência tipo 'Call of Duty'",
-        "Ideal para grupos e festas"
+        "Trincheiras e obstáculos reais",
+        "Experiência real e imersiva",
+        "Ideal para grupos e festas",
+        "Vários tipos de jogos"
       ],
       vantoursFeatures: [
         "Carrinha confortável",
@@ -2012,7 +2012,7 @@ export const translations = {
       },
       activityTypes: {
         lasertag: "Lasertag, Paintball, GelBlasters & NERFs",
-        lasertagDesc: "Outdoor strategy activities in a built field from the scratch, as if you were playing 'Call of Duty' in real time. Challenge yourself!",
+        lasertagDesc: "Outdoor strategy activities in a purpose-built field, or at a location of your choice, as if you were playing 'Call of Duty' in real time. Challenge yourself!",
         vantours: "Van Tours",
         vantoursDesc: "Come and discover the island and all its unique hidden spots in our electric, silent, eco-friendly and comfortable van. Pre-defined or tailor-made programs for you, with or without lunch included.",
         sups: "SUPs & Kayaks",
@@ -2041,10 +2041,10 @@ export const translations = {
       altSUP: "SUP paddleboarding",
       altTour: "Electric van island tour",
       lasertagFeatures: [
-        "Built field from scratch",
-        "Lasertag, Paintball, GelBlasters and NERFs",
-        "'Call of Duty' type experience",
-        "Ideal for groups and parties"
+        "Real trenches and obstacles",
+        "Real and immersive experience",
+        "Ideal for groups and parties",
+        "Various types of games"
       ],
       vantoursFeatures: [
         "Comfortable van",
