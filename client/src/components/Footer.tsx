@@ -1,5 +1,5 @@
 import { useLanguage } from "@/i18n/LanguageContext";
-import { Facebook, Instagram, Mail, Phone, MapPin, Heart, ExternalLink, FileText, Map } from "lucide-react";
+import { Facebook, Instagram, Mail, Phone, MapPin, ExternalLink, FileText, Map } from "lucide-react";
 import logoUrl from "@assets/LogoAzores4fun360_1763895112388.gif";
 import marcaAcoresPtLogo from "@assets/AF_ACO_SELO_POS_PT_1767027675830.jpg";
 import marcaAcoresEnLogo from "@assets/AF_ACO_SELO_POS_ING_1767027687274.jpg";
@@ -309,9 +309,6 @@ export default function Footer() {
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
             <p>&copy; {currentYear} Azores4fun. {t.footer.rights}</p>
-            <p className="flex items-center gap-1">
-              {t.footer.developedBy} <Heart className="w-4 h-4 text-red-500 fill-red-500" /> {t.footer.inAzores}
-            </p>
           </div>
         </div>
       </div>
