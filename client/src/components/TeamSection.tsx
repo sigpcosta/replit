@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Users } from "lucide-react";
-import emanuelPhoto from "@assets/foto_1771450043323.jpeg";
+import emanuelPhoto from "@assets/foto_1771453895726.jpeg";
 import miguelPhoto from "@assets/image_1771450466879.png";
 
 interface TeamMember {
