@@ -103,7 +103,15 @@ export default function EventosPage() {
                 {t.events.heroP2}
               </p>
               <p className="text-muted-foreground text-lg mb-6">
-                {t.events.heroP3extra}
+                {t.events.heroP3extraBefore}
+                <Link href="/paintball" className="text-primary hover:underline font-medium" data-testid="link-events-lasertag">LaserTag</Link>
+                {", "}
+                <Link href="/paintball" className="text-primary hover:underline font-medium" data-testid="link-events-paintball">PaintBall</Link>
+                {", "}
+                <Link href="/paintball" className="text-primary hover:underline font-medium" data-testid="link-events-gelblaster">GelBlaster</Link>
+                {language === 'pt' ? ' e ' : ' and '}
+                <Link href="/paintball" className="text-primary hover:underline font-medium" data-testid="link-events-nerfs">NERFs</Link>
+                {t.events.heroP3extraAfter}
               </p>
               <p className="text-muted-foreground text-lg mb-8">
                 {language === 'pt' 
