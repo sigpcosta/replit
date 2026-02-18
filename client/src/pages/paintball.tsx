@@ -381,7 +381,7 @@ export default function PaintballPage() {
                   </ul>
                 </div>
                 <div className="md:col-span-2 mt-2">
-                  <p className="text-sm font-semibold text-primary">
+                  <p className="text-sm font-semibold text-foreground">
                     {t.paintball.offSiteNote}
                   </p>
                 </div>
