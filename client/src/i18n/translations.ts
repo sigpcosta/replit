@@ -833,7 +833,8 @@ export const translations = {
         "Equipamento de som e música",
         "Catering através de parceiros",
         "Montagem e desmontagem incluídas",
-        "Seguros de responsabilidade civil"
+        "Seguros de responsabilidade civil",
+        "Possibilidade de realizar atividades em qualquer local"
       ],
       cards: {
         tents: "Tendas de Grandes Dimensões",
@@ -2265,7 +2266,8 @@ export const translations = {
         "Sound and music equipment",
         "Catering through partners",
         "Setup and teardown included",
-        "Liability insurance"
+        "Liability insurance",
+        "Possibility of holding activities at any location"
       ],
       cards: {
         tents: "Large-Sized Tents",
