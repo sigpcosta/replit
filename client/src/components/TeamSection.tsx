@@ -10,6 +10,7 @@ interface TeamMember {
   bio: string;
   image?: string;
   imageScale?: string;
+  imagePosition?: string;
 }
 
 interface TeamSectionProps {
@@ -39,13 +40,15 @@ export default function TeamSection({ members = ["miguel", "emanuel"] }: TeamSec
         name: "Emanuel Rosa",
         role: "Técnico de Apoio e Manutenção",
         bio: "Responsável pela manutenção das infraestruturas e apoia nas Atividades Turísticas e Eventos.",
-        image: emanuelPhoto
+        image: emanuelPhoto,
+        imagePosition: "center 30%"
       },
       en: {
         name: "Emanuel Rosa",
         role: "Support and Maintenance Technician",
         bio: "Responsible for infrastructure maintenance and supports Tourism Activities and Events.",
-        image: emanuelPhoto
+        image: emanuelPhoto,
+        imagePosition: "center 30%"
       }
     }
   };
@@ -83,7 +86,7 @@ export default function TeamSection({ members = ["miguel", "emanuel"] }: TeamSec
           <Card key={index} className="p-6 text-center hover-elevate transition-all">
             <div className="w-20 h-20 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center overflow-hidden">
               {member.image ? (
-                <img src={member.image} alt={member.name} className={`w-full h-full object-cover ${member.imageScale || ''}`} />
+                <img src={member.image} alt={member.name} className={`w-full h-full object-cover ${member.imageScale || ''}`} style={member.imagePosition ? { objectPosition: member.imagePosition } : undefined} />
               ) : (
                 <span className="text-2xl font-bold text-primary">
                   {member.name.split(' ').map(n => n[0]).join('')}
