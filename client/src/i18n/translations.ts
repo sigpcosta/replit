@@ -43,7 +43,7 @@ export const translations = {
       },
       activities: {
         title: "Atividades de Animação Turística",
-        description: "Tours de Carrinha, Trilhos pedestres, Lasertag, Paintball, aluguer de SUPs e muito mais.",
+        description: "Tours em Carrinha ou Carro, Trilhos pedestres, Lasertag, Paintball, aluguer de SUPs e muito mais.",
       },
       events: {
         title: "Eventos",
@@ -560,7 +560,7 @@ export const translations = {
     // Activities Page
     activities: {
       title: "Atividades de Animação Turística",
-      subtitle: "Aventuras emocionantes e experiências únicas no Faial. Trilhos, Transferes, Tours de Carrinha, Lasertag, Paintball, atividades aquáticas ou pacotes multiatividades.",
+      subtitle: "Aventuras emocionantes e experiências únicas no Faial. Trilhos, Transferes, Tours em Carrinha ou Carro, Lasertag, Paintball, atividades aquáticas ou pacotes multiatividades.",
       heroTitle: "Aventura e Emoção nos Açores",
       heroP1: "A Azores4fun oferece uma ampla variedade de atividades de animação turística para tornar a sua visita aos Açores verdadeiramente inesquecível. De passeios pedestres, em trilhos únicos, a passeios de carrinha ecológicos, a jogos de estratégia emocionantes até experiências aquáticas relaxantes.",
       heroP2: "Com equipamento de qualidade, guias experientes e um compromisso com a segurança, garantimos que cada atividade seja uma experiência memorável.",
@@ -581,7 +581,7 @@ export const translations = {
       activityTypes: {
         lasertag: "Lasertag, Paintball, GelBlasters & NERFs",
         lasertagDesc: "Atividades de estratégia ao ar livre num campo construído de raiz, ou num local à tua escolha, como se estivesse a jogar 'Call of Duty' em tempo real. Desafie-se!",
-        vantours: "Tours em Carrinha",
+        vantours: "Tour em Carrinha ou Carro",
         vantoursDesc: "Venha descobrir a ilha e todos os seus recantos únicos na nossa carrinha elétrica, silenciosa, ecológica e confortável. Programas pré-definidos ou à medida para si, com ou sem almoço incluído.",
         sups: "SUPs & Kayaks",
         supsDesc: "Com os nossos SUPs e kayaks insufláveis pode aventurar-se sozinho em portos e praias por toda a ilha do Faial e ter o privilégio de conhecê-la numa outra perspetiva.",
@@ -799,6 +799,78 @@ export const translations = {
         teamVsTeam: "https://www.youtube.com/watch?v=gjLDjIs6MU0",
         freeForAll: "https://www.youtube.com/watch?v=X8SibLUZ8WA"
       }
+    },
+
+    // Tour Page
+    tourPage: {
+      title: "Tour Eco Guiado na Ilha do Faial",
+      subtitle: "Descubra as paisagens mais deslumbrantes do Faial com um guia local",
+      heroIntro: "Explore a deslumbrante ilha do Faial, desde as paisagens lunares do Vulcão dos Capelinhos até à exuberância da Caldeira, locais classificados como Reserva da Biosfera pela UNESCO, com um guia local numa carrinha silenciosa, sem carbono, 100% elétrica.",
+      heroP1: "Desfrute de um ambiente privado ou de pequeno grupo, com um itinerário flexível e atividades adaptadas aos seus interesses, ritmo e tempo disponível.",
+      heroP2: "Faça paragens cénicas para memórias inesquecíveis e descubra lugares escondidos que só os locais conhecem. Se o seu tempo e disposição permitirem, adicione caminhadas curtas opcionais ou mergulhos em piscinas naturais, passeios relaxados ao longo de uma praia de areia preta, ou até um tour de stand-up paddle ou kayak na icónica Baía de Porto Pim.",
+      heroP3: "Alimente a sua aventura com autêntica cozinha açoriana – escolha entre uma refeição relaxada num restaurante ou um piquenique cénico na natureza, com opções de refeições ligeiras disponíveis.",
+      heroP4: "Dependendo da duração do tour e atividades extra, as seguintes paragens podem ser incluídas no seu roteiro: Espalamaca, Praia do Almoxarife, Caldeira, Vulcão dos Capelinhos, Praia Norte da Fajã, Monte da Guia e muito mais.",
+      heroP5: "Descubra as paisagens mais marcantes do Faial, por terra ou, com a nossa oferta extra de kayak, por mar, onde cada curva revela uma nova paisagem de postal. Experimente e aprenda sobre a história local, plantas endémicas e paisagens vulcânicas.",
+      sectionHighlights: "Destaques do Tour",
+      highlights: [
+        "Maravilhe-se com as paisagens lunares do Vulcão dos Capelinhos",
+        "Explore a exuberante Caldeira, Reserva da Biosfera da UNESCO",
+        "Desfrute de um itinerário flexível adaptado aos interesses do grupo",
+        "Descubra locais escondidos e miradouros conhecidos apenas pelos locais",
+        "Escolha atividades opcionais como caminhadas, natação ou kayak"
+      ],
+      sectionIncludes: "O Que Está Incluído",
+      includes: [
+        "Guia local com formação profissional e profundo conhecimento da Ilha do Faial",
+        "Experiência privada",
+        "Recolha e entrega em qualquer ponto da Ilha do Faial",
+        "Acesso a locais escondidos e miradouros cénicos",
+        "Paragens ideais para fotografia",
+        "Experiência relaxada adequada para todas as idades e visitantes de primeira vez",
+        "Recomendações gastronómicas locais e tempo para uma pausa cénica (almoço não incluído)",
+        "Experiência totalmente segurada"
+      ],
+      sectionBring: "O Que Trazer",
+      bringItems: [
+        "Sapatos confortáveis",
+        "Fato de banho",
+        "Máquina fotográfica",
+        "Snacks",
+        "Protetor solar",
+        "Roupa adequada ao clima"
+      ],
+      sectionDetails: "Detalhes do Tour",
+      duration: "Duração: 4 horas (ajustável)",
+      languages: "Idiomas: Português, Inglês",
+      accessibility: "Acessível a cadeira de rodas",
+      groupType: "Grupo privado",
+      cancellation: "Cancelamento gratuito até 24h antes",
+      payLater: "Reserve agora e pague depois",
+      sectionStops: "Paragens Possíveis",
+      stops: [
+        "Espalamaca – Miradouro panorâmico",
+        "Praia do Almoxarife – Praia de areia escura",
+        "Caldeira – Cratera vulcânica e Reserva da Biosfera UNESCO",
+        "Vulcão dos Capelinhos – Paisagem lunar única",
+        "Praia Norte da Fajã – Costa norte selvagem",
+        "Monte da Guia – Vista sobre a Horta e Porto Pim",
+        "Porto Pim – Baía icónica para SUP ou Kayak"
+      ],
+      sectionOptional: "Atividades Opcionais",
+      optionalActivities: [
+        "Caminhadas curtas em trilhos locais",
+        "Natação em piscinas naturais",
+        "Passeios em praia de areia preta",
+        "Stand-up Paddle na Baía de Porto Pim",
+        "Tour de Kayak",
+        "Piquenique cénico na natureza"
+      ],
+      bookNow: "Reservar Tour",
+      bookOnGetYourGuide: "Reservar no GetYourGuide",
+      getYourGuideUrl: "https://www.getyourguide.com/en-gb/cedros-l124818/faial-island-guided-eco-tour-t1027925/",
+      priceFrom: "A partir de",
+      pricePerPerson: "por pessoa",
+      ecoNote: "Carrinha 100% elétrica – Zero emissões, máximo conforto"
     },
 
     // Events Page
@@ -1479,7 +1551,7 @@ export const translations = {
       },
       activities: {
         title: "Tourism Activities",
-        description: "Van Tours, Hiking Trails, Lasertag, Paintball, SUP rentals and much more.",
+        description: "Van or Car Tours, Hiking Trails, Lasertag, Paintball, SUP rentals and much more.",
       },
       events: {
         title: "Events",
@@ -1996,7 +2068,7 @@ export const translations = {
     // Activities Page
     activities: {
       title: "Tourism Activities",
-      subtitle: "Exciting adventures and unique experiences in Faial. Trails, Transfers, Van Tours, Lasertag, Paintball, water activities or multi-activity packages.",
+      subtitle: "Exciting adventures and unique experiences in Faial. Trails, Transfers, Van or Car Tours, Lasertag, Paintball, water activities or multi-activity packages.",
       heroTitle: "Adventure and Excitement in the Azores",
       heroP1: "Azores4fun offers a wide variety of tourism activities to make your visit to the Azores truly unforgettable. From hiking trails on unique paths, to eco-friendly van tours, to exciting strategy games and relaxing water experiences.",
       heroP2: "With quality equipment, experienced guides and a commitment to safety, we ensure each activity is a memorable experience.",
@@ -2017,7 +2089,7 @@ export const translations = {
       activityTypes: {
         lasertag: "Lasertag, Paintball, GelBlasters & NERFs",
         lasertagDesc: "Outdoor strategy activities in a purpose-built field, or at a location of your choice, as if you were playing 'Call of Duty' in real time. Challenge yourself!",
-        vantours: "Van Tours",
+        vantours: "Van or Car Tour",
         vantoursDesc: "Come and discover the island and all its unique hidden spots in our electric, silent, eco-friendly and comfortable van. Pre-defined or tailor-made programs for you, with or without lunch included.",
         sups: "SUPs & Kayaks",
         supsDesc: "With our inflatable SUPs and kayaks you can venture on your own into ports and beaches throughout the Faial island and have the privilege of getting to know it from another perspective.",
@@ -2235,6 +2307,78 @@ export const translations = {
         teamVsTeam: "https://www.youtube.com/watch?v=gjLDjIs6MU0",
         freeForAll: "https://www.youtube.com/watch?v=X8SibLUZ8WA"
       }
+    },
+
+    // Tour Page
+    tourPage: {
+      title: "Faial Island Guided Eco Tour",
+      subtitle: "Discover Faial's most stunning landscapes with a local guide",
+      heroIntro: "Explore the stunning island of Faial, from the lunar landscapes of the Capelinhos Volcano to the exuberance of the Caldeira Crater, UNESCO Biosphere Reserve spots, with a local guide in a silent, carbon-free, 100% electric van.",
+      heroP1: "Enjoy a private or small-group environment, with a flexible itinerary and activities adapted to your interests, pace, and time available.",
+      heroP2: "Make scenic stops for unforgettable memories, and see hidden places that only locals know. If your time and mood allow, add optional short hikes or swims in natural pools, relaxed walks along a black-sandy beach, or even a stand-up paddle or kayak tour on the iconic Porto Pim Bay.",
+      heroP3: "Fuel your adventure with authentic Azorean cuisine – choose between a relaxed restaurant meal or a scenic picnic in nature, with light meal options available.",
+      heroP4: "Depending on the tour duration and extra activities, the following stops can be included on your route: Espalamaca, Almoxarife Beach, Caldeira Crater, Capelinhos Volcano, North Beach Fajã, Monte da Guia, and more.",
+      heroP5: "Discover Faial's most striking landscapes, by land or, with our extra kayak offer, by sea, where each turn reveals a new postcard-worthy scene. Experience and learn about local history, endemic plants, and volcanic landscapes.",
+      sectionHighlights: "Tour Highlights",
+      highlights: [
+        "Marvel at the lunar landscapes of the Capelinhos Volcano",
+        "Explore the lush Caldeira Crater, a UNESCO Biosphere Reserve",
+        "Enjoy a flexible itinerary tailored to your group's interests",
+        "Discover hidden spots and scenic viewpoints known only to locals",
+        "Choose from optional activities like hiking, swimming, or kayaking"
+      ],
+      sectionIncludes: "What's Included",
+      includes: [
+        "Local guide with professional training and strong knowledge of Faial Island",
+        "Private experience",
+        "Pickup and drop-off anywhere on Faial Island",
+        "Access to hidden spots and scenic viewpoints",
+        "Photography-friendly stops",
+        "Relaxed experience suitable for all ages and first-time visitors",
+        "Local food recommendations and time for a scenic break (lunch not included)",
+        "Fully insured experience"
+      ],
+      sectionBring: "What to Bring",
+      bringItems: [
+        "Comfortable shoes",
+        "Swimwear",
+        "Camera",
+        "Snacks",
+        "Sunscreen",
+        "Weather-appropriate clothing"
+      ],
+      sectionDetails: "Tour Details",
+      duration: "Duration: 4 hours (adjustable)",
+      languages: "Languages: English, Portuguese",
+      accessibility: "Wheelchair accessible",
+      groupType: "Private group",
+      cancellation: "Free cancellation up to 24 hours in advance",
+      payLater: "Reserve now & pay later",
+      sectionStops: "Possible Stops",
+      stops: [
+        "Espalamaca – Panoramic viewpoint",
+        "Almoxarife Beach – Dark sand beach",
+        "Caldeira Crater – Volcanic crater and UNESCO Biosphere Reserve",
+        "Capelinhos Volcano – Unique lunar landscape",
+        "North Beach Fajã – Wild north coast",
+        "Monte da Guia – View over Horta and Porto Pim",
+        "Porto Pim – Iconic bay for SUP or Kayak"
+      ],
+      sectionOptional: "Optional Activities",
+      optionalActivities: [
+        "Short hikes on local trails",
+        "Swimming in natural pools",
+        "Walks along black-sand beach",
+        "Stand-up Paddle on Porto Pim Bay",
+        "Kayak tour",
+        "Scenic picnic in nature"
+      ],
+      bookNow: "Book Tour",
+      bookOnGetYourGuide: "Book on GetYourGuide",
+      getYourGuideUrl: "https://www.getyourguide.com/en-gb/cedros-l124818/faial-island-guided-eco-tour-t1027925/",
+      priceFrom: "From",
+      pricePerPerson: "per person",
+      ecoNote: "100% electric van – Zero emissions, maximum comfort"
     },
 
     // Events Page

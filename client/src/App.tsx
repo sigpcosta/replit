@@ -11,6 +11,7 @@ import Home from "@/pages/home";
 import AlojamentoPage from "@/pages/alojamento";
 import AnimacaoPage from "@/pages/animacao";
 import PaintballPage from "@/pages/paintball";
+import ToursPage from "@/pages/tours";
 import EventosPage from "@/pages/eventos";
 import TatuagemPage from "@/pages/tatuagem";
 import ImobiliariaPage from "@/pages/imobiliaria";
@@ -37,6 +38,7 @@ function Router() {
       <Route path="/alojamento" component={AlojamentoPage} />
       <Route path="/animacao" component={AnimacaoPage} />
       <Route path="/paintball" component={PaintballPage} />
+      <Route path="/tours" component={ToursPage} />
       <Route path="/eventos" component={EventosPage} />
       <Route path="/tatuagem" component={TatuagemPage} />
       <Route path="/imobiliaria" component={ImobiliariaPage} />

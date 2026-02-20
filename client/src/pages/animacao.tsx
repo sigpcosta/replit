@@ -44,7 +44,8 @@ export default function AnimacaoPage() {
       icon: Car,
       title: t.activities.activityTypes.vantours,
       description: t.activities.activityTypes.vantoursDesc,
-      features: t.activities.vantoursFeatures
+      features: t.activities.vantoursFeatures,
+      moreInfoLink: "/tours"
     },
     {
       icon: Waves,
