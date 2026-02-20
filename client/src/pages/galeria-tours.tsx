@@ -17,7 +17,6 @@ import carrinha4 from "@assets/carrinha4_1767021825286.jpg";
 import trilhos from "@assets/trilhos_(1)_1771568808376.jpg";
 import kayak1 from "@assets/kayake1_1766745835508.jpg";
 import kayaks from "@assets/Kayakes_1766856007742.jpg";
-import kayaks2 from "@assets/Kayakes_1771568808372.jpg";
 import sups from "@assets/SUPs_1771568808374.jpg";
 import baiaEspalamaca from "@assets/baia_horta_da_espalamaca_1771568808367.jpg";
 import baiaMontedaguia from "@assets/baia_horta_do_montedaguia_1771568808368.jpg";
@@ -46,7 +45,6 @@ const galleryImages = [
   { src: baiaMontedaguiaZoom, altPt: "Vista panorâmica do Monte da Guia", altEn: "Panoramic view from Monte da Guia" },
   { src: kayak1, altPt: "Kayak na baía da Horta", altEn: "Kayaking in Horta bay" },
   { src: kayaks, altPt: "Kayaks prontos para aventura", altEn: "Kayaks ready for adventure" },
-  { src: kayaks2, altPt: "Passeio de kayak", altEn: "Kayak tour" },
   { src: sups, altPt: "Stand-up Paddle na baía", altEn: "Stand-up Paddle in the bay" },
   { src: navegar, altPt: "Navegar nos Açores", altEn: "Sailing in the Azores" },
   { src: fotoFundo, altPt: "Paisagem do Faial", altEn: "Faial landscape" },
