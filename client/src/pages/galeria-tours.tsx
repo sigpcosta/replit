@@ -29,6 +29,7 @@ import img5151 from "@assets/IMG-5151_1771568808371.jpg";
 import img5158 from "@assets/IMG-5158_1771568808371.jpg";
 import navegar from "@assets/navegar_3.jpg";
 import foto20220702 from "@assets/20220702_151922_1771568808366.jpg";
+import carroTours from "@assets/image_1771571365682.png";
 
 const galleryImages = [
   { src: tourHalfDay, altPt: "Tour de meio dia pela ilha do Faial", altEn: "Half day tour around Faial island" },
@@ -52,6 +53,7 @@ const galleryImages = [
   { src: img5151, altPt: "Paisagem natural dos Açores", altEn: "Natural Azores landscape" },
   { src: img5158, altPt: "Natureza do Faial", altEn: "Faial nature" },
   { src: foto20220702, altPt: "Vista panorâmica do Faial", altEn: "Panoramic view of Faial" },
+  { src: carroTours, altPt: "Carro para tours e transfers", altEn: "Car for tours and transfers" },
 ];
 
 export default function GaleriaTours() {
