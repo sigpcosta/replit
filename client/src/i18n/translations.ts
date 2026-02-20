@@ -870,7 +870,20 @@ export const translations = {
       getYourGuideUrl: "https://www.getyourguide.com/en-gb/cedros-l124818/faial-island-guided-eco-tour-t1027925/",
       priceFrom: "A partir de",
       pricePerPerson: "por pessoa",
-      ecoNote: "Carrinha 100% elétrica – Zero emissões, máximo conforto"
+      ecoNote: "Carrinha 100% elétrica – Zero emissões, máximo conforto",
+      vehicleNote: "Todos os nossos tours e transfers podem ser realizados na nossa carrinha elétrica de 9 lugares ou, principalmente para grupos mais pequenos, num confortável carro. Ambas as opções garantem uma experiência ecológica, silenciosa e confortável.",
+      vehicleNoteTitle: "Carrinha Elétrica ou Carro",
+      sectionTransfer: "Transfer com Guia Turístico",
+      transferDesc: "Relaxe ao máximo e deixe-nos tratar da logística dos seus transportes na ilha. Seja à chegada, na hora da partida ou quando quer simplesmente desfrutar de um trilho durante a sua estadia, fazemos transfers, com Guia, até 8 pessoas, de e para o aeroporto, terminal marítimo ou para o início e/ou fim do trilho. Faça um dois em 1: desloque-se e vá conhecendo a ilha.",
+      transferFeatures: [
+        "Serviço Profissional com Guia",
+        "Informação turística durante a viagem",
+        "De/para aeroporto ou terminal marítimo",
+        "Transfers para início e/ou fim de trilhos",
+        "Pré-reserva disponível",
+        "Flexibilidade total de horários"
+      ],
+      sectionGallery: "Galeria de Imagens"
     },
 
     // Events Page
@@ -2378,7 +2391,20 @@ export const translations = {
       getYourGuideUrl: "https://www.getyourguide.com/en-gb/cedros-l124818/faial-island-guided-eco-tour-t1027925/",
       priceFrom: "From",
       pricePerPerson: "per person",
-      ecoNote: "100% electric van – Zero emissions, maximum comfort"
+      ecoNote: "100% electric van – Zero emissions, maximum comfort",
+      vehicleNote: "All our tours and transfers can be done in our 9-seater electric van or, mainly for smaller groups, in a comfortable car. Both options guarantee an eco-friendly, silent and comfortable experience.",
+      vehicleNoteTitle: "Electric Van or Car",
+      sectionTransfer: "Transfer with Tourist Guide",
+      transferDesc: "Relax and let us handle the logistics of your transport on the island. Whether on arrival, departure time or when you simply want to enjoy a trail during your stay, we do transfers, with a Guide, for up to 8 people, to and from the airport, maritime terminal or to the start and/or end of the trail. Do a two in one: travel and get to know the island.",
+      transferFeatures: [
+        "Professional Service with Guide",
+        "Tourist information during the trip",
+        "To/from airport or maritime terminal",
+        "Transfers to start and/or end of trails",
+        "Pre-booking available",
+        "Full schedule flexibility"
+      ],
+      sectionGallery: "Image Gallery"
     },
 
     // Events Page

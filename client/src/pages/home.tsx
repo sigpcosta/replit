@@ -142,7 +142,7 @@ export default function Home() {
               image={transferImage}
               imagePosition="left"
               highlights={t.featured.transfer.highlights}
-              link="/animacao"
+              link="/tours"
             />
 
             <FeaturedActivity
@@ -169,7 +169,7 @@ export default function Home() {
               image={vanImage}
               imagePosition="right"
               highlights={t.featured.tours.highlights}
-              link="/animacao"
+              link="/tours"
             />
 
             <FeaturedActivity
