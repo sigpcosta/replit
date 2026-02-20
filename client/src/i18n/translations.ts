@@ -840,7 +840,7 @@ export const translations = {
         "Roupa adequada ao clima"
       ],
       sectionDetails: "Detalhes do Tour",
-      duration: "Duração: 4 horas (ajustável)",
+      duration: "Duração: 4 a 8 horas (ajustável)",
       languages: "Idiomas: Português, Inglês",
       accessibility: "Acessível a cadeira de rodas",
       groupType: "Grupo privado",
@@ -2348,7 +2348,7 @@ export const translations = {
         "Weather-appropriate clothing"
       ],
       sectionDetails: "Tour Details",
-      duration: "Duration: 4 hours (adjustable)",
+      duration: "Duration: 4 to 8 hours (adjustable)",
       languages: "Languages: English, Portuguese",
       accessibility: "Wheelchair accessible",
       groupType: "Private group",
