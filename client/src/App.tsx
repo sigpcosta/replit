@@ -25,6 +25,7 @@ import TermosVendingPage from "@/pages/termos-vending";
 import PrivacidadePage from "@/pages/privacidade";
 import CookiesPage from "@/pages/cookies";
 import GaleriaApartamentoPage from "@/pages/galeria-apartamento";
+import GaleriaTours from "@/pages/galeria-tours";
 import ContactPage from "@/pages/contact";
 import AdminPage from "@/pages/admin";
 import GuestPage from "@/pages/guest";
@@ -52,6 +53,7 @@ function Router() {
       <Route path="/privacidade" component={PrivacidadePage} />
       <Route path="/cookies" component={CookiesPage} />
       <Route path="/galeria-apartamento/:slug" component={GaleriaApartamentoPage} />
+      <Route path="/galeria-tours" component={GaleriaTours} />
       <Route path="/contact" component={ContactPage} />
       <Route path="/admin" component={AdminPage} />
       <Route path="/guest" component={GuestPage} />

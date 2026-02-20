@@ -6,30 +6,29 @@ import TeamSection from "@/components/TeamSection";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Clock, Globe, Users, Check, Leaf, Camera, Mountain, Waves, Sun, Backpack, ExternalLink, Accessibility, CalendarX2, CreditCard, Car, Plane, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { MapPin, Clock, Globe, Users, Check, Leaf, Camera, Mountain, Waves, Sun, Backpack, Accessibility, CalendarX2, CreditCard, Car, Plane, Images } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "wouter";
 
 import tourImage1 from "@assets/carrinha4_1767021825286.jpg";
-import tourImage2 from "@assets/carrinha1_1766745835506.jpg";
-import tourImage3 from "@assets/carrinha3_1766744828213.jpg";
 import tourImage4 from "@assets/tour_half_day_(1)_1771568808374.jpg";
 import tourImage5 from "@assets/Transfer_vulcão_capelinhos_1771568808375.jpg";
 import tourImage6 from "@assets/trasnfer_caldeira_1771568808376.jpg";
+import nascerSol from "@assets/nascer_do_sol_1771568808372.jpg";
+import porSolPortoPim from "@assets/por_sol_porto_pim_(1)_1771568808373.jpg";
 
-const galleryImages = [
+const previewImages = [
   { src: tourImage4, alt: "Tour half day Faial" },
   { src: tourImage5, alt: "Transfer Vulcão dos Capelinhos" },
   { src: tourImage6, alt: "Transfer Caldeira" },
+  { src: nascerSol, alt: "Nascer do sol nos Açores" },
+  { src: porSolPortoPim, alt: "Pôr do sol Porto Pim" },
   { src: tourImage1, alt: "Carrinha elétrica tour" },
-  { src: tourImage2, alt: "Tour pela ilha do Faial" },
-  { src: tourImage3, alt: "Atividades turísticas Faial" },
 ];
 
 export default function ToursPage() {
   const { t } = useLanguage();
   const [contactOpen, setContactOpen] = useState(false);
-  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   return (
     <div className="min-h-screen bg-background">
@@ -279,15 +278,11 @@ export default function ToursPage() {
               {t.tourPage.sectionGallery}
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-              {galleryImages.map((image, index) => (
+              {previewImages.map((image, index) => (
                 <Card
                   key={index}
-                  onClick={() => setLightboxIndex(index)}
-                  className="aspect-[4/3] overflow-hidden cursor-pointer p-0"
+                  className="aspect-[4/3] overflow-hidden p-0"
                   data-testid={`gallery-image-${index}`}
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={(e) => { if (e.key === 'Enter') setLightboxIndex(index); }}
                 >
                   <img
                     src={image.src}
@@ -298,59 +293,16 @@ export default function ToursPage() {
                 </Card>
               ))}
             </div>
-          </div>
-        </section>
-
-        {lightboxIndex !== null && (
-          <div
-            className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
-            onClick={() => setLightboxIndex(null)}
-            data-testid="lightbox-overlay"
-          >
-            <Button
-              size="icon"
-              variant="ghost"
-              className="absolute top-4 right-4 text-white z-50"
-              onClick={() => setLightboxIndex(null)}
-              data-testid="button-close-lightbox"
-            >
-              <X className="w-6 h-6" />
-            </Button>
-            <div className="flex items-center gap-4 max-w-5xl w-full">
-              <Button
-                size="icon"
-                variant="ghost"
-                className="text-white flex-shrink-0"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setLightboxIndex((lightboxIndex - 1 + galleryImages.length) % galleryImages.length);
-                }}
-                data-testid="button-lightbox-prev"
-              >
-                <ChevronLeft className="w-8 h-8" />
-              </Button>
-              <img
-                src={galleryImages[lightboxIndex].src}
-                alt={galleryImages[lightboxIndex].alt}
-                className="max-h-[80vh] w-full object-contain rounded-lg"
-                onClick={(e) => e.stopPropagation()}
-                data-testid="img-lightbox-current"
-              />
-              <Button
-                size="icon"
-                variant="ghost"
-                className="text-white flex-shrink-0"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setLightboxIndex((lightboxIndex + 1) % galleryImages.length);
-                }}
-                data-testid="button-lightbox-next"
-              >
-                <ChevronRight className="w-8 h-8" />
-              </Button>
+            <div className="text-center mt-8">
+              <Link href="/galeria-tours">
+                <Button size="lg" data-testid="button-view-more-photos">
+                  <Images className="w-5 h-5 mr-2" />
+                  {t.tourPage.viewMorePhotos}
+                </Button>
+              </Link>
             </div>
           </div>
-        )}
+        </section>
 
         <section className="py-12 bg-background">
           <div className="container mx-auto px-4">

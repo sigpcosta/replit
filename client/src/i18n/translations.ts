@@ -883,7 +883,8 @@ export const translations = {
         "Pré-reserva disponível",
         "Flexibilidade total de horários"
       ],
-      sectionGallery: "Galeria de Imagens"
+      sectionGallery: "Galeria de Imagens",
+      viewMorePhotos: "Ver Mais Fotos"
     },
 
     // Events Page
@@ -2404,7 +2405,8 @@ export const translations = {
         "Pre-booking available",
         "Full schedule flexibility"
       ],
-      sectionGallery: "Image Gallery"
+      sectionGallery: "Image Gallery",
+      viewMorePhotos: "View More Photos"
     },
 
     // Events Page
