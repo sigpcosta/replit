@@ -373,12 +373,6 @@ export default function ToursPage() {
               >
                 {t.tourPage.bookNow}
               </Button>
-              <a href={t.tourPage.getYourGuideUrl} target="_blank" rel="noopener noreferrer" data-testid="link-getyourguide">
-                <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  {t.tourPage.bookOnGetYourGuide}
-                </Button>
-              </a>
               <Link href="/animacao" data-testid="link-back-activities">
                 <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground">
                   {t.nav.activities}
