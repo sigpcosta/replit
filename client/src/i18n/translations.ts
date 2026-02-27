@@ -1284,7 +1284,7 @@ export const translations = {
         title: "O Nosso Compromisso com a Sustentabilidade",
         intro: "A sustentabilidade é o pilar central da Azores4fun. Atuamos com o objetivo de reduzir o impacto negativo no ambiente e proteger o ecossistema do Faial. O nosso desempenho é validado por certificações de referência que garantem a qualidade e a responsabilidade da nossa operação.",
         certifications: {
-          title: "Reconhecimentos Oficiais",
+          title: "Compromissos Oficiais",
           marcaAcores: {
             name: "Marca Açores",
             desc: "Certificação que atesta a origem açoriana e a qualidade superior dos nossos serviços de alojamento e animação turística."
@@ -2806,7 +2806,7 @@ export const translations = {
         title: "Our Commitment to Sustainability",
         intro: "Sustainability is the central pillar of Azores4fun. We operate with the goal of reducing negative environmental impact and protecting Faial's ecosystem. Our performance is validated by reference certifications that guarantee the quality and responsibility of our operation.",
         certifications: {
-          title: "Official Recognitions",
+          title: "Official Commitments",
           marcaAcores: {
             name: "Marca Açores",
             desc: "Certification attesting to the Azorean origin and superior quality of our accommodation and tourist entertainment services."
