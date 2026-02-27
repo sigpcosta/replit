@@ -157,7 +157,11 @@ export default function SobrePage() {
                       <Leaf className="h-6 w-6 text-green-600 dark:text-green-400" />
                     </div>
                     <div>
-                      <h4 className="font-heading font-bold text-lg mb-2">{t.about.sustainability.certifications.amigoNatureza.name}</h4>
+                      <h4 className="font-heading font-bold text-lg mb-2">
+                        <a href="https://portal.azores.gov.pt/web/sraac/programa-amigo-natureza" target="_blank" rel="noopener noreferrer" className="hover:underline text-green-700 dark:text-green-400" data-testid="link-amigo-natureza">
+                          {t.about.sustainability.certifications.amigoNatureza.name}
+                        </a>
+                      </h4>
                       <p className="text-muted-foreground text-sm">{t.about.sustainability.certifications.amigoNatureza.desc}</p>
                     </div>
                   </div>
