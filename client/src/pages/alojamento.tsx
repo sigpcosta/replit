@@ -258,8 +258,8 @@ export default function AlojamentoPage() {
               </h3>
               <p className="text-muted-foreground mb-4">
                 {language === "pt" 
-                  ? "A sustentabilidade é um pilar central da Azores4fun" 
-                  : "Sustainability is a central pillar of Azores4fun"}
+                  ? "A Azores4fun compromete-se com a sustentabilidade nos seus alojamentos." 
+                  : "Azores4fun is committed to sustainability in its accommodations."}
               </p>
               <Link href="/sobre#sustentabilidade" data-testid="button-sustainability-info">
                 <Button variant="outline" size="sm" className="gap-2 border-green-300 dark:border-green-700 text-green-700 dark:text-green-400">
