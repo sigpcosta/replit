@@ -4,7 +4,7 @@ import ServiceFAQs from "@/components/ServiceFAQs";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Home as HomeIcon, Car, WashingMachine, MapPin, Check, Images } from "lucide-react";
+import { Home as HomeIcon, Car, WashingMachine, MapPin, Check, Images, Leaf } from "lucide-react";
 import { seoConfig } from "@/lib/seo-config";
 import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
 import apartmentImage from "@assets/TPN1 e 3 porta fechada_1763903607815.png";
@@ -212,7 +212,7 @@ export default function AlojamentoPage() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16 md:mb-24">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 md:mb-24">
             <Card className="p-6 text-center">
               <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
               <h3 className="font-heading text-xl font-bold mb-2">
@@ -250,6 +250,23 @@ export default function AlojamentoPage() {
               <p className="text-muted-foreground">
                 {t.accommodation.highlights.laundryDesc}
               </p>
+            </Card>
+            <Card className="p-6 text-center">
+              <Leaf className="h-12 w-12 text-green-600 dark:text-green-400 mx-auto mb-4" />
+              <h3 className="font-heading text-xl font-bold mb-2">
+                {language === "pt" ? "Sustentabilidade" : "Sustainability"}
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                {language === "pt" 
+                  ? "A sustentabilidade é um pilar central da Azores4fun" 
+                  : "Sustainability is a central pillar of Azores4fun"}
+              </p>
+              <Link href="/sobre#sustentabilidade" data-testid="button-sustainability-info">
+                <Button variant="outline" size="sm" className="gap-2 border-green-300 dark:border-green-700 text-green-700 dark:text-green-400">
+                  <Leaf className="h-4 w-4" />
+                  {language === "pt" ? "Mais informação" : "More info"}
+                </Button>
+              </Link>
             </Card>
           </div>
         </div>

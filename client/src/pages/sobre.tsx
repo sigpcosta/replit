@@ -120,7 +120,7 @@ export default function SobrePage() {
           </div>
 
           {/* Sustainability Section */}
-          <div className="mb-16 md:mb-24">
+          <div id="sustentabilidade" className="mb-16 md:mb-24 scroll-mt-24">
             <div className="text-center mb-12">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 mb-4">
                 <Leaf className="h-8 w-8 text-green-600 dark:text-green-400" />
