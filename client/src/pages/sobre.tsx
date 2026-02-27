@@ -163,6 +163,11 @@ export default function SobrePage() {
                         </a>
                       </h4>
                       <p className="text-muted-foreground text-sm">{t.about.sustainability.certifications.amigoNatureza.desc}</p>
+                      <a href="https://portal.azores.gov.pt/web/sraac/programa-amigo-natureza" target="_blank" rel="noopener noreferrer" data-testid="button-amigo-natureza-info">
+                        <Button variant="outline" size="sm" className="mt-3 border-green-300 dark:border-green-700 text-green-700 dark:text-green-400">
+                          {language === "pt" ? "Mais informação" : "More info"}
+                        </Button>
+                      </a>
                     </div>
                   </div>
                 </Card>
