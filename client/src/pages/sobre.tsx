@@ -146,8 +146,17 @@ export default function SobrePage() {
                       <Award className="h-6 w-6 text-green-600 dark:text-green-400" />
                     </div>
                     <div>
-                      <h4 className="font-heading font-bold text-lg mb-2">{t.about.sustainability.certifications.marcaAcores.name}</h4>
+                      <h4 className="font-heading font-bold text-lg mb-2">
+                        <a href="https://www.marcaacores.pt/" target="_blank" rel="noopener noreferrer" className="hover:underline text-green-700 dark:text-green-400" data-testid="link-marca-acores">
+                          {t.about.sustainability.certifications.marcaAcores.name}
+                        </a>
+                      </h4>
                       <p className="text-muted-foreground text-sm">{t.about.sustainability.certifications.marcaAcores.desc}</p>
+                      <a href="https://www.marcaacores.pt/" target="_blank" rel="noopener noreferrer" data-testid="button-marca-acores-info">
+                        <Button variant="outline" size="sm" className="mt-3 border-green-300 dark:border-green-700 text-green-700 dark:text-green-400">
+                          {language === "pt" ? "Mais informação" : "More info"}
+                        </Button>
+                      </a>
                     </div>
                   </div>
                 </Card>
