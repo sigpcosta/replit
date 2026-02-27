@@ -1322,7 +1322,7 @@ export const translations = {
             title: "Resíduos e Economia Circular",
             items: [
               "Separação seletiva em todas as unidades de alojamento e eventos de animação",
-              "Faturação exclusivamente digital e uso de materiais biodegradáveis (balas de Paintball)",
+              "Faturação exclusivamente digital e uso de materiais biodegradáveis nas atividades de animação",
               "Promoção de compras sustentáveis com produtos locais nas cestas de boas-vindas"
             ]
           }
