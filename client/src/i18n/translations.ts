@@ -803,7 +803,7 @@ export const translations = {
 
     // Tour Page
     tourPage: {
-      title: "Tour Eco Guiado na Ilha do Faial",
+      title: "Van Tour Eco Guiado na Ilha do Faial",
       subtitle: "Descubra as paisagens mais deslumbrantes do Faial com um guia local",
       heroIntro: "Explore a deslumbrante ilha do Faial, desde as paisagens lunares do Vulcão dos Capelinhos até à exuberância da Caldeira, locais classificados como Reserva da Biosfera pela UNESCO, com um guia local numa carrinha silenciosa, sem carbono, 100% elétrica.",
       heroP1: "Desfrute de um ambiente privado ou de pequeno grupo, com um itinerário flexível e atividades adaptadas aos seus interesses, ritmo e tempo disponível.",
@@ -2325,7 +2325,7 @@ export const translations = {
 
     // Tour Page
     tourPage: {
-      title: "Faial Island Guided Eco Tour",
+      title: "Faial Island Guided Eco Van Tour",
       subtitle: "Discover Faial's most stunning landscapes with a local guide",
       heroIntro: "Explore the stunning island of Faial, from the lunar landscapes of the Capelinhos Volcano to the exuberance of the Caldeira Crater, UNESCO Biosphere Reserve spots, with a local guide in a silent, carbon-free, 100% electric van.",
       heroP1: "Enjoy a private or small-group environment, with a flexible itinerary and activities adapted to your interests, pace, and time available.",
