@@ -10,7 +10,7 @@ import { MapPin, Clock, Globe, Users, Check, Leaf, Camera, Mountain, Waves, Sun,
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "wouter";
 
-import tourImage1 from "@assets/carrinha4_1767021825286.jpg";
+import tourImage1 from "@assets/carrinha1_1766745835506.jpg";
 import tourImage4 from "@assets/tour_half_day_(1)_1771568808374.jpg";
 import tourImage5 from "@assets/Transfer_vulcão_capelinhos_1771568808375.jpg";
 import tourImage6 from "@assets/trasnfer_caldeira_1771568808376.jpg";
