@@ -6,7 +6,7 @@ import TeamSection from "@/components/TeamSection";
 import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Clock, Globe, Users, Check, Leaf, Camera, Mountain, Waves, Sun, Backpack, Accessibility, CalendarX2, CreditCard, Car, Plane, Images } from "lucide-react";
+import { MapPin, Clock, Globe, Users, Check, Leaf, Camera, Mountain, Waves, Sun, Backpack, Accessibility, CalendarX2, CreditCard, Car, Plane, Images, Bus } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "wouter";
 
@@ -16,6 +16,7 @@ import tourImage5 from "@assets/Transfer_vulcão_capelinhos_1771568808375.jpg";
 import tourImage6 from "@assets/trasnfer_caldeira_1771568808376.jpg";
 import nascerSol from "@assets/nascer_do_sol_1771568808372.jpg";
 import porSolPortoPim from "@assets/por_sol_porto_pim_(1)_1771568808373.jpg";
+import carImage from "@assets/image_1771571365682.png";
 
 const previewImages = [
   { src: tourImage4, alt: "Tour half day Faial" },
@@ -27,15 +28,19 @@ const previewImages = [
 ];
 
 export default function ToursPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [contactOpen, setContactOpen] = useState(false);
+  const [tourType, setTourType] = useState<"van" | "car">("van");
+
+  const tourData = tourType === "van" ? t.tourPage : t.carTourPage;
+  const heroImage = tourType === "van" ? tourImage1 : carImage;
 
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title={`${t.tourPage.title} | Azores4fun`}
-        description={t.tourPage.subtitle}
-        keywords="tour faial, eco tour azores, capelinhos volcano, caldeira faial, electric van tour, sustainable tourism azores, guided tour faial island, transfers faial, airport transfer azores"
+        title={`${tourData.title} | Azores4fun`}
+        description={tourData.subtitle}
+        keywords="tour faial, eco tour azores, capelinhos volcano, caldeira faial, electric van tour, car tour faial, sustainable tourism azores, guided tour faial island, transfers faial, airport transfer azores"
         canonicalPath="/tours"
       />
       <Navigation />
@@ -44,15 +49,41 @@ export default function ToursPage() {
         <section className="relative py-12 md:py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-xl md:text-2xl font-semibold text-muted-foreground mb-8" data-testid="text-choose-tour">
+                {t.tourPage.chooseTourType}
+              </h2>
+              <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                <Button
+                  size="lg"
+                  variant={tourType === "van" ? "default" : "outline"}
+                  className={`gap-3 text-base px-8 toggle-elevate ${tourType === "van" ? "toggle-elevated" : ""}`}
+                  onClick={() => setTourType("van")}
+                  data-testid="button-tour-van"
+                >
+                  <Bus className="w-5 h-5" />
+                  {t.tourPage.vanOption}
+                </Button>
+                <Button
+                  size="lg"
+                  variant={tourType === "car" ? "default" : "outline"}
+                  className={`gap-3 text-base px-8 toggle-elevate ${tourType === "car" ? "toggle-elevated" : ""}`}
+                  onClick={() => setTourType("car")}
+                  data-testid="button-tour-car"
+                >
+                  <Car className="w-5 h-5" />
+                  {t.tourPage.carOption}
+                </Button>
+              </div>
+
               <div className="inline-flex items-center gap-2 bg-green-500/10 text-green-700 dark:text-green-400 px-4 py-2 rounded-full mb-6">
                 <Leaf className="w-4 h-4" />
-                <span className="text-sm font-medium">{t.tourPage.ecoNote}</span>
+                <span className="text-sm font-medium">{tourData.ecoNote}</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6" data-testid="text-tour-title">
-                {t.tourPage.title}
+                {tourData.title}
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                {t.tourPage.subtitle}
+                {tourData.subtitle}
               </p>
             </div>
           </div>
@@ -61,19 +92,19 @@ export default function ToursPage() {
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-6">
-              <p className="text-lg text-foreground leading-relaxed">{t.tourPage.heroIntro}</p>
-              <p className="text-muted-foreground leading-relaxed">{t.tourPage.heroP1}</p>
-              <p className="text-muted-foreground leading-relaxed">{t.tourPage.heroP2}</p>
-              <p className="text-muted-foreground leading-relaxed">{t.tourPage.heroP3}</p>
-              <p className="text-muted-foreground leading-relaxed">{t.tourPage.heroP4}</p>
-              <p className="text-muted-foreground leading-relaxed italic">{t.tourPage.heroP5}</p>
+              <p className="text-lg text-foreground leading-relaxed">{tourData.heroIntro}</p>
+              <p className="text-muted-foreground leading-relaxed">{tourData.heroP1}</p>
+              <p className="text-muted-foreground leading-relaxed">{tourData.heroP2}</p>
+              <p className="text-muted-foreground leading-relaxed">{tourData.heroP3}</p>
+              <p className="text-muted-foreground leading-relaxed">{tourData.heroP4}</p>
+              <p className="text-muted-foreground leading-relaxed italic">{tourData.heroP5}</p>
             </div>
 
             <div className="max-w-4xl mx-auto mt-12">
               <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
                 <img
-                  src={tourImage1}
-                  alt={t.tourPage.title}
+                  src={heroImage}
+                  alt={tourData.title}
                   className="w-full h-full object-cover"
                   data-testid="img-tour-hero"
                 />
@@ -82,31 +113,33 @@ export default function ToursPage() {
           </div>
         </section>
 
-        <section className="py-12 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <Card className="p-6 md:p-8">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
-                    <Car className="w-6 h-6 text-primary" />
+        {tourType === "van" && (
+          <section className="py-12 bg-muted/30">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <Card className="p-6 md:p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
+                      <Car className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground mb-2">{t.tourPage.vehicleNoteTitle}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{t.tourPage.vehicleNote}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">{t.tourPage.vehicleNoteTitle}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{t.tourPage.vehicleNote}</p>
-                  </div>
-                </div>
-              </Card>
+                </Card>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-foreground mb-12" data-testid="text-section-highlights">
-              {t.tourPage.sectionHighlights}
+              {tourData.sectionHighlights}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {t.tourPage.highlights.map((highlight: string, index: number) => {
+              {tourData.highlights.map((highlight: string, index: number) => {
                 const icons = [Mountain, Leaf, Users, MapPin, Waves];
                 const Icon = icons[index % icons.length];
                 return (
@@ -127,43 +160,43 @@ export default function ToursPage() {
         <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-foreground mb-4" data-testid="text-section-details">
-              {t.tourPage.sectionDetails}
+              {tourData.sectionDetails}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto mt-8">
               <Card className="p-4">
                 <div className="flex items-center gap-3">
                   <Clock className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">{t.tourPage.duration}</span>
+                  <span className="text-foreground">{tourData.duration}</span>
                 </div>
               </Card>
               <Card className="p-4">
                 <div className="flex items-center gap-3">
                   <Globe className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">{t.tourPage.languages}</span>
+                  <span className="text-foreground">{tourData.languages}</span>
                 </div>
               </Card>
               <Card className="p-4">
                 <div className="flex items-center gap-3">
                   <Users className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">{t.tourPage.groupType}</span>
+                  <span className="text-foreground">{tourData.groupType}</span>
                 </div>
               </Card>
               <Card className="p-4">
                 <div className="flex items-center gap-3">
                   <Accessibility className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">{t.tourPage.accessibility}</span>
+                  <span className="text-foreground">{tourData.accessibility}</span>
                 </div>
               </Card>
               <Card className="p-4">
                 <div className="flex items-center gap-3">
                   <CalendarX2 className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">{t.tourPage.cancellation}</span>
+                  <span className="text-foreground">{tourData.cancellation}</span>
                 </div>
               </Card>
               <Card className="p-4">
                 <div className="flex items-center gap-3">
                   <CreditCard className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">{t.tourPage.payLater}</span>
+                  <span className="text-foreground">{tourData.payLater}</span>
                 </div>
               </Card>
             </div>
@@ -175,10 +208,10 @@ export default function ToursPage() {
             <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-8" data-testid="text-section-includes">
-                  {t.tourPage.sectionIncludes}
+                  {tourData.sectionIncludes}
                 </h2>
                 <ul className="space-y-3">
-                  {t.tourPage.includes.map((item: string, index: number) => (
+                  {tourData.includes.map((item: string, index: number) => (
                     <li key={index} className="flex items-start gap-3">
                       <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                       <span className="text-muted-foreground">{item}</span>
@@ -187,23 +220,25 @@ export default function ToursPage() {
                 </ul>
               </div>
 
-              <div>
-                <h2 className="text-3xl font-bold text-foreground mb-8" data-testid="text-section-bring">
-                  {t.tourPage.sectionBring}
-                </h2>
-                <ul className="space-y-3">
-                  {t.tourPage.bringItems.map((item: string, index: number) => {
-                    const bringIcons = [Sun, Waves, Camera, Backpack, Sun, Sun];
-                    const Icon = bringIcons[index % bringIcons.length];
-                    return (
-                      <li key={index} className="flex items-start gap-3">
-                        <Icon className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-muted-foreground">{item}</span>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
+              {tourType === "van" && (
+                <div>
+                  <h2 className="text-3xl font-bold text-foreground mb-8" data-testid="text-section-bring">
+                    {t.tourPage.sectionBring}
+                  </h2>
+                  <ul className="space-y-3">
+                    {t.tourPage.bringItems.map((item: string, index: number) => {
+                      const bringIcons = [Sun, Waves, Camera, Backpack, Sun, Sun];
+                      const Icon = bringIcons[index % bringIcons.length];
+                      return (
+                        <li key={index} className="flex items-start gap-3">
+                          <Icon className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">{item}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -213,10 +248,10 @@ export default function ToursPage() {
             <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-8" data-testid="text-section-stops">
-                  {t.tourPage.sectionStops}
+                  {tourData.sectionStops}
                 </h2>
                 <ul className="space-y-3">
-                  {t.tourPage.stops.map((stop: string, index: number) => (
+                  {tourData.stops.map((stop: string, index: number) => (
                     <li key={index} className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                       <span className="text-muted-foreground">{stop}</span>
@@ -227,10 +262,10 @@ export default function ToursPage() {
 
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-8" data-testid="text-section-optional">
-                  {t.tourPage.sectionOptional}
+                  {tourData.sectionOptional}
                 </h2>
                 <ul className="space-y-3">
-                  {t.tourPage.optionalActivities.map((activity: string, index: number) => (
+                  {tourData.optionalActivities.map((activity: string, index: number) => (
                     <li key={index} className="flex items-start gap-3">
                       <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                       <span className="text-muted-foreground">{activity}</span>
@@ -242,37 +277,39 @@ export default function ToursPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-12">
-                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
-                  <Plane className="w-4 h-4" />
-                  <span className="text-sm font-medium">{t.tourPage.sectionTransfer}</span>
+        {tourType === "van" && (
+          <section className="py-16 bg-background">
+            <div className="container mx-auto px-4">
+              <div className="max-w-5xl mx-auto">
+                <div className="text-center mb-12">
+                  <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
+                    <Plane className="w-4 h-4" />
+                    <span className="text-sm font-medium">{t.tourPage.sectionTransfer}</span>
+                  </div>
+                  <h2 className="text-3xl font-bold text-foreground mb-4" data-testid="text-section-transfer">
+                    {t.tourPage.sectionTransfer}
+                  </h2>
+                  <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
+                    {t.tourPage.transferDesc}
+                  </p>
                 </div>
-                <h2 className="text-3xl font-bold text-foreground mb-4" data-testid="text-section-transfer">
-                  {t.tourPage.sectionTransfer}
-                </h2>
-                <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-                  {t.tourPage.transferDesc}
-                </p>
-              </div>
 
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
-                {t.tourPage.transferFeatures.map((feature: string, index: number) => (
-                  <Card key={index} className="p-4 hover-elevate" data-testid={`card-transfer-feature-${index}`}>
-                    <div className="flex items-center gap-3">
-                      <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-foreground text-sm">{feature}</span>
-                    </div>
-                  </Card>
-                ))}
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                  {t.tourPage.transferFeatures.map((feature: string, index: number) => (
+                    <Card key={index} className="p-4 hover-elevate" data-testid={`card-transfer-feature-${index}`}>
+                      <div className="flex items-center gap-3">
+                        <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
+                        <span className="text-foreground text-sm">{feature}</span>
+                      </div>
+                    </Card>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
-        <section className="py-16 bg-muted/30">
+        <section className={`py-16 ${tourType === "van" ? "bg-muted/30" : "bg-background"}`}>
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-foreground mb-12" data-testid="text-section-gallery">
               {t.tourPage.sectionGallery}
@@ -323,8 +360,15 @@ export default function ToursPage() {
                 onClick={() => setContactOpen(true)}
                 data-testid="button-book-tour"
               >
-                {t.tourPage.bookNow}
+                {tourData.bookNow}
               </Button>
+              {tourType === "car" && (
+                <a href={t.carTourPage.getYourGuideUrl} target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground" data-testid="button-getyourguide-car">
+                    {t.carTourPage.bookOnGetYourGuide}
+                  </Button>
+                </a>
+              )}
               <Link href="/animacao" data-testid="link-back-activities">
                 <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground">
                   {t.nav.activities}

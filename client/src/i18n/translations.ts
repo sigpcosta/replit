@@ -884,7 +884,62 @@ export const translations = {
         "Flexibilidade total de horários"
       ],
       sectionGallery: "Galeria de Imagens",
-      viewMorePhotos: "Ver Mais Fotos"
+      viewMorePhotos: "Ver Mais Fotos",
+      chooseTourType: "Escolha o Tipo de Tour",
+      vanOption: "Numa Van até 7 pessoas",
+      carOption: "Num carro até 3 pessoas"
+    },
+
+    carTourPage: {
+      title: "Car Tour Guiado na Ilha do Faial",
+      subtitle: "Explore o Faial num carro confortável com um guia local",
+      heroIntro: "Explore a deslumbrante ilha do Faial, desde as paisagens lunares do Vulcão dos Capelinhos até à exuberância da Caldeira, locais classificados como Reserva da Biosfera pela UNESCO, com um guia local num carro confortável.",
+      heroP1: "Desfrute de um ambiente intimista de grupo muito pequeno, com um itinerário flexível e atividades adaptadas aos seus interesses, ritmo e tempo disponível.",
+      heroP2: "Faça paragens cénicas para memórias inesquecíveis e descubra lugares escondidos que só os locais conhecem. Se o seu tempo e disposição permitirem, adicione caminhadas curtas opcionais ou mergulhos em piscinas naturais, passeios relaxados ao longo de uma praia de areia preta, ou até um tour de stand-up paddle ou kayak na icónica Baía de Porto Pim.",
+      heroP3: "Alimente a sua aventura com autêntica cozinha açoriana – escolha entre uma refeição relaxada num restaurante ou um piquenique cénico na natureza, com opções de refeições ligeiras disponíveis.",
+      heroP4: "Dependendo da duração do tour, as seguintes paragens podem ser incluídas no seu roteiro: Espalamaca, Praia do Almoxarife, Caldeira, Vulcão dos Capelinhos, Praia Norte da Fajã, Monte da Guia e muito mais.",
+      heroP5: "Descubra as paisagens mais marcantes do Faial, onde cada curva revela uma nova paisagem de postal. Experimente e aprenda sobre a história local, plantas endémicas e paisagens vulcânicas.",
+      sectionHighlights: "Destaques do Tour",
+      highlights: [
+        "Maravilhe-se com as paisagens lunares do Vulcão dos Capelinhos",
+        "Explore a exuberante Caldeira, Reserva da Biosfera da UNESCO",
+        "Descubra locais escondidos e miradouros conhecidos apenas pelos locais",
+        "Escolha atividades opcionais como caminhadas ou natação"
+      ],
+      sectionIncludes: "O Que Está Incluído",
+      includes: [
+        "Guia local",
+        "Seguro",
+        "Refeições"
+      ],
+      sectionDetails: "Detalhes do Tour",
+      duration: "Duração: 4 a 8 horas (ajustável)",
+      languages: "Idiomas: Português, Inglês",
+      accessibility: "Acessível a cadeira de rodas",
+      groupType: "Grupo privado ou pequeno grupo",
+      cancellation: "Cancelamento gratuito até 24h antes",
+      payLater: "Reserve agora e pague depois",
+      sectionStops: "Paragens Possíveis",
+      stops: [
+        "Espalamaca – Miradouro panorâmico",
+        "Praia do Almoxarife – Praia de areia escura",
+        "Caldeira – Cratera vulcânica e Reserva da Biosfera UNESCO",
+        "Vulcão dos Capelinhos – Paisagem lunar única",
+        "Praia Norte da Fajã – Costa norte selvagem",
+        "Monte da Guia – Vista sobre a Horta e Porto Pim"
+      ],
+      sectionOptional: "Atividades Opcionais",
+      optionalActivities: [
+        "Caminhadas curtas em trilhos locais",
+        "Natação em piscinas naturais",
+        "Passeios em praia de areia preta",
+        "Stand-up Paddle na Baía de Porto Pim",
+        "Tour de Kayak"
+      ],
+      bookNow: "Reservar Tour",
+      bookOnGetYourGuide: "Reservar no GetYourGuide",
+      getYourGuideUrl: "https://www.getyourguide.com/en-gb/cedros-l124818/faial-island-guided-car-tour-t1181060/",
+      ecoNote: "Carro confortável – Experiência intimista e personalizada"
     },
 
     // Events Page
@@ -2406,7 +2461,62 @@ export const translations = {
         "Full schedule flexibility"
       ],
       sectionGallery: "Image Gallery",
-      viewMorePhotos: "View More Photos"
+      viewMorePhotos: "View More Photos",
+      chooseTourType: "Choose Your Tour Type",
+      vanOption: "In a Van up to 7 people",
+      carOption: "In a car up to 3 people"
+    },
+
+    carTourPage: {
+      title: "Faial Island Guided Car Tour",
+      subtitle: "Explore Faial in a comfortable car with a local guide",
+      heroIntro: "Explore the stunning island of Faial, from the lunar landscapes of the Capelinhos Volcano to the exuberance of the Caldeira Crater, UNESCO Biosphere Reserve spots, with a local guide in a comfortable car.",
+      heroP1: "Enjoy a very small group environment, with a flexible itinerary and activities adapted to your interests, pace, and time available.",
+      heroP2: "Make scenic stops for unforgettable memories, and see hidden places that only locals know. If your time and mood allow, add optional short hikes or swims in natural pools, relaxed walks along a black-sandy beach, or even a stand-up paddle or kayak tour on the iconic Porto Pim Bay.",
+      heroP3: "Fuel your adventure with authentic Azorean cuisine – choose between a relaxed restaurant meal or a scenic picnic in nature, with light meal options available.",
+      heroP4: "Depending on the tour duration, the following stops can be included on your route: Espalamaca, Almoxarife Beach, Caldeira Crater, Capelinhos Volcano, North Beach Fajã, Monte da Guia, and more.",
+      heroP5: "Discover Faial's most striking landscapes, where each turn reveals a new postcard-worthy scene. Experience and learn about local history, endemic plants, and volcanic landscapes.",
+      sectionHighlights: "Tour Highlights",
+      highlights: [
+        "Marvel at the lunar landscapes of the Capelinhos Volcano",
+        "Explore the lush Caldeira Crater, a UNESCO Biosphere Reserve",
+        "Discover hidden spots and scenic viewpoints known only to locals",
+        "Choose from optional activities like hiking or swimming"
+      ],
+      sectionIncludes: "What's Included",
+      includes: [
+        "Local guide",
+        "Insurance",
+        "Meals"
+      ],
+      sectionDetails: "Tour Details",
+      duration: "Duration: 4 to 8 hours (adjustable)",
+      languages: "Languages: English, Portuguese",
+      accessibility: "Wheelchair accessible",
+      groupType: "Private or small group",
+      cancellation: "Free cancellation up to 24 hours in advance",
+      payLater: "Reserve now & pay later",
+      sectionStops: "Possible Stops",
+      stops: [
+        "Espalamaca – Panoramic viewpoint",
+        "Almoxarife Beach – Dark sand beach",
+        "Caldeira Crater – Volcanic crater and UNESCO Biosphere Reserve",
+        "Capelinhos Volcano – Unique lunar landscape",
+        "North Beach Fajã – Wild north coast",
+        "Monte da Guia – View over Horta and Porto Pim"
+      ],
+      sectionOptional: "Optional Activities",
+      optionalActivities: [
+        "Short hikes on local trails",
+        "Swimming in natural pools",
+        "Walks along black-sand beach",
+        "Stand-up Paddle on Porto Pim Bay",
+        "Kayak tour"
+      ],
+      bookNow: "Book Tour",
+      bookOnGetYourGuide: "Book on GetYourGuide",
+      getYourGuideUrl: "https://www.getyourguide.com/en-gb/cedros-l124818/faial-island-guided-car-tour-t1181060/",
+      ecoNote: "Comfortable car – Intimate and personalized experience"
     },
 
     // Events Page
