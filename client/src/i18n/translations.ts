@@ -909,8 +909,7 @@ export const translations = {
       sectionIncludes: "O Que Está Incluído",
       includes: [
         "Guia local",
-        "Seguro",
-        "Refeições"
+        "Seguro"
       ],
       sectionDetails: "Detalhes do Tour",
       duration: "Duração: 4 a 8 horas (ajustável)",
@@ -2486,8 +2485,7 @@ export const translations = {
       sectionIncludes: "What's Included",
       includes: [
         "Local guide",
-        "Insurance",
-        "Meals"
+        "Insurance"
       ],
       sectionDetails: "Tour Details",
       duration: "Duration: 4 to 8 hours (adjustable)",
