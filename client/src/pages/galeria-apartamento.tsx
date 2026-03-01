@@ -32,13 +32,12 @@ import t0_23 from "@assets/t0_fotos/t0_23.jpg";
 import t0_24 from "@assets/t0_fotos/t0_24.jpg";
 import t0_25 from "@assets/t0_fotos/t0_25.jpg";
 import t0_26 from "@assets/t0_fotos/t0_26.jpg";
-import t0_27 from "@assets/t0_fotos/t0_27.jpg";
 import t0_28 from "@assets/t0_fotos/t0_28.jpg";
 
 const t0Images = [
   t0_newTV, t0_03, t0_04, t0_06, t0_07, t0_08, t0_09, t0_10,
   t0_11, t0_12, t0_13, t0_14, t0_15, t0_16, t0_17, t0_18, t0_19, t0_20,
-  t0_21, t0_22, t0_23, t0_24, t0_25, t0_26, t0_27, t0_28
+  t0_21, t0_22, t0_23, t0_24, t0_25, t0_26, t0_28
 ];
 
 import t2_01 from "@assets/t2_fotos/t2_01.jpg";
