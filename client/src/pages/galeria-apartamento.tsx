@@ -8,11 +8,9 @@ import { ArrowLeft, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 import { Helmet } from "react-helmet-async";
 
-import t0_01 from "@assets/t0_fotos/t0_01.jpg";
-import t0_02 from "@assets/t0_fotos/t0_02.jpg";
+import t0_newTV from "@assets/20260221_111131_1772389460061.jpg";
 import t0_03 from "@assets/t0_fotos/t0_03.jpg";
 import t0_04 from "@assets/t0_fotos/t0_04.jpg";
-import t0_05 from "@assets/t0_fotos/t0_05.jpg";
 import t0_06 from "@assets/t0_fotos/t0_06.jpg";
 import t0_07 from "@assets/t0_fotos/t0_07.jpg";
 import t0_08 from "@assets/t0_fotos/t0_08.jpg";
@@ -38,7 +36,7 @@ import t0_27 from "@assets/t0_fotos/t0_27.jpg";
 import t0_28 from "@assets/t0_fotos/t0_28.jpg";
 
 const t0Images = [
-  t0_01, t0_02, t0_03, t0_04, t0_05, t0_06, t0_07, t0_08, t0_09, t0_10,
+  t0_newTV, t0_03, t0_04, t0_06, t0_07, t0_08, t0_09, t0_10,
   t0_11, t0_12, t0_13, t0_14, t0_15, t0_16, t0_17, t0_18, t0_19, t0_20,
   t0_21, t0_22, t0_23, t0_24, t0_25, t0_26, t0_27, t0_28
 ];
