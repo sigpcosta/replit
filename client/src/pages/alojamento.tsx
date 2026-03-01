@@ -8,7 +8,7 @@ import { Home as HomeIcon, Car, WashingMachine, MapPin, Check, Images, Leaf } fr
 import { seoConfig } from "@/lib/seo-config";
 import { generateServiceSchema, generateFAQSchema } from "@/lib/structured-data";
 import apartmentImage from "@assets/TPN1 e 3 porta fechada_1763903607815.png";
-import apt1Image from "@assets/apt1-azores4fun.jpg";
+import apt1Image from "@assets/t0_fotos/t0_07.jpg";
 import apt2Image from "@assets/apt2-travessa-terreo.jpg";
 import apt3Image from "@assets/apt3-travessa-3quartos.jpg";
 import { useLanguage } from "@/i18n/LanguageContext";
