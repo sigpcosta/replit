@@ -1,4 +1,5 @@
-import { Switch, Route } from "wouter";
+import { useEffect } from "react";
+import { Switch, Route, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { HelmetProvider } from "react-helmet-async";
@@ -36,8 +37,18 @@ import GuestPage from "@/pages/guest";
 import ApiDocsPage from "@/pages/api-docs";
 import NotFound from "@/pages/not-found";
 
+function ScrollToTop() {
+  const [location] = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+  return null;
+}
+
 function Router() {
   return (
+    <>
+    <ScrollToTop />
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/alojamento" component={AlojamentoPage} />
@@ -68,6 +79,7 @@ function Router() {
       <Route path="/api-docs" component={ApiDocsPage} />
       <Route component={NotFound} />
     </Switch>
+    </>
   );
 }
 
