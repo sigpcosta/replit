@@ -65,7 +65,8 @@ export default function AnimacaoPage() {
       icon: Footprints,
       title: t.activities.activityTypes.trails,
       description: t.activities.activityTypes.trailsDesc,
-      features: t.activities.trailsFeatures
+      features: t.activities.trailsFeatures,
+      moreInfoLink: "/trilhos"
     },
     {
       icon: Tent,

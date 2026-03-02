@@ -1097,6 +1097,39 @@ export const translations = {
       ]
     },
 
+    trailsPage: {
+      title: "Trilhos Pedestres",
+      subtitle: "Descubra com a Azores4Fun alguns dos melhores trilhos e percursos pedestres na ilha do Faial.",
+      heroIntro: "Descubra com a Azores4Fun, ou com um dos seus parceiros, alguns dos melhores trilhos e percursos pedestres na ilha do Faial. Disponibilizamos diversos percursos, desde a emblemática Caldeira, os 10 Vulcões ou Costa a Costa.",
+      heroP1: "Desfrute da ilha do Faial, dos seus espaços de natureza, das paisagens vulcânicas únicas e da biodiversidade que faz dos Açores um destino inesquecível para os amantes de caminhadas.",
+      heroP2: "Todos os nossos percursos podem ser feitos autonomamente ou com acompanhamento de guia experiente. Disponibilizamos também serviço de transfer para o início e/ou fim dos trilhos.",
+      pricesTitle: "Preços",
+      halfDayTitle: "Trilhos Pedestres (4 Horas) c/ Guia",
+      fullDayTitle: "Trilhos Pedestres (8 Horas) c/ Guia",
+      priceHeaders: ["", "PVP"],
+      halfDayRows: [
+        ["1 PAX", "200,00€"],
+        ["2 – 3 PAX", "100,00€ / pessoa"],
+        ["4 – 8 PAX", "55,00€ / pessoa"]
+      ],
+      halfDaySuggested: "Percursos sugeridos: Caldeira, Levadas, Rocha da Fajã",
+      fullDayRows: [
+        ["1 PAX", "300,00€"],
+        ["2 – 3 PAX", "150,00€ / pessoa"],
+        ["4 – 8 PAX", "80,00€ / pessoa"]
+      ],
+      fullDaySuggested: "Percursos sugeridos: Trilho dos 10 Vulcões, Ribeirinha-Caldeira",
+      transferNote: "Precisa apenas de transfer para o início e/ou fim do trilho? Contacte-nos!",
+      bookNow: "Reservar",
+      howToBook: "Como Reservar",
+      bookSteps: [
+        "Combine com os seus amigos ou familiares uma ou mais datas possíveis",
+        "Contacte-nos para saber preços, condições e disponibilidade nas datas pretendidas",
+        "Acertamos e reservamos uma data",
+        "Remetemos dados para pagamento, que pode ser feito via Transferência Bancária, MBWAY ou Paypal"
+      ]
+    },
+
     // Events Page
     events: {
       title: "Eventos",
@@ -2785,6 +2818,39 @@ export const translations = {
         "We verify availability and reserve the equipment for your dates",
         "We arrange the date, time and location for pickup and return",
         "We send payment details — payment can be made in person, via Bank Transfer, MBWAY or Paypal"
+      ]
+    },
+
+    trailsPage: {
+      title: "Hiking Trails",
+      subtitle: "Discover with Azores4Fun some of the best hiking trails on Faial island.",
+      heroIntro: "Discover with Azores4Fun, or with one of our partners, some of the best hiking trails on Faial island. We offer various routes, from the iconic Caldeira, the 10 Volcanoes or Coast to Coast.",
+      heroP1: "Enjoy Faial island, its natural spaces, unique volcanic landscapes and the biodiversity that makes the Azores an unforgettable destination for hiking lovers.",
+      heroP2: "All our routes can be done independently or with an experienced guide. We also offer transfer services to the start and/or end of the trails.",
+      pricesTitle: "Prices",
+      halfDayTitle: "Hiking Trails (4 Hours) w/ Guide",
+      fullDayTitle: "Hiking Trails (8 Hours) w/ Guide",
+      priceHeaders: ["", "Price"],
+      halfDayRows: [
+        ["1 PAX", "200.00€"],
+        ["2 – 3 PAX", "100.00€ / person"],
+        ["4 – 8 PAX", "55.00€ / person"]
+      ],
+      halfDaySuggested: "Suggested trails: Caldeira, Levadas, Rocha da Fajã",
+      fullDayRows: [
+        ["1 PAX", "300.00€"],
+        ["2 – 3 PAX", "150.00€ / person"],
+        ["4 – 8 PAX", "80.00€ / person"]
+      ],
+      fullDaySuggested: "Suggested trails: 10 Volcanoes Trail, Ribeirinha-Caldeira",
+      transferNote: "Only need a transfer to the start and/or end of the trail? Contact us!",
+      bookNow: "Book Now",
+      howToBook: "How to Book",
+      bookSteps: [
+        "Agree with your friends or family on one or more possible dates",
+        "Contact us to find out prices, conditions and availability for your desired dates",
+        "We confirm and reserve a date",
+        "We send payment details — payment can be made via Bank Transfer, MBWAY or Paypal"
       ]
     },
 

@@ -24,6 +24,7 @@ import GaleriaApartamentoPage from "@/pages/galeria-apartamento";
 import GaleriaTours from "@/pages/galeria-tours";
 import SupsKayaksPage from "@/pages/sups-kayaks";
 import SnorkelingPage from "@/pages/snorkeling";
+import TrilhosPage from "@/pages/trilhos";
 import ContactPage from "@/pages/contact";
 import NotFound from "@/pages/not-found";
 
@@ -55,6 +56,7 @@ function AppRoutes() {
       <Route path="/galeria-apartamento/:slug" component={GaleriaApartamentoPage} />
       <Route path="/sups-kayaks" component={SupsKayaksPage} />
       <Route path="/snorkeling" component={SnorkelingPage} />
+      <Route path="/trilhos" component={TrilhosPage} />
       <Route path="/galeria-tours" component={GaleriaTours} />
       <Route path="/contact" component={ContactPage} />
       <Route component={NotFound} />
