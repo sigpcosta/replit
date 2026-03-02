@@ -1007,7 +1007,7 @@ export const translations = {
       pumpNote: "Será fornecida uma bomba de enchimento por cada 4 equipamentos. Quando é um passeio com Guia é este que procede ao enchimento do material.",
       additionalTitle: "Serviços Adicionais",
       additionalServices: [
-        "Entrega e Recolha: Oferecemos o serviço de entrega e recolha do equipamento no local onde desejar realizar a atividade. Pode ser aplicada uma taxa adicional.",
+        "Entrega e Recolha: Disponibilizamos, mediante taxa adicional, serviço de entrega e recolha do equipamento no local onde desejar realizar a atividade.",
         "Montagem do Equipamento: Se preferir, podemos montar e desmontar o equipamento no local de entrega e recolha. Taxa adicional aplicável."
       ],
       bookNow: "Reservar",
