@@ -285,6 +285,33 @@ export default function ToursPage() {
           </div>
         </section>
 
+        <section className="py-16 bg-primary text-primary-foreground">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-6">{t.cta.title}</h2>
+            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">{t.cta.subtitle}</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button
+                size="lg"
+                variant="secondary"
+                onClick={() => setContactOpen(true)}
+                data-testid="button-book-tour"
+              >
+                {tourData.bookNow}
+              </Button>
+              <a href={t.tourPage.vanGetYourGuideUrl} target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground" data-testid="button-getyourguide-van">
+                  {t.tourPage.bookVanGetYourGuide}
+                </Button>
+              </a>
+              <a href={t.carTourPage.getYourGuideUrl} target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground" data-testid="button-getyourguide-car">
+                  {t.tourPage.bookCarGetYourGuide}
+                </Button>
+              </a>
+            </div>
+          </div>
+        </section>
+
         {tourType === "van" && (
           <section id="transfers" className="py-16 bg-background scroll-mt-24">
             <div className="container mx-auto px-4">
@@ -417,32 +444,6 @@ export default function ToursPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">{t.cta.title}</h2>
-            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">{t.cta.subtitle}</p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                size="lg"
-                variant="secondary"
-                onClick={() => setContactOpen(true)}
-                data-testid="button-book-tour"
-              >
-                {tourData.bookNow}
-              </Button>
-              <a href={t.tourPage.vanGetYourGuideUrl} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground" data-testid="button-getyourguide-van">
-                  {t.tourPage.bookVanGetYourGuide}
-                </Button>
-              </a>
-              <a href={t.carTourPage.getYourGuideUrl} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground" data-testid="button-getyourguide-car">
-                  {t.tourPage.bookCarGetYourGuide}
-                </Button>
-              </a>
-            </div>
-          </div>
-        </section>
       </div>
 
       <ContactDialog open={contactOpen} onOpenChange={setContactOpen} />
