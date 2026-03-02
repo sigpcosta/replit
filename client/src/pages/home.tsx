@@ -169,7 +169,7 @@ export default function Home() {
               image={vanImage}
               imagePosition="right"
               highlights={t.featured.tours.highlights}
-              link="/tours"
+              link="/tours#choose-tour"
             />
 
             <FeaturedActivity

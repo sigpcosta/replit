@@ -36,9 +36,10 @@ export default function ToursPage() {
   const heroImage = tourType === "van" ? tourImage1 : carImage;
 
   useEffect(() => {
-    if (window.location.hash === "#transfers") {
+    const hash = window.location.hash;
+    if (hash) {
       setTimeout(() => {
-        const el = document.getElementById("transfers");
+        const el = document.getElementById(hash.slice(1));
         if (el) el.scrollIntoView({ behavior: "smooth" });
       }, 300);
     }
@@ -55,7 +56,7 @@ export default function ToursPage() {
       <Navigation />
 
       <div className="pt-20 md:pt-24">
-        <section className="relative py-12 md:py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section id="choose-tour" className="relative py-12 md:py-16 bg-gradient-to-b from-primary/10 to-background scroll-mt-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-xl md:text-2xl font-semibold text-muted-foreground mb-8" data-testid="text-choose-tour">
