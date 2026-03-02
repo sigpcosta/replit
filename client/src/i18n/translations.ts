@@ -105,7 +105,7 @@ export const translations = {
           "Carrinha elétrica ecológica e confortável",
           "Itinerários personalizados",
           "Guias locais experientes",
-          "Serviços de Transfer de/para o aeroporto ou terminal marítimo"
+          "Opção em carro disponível"
         ]
       },
       corporate: {
@@ -1796,7 +1796,7 @@ export const translations = {
           "Ecological and comfortable electric van",
           "Customized itineraries",
           "Experienced local guides",
-          "Transfer services to/from airport or maritime terminal"
+          "Car option available"
         ]
       },
       corporate: {
