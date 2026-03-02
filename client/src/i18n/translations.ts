@@ -865,7 +865,7 @@ export const translations = {
         "Tour de Kayak",
         "Piquenique cénico na natureza"
       ],
-      bookNow: "Reservar tour direto connosco (20% off)",
+      bookNow: "Reservar agora",
       bookVanGetYourGuide: "Reservar VAN no GetYourGuide",
       vanGetYourGuideUrl: "https://gyg.me/6NrcUWbj",
       bookCarGetYourGuide: "Reservar Carro no GetYourGuide",
@@ -952,7 +952,7 @@ export const translations = {
         "Stand-up Paddle na Baía de Porto Pim",
         "Tour de Kayak"
       ],
-      bookNow: "Reservar tour direto connosco (20% off)",
+      bookNow: "Reservar agora",
       bookCarGetYourGuide: "Reservar Carro no GetYourGuide",
       bookOnGetYourGuide: "Reservar no GetYourGuide",
       getYourGuideUrl: "https://www.getyourguide.com/en-gb/cedros-l124818/faial-island-guided-car-tour-t1181060/",
@@ -2529,7 +2529,7 @@ export const translations = {
         "Kayak tour",
         "Scenic picnic in nature"
       ],
-      bookNow: "Book tour directly with us (20% off)",
+      bookNow: "Book now",
       bookVanGetYourGuide: "Book VAN on GetYourGuide",
       vanGetYourGuideUrl: "https://gyg.me/6NrcUWbj",
       bookCarGetYourGuide: "Book Car on GetYourGuide",
@@ -2616,7 +2616,7 @@ export const translations = {
         "Stand-up Paddle on Porto Pim Bay",
         "Kayak tour"
       ],
-      bookNow: "Book tour directly with us (20% off)",
+      bookNow: "Book now",
       bookCarGetYourGuide: "Book Car on GetYourGuide",
       bookOnGetYourGuide: "Book on GetYourGuide",
       getYourGuideUrl: "https://www.getyourguide.com/en-gb/cedros-l124818/faial-island-guided-car-tour-t1181060/",
