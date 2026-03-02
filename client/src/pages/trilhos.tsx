@@ -7,11 +7,36 @@ import { SEOHead } from "@/components/SEOHead";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Footprints, Clock, Users, Ruler, ExternalLink, Mountain, ArrowRight } from "lucide-react";
+import { Footprints, Clock, Users, Ruler, ExternalLink, Mountain } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Link } from "wouter";
 
 import trailsImage from "@assets/Placa-trilhos-e1664297289118.jpg";
+import trailCaldeira from "@assets/trail-caldeira.jpg";
+import trailDezVulcoes from "@assets/trail-dez-vulcoes.jpg";
+import trailLevada from "@assets/trail-levada.jpg";
+import trailRochaDaFaja from "@assets/trail-rocha-da-faja.jpg";
+import trailRibeirinha from "@assets/trail-ribeirinha.jpg";
+import trailCostaACosta from "@assets/trail-costa-a-costa.jpg";
+import trailMorroCasteloBranco from "@assets/trail-morro-castelo-branco.jpg";
+import trailCabecoDoCanto from "@assets/trail-cabeco-do-canto.jpg";
+import trailEntreMontes from "@assets/trail-entre-montes.jpg";
+import trailBaleeiros from "@assets/trail-baleeiros.jpg";
+import trailCaminhosVelhos from "@assets/trail-caminhos-velhos.jpg";
+
+const trailImages: Record<string, string> = {
+  "PRC04FAI": trailCaldeira,
+  "PR06FAI": trailDezVulcoes,
+  "PR03FAI": trailLevada,
+  "PRC02FAI": trailRochaDaFaja,
+  "PRC09FAI": trailRibeirinha,
+  "GR01FAI": trailCostaACosta,
+  "PRC05FAI": trailMorroCasteloBranco,
+  "PRC01FAI": trailCabecoDoCanto,
+  "PRC08FAI": trailEntreMontes,
+  "PR10FAI": trailBaleeiros,
+  "PR07FAI": trailCaminhosVelhos,
+};
 
 interface OfficialTrail {
   code: string;
@@ -98,31 +123,43 @@ export default function TrilhosPage() {
                     className="block"
                     data-testid={`trail-card-${index}`}
                   >
-                    <Card className="p-5 h-full hover-elevate transition-colors">
-                      <div className="flex items-start justify-between gap-2 mb-3 flex-wrap">
-                        <div>
-                          <p className="text-xs font-mono text-muted-foreground">{trail.code}</p>
-                          <h3 className="text-lg font-bold text-foreground">{trail.name}</h3>
+                    <Card className="overflow-visible h-full hover-elevate transition-colors">
+                      {trailImages[trail.code] && (
+                        <div className="w-full h-40 overflow-hidden rounded-t-md">
+                          <img
+                            src={trailImages[trail.code]}
+                            alt={trail.name}
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
                         </div>
-                        <ExternalLink className="w-4 h-4 text-muted-foreground flex-shrink-0 mt-1" />
-                      </div>
-                      <div className="flex flex-wrap gap-2 mb-3">
-                        <Badge variant="secondary" className="text-xs no-default-active-elevate">
-                          {trail.type}
-                        </Badge>
-                        <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${getDifficultyColor(trail.difficulty)}`}>
-                          {trail.difficulty}
-                        </span>
-                      </div>
-                      <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-                        <span className="inline-flex items-center gap-1">
-                          <Ruler className="w-3.5 h-3.5" />
-                          {trail.distance}
-                        </span>
-                        <span className="inline-flex items-center gap-1">
-                          <Clock className="w-3.5 h-3.5" />
-                          {trail.duration}
-                        </span>
+                      )}
+                      <div className="p-5">
+                        <div className="flex items-start justify-between gap-2 mb-3 flex-wrap">
+                          <div>
+                            <p className="text-xs font-mono text-muted-foreground">{trail.code}</p>
+                            <h3 className="text-lg font-bold text-foreground">{trail.name}</h3>
+                          </div>
+                          <ExternalLink className="w-4 h-4 text-muted-foreground flex-shrink-0 mt-1" />
+                        </div>
+                        <div className="flex flex-wrap gap-2 mb-3">
+                          <Badge variant="secondary" className="text-xs no-default-active-elevate">
+                            {trail.type}
+                          </Badge>
+                          <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${getDifficultyColor(trail.difficulty)}`}>
+                            {trail.difficulty}
+                          </span>
+                        </div>
+                        <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+                          <span className="inline-flex items-center gap-1">
+                            <Ruler className="w-3.5 h-3.5" />
+                            {trail.distance}
+                          </span>
+                          <span className="inline-flex items-center gap-1">
+                            <Clock className="w-3.5 h-3.5" />
+                            {trail.duration}
+                          </span>
+                        </div>
                       </div>
                     </Card>
                   </a>
