@@ -43,7 +43,7 @@ export const translations = {
         description: "3 apartamentos modernos, bem localizados no centro da cidade da Horta, totalmente equipados para uma estadia confortável e agradável.",
       },
       activities: {
-        title: "Atividades de Animação Turística",
+        title: "Tours e Animação Turística",
         description: "Tours em Carrinha ou Carro, Trilhos pedestres, Lasertag, Paintball, aluguer de SUPs e muito mais.",
       },
       events: {
@@ -1708,7 +1708,7 @@ export const translations = {
         description: "3 modern apartments, well located in the center of Horta, fully equipped for a comfortable and pleasant stay.",
       },
       activities: {
-        title: "Tourism Activities",
+        title: "Tours & Tourism Activities",
         description: "Van or Car Tours, Hiking Trails, Lasertag, Paintball, SUP rentals and much more.",
       },
       events: {
