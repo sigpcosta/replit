@@ -26,6 +26,7 @@ import PrivacidadePage from "@/pages/privacidade";
 import CookiesPage from "@/pages/cookies";
 import GaleriaApartamentoPage from "@/pages/galeria-apartamento";
 import GaleriaTours from "@/pages/galeria-tours";
+import SupsKayaksPage from "@/pages/sups-kayaks";
 import ContactPage from "@/pages/contact";
 import AdminPage from "@/pages/admin";
 import GuestPage from "@/pages/guest";
@@ -40,6 +41,7 @@ function Router() {
       <Route path="/animacao" component={AnimacaoPage} />
       <Route path="/paintball" component={PaintballPage} />
       <Route path="/tours" component={ToursPage} />
+      <Route path="/sups-kayaks" component={SupsKayaksPage} />
       <Route path="/eventos" component={EventosPage} />
       <Route path="/tatuagem" component={TatuagemPage} />
       <Route path="/imobiliaria" component={ImobiliariaPage} />

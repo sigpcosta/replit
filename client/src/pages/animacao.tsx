@@ -51,7 +51,8 @@ export default function AnimacaoPage() {
       icon: Waves,
       title: t.activities.activityTypes.sups,
       description: t.activities.activityTypes.supsDesc,
-      features: t.activities.supsFeatures
+      features: t.activities.supsFeatures,
+      moreInfoLink: "/sups-kayaks"
     },
     {
       icon: Eye,

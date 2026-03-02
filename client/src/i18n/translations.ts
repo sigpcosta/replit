@@ -941,6 +941,72 @@ export const translations = {
       ecoNote: "Carro confortável – Experiência intimista e personalizada"
     },
 
+    supsKayaksPage: {
+      title: "Aluguer de SUPs e Caiaques",
+      subtitle: "Se adora desporto náutico, quer explorar a nossa costa ou simplesmente ver a ilha de outra perspetiva, alugue connosco pranchas de SUP, Caiaques ou material de Snorkeling.",
+      heroIntro: "As nossas pranchas de SUP e Caiaques são insufláveis para, de forma autónoma, serem fáceis de transportar para qualquer lugar e poder escolher, no dia, o melhor local para a sua prática. Felizmente temos portos e locais de fácil acesso à água \"virados\" para qualquer quadrante.",
+      heroP1: "Seja na baía do Porto Pim, na Praia da Conceição, no Porto do Comprido, junto ao Vulcão dos Capelinhos, no Varadouro, no Porto de Castelo Branco, com vista para o Morro, na Praia do Almoxarife, ou em outro qualquer porto da ilha do Faial uma coisa é garantida: em qualquer lugar há sempre uma forma única de disfrutar integradamente da \"trilogia\" Mar, Geologia e Desportos Náuticos.",
+      heroP2: "Pode fazer a atividade autonomamente ou pedir um passeio com um guia especializado.",
+      supTitle: "SUP",
+      supDesc: "O Stand Up Paddle (SUP) é um desporto que deriva do surf, onde é necessário ficar de pé em cima de uma prancha na água, enquanto se utiliza um remo para se movimentar.",
+      supP1: "É mais fácil e seguro que o surf e é uma excelente forma de trabalhar todo o corpo, estimulando especialmente o equilíbrio e o desenvolvimento muscular, além de garantir uma experiência no mar única e divertida.",
+      supP2: "Os benefícios deste desporto não são apenas físicos, sendo uma ótima forma de melhorar a saúde mental, uma vez que a água ajuda a mente a liberar o stresse acumulado durante o dia e criar uma sensação de calma.",
+      kayakTitle: "Canoagem",
+      kayakDesc: "A Canoagem pode ser praticada em Canoa ou Caiaque, em águas tranquilas ou bravas. São estáveis e fáceis de manobrar. Tal como com o SUP a Canoagem proporciona benefícios físicos e psicológicos, sendo uma ótima forma de melhorar a saúde mental.",
+      materialTitle: "O Nosso Material",
+      material: [
+        "2 x Prancha de Stand Up Paddle Insuflável 9 Pés",
+        "2 x Prancha de Stand Up Paddle Insuflável 10 Pés",
+        "2 x Prancha de Stand Up Paddle Insuflável 11 Pés",
+        "2 x Caiaque Insuflável 1 Lugar",
+        "3 x Caiaque Insuflável 2 Lugares",
+        "Coletes Ajuda à Flutuação 50N (vários tamanhos)",
+        "Pagaias de SUP 100 Desmontável Reguláveis",
+        "Pagaias de Caiaque Regulável e Desmontável 2 Partes X100",
+        "Calçado Kayak e Stand Up Paddle Neoprene (vários tamanhos)"
+      ],
+      pricesTitle: "Preços Aluguer para Uso Autónomo",
+      pricesSubtitle: "por equipamento",
+      priceHeaders: ["Equipamento", "Dia (Até 10h)*", "Desc. +3", "Desc. +6"],
+      priceRows: [
+        ["Prancha SUP", "50€", "10%", "20%"],
+        ["Caiaque 1 Lugar", "50€", "10%", "20%"],
+        ["Caiaque 2 Lugares", "80€", "10%", "20%"]
+      ],
+      guidedTitle: "Preços Passeios com Guia",
+      guidedSubtitle: "por pessoa",
+      guidedHeaders: ["Atividade", "Preço", "Desc. +3", "Desc. +6"],
+      guidedRows: [
+        ["SUP 2 horas", "60€", "10%", "20%"],
+        ["SUP 4 horas", "100€", "10%", "20%"],
+        ["Caiaque 2 horas", "80€", "10%", "20%"],
+        ["Caiaque 4 horas", "130€", "10%", "20%"]
+      ],
+      priceNote: "*O levantamento é feito a partir das 9h e a devolução até às 21h. Se pretender meio dia, até 5 horas de utilização, o valor é 70% do constante na tabela. Devendo o levantamento ser feito entre as 9h e as 10h ou entre as 15h e as 16h.",
+      includesTitle: "Os valores incluem",
+      includes: [
+        "Prancha ou caiaque",
+        "Pagaia ou remo regulável",
+        "Colete de ajuda à flutuação"
+      ],
+      neopreneNote: "Dispomos de botas de neoprene antiderrapante, de vários tamanhos, por um valor de 15€ o par por aluguer.",
+      pumpNote: "Será fornecida uma bomba de enchimento por cada 4 equipamentos. Quando é um passeio com Guia é este que procede ao enchimento do material.",
+      additionalTitle: "Serviços Adicionais",
+      additionalServices: [
+        "Entrega e Recolha: Oferecemos o serviço de entrega e recolha do equipamento no local onde desejar realizar a atividade. Pode ser aplicada uma taxa adicional.",
+        "Montagem do Equipamento: Se preferir, podemos montar e desmontar o equipamento no local de entrega e recolha. Taxa adicional aplicável."
+      ],
+      bookNow: "Reservar",
+      howToBook: "Como Reservar",
+      bookSteps: [
+        "Decida em que dias e que equipamentos gostaria de alugar",
+        "Contacte-nos para saber da disponibilidade dos equipamentos desejados nas datas pretendidas",
+        "Verificamos a disponibilidade e reservamos o equipamento para a data pretendida",
+        "Combinamos a data, hora e local de levantamento e devolução do material",
+        "Remetemos dados para pagamento, que pode ser feito pessoalmente, via Transferência Bancária, MBWAY ou Paypal"
+      ]
+    },
+
     // Events Page
     events: {
       title: "Eventos",
@@ -2515,6 +2581,72 @@ export const translations = {
       bookOnGetYourGuide: "Book on GetYourGuide",
       getYourGuideUrl: "https://www.getyourguide.com/en-gb/cedros-l124818/faial-island-guided-car-tour-t1181060/",
       ecoNote: "Comfortable car – Intimate and personalized experience"
+    },
+
+    supsKayaksPage: {
+      title: "SUP & Kayak Rental",
+      subtitle: "If you love water sports, want to explore our coast or simply see the island from a different perspective, rent SUP boards, Kayaks or Snorkeling gear with us.",
+      heroIntro: "Our SUP boards and Kayaks are inflatable so they can be easily transported anywhere and you can choose the best spot for your activity on the day. Fortunately, we have ports and easy water access points facing every direction.",
+      heroP1: "Whether in Porto Pim Bay, Conceição Beach, Comprido Port, next to Capelinhos Volcano, Varadouro, Castelo Branco Port with views of Morro, Almoxarife Beach, or any other port on Faial island, one thing is guaranteed: everywhere there is always a unique way to enjoy the \"trilogy\" of Sea, Geology and Water Sports.",
+      heroP2: "You can do the activity independently or request a tour with a specialized guide.",
+      supTitle: "SUP",
+      supDesc: "Stand Up Paddle (SUP) is a sport derived from surfing, where you stand on a board in the water while using a paddle to move around.",
+      supP1: "It is easier and safer than surfing and is an excellent way to work your whole body, especially stimulating balance and muscular development, while guaranteeing a unique and fun sea experience.",
+      supP2: "The benefits of this sport are not only physical — it's also a great way to improve mental health, as the water helps the mind release accumulated stress and create a sense of calm.",
+      kayakTitle: "Kayaking",
+      kayakDesc: "Kayaking can be practiced in a canoe or kayak, in calm or rough waters. They are stable and easy to maneuver. Like SUP, kayaking provides physical and psychological benefits, being a great way to improve mental health.",
+      materialTitle: "Our Equipment",
+      material: [
+        "2 x Inflatable Stand Up Paddle Board 9 Feet",
+        "2 x Inflatable Stand Up Paddle Board 10 Feet",
+        "2 x Inflatable Stand Up Paddle Board 11 Feet",
+        "2 x Inflatable Kayak 1 Seat",
+        "3 x Inflatable Kayak 2 Seats",
+        "Buoyancy Aid Vests 50N (various sizes)",
+        "Adjustable Dismountable SUP Paddles",
+        "Adjustable Dismountable Kayak Paddles 2 Parts X100",
+        "Kayak and Stand Up Paddle Neoprene Footwear (various sizes)"
+      ],
+      pricesTitle: "Rental Prices for Independent Use",
+      pricesSubtitle: "per equipment",
+      priceHeaders: ["Equipment", "Day (Up to 10h)*", "Disc. 3+", "Disc. 6+"],
+      priceRows: [
+        ["SUP Board", "50€", "10%", "20%"],
+        ["Kayak 1 Seat", "50€", "10%", "20%"],
+        ["Kayak 2 Seats", "80€", "10%", "20%"]
+      ],
+      guidedTitle: "Guided Tour Prices",
+      guidedSubtitle: "per person",
+      guidedHeaders: ["Activity", "Price", "Disc. 3+", "Disc. 6+"],
+      guidedRows: [
+        ["SUP 2 hours", "60€", "10%", "20%"],
+        ["SUP 4 hours", "100€", "10%", "20%"],
+        ["Kayak 2 hours", "80€", "10%", "20%"],
+        ["Kayak 4 hours", "130€", "10%", "20%"]
+      ],
+      priceNote: "*Pickup is from 9am and return by 9pm. For half day, up to 5 hours of use, the value is 70% of the table price. Pickup should be between 9am-10am or 3pm-4pm.",
+      includesTitle: "Prices include",
+      includes: [
+        "Board or kayak",
+        "Adjustable paddle",
+        "Buoyancy aid vest"
+      ],
+      neopreneNote: "We have non-slip neoprene boots in various sizes for 15€ per pair per rental.",
+      pumpNote: "One inflation pump is provided per 4 pieces of equipment. For guided tours, the guide handles the inflation.",
+      additionalTitle: "Additional Services",
+      additionalServices: [
+        "Delivery and Collection: We offer equipment delivery and collection at the location where you wish to do the activity. An additional fee may apply.",
+        "Equipment Setup: If you prefer, we can inflate and deflate the equipment at the delivery and collection location. Additional fee applicable."
+      ],
+      bookNow: "Book Now",
+      howToBook: "How to Book",
+      bookSteps: [
+        "Decide which days and equipment you would like to rent",
+        "Contact us to check availability for your desired dates",
+        "We verify availability and reserve the equipment for your dates",
+        "We arrange the date, time and location for pickup and return",
+        "We send payment details — payment can be made in person, via Bank Transfer, MBWAY or Paypal"
+      ]
     },
 
     // Events Page
