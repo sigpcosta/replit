@@ -58,7 +58,8 @@ export default function AnimacaoPage() {
       icon: Eye,
       title: t.activities.activityTypes.snorkeling,
       description: t.activities.activityTypes.snorkelingDesc,
-      features: t.activities.snorkelingFeatures
+      features: t.activities.snorkelingFeatures,
+      moreInfoLink: "/snorkeling"
     },
     {
       icon: Footprints,

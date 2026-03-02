@@ -1056,6 +1056,47 @@ export const translations = {
       ]
     },
 
+    snorkelingPage: {
+      title: "Aluguer de Material de Snorkeling",
+      subtitle: "Máscara, tubo e barbatanas é tudo o que precisa para desfrutar autónomamente o maravilhoso mundo subaquático da nossa ilha.",
+      heroIntro: "A visibilidade em toda a linha de costa das nossas ilhas, em particular a do Faial, é excelente para a observação de espécies marinhas e formações geológicas submarinas.",
+      heroP1: "Potencie essa observação com uma máscara, tubo e barbatanas.",
+      heroP2: "Esqueceu-se de trazer o seu material!? Não é problema, alugue connosco!",
+      heroP3: "Todo o nosso material de Snorkeling é devidamente higienizado e desinfetado após cada utilização.",
+      heroP4: "Também pode trazer o seu próprio tubo de snorkeling e alugar apenas a máscara e as barbatanas.",
+      materialTitle: "O Nosso Material",
+      materialSubtitle: "(em diversos tamanhos)",
+      material: [
+        "Máscaras de mergulho",
+        "Tubos de snorkeling",
+        "Barbatanas",
+        "Botas de neoprene antiderrapante"
+      ],
+      pricesTitle: "Preços de Aluguer",
+      priceHeaders: ["Equipamento", "Dia (até 10h)*"],
+      priceRows: [
+        ["Conjunto Máscara, Tubo e Barbatanas", "15,00€"]
+      ],
+      priceNote: "* O aluguer inclui máscara, tubo e barbatanas. O levantamento é feito a partir das 9h e a devolução até às 21h.",
+      neopreneNote: "Dispomos de botas de neoprene antiderrapante, de vários tamanhos, por um valor adicional de 5€ o par por aluguer.",
+      conditionsTitle: "Condições de Utilização",
+      conditions: [
+        "A Azores4fun presta unicamente um serviço de aluguer de equipamentos aos seus clientes",
+        "A utilização dos equipamentos é feita autonomamente pelo cliente, não havendo qualquer acompanhamento ou assistência à atividade por colaborador da Azores4fun",
+        "O cliente é inteiramente responsável pela utilização dos equipamentos, assim como por cumprir as regras de segurança recomendadas ou em vigor",
+        "O material deve ser levantado e devolvido nas instalações da Azores4Fun, ou em local e nos termos acordados aquando da reserva"
+      ],
+      bookNow: "Reservar",
+      howToBook: "Como Reservar",
+      bookSteps: [
+        "Decida em que dias e que equipamentos gostaria de alugar",
+        "Contacte-nos para saber da disponibilidade dos equipamentos desejados nas datas pretendidas",
+        "Verificamos a disponibilidade e reservamos o equipamento para a data pretendida",
+        "Combinamos a data, hora e local de levantamento e devolução do material",
+        "Remetemos dados para pagamento, que pode ser feito pessoalmente, via Transferência Bancária, MBWAY ou Paypal"
+      ]
+    },
+
     // Events Page
     events: {
       title: "Eventos",
@@ -2737,6 +2778,47 @@ export const translations = {
       bookNow: "Book with us",
       bookGetYourGuide: "Book on GetYourGuide",
       getYourGuideUrl: "https://gyg.me/Tt6QQCNb",
+      howToBook: "How to Book",
+      bookSteps: [
+        "Decide which days and equipment you would like to rent",
+        "Contact us to check availability for your desired dates",
+        "We verify availability and reserve the equipment for your dates",
+        "We arrange the date, time and location for pickup and return",
+        "We send payment details — payment can be made in person, via Bank Transfer, MBWAY or Paypal"
+      ]
+    },
+
+    snorkelingPage: {
+      title: "Snorkeling Equipment Rental",
+      subtitle: "Mask, snorkel tube and fins is all you need to independently enjoy the wonderful underwater world on our island.",
+      heroIntro: "The visibility along the entire coastline of our islands, particularly Faial, is excellent for observing marine species and underwater geological formations.",
+      heroP1: "Enhance that observation with a mask, snorkel tube and fins.",
+      heroP2: "Forgot to bring your gear!? No problem, rent from us!",
+      heroP3: "All our Snorkeling equipment is properly sanitized and disinfected after each use.",
+      heroP4: "You can also bring your own snorkel tube and rent just the mask and fins.",
+      materialTitle: "Our Equipment",
+      materialSubtitle: "(in various sizes)",
+      material: [
+        "Diving masks",
+        "Snorkel tubes",
+        "Fins",
+        "Non-slip neoprene boots"
+      ],
+      pricesTitle: "Rental Prices",
+      priceHeaders: ["Equipment", "Day (up to 10h)*"],
+      priceRows: [
+        ["Mask, Tube & Fins Set", "15.00€"]
+      ],
+      priceNote: "* Rental includes mask, tube and fins. Pickup is from 9am and return by 9pm.",
+      neopreneNote: "We have non-slip neoprene boots in various sizes for an additional 5€ per pair per rental.",
+      conditionsTitle: "Terms of Use",
+      conditions: [
+        "Azores4fun provides only an equipment rental service to its clients",
+        "The equipment is used independently by the client, with no accompaniment or assistance from Azores4fun staff",
+        "The client is entirely responsible for the use of the equipment, as well as for complying with recommended or current safety rules",
+        "Equipment must be picked up and returned at Azores4Fun premises, or at a location and terms agreed upon at the time of booking"
+      ],
+      bookNow: "Book Now",
       howToBook: "How to Book",
       bookSteps: [
         "Decide which days and equipment you would like to rent",
