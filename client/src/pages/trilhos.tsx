@@ -130,6 +130,7 @@ export default function TrilhosPage() {
                             src={trailImages[trail.code]}
                             alt={trail.name}
                             className="w-full h-full object-cover"
+                            style={trail.code === "PRC05FAI" ? { objectPosition: "center top" } : undefined}
                             loading="lazy"
                           />
                         </div>
