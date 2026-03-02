@@ -146,12 +146,12 @@ export default function Home() {
             />
 
             <FeaturedActivity
-              title={t.featured.transfer.title}
-              description={t.featured.transfer.description}
-              image={transferImage}
+              title={t.featured.corporate.title}
+              description={t.featured.corporate.description}
+              image={grupoImage}
               imagePosition="right"
-              highlights={t.featured.transfer.highlights}
-              link="/tours#transfers"
+              highlights={t.featured.corporate.highlights}
+              link="/eventos"
             />
 
             <FeaturedActivity
@@ -173,12 +173,12 @@ export default function Home() {
             />
 
             <FeaturedActivity
-              title={t.featured.corporate.title}
-              description={t.featured.corporate.description}
-              image={grupoImage}
+              title={t.featured.transfer.title}
+              description={t.featured.transfer.description}
+              image={transferImage}
               imagePosition="left"
-              highlights={t.featured.corporate.highlights}
-              link="/eventos"
+              highlights={t.featured.transfer.highlights}
+              link="/tours#transfers"
             />
           </div>
         </div>
