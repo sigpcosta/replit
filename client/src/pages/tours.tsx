@@ -442,11 +442,6 @@ export default function ToursPage() {
                   {t.tourPage.bookCarGetYourGuide}
                 </Button>
               </a>
-              <Link href="/animacao" data-testid="link-back-activities">
-                <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground">
-                  {t.nav.activities}
-                </Button>
-              </Link>
             </div>
           </div>
         </section>
