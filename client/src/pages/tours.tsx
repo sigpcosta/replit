@@ -432,13 +432,16 @@ export default function ToursPage() {
               >
                 {tourData.bookNow}
               </Button>
-              {tourType === "car" && (
-                <a href={t.carTourPage.getYourGuideUrl} target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground" data-testid="button-getyourguide-car">
-                    {t.carTourPage.bookOnGetYourGuide}
-                  </Button>
-                </a>
-              )}
+              <a href={t.tourPage.vanGetYourGuideUrl} target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground" data-testid="button-getyourguide-van">
+                  {t.tourPage.bookVanGetYourGuide}
+                </Button>
+              </a>
+              <a href={t.carTourPage.getYourGuideUrl} target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground" data-testid="button-getyourguide-car">
+                  {t.tourPage.bookCarGetYourGuide}
+                </Button>
+              </a>
               <Link href="/animacao" data-testid="link-back-activities">
                 <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground">
                   {t.nav.activities}

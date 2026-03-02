@@ -865,7 +865,10 @@ export const translations = {
         "Tour de Kayak",
         "Piquenique cénico na natureza"
       ],
-      bookNow: "Reservar Tour",
+      bookNow: "Reservar tour direto connosco (20% off)",
+      bookVanGetYourGuide: "Reservar VAN no GetYourGuide",
+      vanGetYourGuideUrl: "https://gyg.me/6NrcUWbj",
+      bookCarGetYourGuide: "Reservar Carro no GetYourGuide",
       bookOnGetYourGuide: "Reservar no GetYourGuide",
       getYourGuideUrl: "https://www.getyourguide.com/en-gb/cedros-l124818/faial-island-guided-eco-tour-t1027925/",
       priceFrom: "A partir de",
@@ -949,7 +952,8 @@ export const translations = {
         "Stand-up Paddle na Baía de Porto Pim",
         "Tour de Kayak"
       ],
-      bookNow: "Reservar Tour",
+      bookNow: "Reservar tour direto connosco (20% off)",
+      bookCarGetYourGuide: "Reservar Carro no GetYourGuide",
       bookOnGetYourGuide: "Reservar no GetYourGuide",
       getYourGuideUrl: "https://www.getyourguide.com/en-gb/cedros-l124818/faial-island-guided-car-tour-t1181060/",
       ecoNote: "Carro confortável – Experiência intimista e personalizada"
@@ -2525,7 +2529,10 @@ export const translations = {
         "Kayak tour",
         "Scenic picnic in nature"
       ],
-      bookNow: "Book Tour",
+      bookNow: "Book tour directly with us (20% off)",
+      bookVanGetYourGuide: "Book VAN on GetYourGuide",
+      vanGetYourGuideUrl: "https://gyg.me/6NrcUWbj",
+      bookCarGetYourGuide: "Book Car on GetYourGuide",
       bookOnGetYourGuide: "Book on GetYourGuide",
       getYourGuideUrl: "https://www.getyourguide.com/en-gb/cedros-l124818/faial-island-guided-eco-tour-t1027925/",
       priceFrom: "From",
@@ -2609,7 +2616,8 @@ export const translations = {
         "Stand-up Paddle on Porto Pim Bay",
         "Kayak tour"
       ],
-      bookNow: "Book Tour",
+      bookNow: "Book tour directly with us (20% off)",
+      bookCarGetYourGuide: "Book Car on GetYourGuide",
       bookOnGetYourGuide: "Book on GetYourGuide",
       getYourGuideUrl: "https://www.getyourguide.com/en-gb/cedros-l124818/faial-island-guided-car-tour-t1181060/",
       ecoNote: "Comfortable car – Intimate and personalized experience"
