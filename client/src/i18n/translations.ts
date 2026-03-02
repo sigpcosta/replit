@@ -901,6 +901,32 @@ export const translations = {
         ],
         bookNow: "Reservar Transfer"
       },
+      tourPricing: {
+        sectionTitle: "Preços dos Tours",
+        sunriseTitle: "Sunrise or Set Caldeira/Capelinhos (4 Horas)",
+        sunriseHeaders: ["", "PVP"],
+        sunriseRows: [
+          ["1 PAX", "150,00€"],
+          ["2 – 3 PAX", "90,00€ / PESSOA"],
+          ["4 – 8 PAX", "75,00€ / PESSOA"]
+        ],
+        privateTitle: "Passeios Privados",
+        fullDayLabel: "FULL-DAY S/ ALMOÇO",
+        halfDayLabel: "HALF-DAY",
+        privateHeaders: ["", "PVP"],
+        fullDayRows: [
+          ["CARRINHA 1-3 PAX", "600,00€/GRUPO"],
+          ["CARRINHA 4-7 PAX", "700,00€/GRUPO"],
+          ["CARRO 1-3 PAX", "400,00€/GRUPO"]
+        ],
+        halfDayRows: [
+          ["CARRINHA 1-3 PAX", "350,00€/GRUPO"],
+          ["CARRINHA 4-7 PAX", "400,00€/GRUPO"],
+          ["CARRO 1-3 PAX", "250,00€/GRUPO"]
+        ],
+        lunchRow: ["ALMOÇO", "25€/PESSOA"],
+        note: "Observações: todos os passeios têm pick-up incluído em qualquer local na HORTA; crianças até aos 11 anos obtêm desconto de 50%."
+      },
       sectionGallery: "Galeria de Imagens",
       viewMorePhotos: "Ver Mais Fotos",
       chooseTourType: "Escolha o Tipo de Tour",
@@ -2565,6 +2591,32 @@ export const translations = {
           ["5 – 8 PAX", "70.00€ /GROUP"]
         ],
         bookNow: "Book Transfer"
+      },
+      tourPricing: {
+        sectionTitle: "Tour Prices",
+        sunriseTitle: "Sunrise or Set Caldeira/Capelinhos (4 Hours)",
+        sunriseHeaders: ["", "Price"],
+        sunriseRows: [
+          ["1 PAX", "150.00€"],
+          ["2 – 3 PAX", "90.00€ / PERSON"],
+          ["4 – 8 PAX", "75.00€ / PERSON"]
+        ],
+        privateTitle: "Private Tours",
+        fullDayLabel: "FULL-DAY W/O LUNCH",
+        halfDayLabel: "HALF-DAY",
+        privateHeaders: ["", "Price"],
+        fullDayRows: [
+          ["VAN 1-3 PAX", "600.00€/GROUP"],
+          ["VAN 4-7 PAX", "700.00€/GROUP"],
+          ["CAR 1-3 PAX", "400.00€/GROUP"]
+        ],
+        halfDayRows: [
+          ["VAN 1-3 PAX", "350.00€/GROUP"],
+          ["VAN 4-7 PAX", "400.00€/GROUP"],
+          ["CAR 1-3 PAX", "250.00€/GROUP"]
+        ],
+        lunchRow: ["LUNCH", "25€/PERSON"],
+        note: "Note: all tours include pick-up at any location in HORTA; children up to 11 years old get a 50% discount."
       },
       sectionGallery: "Image Gallery",
       viewMorePhotos: "View More Photos",

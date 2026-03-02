@@ -285,19 +285,95 @@ export default function ToursPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">{t.cta.title}</h2>
-            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">{t.cta.subtitle}</p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                size="lg"
-                variant="secondary"
-                onClick={() => setContactOpen(true)}
-                data-testid="button-book-tour"
-              >
-                {tourData.bookNow}
-              </Button>
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-bold text-foreground text-center mb-12" data-testid="text-tour-pricing-title">
+                {t.tourPage.tourPricing.sectionTitle}
+              </h2>
+
+              <div className="max-w-2xl mx-auto mb-12">
+                <Card className="p-6">
+                  <h3 className="text-lg font-bold text-foreground mb-4 text-center" data-testid="text-sunrise-title">
+                    {t.tourPage.tourPricing.sunriseTitle}
+                  </h3>
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse" data-testid="table-sunrise-prices">
+                      <thead>
+                        <tr className="bg-primary text-primary-foreground">
+                          {t.tourPage.tourPricing.sunriseHeaders.map((h: string, i: number) => (
+                            <th key={i} className="px-4 py-3 text-left text-sm font-semibold">{h}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {t.tourPage.tourPricing.sunriseRows.map((row: string[], i: number) => (
+                          <tr key={i} className={i % 2 === 0 ? "bg-muted/30" : "bg-background"}>
+                            {row.map((cell: string, j: number) => (
+                              <td key={j} className="px-4 py-3 text-sm text-foreground border-b border-border font-medium">{cell}</td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </Card>
+              </div>
+
+              <div className="max-w-3xl mx-auto">
+                <Card className="p-6">
+                  <h3 className="text-lg font-bold text-foreground mb-4 text-center" data-testid="text-private-title">
+                    {t.tourPage.tourPricing.privateTitle}
+                  </h3>
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse" data-testid="table-private-prices">
+                      <thead>
+                        <tr className="bg-primary text-primary-foreground">
+                          <th className="px-4 py-3 text-left text-sm font-semibold">{t.tourPage.tourPricing.fullDayLabel}</th>
+                          {t.tourPage.tourPricing.privateHeaders.slice(1).map((h: string, i: number) => (
+                            <th key={i} className="px-4 py-3 text-left text-sm font-semibold">{h}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {t.tourPage.tourPricing.fullDayRows.map((row: string[], i: number) => (
+                          <tr key={i} className={i % 2 === 0 ? "bg-muted/30" : "bg-background"}>
+                            {row.map((cell: string, j: number) => (
+                              <td key={j} className="px-4 py-3 text-sm text-foreground border-b border-border font-medium">{cell}</td>
+                            ))}
+                          </tr>
+                        ))}
+                        <tr className="bg-primary text-primary-foreground">
+                          <td className="px-4 py-3 text-sm font-semibold">{t.tourPage.tourPricing.halfDayLabel}</td>
+                          <td className="px-4 py-3 text-sm font-semibold">{t.tourPage.tourPricing.privateHeaders[1]}</td>
+                        </tr>
+                        {t.tourPage.tourPricing.halfDayRows.map((row: string[], i: number) => (
+                          <tr key={i} className={i % 2 === 0 ? "bg-muted/30" : "bg-background"}>
+                            {row.map((cell: string, j: number) => (
+                              <td key={j} className="px-4 py-3 text-sm text-foreground border-b border-border font-medium">{cell}</td>
+                            ))}
+                          </tr>
+                        ))}
+                        <tr className="bg-muted/50">
+                          {t.tourPage.tourPricing.lunchRow.map((cell: string, j: number) => (
+                            <td key={j} className="px-4 py-3 text-sm text-foreground border-b border-border font-bold">{cell}</td>
+                          ))}
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </Card>
+              </div>
+
+              <p className="text-muted-foreground text-sm italic text-center mt-6" data-testid="text-tour-pricing-note">
+                {t.tourPage.tourPricing.note}
+              </p>
+
+              <div className="text-center mt-8">
+                <Button size="lg" onClick={() => setContactOpen(true)} data-testid="button-book-tour-pricing">
+                  {tourData.bookNow}
+                </Button>
+              </div>
             </div>
           </div>
         </section>
@@ -434,6 +510,22 @@ export default function ToursPage() {
           </div>
         </section>
 
+        <section className="py-16 bg-primary text-primary-foreground">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-6">{t.cta.title}</h2>
+            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">{t.cta.subtitle}</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button
+                size="lg"
+                variant="secondary"
+                onClick={() => setContactOpen(true)}
+                data-testid="button-book-tour"
+              >
+                {tourData.bookNow}
+              </Button>
+            </div>
+          </div>
+        </section>
       </div>
 
       <ContactDialog open={contactOpen} onOpenChange={setContactOpen} />
