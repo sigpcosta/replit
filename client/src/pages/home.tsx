@@ -142,7 +142,7 @@ export default function Home() {
               image={transferImage}
               imagePosition="left"
               highlights={t.featured.transfer.highlights}
-              link="/tours"
+              link="/tours#transfers"
             />
 
             <FeaturedActivity

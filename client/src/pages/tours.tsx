@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactDialog from "@/components/ContactDialog";
@@ -34,6 +34,15 @@ export default function ToursPage() {
 
   const tourData = tourType === "van" ? t.tourPage : t.carTourPage;
   const heroImage = tourType === "van" ? tourImage1 : carImage;
+
+  useEffect(() => {
+    if (window.location.hash === "#transfers") {
+      setTimeout(() => {
+        const el = document.getElementById("transfers");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -278,7 +287,7 @@ export default function ToursPage() {
         </section>
 
         {tourType === "van" && (
-          <section className="py-16 bg-background">
+          <section id="transfers" className="py-16 bg-background scroll-mt-24">
             <div className="container mx-auto px-4">
               <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-12">
@@ -294,7 +303,7 @@ export default function ToursPage() {
                   </p>
                 </div>
 
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto mb-12">
                   {t.tourPage.transferFeatures.map((feature: string, index: number) => (
                     <Card key={index} className="p-4 hover-elevate" data-testid={`card-transfer-feature-${index}`}>
                       <div className="flex items-center gap-3">
@@ -303,6 +312,66 @@ export default function ToursPage() {
                       </div>
                     </Card>
                   ))}
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                  <Card className="p-6">
+                    <h3 className="text-lg font-bold text-foreground mb-4 text-center" data-testid="text-airport-transfer-title">
+                      {t.tourPage.transferPricing.airportTitle}
+                    </h3>
+                    <div className="overflow-x-auto">
+                      <table className="w-full border-collapse" data-testid="table-airport-transfers">
+                        <thead>
+                          <tr className="bg-primary text-primary-foreground">
+                            {t.tourPage.transferPricing.headers.map((h: string, i: number) => (
+                              <th key={i} className="px-4 py-3 text-left text-sm font-semibold">{h}</th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {t.tourPage.transferPricing.rows1.map((row: string[], i: number) => (
+                            <tr key={i} className={i % 2 === 0 ? "bg-muted/30" : "bg-background"}>
+                              {row.map((cell: string, j: number) => (
+                                <td key={j} className="px-4 py-3 text-sm text-foreground border-b border-border font-medium">{cell}</td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </Card>
+
+                  <Card className="p-6">
+                    <h3 className="text-lg font-bold text-foreground mb-4 text-center" data-testid="text-caldeira-transfer-title">
+                      {t.tourPage.transferPricing.caldeiraTitle}
+                    </h3>
+                    <div className="overflow-x-auto">
+                      <table className="w-full border-collapse" data-testid="table-caldeira-transfers">
+                        <thead>
+                          <tr className="bg-primary text-primary-foreground">
+                            {t.tourPage.transferPricing.headers.map((h: string, i: number) => (
+                              <th key={i} className="px-4 py-3 text-left text-sm font-semibold">{h}</th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {t.tourPage.transferPricing.rows2.map((row: string[], i: number) => (
+                            <tr key={i} className={i % 2 === 0 ? "bg-muted/30" : "bg-background"}>
+                              {row.map((cell: string, j: number) => (
+                                <td key={j} className="px-4 py-3 text-sm text-foreground border-b border-border font-medium">{cell}</td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </Card>
+                </div>
+
+                <div className="text-center mt-8">
+                  <Button size="lg" onClick={() => setContactOpen(true)} data-testid="button-book-transfer">
+                    {t.tourPage.transferPricing.bookNow}
+                  </Button>
                 </div>
               </div>
             </div>

@@ -69,7 +69,7 @@ export const translations = {
       subtitle: "Experiências únicas que tornam a sua visita inesquecível",
       transfer: {
         title: "Transfer com Guia Turístico",
-        description: "Relaxe ao máximo e deixe-nos tratar da logística dos seus transportes na ilha. Seja à chegada, na hora da partida ou quando quer simplesmente desfrutar de um trilho durante a sua estadia, fazemos transfers, com Guia, até 8 pessoas, de e para o aeroporto, terminal marítimo ou para o início e/ou fim do trilho. Faça um dois em 1: desloque-se e vá conhecendo a ilha.",
+        description: "Relaxe ao máximo e deixe-nos tratar da logística dos seus transportes na ilha. Seja à chegada, na hora da partida ou quando quer simplesmente desfrutar de um trilho durante a sua estadia, fazemos transfers, com Guia, até 8 pessoas, de e para o aeroporto, terminal marítimo ou para o início e/ou fim de um trilho. Faça um dois em um: desloque-se e vá conhecendo a ilha.",
         highlights: [
           "Serviço Profissional",
           "Informação turística durante a viagem",
@@ -573,7 +573,7 @@ export const translations = {
       planTour: "Ver Pacotes",
       featuredTransfer: {
         title: "Transfer com Guia Turístico",
-        description: "Relaxe ao máximo e deixe-nos tratar da logística dos seus transportes na ilha. Seja à chegada, na hora da partida ou quando quer simplesmente desfrutar de um trilho durante a sua estadia, fazemos transfers, com Guia, até 8 pessoas, de e para o aeroporto, terminal marítimo ou para o início e/ou fim do trilho. Faça um dois em 1: desloque-se e vá conhecendo a ilha.",
+        description: "Relaxe ao máximo e deixe-nos tratar da logística dos seus transportes na ilha. Seja à chegada, na hora da partida ou quando quer simplesmente desfrutar de um trilho durante a sua estadia, fazemos transfers, com Guia, até 8 pessoas, de e para o aeroporto, terminal marítimo ou para o início e/ou fim de um trilho. Faça um dois em um: desloque-se e vá conhecendo a ilha.",
         features: ["Serviço Profissional", "Informação turística", "Pré-reserva", "Flexibilidade"],
         button: "Saber mais",
         altImage: "Carrinha de transfers turísticos"
@@ -874,7 +874,7 @@ export const translations = {
       vehicleNote: "Todos os nossos tours e transfers podem ser realizados na nossa carrinha elétrica de 9 lugares ou, principalmente para grupos mais pequenos, num confortável carro. Ambas as opções garantem uma experiência ecológica, silenciosa e confortável.",
       vehicleNoteTitle: "Carrinha Elétrica ou Carro",
       sectionTransfer: "Transfer com Guia Turístico",
-      transferDesc: "Relaxe ao máximo e deixe-nos tratar da logística dos seus transportes na ilha. Seja à chegada, na hora da partida ou quando quer simplesmente desfrutar de um trilho durante a sua estadia, fazemos transfers, com Guia, até 8 pessoas, de e para o aeroporto, terminal marítimo ou para o início e/ou fim do trilho. Faça um dois em 1: desloque-se e vá conhecendo a ilha.",
+      transferDesc: "Relaxe ao máximo e deixe-nos tratar da logística dos seus transportes na ilha. Seja à chegada, na hora da partida ou quando quer simplesmente desfrutar de um trilho durante a sua estadia, fazemos transfers, com Guia, até 8 pessoas, de e para o aeroporto, terminal marítimo ou para o início e/ou fim de um trilho. Faça um dois em um: desloque-se e vá conhecendo a ilha.",
       transferFeatures: [
         "Serviço Profissional com Guia",
         "Informação turística durante a viagem",
@@ -883,6 +883,20 @@ export const translations = {
         "Pré-reserva disponível",
         "Flexibilidade total de horários"
       ],
+      transferPricing: {
+        airportTitle: "Transferes (Horta – Aeroporto / Aeroporto – Horta)",
+        caldeiraTitle: "Transferes (Horta – Caldeira/Capelinhos ou inverso)",
+        headers: ["", "PVP"],
+        rows1: [
+          ["1 – 4 PAX", "35,00€ /GRUPO"],
+          ["5 – 8 PAX", "50,00€ /GRUPO"]
+        ],
+        rows2: [
+          ["1 – 4 PAX", "50,00€ /GRUPO"],
+          ["5 – 8 PAX", "70,00€ /GRUPO"]
+        ],
+        bookNow: "Reservar Transfer"
+      },
       sectionGallery: "Galeria de Imagens",
       viewMorePhotos: "Ver Mais Fotos",
       chooseTourType: "Escolha o Tipo de Tour",
@@ -2525,6 +2539,20 @@ export const translations = {
         "Pre-booking available",
         "Full schedule flexibility"
       ],
+      transferPricing: {
+        airportTitle: "Transfers (Horta – Airport / Airport – Horta)",
+        caldeiraTitle: "Transfers (Horta – Caldeira/Capelinhos or reverse)",
+        headers: ["", "Price"],
+        rows1: [
+          ["1 – 4 PAX", "35.00€ /GROUP"],
+          ["5 – 8 PAX", "50.00€ /GROUP"]
+        ],
+        rows2: [
+          ["1 – 4 PAX", "50.00€ /GROUP"],
+          ["5 – 8 PAX", "70.00€ /GROUP"]
+        ],
+        bookNow: "Book Transfer"
+      },
       sectionGallery: "Image Gallery",
       viewMorePhotos: "View More Photos",
       chooseTourType: "Choose Your Tour Type",
