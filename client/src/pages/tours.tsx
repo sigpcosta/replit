@@ -56,6 +56,24 @@ export default function ToursPage() {
       <Navigation />
 
       <div className="pt-20 md:pt-24">
+        <section className="py-12 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <Card className="p-6 md:p-8">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
+                    <Car className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground mb-2">{t.tourPage.vehicleNoteTitle}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{t.tourPage.vehicleNote}</p>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         <section id="choose-tour" className="relative py-12 md:py-16 bg-gradient-to-b from-primary/10 to-background scroll-mt-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
@@ -122,26 +140,6 @@ export default function ToursPage() {
             </div>
           </div>
         </section>
-
-        {tourType === "van" && (
-          <section className="py-12 bg-muted/30">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <Card className="p-6 md:p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
-                      <Car className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground mb-2">{t.tourPage.vehicleNoteTitle}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{t.tourPage.vehicleNote}</p>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-            </div>
-          </section>
-        )}
 
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
