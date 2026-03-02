@@ -15,6 +15,7 @@ export default function Navigation() {
 
   const navItems = [
     { label: t.nav.accommodation, href: "/alojamento" },
+    { label: t.nav.tours, href: "/tours" },
     { label: t.nav.activities, href: "/animacao" },
     { label: t.nav.events, href: "/eventos" },
     { label: t.nav.tattoo, href: "/tatuagem" },

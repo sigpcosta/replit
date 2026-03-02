@@ -3,6 +3,7 @@ export const translations = {
     // Navigation
     nav: {
       accommodation: "Alojamento",
+      tours: "Tours",
       activities: "Animação Turística",
       events: "Eventos",
       tattoo: "Tatuagem & Piercings",
@@ -1667,6 +1668,7 @@ export const translations = {
     // Navigation
     nav: {
       accommodation: "Accommodation",
+      tours: "Tours",
       activities: "Activities",
       events: "Events",
       tattoo: "Tattoo & Piercings",
