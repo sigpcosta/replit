@@ -1160,7 +1160,7 @@ export const translations = {
       packHeaders: ["Equipamento / Pack", "Diária (desde)", "Pack Semanal (7 dias)", "O que inclui"],
       packRows: [
         ["Individual Adventure", "15€", "85€", "1 Tenda (1-2 pax) + 1 Saco de Cama"],
-        ["Duo Explorer Pack", "25€", "150€", "1 Tenda (2-3 pax) + 2 Sacos de Cama"],
+        ["Duo Explorer Pack", "25€", "150€", "1 Tenda (1-2 pax) + 2 Sacos de Cama"],
         ["Apenas Tenda (2 pax)", "10€", "60€", "Tenda técnica de montagem rápida e alta resistência ao vento"],
         ["Saco de Cama Extra", "5€", "25€", "Higienizado profissionalmente após cada utilização"]
       ],
@@ -2986,7 +2986,7 @@ export const translations = {
       packHeaders: ["Equipment / Pack", "Daily (from)", "Weekly Pack (7 days)", "What's included"],
       packRows: [
         ["Individual Adventure", "15€", "85€", "1 Tent (1-2 pax) + 1 Sleeping Bag"],
-        ["Duo Explorer Pack", "25€", "150€", "1 Tent (2-3 pax) + 2 Sleeping Bags"],
+        ["Duo Explorer Pack", "25€", "150€", "1 Tent (1-2 pax) + 2 Sleeping Bags"],
         ["Tent Only (2 pax)", "10€", "60€", "Quick-pitch technical tent with high wind resistance"],
         ["Extra Sleeping Bag", "5€", "25€", "Professionally sanitized after each use"]
       ],
