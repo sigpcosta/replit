@@ -72,7 +72,8 @@ export default function AnimacaoPage() {
       icon: Tent,
       title: t.activities.activityTypes.camping,
       description: t.activities.activityTypes.campingDesc,
-      features: t.activities.campingFeatures
+      features: t.activities.campingFeatures,
+      moreInfoLink: "/campismo"
     }
   ];
 

@@ -1150,6 +1150,47 @@ export const translations = {
       ]
     },
 
+    campingPage: {
+      title: "Aluguer de Equipamento de Campismo",
+      subtitle: "A sua casa em qualquer lugar dos Açores",
+      heroIntro: "A liberdade de acordar com o som do mar em Porto Pim ou sob as estrelas na Caldeira está agora à sua distância. Na Azores4fun, facilitamos a sua aventura para que não tenha de carregar peso extra no avião.",
+      heroP1: "Oferecemos equipamento de alta qualidade, higienizado e pronto a usar.",
+      heroP2: "Seja para uma escapadela de fim de semana ou para uma semana de \"island hopping\", temos o kit ideal para si.",
+      packsTitle: "Nossos Packs e Equipamento",
+      packHeaders: ["Equipamento / Pack", "Diária (desde)", "Pack Semanal (7 dias)", "O que inclui"],
+      packRows: [
+        ["Individual Adventure", "15€", "85€", "1 Tenda (1-2 pax) + 1 Saco de Cama"],
+        ["Duo Explorer Pack", "25€", "150€", "1 Tenda (2-3 pax) + 2 Sacos de Cama"],
+        ["Apenas Tenda (2 pax)", "10€", "60€", "Tenda técnica de montagem rápida e alta resistência ao vento"],
+        ["Saco de Cama Extra", "5€", "25€", "Higienizado profissionalmente após cada utilização"]
+      ],
+      whyTitle: "Porquê alugar connosco?",
+      whyReasons: [
+        { title: "Conveniência Total", desc: "Entregamos e recolhemos o equipamento no Aeroporto da Horta, no Terminal de Passageiros (Barcos) ou diretamente no seu alojamento (sob consulta)." },
+        { title: "Qualidade Garantida", desc: "Utilizamos tendas resistentes ao clima húmido dos Açores, garantindo que se mantém seco e confortável." },
+        { title: "Higiene Rigorosa", desc: "Todos os sacos de cama e isolantes passam por um processo de lavagem e desinfeção profunda após cada aluguer." },
+        { title: "Eco-Friendly", desc: "Ao alugar localmente, reduz a pegada de carbono do seu transporte e evita o consumo de materiais descartáveis." }
+      ],
+      tentTitle: "As Nossas Tendas",
+      tentName: "Tenda Instantânea 2 Seconds Easy Fresh & Black",
+      tentBrand: "QUECHUA",
+      tentDesc: "Tenda 2 pessoas, tão rápida de instalar como de dobrar, com a tecnologia Fresh & Black para proporcionar frescura e obscuridade para uma noite tranquila.",
+      tentLink: "https://www.decathlon.pt/p/tenda-instantanea-de-campismo-2-pessoas-2-seconds-easy-fresh-and-black/308355/c227c98c340m8553541",
+      tentLinkLabel: "Ver no site Decathlon",
+      whereTitle: "Onde acampar no Faial?",
+      whereDesc: "A ilha do Faial oferece parques de campismo fantásticos, como o da Praia do Almoxarife (com vista para o Pico) ou o do Capelo (perto das piscinas naturais do Varadouro).",
+      depositNote: "Caução reembolsável de 100€ obrigatória no ato da entrega.",
+      bookNow: "Reservar",
+      howToBook: "Como Reservar",
+      bookSteps: [
+        "Decida as datas e o equipamento que gostaria de alugar",
+        "Contacte-nos para saber da disponibilidade nas datas pretendidas",
+        "Verificamos a disponibilidade e reservamos o equipamento",
+        "Combinamos a data, hora e local de entrega e devolução",
+        "Remetemos dados para pagamento, que pode ser feito pessoalmente, via Transferência Bancária, MBWAY ou Paypal"
+      ]
+    },
+
     // Events Page
     events: {
       title: "Eventos",
@@ -2931,6 +2972,47 @@ export const translations = {
         "Contact us to check availability for your desired dates",
         "We verify availability and reserve the equipment for your dates",
         "We arrange the date, time and location for pickup and return",
+        "We send payment details — payment can be made in person, via Bank Transfer, MBWAY or Paypal"
+      ]
+    },
+
+    campingPage: {
+      title: "Camping Equipment Rental",
+      subtitle: "Your home anywhere in the Azores",
+      heroIntro: "The freedom of waking up to the sound of the sea at Porto Pim or under the stars at the Caldeira is now within reach. At Azores4fun, we make your adventure easier so you don't have to carry extra weight on the plane.",
+      heroP1: "We offer high-quality equipment, sanitized and ready to use.",
+      heroP2: "Whether it's a weekend getaway or a week of island hopping, we have the ideal kit for you.",
+      packsTitle: "Our Packs & Equipment",
+      packHeaders: ["Equipment / Pack", "Daily (from)", "Weekly Pack (7 days)", "What's included"],
+      packRows: [
+        ["Individual Adventure", "15€", "85€", "1 Tent (1-2 pax) + 1 Sleeping Bag"],
+        ["Duo Explorer Pack", "25€", "150€", "1 Tent (2-3 pax) + 2 Sleeping Bags"],
+        ["Tent Only (2 pax)", "10€", "60€", "Quick-pitch technical tent with high wind resistance"],
+        ["Extra Sleeping Bag", "5€", "25€", "Professionally sanitized after each use"]
+      ],
+      whyTitle: "Why rent from us?",
+      whyReasons: [
+        { title: "Total Convenience", desc: "We deliver and collect equipment at Horta Airport, the Ferry Terminal or directly at your accommodation (upon request)." },
+        { title: "Guaranteed Quality", desc: "We use tents resistant to the humid Azores climate, ensuring you stay dry and comfortable." },
+        { title: "Strict Hygiene", desc: "All sleeping bags and mats go through a deep washing and disinfection process after each rental." },
+        { title: "Eco-Friendly", desc: "By renting locally, you reduce your transport carbon footprint and avoid consuming disposable materials." }
+      ],
+      tentTitle: "Our Tents",
+      tentName: "2 Seconds Easy Fresh & Black Instant Tent",
+      tentBrand: "QUECHUA",
+      tentDesc: "2-person tent, as quick to set up as it is to fold, with Fresh & Black technology for coolness and darkness for a peaceful night.",
+      tentLink: "https://www.decathlon.pt/p/tenda-instantanea-de-campismo-2-pessoas-2-seconds-easy-fresh-and-black/308355/c227c98c340m8553541",
+      tentLinkLabel: "View on Decathlon website",
+      whereTitle: "Where to camp on Faial?",
+      whereDesc: "Faial island offers fantastic campsites, such as Praia do Almoxarife (with views of Pico) or Capelo (near the natural pools of Varadouro).",
+      depositNote: "Refundable deposit of 100€ required upon delivery.",
+      bookNow: "Book Now",
+      howToBook: "How to Book",
+      bookSteps: [
+        "Decide your dates and which equipment you'd like to rent",
+        "Contact us to check availability for your desired dates",
+        "We verify availability and reserve the equipment",
+        "We arrange the date, time and location for delivery and return",
         "We send payment details — payment can be made in person, via Bank Transfer, MBWAY or Paypal"
       ]
     },
