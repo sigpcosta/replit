@@ -218,10 +218,15 @@ export default function SupsKayaksPage() {
                   </div>
                 ))}
               </div>
-              <div className="text-center mt-10">
+              <div className="flex flex-wrap justify-center gap-4 mt-10">
                 <Button size="lg" onClick={() => setContactOpen(true)} data-testid="button-book-sups">
                   {sk.bookNow}
                 </Button>
+                <a href={sk.getYourGuideUrl} target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" variant="outline" data-testid="button-book-gyg">
+                    {sk.bookGetYourGuide}
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

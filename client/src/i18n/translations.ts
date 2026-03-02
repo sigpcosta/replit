@@ -1012,7 +1012,9 @@ export const translations = {
         "Guia local dia completo: 200€",
         "Transportes dia completo: 200€"
       ],
-      bookNow: "Reservar",
+      bookNow: "Reservar connosco",
+      bookGetYourGuide: "Reserva GetYourGuide",
+      getYourGuideUrl: "https://gyg.me/Tt6QQCNb",
       howToBook: "Como Reservar",
       bookSteps: [
         "Decida em que dias e que equipamentos gostaria de alugar",
@@ -2670,7 +2672,9 @@ export const translations = {
         "Local guide full day: 200€",
         "Full day transport: 200€"
       ],
-      bookNow: "Book Now",
+      bookNow: "Book with us",
+      bookGetYourGuide: "Book on GetYourGuide",
+      getYourGuideUrl: "https://gyg.me/Tt6QQCNb",
       howToBook: "How to Book",
       bookSteps: [
         "Decide which days and equipment you would like to rent",
