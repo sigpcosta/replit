@@ -298,16 +298,6 @@ export default function ToursPage() {
               >
                 {tourData.bookNow}
               </Button>
-              <a href={t.tourPage.vanGetYourGuideUrl} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground" data-testid="button-getyourguide-van">
-                  {t.tourPage.bookVanGetYourGuide}
-                </Button>
-              </a>
-              <a href={t.carTourPage.getYourGuideUrl} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="outline" className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground" data-testid="button-getyourguide-car">
-                  {t.tourPage.bookCarGetYourGuide}
-                </Button>
-              </a>
             </div>
           </div>
         </section>

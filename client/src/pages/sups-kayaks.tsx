@@ -222,11 +222,6 @@ export default function SupsKayaksPage() {
                 <Button size="lg" onClick={() => setContactOpen(true)} data-testid="button-book-sups">
                   {sk.bookNow}
                 </Button>
-                <a href={sk.getYourGuideUrl} target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" variant="outline" data-testid="button-book-gyg">
-                    {sk.bookGetYourGuide}
-                  </Button>
-                </a>
               </div>
             </div>
           </div>
