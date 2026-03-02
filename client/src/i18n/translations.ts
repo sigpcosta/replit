@@ -1153,7 +1153,7 @@ export const translations = {
     campingPage: {
       title: "Aluguer de Equipamento de Campismo",
       subtitle: "A sua casa em qualquer lugar dos Açores",
-      heroIntro: "A liberdade de acordar com o som do mar em Porto Pim ou sob as estrelas na Caldeira está agora à sua distância. Na Azores4fun, facilitamos a sua aventura para que não tenha de carregar peso extra no avião.",
+      heroIntro: "A liberdade de acordar com o som do mar em Almoxarife ou sob as estrelas, num amanhecer ao relento, na Caldeira,  está agora à sua distância. Na Azores4fun, facilitamos a sua aventura para que não tenha de carregar peso extra no avião.",
       heroP1: "Oferecemos equipamento de alta qualidade, higienizado e pronto a usar.",
       heroP2: "Seja para uma escapadela de fim de semana ou para uma semana de \"island hopping\", temos o kit ideal para si.",
       packsTitle: "Nossos Packs e Equipamento",
@@ -2979,7 +2979,7 @@ export const translations = {
     campingPage: {
       title: "Camping Equipment Rental",
       subtitle: "Your home anywhere in the Azores",
-      heroIntro: "The freedom of waking up to the sound of the sea at Porto Pim or under the stars at the Caldeira is now within reach. At Azores4fun, we make your adventure easier so you don't have to carry extra weight on the plane.",
+      heroIntro: "The freedom of waking up to the sound of the sea in Almoxarife or under the stars, at an open-air dawn, at the Caldeira, is now within reach. At Azores4fun, we make your adventure easier so you don't have to carry extra weight on the plane.",
       heroP1: "We offer high-quality equipment, sanitized and ready to use.",
       heroP2: "Whether it's a weekend getaway or a week of island hopping, we have the ideal kit for you.",
       packsTitle: "Our Packs & Equipment",
