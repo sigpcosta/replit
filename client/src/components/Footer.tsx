@@ -9,6 +9,7 @@ import acores2020Logo from "@assets/acores2020-funding-logo.png";
 import fichaTecnica2020Pdf from "@assets/ficha-tecnica-acores2020.pdf";
 import adeliacorLogo from "@assets/adeliacor-funding-logo.jpg";
 import fichaTecnicaAdeliacorPdf from "@assets/ficha-tecnica-adeliacor.pdf";
+import fichaTecnicaPrrPdf from "@assets/VFINAL_CARTAZ_A3_A4f_1772487001538.pdf";
 import prrLogo from "@assets/barra_prr_1766164794909.png";
 
 export default function Footer() {
@@ -305,6 +306,16 @@ export default function Footer() {
                 className="max-w-full h-auto md:max-w-2xl"
                 data-testid="img-prr-logo"
               />
+              <a 
+                href={fichaTecnicaPrrPdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                data-testid="link-ficha-tecnica-prr"
+              >
+                <FileText className="w-4 h-4" />
+                {language === 'pt' ? 'Ficha Técnica' : 'Technical Sheet'}
+              </a>
             </div>
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
