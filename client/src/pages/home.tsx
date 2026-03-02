@@ -137,10 +137,19 @@ export default function Home() {
 
           <div className="space-y-16 md:space-y-24">
             <FeaturedActivity
+              title={t.featured.tours.title}
+              description={t.featured.tours.description}
+              image={vanImage}
+              imagePosition="left"
+              highlights={t.featured.tours.highlights}
+              link="/tours#choose-tour"
+            />
+
+            <FeaturedActivity
               title={t.featured.transfer.title}
               description={t.featured.transfer.description}
               image={transferImage}
-              imagePosition="left"
+              imagePosition="right"
               highlights={t.featured.transfer.highlights}
               link="/tours#transfers"
             />
@@ -149,7 +158,7 @@ export default function Home() {
               title={t.featured.lasertag.title}
               description={t.featured.lasertag.description}
               image={laserImage}
-              imagePosition="right"
+              imagePosition="left"
               highlights={t.featured.lasertag.highlights}
               link="/animacao"
             />
@@ -158,18 +167,9 @@ export default function Home() {
               title={t.featured.watersports.title}
               description={t.featured.watersports.description}
               image={kayakImage}
-              imagePosition="left"
+              imagePosition="right"
               highlights={t.featured.watersports.highlights}
               link="/animacao"
-            />
-
-            <FeaturedActivity
-              title={t.featured.tours.title}
-              description={t.featured.tours.description}
-              image={vanImage}
-              imagePosition="right"
-              highlights={t.featured.tours.highlights}
-              link="/tours#choose-tour"
             />
 
             <FeaturedActivity
