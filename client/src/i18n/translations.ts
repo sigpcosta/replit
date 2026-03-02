@@ -1008,7 +1008,9 @@ export const translations = {
       additionalTitle: "Serviços Adicionais",
       additionalServices: [
         "Entrega e Recolha: Disponibilizamos, mediante taxa adicional, serviço de entrega e recolha do equipamento no local onde desejar realizar a atividade.",
-        "Montagem do Equipamento: Se preferir, podemos montar e desmontar o equipamento no local de entrega e recolha. Taxa adicional aplicável."
+        "Montagem do Equipamento: Se preferir, podemos montar e desmontar o equipamento no local de entrega e recolha. Taxa adicional aplicável.",
+        "Guia local dia completo: 200€",
+        "Transportes dia completo: 200€"
       ],
       bookNow: "Reservar",
       howToBook: "Como Reservar",
@@ -2664,7 +2666,9 @@ export const translations = {
       additionalTitle: "Additional Services",
       additionalServices: [
         "Delivery and Collection: We offer equipment delivery and collection at the location where you wish to do the activity. An additional fee may apply.",
-        "Equipment Setup: If you prefer, we can inflate and deflate the equipment at the delivery and collection location. Additional fee applicable."
+        "Equipment Setup: If you prefer, we can inflate and deflate the equipment at the delivery and collection location. Additional fee applicable.",
+        "Local guide full day: 200€",
+        "Full day transport: 200€"
       ],
       bookNow: "Book Now",
       howToBook: "How to Book",
