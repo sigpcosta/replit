@@ -191,31 +191,6 @@ export default function LojaPage() {
             </div>
           </div>
 
-          <Card className="p-8 md:p-12 mb-16 md:mb-24">
-            <div className="text-center max-w-3xl mx-auto">
-              <MapPin className="h-16 w-16 text-primary mx-auto mb-6" />
-              <h2 className="font-heading text-3xl font-bold mb-4">
-                {t.shop.visitTitle}
-              </h2>
-              <p className="text-muted-foreground mb-6 text-lg">
-                {t.shop.address}
-              </p>
-              <div className="grid md:grid-cols-3 gap-6 text-sm">
-                <div>
-                  <p className="font-semibold mb-2">{t.shop.hours.weekdays}</p>
-                  <p className="text-muted-foreground">{t.shop.hours.weekdaysTime}</p>
-                </div>
-                <div>
-                  <p className="font-semibold mb-2">{t.shop.hours.saturday}</p>
-                  <p className="text-muted-foreground">{t.shop.hours.saturdayTime}</p>
-                </div>
-                <div>
-                  <p className="font-semibold mb-2">{t.shop.hours.sunday}</p>
-                  <p className="text-muted-foreground">{t.shop.hours.sundayTime}</p>
-                </div>
-              </div>
-            </div>
-          </Card>
         </div>
 
         <ServiceFAQs service="shop" title={t.shop.faqTitle} />
