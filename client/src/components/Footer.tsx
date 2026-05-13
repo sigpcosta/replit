@@ -300,12 +300,19 @@ export default function Footer() {
             </div>
             
             <div className="flex flex-col items-center gap-2">
-              <img 
-                src={prrLogo} 
-                alt="PRR - Plano de Recuperação e Resiliência" 
-                className="max-w-full h-auto md:max-w-2xl"
-                data-testid="img-prr-logo"
-              />
+              <a
+                href="https://recuperarportugal.gov.pt/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="link-prr-logo"
+              >
+                <img 
+                  src={prrLogo} 
+                  alt="PRR - Plano de Recuperação e Resiliência" 
+                  className="max-w-full h-auto md:max-w-2xl"
+                  data-testid="img-prr-logo"
+                />
+              </a>
               <a 
                 href={fichaTecnicaPrrPdf}
                 target="_blank"
