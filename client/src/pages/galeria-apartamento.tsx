@@ -65,11 +65,16 @@ import t2_21 from "@assets/t2_fotos/t2_21.jpg";
 import t2_22 from "@assets/t2_fotos/t2_22.jpg";
 import t2_23 from "@assets/t2_fotos/t2_23.jpg";
 import t2_24 from "@assets/t2_fotos/t2_24.jpg";
+import t2_cama_dupla from "@assets/cama_dupla_quarto_individual_t2_1781822493092.png";
+import t2_quarto_casal from "@assets/quarto_casal_t2_1781822493094.png";
+import t2_quarto_individual from "@assets/quarto_individual_config_single_1781822493095.png";
+import t2_sofa_cama from "@assets/sofa_cama_t2_(1)_1781822493096.png";
 
 const t2Images = [
   t2_01, t2_02, t2_03, t2_04, t2_05, t2_06, t2_07, t2_08, t2_09, t2_10,
   t2_11, t2_12, t2_13, t2_14, t2_15, t2_16, t2_17, t2_18, t2_19, t2_20,
-  t2_21, t2_22, t2_23, t2_24
+  t2_21, t2_22, t2_23, t2_24,
+  t2_cama_dupla, t2_quarto_casal, t2_quarto_individual, t2_sofa_cama
 ];
 
 import t3_01 from "@assets/t3_fotos/t3_01.jpg";
