@@ -101,9 +101,9 @@ import t3_21 from "@assets/t3_fotos/t3_21.jpg";
 import t3_22 from "@assets/t3_fotos/t3_22.jpg";
 import t3_23 from "@assets/t3_fotos/t3_23.jpg";
 import t3_24 from "@assets/t3_fotos/t3_24.jpg";
-import t3_cama_casal from "@assets/cama_casal_t3_1781822274645.png";
+import t3_cama_casal from "@assets/cama_casal_t3_1781823541143.png";
 import t3_camas_sotao from "@assets/camas_sotao_t3_1781822274646.png";
-import t3_quarto_dupla from "@assets/quarto_cama_dupla_t3_1781822274648.png";
+import t3_quarto_dupla from "@assets/quarto_cama_dupla_t3_1781823541145.png";
 import t3_quarto_individual from "@assets/quarto_individual_t3_1781822274649.png";
 import t3_sofa_cama from "@assets/sofa_cama_t3_1781822274651.png";
 
