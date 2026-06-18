@@ -96,11 +96,17 @@ import t3_21 from "@assets/t3_fotos/t3_21.jpg";
 import t3_22 from "@assets/t3_fotos/t3_22.jpg";
 import t3_23 from "@assets/t3_fotos/t3_23.jpg";
 import t3_24 from "@assets/t3_fotos/t3_24.jpg";
+import t3_cama_casal from "@assets/cama_casal_t3_1781822274645.png";
+import t3_camas_sotao from "@assets/camas_sotao_t3_1781822274646.png";
+import t3_quarto_dupla from "@assets/quarto_cama_dupla_t3_1781822274648.png";
+import t3_quarto_individual from "@assets/quarto_individual_t3_1781822274649.png";
+import t3_sofa_cama from "@assets/sofa_cama_t3_1781822274651.png";
 
 const t3Images = [
   t3_01, t3_02, t3_03, t3_04, t3_05, t3_06, t3_07, t3_08, t3_09, t3_10,
   t3_11, t3_12, t3_13, t3_14, t3_15, t3_16, t3_17, t3_18, t3_19, t3_20,
-  t3_21, t3_22, t3_23, t3_24
+  t3_21, t3_22, t3_23, t3_24,
+  t3_cama_casal, t3_camas_sotao, t3_quarto_dupla, t3_quarto_individual, t3_sofa_cama
 ];
 
 interface ApartmentGallery {
