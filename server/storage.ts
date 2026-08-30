@@ -3,6 +3,26 @@ import { randomUUID } from "crypto";
 import { db, isDatabaseAvailable } from "./db";
 import { eq, desc, and } from "drizzle-orm";
 
+const CORRECT_CONTACT_NUMBER = "+351 934 993 770";
+const OBSOLETE_CONTACT_NUMBERS = [
+  new RegExp("\\+351 9" + "69 519 950", "g"),
+  new RegExp("\\+351 9" + "62 ?537 ?160", "g"),
+];
+
+function normalizeFaqContactNumbers(faq: Faq): Faq {
+  const normalize = (value: string) =>
+    OBSOLETE_CONTACT_NUMBERS.reduce(
+      (text, obsoleteNumber) => text.replace(obsoleteNumber, CORRECT_CONTACT_NUMBER),
+      value,
+    );
+
+  return {
+    ...faq,
+    answerPt: normalize(faq.answerPt),
+    answerEn: normalize(faq.answerEn),
+  };
+}
+
 export interface IStorage {
   getUser(id: string): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
@@ -88,18 +108,20 @@ export class MemStorage implements IStorage {
 
   async getAllFaqs(): Promise<Faq[]> {
     if (!db) return [];
-    return db.select().from(faqs).where(eq(faqs.isActive, "true")).orderBy(faqs.service, faqs.displayOrder);
+    const result = await db.select().from(faqs).where(eq(faqs.isActive, "true")).orderBy(faqs.service, faqs.displayOrder);
+    return result.map(normalizeFaqContactNumbers);
   }
 
   async getFaqsByService(service: string): Promise<Faq[]> {
     if (!db) return [];
-    return db.select().from(faqs).where(and(eq(faqs.service, service), eq(faqs.isActive, "true"))).orderBy(faqs.displayOrder);
+    const result = await db.select().from(faqs).where(and(eq(faqs.service, service), eq(faqs.isActive, "true"))).orderBy(faqs.displayOrder);
+    return result.map(normalizeFaqContactNumbers);
   }
 
   async getFaqById(id: number): Promise<Faq | undefined> {
     if (!db) return undefined;
     const result = await db.select().from(faqs).where(eq(faqs.id, id)).limit(1);
-    return result[0];
+    return result[0] ? normalizeFaqContactNumbers(result[0]) : undefined;
   }
 
   async createFaq(faq: InsertFaq): Promise<Faq> {

@@ -795,7 +795,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 INFORMAÇÕES DA EMPRESA:
 - Localização: Rua Vasco da Gama, Horta, Faial, Açores
 - Telefone: +351 934 993 770
-- WhatsApp: +351 969 519 950
+- WhatsApp: +351 934 993 770
 - Email: info@azores4fun.com
 - Website: azores4fun.com
 
@@ -817,7 +817,7 @@ ${faqContext}
 REGRAS:
 - Responde SEMPRE em português de Portugal
 - Sê simpático, profissional e útil
-- Se não souberes a resposta, sugere contactar por WhatsApp (+351 969 519 950) ou telefone (+351 934 993 770)
+- Se não souberes a resposta, sugere contactar por WhatsApp (+351 934 993 770) ou telefone (+351 934 993 770)
 - Mantém respostas concisas (máximo 3-4 frases)
 - Se o utilizador quiser falar com uma pessoa, fornece os contactos
 - A página atual do utilizador é: ${currentPage}`
@@ -826,7 +826,7 @@ REGRAS:
 COMPANY INFORMATION:
 - Location: Rua Vasco da Gama, Horta, Faial, Azores
 - Phone: +351 934 993 770
-- WhatsApp: +351 969 519 950
+- WhatsApp: +351 934 993 770
 - Email: info@azores4fun.com
 - Website: azores4fun.com
 
@@ -848,7 +848,7 @@ ${faqContext}
 RULES:
 - ALWAYS respond in English
 - Be friendly, professional and helpful
-- If you don't know the answer, suggest contacting via WhatsApp (+351 969 519 950) or phone (+351 934 993 770)
+- If you don't know the answer, suggest contacting via WhatsApp (+351 934 993 770) or phone (+351 934 993 770)
 - Keep responses concise (maximum 3-4 sentences)
 - If the user wants to talk to a person, provide contact details
 - The user's current page is: ${currentPage}`;
@@ -870,8 +870,8 @@ RULES:
     } catch (error) {
       console.error("Erro no chatbot:", error);
       const errorMessage = req.body.language === "pt"
-        ? "Desculpe, ocorreu um erro. Por favor, contacte-nos por WhatsApp (+351 969 519 950) ou telefone (+351 934 993 770)."
-        : "Sorry, an error occurred. Please contact us via WhatsApp (+351 969 519 950) or phone (+351 934 993 770).";
+        ? "Desculpe, ocorreu um erro. Por favor, contacte-nos por WhatsApp (+351 934 993 770) ou telefone (+351 934 993 770)."
+        : "Sorry, an error occurred. Please contact us via WhatsApp (+351 934 993 770) or phone (+351 934 993 770).";
       res.status(500).json({ response: errorMessage });
     }
   });

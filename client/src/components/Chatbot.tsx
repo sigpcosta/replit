@@ -23,7 +23,7 @@ interface ChatOption {
   url?: string;
 }
 
-const WHATSAPP_NUMBER = "+351962537160";
+const WHATSAPP_NUMBER = "+351934993770";
 const PHONE_NUMBER = "+351934993770";
 
 interface PageContext {

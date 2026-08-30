@@ -76,8 +76,8 @@ export const handler = async (event: HandlerEvent): Promise<HandlerResponse> => 
         headers,
         body: JSON.stringify({ 
           response: language === "pt" 
-            ? "[DEBUG: OPENAI_API_KEY não encontrada] O nosso assistente AI está em configuração. Por favor, contacte-nos por WhatsApp (+351 962537160) ou telefone (+351 934 993 770)." 
-            : "[DEBUG: OPENAI_API_KEY not found] Our AI assistant is being configured. Please contact us via WhatsApp (+351 962537160) or phone (+351 934 993 770).",
+            ? "[DEBUG: OPENAI_API_KEY não encontrada] O nosso assistente AI está em configuração. Por favor, contacte-nos por WhatsApp (+351 934 993 770) ou telefone (+351 934 993 770)."
+            : "[DEBUG: OPENAI_API_KEY not found] Our AI assistant is being configured. Please contact us via WhatsApp (+351 934 993 770) or phone (+351 934 993 770).",
           debug: { keyExists: false, baseUrl: openaiBaseUrl }
         }),
       };
@@ -92,7 +92,7 @@ export const handler = async (event: HandlerEvent): Promise<HandlerResponse> => 
 INFORMAÇÕES DA EMPRESA:
 - Localização: Travessa Poiso Novo 1, Horta, Faial, Açores
 - Telefone: +351 934 993 770
-- WhatsApp: +351 962537160
+- WhatsApp: +351 934 993 770
 - Email: info@azores4fun.com
 - Website: azores4fun.com
 
@@ -120,14 +120,14 @@ REGRAS IMPORTANTES:
 - IMPORTANTE: As FAQs incluem [Sinónimos: ...] - usa-os para encontrar a FAQ certa mesmo que o utilizador use palavras diferentes (ex: "quantas pessoas levam" = "capacidade", "lotação", "acomodar")
 - Se perguntarem sobre sustentabilidade, menciona a Mata Azores4fun e a carrinha elétrica
 - Se a pergunta não está nas FAQs/blog, dá uma resposta útil baseada no contexto geral
-- Se não souberes mesmo, sugere contactar por WhatsApp: +351 962537160
+- Se não souberes mesmo, sugere contactar por WhatsApp: +351 934 993 770
 - Página atual do visitante: ${currentPage}`
       : `You are the virtual assistant for Azores4Fun, a tourism and services company in Faial Island, Azores. Founded in 2012 with Marca Açores certification. We focus on sustainability and authentic experiences.
 
 COMPANY INFO:
 - Location: Travessa Poiso Novo 1, Horta, Faial, Azores
 - Phone: +351 934 993 770
-- WhatsApp: +351 962537160
+- WhatsApp: +351 934 993 770
 - Email: info@azores4fun.com
 
 DETAILED SERVICES:
@@ -154,7 +154,7 @@ IMPORTANT RULES:
 - IMPORTANT: FAQs include [Synonyms: ...] - use them to find the right FAQ even if the user uses different words (e.g., "how many people fit" = "capacity", "accommodate")
 - If asked about sustainability, mention the Azores4fun Forest and electric van
 - If the question is not in FAQs/blog, give a helpful answer based on general context
-- If truly unsure, suggest contacting via WhatsApp: +351 962537160
+- If truly unsure, suggest contacting via WhatsApp: +351 934 993 770
 - Current page: ${currentPage}`;
 
     console.log("[Chatbot] Calling OpenAI API...");
@@ -206,8 +206,8 @@ IMPORTANT RULES:
       headers: defaultHeaders,
       body: JSON.stringify({ 
         response: language === "pt"
-          ? `[DEBUG: Erro - ${errorMessage}] Peço desculpa, tive um problema técnico. Por favor, contacte-nos diretamente por WhatsApp (+351 962537160) ou telefone (+351 934 993 770).`
-          : `[DEBUG: Error - ${errorMessage}] Sorry, I had a technical issue. Please contact us directly via WhatsApp (+351 962537160) or phone (+351 934 993 770).`,
+          ? `[DEBUG: Erro - ${errorMessage}] Peço desculpa, tive um problema técnico. Por favor, contacte-nos diretamente por WhatsApp (+351 934 993 770) ou telefone (+351 934 993 770).`
+          : `[DEBUG: Error - ${errorMessage}] Sorry, I had a technical issue. Please contact us directly via WhatsApp (+351 934 993 770) or phone (+351 934 993 770).`,
         debug: { error: errorMessage }
       }),
     };
