@@ -1,0 +1,16 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "LhkG7tzghWhkbdGlvmeHh"
+uri = "file://attached_assets/ficha-tecnica-acores2030.pdf"
+type = "pdf"
+title = "Ficha Técnica Açores 2030 — Atualizada"
+description = "PDF final com a ficha original na página 1 e a nova Ficha de Projeto anexada na página 2."
+logical_id = "036aaa70-5049-431b-b1dd-179b9832c350"
+content_hash = "sha256:87766d264b28d8e8b44627f1787f540403f5cc8acac9956dfb0f872715636aa7"
+size = 4879630
+mtime_ms = 1788351886523
+storage_uri = "gcs://replit-rams-assets-kirk/rams/assets/repl:a89d4f03-0f6d-4be7-9859-feeeeb871959/036aaa70-5049-431b-b1dd-179b9832c350/22cef090-7dc7-430a-8d93-2f6dde19f80e"
+storage_version_token = "1788352040130410"
+content_type = "application/pdf"

@@ -4,7 +4,7 @@ import logoUrl from "@assets/LogoAzores4fun360_1763895112388.gif";
 import marcaAcoresPtLogo from "@assets/AF_ACO_SELO_POS_PT_1767027675830.jpg";
 import marcaAcoresEnLogo from "@assets/AF_ACO_SELO_POS_ING_1767027687274.jpg";
 import acores2030Logo from "@assets/acores2030-funding-logo.png";
-import fichaTecnicaPdf from "@assets/ficha-tecnica-acores2030.pdf";
+const fichaTecnicaPdf = "/assets/ficha-tecnica-acores2030-CpFEbchw.pdf";
 import acores2020Logo from "@assets/acores2020-funding-logo.png";
 import fichaTecnica2020Pdf from "@assets/ficha-tecnica-acores2020.pdf";
 import adeliacorLogo from "@assets/adeliacor-funding-logo.jpg";
