@@ -25,8 +25,8 @@ export const translations = {
     
     // Hero
     hero: {
-      title: "Uma empresa da Marca Açores",
-      subtitle: "Uma empresa da Marca Açores",
+      title: "Uma empresa Marca Açores",
+      subtitle: "Uma empresa Marca Açores",
       location: "A ligar pessoas, natureza e experiências autênticas.",
       services: "Alojamento · Atividades de Animação Turística · Eventos · Tatuagem & Piercing · Loja · Gestão Imobiliária",
       explore: "Explorar Serviços",
