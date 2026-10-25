@@ -55,10 +55,15 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 export default function GuestPage() {
-  const { t, language } = useLanguage();
+  const { t, language, setLanguage } = useLanguage();
   const { toast } = useToast();
   const searchString = useSearch();
   const [guestCount, setGuestCount] = useState(1);
+
+  // Initial language follows the visitor's browser on this page
+  useEffect(() => {
+    setLanguage(navigator.language.toLowerCase().startsWith("pt") ? "pt" : "en");
+  }, []);
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
