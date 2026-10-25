@@ -104,33 +104,10 @@ export default function GuestPage() {
 
   const submitMutation = useMutation({
     mutationFn: async (data: FormData) => {
-      const guestsFormatted = data.guests.map((g, i) => 
-        `Guest ${i + 1}: ${g.firstName} ${g.lastName}, DOB: ${g.dateOfBirth}, Nationality: ${g.nationality}, ID: ${g.idDocument}, Issued by: ${g.issuingCountry}`
-      ).join("\n");
-
-      const message = `
-PRE CHECK-IN FORM SUBMISSION
-============================
-Check-in: ${data.checkInDate}
-Check-out: ${data.checkOutDate}
-Email: ${data.email}
-Phone: ${data.phoneCode || ""} ${data.phoneNumber || "N/A"}
-Number of Guests: ${data.guests.length}
-
-GUEST DETAILS:
-${guestsFormatted}
-      `.trim();
-
-      const response = await fetch("https://formspree.io/f/xwvpwygv", {
+      const response = await fetch("/api/checkin", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: `Pre Check-in: ${data.guests[0]?.firstName} ${data.guests[0]?.lastName}`,
-          email: data.email,
-          message: message,
-          _replyto: data.email,
-          _subject: `Pre Check-in: ${data.checkInDate} - ${data.guests[0]?.lastName}`,
-        }),
+        body: JSON.stringify(data),
       });
 
       if (!response.ok) throw new Error("Failed to submit");

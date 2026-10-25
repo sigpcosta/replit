@@ -7,6 +7,7 @@ import fs from "fs";
 import { insertBlogPostSchema, insertFaqSchema, updateFaqSchema, type Faq, type BlogPost } from "@shared/schema";
 import OpenAI from "openai";
 import { staticFaqs, getFaqsByService as getStaticFaqsByService } from "./static-faqs";
+import { checkinSchema, sendCheckinEmail } from "./checkin-email";
 
 // Auto-sync static files for Netlify and chatbot after admin updates
 async function syncStaticFiles() {
@@ -508,6 +509,25 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error("Erro ao processar mensagem:", error);
       res.status(500).json({ 
         error: "Erro ao processar mensagem. Por favor, tente novamente." 
+      });
+    }
+  });
+
+  app.post("/api/checkin", async (req, res) => {
+    try {
+      const data = checkinSchema.parse(req.body);
+      await sendCheckinEmail(data);
+      res.json({ success: true });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({
+          error: "Dados inválidos",
+          details: error.errors
+        });
+      }
+      console.error("Erro ao enviar email de check-in:", error);
+      res.status(500).json({
+        error: "Erro ao enviar check-in. Por favor, tente novamente."
       });
     }
   });
