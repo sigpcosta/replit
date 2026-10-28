@@ -57,54 +57,61 @@ export const staticFaqs: FAQ[] = [
 ${faqsArray.join(',\n')}
 ];
 
+export function getFaqsForChatbot(language: 'pt' | 'en'): string {
+  return staticFaqs
+    .filter(faq => faq.isActive)
+    .map(faq => {
+      const q = language === 'pt' ? faq.questionPt : faq.questionEn;
+      const a = language === 'pt' ? faq.answerPt : faq.answerEn;
+      const keywords = faq.keywords ? \` [Sinónimos: \${faq.keywords}]\` : '';
+      return \`Q: \${q}\${keywords}\\nA: \${a}\`;
+    })
+    .join('\\n\\n');
+}
+
 export function getFaqsByService(service: string): FAQ[] {
   return staticFaqs.filter(faq => faq.service === service && faq.isActive);
+}
+
+export function getAllFaqs(): FAQ[] {
+  return staticFaqs.filter(faq => faq.isActive);
 }
 `;
     
     fs.writeFileSync(path.join(sharedDir, 'static-faqs.ts'), faqsContent);
     fs.writeFileSync(path.join(netlifyDir, 'faqs.ts'), faqsContent);
     
-    // Generate Blogs static file
-    const blogsArray = blogs.filter((b: BlogPost) => b.publishedAt).map((blog: BlogPost) => `  {
-    id: ${blog.id},
-    slug: "${blog.slug}",
-    titlePt: "${escape(blog.titlePt)}",
-    titleEn: "${escape(blog.titleEn || '')}",
-    excerptPt: "${escape(blog.excerptPt || '')}",
-    excerptEn: "${escape(blog.excerptEn || '')}",
-    contentPt: "${escape(blog.contentPt)}",
-    contentEn: "${escape(blog.contentEn || '')}",
-    category: "${blog.category || ''}",
-    author: "${blog.author || ''}",
-    featuredImage: "${blog.featuredImage || ''}",
-    publishedAt: "${blog.publishedAt ? new Date(blog.publishedAt).toISOString() : ''}"
-  }`);
-    
-    const blogsContent = `// Blogs for static pages - AUTO-GENERATED
+    // Generate blog summaries for the Netlify chatbot (same format as scripts/sync-netlify-data.js)
+    const splitKeywords = (s: string | null) => s ? s.split(',').map(k => k.trim()) : [];
+    const blogSummaries = blogs.filter((b: BlogPost) => b.publishedAt).map((blog: BlogPost) => ({
+      slug: blog.slug,
+      titlePt: blog.titlePt,
+      titleEn: blog.titleEn,
+      summaryPt: blog.excerptPt || '',
+      summaryEn: blog.excerptEn || '',
+      keywords: [...splitKeywords(blog.keywordsPt), ...splitKeywords(blog.keywordsEn)],
+    }));
+
+    const blogsContent = `// Blog summaries for chatbot context - AUTO-GENERATED
 // Last updated: ${new Date().toISOString()}
 
-export interface BlogPost {
-  id: number;
+export interface BlogSummary {
   slug: string;
   titlePt: string;
   titleEn: string;
-  excerptPt: string;
-  excerptEn: string;
-  contentPt: string;
-  contentEn: string;
-  category: string;
-  author: string;
-  featuredImage: string;
-  publishedAt: string;
+  summaryPt: string;
+  summaryEn: string;
+  keywords: string[];
 }
 
-export const staticBlogs: BlogPost[] = [
-${blogsArray.join(',\n')}
-];
+export const blogSummaries: BlogSummary[] = ${JSON.stringify(blogSummaries, null, 2)};
 
-export function getBlogBySlug(slug: string): BlogPost | undefined {
-  return staticBlogs.find(blog => blog.slug === slug);
+export function getBlogSummariesForChatbot(lang: 'pt' | 'en'): string {
+  return blogSummaries.map(blog => {
+    const title = lang === 'pt' ? blog.titlePt : blog.titleEn;
+    const summary = lang === 'pt' ? blog.summaryPt : blog.summaryEn;
+    return \`- \${title}: \${summary}\`;
+  }).join('\\n');
 }
 `;
     

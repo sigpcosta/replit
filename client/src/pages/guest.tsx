@@ -12,7 +12,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { Plus, Minus, Check, Loader2 } from "lucide-react";
+import { Plus, Minus, Check, Loader2, Home } from "lucide-react";
 import logoGif from "@assets/LogoAzores4fun360_1763895112388.gif";
 
 const countries = [
@@ -215,6 +215,12 @@ export default function GuestPage() {
       </Helmet>
 
       <div className="max-w-2xl mx-auto">
+        <Button variant="ghost" size="icon" asChild>
+          <a href="https://www.azores4fun.com" aria-label="Home" title="Home">
+            <Home className="h-5 w-5" />
+          </a>
+        </Button>
+
         <div className="text-center mb-8">
           <img src={logoGif} alt="Azores4fun Logo" className="h-24 mx-auto mb-6" />
           <h1 className="text-3xl font-bold mb-4">{txt.title}</h1>

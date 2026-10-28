@@ -1,6 +1,5 @@
 // FAQs for chatbot context - AUTO-GENERATED
-// Run: npm run sync-netlify-data to regenerate from database
-// Last updated: 2026-01-24T18:39:30.979Z
+// Last updated: 2026-10-28T18:46:51.311Z
 
 export interface FAQ {
   id: number;
@@ -18,7 +17,7 @@ export const staticFaqs: FAQ[] = [
   {
     id: 57,
     service: "accommodation",
-    questionPt: "Onde ficam localizados os apartamentos?",
+    questionPt: "Onde  ficam localizados os apartamentos?",
     questionEn: "Where are the apartments located?",
     answerPt: "Os nossos 3 apartamentos ficam no centro da cidade da Horta, na Ilha do Faial, com fácil acesso a restaurantes, marina e principais atrações turísticas.",
     answerEn: "Our 3 apartments are located in the center of Horta city, on Faial Island, with easy access to restaurants, marina and main tourist attractions.",
@@ -53,8 +52,8 @@ export const staticFaqs: FAQ[] = [
     service: "accommodation",
     questionPt: "Qual é o horário de check-in e check-out?",
     questionEn: "What are the check-in and check-out times?",
-    answerPt: "O check-in é a partir das 15h e o check-out até às 11h. Horários flexíveis podem ser combinados conforme disponibilidade.",
-    answerEn: "Check-in is from 3pm and check-out by 11am. Flexible times can be arranged subject to availability.",
+    answerPt: "O check-in é a partir das 16h e o check-out até às 11h. Horários flexíveis podem ser combinados conforme disponibilidade.",
+    answerEn: "Check-in is from 4pm and check-out by 11am. Flexible times can be arranged subject to availability.",
     keywords: "check-in,check-out,horário,entrada,saída,hora",
     displayOrder: 60,
     isActive: true
@@ -79,17 +78,6 @@ export const staticFaqs: FAQ[] = [
     answerEn: "The minimum stay is generally 2 nights, but may vary depending on the season. Contact us for more information.",
     keywords: "mínimo,noites,estadia,duração,reserva",
     displayOrder: 62,
-    isActive: true
-  },
-  {
-    id: 63,
-    service: "accommodation",
-    questionPt: "Aceitam animais de estimação?",
-    questionEn: "Do you accept pets?",
-    answerPt: "Alguns apartamentos aceitam animais de estimação mediante consulta prévia. Contacte-nos para verificar disponibilidade e condições.",
-    answerEn: "Some apartments accept pets upon prior consultation. Contact us to check availability and conditions.",
-    keywords: "animais,estimação,pets,cão,gato,permitido",
-    displayOrder: 63,
     isActive: true
   },
   {
