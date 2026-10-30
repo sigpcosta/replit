@@ -84,7 +84,7 @@ export default function Navigation() {
               data-testid="button-book"
               asChild
             >
-              <a href="https://book.azores4fun.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://azores4fun.vacation-bookings.com/" target="_blank" rel="noopener noreferrer">
                 {t.nav.book}
               </a>
             </Button>
@@ -158,7 +158,7 @@ export default function Navigation() {
                 data-testid="button-mobile-book"
                 asChild
               >
-                <a href="https://book.azores4fun.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://azores4fun.vacation-bookings.com/" target="_blank" rel="noopener noreferrer">
                   {t.nav.book}
                 </a>
               </Button>
